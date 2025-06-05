@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const Layout = ({ children }: Readonly<{ children: ReactNode }>) => {
     return (
         <html suppressHydrationWarning lang='en'>
-            <body className={`${inter.variable} font-sans`}>{children}</body>
+            <body className={`${inter.variable}`}>{children}</body>
         </html>
     );
 };
