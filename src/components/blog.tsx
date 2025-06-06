@@ -1,18 +1,17 @@
 'use client'
-import React from 'react'
-import Card from './card';
-import { useTranslations, useLocale } from 'next-intl';
-import blog_logo from '../../public/image1991.png'
-import Image from 'next/image';
-import image1 from '../../public/image.png'
-import image2 from '../../public/image(1).png'
 import { listCardData as enData, tags as enTags } from '@/i18n/messages/en.json';
 import { listCardData as ziData, tags as ziTags } from '@/i18n/messages/zi.json';
+import { useLocale, useTranslations } from 'next-intl';
+import Image from 'next/image';
+import image2 from '../../public/image(1).png';
+import image1 from '../../public/image.png';
+import blog_logo from '../../public/image1991.png';
+import Card from './card';
 
 const Blog = () => {
     const locale = useLocale();
     const t = useTranslations('blog');
-    
+
     const listCardData = locale === 'en' ? enData : ziData;
     const tags = locale === 'en' ? enTags : ziTags;
 
