@@ -1,0 +1,80 @@
+{
+    "listCardData": [
+      {
+        "id": 1,
+        "title": "NewPay 加入 Circle 支付网络，推动加密货币到法币的跨境支付",
+        "description": "在拉丁美洲的许多地区，管理资金意味着要应对不稳定：从货币波动、高额交易费用到有限的全球金融服务接入……",
+        "date": "2025年6月14日",
+        "readTime": "8分钟阅读",
+        "tags": ["媒体", "博客"],
+        "image": "/Frame2147226727.png",
+        "hasDescription": true
+      },
+      {
+        "id": 2,
+        "title": "NewPay 扩展至东南亚，推出电子钱包",
+        "description": "NewPay 在东南亚推出电子钱包，致力于为新兴市场带来安全便捷的支付体验。",
+        "date": "2025年6月14日",
+        "readTime": "8分钟阅读",
+        "tags": ["媒体", "博客"],
+        "image": "/card2.png"
+      },
+      {
+        "id": 3,
+        "title": "加密货币汇款：跨境支付的未来",
+        "description": "加密货币正在以低费用和高速处理塑造新的汇款时代。",
+        "date": "2025年6月14日",
+        "readTime": "8分钟阅读",
+        "tags": ["媒体", "博客"],
+        "image": "/card3.png"
+      },
+      {
+        "id": 4,
+        "title": "NewPay 与地区银行合作，实现更快速可靠的转账",
+        "description": "NewPay 正在与地区银行合作，使资金转账更加快速和可靠。",
+        "date": "2025年6月14日",
+        "readTime": "8分钟阅读",
+        "tags": ["媒体", "博客"],
+        "image": "/card4.png"
+      },
+      {
+        "id": 5,
+        "title": "战略性比特币储备：基于数据洞察加密市场",
+        "description": "NewPay 通过战略储备数据分析，揭示对加密市场的深入洞察。",
+        "date": "2025年6月14日",
+        "readTime": "8分钟阅读",
+        "tags": ["媒体", "博客"],
+        "image": "/card5.png"
+      },
+      {
+        "id": 6,
+        "title": "NewPay 加入 Circle 网络，助力跨境加密支付",
+        "description": "在拉丁美洲，管理财务通常意味着应对不确定性……",
+        "date": "2025年6月14日",
+        "readTime": "8分钟阅读",
+        "tags": ["媒体", "博客"],
+        "image": "/card6.png"
+      }
+    ],
+    "tags": ["全部", "公告", "博客", "媒体", "新闻稿"],
+    "navigation": {
+      "home": "首页",
+      "services": "服务",
+      "portfolio": "作品集",
+      "pricing": "价格",
+      "joint": "联合",
+      "personal": "个人",
+      "getApp": "获取应用"
+    },
+    "blog": {
+      "title": "博客",
+      "subtitle": "法律和合规更新、公司新闻和媒体报道。",
+      "searchPlaceholder": "搜索文章...",
+      "featuredArticle": "精选文章",
+      "latestBlog": "最新博客",
+      "readMore": "阅读更多",
+      "date": "日期",
+      "readTime": "阅读时间"
+    }
+  }
+  

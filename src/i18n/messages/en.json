@@ -1,6 +1,84 @@
 {
-    "HomePage": {
-        "title": "Hello world!",
-        "about": "Go to the about page"
+    "listCardData": [
+      {
+        "id": 1,
+        "title": "NewPay Joins Circle Payment Network to Power Crypto-to-Fiat Cross-Border Payments",
+        "description": "In much of Latin America, managing money often means navigating uncertainty. From currency volatility, high transaction fees and limited access to global financial services...",
+        "date": "June 14, 2025",
+        "readTime": "8 min read",
+        "tags": ["Media", "Blog"],
+        "image": "/Frame2147226727.png",
+        "hasDescription": true
+      },
+      {
+        "id": 2,
+        "title": "NewPay Expands to Southeast Asia with Digital Wallet",
+        "description": "NewPay launches its digital wallet across Southeast Asia, aiming to bring secure and easy payments to emerging markets.",
+        "date": "June 14, 2025",
+        "readTime": "8 min read",
+        "tags": ["Media", "Blog"],
+        "image": "/card2.png"
+      },
+      {
+        "id": 3,
+        "title": "Crypto Remittance: The Future of Cross-Border Payments",
+        "description": "How cryptocurrency is shaping the new era of remittances with low fees and high speed.",
+        "date": "June 14, 2025",
+        "readTime": "8 min read",
+        "tags": ["Media", "Blog"],
+        "image": "/card3.png"
+      },
+      {
+        "id": 4,
+        "title": "NewPay to Partner with Local Banks for Seamless Transfers",
+        "description": {
+          "en": "NewPay is working with regional banks to make money transfers faster and more reliable.",
+          "vi": "NewPay đang hợp tác với các ngân hàng khu vực để việc chuyển tiền trở nên nhanh hơn và đáng tin cậy hơn.",
+          "zh": "NewPay 正在与地区银行合作，使资金转账更加快速和可靠。"
+        },
+        "date": "June 14, 2025",
+        "readTime": "8 min read",
+        "tags": ["Media", "Blog"],
+        "image": "/card4.png"
+      },
+      {
+        "id": 5,
+        "title": "STRATEGIC BITCOIN RESERVE: Data-Driven Insights Into the Crypto Market",
+        "description": "NewPay reveals its insights into the crypto market through data analytics of reserve strategies.",
+        "date": "June 14, 2025",
+        "readTime": "8 min read",
+        "tags": ["Media", "Blog"],
+        "image": "/card5.png"
+      },
+      {
+        "id": 6,
+        "title": "NewPay Joins Circle Payment Network to Power Crypto-to-Fiat Cross-Border Payments",
+        "description": "In much of Latin America, managing money often means navigating uncertainty...",
+        "date": "June 14, 2025",
+        "readTime": "8 min read",
+        "tags": ["Media", "Blog"],
+        "image": "/card6.png"
+      }
+    ],
+    "tags": ["All", "Announcements", "Blog", "Media", "Press Releases"],
+    "navigation": {
+      "home": "Home",
+      "services": "Services",
+      "portfolio": "Portfolio",
+      "pricing": "Pricing",
+      "joint": "Joint",
+      "personal": "Personal",
+      "getApp": "Get The App"
+    },
+    "blog": {
+      "title": "Blog",
+      "subtitle": "Legal and compliance updates, company news and media coverage.",
+      "searchPlaceholder": "Find an article...",
+      "featuredArticle": "Featured article",
+      "latestBlog": "Latest Blog",
+      "readMore": "Read More",
+      "date": "Date",
+      "readTime": "Read Time"
     }
-}
+  }
+  
