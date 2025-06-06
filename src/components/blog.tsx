@@ -21,7 +21,7 @@ const Blog = () => {
             <div className='flex flex-col justify-center items-center'>
                 <Image src={blog_logo} alt="Blog Logo" />
                 <h1 className='text-5xl font-semibold text-center'><span style={{ color: '#FF6910' }}>NewPay</span> {t('title')}</h1>
-                <p className='text-center text-gray-500 mt-5'>{t('subtitle')}</p>
+                <p className='text-center text-gray-500 mt-5 text-md'>{t('subtitle')}</p>
                 <div className="mt-5 flex items-center h-12 w-[320px] text-sm text-gray-500 bg-white border border-gray-500/30 rounded-full ">
                     <button type="button" className="h-full px-3">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -42,7 +42,7 @@ const Blog = () => {
                     {/* Side Articles */}
                     <div className="flex flex-col gap-4 h-full">
                         {/* Article 1 */}
-                        <div className="flex gap-4 p-4 border border-gray-300 rounded-xl shadow-sm bg-white h-[48%]">
+                        <div className="flex gap-4 p-4 border border-gray-300 rounded-xl bg-white h-[48%]">
                             <div className="w-[50%] h-[100%] relative">
                                 <Image
                                     src={image1}
@@ -53,19 +53,19 @@ const Blog = () => {
                             </div>
                             <div className="flex flex-col gap-5 w-[50%]">
                                 <p className="text-sm text-gray-500">{listCardData[1].date} • {listCardData[1].readTime}</p>
-                                <p className="text-sm font-medium">
+                                <p className="text-md font-semibold h-[30%]">
                                     {listCardData[1].title}
                                 </p>
                                 <div className="flex gap-2 mt-2">
                                     {listCardData[1].tags.map((tag) => (
-                                        <span key={tag} className="text-xs border border-gray-400 rounded-full px-4 py-2">{tag}</span>
+                                        <span key={tag} className="text-sm font-medium border border-gray-400 rounded-full px-4 py-2">{tag}</span>
                                     ))}
                                 </div>
                             </div>
                         </div>
 
                         {/* Article 2 */}
-                        <div className="flex gap-4 p-4 border border-gray-300 rounded-xl shadow-sm bg-white h-[48%]">
+                        <div className="flex gap-4 p-4 border border-gray-300 rounded-xl bg-white h-[48%]">
                             <div className="w-[50%] h-[100%] relative">
                                 <Image
                                     src={image2}
@@ -76,12 +76,12 @@ const Blog = () => {
                             </div>
                             <div className="flex flex-col gap-5 w-[50%]">
                                 <p className="text-sm text-gray-500">{listCardData[2].date} • {listCardData[2].readTime}</p>
-                                <p className="text-sm font-medium">
+                                <p className="text-md font-semibold h-[30%]">
                                     {listCardData[2].title}
                                 </p>
                                 <div className="flex gap-2 mt-2">
                                     {listCardData[2].tags.map((tag) => (
-                                        <span key={tag} className="text-xs border border-gray-400 rounded-full px-4 py-2">{tag}</span>
+                                        <span key={tag} className="text-sm font-medium border border-gray-400 rounded-full px-4 py-2">{tag}</span>
                                     ))}
                                 </div>
                             </div>
@@ -97,7 +97,7 @@ const Blog = () => {
                     {tags.map((tag) => (
                         <span
                             key={tag}
-                            className="text-xs rounded-full px-4 py-2 hover:bg-black hover:text-white cursor-pointer bg-gray-200 font-medium"
+                            className="text-sm rounded-full px-4 py-2 hover:bg-black hover:text-white cursor-pointer bg-gray-200 font-medium"
                         >
                             {tag}
                         </span>
