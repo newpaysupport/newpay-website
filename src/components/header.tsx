@@ -24,7 +24,7 @@ const Header = () => {
 
     return (
         <div>
-            <div className="text-sm text-white w-full font-bold">
+            <div className="text-sm text-white w-full font-semibold">
                 <nav className="relative h-[70px] flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 bg-white text-gray-900 transition-all shadow-sm">
                     <div className="flex items-center space-x-4">
                         <Image src={logo} alt="NewPay Logo" width={100} height={40} className="w-24 h-10 object-contain" />
@@ -39,27 +39,7 @@ const Header = () => {
                         <li><Link href={`/${locale}/portfolio`}>{t('portfolio')}</Link></li>
                         <li><Link href={`/${locale}/pricing`}>{t('pricing')}</Link></li>
                     </ul>
-
-                    {/* <div className="flex items-center space-x-4">
-                        <div className="flex gap-2">
-                            {["en", "zi"].map((lng) => (
-                                <button
-                                    key={lng}
-                                    onClick={() => switchLocale(lng)}
-                                    className={`px-3 py-1 rounded-full text-sm transition-colors ${
-                                        locale === lng
-                                            ? "bg-blue-500 text-white"
-                                            : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-                                    }`}
-                                >
-                                    {lng.toUpperCase()}
-                                </button>
-                            ))}
-                        </div>
-                        <button className="md:inline hidden bg-black ml-4 px-9 py-2 rounded-full active:scale-95 text-gray-100">
-                            {t('getApp')}
-                        </button>
-                    </div> */}
+                    
                     <SwichLanguage locale={locale} switchLocale={switchLocale} t = {t}/>
 
                     <button aria-label="menu-btn" type="button" className="menu-btn inline-block md:hidden active:scale-90 transition">

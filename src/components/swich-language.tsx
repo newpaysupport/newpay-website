@@ -24,7 +24,7 @@ const SwitchLanguage = ({ locale, switchLocale, t }: Props) => {
       <div className="relative">
         <button
           onClick={() => setOpen((prev) => !prev)}
-          className="flex items-center gap-2 px-3 py-1 bg-gray-100 rounded-full hover:bg-gray-200 text-sm"
+          className="flex items-center gap-2 px-3 py-2 rounded-full hover:bg-gray-100 text-sm"
         >
           <img
             src={currentLanguage.flag.src}
@@ -43,7 +43,7 @@ const SwitchLanguage = ({ locale, switchLocale, t }: Props) => {
         </button>
 
         {open && (
-          <div className="absolute left-0 mt-2 w-32 bg-white border rounded shadow z-20">
+          <div className="absolute left-0 mt-2 w-32 bg-white border border-gray-300 rounded z-20">
             {languages.map((lng) => (
               <div
                 key={lng.code}
@@ -66,7 +66,7 @@ const SwitchLanguage = ({ locale, switchLocale, t }: Props) => {
       </div>
 
       {/* Get App Button */}
-      <button className="md:inline hidden bg-black ml-4 px-9 py-2 rounded-full active:scale-95 text-white">
+      <button className="md:inline hidden bg-black ml-4 px-5 py-3 rounded-full active:scale-95 text-white">
         {t('getApp')}
       </button>
     </div>
