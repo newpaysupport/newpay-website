@@ -1,6 +1,9 @@
+import { routing } from '@/i18n/routing';
+import { redirect } from 'next/navigation'
 
-const Page = () => {
-    return <div className="text-center text-5xl">NewPay</div>;
+export default function Page(){
+    return (
+        redirect(`/${routing.defaultLocale}`) 
+    )
 };
 
-export default Page;
