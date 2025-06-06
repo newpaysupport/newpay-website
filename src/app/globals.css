@@ -7,9 +7,20 @@
   --font-inter: var(--font-inter);
 }
 
-
 html{
   scroll-behavior: smooth;
+}
+.text-5xl{
+  letter-spacing: -2px;
+}
+.text-md{
+  letter-spacing: -0.24px;
+}
+.text-4xl{
+  letter-spacing: -0.64px;
+}
+.text-xl{
+  letter-spacing: -0.68px;
 }
 
 body{
