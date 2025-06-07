@@ -10,6 +10,7 @@ import blog_logo from '../../public/image1991.png';
 import Card from '../components/card';
 
 const Blog = () => {
+    
     const locale = useLocale();
     const t = useTranslations('blog');
 
