@@ -3,17 +3,25 @@ import { listCardData as enData, tags as enTags } from '@/i18n/messages/en.json'
 import { listCardData as ziData, tags as ziTags } from '@/i18n/messages/zi.json';
 import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
+import { useState } from 'react';
 import image2 from '../../public/image(1).png';
 import image1 from '../../public/image.png';
 import blog_logo from '../../public/image1991.png';
-import Card from './card';
+import Card from '../components/card';
 
 const Blog = () => {
+    
     const locale = useLocale();
     const t = useTranslations('blog');
 
     const listCardData = locale === 'en' ? enData : ziData;
     const tags = locale === 'en' ? enTags : ziTags;
+    //filter tags 
+    const [selectTag, setSelectTag] = useState('All');
+
+    const filterCard = selectTag === 'All' ? listCardData : listCardData.filter((card) => card.tags.includes(selectTag));
+
+
 
     return (
         <div className='mt-6'>
@@ -96,15 +104,18 @@ const Blog = () => {
                 <div className="flex gap-2 my-6 justify-center">
                     {tags.map((tag) => (
                         <span
+                            onClick={() => setSelectTag(tag)}
                             key={tag}
-                            className="text-sm rounded-full px-4 py-2 hover:bg-black hover:text-white cursor-pointer bg-gray-200 font-medium"
+                            className={`${selectTag === tag ? 'bg-black text-white' : 'hover:bg-black hover:text-white bg-gray-200'} text-sm rounded-full px-4 py-2 cursor-pointer  font-medium`}
                         >
+
                             {tag}
                         </span>
                     ))}
                 </div>
+
                 <div className="grid md:grid-cols-3 gap-6">
-                    {listCardData.map((card) => (
+                    {filterCard.map((card) => (
                         <Card
                             key={card.id}
                             title={card.title}

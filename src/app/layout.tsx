@@ -2,7 +2,6 @@ import type { ReactNode } from 'react';
 
 import type { Metadata } from 'next';
 
-import { inter } from '@/app/fonts/fonts';
 import '@/app/globals.css';
 
 export const metadata: Metadata = {
@@ -13,7 +12,7 @@ export const metadata: Metadata = {
 const Layout = ({ children }: Readonly<{ children: ReactNode }>) => {
     return (
         <html suppressHydrationWarning lang='en'>
-            <body className={`${inter.variable} font-sans antialiased`}>{children}</body>
+            <body>{children}</body>
         </html>
     );
 };

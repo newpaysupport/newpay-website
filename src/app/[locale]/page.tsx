@@ -1,13 +1,13 @@
 "use client";
 
-import Blog from '@/components/blog';
-import Header from '@/components/header';
+import Blog from '@/pages/blog';
+import BlogDetail from '@/pages/blog-detail';
 
 export default function HomePage() {
   return (
     <main>
-    <Header />
-    <Blog />
-  </main>
+      <Blog />
+      {/* <BlogDetail/> */}
+    </main>
   );
 }
