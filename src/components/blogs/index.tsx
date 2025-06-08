@@ -4,9 +4,9 @@ import { blog as ziBlog } from '@/i18n/messages/zi.json';
 import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { useState } from 'react';
-import image2 from '../../../public/image(1).png';
-import image1 from '../../../public/image.png';
-import blog_logo from '../../../public/image1991.png';
+import image2 from '@/images/image(1).png';
+import image1 from '@/images/image.png';
+import blog_logo from '@/images/image1991.png';
 import Card from './card';
 
 const Blog = () => {
@@ -18,7 +18,7 @@ const Blog = () => {
     const listCardData = blogData.listCardData;
     const tags = blogData.tags;
 
-    //filter tags 
+    //filter tags
     const [selectTag, setSelectTag] = useState('All');
 
     const filterCard = selectTag === 'All' ? listCardData : listCardData.filter((card) => card.tags.includes(selectTag));
@@ -43,7 +43,7 @@ const Blog = () => {
 
             {/* Card Section */}
             <div className="px-6 md:px-16 lg:px-24 xl:px-32 py-12">
-                <h2 className="text-4xl font-semibold mb-6">{t('featuredArticle')}</h2>
+                <h2 className="text-4xl font-semibold mb-6 text-primary-black">{t('featuredArticle')}</h2>
                 <div className="grid md:grid-cols-2 gap-6">
                     {/* Featured Left Article */}
                     <Card
