@@ -1,17 +1,17 @@
 'use client';
 import Image from 'next/image';
+import Card from '@/components/blogs/card';
+import { blog as enBlog } from '@/i18n/messages/en.json';
+import { blog as ziBlog } from '@/i18n/messages/zi.json';
+
 import { FaArrowLeft, FaFacebookF, FaRedditAlien, FaXTwitter } from 'react-icons/fa6';
 import { HiOutlineCalendarDateRange } from 'react-icons/hi2';
 import { LuLink } from 'react-icons/lu';
 import { MdOutlineTimer } from 'react-icons/md';
 import { PiTelegramLogoBold } from 'react-icons/pi';
 import { SiSinaweibo } from 'react-icons/si';
-
-import Card from '@/components/blogs/card';
-import { listCardData as enData } from '@/i18n/messages/en.json';
-import logoAuthor from '../../public/Author.png';
-
-const sliceCard = enData.slice(0, 3);
+import logoAuthor from '../../../public/Author.png';
+import { useLocale, useTranslations } from 'next-intl';
 
 const blogSections = [
     {
@@ -42,6 +42,12 @@ const blogSections = [
 
 
 const BlogDetail = () => {
+    const locale = useLocale();
+    const t = useTranslations('blog');
+
+    const blogData = locale === 'en' ? enBlog : ziBlog;
+    const listCardData = blogData.listCardData;
+    const sliceCard = listCardData.slice(0, 3);
 
     return (
         <div className="container mx-auto px-4 py-6">

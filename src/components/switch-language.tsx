@@ -71,7 +71,7 @@ const SwitchLanguage = ({ locale, switchLocale, t }: Props) => {
       </div>
 
       {/* Get App Button */}
-      <button className="md:inline hidden bg-black ml-4 px-5 py-3 rounded-full active:scale-95 text-white">
+      <button className="cursor-pointer md:inline hidden bg-black ml-4 px-5 py-3 rounded-full active:scale-95 text-white">
         {t('getApp')}
       </button>
     </div>
