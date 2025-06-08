@@ -1,13 +1,11 @@
 "use client";
 
-import { useLocale } from 'next-intl';
-import { useRouter, usePathname } from 'next/navigation';
-import { useTranslations } from 'next-intl';
-import React from 'react';
+import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname, useRouter } from 'next/navigation';
 import logo from '../../public/newpay_logo.svg';
-import SwichLanguage from './swich-language';
+import SwichLanguage from './switch-language';
 
 const Header = () => {
     const locale = useLocale();
@@ -16,6 +14,7 @@ const Header = () => {
     const t = useTranslations('navigation');
 
     const switchLocale = (newLocale: string) => {
+        if (!pathname) return;
         const segments = pathname.split("/");
         segments[1] = newLocale;
         const newPath = segments.join("/");
@@ -39,8 +38,8 @@ const Header = () => {
                         <li><Link href={`/${locale}/portfolio`}>{t('portfolio')}</Link></li>
                         <li><Link href={`/${locale}/pricing`}>{t('pricing')}</Link></li>
                     </ul>
-                    
-                    <SwichLanguage locale={locale} switchLocale={switchLocale} t = {t}/>
+
+                    <SwichLanguage locale={locale} switchLocale={switchLocale} t={t} />
 
                     <button aria-label="menu-btn" type="button" className="menu-btn inline-block md:hidden active:scale-90 transition">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
@@ -55,8 +54,7 @@ const Header = () => {
                             <li><Link href={`/${locale}/portfolio`} className="text-sm">{t('portfolio')}</Link></li>
                             <li><Link href={`/${locale}/pricing`} className="text-sm">{t('pricing')}</Link></li>
                         </ul>
-
-                        <button type="button" className="bg-white text-gray-600 border border-gray-300 mt-6 text-sm hover:bg-gray-50 active:scale-95 transition-all w-40 h-11 rounded-full">
+                        <button type="button" className="cursor-pointer bg-white text-gray-600 border mt-6 text-sm hover:bg-gray-50 active:scale-95 transition-all w-40 h-11 rounded-full">
                             {t('getApp')}
                         </button>
                     </div>

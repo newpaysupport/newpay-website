@@ -1,26 +1,27 @@
 'use client'
-import { listCardData as enData, tags as enTags } from '@/i18n/messages/en.json';
-import { listCardData as ziData, tags as ziTags } from '@/i18n/messages/zi.json';
+import { blog as enBlog } from '@/i18n/messages/en.json';
+import { blog as ziBlog } from '@/i18n/messages/zi.json';
 import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { useState } from 'react';
-import image2 from '../../public/image(1).png';
-import image1 from '../../public/image.png';
-import blog_logo from '../../public/image1991.png';
-import Card from '../components/card';
+import image2 from '../../../public/image(1).png';
+import image1 from '../../../public/image.png';
+import blog_logo from '../../../public/image1991.png';
+import Card from './card';
 
 const Blog = () => {
-    
+
     const locale = useLocale();
     const t = useTranslations('blog');
 
-    const listCardData = locale === 'en' ? enData : ziData;
-    const tags = locale === 'en' ? enTags : ziTags;
+    const blogData = locale === 'en' ? enBlog : ziBlog;
+    const listCardData = blogData.listCardData;
+    const tags = blogData.tags;
+
     //filter tags 
     const [selectTag, setSelectTag] = useState('All');
 
     const filterCard = selectTag === 'All' ? listCardData : listCardData.filter((card) => card.tags.includes(selectTag));
-
 
 
     return (
@@ -66,7 +67,7 @@ const Blog = () => {
                                 </p>
                                 <div className="flex gap-2 mt-2">
                                     {listCardData[1].tags.map((tag) => (
-                                        <span key={tag} className="text-sm font-medium border border-gray-400 rounded-full px-4 py-2">{tag}</span>
+                                        <span key={tag} className="cursor-pointer text-sm font-medium border border-gray-400 rounded-full px-4 py-2">{tag}</span>
                                     ))}
                                 </div>
                             </div>
@@ -89,7 +90,7 @@ const Blog = () => {
                                 </p>
                                 <div className="flex gap-2 mt-2">
                                     {listCardData[2].tags.map((tag) => (
-                                        <span key={tag} className="text-sm font-medium border border-gray-400 rounded-full px-4 py-2">{tag}</span>
+                                        <span key={tag} className="cursor-pointer text-sm font-medium border border-gray-400 rounded-full px-4 py-2">{tag}</span>
                                     ))}
                                 </div>
                             </div>

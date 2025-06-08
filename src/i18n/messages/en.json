@@ -1,4 +1,22 @@
 {
+  "navigation": {
+    "home": "Home",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "pricing": "Pricing",
+    "joint": "Joint",
+    "personal": "Personal",
+    "getApp": "Get The App"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Legal and compliance updates, company news and media coverage.",
+    "searchPlaceholder": "Find an article...",
+    "featuredArticle": "Featured article",
+    "latestBlog": "Latest Blog",
+    "readMore": "Read More",
+    "date": "Date",
+    "readTime": "Read Time",
     "listCardData": [
       {
         "id": 1,
@@ -6,7 +24,10 @@
         "description": "In much of Latin America, managing money often means navigating uncertainty. From currency volatility, high transaction fees and limited access to global financial services...",
         "date": "June 14, 2025",
         "readTime": "8 min read",
-        "tags": ["Media", "Blog"],
+        "tags": [
+          "Media",
+          "Blog"
+        ],
         "image": "/Frame2147226727.png",
         "hasDescription": true
       },
@@ -16,7 +37,10 @@
         "description": "NewPay launches its digital wallet across Southeast Asia, aiming to bring secure and easy payments to emerging markets.",
         "date": "June 14, 2025",
         "readTime": "8 min read",
-        "tags": ["Media", "Blog"],
+        "tags": [
+          "Media",
+          "Blog"
+        ],
         "image": "/card2.png"
       },
       {
@@ -25,7 +49,10 @@
         "description": "How cryptocurrency is shaping the new era of remittances with low fees and high speed.",
         "date": "June 14, 2025",
         "readTime": "8 min read",
-        "tags": ["Media", "Blog"],
+        "tags": [
+          "Media",
+          "Blog"
+        ],
         "image": "/card3.png"
       },
       {
@@ -38,7 +65,10 @@
         },
         "date": "June 14, 2025",
         "readTime": "8 min read",
-        "tags": ["Media", "Blog"],
+        "tags": [
+          "Media",
+          "Blog"
+        ],
         "image": "/card4.png"
       },
       {
@@ -47,7 +77,10 @@
         "description": "NewPay reveals its insights into the crypto market through data analytics of reserve strategies.",
         "date": "June 14, 2025",
         "readTime": "8 min read",
-        "tags": ["Media", "Blog"],
+        "tags": [
+          "Media",
+          "Blog"
+        ],
         "image": "/card5.png"
       },
       {
@@ -56,29 +89,19 @@
         "description": "In much of Latin America, managing money often means navigating uncertainty...",
         "date": "June 14, 2025",
         "readTime": "8 min read",
-        "tags": ["Media", "Blog"],
+        "tags": [
+          "Media",
+          "Blog"
+        ],
         "image": "/card6.png"
       }
     ],
-    "tags": ["All", "Announcements", "Blog", "Media", "Press Releases"],
-    "navigation": {
-      "home": "Home",
-      "services": "Services",
-      "portfolio": "Portfolio",
-      "pricing": "Pricing",
-      "joint": "Joint",
-      "personal": "Personal",
-      "getApp": "Get The App"
-    },
-    "blog": {
-      "title": "Blog",
-      "subtitle": "Legal and compliance updates, company news and media coverage.",
-      "searchPlaceholder": "Find an article...",
-      "featuredArticle": "Featured article",
-      "latestBlog": "Latest Blog",
-      "readMore": "Read More",
-      "date": "Date",
-      "readTime": "Read Time"
-    }
+    "tags": [
+      "All",
+      "Announcements",
+      "Blog",
+      "Media",
+      "Press Releases"
+    ]
   }
-  
+}

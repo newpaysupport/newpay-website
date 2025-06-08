@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
-import logoEN from '../../public/UnitedKingdom.png'; 
-import logoZH from '../../public/china.png'; 
+import Image from 'next/image';
+import { useState } from 'react';
+import logoEN from '../../public/UnitedKingdom.png';
+import logoZH from '../../public/china.png';
 
 type Props = {
   locale: string;
@@ -26,9 +27,11 @@ const SwitchLanguage = ({ locale, switchLocale, t }: Props) => {
           onClick={() => setOpen((prev) => !prev)}
           className="flex items-center gap-2 px-3 py-2 rounded-full hover:bg-gray-100 text-sm"
         >
-          <img
+          <Image
             src={currentLanguage.flag.src}
             alt={currentLanguage.label}
+            width={20}
+            height={20}
             className="w-5 h-5 rounded-full"
           />
           {currentLanguage.label}
@@ -53,9 +56,11 @@ const SwitchLanguage = ({ locale, switchLocale, t }: Props) => {
                 }}
                 className="flex items-center gap-2 px-4 py-2 cursor-pointer hover:bg-gray-100"
               >
-                <img
+                <Image
                   src={lng.flag.src}
                   alt={lng.label}
+                  width={20}
+                  height={20}
                   className="w-5 h-5 rounded-full"
                 />
                 <span>{lng.label}</span>

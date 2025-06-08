@@ -1,4 +1,22 @@
 {
+  "navigation": {
+    "home": "首页",
+    "services": "服务",
+    "portfolio": "作品集",
+    "pricing": "价格",
+    "joint": "联合",
+    "personal": "个人",
+    "getApp": "获取应用"
+  },
+  "blog": {
+    "title": "博客",
+    "subtitle": "法律和合规更新、公司新闻和媒体报道。",
+    "searchPlaceholder": "搜索文章...",
+    "featuredArticle": "精选文章",
+    "latestBlog": "最新博客",
+    "readMore": "阅读更多",
+    "date": "日期",
+    "readTime": "阅读时间",
     "listCardData": [
       {
         "id": 1,
@@ -6,7 +24,10 @@
         "description": "在拉丁美洲的许多地区，管理资金意味着要应对不稳定：从货币波动、高额交易费用到有限的全球金融服务接入……",
         "date": "2025年6月14日",
         "readTime": "8分钟阅读",
-        "tags": ["媒体", "博客"],
+        "tags": [
+          "媒体",
+          "博客"
+        ],
         "image": "/Frame2147226727.png",
         "hasDescription": true
       },
@@ -16,7 +37,10 @@
         "description": "NewPay 在东南亚推出电子钱包，致力于为新兴市场带来安全便捷的支付体验。",
         "date": "2025年6月14日",
         "readTime": "8分钟阅读",
-        "tags": ["媒体", "博客"],
+        "tags": [
+          "媒体",
+          "博客"
+        ],
         "image": "/card2.png"
       },
       {
@@ -25,7 +49,10 @@
         "description": "加密货币正在以低费用和高速处理塑造新的汇款时代。",
         "date": "2025年6月14日",
         "readTime": "8分钟阅读",
-        "tags": ["媒体", "博客"],
+        "tags": [
+          "媒体",
+          "博客"
+        ],
         "image": "/card3.png"
       },
       {
@@ -34,7 +61,10 @@
         "description": "NewPay 正在与地区银行合作，使资金转账更加快速和可靠。",
         "date": "2025年6月14日",
         "readTime": "8分钟阅读",
-        "tags": ["媒体", "博客"],
+        "tags": [
+          "媒体",
+          "博客"
+        ],
         "image": "/card4.png"
       },
       {
@@ -43,7 +73,10 @@
         "description": "NewPay 通过战略储备数据分析，揭示对加密市场的深入洞察。",
         "date": "2025年6月14日",
         "readTime": "8分钟阅读",
-        "tags": ["媒体", "博客"],
+        "tags": [
+          "媒体",
+          "博客"
+        ],
         "image": "/card5.png"
       },
       {
@@ -52,29 +85,19 @@
         "description": "在拉丁美洲，管理财务通常意味着应对不确定性……",
         "date": "2025年6月14日",
         "readTime": "8分钟阅读",
-        "tags": ["媒体", "博客"],
+        "tags": [
+          "媒体",
+          "博客"
+        ],
         "image": "/card6.png"
       }
     ],
-    "tags": ["全部", "公告", "博客", "媒体", "新闻稿"],
-    "navigation": {
-      "home": "首页",
-      "services": "服务",
-      "portfolio": "作品集",
-      "pricing": "价格",
-      "joint": "联合",
-      "personal": "个人",
-      "getApp": "获取应用"
-    },
-    "blog": {
-      "title": "博客",
-      "subtitle": "法律和合规更新、公司新闻和媒体报道。",
-      "searchPlaceholder": "搜索文章...",
-      "featuredArticle": "精选文章",
-      "latestBlog": "最新博客",
-      "readMore": "阅读更多",
-      "date": "日期",
-      "readTime": "阅读时间"
-    }
+    "tags": [
+      "全部",
+      "公告",
+      "博客",
+      "媒体",
+      "新闻稿"
+    ]
   }
-  
+}
