@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { useState } from 'react';
 import logo from '../../public/newpay_logo.svg';
-import SwitchLanguage from './switch-language';
+import SwitchLanguage from '../switch-language';
 
 const Header = () => {
     const locale = useLocale();

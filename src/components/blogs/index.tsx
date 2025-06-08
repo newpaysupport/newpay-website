@@ -18,7 +18,7 @@ const Blog = () => {
     const listCardData = blogData.listCardData;
     const tags = blogData.tags;
 
-    //filter tags 
+    //filter tags
     const [selectTag, setSelectTag] = useState('All');
 
     const filterCard = selectTag === 'All' ? listCardData : listCardData.filter((card) => card.tags.includes(selectTag));
