@@ -2,5 +2,5 @@
 import BlogDetail from '@/components/blogs/blog-detail';
 
 export default function BlogDetailPage({ params }: { params: { id: number | string } }) {
-    return <BlogDetail/>;
+    return <BlogDetail id = {params.id}/>;
 } 
