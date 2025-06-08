@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { useState } from 'react';
-import logoEN from '../../public/UnitedKingdom.png';
-import logoZH from '../../public/china.png';
+import logoEN from '@/images/UnitedKingdom.png';
+import logoZH from '@/images/china.png';
 
 type Props = {
     locale: string;
