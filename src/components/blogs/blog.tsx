@@ -46,7 +46,15 @@ const Blog = () => {
                 <h2 className="text-4xl font-semibold mb-6">{t('featuredArticle')}</h2>
                 <div className="grid md:grid-cols-2 gap-6">
                     {/* Featured Left Article */}
-                    <Card title={listCardData[0].title} date={listCardData[0].date} readTime={listCardData[0].readTime} tags={listCardData[0].tags} image={listCardData[0].image} CardBg={false} />
+                    <Card
+                        id={listCardData[0].id}
+                        title={listCardData[0].title}
+                        date={listCardData[0].date}
+                        readTime={listCardData[0].readTime}
+                        tags={listCardData[0].tags}
+                        image={listCardData[0].image}
+                        CardBg={false}
+                    />
 
                     {/* Side Articles */}
                     <div className="flex flex-col gap-4 h-full">
@@ -119,6 +127,7 @@ const Blog = () => {
                     {filterCard.map((card) => (
                         <Card
                             key={card.id}
+                            id={card.id}
                             title={card.title}
                             date={card.date}
                             readTime={card.readTime}
