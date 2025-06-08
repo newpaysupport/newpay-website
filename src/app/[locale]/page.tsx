@@ -1,7 +1,6 @@
 "use client";
 
-import Blog from '@/pages/blog';
-import BlogDetail from '@/pages/blog-detail';
+import Blog from '@/components/blogs/blog';
 
 export default function HomePage() {
   return (
