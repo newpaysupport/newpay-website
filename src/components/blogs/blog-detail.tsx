@@ -7,7 +7,7 @@ import { MdOutlineTimer } from 'react-icons/md';
 import { PiTelegramLogoBold } from 'react-icons/pi';
 import { SiSinaweibo } from 'react-icons/si';
 
-import Card from '@/components/card';
+import Card from '@/components/blogs/card';
 import { listCardData as enData } from '@/i18n/messages/en.json';
 import logoAuthor from '../../public/Author.png';
 
