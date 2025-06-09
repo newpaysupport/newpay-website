@@ -21,6 +21,9 @@ html{
 .text-xl{
   letter-spacing: -0.68px;
 }
+.text-7xl{
+  letter-spacing: -2.64px;
+}
 
 /* Custom gradient + blur class */
 .bg-orange-blur {

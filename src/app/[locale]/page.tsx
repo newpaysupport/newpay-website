@@ -1,12 +1,12 @@
 "use client";
 
-import Blog from '@/components/blogs';
-import Contact from '@/components/contact';
+import TermCondition from '@/components/term-condition';
 
 export default function HomePage() {
     return (
         <main>
-            <Contact/>
+            <TermCondition />
+            {/* <Contact /> */}
             {/* <Blog /> */}
             {/* <BlogDetail/> */}
         </main>
