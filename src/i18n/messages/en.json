@@ -248,5 +248,111 @@
         "isMain": true
       }
     ]
+  },
+  "payment": {
+    "heroSection": {
+      "description": "Accessible crypto wallet for everyone, everywhere. Let’s embrace the future with cryptocurrency payments via NewPay!",
+      "title": "Your All-in-One Crypto Payment Solution",
+      "buttonText": "Get your card now"
+    },
+    "contentSection1": {
+      "title": "Spend Crypto Like Fiat",
+      "description": "Swift, seamless, secure: Transform your crypto into everyday purchases with NewPay",
+      "labelButton": "Get your card now",
+      "virtualCard": {
+        "label": "Virtual Card",
+        "virtualItems": [
+          {
+            "title": "For any kind of transaction",
+            "subtitle": "Protected by $42M insurance from OneDegree."
+          },
+          {
+            "title": "Compatible with mobile wallets",
+            "subtitle": "Insured up to $42M, even on Apple Pay & Google Pay."
+          }
+        ]
+      },
+      "physicalCard": {
+        "label": "Physical Card",
+        "physicalItems": [
+          {
+            "title": "Tap and Pay",
+            "subtitle": "Just tap — fast, seamless, secure."
+          },
+          {
+            "title": "Real-time transactions",
+            "subtitle": "Live updates — fast, seamless, secure."
+          },
+          {
+            "title": "ATM Withdrawal",
+            "subtitle": "Cash out — fast, seamless, secure."
+          }
+        ]
+      }
+    },
+    "contentSection2": {
+      "title": "Spend Crypto Everywhere",
+      "description": "Transfer fiat with your crypto to anyone anywhere in the world"
+    },
+    "safeAssetsSection": {
+      "title": "Your assets are safe with us",
+      "description": "Client asset segregation with Licensed Trust Company",
+      "biometric": {
+        "title": "Biometric",
+        "subtitle": "security"
+      },
+      "accessCode": {
+        "title": "Access code",
+        "subtitle": "protection"
+      }
+    },
+    "cardSection": {
+      "title": "Pay on-the-go",
+      "description": "Simply add NewPay Card to Apple or Google Wallet for quick and convenient access whenever you need it."
+    },
+    "shareHappyMoment": {
+      "title": "Share Happy Moments",
+      "description": "Split the bill with friends or send gifts in crypto with 0 transfer fees",
+      "giftCard": {
+        "title": "Reward",
+        "subtitle": "Free Gift",
+        "amount": "+20.68 USDT"
+      },
+      "receiveCard": {
+        "title": "Receive",
+        "subtitle": "Dinner",
+        "amount": "+250.00 USDT"
+      }
+    },
+    "faqSection": {
+      "title": "FAQ",
+      "subtitle": "Frequently Asked Questions",
+      "faqItems": [
+        {
+          "question": "How do I open a personal account ?",
+          "answer": "Opening a personal account is easy. Visit our sign-up page and follow the instructions. You'll need to provide basic information and complete identity verification."
+        },
+        {
+          "question": "How long does it take for funds to arrive in my account ?",
+          "answer": "Typically, funds arrive within 1-3 business days, depending on the sending institution and method. Instant transfers may be available for certain regions."
+        },
+        {
+          "question": "What fees does NewPay charge ?",
+          "answer": "NewPay offers competitive fees, with many basic transactions being free. Detailed fee schedules are available on our website's pricing page."
+        },
+        {
+          "question": "Does NewPay offer virtual or physical cards ?",
+          "answer": "Yes, NewPay offers both virtual and physical cards. You can easily order them through your account dashboard."
+        },
+        {
+          "question": "Why choose NewPay ?",
+          "answer": "NewPay provides a secure, user-friendly platform with fast transactions, excellent customer support, and innovative financial tools."
+        }
+      ]
+    },
+    "downloadSection": {
+      "title": "Join NewPay. Spend Safe & Smart",
+      "buttonText": "Download App"
+    }
   }
 }
