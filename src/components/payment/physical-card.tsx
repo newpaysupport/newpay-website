@@ -1,4 +1,4 @@
-import img_card_black from "@/images/img_card_black.png"
+import img_card_black from "@/images/payment/img_card_black.png"
 import Image from 'next/image'
 
 type PhysicalCardProps = {

@@ -1,5 +1,5 @@
 'use client'
-import image_contact from '@/images/image_contact.png';
+import image_contact from '@/images/contact/image_contact.png';
 import Image from 'next/image';
 import { useState } from 'react';
 const Contact = () => {

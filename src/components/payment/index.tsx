@@ -4,25 +4,24 @@ import { payment as ziBlog } from '@/i18n/messages/zi.json';
 import { useLocale } from 'next-intl';
 import { useState } from "react";
 
-import card_container from "@/images/Card_Container.png";
-import card_payment from "@/images/Front.png";
-import social from "@/images/Social_Media.png";
-import wallet from "@/images/WALLET.png";
-import world from "@/images/World.png";
-import bg_content3 from "@/images/bg_content3.png";
-import icon_gift from "@/images/didi.png";
-import icon_arrow from "@/images/didi_arrow.png";
-import hero_payment from "@/images/hero_payment.png";
-import img_share from "@/images/img_share_happy.png";
-import message from "@/images/message.png";
-import logo_payment from "@/images/newpay_square_mark_payment.png";
+import card_container from "@/images/payment/Card_Container.png";
+import card_payment from "@/images/payment/Front.png";
+import social from "@/images/payment/Social_Media.png";
+import wallet from "@/images/payment/WALLET.png";
+import world from "@/images/payment/World.png";
+import bg_content3 from "@/images/payment/bg_content3.png";
+import icon_gift from "@/images/payment/didi.png";
+import icon_arrow from "@/images/payment/didi_arrow.png";
+import hero_payment from "@/images/payment/hero_payment.png";
+import img_share from "@/images/payment/img_share_happy.png";
+import message from "@/images/payment/message.png";
+import logo_payment from "@/images/payment/newpay_square_mark_payment.png";
 
 import Image from "next/image";
-import DownloadSection from "./download-section";
 import PhysicalCard from "./physical-card";
 import VirtualCard from "./virtual-card";
 
-const Payment = () => {
+const PaymentScreen = () => {
     const [activeCard, setActiveCard] = useState(true);
 
     const locale = useLocale();
@@ -275,10 +274,10 @@ const Payment = () => {
                     </div>
                 </div>
                 {/* content Download section */}
-                <DownloadSection downloadSection={downloadSection} />
+                {/* <DownloadSection downloadSection={downloadSection} /> */}
             </div>
         </div>
     )
 }
-export default Payment
+export default PaymentScreen
 

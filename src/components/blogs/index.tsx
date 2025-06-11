@@ -1,9 +1,9 @@
 'use client'
 import { blog as enBlog } from '@/i18n/messages/en.json';
 import { blog as ziBlog } from '@/i18n/messages/zi.json';
-import image2 from '@/images/image(1).png';
-import image1 from '@/images/image.png';
-import blog_logo from '@/images/image1991.png';
+import image2 from '@/images/blog/image(1).png';
+import image1 from '@/images/blog/image.png';
+import blog_logo from '@/images/blog/image1991.png';
 import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { useState } from 'react';

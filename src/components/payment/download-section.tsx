@@ -1,5 +1,5 @@
-import product_content_end from "@/images/Product_Image.png";
-import logo_payment from "@/images/newpay_square_mark_payment.png";
+import product_content_end from "@/images/payment/Product_Image.png";
+import logo_payment from "@/images/payment/newpay_square_mark_payment.png";
 import Image from 'next/image';
 
 type DownloadSectionProps = {

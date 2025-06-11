@@ -1,4 +1,5 @@
-import bg_gradient from '@/images/bg_gradient.png';
+'use client'
+import bg_gradient from '@/images/term/bg_gradient.png';
 import { useLocale } from 'next-intl';
 import Image from 'next/image';
 import { useState } from 'react';

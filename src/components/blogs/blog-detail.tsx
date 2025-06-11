@@ -11,7 +11,7 @@ import { LuLink } from 'react-icons/lu';
 import { MdOutlineTimer } from 'react-icons/md';
 import { PiTelegramLogoBold } from 'react-icons/pi';
 import { SiSinaweibo } from 'react-icons/si';
-import logoAuthor from '../../../public/images/Author.png';
+import logoAuthor from '@/images/blog/Author.png';
 
 interface BlogDetailProps {
     id: number | string;

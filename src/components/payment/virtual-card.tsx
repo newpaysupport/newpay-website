@@ -1,5 +1,5 @@
-import img_content1 from "@/images/Img_content1.png"
-import Image from "next/image"
+import img_content1 from "@/images/payment/Img_content1.png";
+import Image from "next/image";
 
 type VirtualCardProps = {
     virtualItems: {
@@ -8,7 +8,7 @@ type VirtualCardProps = {
     }[],
     labelButton: string;
 }
-const VirtualCard = ({virtualItems, labelButton}: VirtualCardProps) => {
+const VirtualCard = ({ virtualItems, labelButton }: VirtualCardProps) => {
     return (
         <>
             {/* content Virtual Card*/}
