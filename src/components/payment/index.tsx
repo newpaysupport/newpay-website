@@ -167,8 +167,8 @@ const Payment = () => {
 
                     {/* Content Section: Card */}
                     <div className="mt-8 sm:mt-12 lg:mt-16">
-                        <Image src={card_payment} alt="card payment" width={0} height={0} sizes="100vw" className="mx-auto w-full max-w-md sm:max-w-lg my-4 sm:my-6" />
-                        <Image src={wallet} alt="Wallet" width={0} height={0} sizes="100vw" className="mx-auto w-full max-w-md sm:max-w-lg" />
+                        <Image src={card_payment} alt="card payment" sizes="100vw" className="mx-auto w-full max-w-md sm:max-w-lg my-4 sm:my-6" />
+                        <Image src={wallet} alt="Wallet" sizes="100vw" className="mx-auto w-full max-w-md sm:max-w-lg" />
 
                         <div className="mt-8 sm:mt-12 lg:mt-16 text-center">
                             <h1 className="md:text-6xl text-3xl font-semibold pt-4 sm:pt-6 lg:pt-10">
