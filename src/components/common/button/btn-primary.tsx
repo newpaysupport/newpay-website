@@ -1,5 +1,4 @@
 import { BtnVariant } from '@/interfaces';
-import React from 'react'
 
 
 interface BtnPrimaryProps {
@@ -8,7 +7,6 @@ interface BtnPrimaryProps {
     onClick?: () => void;
     variant?: BtnVariant
 }
-
 
 const BtnPrimary = ({ text, className, onClick, variant }: BtnPrimaryProps) => {
 
