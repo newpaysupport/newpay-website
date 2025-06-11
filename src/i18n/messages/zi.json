@@ -252,5 +252,111 @@
         "isMain": true
       }
     ]
+  },
+  "payment": {
+    "heroSection": {
+      "description": "适合每个人的加密货币钱包，无处不在。让我们通过NewPay拥抱未来加密货币支付！",
+      "title": "您的全能加密支付解决方案",
+      "buttonText": "立即获取您的卡"
+    },
+    "contentSection1": {
+      "title": "像法币一样花费加密货币",
+      "description": "快速、无缝、安全：通过NewPay将您的加密货币转化为日常购买",
+      "labelButton": "立即获取您的卡",
+      "virtualCard": {
+        "label": "虚拟卡",
+        "virtualItems": [
+          {
+            "title": "适用于任何类型的交易",
+            "subtitle": "由OneDegree提供的4200万美元保险保护。"
+          },
+          {
+            "title": "兼容移动钱包",
+            "subtitle": "在Apple Pay和Google Pay上最高4200万美元保险。"
+          }
+        ]
+      },
+      "physicalCard": {
+        "label": "实体卡",
+        "physicalItems": [
+          {
+            "title": "轻触支付",
+            "subtitle": "只需轻触——快速、无缝、安全。"
+          },
+          {
+            "title": "实时交易",
+            "subtitle": "实时更新——快速、无缝、安全。"
+          },
+          {
+            "title": "ATM取款",
+            "subtitle": "提取现金——快速、无缝、安全。"
+          }
+        ]
+      }
+    },
+    "contentSection2": {
+      "title": "全球花费加密货币",
+      "description": "将您的加密货币兑换成法币，发送给世界各地的任何人"
+    },
+    "safeAssetsSection": {
+      "title": "您的资产在我们这里是安全的",
+      "description": "通过获得许可的信托公司实现客户资产隔离",
+      "biometric": {
+        "title": "生物识别",
+        "subtitle": "安全"
+      },
+      "accessCode": {
+        "title": "访问代码",
+        "subtitle": "保护"
+      }
+    },
+    "cardSection": {
+      "title": "随时随地支付",
+      "description": "只需将NewPay卡添加到Apple或Google Wallet，即可随时随地快速方便地访问"
+    },
+    "shareHappyMoment": {
+      "title": "分享快乐时光",
+      "description": "与朋友分摊账单或通过零转账费用发送加密货币礼物",
+      "giftCard": {
+        "title": "奖励",
+        "subtitle": "免费礼物",
+        "amount": "+20.68 USDT"
+      },
+      "receiveCard": {
+        "title": "接收",
+        "subtitle": "晚餐",
+        "amount": "+250.00 USDT"
+      }
+    },
+    "faqSection": {
+      "title": "常见问题",
+      "subtitle": "常见问题解答",
+      "faqItems": [
+        {
+          "question": "如何开设个人账户 ？",
+          "answer": "开设个人账户很简单。访问我们的注册页面并按照指示操作。您需要提供基本信息并完成身份验证。"
+        },
+        {
+          "question": "资金到达我的账户需要多长时间 ？",
+          "answer": "通常情况下，资金在1-3个工作日内到达，具体取决于发送机构和方法。某些地区可能提供即时转账。"
+        },
+        {
+          "question": "NewPay收取哪些费用 ？",
+          "answer": "NewPay提供具有竞争力的费用，许多基本交易是免费的。详细的费用表可在我们网站的价格页面上找到。"
+        },
+        {
+          "question": "NewPay是否提供虚拟或实体卡 ？",
+          "answer": "是的，NewPay提供虚拟和实体卡。您可以通过账户仪表板轻松订购。"
+        },
+        {
+          "question": "为什么选择NewPay ？",
+          "answer": "NewPay提供安全、用户友好的平台，快速交易，出色的客户支持和创新的金融工具。"
+        }
+      ]
+    },
+    "downloadSection": {
+      "title": "加入NewPay。安全智能花费",
+      "buttonText": "下载应用"
+    }
   }
 }
