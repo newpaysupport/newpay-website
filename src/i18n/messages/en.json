@@ -28,7 +28,7 @@
           "Media",
           "Blog"
         ],
-        "image": "/Frame2147226727.png",
+        "image": "/images/blog/Frame2147226727.png",
         "hasDescription": true,
         "blogSections": [
           {
@@ -67,7 +67,7 @@
           "Media",
           "Blog"
         ],
-        "image": "/card2.png"
+        "image": "/images/blog/card2.png"
       },
       {
         "id": 3,
@@ -79,7 +79,7 @@
           "Media",
           "Blog"
         ],
-        "image": "/card3.png"
+        "image": "/images/blog/card3.png"
       },
       {
         "id": 4,
@@ -91,7 +91,7 @@
           "Media",
           "Blog"
         ],
-        "image": "/card4.png"
+        "image": "/images/blog/card4.png"
       },
       {
         "id": 5,
@@ -103,7 +103,7 @@
           "Media",
           "Blog"
         ],
-        "image": "/card5.png"
+        "image": "/images/blog/card5.png"
       },
       {
         "id": 6,
@@ -115,7 +115,7 @@
           "Media",
           "Blog"
         ],
-        "image": "/card6.png"
+        "image": "/images/blog/card6.png"
       }
     ],
     "tags": [
