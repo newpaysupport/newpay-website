@@ -8,7 +8,9 @@ const config: Config = {
     theme: {
         extend: {
             boxShadow: {
-                'category-tag-active': '0px 0px 0px 2px rgba(0, 0, 0, 0.25), 0px 0px 12px 0px rgba(138, 255, 71, 0.20), 0px 0px 5px 1px rgba(175, 255, 71, 0.50) inset'
+                'category-tag-active': '0px 0px 0px 2px rgba(0, 0, 0, 0.25), 0px 0px 12px 0px rgba(138, 255, 71, 0.20), 0px 0px 5px 1px rgba(175, 255, 71, 0.50) inset',
+                'tab-card-item': 'var(--shadow-tab-card-item)',
+
             }
             , backgroundImage: {
                 'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

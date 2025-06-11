@@ -32,7 +32,7 @@
                 "./public/icons/*"
             ],
             "@/video/*": [
-                "./public/video/*"
+                "./public/videos/*"
             ]
         },
         "target": "ES2023"
