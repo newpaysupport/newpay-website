@@ -1,5 +1,3 @@
-"use client";
-
 import Payment from '../../components/payment';
 
 export default function HomePage() {
