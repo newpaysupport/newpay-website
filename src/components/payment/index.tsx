@@ -1,3 +1,4 @@
+'use client'
 import { payment as enBlog } from '@/i18n/messages/en.json';
 import { payment as ziBlog } from '@/i18n/messages/zi.json';
 import { useLocale } from 'next-intl';
