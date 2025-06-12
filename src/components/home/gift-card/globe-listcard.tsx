@@ -1,10 +1,10 @@
-import React from 'react'
-import Image from 'next/image';
 import globe from '@/images/home/giftcard/Globe.png';
 import card1 from '@/images/home/giftcard/card1.png';
 import card2 from '@/images/home/giftcard/card2.png';
 import card3 from '@/images/home/giftcard/card3.png';
 import card4 from '@/images/home/giftcard/card4.png';
+import shadow_globe from '@/images/home/giftcard/shadow_globe.png';
+import Image from 'next/image';
 
 const GlobeListCard = () => {
     return (
@@ -48,6 +48,7 @@ const GlobeListCard = () => {
                     </div>
                 </div>
             </div>
+            <Image src={shadow_globe} alt="Globe Image" className='absolute right-[12%] left-[12%] bottom-0 object-cover' />
         </div>
     )
 }
