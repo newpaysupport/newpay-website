@@ -4,6 +4,7 @@ import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { inter } from '../fonts/fonts';
+import Footer from '@/components/footer';
 
 export default async function LocaleLayout({
     children,
@@ -20,10 +21,11 @@ export default async function LocaleLayout({
     setRequestLocale(locale);
     return (
         <html lang={locale}>
-            <body  className={`${inter.variable} font-sans antialiased`}>
+            <body className={`${inter.variable} font-sans antialiased`}>
                 <NextIntlClientProvider>
-                <Header />
+                    <Header />
                     {children}
+                    <Footer />
                 </NextIntlClientProvider>
             </body>
         </html>
