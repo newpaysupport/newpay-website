@@ -86,7 +86,7 @@ const HelpCenter = () => {
                                 background: "linear - gradient(90deg, rgba(235, 169, 0, 0.00) 0 %, rgba(235, 169, 0, 0.20) 100 %), #FFF;"
                             }}
                             onClick={handleSubmit}
-                            className="w-full bg-white hover:from-orange-600 hover:to-orange-500 text-black font-semibold py-3 px-6 rounded-full transition-all duration-200 flex items-center justify-center gap-2 shadow-lg hover:shadow-orange-500/25 group"
+                            className="w-full cursor-pointer bg-white hover:from-orange-600 hover:to-orange-500 text-black font-semibold py-3 px-6 rounded-full transition-all duration-200 flex items-center justify-center gap-2 shadow-lg hover:shadow-orange-500/25 group"
                         >
                             SEND NOW
                             <Image src={arrowright} alt='arrow right' className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
