@@ -1,20 +1,18 @@
 'use client'
-import React, { useEffect, useRef, useState } from 'react'
-import Hero from './hero'
-import Consume from './consume'
-import OpenAccount from './open-account'
 import BtnPrimary from '@/components/common/button/btn-primary'
-import card from '@/images/home/hero/card.png'
-import Image from 'next/image'
 import { TabCards } from '@/constants/tab-card'
 import { virtualCardContent } from '@/constants/virtual-card'
+import card from '@/images/home/hero/card.png'
+import Image from 'next/image'
+import { useEffect, useRef, useState } from 'react'
 import PhysicCard from './consume/physic-card'
+import OpenAccount from './open-account'
 
 import apple from '@/images/home/consume/apple.svg'
 import ebay from '@/images/home/consume/ebay.svg'
+import mobileUser from '@/images/home/consume/mobile-user.png'
 import nextflix from '@/images/home/consume/nextflix.svg'
 import spotify from '@/images/home/consume/spotify.svg'
-import mobileUser from '@/images/home/consume/mobile-user.png'
 
 const HomeScreen = () => {
 
@@ -66,8 +64,8 @@ const HomeScreen = () => {
             {/* hero section */}
             <div ref={heroRef} className='w-full h-100vh overflow-y-hidden relative'>
                 <video src={'/videos/home/prism-coin.mp4'} className='w-full object-cover object-center' loop={true} autoPlay={true} muted={true} preload='true' />
-                <div className='absolute w-full lg:w-[806px] h-full top-20 left-1/2 -translate-x-1/2'>
-                    <div>
+                <div className='absolute inset-0 flex top-20 justify-center'>
+                    <div className="w-full lg:w-[600px] 2xl:w-[806px] px-4">
                         <p
                             style={{
                                 background: "linear-gradient(90deg, #FFF 0.13%, rgba(255, 255, 255, 0.00) 128.16%)",
@@ -86,14 +84,18 @@ const HomeScreen = () => {
                     </div>
                 </div>
             </div>
-            <figure
-                style={{
-                    transform: scrollProgress < 0.05 ? "scale(1)" : `scale(${1 - scrollProgress})`,
-                    visibility: scrollProgress >= 0.47657952069716775 ? "hidden" : "visible"
-                }}
-                ref={cardRef} className={`top-[486px] z-[1000] fixed left-1/2 -translate-x-1/2`}>
-                <Image src={card} alt='card' />
-            </figure>
+            <div className='top-[486px] z-[1000] fixed flex justify-center inset-0'>
+                <figure
+                    style={{
+                        transform: scrollProgress < 0.05 ? "scale(1)" : `scale(${1 - scrollProgress})`,
+                        visibility: scrollProgress >= 0.47657952069716775 ? "hidden" : "visible"
+                    }}
+                    className='lg:w-[350px] 2xl:w-[530px]'
+                    ref={cardRef}>
+                    <Image src={card} alt='card' />
+                </figure>
+            </div>
+
             {/* consume section */}
             <div ref={containerRef} className='py-20 bg-white min-h-[700px] container mx-auto'>
                 <div className=' pb-20 '>
