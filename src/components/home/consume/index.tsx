@@ -4,8 +4,10 @@ import { TabCards } from '@/constants/tab-card'
 import React, { useState } from 'react'
 import VirtualCard from './virtual-card'
 import PhysicCard from './physic-card'
+import { virtualCardContent } from '@/constants/virtual-card'
+import Image from 'next/image'
 
-const Consume = () => {
+const Consume = ({ containerRef, mobileRef }: { containerRef: React.RefObject<null>; mobileRef: React.RefObject<null> }) => {
 
     const [tabActive, setTabActive] = useState(TabCards[0].id);
 
@@ -15,8 +17,8 @@ const Consume = () => {
     }
 
     return (
-        <BoxWrapped className='py-20 bg-white min-h-[700px]'>
-            <div>
+        <div ref={containerRef} className='py-20 bg-white min-h-[700px] container mx-auto'>
+            <div className=' pb-20 '>
                 <div className='w-full lg:w-[573px] mx-auto'>
                     <p className='text-[#060606] font-semibold text-[60px] text-center -tracking-[2px] leading-normal'>
                         Consume easily <br /> Anytime, Anywhere
@@ -36,13 +38,21 @@ const Consume = () => {
                     </div>
                 </div>
 
-                <div className='mt-[64px] min-h-[350px]'>
-                    {tabActive === 1 ? <VirtualCard /> : <PhysicCard />}
+                <div className='mt-[64px] min-h-[606px] flex justify-center'>
+                    {tabActive === 1 ? <VirtualCard mobileRef={mobileRef} /> : <PhysicCard />}
+                </div>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-[64px]'>
+                    {virtualCardContent.map((item, index) => {
+                        return <div key={index} className='p-8 bg-[#f8f8f8] rounded-[20px]'>
+                            <Image src={item.icon} alt='icon' />
+                            <p className='mt-8 mb-2 text-[#1b1b1b] text-2xl font-semibold'>{item.title}</p>
+                            <p className='text-[#666] text-base font-medium'>{item.description}</p>
+                        </div>
+                    })}
                 </div>
 
-
             </div>
-        </BoxWrapped>
+        </div>
     )
 }
 
