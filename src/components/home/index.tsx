@@ -61,10 +61,6 @@ const HomeScreen = () => {
         }
 
     }, [])
-
-
-    console.log(scrollProgress)
-
     return (
         <div>
             {/* hero section */}
