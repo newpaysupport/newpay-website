@@ -68,7 +68,7 @@ const HelpCenter = () => {
 
                 {/* Right side - Form */}
                 <div className="space-y-4 w-80">
-                    <div className="space-y-4">
+                    <div className="space-y-6">
                         {/* Email input */}
                         <div className="relative">
                             <input
