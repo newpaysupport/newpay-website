@@ -95,7 +95,7 @@ const VideoBackground = () => {
                         <p className="text-xs font-semibold">– 50.50 USDT</p>
                     </div>
                 </div>
-                <button className='text-white bg-[#FF6910] text-md p-4 rounded-full'>Free Gift on Signup</button>
+                <button className='text-white bg-[#FF6910] text-md p-4 rounded-full cursor-pointer'>Free Gift on Signup</button>
             </div>
         </div>
     )
