@@ -21,7 +21,7 @@ const BtnPrimary = ({ text, className, onClick, variant }: BtnPrimaryProps) => {
 
 
     return (
-        <button className={`${className} ${defaultClass} cursor-pointer`} onClick={onClick}>{text}</button>
+        <button className={`${className} ${defaultClass} cursor-pointer transition-all ease-linear duration-150`} onClick={onClick}>{text}</button>
     )
 }
 
