@@ -51,7 +51,7 @@ const OpenAccount = () => {
     useGSAP(() => {
         gsap.registerPlugin(ScrollTrigger);
 
-        gsap.set('.stepPanel', { opacity: 0.2 });
+        // gsap.set('.stepPanel', { opacity: 0.2 });
         gsap.utils.toArray('.stepPanel').forEach((stepPanel, index) => {
             gsap.timeline({
                 scrollTrigger: {
@@ -76,6 +76,8 @@ const OpenAccount = () => {
         })
     });
 
+    console.log('activeStep', activeStep)
+
     return (
         <ReactLenis root>
             <div className="bg-[#060606] py-20 px-[120px]">
@@ -87,16 +89,14 @@ const OpenAccount = () => {
                         <div className='w-full h-full lg:w-[740px] relative'>
                             {stepAccount.map((step, index) => {
                                 return (
-                                    <div key={index} className='stepPanel flex items-start justify-between pb-40 pt-20 '>
+                                    <div key={index} className={`${index !== 0 ? "opacity-20" : "opacity-100"} stepPanel flex items-start justify-between pb-40 pt-20  `}>
                                         <div className='flex gap-x-12'>
                                             <div>
-                                                <p className='w-20 h-20 bg-[#FF6910] rounded-full text-white text-[40px] font-semibold flex items-center justify-center'>{step.step}</p>
+                                                <p className={`${index === activeStep ? "bg-[#FF6910] border-none" : "bg-[#212121] border-white/16"} border-[2px] w-20 h-20 rounded-full text-white text-[40px] font-semibold flex items-center justify-center`}>{step.step}</p>
 
                                                 <div className={`bg-white/20 w-1 h-[355px]  mx-auto relative`}>
                                                     <p className={`${activeStep === index ? "bg-[#FF6910] h-[355px]" : "bg-white/20 h-0"} w-1 absolute top-0 duration-150 transition-all ease-linear mx-auto`}> </p>
                                                 </div>
-
-
                                             </div>
                                             <div>
                                                 <p className='text-white text-[60px] font-medium'>{step.title}</p>
@@ -108,7 +108,7 @@ const OpenAccount = () => {
                             })}
                         </div>
                         <div className='sticky flex justify-end h-full grow top-[calc(50%-400px)] pt-20'>
-                            <div>
+                            <div className={`${activeStep !== -1 ? "opacity-100" : "opacity-0"} transition-all ease-linear duration-150`}>
                                 <Image src={stepAccount[activeStep].image} alt='image' />
                             </div>
                         </div>
