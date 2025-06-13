@@ -55,9 +55,9 @@ const About = () => {
                         </div>
                     </div>
                     <Image src={about_joint} alt='' className='absolute md:h-[640px] top-[60%] right-[8%] left-[8%] visible rounded-4xl max-w-7xl mx-auto object-cover object-center ' />
-                    <button className='absolute bottom-[-40%] right-[10%] py-3 px-4 text-[#060606] bg-[#FFF] flex gap-3 items-center rounded-full'>
-                        <Image src={phone_icon} alt='message icon' />
-                        <span className='text-2xl font-semibold'>Contact us</span>
+                    <button className='absolute bottom-[-40%] right-[10%] py-2 px-3 text-[#060606] bg-[#FFF] flex gap-2 items-center rounded-full'>
+                        <Image src={phone_icon} alt='message icon' className='h-10 w-10' />
+                        <span className='text-md font-semibold'>Contact us</span>
                     </button>
                 </div>
             </div>
