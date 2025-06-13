@@ -76,8 +76,6 @@ const OpenAccount = () => {
         })
     });
 
-    console.log('activeStep', activeStep)
-
     return (
         <ReactLenis root>
             <div className="bg-[#060606] py-20 px-[120px]">
@@ -86,7 +84,7 @@ const OpenAccount = () => {
                     <p className='text-[#aeaeae] text-lg font-normal mt-6 mb-20'>Just 4 steps to start – Global transparent spending, physical card ATM access, full security</p>
 
                     <div className='flex justify-between'>
-                        <div className='w-full h-full lg:w-[740px] relative'>
+                        <div className='w-full h-full lg:min-w-[800px] relative'>
                             {stepAccount.map((step, index) => {
                                 return (
                                     <div key={index} className={`${index !== 0 ? "opacity-20" : "opacity-100"} stepPanel flex items-start justify-between pb-40 pt-20  `}>
