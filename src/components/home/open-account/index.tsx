@@ -4,16 +4,12 @@ import step2 from '@/images/home/open-account/2.png';
 import step3 from '@/images/home/open-account/3.png';
 import step4 from '@/images/home/open-account/4.png';
 import step5 from '@/images/home/open-account/5.png';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import ReactLenis from 'lenis/react';
 import Image from 'next/image';
-import {
-    motion,
-    MotionValue,
-    useScroll,
-    useSpring,
-    useTransform,
-} from "motion/react"
-import { useRef } from "react"
+import { useState } from 'react';
 
 const stepAccount = [
     {
@@ -48,21 +44,37 @@ const stepAccount = [
     },
 ];
 
-function useParallax(value: MotionValue<number>, distance: number) {
-    return useTransform(value, [0, 1], [-distance, distance])
-}
-
 const OpenAccount = () => {
 
-    const stepRef = useRef(null);
+    const [activeStep, setActiveStep] = useState(0);
 
-    const { scrollYProgress } = useScroll({ target: stepRef })
-    const y = useParallax(scrollYProgress, 300)
-    const scaleX = useSpring(scrollYProgress, {
-        stiffness: 100,
-        damping: 30,
-        restDelta: 0.001,
-    })
+    useGSAP(() => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.set('.stepPanel', { opacity: 0.2 });
+        gsap.utils.toArray('.stepPanel').forEach((stepPanel, index) => {
+            gsap.timeline({
+                scrollTrigger: {
+                    trigger: stepPanel as HTMLElement,
+                    start: 'top 0',
+                    end: 'bottom 0',
+                    scrub: true,
+                    markers: false,
+                    onEnter: () => {
+                        gsap.to(stepPanel as HTMLElement, { opacity: 1, duration: 0.05 })
+                        setActiveStep(index)
+                    },
+                    onLeave: () => gsap.to(stepPanel as HTMLElement, { opacity: 0.2, duration: 0.05 }),
+                    onEnterBack: () => {
+                        gsap.to(stepPanel as HTMLElement, { opacity: 1, duration: 0.05 })
+                        setActiveStep(index)
+                    },
+                    onLeaveBack: () => gsap.to(stepPanel as HTMLElement, { opacity: 0.2, duration: 0.05 }),
+                }
+            })
+
+        })
+    });
 
     return (
         <ReactLenis root>
@@ -71,28 +83,36 @@ const OpenAccount = () => {
                     <h3 className='text-white text-[48px] font-semibold'>Open your NewPay Account</h3>
                     <p className='text-[#aeaeae] text-lg font-normal mt-6 mb-20'>Just 4 steps to start – Global transparent spending, physical card ATM access, full security</p>
 
-                    <div className='h-[500px] overflow-y-hidden'>
-                        {stepAccount.map((step, index) => {
-                            return (
-                                <div key={index} ref={stepRef} className='stepPanel flex items-start justify-between'>
-                                    <div className='flex gap-x-12'>
-                                        <div>
-                                            <p className='w-20 h-20 bg-[#FF6910] rounded-full text-white text-[40px] font-semibold flex items-center justify-center'>{step.step}</p>
-                                            <div className='w-1 h-[500px] bg-white/20 mx-auto relative'>
-                                                <p className='w-1 h-[355px] bg-[#FF6910] absolute top-0'></p>
+                    <div className='flex justify-between'>
+                        <div className='w-full h-full lg:w-[740px] relative'>
+                            {stepAccount.map((step, index) => {
+                                return (
+                                    <div key={index} className='stepPanel flex items-start justify-between pb-40 pt-20 '>
+                                        <div className='flex gap-x-12'>
+                                            <div>
+                                                <p className='w-20 h-20 bg-[#FF6910] rounded-full text-white text-[40px] font-semibold flex items-center justify-center'>{step.step}</p>
+
+                                                <div className={`bg-white/20 w-1 h-[355px]  mx-auto relative`}>
+                                                    <p className={`${activeStep === index ? "bg-[#FF6910] h-[355px]" : "bg-white/20 h-0"} w-1 absolute top-0 duration-150 transition-all ease-linear mx-auto`}> </p>
+                                                </div>
+
+
+                                            </div>
+                                            <div>
+                                                <p className='text-white text-[60px] font-medium'>{step.title}</p>
+                                                <p className='text-[#aeaeae] text-xl font-medium'>{step.description}</p>
                                             </div>
                                         </div>
-                                        <div>
-                                            <p className='text-white text-[60px] font-medium'>{step.title}</p>
-                                            <p className='text-[#aeaeae] text-xl font-medium'>{step.description}</p>
-                                        </div>
                                     </div>
-                                    <div>
-                                        <Image src={step.image} alt='image' />
-                                    </div>
-                                </div>
-                            )
-                        })}
+                                )
+                            })}
+                        </div>
+                        <div className='sticky flex justify-end h-full grow top-[calc(50%-400px)] pt-20'>
+                            <div>
+                                <Image src={stepAccount[activeStep].image} alt='image' />
+                            </div>
+                        </div>
+
                     </div>
 
                 </div>

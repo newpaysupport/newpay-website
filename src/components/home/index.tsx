@@ -152,6 +152,7 @@ const HomeScreen = () => {
                 </div>
             </div>
             <OpenAccount />
+            {/* <StepScrollComponent /> */}
         </div>
     )
 }
