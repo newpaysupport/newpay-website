@@ -1,7 +1,10 @@
-import { NextIntlClientProvider, hasLocale } from 'next-intl';
-import { notFound } from 'next/navigation';
+import Header from '@/components/header';
 import { routing } from '@/i18n/routing';
+import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
+import { notFound } from 'next/navigation';
+import { inter } from '../fonts/fonts';
+import Footer from '@/components/footer';
 
 export default async function LocaleLayout({
     children,
@@ -18,8 +21,12 @@ export default async function LocaleLayout({
     setRequestLocale(locale);
     return (
         <html lang={locale}>
-            <body>
-                <NextIntlClientProvider>{children}</NextIntlClientProvider>
+            <body className={`${inter.variable} font-sans antialiased`}>
+                <NextIntlClientProvider>
+                    <Header />
+                    {children}
+                    <Footer />
+                </NextIntlClientProvider>
             </body>
         </html>
     );

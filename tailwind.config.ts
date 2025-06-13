@@ -7,8 +7,29 @@ const config: Config = {
     ],
     theme: {
         extend: {
+            keyframes: {
+                fanoutLeft: {
+                    '0%': { transform: 'translateX(0) rotate(0)', opacity: '0' },
+                    '100%': { transform: 'translateX(-60px) rotate(-10deg)', opacity: '1' },
+                },
+                fanoutCenter: {
+                    '0%': { transform: 'translateX(0)', opacity: '0' },
+                    '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                fanoutRight: {
+                    '0%': { transform: 'translateX(0) rotate(0)', opacity: '0' },
+                    '100%': { transform: 'translateX(60px) rotate(10deg)', opacity: '1' },
+                },
+            },
+            animation: {
+                fanoutLeft: 'fanoutLeft 0.5s ease-out forwards',
+                fanoutCenter: 'fanoutCenter 0.5s ease-out 0.2s forwards',
+                fanoutRight: 'fanoutRight 0.5s ease-out 0.4s forwards',
+            },
             boxShadow: {
-                'category-tag-active': '0px 0px 0px 2px rgba(0, 0, 0, 0.25), 0px 0px 12px 0px rgba(138, 255, 71, 0.20), 0px 0px 5px 1px rgba(175, 255, 71, 0.50) inset'
+                'category-tag-active': '0px 0px 0px 2px rgba(0, 0, 0, 0.25), 0px 0px 12px 0px rgba(138, 255, 71, 0.20), 0px 0px 5px 1px rgba(175, 255, 71, 0.50) inset',
+                'tab-card-item': 'var(--shadow-tab-card-item)',
+
             }
             , backgroundImage: {
                 'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -24,6 +45,10 @@ const config: Config = {
                 sm: 'calc(var(--radius) - 4px)'
             },
             colors: {
+                // primary: {
+                //     white: "#fff",
+                //     black: "#1B1B1B"
+                // },
                 background: 'hsl(var(--background))',
                 foreground: 'hsl(var(--foreground))',
                 card: {
@@ -34,10 +59,7 @@ const config: Config = {
                     DEFAULT: 'hsl(var(--popover))',
                     foreground: 'hsl(var(--popover-foreground))'
                 },
-                primary: {
-                    DEFAULT: 'hsl(var(--primary))',
-                    foreground: 'hsl(var(--primary-foreground))'
-                },
+
                 secondary: {
                     DEFAULT: 'hsl(var(--secondary))',
                     foreground: 'hsl(var(--secondary-foreground))'
@@ -64,7 +86,7 @@ const config: Config = {
                     '4': 'hsl(var(--chart-4))',
                     '5': 'hsl(var(--chart-5))'
                 }
-            }
+            },
         }
     },
     // plugins: [require("tailwindcss-animate")],

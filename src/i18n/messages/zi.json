@@ -1,0 +1,362 @@
+{
+  "navigation": {
+    "home": "首页",
+    "services": "服务",
+    "portfolio": "产品组合",
+    "pricing": "价格",
+    "joint": "联合账户",
+    "personal": "个人账户",
+    "getApp": "下载应用"
+  },
+  "blog": {
+    "title": "博客",
+    "subtitle": "法律与合规更新、公司新闻和媒体报道。",
+    "searchPlaceholder": "搜索文章...",
+    "featuredArticle": "精选文章",
+    "latestBlog": "最新博客",
+    "readMore": "阅读更多",
+    "date": "日期",
+    "readTime": "阅读时间",
+    "listCardData": [
+      {
+        "id": 1,
+        "title": "NewPay 加入 Circle 支付网络，推动加密至法币的跨境支付",
+        "description": "在拉丁美洲的许多地区，管理资金常常意味着应对不确定性。从货币波动、高额交易费用，到全球金融服务获取有限...",
+        "date": "2025年6月14日",
+        "readTime": "阅读时间：8 分钟",
+        "tags": [
+          "媒体",
+          "博客"
+        ],
+        "image": "/Frame2147226727.png",
+        "hasDescription": true,
+        "blogSections": [
+          {
+            "title": "面对不稳定，用创新应对",
+            "paragraphs": [
+              "在拉丁美洲的许多地区，管理资金常常意味着应对不确定性。从货币波动、高额交易费用，到全球金融服务获取有限，个人和小型企业每天都在为维持经济稳定而努力。",
+              "在这样的背景下，加密货币正逐渐被视为实用工具，而不仅仅是潮流。该地区的人民正在采用加密货币，尤其是稳定币和数字支付解决方案，以应对现实问题——在不稳定时期保值、接收海外付款，以及在无需依赖传统银行体系的情况下获得数字金融服务。",
+              "这种转变在跨境支付领域尤为明显。传统渠道通常成本高、速度慢，并涉及多个中介机构。相比之下，加密货币提供了几乎即时的转账、更低的费用以及更大的可达性——即使是对那些没有正规银行账户的人来说也是如此。",
+              "我们在拉丁美洲看到的，不是投机性的热潮，而是一种务实的转型：从数字资产到现实用途，从持有加密货币到将其融入日常生活，从障碍到赋能——由技术推动，服务于本地需求。"
+            ]
+          },
+          {
+            "title": "为何拉美地区的加密采纳路径不同",
+            "paragraphs": [
+              "在拉丁美洲，加密货币的采纳是由实际需求驱动的，而非市场趋势。与那些将加密视为投机或投资工具的地区不同，拉美更注重其务实功能：当传统金融系统无法满足需求时，提供替代性金融工具。"
+            ],
+            "bullets": [
+              "在汇率波动剧烈的国家，加密货币为跨境支付提供了更稳定的替代方案；",
+              "自由职业者和远程工作者使用稳定币从海外客户那里收款——通常比传统方式更快、费用更低；",
+              "小型企业采用加密货币来扩大客户群，并减少本币波动带来的影响；",
+              "对于许多无法获得传统银行服务的人来说，加密钱包成为他们进入全球商业的第一扇门。"
+            ],
+            "paragraphsAfterBullets": [
+              "在这样的背景下，加密货币不仅是一种新型金融资产，更是应对区域挑战的实际解决方案。它的采纳增长并非因炒作，而是源于日常用途的驱动。"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "NewPay 扩展至东南亚，推出数字钱包",
+        "description": "NewPay 在整个东南亚推出其数字钱包，旨在为新兴市场带来安全便捷的支付方式。",
+        "date": "2025年6月14日",
+        "readTime": "阅读时间：8 分钟",
+        "tags": [
+          "媒体",
+          "博客"
+        ],
+        "image": "/card2.png"
+      },
+      {
+        "id": 3,
+        "title": "加密汇款：跨境支付的未来",
+        "description": "加密货币如何通过低费用和高速度塑造汇款新时代。",
+        "date": "2025年6月14日",
+        "readTime": "阅读时间：8 分钟",
+        "tags": [
+          "媒体",
+          "博客"
+        ],
+        "image": "/card3.png"
+      },
+      {
+        "id": 4,
+        "title": "NewPay 与本地银行合作，实现无缝转账",
+        "description": {
+          "en": "NewPay is working with regional banks to make money transfers faster and more reliable.",
+          "vi": "NewPay đang hợp tác với các ngân hàng khu vực để việc chuyển tiền trở nên nhanh hơn và đáng tin cậy hơn.",
+          "zh": "NewPay 正在与地区银行合作，使资金转账更加快速和可靠。"
+        },
+        "date": "2025年6月14日",
+        "readTime": "阅读时间：8 分钟",
+        "tags": [
+          "媒体",
+          "博客"
+        ],
+        "image": "/card4.png"
+      },
+      {
+        "id": 5,
+        "title": "战略性比特币储备：对加密市场的数据驱动洞察",
+        "description": "NewPay 通过其储备策略的数据分析，揭示了对加密市场的深入见解。",
+        "date": "2025年6月14日",
+        "readTime": "阅读时间：8 分钟",
+        "tags": [
+          "媒体",
+          "博客"
+        ],
+        "image": "/card5.png"
+      },
+      {
+        "id": 6,
+        "title": "NewPay 加入 Circle 支付网络，推动加密至法币的跨境支付",
+        "description": "在拉丁美洲的许多地区，管理资金常常意味着应对不确定性...",
+        "date": "2025年6月14日",
+        "readTime": "阅读时间：8 分钟",
+        "tags": [
+          "媒体",
+          "博客"
+        ],
+        "image": "/card6.png"
+      }
+    ],
+    "tags": [
+      "全部",
+      "公告",
+      "博客",
+      "媒体",
+      "新闻稿"
+    ]
+  },
+  "term": {
+    "header": {
+      "title": "条款和条件"
+    },
+    "mainContent": {
+      "title": "NEWPAY服务条款和条件",
+      "lastUpdated": "2024年4月29日",
+      "introSection": {
+        "title": "这是一份重要文件，请仔细阅读。",
+        "paragraphs": [
+          "这些条款和条件（“条款”）包含与您在我们这里的账户以及我们为您提供的服务相关的交易的重要信息。您应仔细阅读这些条款。我们提供的特定服务可能适用额外的条款和条件。任何此类条款和条件均为本条款中规定的条款的补充。",
+          "您必须始终遵守这些条款。如果您不遵守这些条款的任何一项，我们可能会采取各种措施，包括财务措施，您不得认为我们是以该身份行事。在进行任何交易之前，您应咨询独立的职业顾问，并且只有在完全了解交易的性质、涉及的合同关系以及交易相关风险的情况下才进行交易。"
+        ]
+      },
+      "generalTerms": {
+        "title": "一般条款和条件",
+        "sections": [
+          {
+            "id": "introduction",
+            "title": "1. 引言",
+            "content": [
+              {
+                "paragraph": "1.1 您的账户及相关服务由以下集团提供，包括但不限于科技有限公司（一家在香港注册成立的有限责任公司，注册号2484457）（“HTL”）。红点科技有限公司（一家在香港注册成立的有限责任公司，注册号2908456）（“RDTL”）。红点信托有限公司（“红点信托”）。曼谷金融科技有限公司（“曼谷金融”），以及我们不时确定的其他公司（“集团”或“我们”）。"
+              }
+            ]
+          },
+          {
+            "id": "scope",
+            "title": "2. 范围",
+            "content": [
+              {
+                "paragraph": "2.1 这些条款适用于您的账户及您对服务的使用。在使用这些服务之前，请花时间阅读并理解这些条款，以便了解您的法律权利和义务。通过使用任何服务和/或完成注册流程，您同意与集团签订具有法律约束力的合同，并视为已接受这些单独的条款。"
+              },
+              {
+                "paragraph": "2.2 这些条款包括：",
+                "subItems": [
+                  "(a) 这些一般条款和条件，适用于您的账户及服务的一般情况；",
+                  "(b) 本条款的A部分，适用于客户账户；",
+                  "(c) 本条款的B部分，适用于NewPay卡（包括卡保险服务）；",
+                  "(d) 本条款的C部分，适用于交换交易；",
+                  "(e) 本条款的D部分，适用于自托管钱包、智能合约保险库和虚拟账户；",
+                  "(f) 本条款的E部分，适用于其他第三方服务；",
+                  "(g) 本条款的F部分，适用于虚拟资产贷款服务；",
+                  "(h) 我们的隐私政策；",
+                  "(i) 任何规定可能适用于服务、交易和/或交换交易的费用和收费的文件；",
+                  "(j) 我们不时指定为本条款一部分的任何其他规则、指示、指南、条款或协议；以及",
+                  "(k) 集团发行的任何补充、变更、排除、参考纳入的表格和/或通知，包括任何佣金。"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "sidebarItems": [
+      {
+        "id": "general",
+        "label": "一般条款和条件",
+        "isMain": true,
+        "hasChildren": true,
+        "children": [
+          {
+            "id": "custodian-account",
+            "label": "A. 托管账户",
+            "level": 1
+          },
+          {
+            "id": "newpay-card",
+            "label": "B. NewPay卡",
+            "level": 1,
+            "hasChildren": true,
+            "children": [
+              {
+                "id": "singapore-cards-non-resident",
+                "label": "新加坡卡：非新加坡居民持卡人",
+                "level": 2
+              },
+              {
+                "id": "hongkong-card",
+                "label": "香港卡：一般",
+                "level": 2
+              },
+              {
+                "id": "singapore-card-resident",
+                "label": "新加坡卡：新加坡居民持卡人",
+                "level": 2
+              }
+            ]
+          },
+          {
+            "id": "swap",
+            "label": "C. 交换交易",
+            "level": 1
+          },
+          {
+            "id": "custody",
+            "label": "D. 托管钱包、自托管钱包和智能合约保险库，以及虚拟账户",
+            "level": 1
+          },
+          {
+            "id": "other",
+            "label": "E. 其他第三方服务",
+            "level": 1
+          },
+          {
+            "id": "virtual-assets",
+            "label": "F. 虚拟资产贷款服务",
+            "level": 1
+          }
+        ]
+      },
+      {
+        "id": "privacy",
+        "label": "隐私政策",
+        "isMain": true
+      },
+      {
+        "id": "commission",
+        "label": "佣金政策条款和条件",
+        "isMain": true
+      }
+    ]
+  },
+  "payment": {
+    "heroSection": {
+      "description": "适合每个人的加密货币钱包，无处不在。让我们通过NewPay拥抱未来加密货币支付！",
+      "title": "您的全能加密支付解决方案",
+      "buttonText": "立即获取您的卡"
+    },
+    "contentSection1": {
+      "title": "像法币一样花费加密货币",
+      "description": "快速、无缝、安全：通过NewPay将您的加密货币转化为日常购买",
+      "labelButton": "立即获取您的卡",
+      "virtualCard": {
+        "label": "虚拟卡",
+        "virtualItems": [
+          {
+            "title": "适用于任何类型的交易",
+            "subtitle": "由OneDegree提供的4200万美元保险保护。"
+          },
+          {
+            "title": "兼容移动钱包",
+            "subtitle": "在Apple Pay和Google Pay上最高4200万美元保险。"
+          }
+        ]
+      },
+      "physicalCard": {
+        "label": "实体卡",
+        "physicalItems": [
+          {
+            "title": "轻触支付",
+            "subtitle": "只需轻触——快速、无缝、安全。"
+          },
+          {
+            "title": "实时交易",
+            "subtitle": "实时更新——快速、无缝、安全。"
+          },
+          {
+            "title": "ATM取款",
+            "subtitle": "提取现金——快速、无缝、安全。"
+          }
+        ]
+      }
+    },
+    "contentSection2": {
+      "title": "全球花费加密货币",
+      "description": "将您的加密货币兑换成法币，发送给世界各地的任何人"
+    },
+    "safeAssetsSection": {
+      "title": "您的资产在我们这里是安全的",
+      "description": "通过获得许可的信托公司实现客户资产隔离",
+      "biometric": {
+        "title": "生物识别",
+        "subtitle": "安全"
+      },
+      "accessCode": {
+        "title": "访问代码",
+        "subtitle": "保护"
+      }
+    },
+    "cardSection": {
+      "title": "随时随地支付",
+      "description": "只需将NewPay卡添加到Apple或Google Wallet，即可随时随地快速方便地访问"
+    },
+    "shareHappyMoment": {
+      "title": "分享快乐时光",
+      "description": "与朋友分摊账单或通过零转账费用发送加密货币礼物",
+      "giftCard": {
+        "title": "奖励",
+        "subtitle": "免费礼物",
+        "amount": "+20.68 USDT"
+      },
+      "receiveCard": {
+        "title": "接收",
+        "subtitle": "晚餐",
+        "amount": "+250.00 USDT"
+      }
+    },
+    "faqSection": {
+      "title": "常见问题",
+      "subtitle": "常见问题解答",
+      "faqItems": [
+        {
+          "question": "如何开设个人账户 ？",
+          "answer": "开设个人账户很简单。访问我们的注册页面并按照指示操作。您需要提供基本信息并完成身份验证。"
+        },
+        {
+          "question": "资金到达我的账户需要多长时间 ？",
+          "answer": "通常情况下，资金在1-3个工作日内到达，具体取决于发送机构和方法。某些地区可能提供即时转账。"
+        },
+        {
+          "question": "NewPay收取哪些费用 ？",
+          "answer": "NewPay提供具有竞争力的费用，许多基本交易是免费的。详细的费用表可在我们网站的价格页面上找到。"
+        },
+        {
+          "question": "NewPay是否提供虚拟或实体卡 ？",
+          "answer": "是的，NewPay提供虚拟和实体卡。您可以通过账户仪表板轻松订购。"
+        },
+        {
+          "question": "为什么选择NewPay ？",
+          "answer": "NewPay提供安全、用户友好的平台，快速交易，出色的客户支持和创新的金融工具。"
+        }
+      ]
+    },
+    "downloadSection": {
+      "title": "加入NewPay。安全智能花费",
+      "buttonText": "下载应用"
+    }
+  }
+}

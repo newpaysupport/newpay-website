@@ -1,0 +1,144 @@
+'use client'
+import { blog as enBlog } from '@/i18n/messages/en.json';
+import { blog as ziBlog } from '@/i18n/messages/zi.json';
+import image2 from '@/images/blog/image(1).png';
+import image1 from '@/images/blog/image.png';
+import blog_logo from '@/images/blog/image1991.png';
+import search from '@/images/blog/search.svg';
+import { useLocale, useTranslations } from 'next-intl';
+import Image from 'next/image';
+import { useState } from 'react';
+import Card from './card';
+
+const BlogScreen = () => {
+
+    const locale = useLocale();
+    const t = useTranslations('blog');
+
+    const blogData = locale === 'en' ? enBlog : ziBlog;
+    const listCardData = blogData.listCardData;
+    const tags = blogData.tags;
+
+    //filter tags
+    const [selectTag, setSelectTag] = useState('All');
+
+    const filterCard = selectTag === 'All' ? listCardData : listCardData.filter((card) => card.tags.includes(selectTag));
+
+
+    return (
+        <div className='mt-6'>
+            {/* Header Section */}
+            <div className='flex flex-col justify-center items-center'>
+                <Image src={blog_logo} alt="Blog Logo" />
+                <h1 className='text-5xl font-semibold text-center'><span style={{ color: '#FF6910' }}>NewPay</span> {t('title')}</h1>
+                <p className='text-center text-gray-500 mt-5 text-md'>{t('subtitle')}</p>
+                <div className="mt-5 flex items-center h-12 w-[320px] text-sm text-gray-500 bg-white border border-gray-500/30 rounded-full ">
+                    <button type="button" className="h-full px-3">
+                        <Image src={search} alt="Search Icon" width={20} height={20} />
+                    </button>
+                    <input className="outline-none bg-transparent h-full w-full" type="text" placeholder={t('searchPlaceholder')} />
+                </div>
+            </div>
+
+            {/* Card Section */}
+            <div className="px-6 md:px-16 lg:px-24 xl:px-32 py-12">
+                <h2 className="text-4xl font-semibold mb-6 text-primary-black">{t('featuredArticle')}</h2>
+                <div className="grid md:grid-cols-2 gap-6">
+                    {/* Featured Left Article */}
+                    <Card
+                        id={listCardData[0].id}
+                        title={listCardData[0].title}
+                        date={listCardData[0].date}
+                        readTime={listCardData[0].readTime}
+                        tags={listCardData[0].tags}
+                        image={listCardData[0].image}
+                        CardBg={false}
+                    />
+
+                    {/* Side Articles */}
+                    <div className="flex flex-col gap-4 h-full">
+                        {/* Article 1 */}
+                        <div className="flex gap-4 p-4 border border-gray-300 rounded-xl bg-white h-[48%]">
+                            <div className="w-[50%] h-[100%] relative">
+                                <Image
+                                    src={image1}
+                                    alt="Article 1"
+                                    fill
+                                    className="rounded-md object-cover"
+                                />
+                            </div>
+                            <div className="flex flex-col gap-5 w-[50%]">
+                                <p className="text-sm text-gray-500">{listCardData[1].date} • {listCardData[1].readTime}</p>
+                                <p className="text-md font-semibold h-[30%]">
+                                    {listCardData[1].title}
+                                </p>
+                                <div className="flex gap-2 mt-2">
+                                    {listCardData[1].tags.map((tag) => (
+                                        <span key={tag} className="cursor-pointer text-sm font-medium border border-gray-400 rounded-full px-4 py-2">{tag}</span>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Article 2 */}
+                        <div className="flex gap-4 p-4 border border-gray-300 rounded-xl bg-white h-[48%]">
+                            <div className="w-[50%] h-[100%] relative">
+                                <Image
+                                    src={image2}
+                                    alt="Article 2"
+                                    fill
+                                    className="rounded-md object-cover"
+                                />
+                            </div>
+                            <div className="flex flex-col gap-5 w-[50%]">
+                                <p className="text-sm text-gray-500">{listCardData[2].date} • {listCardData[2].readTime}</p>
+                                <p className="text-md font-semibold h-[30%]">
+                                    {listCardData[2].title}
+                                </p>
+                                <div className="flex gap-2 mt-2">
+                                    {listCardData[2].tags.map((tag) => (
+                                        <span key={tag} className="cursor-pointer text-sm font-medium border border-gray-400 rounded-full px-4 py-2">{tag}</span>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* All Articles Section */}
+            <div className="px-6 md:px-16 lg:px-24 xl:px-32 my-12">
+                <h2 className="text-5xl font-semibold text-center mb-6">{t('latestBlog')}</h2>
+                <div className="flex gap-2 my-6 justify-center">
+                    {tags.map((tag) => (
+                        <span
+                            onClick={() => setSelectTag(tag)}
+                            key={tag}
+                            className={`${selectTag === tag ? 'bg-black text-white' : 'hover:bg-black hover:text-white bg-gray-200'} text-sm rounded-full px-4 py-2 cursor-pointer  font-medium`}
+                        >
+
+                            {tag}
+                        </span>
+                    ))}
+                </div>
+
+                <div className="grid md:grid-cols-3 gap-6">
+                    {filterCard.map((card) => (
+                        <Card
+                            key={card.id}
+                            id={card.id}
+                            title={card.title}
+                            date={card.date}
+                            readTime={card.readTime}
+                            tags={card.tags}
+                            image={card.image}
+                            CardBg={true}
+                        />
+                    ))}
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default BlogScreen
