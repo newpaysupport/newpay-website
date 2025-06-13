@@ -1,15 +1,16 @@
 'use client'
 import { blog as enBlog } from '@/i18n/messages/en.json';
 import { blog as ziBlog } from '@/i18n/messages/zi.json';
-import image2 from '@/images/image(1).png';
-import image1 from '@/images/image.png';
-import blog_logo from '@/images/image1991.png';
+import image2 from '@/images/blog/image(1).png';
+import image1 from '@/images/blog/image.png';
+import blog_logo from '@/images/blog/image1991.png';
+import search from '@/images/blog/search.svg';
 import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { useState } from 'react';
 import Card from './card';
 
-const Blog = () => {
+const BlogScreen = () => {
 
     const locale = useLocale();
     const t = useTranslations('blog');
@@ -33,9 +34,7 @@ const Blog = () => {
                 <p className='text-center text-gray-500 mt-5 text-md'>{t('subtitle')}</p>
                 <div className="mt-5 flex items-center h-12 w-[320px] text-sm text-gray-500 bg-white border border-gray-500/30 rounded-full ">
                     <button type="button" className="h-full px-3">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M19.707 18.293L15.168 13.754C16.311 12.306 17 10.483 17 8.5C17 3.813 13.187 0 8.5 0C3.813 0 0 3.813 0 8.5C0 13.187 3.813 17 8.5 17C10.484 17 12.306 16.312 13.754 15.168L18.293 19.707C18.488 19.902 18.744 20 19 20C19.256 20 19.512 19.902 19.707 19.707C20.098 19.316 20.098 18.684 19.707 18.293ZM2 8.5C2 4.916 4.916 2 8.5 2C12.084 2 15 4.916 15 8.5C15 12.084 12.084 15 8.5 15C4.916 15 2 12.084 2 8.5Z" fill="#1B1B1B" />
-                        </svg>
+                        <Image src={search} alt="Search Icon" width={20} height={20} />
                     </button>
                     <input className="outline-none bg-transparent h-full w-full" type="text" placeholder={t('searchPlaceholder')} />
                 </div>
@@ -142,4 +141,4 @@ const Blog = () => {
     )
 }
 
-export default Blog
+export default BlogScreen

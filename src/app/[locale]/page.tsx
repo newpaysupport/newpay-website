@@ -1,13 +1,13 @@
-import Payment from '../../components/payment';
+
+import GiftCard from "@/components/home/gift-card";
+import HomeScreen from "@/components/home";
 
 export default function HomePage() {
+
     return (
         <main>
-            <Payment />
-            {/* <TermCondition /> */}
-            {/* <Contact /> */}
-            {/* <Blog /> */}
-            {/* <BlogDetail/> */}
+            <HomeScreen />
+            <GiftCard />
         </main>
     );
 }

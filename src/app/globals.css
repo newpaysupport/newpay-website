@@ -1,38 +1,102 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-inter: var(--font-inter);
+
+  --shadow-tab-card-item: 0px 0px 4px 0px rgba(0, 0, 0, 0.04), 0px 1px 8px -1px rgba(0, 0, 0, 0.08);
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
-.text-5xl{
+.text-5xl {
   letter-spacing: -2px;
 }
-.text-md{
+.text-md {
   letter-spacing: -0.24px;
 }
-.text-4xl{
+.text-4xl {
   letter-spacing: -0.64px;
 }
-.text-xl{
+.text-xl {
   letter-spacing: -0.68px;
 }
-.text-7xl{
+.text-7xl {
   letter-spacing: -2.64px;
 }
 
 /* Custom gradient + blur class */
 .bg-orange-blur {
-  background: linear-gradient(180deg,#ffdfcc 0%, #FF6910 100%);
+  background: linear-gradient(180deg, #ffdfcc 0%, #ff6910 100%);
   filter: blur(2px);
   opacity: 0.7;
 }
 
-body{
+body {
   font-family: var(--font-inter);
   scroll-behavior: smooth;
+}
+
+/* Footer */
+
+.newpayFooterText {
+  text-align: center;
+  leading-trim: both;
+  text-edge: cap;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000;
+  background: linear-gradient(180deg, rgba(100, 100, 100, 0.24) 8.38%, rgba(6, 6, 6, 0.24) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* Physical cards */
+
+.cardFront {
+  animation: fanoutLeft 1s ease; /* Added 's' for seconds */
+}
+
+.cardMid {
+  animation: fanoutCenter 1s ease; /* Added 's' for seconds */
+}
+
+.cardBack {
+  animation: fanoutBack 1s ease; /* Added 's' for seconds */
+}
+
+@keyframes fanoutLeft {
+  0% {
+    transform: translateX(60px) rotate(0); /* Removed quotes */
+    opacity: 0; /* Removed quotes */
+  }
+  100% {
+    transform: translateX(0); /* Removed quotes */
+    opacity: 1; /* Removed quotes */
+  }
+}
+
+@keyframes fanoutCenter {
+  0% {
+    transform: translateX(0) opacity(0); /* Removed quotes */
+    opacity: 0; /* Removed quotes */
+  }
+  100% {
+    transform: translateX(0) opacity(1); /* Removed quotes */
+    opacity: 1; /* Removed quotes */
+  }
+}
+
+@keyframes fanoutBack {
+  0% {
+    transform: translateX(-60px) rotate(0); /* Removed quotes */
+    opacity: 0; /* Removed quotes */
+  }
+  100% {
+    transform: translateX(0px); /* Removed quotes */
+    opacity: 1; /* Removed quotes */
+  }
 }
