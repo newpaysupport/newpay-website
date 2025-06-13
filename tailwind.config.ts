@@ -35,6 +35,7 @@ const config: Config = {
                 'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
                 'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
                 'gradient-global': 'radial-gradient(138.89% 99.97% at 50% 99.97%, rgba(0, 1, 0, 0.00) 0%, rgba(0, 1, 0, 0.80) 66.04%)',
+                'security-item': 'linear-gradient(0deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.08) 100%), rgba(1, 1, 1, 0.16)'
             },
             fontFamily: {
                 inter: ['var(--font-inter)'],
