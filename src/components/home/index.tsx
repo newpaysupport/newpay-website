@@ -13,6 +13,8 @@ import ebay from '@/images/home/consume/ebay.svg'
 import mobileUser from '@/images/home/consume/mobile-user.png'
 import nextflix from '@/images/home/consume/nextflix.svg'
 import spotify from '@/images/home/consume/spotify.svg'
+import { useLocale } from 'next-intl'
+import { useTranslations } from 'use-intl'
 
 const HomeScreen = () => {
 
@@ -22,7 +24,8 @@ const HomeScreen = () => {
     const heroRef = useRef(null);
     const [scrollProgress, setScrollProgress] = useState(0);
     const [tabActive, setTabActive] = useState(TabCards[0].id);
-
+    const locale = useLocale();
+    const t = useTranslations("home");
 
     const handleSetTabActive = (id: number) => {
         setTabActive(id);
@@ -73,7 +76,7 @@ const HomeScreen = () => {
                                 WebkitBackgroundClip: 'text',
                                 WebkitTextFillColor: "transparent"
                             }} className='text-[48px] font-semibold text-center w-full lg:w-[470px] -tracking-[1.64px] mx-auto'>
-                            Easy to use, Safe and Cost-effective
+                            {t("titleHero")}
                         </p>
                         <p className='text-[#848484] text-base font-medium -tracking-[0.24px] text-center mb-8'>NewPay allow you to connect your crypto assets in real life!</p>
 
