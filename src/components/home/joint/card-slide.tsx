@@ -17,11 +17,19 @@ const slides = [
 
 const AutoSlideshow = () => {
     return (
-        <div className="py-20 w-full max-w-full overflow-hidden bg-white">
+        <div className="py-20 w-full max-w-full overflow-hidden bg-[#FFF]">
             <h1 className="text-4xl md:text-6xl text-[#1B1B1B] font-semibold max-w-7xl mx-auto text-left">
                 Industry Coverage
             </h1>
-            <div className="slideshow-container w-full overflow-hidden mt-20 mx-auto">
+            <div className="slideshow-container relative w-full overflow-hidden mt-20 mx-auto">
+
+                <div style={{
+                    background: "linear-gradient(90deg, rgba(255, 255, 255, 1) 5%, rgba(255, 255, 255, 0) 100%)",
+                }} className='absolute w-[120px] h-[450px] left-0 bottom-0 z-50'></div>
+                <div style={{
+                    background: "linear-gradient(90deg, rgba(255, 255, 255, 0.00) 5%, rgba(255, 255, 255, 1) 100%)"
+                }} className='absolute w-[120px] h-[450px] right-0 bottom-0 z-50'></div>
+
                 <div className="slideshow-track flex w-[calc((400px+30px)*10)] animate-slide">
                     {slides.concat(slides).map((slide, index) => (
                         <div
