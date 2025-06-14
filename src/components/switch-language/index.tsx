@@ -25,7 +25,7 @@ const SwitchLanguage = ({ locale, switchLocale, t }: Props) => {
             <div className="relative">
                 <button
                     onClick={() => setOpen((prev) => !prev)}
-                    className="flex items-center gap-2 px-3 py-2 rounded-full hover:bg-gray-100 text-sm"
+                    className="flex items-center gap-2 px-3 py-2 rounded-full text-sm"
                 >
                     <Image
                         src={currentLanguage.flag.src}
@@ -46,7 +46,7 @@ const SwitchLanguage = ({ locale, switchLocale, t }: Props) => {
                 </button>
 
                 {open && (
-                    <div className="absolute left-0 mt-2 w-32 bg-white border border-gray-300 rounded z-20">
+                    <div className="absolute left-0 mt-2 w-32 rounded z-20 bg-[#060606]/80 ">
                         {languages.map((lng) => (
                             <div
                                 key={lng.code}
@@ -54,7 +54,7 @@ const SwitchLanguage = ({ locale, switchLocale, t }: Props) => {
                                     switchLocale(lng.code);
                                     setOpen(false);
                                 }}
-                                className="flex items-center gap-2 px-4 py-2 cursor-pointer hover:bg-gray-100"
+                                className="flex items-center gap-2 px-4 py-2 cursor-pointer hover:bg-black"
                             >
                                 <Image
                                     src={lng.flag.src}
@@ -71,7 +71,7 @@ const SwitchLanguage = ({ locale, switchLocale, t }: Props) => {
             </div>
 
             {/* Get App Button */}
-            <button className="cursor-pointer md:inline hidden bg-black ml-4 px-5 py-3 rounded-full active:scale-95 text-white">
+            <button className="cursor-pointer font-semibold md:inline hidden bg-white ml-4 px-5 py-3 rounded-full active:scale-95 text-[#060606] text-sm">
                 {t('getApp')}
             </button>
         </div>

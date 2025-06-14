@@ -28,7 +28,7 @@ const AutoSlideshow = () => {
 
     return (
         <div className="py-20 w-full overflow-hidden bg-white">
-            <h1 className="text-4xl md:text-6xl text-[#1B1B1B] font-semibold max-w-7xl mx-auto text-left">
+            <h1 className="text-4xl md:text-6xl text-[#1B1B1B] font-semibold container mx-auto text-left">
                 Industry Coverage
             </h1>
 
