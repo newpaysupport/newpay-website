@@ -1,11 +1,14 @@
 'use client';
 import arrowright from '@/images/home/giftcard/arrowright.svg'; // Uncomment if you want to use the ArrowRight icon
 import letter from '@/images/home/giftcard/letter.svg';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { useState } from 'react';
 
 const HelpCenter = () => {
     const [email, setEmail] = useState('');
+
+    const t = useTranslations('home');
 
     // Sample avatar data
     const avatars = [
@@ -44,7 +47,7 @@ const HelpCenter = () => {
 
                     {/* Heading */}
                     <h2 className="text-white font-semibold text-3xl leading-tight">
-                        Follow us to get early discounts and updates regarding new product, feature and more
+                        {t('helpCenter.title')}
                     </h2>
 
                     {/* Member avatars */}
@@ -61,7 +64,7 @@ const HelpCenter = () => {
                             ))}
                         </div>
                         <span className="text-white/80 text-sm font-medium ml-2">
-                            120,438+ members
+                            {t('helpCenter.amountUsers')}
                         </span>
                     </div>
                 </div>
@@ -75,7 +78,7 @@ const HelpCenter = () => {
                                 type="email"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
-                                placeholder="Enter your email"
+                                placeholder={t('helpCenter.enterEmail')}
                                 className="w-full px-4 py-3 bg-[#FFFFFF]/8 border border-gray-600/50 rounded-xl placeholder-gray-400 text-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500/50 transition-all duration-200"
                             />
                         </div>
@@ -88,7 +91,7 @@ const HelpCenter = () => {
                             onClick={handleSubmit}
                             className="w-full cursor-pointer bg-white hover:from-orange-600 hover:to-orange-500 text-black font-semibold py-3 px-6 rounded-full transition-all duration-200 flex items-center justify-center gap-2 shadow-lg hover:shadow-orange-500/25 group"
                         >
-                            SEND NOW
+                            {t('helpCenter.sendNow')}
                             <Image src={arrowright} alt='arrow right' className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
                         </button>
                     </div>
