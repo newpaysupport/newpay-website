@@ -119,7 +119,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <p className='newpayFooterText lg:text-[312px] font-bold -tracking-[7px] uppercase text-center'>NewPay</p>
+                <p className='newpayFooterText lg:text-[300px] 2xl:text-[312px] font-bold -tracking-[7px] uppercase text-center'>NewPay</p>
 
                 <div className='text-[#848484] text-base font-normal -tracking-[0.24px] flex items-center justify-between pt-10 border-t-[1px] border-white/8'>
                     <span>Copyright @ 2025 NewPay. All right reserved</span>

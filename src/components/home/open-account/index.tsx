@@ -56,7 +56,7 @@ const OpenAccount = () => {
             gsap.timeline({
                 scrollTrigger: {
                     trigger: stepPanel as HTMLElement,
-                    start: 'top 0',
+                    start: 'top 100px',
                     end: 'bottom 0',
                     scrub: true,
                     markers: false,
@@ -97,9 +97,9 @@ const OpenAccount = () => {
                                                 <div className='relative z-[10]'>
                                                     <p className={`${index === activeStep ? "bg-[#FF6910] border-none" : "bg-[#212121] border-white/16"} border-[2px] w-20 h-20 rounded-full text-white text-[40px] font-semibold flex items-center justify-center`}>{step.step}</p>
 
-                                                    <div className={`bg-white/20 w-1 h-[355px]  mx-auto relative`}>
+                                                    {index !== stepAccount.length - 1 && <div className={`bg-white/20 w-1 h-[355px]  mx-auto relative`}>
                                                         <p className={`${activeStep === index ? "bg-[#FF6910] h-[355px]" : "bg-white/20 h-0"} w-1 absolute top-0 duration-150 transition-all ease-linear mx-auto`}> </p>
-                                                    </div>
+                                                    </div>}
                                                 </div>
                                                 <div>
                                                     <p className='text-white text-[60px] font-medium'>{step.title}</p>
@@ -118,8 +118,8 @@ const OpenAccount = () => {
 
                         </div>
                         <div className='sticky flex justify-end h-full grow top-[calc(50%-400px)] pt-20'>
-                            <div className={`${activeStep !== -1 ? "opacity-100" : "opacity-0"} transition-all ease-linear duration-150`}>
-                                <Image src={stepAccount[activeStep].image} alt='image' />
+                            <div className={`${activeStep !== -1 ? "opacity-100" : "opacity-0"} transition-all ease-linear duration-150 bg-[#060606]`}>
+                                <Image src={stepAccount[activeStep].image} alt='image' className=' mix-blend-lighten' />
                             </div>
                         </div>
 

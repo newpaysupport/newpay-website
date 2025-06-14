@@ -15,8 +15,8 @@ const VideoBackground = () => {
                 backgroundClip: 'text',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: "transparent"
-            }} className='text-6xl font-semibold text-center w-[40%] mx-auto'>
-                NewPay Gift Card Share the Joy
+            }} className='text-6xl font-semibold text-center mx-auto'>
+                NewPay Gift Card <br /> Share the Joy
             </h1>
             <p className='text-[#848484] text-center mt-4'>
                 Creative Gift Cards – Thoughtful gifts for friends, clients, and family
