@@ -3,9 +3,16 @@ import card2_img2 from '@/images/home/joint/card2_img2.png'
 import card1_img1 from '@/images/home/joint/card1_img1.png'
 import { FaArrowRight } from "react-icons/fa";
 import arrowright from '@/images/home/giftcard/arrowright.svg'
+
+import { joint as enBlog } from '@/i18n/messages/en.json';
+import { joint as ziBlog } from '@/i18n/messages/zi.json';
+import { useLocale } from 'next-intl';
 import Image from "next/image"
 
 const CardContent = () => {
+    const locale = useLocale();
+    const joint = locale === 'en' ? enBlog : ziBlog;
+
     return (
         <section className="bg-white p-16 flex items-center rounded-3xl">
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-30">
@@ -13,10 +20,10 @@ const CardContent = () => {
                 <div className="flex flex-col justify-between space-y-10">
                     <div className="pl-32">
                         <h2 className="text-4xl md:text-5xl font-semibold text-[#1B1B1B] mb-4 leading-tight">
-                            All-in-One <br /> Spending Coverage
+                            {joint.cardContent.title}
                         </h2>
                         <p className="text-3xl text-[#666] mb-6 font-medium">
-                            Flexible Virtual & <br /> Physical Card Issuance
+                            {joint.cardContent.description}
                         </p>
                     </div>
 
@@ -30,10 +37,10 @@ const CardContent = () => {
                         />
                         <div className="flex flex-col justify-between">
                             <p className="text-md">
-                                Seamlessly manage every payment, from daily purchases to international subscriptions.
+                            {joint.cardContent.textCardLeft}
                             </p>
                             <button className="border border-white font-semibold py-3 px-6 rounded-3xl cursor-pointer">
-                                <p className="flex justify-center items-center gap-3">Contact Us <FaArrowRight className="font-light" /></p>
+                                <p className="flex justify-center items-center gap-3"> {joint.cardContent.textButtonCard} <FaArrowRight className="font-light" /></p>
 
                             </button>
                         </div>
@@ -68,8 +75,8 @@ const CardContent = () => {
                                 <Image src={arrowright} alt='' />
                             </span>
                             <div>
-                                <p className="text-[#FFF] text-xl font-semibold">Send</p>
-                                <p className="text-[#D8D8D8] text-lg">Dinner</p>
+                                <p className="text-[#FFF] text-xl font-semibold"> {joint.cardContent.textCardRight.title}</p>
+                                <p className="text-[#D8D8D8] text-lg">{joint.cardContent.textCardRight.subtitle}</p>
                             </div>
                         </div>
                         <p className="text-[#FFF] font-semibold text-xl">- 120.00 USDT</p>

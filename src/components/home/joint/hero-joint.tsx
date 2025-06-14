@@ -1,13 +1,20 @@
 import Image from 'next/image';
 
-// Nhập các hình ảnh
-import bg_joint from '@/images/home/joint/bg_homejoint.svg'; // Ảnh nền chính
+import bg_joint from '@/images/home/joint/bg_homejoint.svg';
 import img_bg_joint1 from '@/images/home/joint/img_bg_joint1.svg';
 import img_bg_joint2 from '@/images/home/joint/img_bg_joint2.svg';
 import img_bg_joint3 from '@/images/home/joint/img_bg_joint3.svg';
 import img_bg_joint4 from '@/images/home/joint/img_bg_joint4.svg';
 
+import { joint as enBlog } from '@/i18n/messages/en.json';
+import { joint as ziBlog } from '@/i18n/messages/zi.json';
+import { useLocale } from 'next-intl';
+
+
 const HeroJoint = () => {
+    const locale = useLocale();
+    const joint = locale === 'en' ? enBlog : ziBlog;
+
     return (
         <div className="relative w-full h-[800px] overflow-hidden">
             {/* Background Image Container */}
@@ -50,13 +57,13 @@ const HeroJoint = () => {
                             }}
                             className="text-4xl md:text-6xl font-semibold mb-4 leading-tight"
                         >
-                            NewPay – A New Way to Spend Your Crypto
+                            {joint.hero.title}
                         </h1>
                         <p className="max-w-xl mx-auto text-[#AEAEAE] text-md mb-8">
-                            Accepted at 100M+ merchants worldwide – supporting travel, gaming, subscriptions, online shopping, entertainment, and more.
+                            {joint.hero.description}
                         </p>
                         <button className="bg-[#FF6910] cursor-pointer text-white px-15 py-3 rounded-full text-md hover:bg-[#e65c00] transition-colors">
-                            Contact us
+                            {joint.hero.buttonText}
                         </button>
                     </div>
 

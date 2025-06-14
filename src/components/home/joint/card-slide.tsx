@@ -1,22 +1,17 @@
 'use client';
-
-import slide1 from '@/images/home/joint/slide1.png';
-import slide2 from '@/images/home/joint/slide2.png';
-import slide3 from '@/images/home/joint/slide3.png';
-import slide4 from '@/images/home/joint/slide4.png';
-import slide5 from '@/images/home/joint/slide5.png';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-
-const slides = [
-    { title: 'INTERACTIVE MEDIA', image: slide1 },
-    { title: 'VIDEO ENTERTAINMENT', image: slide2 },
-    { title: 'E-COMMERCE SHOPPING', image: slide3 },
-    { title: 'IT SERVICES', image: slide4 },
-    { title: 'ANOTHER SLIDE', image: slide5 },
-];
+import { joint as enBlog } from '@/i18n/messages/en.json';
+import { joint as ziBlog } from '@/i18n/messages/zi.json';
+import { useLocale } from 'next-intl';
 
 const AutoSlideshow = () => {
+    const locale = useLocale();
+    const joint = locale === 'en' ? enBlog : ziBlog;
+    const slides = joint.cardSlide.slides.map((slide) => ({
+        title: slide.title,
+        image: slide.image,
+    }));
     const [current, setCurrent] = useState(0);
 
     useEffect(() => {
@@ -29,7 +24,7 @@ const AutoSlideshow = () => {
     return (
         <div className="py-20 w-full overflow-hidden bg-white">
             <h1 className="text-4xl md:text-6xl text-[#1B1B1B] font-semibold container mx-auto text-left">
-                Industry Coverage
+                {joint.cardSlide.title}
             </h1>
 
             <div className="relative mt-30 mb-10 flex justify-center items-center">
