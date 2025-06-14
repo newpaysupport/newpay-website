@@ -46,7 +46,7 @@ const AutoSlideshow = () => {
                     //apply style index
                     let style = 'scale-90 opacity-60 z-0';
                     if (offset === 0) style = 'scale-120 opacity-100 z-30 mx-10';
-                    else if (Math.abs(offset) === 1) style = 'scale--100 opacity-90 z-20 ';
+                    else if (Math.abs(offset) === 1) style = 'scale-100 opacity-90 z-20 ';
                     else if (Math.abs(offset) === 2) style = 'scale-90 opacity-80 z-10 ';
                     return (
                         <div
