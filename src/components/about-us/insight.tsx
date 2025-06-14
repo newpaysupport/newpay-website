@@ -12,7 +12,7 @@ import stand from '@/images/about-us/stand.svg';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Item } from '@/interfaces/common';
-
+import arrowRight from '@/images/about-us/arrow-right-black.svg';
 
 const insights = [
     {
@@ -62,6 +62,10 @@ const Insight = () => {
                                         )
                                     })}
                                 </p>
+                                <button className='border border-black/16 rounded-full py-4 w-[260px] flex items-center justify-center space-x-[10px] mt-12'>
+                                    <span>{t('hero.buttonHero')}</span>
+                                    <Image src={arrowRight} alt='' />
+                                </button>
                             </div>
                             <figure className='w-full lg:w-[480px] lg:min-w-[480px]'>
                                 <Image src={insights[index].image} alt={item.title} />
