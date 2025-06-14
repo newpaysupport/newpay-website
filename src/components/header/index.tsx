@@ -45,7 +45,7 @@ const Header = () => {
 
             <ul className="hidden md:flex items-center space-x-8">
                 <li><Link href={`/${locale}/payment`}>{t('payment')}</Link></li>
-                <li><Link href={`/${locale}/company`}>{t('company')}</Link></li>
+                <li><Link href={`/${locale}/about-us`}>{t('company')}</Link></li>
                 <li><Link href={`/${locale}/support`}>{t('support')}</Link></li>
             </ul>
 
