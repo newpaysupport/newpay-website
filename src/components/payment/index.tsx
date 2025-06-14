@@ -63,9 +63,6 @@ const PaymentScreen = () => {
     const faqSection = payment.faqSection;
     const faqItems = faqSection.faqItems;
 
-    {/* Content Section: Download */ }
-    const downloadSection = payment.downloadSection;
-
     return (
         <div>
             {/* Hero Section */}
@@ -209,9 +206,11 @@ const PaymentScreen = () => {
                     </div>
                 </div>
                 {/* content FAQ */}
-                <Faq faqSection={faqSection} faqItems={faqItems} />
+                <div className='pt-20'>
+                    <Faq faqSection={faqSection} faqItems={faqItems} />
+                </div>
                 {/* content Download section */}
-                <DownloadSection downloadSection={downloadSection} />
+                <DownloadSection />
             </div>
         </div>
     )
