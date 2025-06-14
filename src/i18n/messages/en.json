@@ -67,6 +67,50 @@
                     "desc": "Earn bonus rewards (up to 50%) in credits with our easy-to-use invite program."
                 }
             ]
+        },
+        "giftCard": {
+            "title": "NewPay Gift Card Share the Joy",
+            "desc": "Creative Gift Cards – Thoughtful gifts for friends, clients, and family",
+            "contentRight": {
+                "title": "Creative Gift Cards – Thoughtful gifts for friends, clients, and family",
+                "item1": {
+                    "title": "Reward",
+                    "desc": "Free Gift"
+                },
+                "item2": {
+                    "title": "Receive",
+                    "desc": "Split travel costs"
+                },
+                "item3": {
+                    "title": "Send",
+                    "desc": "Happy Birthday"
+                },
+                "button": "Free Gift on Signup"
+            }
+        },
+        "globeListCard": {
+            "item1": {
+                "title": "One Card for Global Travel",
+                "desc": "Accepted by 100M+ merchants, compatible with Apple Pay & Google Pay"
+            },
+            "item2": {
+                "title": "Global Subscriptions for Online Entertainment",
+                "desc": ""
+            },
+            "item3": {
+                "title": "Cross-Border Shopping Made Easy",
+                "desc": ""
+            },
+            "item4": {
+                "title": "Global Social Tipping & Verified Payments",
+                "desc": ""
+            }
+        },
+        "helpCenter": {
+            "title": "Follow us to get early discounts and updates regarding new product, feature and more",
+            "amountUsers": "120,438+ members",
+            "enterEmail": "Enter your email",
+            "sendNow": "SEND NOW"
         }
     },
     "blog": {

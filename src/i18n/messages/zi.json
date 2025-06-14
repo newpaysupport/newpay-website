@@ -67,6 +67,50 @@
                     "desc": "邀请朋友，使用简单易用的推荐计划赚取高达 50% 的奖励。"
                 }
             ]
+        },
+        "giftCard": {
+            "title": "NewPay 礼品卡｜分享喜悦",
+            "desc": "创意的送礼新方式 – 送给朋友、客户或家人的贴心之选",
+            "contentRight": {
+                "title": "创意的送礼新方式 – 送给朋友、客户或家人的贴心之选",
+                "item1": {
+                    "title": "奖励",
+                    "desc": "礼品"
+                },
+                "item2": {
+                    "title": "接收",
+                    "desc": "旅费分担"
+                },
+                "item3": {
+                    "title": "发送",
+                    "desc": "生日快乐"
+                },
+                "button": "注册即送礼"
+            }
+        },
+        "globeListCard": {
+            "item1": {
+                "title": "一张卡即可应对全球旅行所需",
+                "desc": "被超过一亿家商户接受，并支持 Apple Pay 与 Google Pay"
+            },
+            "item2": {
+                "title": "全球范围的线上娱乐订阅服务",
+                "desc": ""
+            },
+            "item3": {
+                "title": "跨境购物变得更轻松便捷",
+                "desc": ""
+            },
+            "item4": {
+                "title": "全球社交平台打赏与实名验证支付",
+                "desc": ""
+            }
+        },
+        "helpCenter": {
+            "title": "关注我们，抢先获取新品、功能更新及专属折扣信息",
+            "amountUsers": "120,438+ 用户",
+            "enterEmail": "输入您的邮箱",
+            "sendNow": "发送"
         }
     },
     "blog": {
