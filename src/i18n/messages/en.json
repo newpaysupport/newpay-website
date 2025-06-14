@@ -1,358 +1,633 @@
 {
-  "navigation": {
-    "home": "Home",
-    "services": "Services",
-    "portfolio": "Portfolio",
-    "pricing": "Pricing",
-    "joint": "Joint",
-    "personal": "Personal",
-    "getApp": "Get The App"
-  },
-  "blog": {
-    "title": "Blog",
-    "subtitle": "Legal and compliance updates, company news and media coverage.",
-    "searchPlaceholder": "Find an article...",
-    "featuredArticle": "Featured article",
-    "latestBlog": "Latest Blog",
-    "readMore": "Read More",
-    "date": "Date",
-    "readTime": "Read Time",
-    "listCardData": [
-      {
-        "id": 1,
-        "title": "NewPay Joins Circle Payment Network to Power Crypto-to-Fiat Cross-Border Payments",
-        "description": "In much of Latin America, managing money often means navigating uncertainty. From currency volatility, high transaction fees and limited access to global financial services...",
-        "date": "June 14, 2025",
-        "readTime": "8 min read",
-        "tags": [
-          "Media",
-          "Blog"
+    "navigation": {
+        "payment": "Payment",
+        "company": "Company",
+        "support": "Support",
+        "joint": "Joint",
+        "personal": "Personal",
+        "getApp": "Get The App"
+    },
+    "home": {
+        "titleHero": "Easy to use, Safe and Cost-effective",
+        "descHero": "NewPay allow you to connect your crypto assets in real life!",
+        "btnGetApp": "Get the app",
+        "btnCreateAccount": "Create an account",
+        "consumeEasily": "Consume easily Anytime, Anywhere",
+        "consumeEasilyDesc": "With NewPay Your crypto further using virtual and physical cards You can spend instantly without conversion or delay",
+        "virtualCard": "Virtual Card",
+        "physicCard": "Physical Card",
+        "utils": [
+            {
+                "title": "Free account opening and maintenance",
+                "desc": "Easy to get started, no long-term hidden fees"
+            },
+            {
+                "title": "Global consumption in multiple currencies",
+                "desc": "Support users from more than 180 countries around the world"
+            },
+            {
+                "title": "Asset Security",
+                "desc": "Meets the highest industry standard ISO 27001 certification"
+            },
+            {
+                "title": "Physical card and virtual card",
+                "desc": "Meet your online + offline consumption needs"
+            },
+            {
+                "title": "Support multiple crypto assets",
+                "desc": "Use stable coins as a way to exchange currency for you"
+            },
+            {
+                "title": "NewPay Gift Card",
+                "desc": "Send NEWPAY gift cards to your friends and family, secure, private, and immediate"
+            }
         ],
-        "image": "/images/blog/Frame2147226727.png",
-        "hasDescription": true,
-        "blogSections": [
-          {
-            "title": "Facing Volatility with Innovation",
-            "paragraphs": [
-              "In much of Latin America, managing money often means navigating uncertainty. From currency volatility, high transaction fees and limited access to global financial services, individuals and small businesses face daily challenges in maintaining economic stability.",
-              "In this context, crypto is gaining traction not as a trend, but as a tool. Across the region, people are adopting cryptocurrencies, especially stablecoins and digital payment solutions to solve real problems—preserving value during times of volatility, receiving payments from abroad, and accessing digital finance without relying on traditional banking systems.",
-              "This shift is especially noticeable in cross-border payments. Traditional channels can be costly and slow, often involving multiple intermediaries. In contrast, crypto offers near-instant transfers, lower fees, and greater accessibility—even for those without a formal bank account.",
-              "What we’re seeing in Latin America is not a speculative rush, but a pragmatic transition: from digital assets to real-world utility. From holding crypto to actively using them in daily life. And from barriers to empowerment—powered by technology, and catered to local needs."
+        "openAccount": {
+            "title": "Open your NewPay Account",
+            "desc": "Just 5 steps to start – Global transparent spending, physical card ATM access, full security",
+            "steps": [
+                {
+                    "title": "Spend crypto like fiat",
+                    "desc": "No need for fiat conversion, use crypto directly for everyday purchases (shopping, dining, subscriptions, etc.)."
+                },
+                {
+                    "title": "Worldwide Acceptance",
+                    "desc": "Support Apple Pay, card withdrawals, and transactions at millions of locations worldwide."
+                },
+                {
+                    "title": "Instant Transactions",
+                    "desc": "Send, receive, and complete crypto-to-fiat transactions, whether P2P or global payments."
+                },
+                {
+                    "title": "Gift Card",
+                    "desc": "Easily send value and crypto gifts to friends, celebrations, or just because — no conversion fees."
+                },
+                {
+                    "title": "Referral Rewards",
+                    "desc": "Earn bonus rewards (up to 50%) in credits with our easy-to-use invite program."
+                }
             ]
-          },
-          {
-            "title": "Why Crypto Adoption in LATAM Is Different",
-            "paragraphs": [
-              "Crypto adoption in Latin America is shaped by real-world needs rather than market trends. Unlike regions where crypto is often viewed through the lens of speculation or investment, in LATAM, it serves a more grounded function: offering financial tools where traditional systems fall short."
-            ],
-            "bullets": [
-              "In countries with volatile exchange rates, crypto offers a more stable alternative for cross-border payments.",
-              "Freelancers and remote workers use stablecoins to receive payments from clients abroad—often faster and with lower fees than traditional methods.",
-              "Small businesses adopt crypto to access a broader customer base and reduce exposure to local currency fluctuations.",
-              "For many without access to conventional banking, crypto wallets offer a first entry point into global commerce."
-            ],
-            "paragraphsAfterBullets": [
-              "In this context, crypto isn’t just a new financial asset—it’s a practical solution for navigating regional challenges. Its adoption continues to grow, not through hype, but through daily utility."
-            ]
-          }
-        ]
-      },
-      {
-        "id": 2,
-        "title": "NewPay Expands to Southeast Asia with Digital Wallet",
-        "description": "NewPay launches its digital wallet across Southeast Asia, aiming to bring secure and easy payments to emerging markets.",
-        "date": "June 14, 2025",
-        "readTime": "8 min read",
-        "tags": [
-          "Media",
-          "Blog"
-        ],
-        "image": "/images/blog/card2.png"
-      },
-      {
-        "id": 3,
-        "title": "Crypto Remittance: The Future of Cross-Border Payments",
-        "description": "How cryptocurrency is shaping the new era of remittances with low fees and high speed.",
-        "date": "June 14, 2025",
-        "readTime": "8 min read",
-        "tags": [
-          "Media",
-          "Blog"
-        ],
-        "image": "/images/blog/card3.png"
-      },
-      {
-        "id": 4,
-        "title": "NewPay to Partner with Local Banks for Seamless Transfers",
-        "description": "NewPay is working with regional banks to make money transfers faster and more reliable.",
-        "date": "June 14, 2025",
-        "readTime": "8 min read",
-        "tags": [
-          "Media",
-          "Blog"
-        ],
-        "image": "/images/blog/card4.png"
-      },
-      {
-        "id": 5,
-        "title": "STRATEGIC BITCOIN RESERVE: Data-Driven Insights Into the Crypto Market",
-        "description": "NewPay reveals its insights into the crypto market through data analytics of reserve strategies.",
-        "date": "June 14, 2025",
-        "readTime": "8 min read",
-        "tags": [
-          "Media",
-          "Blog"
-        ],
-        "image": "/images/blog/card5.png"
-      },
-      {
-        "id": 6,
-        "title": "NewPay Joins Circle Payment Network to Power Crypto-to-Fiat Cross-Border Payments",
-        "description": "In much of Latin America, managing money often means navigating uncertainty...",
-        "date": "June 14, 2025",
-        "readTime": "8 min read",
-        "tags": [
-          "Media",
-          "Blog"
-        ],
-        "image": "/images/blog/card6.png"
-      }
-    ],
-    "tags": [
-      "All",
-      "Announcements",
-      "Blog",
-      "Media",
-      "Press Releases"
-    ]
-  },
-  "term": {
-    "header": {
-      "title": "Terms and Conditions"
-    },
-    "mainContent": {
-      "title": "NEWPAY SERVICES TERMS & CONDITIONS",
-      "lastUpdated": "29 April 2024",
-      "introSection": {
-        "title": "THIS IS AN IMPORTANT DOCUMENT. PLEASE READ IT CAREFULLY.",
-        "paragraphs": [
-          "These terms and conditions (\"Terms\") contain important information which applies to your dealings with us in relation to your Account with us and the Services which we provide to you accordingly. You should read these Terms carefully. Further additional terms and conditions may apply in relation to specific Services offered by us. Any such terms and conditions are additional to the terms set out in these Terms.",
-          "You are required to comply with these Terms at all times. If you do not comply with any of these Terms, we may take various actions including financial actions and you must not regard us as acting in that capacity. You should consult your independent professional advisers before entering into any transaction and only enter into a transaction if you have fully understood its nature, the contractual relationships you which are dealt with and the risks associated with the transaction."
-        ]
-      },
-      "generalTerms": {
-        "title": "GENERAL TERMS AND CONDITIONS",
-        "sections": [
-          {
-            "id": "introduction",
-            "title": "1. INTRODUCTION",
-            "content": [
-              {
-                "paragraph": "1.1 Your Account and the related Services are provided to you by the following groups, including but not limited to Technology Limited (a private company limited by shares incorporated in Hong Kong with company number 2484457) (\"HTL\"). Red Dot Technology Limited (a private company limited by shares incorporated in Hong Kong with company number 2908456) (\"RDTL\"). Red Dot Trust Limited (Red Dot Trust\"). Bangkok Fintech Limited (Bangkok Fintech\"), and such other companies as determined by us from time to time (\"Group\" or \"we\")."
-              }
-            ]
-          },
-          {
-            "id": "scope",
-            "title": "2. SCOPE",
-            "content": [
-              {
-                "paragraph": "2.1 These Terms govern your Account and your use of the Services. Please take the time to read and understand these Terms before using these Services so that you are aware of your legal rights and obligations. By using any of the Services and/or completing the registration process, you are agreeing to be legally binding contract with the Group and shall be deemed to have accepted these separate terms."
-              },
-              {
-                "paragraph": "2.2 These Terms comprise:",
-                "subItems": [
-                  "(a) these general terms and conditions, which apply to your Account and the Services generally;",
-                  "(b) Part A of these Terms, which applies to the Customers Accounts;",
-                  "(c) Part B of these Terms, which applies to NewPay Card (including Card Insurance Services);",
-                  "(d) Part C of these Terms, which applies to Swap Transactions;",
-                  "(e) Part D of these Terms, which applies to Self-Custody Wallet and Smart Contract Vault, and Virtual Account;",
-                  "(f) Part E of these Terms, which applies to Other Third-Party Services;",
-                  "(g) Part F of these Terms, which applies to Virtual Assets Loan Services;",
-                  "(h) our Privacy Policy;",
-                  "(i) any document setting out the Fees and charges that may apply to a Service, transaction and/or Swap Transactions;",
-                  "(j) any other rules, instructions, guidelines, terms or agreements designated by us from time to time as part of these Terms; and",
-                  "(k) any supplements, variations, exclusions, forms incorporated by reference and/or notices issued by the Group, including any Commission."
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    },
-    "sidebarItems": [
-      {
-        "id": "general",
-        "label": "General Terms and Conditions",
-        "isMain": true,
-        "hasChildren": true,
-        "children": [
-          {
-            "id": "custodian-account",
-            "label": "A. Custodian Account",
-            "level": 1
-          },
-          {
-            "id": "newpay-card",
-            "label": "B. NewPay Card",
-            "level": 1,
-            "hasChildren": true,
-            "children": [
-              {
-                "id": "singapore-cards-non-resident",
-                "label": "Singapore cards: Non-Singapore Resident Cardholders",
-                "level": 2
-              },
-              {
-                "id": "hongkong-card",
-                "label": "Hong Kong cards: General",
-                "level": 2
-              },
-              {
-                "id": "singapore-card-resident",
-                "label": "Singapore card: Singapore Resident Cardholders",
-                "level": 2
-              }
-            ]
-          },
-          {
-            "id": "swap",
-            "label": "C. Swap Transactions",
-            "level": 1
-          },
-          {
-            "id": "custody",
-            "label": "D. Custodian Wallet, Self-Custody Wallet and Smart Contract Vault, and Virtual Account",
-            "level": 1
-          },
-          {
-            "id": "other",
-            "label": "E. Other Third-Party Services",
-            "level": 1
-          },
-          {
-            "id": "virtual-assets",
-            "label": "F. Virtual Assets Loan Services",
-            "level": 1
-          }
-        ]
-      },
-      {
-        "id": "privacy",
-        "label": "Privacy Policy",
-        "isMain": true
-      },
-      {
-        "id": "commission",
-        "label": "Commission Policy Terms and Conditions",
-        "isMain": true
-      }
-    ]
-  },
-  "payment": {
-    "heroSection": {
-      "description": "Accessible crypto wallet for everyone, everywhere. Let’s embrace the future with cryptocurrency payments via NewPay!",
-      "title": "Your All-in-One Crypto Payment Solution",
-      "buttonText": "Get your card now"
-    },
-    "contentSection1": {
-      "title": "Spend Crypto Like Fiat",
-      "description": "Swift, seamless, secure: Transform your crypto into everyday purchases with NewPay",
-      "labelButton": "Get your card now",
-      "virtualCard": {
-        "label": "Virtual Card",
-        "virtualItems": [
-          {
-            "title": "For any kind of transaction",
-            "subtitle": "Protected by $42M insurance from OneDegree."
-          },
-          {
-            "title": "Compatible with mobile wallets",
-            "subtitle": "Insured up to $42M, even on Apple Pay & Google Pay."
-          }
-        ]
-      },
-      "physicalCard": {
-        "label": "Physical Card",
-        "physicalItems": [
-          {
-            "title": "Tap and Pay",
-            "subtitle": "Just tap — fast, seamless, secure."
-          },
-          {
-            "title": "Real-time transactions",
-            "subtitle": "Live updates — fast, seamless, secure."
-          },
-          {
-            "title": "ATM Withdrawal",
-            "subtitle": "Cash out — fast, seamless, secure."
-          }
-        ]
-      }
-    },
-    "contentSection2": {
-      "title": "Spend Crypto Everywhere",
-      "description": "Transfer fiat with your crypto to anyone anywhere in the world"
-    },
-    "safeAssetsSection": {
-      "title": "Your assets are safe with us",
-      "description": "Client asset segregation with Licensed Trust Company",
-      "biometric": {
-        "title": "Biometric",
-        "subtitle": "security"
-      },
-      "accessCode": {
-        "title": "Access code",
-        "subtitle": "protection"
-      }
-    },
-    "cardSection": {
-      "title": "Pay on-the-go",
-      "description": "Simply add NewPay Card to Apple or Google Wallet for quick and convenient access whenever you need it."
-    },
-    "shareHappyMoment": {
-      "title": "Share Happy Moments",
-      "description": "Split the bill with friends or send gifts in crypto with 0 transfer fees",
-      "giftCard": {
-        "title": "Reward",
-        "subtitle": "Free Gift",
-        "amount": "+20.68 USDT"
-      },
-      "receiveCard": {
-        "title": "Receive",
-        "subtitle": "Dinner",
-        "amount": "+250.00 USDT"
-      }
-    },
-    "faqSection": {
-      "title": "FAQ",
-      "subtitle": "Frequently Asked Questions",
-      "faqItems": [
-        {
-          "question": "How do I open a personal account ?",
-          "answer": "Opening a personal account is easy. Visit our sign-up page and follow the instructions. You'll need to provide basic information and complete identity verification."
         },
-        {
-          "question": "How long does it take for funds to arrive in my account ?",
-          "answer": "Typically, funds arrive within 1-3 business days, depending on the sending institution and method. Instant transfers may be available for certain regions."
+        "giftCard": {
+            "title": "NewPay Gift Card Share the Joy",
+            "desc": "Creative Gift Cards – Thoughtful gifts for friends, clients, and family",
+            "contentRight": {
+                "title": "Creative Gift Cards – Thoughtful gifts for friends, clients, and family",
+                "item1": {
+                    "title": "Reward",
+                    "desc": "Free Gift"
+                },
+                "item2": {
+                    "title": "Receive",
+                    "desc": "Split travel costs"
+                },
+                "item3": {
+                    "title": "Send",
+                    "desc": "Happy Birthday"
+                },
+                "button": "Free Gift on Signup"
+            }
         },
-        {
-          "question": "What fees does NewPay charge ?",
-          "answer": "NewPay offers competitive fees, with many basic transactions being free. Detailed fee schedules are available on our website's pricing page."
+        "globeListCard": {
+            "item1": {
+                "title": "One Card for Global Travel",
+                "desc": "Accepted by 100M+ merchants, compatible with Apple Pay & Google Pay"
+            },
+            "item2": {
+                "title": "Global Subscriptions for Online Entertainment",
+                "desc": ""
+            },
+            "item3": {
+                "title": "Cross-Border Shopping Made Easy",
+                "desc": ""
+            },
+            "item4": {
+                "title": "Global Social Tipping & Verified Payments",
+                "desc": ""
+            }
         },
-        {
-          "question": "Does NewPay offer virtual or physical cards ?",
-          "answer": "Yes, NewPay offers both virtual and physical cards. You can easily order them through your account dashboard."
-        },
-        {
-          "question": "Why choose NewPay ?",
-          "answer": "NewPay provides a secure, user-friendly platform with fast transactions, excellent customer support, and innovative financial tools."
+        "helpCenter": {
+            "title": "Follow us to get early discounts and updates regarding new product, feature and more",
+            "amountUsers": "120,438+ members",
+            "enterEmail": "Enter your email",
+            "sendNow": "SEND NOW"
         }
-      ]
     },
-    "downloadSection": {
-      "title": "Join NewPay. Spend Safe & Smart",
-      "buttonText": "Download App"
+    "blog": {
+        "title": "Blog",
+        "subtitle": "Legal and compliance updates, company news and media coverage.",
+        "searchPlaceholder": "Find an article...",
+        "featuredArticle": "Featured article",
+        "latestBlog": "Latest Blog",
+        "readMore": "Read More",
+        "date": "Date",
+        "readTime": "Read Time",
+        "listCardData": [
+            {
+                "id": 1,
+                "title": "NewPay Joins Circle Payment Network to Power Crypto-to-Fiat Cross-Border Payments",
+                "description": "In much of Latin America, managing money often means navigating uncertainty. From currency volatility, high transaction fees and limited access to global financial services...",
+                "date": "June 14, 2025",
+                "readTime": "8 min read",
+                "tags": [
+                    "Media",
+                    "Blog"
+                ],
+                "image": "/images/blog/Frame2147226727.png",
+                "hasDescription": true,
+                "blogSections": [
+                    {
+                        "title": "Facing Volatility with Innovation",
+                        "paragraphs": [
+                            "In much of Latin America, managing money often means navigating uncertainty. From currency volatility, high transaction fees and limited access to global financial services, individuals and small businesses face daily challenges in maintaining economic stability.",
+                            "In this context, crypto is gaining traction not as a trend, but as a tool. Across the region, people are adopting cryptocurrencies, especially stablecoins and digital payment solutions to solve real problems—preserving value during times of volatility, receiving payments from abroad, and accessing digital finance without relying on traditional banking systems.",
+                            "This shift is especially noticeable in cross-border payments. Traditional channels can be costly and slow, often involving multiple intermediaries. In contrast, crypto offers near-instant transfers, lower fees, and greater accessibility—even for those without a formal bank account.",
+                            "What we’re seeing in Latin America is not a speculative rush, but a pragmatic transition: from digital assets to real-world utility. From holding crypto to actively using them in daily life. And from barriers to empowerment—powered by technology, and catered to local needs."
+                        ]
+                    },
+                    {
+                        "title": "Why Crypto Adoption in LATAM Is Different",
+                        "paragraphs": [
+                            "Crypto adoption in Latin America is shaped by real-world needs rather than market trends. Unlike regions where crypto is often viewed through the lens of speculation or investment, in LATAM, it serves a more grounded function: offering financial tools where traditional systems fall short."
+                        ],
+                        "bullets": [
+                            "In countries with volatile exchange rates, crypto offers a more stable alternative for cross-border payments.",
+                            "Freelancers and remote workers use stablecoins to receive payments from clients abroad—often faster and with lower fees than traditional methods.",
+                            "Small businesses adopt crypto to access a broader customer base and reduce exposure to local currency fluctuations.",
+                            "For many without access to conventional banking, crypto wallets offer a first entry point into global commerce."
+                        ],
+                        "paragraphsAfterBullets": [
+                            "In this context, crypto isn’t just a new financial asset—it’s a practical solution for navigating regional challenges. Its adoption continues to grow, not through hype, but through daily utility."
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "title": "NewPay Expands to Southeast Asia with Digital Wallet",
+                "description": "NewPay launches its digital wallet across Southeast Asia, aiming to bring secure and easy payments to emerging markets.",
+                "date": "June 14, 2025",
+                "readTime": "8 min read",
+                "tags": [
+                    "Media",
+                    "Blog"
+                ],
+                "image": "/images/blog/card2.png"
+            },
+            {
+                "id": 3,
+                "title": "Crypto Remittance: The Future of Cross-Border Payments",
+                "description": "How cryptocurrency is shaping the new era of remittances with low fees and high speed.",
+                "date": "June 14, 2025",
+                "readTime": "8 min read",
+                "tags": [
+                    "Media",
+                    "Blog"
+                ],
+                "image": "/images/blog/card3.png"
+            },
+            {
+                "id": 4,
+                "title": "NewPay to Partner with Local Banks for Seamless Transfers",
+                "description": "NewPay is working with regional banks to make money transfers faster and more reliable.",
+                "date": "June 14, 2025",
+                "readTime": "8 min read",
+                "tags": [
+                    "Media",
+                    "Blog"
+                ],
+                "image": "/images/blog/card4.png"
+            },
+            {
+                "id": 5,
+                "title": "STRATEGIC BITCOIN RESERVE: Data-Driven Insights Into the Crypto Market",
+                "description": "NewPay reveals its insights into the crypto market through data analytics of reserve strategies.",
+                "date": "June 14, 2025",
+                "readTime": "8 min read",
+                "tags": [
+                    "Media",
+                    "Blog"
+                ],
+                "image": "/images/blog/card5.png"
+            },
+            {
+                "id": 6,
+                "title": "NewPay Joins Circle Payment Network to Power Crypto-to-Fiat Cross-Border Payments",
+                "description": "In much of Latin America, managing money often means navigating uncertainty...",
+                "date": "June 14, 2025",
+                "readTime": "8 min read",
+                "tags": [
+                    "Media",
+                    "Blog"
+                ],
+                "image": "/images/blog/card6.png"
+            }
+        ],
+        "tags": [
+            "All",
+            "Announcements",
+            "Blog",
+            "Media",
+            "Press Releases"
+        ]
+    },
+    "term": {
+        "header": {
+            "title": "Terms and Conditions"
+        },
+        "mainContent": {
+            "title": "NEWPAY SERVICES TERMS & CONDITIONS",
+            "lastUpdated": "29 April 2024",
+            "introSection": {
+                "title": "THIS IS AN IMPORTANT DOCUMENT. PLEASE READ IT CAREFULLY.",
+                "paragraphs": [
+                    "These terms and conditions (\"Terms\") contain important information which applies to your dealings with us in relation to your Account with us and the Services which we provide to you accordingly. You should read these Terms carefully. Further additional terms and conditions may apply in relation to specific Services offered by us. Any such terms and conditions are additional to the terms set out in these Terms.",
+                    "You are required to comply with these Terms at all times. If you do not comply with any of these Terms, we may take various actions including financial actions and you must not regard us as acting in that capacity. You should consult your independent professional advisers before entering into any transaction and only enter into a transaction if you have fully understood its nature, the contractual relationships you which are dealt with and the risks associated with the transaction."
+                ]
+            },
+            "generalTerms": {
+                "title": "GENERAL TERMS AND CONDITIONS",
+                "sections": [
+                    {
+                        "id": "introduction",
+                        "title": "1. INTRODUCTION",
+                        "content": [
+                            {
+                                "paragraph": "1.1 Your Account and the related Services are provided to you by the following groups, including but not limited to Technology Limited (a private company limited by shares incorporated in Hong Kong with company number 2484457) (\"HTL\"). Red Dot Technology Limited (a private company limited by shares incorporated in Hong Kong with company number 2908456) (\"RDTL\"). Red Dot Trust Limited (Red Dot Trust\"). Bangkok Fintech Limited (Bangkok Fintech\"), and such other companies as determined by us from time to time (\"Group\" or \"we\")."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "scope",
+                        "title": "2. SCOPE",
+                        "content": [
+                            {
+                                "paragraph": "2.1 These Terms govern your Account and your use of the Services. Please take the time to read and understand these Terms before using these Services so that you are aware of your legal rights and obligations. By using any of the Services and/or completing the registration process, you are agreeing to be legally binding contract with the Group and shall be deemed to have accepted these separate terms."
+                            },
+                            {
+                                "paragraph": "2.2 These Terms comprise:",
+                                "subItems": [
+                                    "(a) these general terms and conditions, which apply to your Account and the Services generally;",
+                                    "(b) Part A of these Terms, which applies to the Customers Accounts;",
+                                    "(c) Part B of these Terms, which applies to NewPay Card (including Card Insurance Services);",
+                                    "(d) Part C of these Terms, which applies to Swap Transactions;",
+                                    "(e) Part D of these Terms, which applies to Self-Custody Wallet and Smart Contract Vault, and Virtual Account;",
+                                    "(f) Part E of these Terms, which applies to Other Third-Party Services;",
+                                    "(g) Part F of these Terms, which applies to Virtual Assets Loan Services;",
+                                    "(h) our Privacy Policy;",
+                                    "(i) any document setting out the Fees and charges that may apply to a Service, transaction and/or Swap Transactions;",
+                                    "(j) any other rules, instructions, guidelines, terms or agreements designated by us from time to time as part of these Terms; and",
+                                    "(k) any supplements, variations, exclusions, forms incorporated by reference and/or notices issued by the Group, including any Commission."
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "sidebarItems": [
+            {
+                "id": "general",
+                "label": "General Terms and Conditions",
+                "isMain": true,
+                "hasChildren": true,
+                "children": [
+                    {
+                        "id": "custodian-account",
+                        "label": "A. Custodian Account",
+                        "level": 1
+                    },
+                    {
+                        "id": "newpay-card",
+                        "label": "B. NewPay Card",
+                        "level": 1,
+                        "hasChildren": true,
+                        "children": [
+                            {
+                                "id": "singapore-cards-non-resident",
+                                "label": "Singapore cards: Non-Singapore Resident Cardholders",
+                                "level": 2
+                            },
+                            {
+                                "id": "hongkong-card",
+                                "label": "Hong Kong cards: General",
+                                "level": 2
+                            },
+                            {
+                                "id": "singapore-card-resident",
+                                "label": "Singapore card: Singapore Resident Cardholders",
+                                "level": 2
+                            }
+                        ]
+                    },
+                    {
+                        "id": "swap",
+                        "label": "C. Swap Transactions",
+                        "level": 1
+                    },
+                    {
+                        "id": "custody",
+                        "label": "D. Custodian Wallet, Self-Custody Wallet and Smart Contract Vault, and Virtual Account",
+                        "level": 1
+                    },
+                    {
+                        "id": "other",
+                        "label": "E. Other Third-Party Services",
+                        "level": 1
+                    },
+                    {
+                        "id": "virtual-assets",
+                        "label": "F. Virtual Assets Loan Services",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "privacy",
+                "label": "Privacy Policy",
+                "isMain": true
+            },
+            {
+                "id": "commission",
+                "label": "Commission Policy Terms and Conditions",
+                "isMain": true
+            }
+        ]
+    },
+    "payment": {
+        "heroSection": {
+            "description": "Accessible crypto wallet for everyone, everywhere. Let’s embrace the future with cryptocurrency payments via NewPay!",
+            "title": "Your All-in-One Crypto Payment Solution",
+            "buttonText": "Get your card now"
+        },
+        "contentSection1": {
+            "title": "Spend Crypto Like Fiat",
+            "description": "Swift, seamless, secure: Transform your crypto into everyday purchases with NewPay",
+            "labelButton": "Get your card now",
+            "virtualCard": {
+                "label": "Virtual Card",
+                "virtualItems": [
+                    {
+                        "title": "For any kind of transaction",
+                        "subtitle": "Protected by $42M insurance from OneDegree."
+                    },
+                    {
+                        "title": "Compatible with mobile wallets",
+                        "subtitle": "Insured up to $42M, even on Apple Pay & Google Pay."
+                    }
+                ]
+            },
+            "physicalCard": {
+                "label": "Physical Card",
+                "physicalItems": [
+                    {
+                        "title": "Tap and Pay",
+                        "subtitle": "Just tap — fast, seamless, secure."
+                    },
+                    {
+                        "title": "Real-time transactions",
+                        "subtitle": "Live updates — fast, seamless, secure."
+                    },
+                    {
+                        "title": "ATM Withdrawal",
+                        "subtitle": "Cash out — fast, seamless, secure."
+                    }
+                ]
+            }
+        },
+        "contentSection2": {
+            "title": "Spend Crypto Everywhere",
+            "description": "Transfer fiat with your crypto to anyone anywhere in the world"
+        },
+        "safeAssetsSection": {
+            "title": "Your assets are safe with us",
+            "description": "Client asset segregation with Licensed Trust Company",
+            "biometric": {
+                "title": "Biometric",
+                "subtitle": "security"
+            },
+            "accessCode": {
+                "title": "Access code",
+                "subtitle": "protection"
+            }
+        },
+        "cardSection": {
+            "title": "Pay on-the-go",
+            "description": "Simply add NewPay Card to Apple or Google Wallet for quick and convenient access whenever you need it."
+        },
+        "shareHappyMoment": {
+            "title": "Share Happy Moments",
+            "description": "Split the bill with friends or send gifts in crypto with 0 transfer fees",
+            "giftCard": {
+                "title": "Reward",
+                "subtitle": "Free Gift",
+                "amount": "+20.68 USDT"
+            },
+            "receiveCard": {
+                "title": "Receive",
+                "subtitle": "Dinner",
+                "amount": "+250.00 USDT"
+            }
+        },
+        "faqSection": {
+            "title": "FAQ",
+            "subtitle": "Frequently Asked Questions",
+            "faqItems": [
+                {
+                    "question": "How do I open a personal account ?",
+                    "answer": "Opening a personal account is easy. Visit our sign-up page and follow the instructions. You'll need to provide basic information and complete identity verification."
+                },
+                {
+                    "question": "How long does it take for funds to arrive in my account ?",
+                    "answer": "Typically, funds arrive within 1-3 business days, depending on the sending institution and method. Instant transfers may be available for certain regions."
+                },
+                {
+                    "question": "What fees does NewPay charge ?",
+                    "answer": "NewPay offers competitive fees, with many basic transactions being free. Detailed fee schedules are available on our website's pricing page."
+                },
+                {
+                    "question": "Does NewPay offer virtual or physical cards ?",
+                    "answer": "Yes, NewPay offers both virtual and physical cards. You can easily order them through your account dashboard."
+                },
+                {
+                    "question": "Why choose NewPay ?",
+                    "answer": "NewPay provides a secure, user-friendly platform with fast transactions, excellent customer support, and innovative financial tools."
+                }
+            ]
+        },
+        "downloadSection": {
+            "title": "Join NewPay. Spend Safe & Smart",
+            "buttonText": "Download App"
+        }
+    },
+    "footer": {
+        "information": [
+            {
+                "title": "Discover",
+                "items": [
+                    {
+                        "label": "Joint",
+                        "link": ""
+                    },
+                    {
+                        "label": "Personal",
+                        "link": ""
+                    }
+                ]
+            },
+            {
+                "title": "Payment",
+                "items": [
+                    {
+                        "label": "Card",
+                        "link": ""
+                    }
+                ]
+            },
+            {
+                "title": "Wallet",
+                "items": [
+                    {
+                        "label": "Secure Custodian",
+                        "link": ""
+                    }
+                ]
+            },
+            {
+                "title": "Company",
+                "items": [
+                    {
+                        "label": "About NewPay",
+                        "link": ""
+                    },
+                    {
+                        "label": "Blog",
+                        "link": ""
+                    }
+                ]
+            },
+            {
+                "title": "Support",
+                "items": [
+                    {
+                        "label": "Contact Us",
+                        "link": ""
+                    },
+                    {
+                        "label": "FAQ",
+                        "link": ""
+                    },
+                    {
+                        "label": "Download App",
+                        "link": ""
+                    }
+                ]
+            }
+        ],
+        "copyright": "Copyright @ 2025 NewPay. All right reserved",
+        "terms": "Terms & Condition"
+    },
+    "joint": {
+        "hero": {
+            "title": "NewPay – A New Way to Spend Your Crypto",
+            "description": "Accepted at 100M+ merchants worldwide – supporting travel, gaming, subscriptions, online shopping, entertainment, and more.",
+            "buttonText": "Contact us"
+        },
+        "cardContent": {
+            "title": "All-in-One Spending Coverage",
+            "description": "Flexible Virtual & Physical Card Issuance",
+            "textCardLeft": "Seamlessly manage every payment, from daily purchases to international subscriptions.",
+            "textButtonCard": "Contact Us",
+            "textCardRight": {
+                "title": "Send",
+                "subtitle": "Dinner"
+            }
+        },
+        "featuresGrid": {
+            "title": "Why Choose NewPay",
+            "description": "NewPay is designed to make crypto spending easy, secure, and accessible for everyone. Here’s why you should choose NewPay for your crypto transactions:With NewPay, use your crypto for payments anytime, track spending transparently, and enjoy real-time exchange rates across all scenarios. Our gift card system is designed for joyful sharing with your loved ones.",
+            "features": [
+                {
+                    "icon": "/icons/mastercard.svg",
+                    "title": "Mastercard Virtual Card Supported"
+                },
+                {
+                    "icon": "/icons/visa.svg",
+                    "title": "VISA Virtual Card Supported"
+                },
+                {
+                    "icon": "/icons/merchant.svg",
+                    "title": "Accepted by Over 100M+ Merchants"
+                },
+                {
+                    "icon": "/icons/kyc.svg",
+                    "title": "Robust KYC Verification Mechanism"
+                },
+                {
+                    "icon": "/icons/risk-control.svg",
+                    "title": "Powerful Risk Control System"
+                },
+                {
+                    "icon": "/icons/licensed.svg",
+                    "title": "Fully Licensed & Registered"
+                },
+                {
+                    "icon": "/icons/iso.svg",
+                    "title": "Compliant with Top Regulatory Standards"
+                },
+                {
+                    "icon": "/icons/supplier.svg",
+                    "title": "Supported by Robust Supplier Systems"
+                }
+            ]
+        },
+        "cardSlide": {
+            "title": "Industry Coverage",
+            "slides": [
+                {
+                    "title": "INTERACTIVE MEDIA",
+                    "image": "/images/home/joint/slide1.png"
+                },
+                {
+                    "title": "VIDEO ENTERTAINMENT",
+                    "image": "/images/home/joint/slide2.png"
+                },
+                {
+                    "title": "E-COMMERCE SHOPPING",
+                    "image": "/images/home/joint/slide3.png"
+                },
+                {
+                    "title": "IT SERVICES",
+                    "image": "/images/home/joint/slide4.png"
+                },
+                {
+                    "title": "ANOTHER SLIDE",
+                    "image": "/images/home/joint/slide5.png"
+                }
+            ]
+        },
+        "about": {
+            "title": "About NewPay",
+            "description": "With NewPay, use your crypto for payments anytime, track spending transparently, and enjoy real-time exchange rates across all scenarios. Our gift card system is designed for joyful sharing with your loved ones.",
+            "listFlag": [
+                {
+                    "flag": "/icons/Flag_HongKong.svg",
+                    "country": "Hong Kong"
+                },
+                {
+                    "flag": "/icons/Flag_Singapore.svg",
+                    "country": "Singapore"
+                },
+                {
+                    "flag": "/icons/Flag_Malaysia.svg",
+                    "country": "Malaysia"
+                },
+                {
+                    "flag": "/icons/Flag_Japan.svg",
+                    "country": "Japan"
+                }
+            ],
+            "buttonText": "Contact us"
+        }
     }
-  }
 }

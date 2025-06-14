@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import Image from 'next/image';
 
@@ -5,8 +6,14 @@ import giftcard from '@/video/home/bg_giftcard.gif';
 import icon_gift from '@/images/home/giftcard/icon_gift.svg';
 import arrow_left from '@/images/home/giftcard/arrow_left.svg';
 import arrow_right from '@/images/home/giftcard/arrow_right.svg';
+import { useTranslations } from 'use-intl';
 
 const VideoBackground = () => {
+
+    const t = useTranslations("home");
+
+
+
     return (
         <div className='container mx-auto relative'>
             {/* title */}
@@ -15,11 +22,11 @@ const VideoBackground = () => {
                 backgroundClip: 'text',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: "transparent"
-            }} className='text-6xl font-semibold text-center w-[40%] mx-auto'>
-                NewPay Gift Card Share the Joy
+            }} className='text-6xl font-semibold text-center mx-auto w-full md:w-[520px]'>
+                {t('giftCard.title')}
             </h1>
             <p className='text-[#848484] text-center mt-4'>
-                Creative Gift Cards – Thoughtful gifts for friends, clients, and family
+                {t('giftCard.desc')}
             </p>
             {/* video */}
             <div className='relative'>
@@ -40,7 +47,7 @@ const VideoBackground = () => {
                 className='absolute right-[10%] bottom-[10%] flex flex-col gap-5 w-[360px] p-6 rounded-3xl'
             >
                 <h1 className='text-2xl text-white mb-4'>
-                    Creative Gift Cards – Thoughtful gifts for friends, clients, and family
+                    {t('giftCard.contentRight.title')}
                 </h1>
 
                 <div style={{
@@ -52,8 +59,8 @@ const VideoBackground = () => {
                             <Image src={icon_gift} alt="Gift Icon" />
                         </div>
                         <div>
-                            <p className="text-xs text-white">Reward</p>
-                            <p className="text-xs text-[#979797]">Free Gift</p>
+                            <p className="text-xs text-white">{t('giftCard.contentRight.item1.title')}</p>
+                            <p className="text-xs text-[#979797]">{t('giftCard.contentRight.item1.desc')}</p>
                         </div>
                     </div>
                     <div className="text-right">
@@ -69,8 +76,8 @@ const VideoBackground = () => {
                             <Image src={arrow_left} alt="Gift Icon" />
                         </div>
                         <div>
-                            <p className="text-xs text-white">Receive</p>
-                            <p className="text-xs text-[#979797]">Split travel costs</p>
+                            <p className="text-xs text-white">{t('giftCard.contentRight.item2.title')}</p>
+                            <p className="text-xs text-[#979797]">{t('giftCard.contentRight.item2.desc')}</p>
                         </div>
                     </div>
                     <div className="text-right">
@@ -87,15 +94,15 @@ const VideoBackground = () => {
                             <Image src={arrow_right} alt="Gift Icon" />
                         </div>
                         <div>
-                            <p className="text-xs text-white">Send</p>
-                            <p className="text-xs text-[#979797]">Happy Birthday</p>
+                            <p className="text-xs text-white">{t('giftCard.contentRight.item3.title')}</p>
+                            <p className="text-xs text-[#979797]">{t('giftCard.contentRight.item3.desc')}</p>
                         </div>
                     </div>
                     <div className="text-right">
                         <p className="text-xs font-semibold">– 50.50 USDT</p>
                     </div>
                 </div>
-                <button className='text-white bg-[#FF6910] text-md p-4 rounded-full cursor-pointer'>Free Gift on Signup</button>
+                <button className='text-white bg-[#FF6910] text-md p-4 rounded-full cursor-pointer'>{t('giftCard.contentRight.button')}</button>
             </div>
         </div>
     )

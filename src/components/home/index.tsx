@@ -1,6 +1,5 @@
 'use client'
 import BtnPrimary from '@/components/common/button/btn-primary'
-import { TabCards } from '@/constants/tab-card'
 import { virtualCardContent } from '@/constants/virtual-card'
 import card from '@/images/home/hero/card.png'
 import Image from 'next/image'
@@ -13,6 +12,8 @@ import ebay from '@/images/home/consume/ebay.svg'
 import mobileUser from '@/images/home/consume/mobile-user.png'
 import nextflix from '@/images/home/consume/nextflix.svg'
 import spotify from '@/images/home/consume/spotify.svg'
+import { useLocale } from 'next-intl'
+import { useTranslations } from 'use-intl'
 
 const HomeScreen = () => {
 
@@ -21,7 +22,19 @@ const HomeScreen = () => {
     const mobileRef = useRef(null);
     const heroRef = useRef(null);
     const [scrollProgress, setScrollProgress] = useState(0);
+    const t = useTranslations("home");
+    const TabCards = [
+        {
+            id: 1,
+            name: t('virtualCard')
+        },
+        {
+            id: 2,
+            name: t('physicCard')
+        },
+    ]
     const [tabActive, setTabActive] = useState(TabCards[0].id);
+    const locale = useLocale();
 
 
     const handleSetTabActive = (id: number) => {
@@ -59,6 +72,8 @@ const HomeScreen = () => {
         }
 
     }, [])
+
+
     return (
         <div>
             {/* hero section */}
@@ -72,14 +87,14 @@ const HomeScreen = () => {
                                 backgroundClip: 'text',
                                 WebkitBackgroundClip: 'text',
                                 WebkitTextFillColor: "transparent"
-                            }} className='text-[48px] font-semibold text-center w-full lg:w-[470px] -tracking-[1.64px] mx-auto'>
-                            Easy to use, Safe and Cost-effective
+                            }} className='text-[48px] font-semibold text-center w-full lg:min-w-[472px] -tracking-[1.64px] mx-auto'>
+                            {t("titleHero")}
                         </p>
-                        <p className='text-[#848484] text-base font-medium -tracking-[0.24px] text-center mb-8'>NewPay allow you to connect your crypto assets in real life!</p>
+                        <p className='text-[#848484] text-base font-medium -tracking-[0.24px] text-center mb-8'>{t("descHero")}</p>
 
                         <div className='flex items-center justify-center gap-x-4'>
-                            <BtnPrimary text='Get the app' variant={'primary-lighter'} />
-                            <BtnPrimary text='Create an account' variant={'surface-3'} />
+                            <BtnPrimary text={t("btnGetApp")} variant={'primary-lighter'} />
+                            <BtnPrimary text={t("btnCreateAccount")} variant={'surface-3'} />
                         </div>
                     </div>
                 </div>
@@ -101,10 +116,9 @@ const HomeScreen = () => {
                 <div className=' pb-20 '>
                     <div className='w-full lg:w-[573px] mx-auto'>
                         <p className='text-[#060606] font-semibold text-[60px] text-center -tracking-[2px] leading-normal'>
-                            Consume easily <br /> Anytime, Anywhere
+                            {t("consumeEasily")}
                         </p>
-                        <p className='my-6 text-[#aeaeae] text-base font-medium -tracking-[0.24px] text-center'>With NewPay Your crypto further using virtual and physical cards
-                            You can spend instantly without conversion or delay</p>
+                        <p className='my-6 text-[#aeaeae] text-base font-medium -tracking-[0.24px] text-center'>{t("consumeEasilyDesc")}</p>
 
                         <div className='bg-[#f8f8f8] rounded-full w-full lg:w-[341px] h-[72px] p-1 flex mx-auto overflow-hidden'>
                             {TabCards.map((item, index) => {
@@ -140,11 +154,11 @@ const HomeScreen = () => {
                         </> : <PhysicCard />}
                     </div>
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-[64px]'>
-                        {virtualCardContent.map((item, index) => {
+                        {t.raw('utils').map((item: { title: string; desc: string }, index: number) => {
                             return <div key={index} className='p-8 bg-[#f8f8f8] rounded-[20px]'>
-                                <Image src={item.icon} alt='icon' />
+                                <Image src={virtualCardContent[index].icon} alt='icon' />
                                 <p className='mt-8 mb-2 text-[#1b1b1b] text-2xl font-semibold'>{item.title}</p>
-                                <p className='text-[#666] text-base font-medium'>{item.description}</p>
+                                <p className='text-[#666] text-base font-medium'>{item.desc}</p>
                             </div>
                         })}
                     </div>
@@ -152,7 +166,6 @@ const HomeScreen = () => {
                 </div>
             </div>
             <OpenAccount />
-            {/* <StepScrollComponent /> */}
         </div>
     )
 }

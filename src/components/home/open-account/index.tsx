@@ -10,6 +10,7 @@ import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import ReactLenis from 'lenis/react';
 import Image from 'next/image';
 import { useState } from 'react';
+import { useTranslations } from 'use-intl';
 
 const stepAccount = [
     {
@@ -47,6 +48,7 @@ const stepAccount = [
 const OpenAccount = () => {
 
     const [activeStep, setActiveStep] = useState(0);
+    const t = useTranslations("home");
 
     useGSAP(() => {
         gsap.registerPlugin(ScrollTrigger);
@@ -56,7 +58,7 @@ const OpenAccount = () => {
             gsap.timeline({
                 scrollTrigger: {
                     trigger: stepPanel as HTMLElement,
-                    start: 'top 0',
+                    start: 'top 100px',
                     end: 'bottom 0',
                     scrub: true,
                     markers: false,
@@ -84,26 +86,26 @@ const OpenAccount = () => {
         <ReactLenis root>
             <div className="bg-[#060606] py-20 px-[120px]">
                 <div className='container mx-auto'>
-                    <h3 className='text-white text-[48px] font-semibold'>Open your NewPay Account</h3>
-                    <p className='text-[#aeaeae] text-lg font-normal mt-6 mb-20'>Just 4 steps to start – Global transparent spending, physical card ATM access, full security</p>
+                    <h3 className='text-white text-[48px] font-semibold'>{t('openAccount.title')}</h3>
+                    <p className='text-[#aeaeae] text-lg font-normal mt-6 mb-20'>{t('openAccount.desc')}</p>
 
                     <div className='flex justify-between'>
                         <div className='w-full h-full lg:min-w-[800px] relative'>
                             <div>
-                                {stepAccount.map((step, index) => {
+                                {t.raw('openAccount.steps').map((step: { title: string; desc: string }, index: number) => {
                                     return (
                                         <div key={index} className={`${index !== 0 ? "opacity-20" : "opacity-100"} stepPanel flex items-start justify-between pb-40 pt-20  `}>
                                             <div className='flex gap-x-12'>
                                                 <div className='relative z-[10]'>
-                                                    <p className={`${index === activeStep ? "bg-[#FF6910] border-none" : "bg-[#212121] border-white/16"} border-[2px] w-20 h-20 rounded-full text-white text-[40px] font-semibold flex items-center justify-center`}>{step.step}</p>
+                                                    <p className={`${index === activeStep ? "bg-[#FF6910] border-none" : "bg-[#212121] border-white/16"} border-[2px] w-20 h-20 rounded-full text-white text-[40px] font-semibold flex items-center justify-center`}>{stepAccount[index].step}</p>
 
-                                                    <div className={`bg-white/20 w-1 h-[355px]  mx-auto relative`}>
+                                                    {index !== stepAccount.length - 1 && <div className={`bg-white/20 w-1 h-[355px]  mx-auto relative`}>
                                                         <p className={`${activeStep === index ? "bg-[#FF6910] h-[355px]" : "bg-white/20 h-0"} w-1 absolute top-0 duration-150 transition-all ease-linear mx-auto`}> </p>
-                                                    </div>
+                                                    </div>}
                                                 </div>
                                                 <div>
                                                     <p className='text-white text-[60px] font-medium'>{step.title}</p>
-                                                    <p className='text-[#aeaeae] text-xl font-medium'>{step.description}</p>
+                                                    <p className='text-[#aeaeae] text-xl font-medium'>{step.desc}</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -118,8 +120,8 @@ const OpenAccount = () => {
 
                         </div>
                         <div className='sticky flex justify-end h-full grow top-[calc(50%-400px)] pt-20'>
-                            <div className={`${activeStep !== -1 ? "opacity-100" : "opacity-0"} transition-all ease-linear duration-150`}>
-                                <Image src={stepAccount[activeStep].image} alt='image' />
+                            <div className={`${activeStep !== -1 ? "opacity-100" : "opacity-0"} transition-all ease-linear duration-150 bg-[#060606]`}>
+                                <Image src={stepAccount[activeStep].image} alt='image' className=' mix-blend-lighten' />
                             </div>
                         </div>
 

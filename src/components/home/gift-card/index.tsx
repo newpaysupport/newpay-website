@@ -18,7 +18,7 @@ const GiftCard = () => {
     const faqItems = faqSection.faqItems;
 
     return (
-        <div className='py-16 bg-black'>
+        <div className='py-16 bg-[#060606]'>
             <DownloadSection downloadSection={downloadSection} />
             <div className='mt-16'>
                 {/* video background */}
