@@ -1,18 +1,117 @@
 {
     "navigation": {
-        "home": "首页",
-        "services": "服务",
-        "portfolio": "产品组合",
-        "pricing": "价格",
-        "joint": "联合账户",
-        "personal": "个人账户",
-        "getApp": "下载应用"
+        "payment": "付款",
+        "company": "公司",
+        "support": "支持",
+        "joint": "联合",
+        "personal": "个人",
+        "getApp": "获取应用程序"
     },
     "home": {
         "titleHero": "让加密货币真正融入日常消费 简单 安全 又划算",
-        "desc": "NewPay 让你将加密资产连接到现实生活中！",
+        "descHero": "NewPay 让你将加密资产连接到现实生活中！",
         "btnGetApp": "下载 APP",
-        "btnCreateAccount": "开户注册"
+        "btnCreateAccount": "开户注册",
+        "consumeEasily": "随时随地 轻松消费",
+        "consumeEasilyDesc": "使用 NewPay 的虚拟卡和实体卡，让你的加密资产更具实用价值 即刻消费，无需换汇，无需等待",
+        "virtualCard": "虚拟卡",
+        "physicCard": "实体卡",
+        "utils": [
+            {
+                "title": "免费开户与维护",
+                "desc": "轻松上手，无长期隐藏费用"
+            },
+            {
+                "title": "多币种全球消费",
+                "desc": "支持来自全球 180 多个国家的用户使用"
+            },
+            {
+                "title": "资产安全保障",
+                "desc": "符合最高行业标准 ISO 27001 认证"
+            },
+            {
+                "title": "实体卡与虚拟卡",
+                "desc": "满足你的线上 + 线下消费需求"
+            },
+            {
+                "title": "支持多种加密资产",
+                "desc": "使用稳定币等方式，灵活兑换你需要的币种"
+            },
+            {
+                "title": "NewPay 礼品卡",
+                "desc": "礼品卡即刻、安全、私密地送给亲朋好友"
+            }
+        ],
+        "openAccount": {
+            "title": "开启你的 NewPay 账户",
+            "desc": "只需 5 步，即可开启全球透明支付体验，支持实体卡 ATM 提现，保障资金安全",
+            "steps": [
+                {
+                    "title": "像法币一样消费加密货币",
+                    "desc": "无需法币兑换，直接使用加密货币进行日常购物（购物、餐饮、订阅等."
+                },
+                {
+                    "title": "全球接受",
+                    "desc": "支持 Apple Pay、ATM 取款和全球数百万个地点的交易."
+                },
+                {
+                    "title": "即时交易",
+                    "desc": "发送、接收和管理加密货币，进行即时交易，无论是送礼还是支付账单."
+                },
+                {
+                    "title": "礼品卡",
+                    "desc": "轻松与朋友分享 USDT，适用于生日、庆祝活动或仅仅是因为 — 无交易费用。"
+                },
+                {
+                    "title": "推荐奖励",
+                    "desc": "邀请朋友，使用简单易用的推荐计划赚取高达 50% 的奖励。"
+                }
+            ]
+        },
+        "giftCard": {
+            "title": "NewPay 礼品卡｜分享喜悦",
+            "desc": "创意的送礼新方式 – 送给朋友、客户或家人的贴心之选",
+            "contentRight": {
+                "title": "创意的送礼新方式 – 送给朋友、客户或家人的贴心之选",
+                "item1": {
+                    "title": "奖励",
+                    "desc": "礼品"
+                },
+                "item2": {
+                    "title": "接收",
+                    "desc": "旅费分担"
+                },
+                "item3": {
+                    "title": "发送",
+                    "desc": "生日快乐"
+                },
+                "button": "注册即送礼"
+            }
+        },
+        "globeListCard": {
+            "item1": {
+                "title": "一张卡即可应对全球旅行所需",
+                "desc": "被超过一亿家商户接受，并支持 Apple Pay 与 Google Pay"
+            },
+            "item2": {
+                "title": "全球范围的线上娱乐订阅服务",
+                "desc": ""
+            },
+            "item3": {
+                "title": "跨境购物变得更轻松便捷",
+                "desc": ""
+            },
+            "item4": {
+                "title": "全球社交平台打赏与实名验证支付",
+                "desc": ""
+            }
+        },
+        "helpCenter": {
+            "title": "关注我们，抢先获取新品、功能更新及专属折扣信息",
+            "amountUsers": "120,438+ 用户",
+            "enterEmail": "输入您的邮箱",
+            "sendNow": "发送"
+        }
     },
     "blog": {
         "title": "博客",
@@ -363,6 +462,176 @@
         "downloadSection": {
             "title": "加入NewPay。安全智能花费",
             "buttonText": "下载应用"
+        }
+    },
+    "footer": {
+        "information": [
+            {
+                "title": "服务方案",
+                "items": [
+                    {
+                        "label": "联名账户",
+                        "link": "/joint"
+                    },
+                    {
+                        "label": "个人账户",
+                        "link": "/"
+                    }
+                ]
+            },
+            {
+                "title": "支付",
+                "items": [
+                    {
+                        "label": "卡片",
+                        "link": ""
+                    }
+                ]
+            },
+            {
+                "title": "钱包",
+                "items": [
+                    {
+                        "label": "安全托管",
+                        "link": ""
+                    }
+                ]
+            },
+            {
+                "title": "公司",
+                "items": [
+                    {
+                        "label": "关于NewPay",
+                        "link": ""
+                    },
+                    {
+                        "label": "博客",
+                        "link": "/blog"
+                    }
+                ]
+            },
+            {
+                "title": "支持",
+                "items": [
+                    {
+                        "label": "联系我们",
+                        "link": ""
+                    },
+                    {
+                        "label": "常见问题",
+                        "link": ""
+                    },
+                    {
+                        "label": "下载APP",
+                        "link": ""
+                    }
+                ]
+            }
+        ],
+        "copyright": "版权 © 2025 NewPay。保留所有权利。",
+        "terms": "使用条款"
+    },
+    "joint": {
+        "hero": {
+            "title": "NewPay –  全新的加密货币消费方式",
+            "description": "全球超过 1 亿家商户支持使用，涵盖旅游、游戏、订阅、网购、娱乐等多种场景",
+            "buttonText": "联系我们"
+        },
+        "cardContent": {
+            "title": "一站式支付覆盖",
+            "description": "虚拟卡与实体卡灵活开通",
+            "textCardLeft": "从日常消费到国际订阅，轻松管理每一笔支付",
+            "textButtonCard": "联系我们",
+            "textCardRight": {
+                "title": "发送",
+                "subtitle": "晚餐"
+            }
+        },
+        "featuresGrid": {
+            "title": "为什么选择 NewPay",
+            "description": "通过 NewPay，你可以随时使用加密资产进行支付，透明掌控每一笔消费，并享受实时汇率带来的便捷体验。我们的礼品卡系统也专为与你所爱之人分享喜悦而设计",
+            "features": [
+                {
+                    "icon": "/icons/mastercard.svg",
+                    "title": "支持 Mastercard 虚拟卡"
+                },
+                {
+                    "icon": "/icons/visa.svg",
+                    "title": "支持 VISA 虚拟卡"
+                },
+                {
+                    "icon": "/icons/merchant.svg",
+                    "title": "覆盖全球 超过 1 亿家商户"
+                },
+                {
+                    "icon": "/icons/kyc.svg",
+                    "title": "严格的 KYC 身份验证机制"
+                },
+                {
+                    "icon": "/icons/risk-control.svg",
+                    "title": "强大的 风险控制系统"
+                },
+                {
+                    "icon": "/icons/licensed.svg",
+                    "title": "持牌合规，正规注册"
+                },
+                {
+                    "icon": "/icons/iso.svg",
+                    "title": "遵循主流地区 顶级监管标准"
+                },
+                {
+                    "icon": "/icons/supplier.svg",
+                    "title": "拥有完善稳定的 供应商体系支持"
+                }
+            ]
+        },
+        "cardSlide": {
+            "title": "行业覆盖范围",
+            "slides": [
+                {
+                    "title": "游戏",
+                    "image": "/images/home/joint/slide1.png"
+                },
+                {
+                    "title": "互动媒体",
+                    "image": "/images/home/joint/slide2.png"
+                },
+                {
+                    "title": "视频娱乐",
+                    "image": "/images/home/joint/slide3.png"
+                },
+                {
+                    "title": "电商购物",
+                    "image": "/images/home/joint/slide4.png"
+                },
+                {
+                    "title": "IT 服务",
+                    "image": "/images/home/joint/slide5.png"
+                }
+            ]
+        },
+        "about": {
+            "title": "关于 NewPay",
+            "description": "NewPay 致力于帮助你消费并增值加密资产。成立于 2022 年，在香港、新加坡、马来西亚及日本设有办公室",
+            "listFlag": [
+                {
+                    "flag": "/icons/Flag_HongKong.svg",
+                    "country": "香港"
+                },
+                {
+                    "flag": "/icons/Flag_Singapore.svg",
+                    "country": "新加坡"
+                },
+                {
+                    "flag": "/icons/Flag_Malaysia.svg",
+                    "country": "马来西亚"
+                },
+                {
+                    "flag": "/icons/Flag_Japan.svg",
+                    "country": "日本"
+                }
+            ],
+            "buttonText": "联系我们"
         }
     }
 }

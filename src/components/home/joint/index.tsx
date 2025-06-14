@@ -8,7 +8,7 @@ import HeroJoint from './hero-joint';
 import DownloadSection from '@/components/payment/download-section';
 import HelpCenter from '../gift-card/help-center';
 import FeaturesGrid from './features-grid';
-import CardSlide from './card-slide';
+import AutoSlideshow from './card-slide';
 
 
 const JointScreen = () => {
@@ -22,7 +22,7 @@ const JointScreen = () => {
             <div className="bg-black">
                 <CardContent />
                 <FeaturesGrid />
-                <CardSlide />
+                <AutoSlideshow />
                 <About />
                 <HelpCenter />
                 <div className='mt-30'>

@@ -1,11 +1,13 @@
 import JointScreen from '@/components/home/joint'
-import React from 'react'
+import ReactLenis from 'lenis/react'
 
 const Joint = () => {
   return (
-    <main>
-        <JointScreen/>
-    </main>
+    <ReactLenis root>
+      <main>
+        <JointScreen />
+      </main>
+    </ReactLenis>
   )
 }
 
