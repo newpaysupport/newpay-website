@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import twitter from '@/icons/Twitter-X.svg';
 import Telegram from '@/icons/Telegram.svg';
@@ -12,6 +13,8 @@ import ggplay from '@/images/footer/ggplay.png';
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { useTranslations } from 'use-intl';
+import { FooterItem } from '@/interfaces/footer';
 
 
 const socials = [
@@ -41,43 +44,48 @@ const socials = [
     }
 ]
 
-const footerMenus = [
-    {
-        "title": "Discover",
-        "items": [
-            { "label": "Joint", "link": "" },
-            { "label": "Personal", "link": "" }
-        ]
-    },
-    {
-        "title": "Payment",
-        "items": [
-            { "label": "Card", "link": "" }
-        ]
-    },
-    {
-        "title": "Wallet",
-        "items": [
-            { "label": "Secure Custodian", "link": "" }
-        ]
-    },
-    {
-        "title": "Company",
-        "items": [
-            { "label": "About NewPay", "link": "" },
-            { "label": "Blog", "link": "" }
-        ]
-    },
-    {
-        "title": "Support",
-        "items": [
-            { "label": "Contact Us", "link": "" },
-            { "label": "FAQ", "link": "" },
-            { "label": "Download App", "link": "" }
-        ]
-    }
-]
+// const footerMenus = [
+//     {
+//         "title": "Discover",
+//         "items": [
+//             { "label": "Joint", "link": "" },
+//             { "label": "Personal", "link": "" }
+//         ]
+//     },
+//     {
+//         "title": "Payment",
+//         "items": [
+//             { "label": "Card", "link": "" }
+//         ]
+//     },
+//     {
+//         "title": "Wallet",
+//         "items": [
+//             { "label": "Secure Custodian", "link": "" }
+//         ]
+//     },
+//     {
+//         "title": "Company",
+//         "items": [
+//             { "label": "About NewPay", "link": "" },
+//             { "label": "Blog", "link": "" }
+//         ]
+//     },
+//     {
+//         "title": "Support",
+//         "items": [
+//             { "label": "Contact Us", "link": "" },
+//             { "label": "FAQ", "link": "" },
+//             { "label": "Download App", "link": "" }
+//         ]
+//     }
+// ]
 const Footer = () => {
+
+    const t = useTranslations("footer");
+
+
+
     return (
         <div className='bg-[#060606] p-20'>
             <div className='container mx-auto'>
@@ -104,7 +112,7 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10'>
-                        {footerMenus.map((menu, index) => {
+                        {t.raw('information').map((menu: FooterItem, index: number) => {
                             return <div key={index}>
                                 <h4 className='text-white text-sm font-semibold mb-6'>{menu.title}</h4>
                                 <ul>
@@ -122,8 +130,8 @@ const Footer = () => {
                 <p className='newpayFooterText lg:text-[300px] 2xl:text-[312px] font-bold -tracking-[7px] uppercase text-center'>NewPay</p>
 
                 <div className='text-[#848484] text-base font-normal -tracking-[0.24px] flex items-center justify-between pt-10 border-t-[1px] border-white/8'>
-                    <span>Copyright @ 2025 NewPay. All right reserved</span>
-                    <Link href={''}>Terms & Condition</Link>
+                    <span>{t('copyright')}</span>
+                    <Link href={''}>{t('terms')}</Link>
                 </div>
             </div>
         </div>

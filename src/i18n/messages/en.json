@@ -9,9 +9,65 @@
     },
     "home": {
         "titleHero": "Easy to use, Safe and Cost-effective",
-        "desc": "NewPay allow you to connect your crypto assets in real life!",
+        "descHero": "NewPay allow you to connect your crypto assets in real life!",
         "btnGetApp": "Get the app",
-        "btnCreateAccount": "Create an account"
+        "btnCreateAccount": "Create an account",
+        "consumeEasily": "Consume easily Anytime, Anywhere",
+        "consumeEasilyDesc": "With NewPay Your crypto further using virtual and physical cards You can spend instantly without conversion or delay",
+        "virtualCard": "Virtual Card",
+        "physicCard": "Physical Card",
+        "utils": [
+            {
+                "title": "Free account opening and maintenance",
+                "desc": "Easy to get started, no long-term hidden fees"
+            },
+            {
+                "title": "Global consumption in multiple currencies",
+                "desc": "Support users from more than 180 countries around the world"
+            },
+            {
+                "title": "Asset Security",
+                "desc": "Meets the highest industry standard ISO 27001 certification"
+            },
+            {
+                "title": "Physical card and virtual card",
+                "desc": "Meet your online + offline consumption needs"
+            },
+            {
+                "title": "Support multiple crypto assets",
+                "desc": "Use stable coins as a way to exchange currency for you"
+            },
+            {
+                "title": "NewPay Gift Card",
+                "desc": "Send NEWPAY gift cards to your friends and family, secure, private, and immediate"
+            }
+        ],
+        "openAccount": {
+            "title": "Open your NewPay Account",
+            "desc": "Just 5 steps to start – Global transparent spending, physical card ATM access, full security",
+            "steps": [
+                {
+                    "title": "Spend crypto like fiat",
+                    "desc": "No need for fiat conversion, use crypto directly for everyday purchases (shopping, dining, subscriptions, etc.)."
+                },
+                {
+                    "title": "Worldwide Acceptance",
+                    "desc": "Support Apple Pay, card withdrawals, and transactions at millions of locations worldwide."
+                },
+                {
+                    "title": "Instant Transactions",
+                    "desc": "Send, receive, and complete crypto-to-fiat transactions, whether P2P or global payments."
+                },
+                {
+                    "title": "Gift Card",
+                    "desc": "Easily send value and crypto gifts to friends, celebrations, or just because — no conversion fees."
+                },
+                {
+                    "title": "Referral Rewards",
+                    "desc": "Earn bonus rewards (up to 50%) in credits with our easy-to-use invite program."
+                }
+            ]
+        }
     },
     "blog": {
         "title": "Blog",
@@ -359,5 +415,72 @@
             "title": "Join NewPay. Spend Safe & Smart",
             "buttonText": "Download App"
         }
+    },
+    "footer": {
+        "information": [
+            {
+                "title": "Discover",
+                "items": [
+                    {
+                        "label": "Joint",
+                        "link": ""
+                    },
+                    {
+                        "label": "Personal",
+                        "link": ""
+                    }
+                ]
+            },
+            {
+                "title": "Payment",
+                "items": [
+                    {
+                        "label": "Card",
+                        "link": ""
+                    }
+                ]
+            },
+            {
+                "title": "Wallet",
+                "items": [
+                    {
+                        "label": "Secure Custodian",
+                        "link": ""
+                    }
+                ]
+            },
+            {
+                "title": "Company",
+                "items": [
+                    {
+                        "label": "About NewPay",
+                        "link": ""
+                    },
+                    {
+                        "label": "Blog",
+                        "link": ""
+                    }
+                ]
+            },
+            {
+                "title": "Support",
+                "items": [
+                    {
+                        "label": "Contact Us",
+                        "link": ""
+                    },
+                    {
+                        "label": "FAQ",
+                        "link": ""
+                    },
+                    {
+                        "label": "Download App",
+                        "link": ""
+                    }
+                ]
+            }
+        ],
+        "copyright": "Copyright @ 2025 NewPay. All right reserved",
+        "terms": "Terms & Condition"
     }
 }
