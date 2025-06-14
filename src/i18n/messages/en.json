@@ -629,5 +629,13 @@
     "downloadSection": {
         "title": "Join NewPay. Spend Safe & Smart",
         "buttonText": "Download App"
+    },
+    "aboutUs": {
+        "hero": {
+            "subTitle": "— Newpay is the way.",
+            "title": "Turning digital assets into real-world spending",
+            "desc": "Utility is the beginning of real change.",
+            "buttonHero": "Create an account"
+        }
     }
 }
