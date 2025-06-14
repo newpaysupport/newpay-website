@@ -1,9 +1,15 @@
+'use client'
 import React from 'react'
 import badge from '@/images/partner/Card Chip.png'
 import Image from 'next/image'
 import BtnPrimary from '../common/button/btn-primary'
+import { useTranslations } from 'next-intl'
 
 const Partner = () => {
+
+    const t = useTranslations("aboutUs");
+
+
     return (
         <div className='w-full h-[664px] relative overflow-hidden'>
             <video src={'/videos/home/prism-coin.mp4'} className='w-full h-full object-cover object-center' loop={true} autoPlay={true} muted={true} preload='true' />
@@ -18,9 +24,9 @@ const Partner = () => {
                             backgroundClip: 'text',
                             WebkitBackgroundClip: 'text',
                             WebkitTextFillColor: "transparent"
-                        }} className='text-[60px] font-semibold tracking-[-2px]'>Partner with NewPay</p>
-                        <p className='text-[#aeaeae] text-base font-medium text-center mb-8'>Let’s drive the future of usable digital assets together.</p>
-                        <BtnPrimary text={'Become a Partner'} variant={'primary-lighter'} className='mx-auto w-[254px]' />
+                        }} className='text-[60px] font-semibold tracking-[-2px]'>{t("partner.title")}</p>
+                        <p className='text-[#aeaeae] text-base font-medium text-center mb-8'>{t("partner.desc")}</p>
+                        <BtnPrimary text={t("partner.button")} variant={'primary-lighter'} className='mx-auto w-[254px]' />
                     </div>
                 </div>
             </div>

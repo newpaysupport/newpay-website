@@ -45,7 +45,7 @@ body {
   text-align: center;
   leading-trim: both;
   text-edge: cap;
-  -webkit-text-stroke-width: 1px;
+  -webkit-text-strokeWidth: 1px;
   -webkit-text-stroke-color: #000;
   background: linear-gradient(180deg, rgba(100, 100, 100, 0.24) 8.38%, rgba(6, 6, 6, 0.24) 100%);
   background-clip: text;

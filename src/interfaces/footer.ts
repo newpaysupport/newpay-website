@@ -5,3 +5,5 @@ export interface FooterItem {
         link: string;
     }[];
 }
+
+
