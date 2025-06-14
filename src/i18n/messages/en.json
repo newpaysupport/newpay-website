@@ -454,10 +454,6 @@
                     "answer": "NewPay provides a secure, user-friendly platform with fast transactions, excellent customer support, and innovative financial tools."
                 }
             ]
-        },
-        "downloadSection": {
-            "title": "Join NewPay. Spend Safe & Smart",
-            "buttonText": "Download App"
         }
     },
     "footer": {
@@ -628,6 +624,18 @@
                 }
             ],
             "buttonText": "Contact us"
+        }
+    },
+    "downloadSection": {
+        "title": "Join NewPay. Spend Safe & Smart",
+        "buttonText": "Download App"
+    },
+    "aboutUs": {
+        "hero": {
+            "subTitle": "— Newpay is the way.",
+            "title": "Turning digital assets into real-world spending",
+            "desc": "Utility is the beginning of real change.",
+            "buttonHero": "Create an account"
         }
     }
 }
