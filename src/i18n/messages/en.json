@@ -482,5 +482,108 @@
         ],
         "copyright": "Copyright @ 2025 NewPay. All right reserved",
         "terms": "Terms & Condition"
+    },
+    "joint": {
+        "hero": {
+            "title": "NewPay – A New Way to Spend Your Crypto",
+            "description": "Accepted at 100M+ merchants worldwide – supporting travel, gaming, subscriptions, online shopping, entertainment, and more.",
+            "buttonText": "Contact us"
+        },
+        "cardContent": {
+            "title": "All-in-One Spending Coverage",
+            "description": "Flexible Virtual & Physical Card Issuance",
+            "textCardLeft": "Seamlessly manage every payment, from daily purchases to international subscriptions.",
+            "textButtonCard": "Contact Us",
+            "textCardRight": {
+                "title": "Send",
+                "subtitle": "Dinner"
+            }
+        },
+        "featuresGrid": {
+            "title": "Why Choose NewPay",
+            "description": "NewPay is designed to make crypto spending easy, secure, and accessible for everyone. Here’s why you should choose NewPay for your crypto transactions:With NewPay, use your crypto for payments anytime, track spending transparently, and enjoy real-time exchange rates across all scenarios. Our gift card system is designed for joyful sharing with your loved ones.",
+            "features": [
+                {
+                    "icon": "/icons/mastercard.svg",
+                    "title": "Mastercard Virtual Card Supported"
+                },
+                {
+                    "icon": "/icons/visa.svg",
+                    "title": "VISA Virtual Card Supported"
+                },
+                {
+                    "icon": "/icons/merchant.svg",
+                    "title": "Accepted by Over 100M+ Merchants"
+                },
+                {
+                    "icon": "/icons/kyc.svg",
+                    "title": "Robust KYC Verification Mechanism"
+                },
+                {
+                    "icon": "/icons/risk-control.svg",
+                    "title": "Powerful Risk Control System"
+                },
+                {
+                    "icon": "/icons/licensed.svg",
+                    "title": "Fully Licensed & Registered"
+                },
+                {
+                    "icon": "/icons/iso.svg",
+                    "title": "Compliant with Top Regulatory Standards"
+                },
+                {
+                    "icon": "/icons/supplier.svg",
+                    "title": "Supported by Robust Supplier Systems"
+                }
+            ]
+        },
+        "cardSlide": {
+            "title": "Industry Coverage",
+            "slides": [
+                {
+                    "title": "INTERACTIVE MEDIA",
+                    "image": "/images/home/joint/slide1.png"
+                },
+                {
+                    "title": "VIDEO ENTERTAINMENT",
+                    "image": "/images/home/joint/slide2.png"
+                },
+                {
+                    "title": "E-COMMERCE SHOPPING",
+                    "image": "/images/home/joint/slide3.png"
+                },
+                {
+                    "title": "IT SERVICES",
+                    "image": "/images/home/joint/slide4.png"
+                },
+                {
+                    "title": "ANOTHER SLIDE",
+                    "image": "/images/home/joint/slide5.png"
+                }
+            ]
+        },
+        "about": {
+            "title": "About NewPay",
+            "description": "With NewPay, use your crypto for payments anytime, track spending transparently, and enjoy real-time exchange rates across all scenarios. Our gift card system is designed for joyful sharing with your loved ones.",
+            "listFlag": [
+                {
+                    "flag": "/icons/Flag_HongKong.svg",
+                    "country": "Hong Kong"
+                },
+                {
+                    "flag": "/icons/Flag_Singapore.svg",
+                    "country": "Singapore"
+                },
+                {
+                    "flag": "/icons/Flag_Malaysia.svg",
+                    "country": "Malaysia"
+                },
+                {
+                    "flag": "/icons/Flag_Japan.svg",
+                    "country": "Japan"
+                }
+            ],
+            "buttonText": "Contact us"
+        }
     }
 }

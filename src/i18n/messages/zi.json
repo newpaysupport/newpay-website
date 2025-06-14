@@ -486,5 +486,108 @@
         ],
         "copyright": "版权 © 2025 NewPay。保留所有权利。",
         "terms": "使用条款"
+    },
+    "joint": {
+        "hero": {
+            "title": "NewPay –  全新的加密货币消费方式",
+            "description": "全球超过 1 亿家商户支持使用，涵盖旅游、游戏、订阅、网购、娱乐等多种场景",
+            "buttonText": "联系我们"
+        },
+        "cardContent": {
+            "title": "一站式支付覆盖",
+            "description": "虚拟卡与实体卡灵活开通",
+            "textCardLeft": "从日常消费到国际订阅，轻松管理每一笔支付",
+            "textButtonCard": "联系我们",
+            "textCardRight": {
+                "title": "发送",
+                "subtitle": "晚餐"
+            }
+        },
+        "featuresGrid": {
+            "title": "为什么选择 NewPay",
+            "description": "通过 NewPay，你可以随时使用加密资产进行支付，透明掌控每一笔消费，并享受实时汇率带来的便捷体验。我们的礼品卡系统也专为与你所爱之人分享喜悦而设计",
+            "features": [
+                {
+                    "icon": "/icons/mastercard.svg",
+                    "title": "支持 Mastercard 虚拟卡"
+                },
+                {
+                    "icon": "/icons/visa.svg",
+                    "title": "支持 VISA 虚拟卡"
+                },
+                {
+                    "icon": "/icons/merchant.svg",
+                    "title": "覆盖全球 超过 1 亿家商户"
+                },
+                {
+                    "icon": "/icons/kyc.svg",
+                    "title": "严格的 KYC 身份验证机制"
+                },
+                {
+                    "icon": "/icons/risk-control.svg",
+                    "title": "强大的 风险控制系统"
+                },
+                {
+                    "icon": "/icons/licensed.svg",
+                    "title": "持牌合规，正规注册"
+                },
+                {
+                    "icon": "/icons/iso.svg",
+                    "title": "遵循主流地区 顶级监管标准"
+                },
+                {
+                    "icon": "/icons/supplier.svg",
+                    "title": "拥有完善稳定的 供应商体系支持"
+                }
+            ]
+        },
+        "cardSlide": {
+            "title": "行业覆盖范围",
+            "slides": [
+                {
+                    "title": "游戏",
+                    "image": "/images/home/joint/slide1.png"
+                },
+                {
+                    "title": "互动媒体",
+                    "image": "/images/home/joint/slide2.png"
+                },
+                {
+                    "title": "视频娱乐",
+                    "image": "/images/home/joint/slide3.png"
+                },
+                {
+                    "title": "电商购物",
+                    "image": "/images/home/joint/slide4.png"
+                },
+                {
+                    "title": "IT 服务",
+                    "image": "/images/home/joint/slide5.png"
+                }
+            ]
+        },
+        "about": {
+            "title": "关于 NewPay",
+            "description": "NewPay 致力于帮助你消费并增值加密资产。成立于 2022 年，在香港、新加坡、马来西亚及日本设有办公室",
+            "listFlag": [
+                {
+                    "flag": "/icons/Flag_HongKong.svg",
+                    "country": "香港"
+                },
+                {
+                    "flag": "/icons/Flag_Singapore.svg",
+                    "country": "新加坡"
+                },
+                {
+                    "flag": "/icons/Flag_Malaysia.svg",
+                    "country": "马来西亚"
+                },
+                {
+                    "flag": "/icons/Flag_Japan.svg",
+                    "country": "日本"
+                }
+            ],
+            "buttonText": "联系我们"
+        }
     }
 }
