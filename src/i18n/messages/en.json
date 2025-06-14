@@ -693,5 +693,13 @@
             "desc": "Let’s drive the future of usable digital assets together.",
             "button": "Become a Partner"
         }
+    },
+    "secureCustodian": {
+        "hero": {
+            "title": "Secure Custodian",
+            "desc1": "Accessible crypto wallet for everyone, everywhere.",
+            "desc2": "Let’s embrace the future with cryptocurrency payments via NewPay!",
+            "button": "Get your card now"
+        }
     }
 }
