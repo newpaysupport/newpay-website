@@ -24,14 +24,12 @@ const Header = () => {
         const newPath = segments.join("/");
         router.push(newPath);
     };
-    const isPersonalPage = pathname === `/${locale}`;
-    const navClass = isPersonalPage
-        ? 'relative bg-[#060606]'
-        : 'fixed top-0 left-0 w-full z-50 bg-transparent backdrop-blur-md';
 
     return (
         <nav
-            className={`text-sm h-[70px] flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 ${navClass} text-white transition-all duration-300 ease-in-out shadow-sm`}
+            className={`text-sm h-[70px] flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 
+            fixed top-0 left-0 w-full z-50 bg-transparent backdrop-blur-md
+             text-white transition-all duration-300 ease-in-out shadow-sm`}
         >
             <div className="flex items-center space-x-4">
                 <Image src={logo} alt="NewPay Logo" className="object-contain bg-transparent" />
