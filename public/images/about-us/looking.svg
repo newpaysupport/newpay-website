@@ -1,10 +1,10 @@
 <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M0 12C0 5.37258 5.37258 0 12 0H52C58.6274 0 64 5.37258 64 12V52C64 58.6274 58.6274 64 52 64H12C5.37258 64 0 58.6274 0 52V12Z" fill="#F8F8F8"/>
 <path d="M0 12C0 5.37258 5.37258 0 12 0H52C58.6274 0 64 5.37258 64 12V52C64 58.6274 58.6274 64 52 64H12C5.37258 64 0 58.6274 0 52V12Z" fill="url(#paint0_linear_713_14714)" fill-opacity="0.2"/>
-<path d="M35.332 20.3335H45.332" stroke="#FF6910" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M35.332 25.3335H40.332" stroke="#FF6910" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M46.9987 31.1668C46.9987 39.9168 39.9154 47.0002 31.1654 47.0002C22.4154 47.0002 15.332 39.9168 15.332 31.1668C15.332 22.4168 22.4154 15.3335 31.1654 15.3335" stroke="#FF6910" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M48.6654 48.6668L45.332 45.3335" stroke="#FF6910" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M35.332 20.3335H45.332" stroke="#FF6910" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M35.332 25.3335H40.332" stroke="#FF6910" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M46.9987 31.1668C46.9987 39.9168 39.9154 47.0002 31.1654 47.0002C22.4154 47.0002 15.332 39.9168 15.332 31.1668C15.332 22.4168 22.4154 15.3335 31.1654 15.3335" stroke="#FF6910" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M48.6654 48.6668L45.332 45.3335" stroke="#FF6910" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
 <defs>
 <linearGradient id="paint0_linear_713_14714" x1="32" y1="0" x2="32" y2="64" gradientUnits="userSpaceOnUse">
 <stop stop-color="#FF6910" stop-opacity="0"/>
