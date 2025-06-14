@@ -1,10 +1,10 @@
 <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M0 12C0 5.37258 5.37258 0 12 0H52C58.6274 0 64 5.37258 64 12V52C64 58.6274 58.6274 64 52 64H12C5.37258 64 0 58.6274 0 52V12Z" fill="#F8F8F8"/>
 <path d="M0 12C0 5.37258 5.37258 0 12 0H52C58.6274 0 64 5.37258 64 12V52C64 58.6274 58.6274 64 52 64H12C5.37258 64 0 58.6274 0 52V12Z" fill="url(#paint0_linear_713_14694)" fill-opacity="0.2"/>
-<path d="M15.332 48.6665H48.6654" stroke="#FF6910" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M28.25 18.6668V48.6668H35.75V18.6668C35.75 16.8335 35 15.3335 32.75 15.3335H31.25C29 15.3335 28.25 16.8335 28.25 18.6668Z" stroke="#FF6910" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M17 28.6668V48.6668H23.6667V28.6668C23.6667 26.8335 23 25.3335 21 25.3335H19.6667C17.6667 25.3335 17 26.8335 17 28.6668Z" stroke="#FF6910" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M40.332 36.9998V48.6665H46.9987V36.9998C46.9987 35.1665 46.332 33.6665 44.332 33.6665H42.9987C40.9987 33.6665 40.332 35.1665 40.332 36.9998Z" stroke="#FF6910" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M15.332 48.6665H48.6654" stroke="#FF6910" strokeWidth="3" stroke-miterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M28.25 18.6668V48.6668H35.75V18.6668C35.75 16.8335 35 15.3335 32.75 15.3335H31.25C29 15.3335 28.25 16.8335 28.25 18.6668Z" stroke="#FF6910" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M17 28.6668V48.6668H23.6667V28.6668C23.6667 26.8335 23 25.3335 21 25.3335H19.6667C17.6667 25.3335 17 26.8335 17 28.6668Z" stroke="#FF6910" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M40.332 36.9998V48.6665H46.9987V36.9998C46.9987 35.1665 46.332 33.6665 44.332 33.6665H42.9987C40.9987 33.6665 40.332 35.1665 40.332 36.9998Z" stroke="#FF6910" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
 <defs>
 <linearGradient id="paint0_linear_713_14694" x1="32" y1="0" x2="32" y2="64" gradientUnits="userSpaceOnUse">
 <stop stop-color="#FF6910" stop-opacity="0"/>

@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import bg from '@/images/about-us/security.png';
 import cards from '@/images/about-us/cards.svg';
@@ -12,43 +13,43 @@ import eth from '@/images/about-us/eth.svg';
 import usdt from '@/images/about-us/usdt.svg';
 import usdc from '@/images/about-us/usdc.svg';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
+import { Item } from '@/interfaces/common';
 
 const items = [
     {
         id: 1,
         icon: cards,
-        title: "Regulatory Compliance",
-        desc: "NEWPAY follows global standards with tiered KYC, trusted partners like Sumsub, and full legal transparency—worldwide."
     },
     {
         id: 2,
         icon: coin,
-        title: "Risk Control System",
-        desc: "Blockchain-powered risk engine. Real-time scoring, anomaly detection, and multi-factor checks—OTP, facial ID, behavior—to block fraud before it starts."
     },
     {
         id: 1,
         icon: gift,
-        title: "Data Security & Privacy",
-        desc: "End-to-end encryption. Isolated storage. GDPR & PDPA compliant. Your data stays yours—always with consent."
     }
 ]
 
 const icons = [visa, masterCard, item, avax, eth, usdt, usdc]
 
 const Compliance = () => {
+
+
+    const t = useTranslations("aboutUs");
+
     return (
         <div className='w-full h-[1300px] relative'>
             <Image src={bg} alt='background' fill priority className='object-bottom-left object-cover' />
             <div className='relative pt-[160px] '>
                 <div className='container mx-auto'>
-                    <h4 className='text-white text-[60px] font-semibold text-center'>Compliance and Security</h4>
+                    <h4 className='text-white text-[60px] font-semibold text-center'>{t("compliance.title")}</h4>
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-20'>
-                        {items.map((item, index) => {
+                        {t.raw("compliance.list").map((item: Item, index: number) => {
                             return (
                                 <div style={{ background: 'linear-gradient(0deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.08) 100%), rgba(1, 1, 1, 0.16)' }}
                                     key={index} className='p-8 rounded-[20px] bg-security-item backdrop-blur-[40px]'>
-                                    <Image src={item.icon} alt={item.title} />
+                                    <Image src={items[index].icon} alt={item.title} />
                                     <p className='mt-[44px] mb-2 text-white text-2xl font-semibold'>{item.title}</p>
                                     <p className='text-[#aeaeae] text-base font-medium'>{item.desc}</p>
                                 </div>
@@ -57,10 +58,9 @@ const Compliance = () => {
                     </div>
                     <div className='pt-[120px] pb-10'>
                         <p className='w-full ml-auto lg:w-[416px]'>
-                            <span className='text-white text-[60px] font-semibold tracking-[-2px]'>Our Partners</span>
+                            <span className='text-white text-[60px] font-semibold tracking-[-2px]'>{t("compliance.partner.title")}</span>
                             <span className='mt-6 inline-block text-[#aeaeae] text-base font-medium'>
-                                We integrate with trusted global payment networks, identity providers, and crypto infrastructure platforms to enable real-world usage of digital assets. <br />
-                                Together, these partnerships empower NEWPAY to deliver a seamless and compliant payment experience.
+                                {t("compliance.partner.desc")}
                             </span>
                         </p>
                     </div>
