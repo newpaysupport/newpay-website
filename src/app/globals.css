@@ -45,14 +45,13 @@ body {
   text-align: center;
   leading-trim: both;
   text-edge: cap;
-  -webkit-text-stroke-width: 1px;
+  -webkit-text-strokeWidth: 1px;
   -webkit-text-stroke-color: #000;
   background: linear-gradient(180deg, rgba(100, 100, 100, 0.24) 8.38%, rgba(6, 6, 6, 0.24) 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
 
 /* Physical cards */
 
@@ -100,4 +99,101 @@ body {
     opacity: 1; /* Removed quotes */
   }
 }
+
+/* animation fade in text */
+
+.fadeInUp-no-delay {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.fadeInUp-delay-03  {
+  animation: fadeInUp 1s ease-out 0.3s forwards;
+}
+
+.fadeInUp-delay-06  {
+  animation: fadeInUp 1s ease-out 0.6s forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* animation fade in text */
+
+.fadeInUp-no-delay {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.fadeInUp-delay-03  {
+  animation: fadeInUp 1s ease-out 0.3s forwards;
+}
+
+.fadeInUp-delay-06  {
+  animation: fadeInUp 1s ease-out 0.6s forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* auto slide show */
+.animate-slide {
+  animation: slide 20s linear infinite;
+}
+
+/* .slideshow-track:hover {
+  animation-play-state: paused;
+} */
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-400px * 5 - 30px * 5));
+  }
+}
+
+@media (max-width: 768px) {
+  .slideshow-track {
+    width: calc((330px + 30px) * 10);
+  }
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-330px * 5 - 30px * 5));
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .slideshow-track {
+    width: calc((200px + 30px) * 10);
+  }
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-200px * 5 - 30px * 5));
+    }
+  }
+}
+
 

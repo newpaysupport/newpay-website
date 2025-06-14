@@ -45,7 +45,7 @@ const Header = () => {
 
             <ul className="hidden md:flex items-center space-x-8">
                 <li><Link href={`/${locale}/payment`}>{t('payment')}</Link></li>
-                <li><Link href={`/${locale}/company`}>{t('company')}</Link></li>
+                <li><Link href={`/${locale}/about-us`}>{t('company')}</Link></li>
                 <li><Link href={`/${locale}/support`}>{t('support')}</Link></li>
             </ul>
 
@@ -58,7 +58,7 @@ const Header = () => {
                 onClick={toggleMobileMenu}
             >
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <path d="M4 6L8 10L12 6" stroke="white" stroke-opacity="0.16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M4 6L8 10L12 6" stroke="white" strokeOpacity="0.16" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
             </button>
 

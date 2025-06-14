@@ -454,10 +454,6 @@
                     "answer": "NewPay provides a secure, user-friendly platform with fast transactions, excellent customer support, and innovative financial tools."
                 }
             ]
-        },
-        "downloadSection": {
-            "title": "Join NewPay. Spend Safe & Smart",
-            "buttonText": "Download App"
         }
     },
     "footer": {
@@ -498,7 +494,7 @@
                 "items": [
                     {
                         "label": "About NewPay",
-                        "link": ""
+                        "link": "/about-us"
                     },
                     {
                         "label": "Blog",
@@ -628,6 +624,74 @@
                 }
             ],
             "buttonText": "Contact us"
+        }
+    },
+    "downloadSection": {
+        "title": "Join NewPay. Spend Safe & Smart",
+        "buttonText": "Download App"
+    },
+    "aboutUs": {
+        "hero": {
+            "subTitle": "— Newpay is the way.",
+            "title": "Turning digital assets into real-world spending",
+            "desc": "Utility is the beginning of real change.",
+            "buttonHero": "Create an account"
+        },
+        "insight": [
+            {
+                "title": "Current Insight",
+                "desc": [
+                    "NEWPAY isn’t just building another payment channel — we’re creating a simpler, more direct, and more controlled way to use digital assets.",
+                    "USDT is no longer locked inside exchanges — it moves into daily spending, subscriptions, and global payments with ease."
+                ]
+            },
+            {
+                "title": "Our Approach",
+                "desc": [
+                    "No need to convert USDT to fiat first. No more jumping through platforms or transfer steps.",
+                    "With a single virtual card from NEWPAY, users can spend digital assets instantly — simple, seamless, and ready to go."
+                ]
+            },
+            {
+                "title": "Looking Ahead",
+                "desc": [
+                    "NEWPAY is building toward full interoperability — integrating with Web3 wallets, CEXs, DAOs, and DePIN networks.",
+                    "We're laying the foundation for the next-generation digital payment infrastructure — one that serves both individuals and organizations."
+                ]
+            },
+            {
+                "title": "What We Stand For",
+                "desc": [
+                    "NEWPAY respects every country and region’s regulatory frameworks.",
+                    "With modular risk controls and tiered KYC, we make sure digital assets are not only usable, but also protected."
+                ]
+            }
+        ],
+        "compliance": {
+            "title": "Compliance and Security",
+            "list": [
+                {
+                    "title": "Regulatory Compliance",
+                    "desc": "NEWPAY follows global standards with tiered KYC, trusted partners like Sumsub, and full legal transparency—worldwide."
+                },
+                {
+                    "title": "Risk Control System",
+                    "desc": "Blockchain-powered risk engine. Real-time scoring, anomaly detection, and multi-factor checks—OTP, facial ID, behavior—to block fraud before it starts."
+                },
+                {
+                    "title": "Data Security & Privacy",
+                    "desc": "End-to-end encryption. Isolated storage. GDPR & PDPA compliant. Your data stays yours—always with consent."
+                }
+            ],
+            "partner": {
+                "title": "Our Partners",
+                "desc": "We integrate with trusted global payment networks, identity providers, and crypto infrastructure platforms to enable real-world usage of digital assets.\n Together, these partnerships empower NEWPAY to deliver a seamless and compliant payment experience."
+            }
+        },
+        "partner": {
+            "title": "Partner with NewPay",
+            "desc": "Let’s drive the future of usable digital assets together.",
+            "button": "Become a Partner"
         }
     }
 }
