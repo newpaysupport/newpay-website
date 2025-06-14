@@ -20,7 +20,6 @@ const CardContent = () => {
                         </p>
                     </div>
 
-                    {/* Small Card */}
                     <div className="bg-black rounded-2xl p-6 lg:p-8 text-white max-w-xl gap-10 shadow-xl flex">
                         <Image
                             src={card1_img1}
