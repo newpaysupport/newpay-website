@@ -10,9 +10,65 @@
     },
     "home": {
         "titleHero": "让加密货币真正融入日常消费 简单 安全 又划算",
-        "desc": "NewPay 让你将加密资产连接到现实生活中！",
+        "descHero": "NewPay 让你将加密资产连接到现实生活中！",
         "btnGetApp": "下载 APP",
-        "btnCreateAccount": "开户注册"
+        "btnCreateAccount": "开户注册",
+        "consumeEasily": "随时随地 轻松消费",
+        "consumeEasilyDesc": "使用 NewPay 的虚拟卡和实体卡，让你的加密资产更具实用价值 即刻消费，无需换汇，无需等待",
+        "virtualCard": "虚拟卡",
+        "physicCard": "实体卡",
+        "utils": [
+            {
+                "title": "免费开户与维护",
+                "desc": "轻松上手，无长期隐藏费用"
+            },
+            {
+                "title": "多币种全球消费",
+                "desc": "支持来自全球 180 多个国家的用户使用"
+            },
+            {
+                "title": "资产安全保障",
+                "desc": "符合最高行业标准 ISO 27001 认证"
+            },
+            {
+                "title": "实体卡与虚拟卡",
+                "desc": "满足你的线上 + 线下消费需求"
+            },
+            {
+                "title": "支持多种加密资产",
+                "desc": "使用稳定币等方式，灵活兑换你需要的币种"
+            },
+            {
+                "title": "NewPay 礼品卡",
+                "desc": "礼品卡即刻、安全、私密地送给亲朋好友"
+            }
+        ],
+        "openAccount": {
+            "title": "开启你的 NewPay 账户",
+            "desc": "只需 5 步，即可开启全球透明支付体验，支持实体卡 ATM 提现，保障资金安全",
+            "steps": [
+                {
+                    "title": "像法币一样消费加密货币",
+                    "desc": "无需法币兑换，直接使用加密货币进行日常购物（购物、餐饮、订阅等."
+                },
+                {
+                    "title": "全球接受",
+                    "desc": "支持 Apple Pay、ATM 取款和全球数百万个地点的交易."
+                },
+                {
+                    "title": "即时交易",
+                    "desc": "发送、接收和管理加密货币，进行即时交易，无论是送礼还是支付账单."
+                },
+                {
+                    "title": "礼品卡",
+                    "desc": "轻松与朋友分享 USDT，适用于生日、庆祝活动或仅仅是因为 — 无交易费用。"
+                },
+                {
+                    "title": "推荐奖励",
+                    "desc": "邀请朋友，使用简单易用的推荐计划赚取高达 50% 的奖励。"
+                }
+            ]
+        }
     },
     "blog": {
         "title": "博客",
@@ -364,5 +420,72 @@
             "title": "加入NewPay。安全智能花费",
             "buttonText": "下载应用"
         }
+    },
+    "footer": {
+        "information": [
+            {
+                "title": "服务方案",
+                "items": [
+                    {
+                        "label": "联名账户",
+                        "link": "/joint"
+                    },
+                    {
+                        "label": "个人账户",
+                        "link": "/"
+                    }
+                ]
+            },
+            {
+                "title": "支付",
+                "items": [
+                    {
+                        "label": "卡片",
+                        "link": ""
+                    }
+                ]
+            },
+            {
+                "title": "钱包",
+                "items": [
+                    {
+                        "label": "安全托管",
+                        "link": ""
+                    }
+                ]
+            },
+            {
+                "title": "公司",
+                "items": [
+                    {
+                        "label": "关于NewPay",
+                        "link": ""
+                    },
+                    {
+                        "label": "博客",
+                        "link": "/blog"
+                    }
+                ]
+            },
+            {
+                "title": "支持",
+                "items": [
+                    {
+                        "label": "联系我们",
+                        "link": ""
+                    },
+                    {
+                        "label": "常见问题",
+                        "link": ""
+                    },
+                    {
+                        "label": "下载APP",
+                        "link": ""
+                    }
+                ]
+            }
+        ],
+        "copyright": "版权 © 2025 NewPay。保留所有权利。",
+        "terms": "使用条款"
     }
 }
