@@ -14,9 +14,9 @@ type FaqSectionProps = {
 }
 
 
-const Faq = ({ faqSection, faqItems } : FaqSectionProps) => {
+const Faq = ({ faqSection, faqItems }: FaqSectionProps) => {
     return (
-        <div className="mt-16 md:pb-6 md:p-0 p-6">
+        <div className="md:pb-6 md:p-0 p-6">
             <div className="flex md:flex-row flex-col mx-auto max-w-7xl justify-between">
                 <div className="text-white">
                     <h1 className="text-6xl font-semibold">
