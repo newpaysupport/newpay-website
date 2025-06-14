@@ -1,12 +1,11 @@
 {
     "navigation": {
-        "home": "首页",
-        "services": "服务",
-        "portfolio": "产品组合",
-        "pricing": "价格",
-        "joint": "联合账户",
-        "personal": "个人账户",
-        "getApp": "下载应用"
+        "payment": "付款",
+        "company": "公司",
+        "support": "支持",
+        "joint": "联合",
+        "personal": "个人",
+        "getApp": "获取应用程序"
     },
     "home": {
         "titleHero": "让加密货币真正融入日常消费 简单 安全 又划算",

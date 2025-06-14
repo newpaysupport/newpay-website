@@ -1,9 +1,8 @@
 {
     "navigation": {
-        "home": "Home",
-        "services": "Services",
-        "portfolio": "Portfolio",
-        "pricing": "Pricing",
+        "payment": "Payment",
+        "company": "Company",
+        "support": "Support",
         "joint": "Joint",
         "personal": "Personal",
         "getApp": "Get The App"
