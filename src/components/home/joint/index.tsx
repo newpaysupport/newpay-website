@@ -18,9 +18,7 @@ const JointScreen = () => {
                 <AutoSlideshow />
                 <About />
                 <HelpCenter />
-                <div className='mt-30'>
-                    <DownloadSection />
-                </div>
+                <DownloadSection />
             </div>
         </>
     );
