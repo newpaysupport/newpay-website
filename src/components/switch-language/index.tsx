@@ -20,7 +20,7 @@ const SwitchLanguage = ({ locale, switchLocale, t }: Props) => {
     const currentLanguage = languages.find((lng) => lng.code === locale) || languages[0];
 
     return (
-        <div className="flex items-center space-x-4 relative">
+        <div className="flex items-center space-x-4 relative hover: cursor-pointer">
             {/* Language Dropdown */}
             <div className="relative">
                 <button
