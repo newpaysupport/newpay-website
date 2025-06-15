@@ -57,8 +57,8 @@ const OpenAccount = () => {
             gsap.timeline({
                 scrollTrigger: {
                     trigger: stepPanel as HTMLElement,
-                    start: 'top 100px',
-                    end: 'bottom 0',
+                    start: 'top center',
+                    end: 'bottom',
                     scrub: true,
                     markers: false,
                     onEnter: () => {
@@ -79,6 +79,7 @@ const OpenAccount = () => {
             })
 
         })
+
     });
 
     return (
