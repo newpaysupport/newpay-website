@@ -112,7 +112,7 @@ const OpenAccount = () => {
                                 })}
                             </div>
                             <>
-                                <div className='w-20 h-full absolute top-20 z-1'>
+                                <div className='w-20 h-[2700px] absolute top-20 z-1'>
                                     <p className='bg-white/20 w-1 h-full mx-auto'></p>
                                 </div>
                             </>
