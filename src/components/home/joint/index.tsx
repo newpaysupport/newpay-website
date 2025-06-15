@@ -31,41 +31,39 @@ const JointScreen = () => {
     return (
         <>
             <HeroJoint />
-            <div className="bg-black h-screen">
-                
-                <Swiper
-                    direction="vertical"
-                    slidesPerView={1}
-                    spaceBetween={0}
-                    speed={800}
-                    pagination={{ clickable: false }}
-                    mousewheel={{
-                        forceToAxis: true,
-                        sensitivity: 1.2,
-                        releaseOnEdges: false,
-                    }}
-                    modules={[Mousewheel, Pagination]}
-                    onSwiper={(swiper) => (swiperRef.current = swiper)}
-                    onSlideChange={(swiper) => {
-                        const isFirst = swiper.activeIndex === 0;
-                        const isLast = swiper.activeIndex === swiper.slides.length - 1;
-                        setCanScrollOutside(isFirst || isLast);
-                    }}
-                    style={{ height: '100vh' }}
-                >
-                    <SwiperSlide><CardContent /></SwiperSlide>
-                    <SwiperSlide><Card2/></SwiperSlide>
-                    <SwiperSlide><Card3/></SwiperSlide>
-                    <SwiperSlide><Card4/></SwiperSlide>
-                </Swiper>
 
-                <div className="overflow-y-auto">
-                    <FeaturesGrid />
-                    <AutoSlideshow />
-                    <About />
-                    <HelpCenter />
-                    <DownloadSection />
-                </div>
+            <Swiper
+                direction="vertical"
+                slidesPerView={1}
+                spaceBetween={0}
+                speed={300}
+                pagination={{ clickable: false }}
+                mousewheel={{
+                    forceToAxis: true,
+                    sensitivity: 1.2,
+                    releaseOnEdges: false,
+                }}
+                modules={[Mousewheel, Pagination]}
+                onSwiper={(swiper) => (swiperRef.current = swiper)}
+                onSlideChange={(swiper) => {
+                    const isFirst = swiper.activeIndex === 0;
+                    const isLast = swiper.activeIndex === swiper.slides.length - 1;
+                    setCanScrollOutside(isFirst || isLast);
+                }}
+                style={{ height: '100vh' }}
+            >
+                <SwiperSlide><CardContent /></SwiperSlide>
+                <SwiperSlide><Card2 /></SwiperSlide>
+                <SwiperSlide><Card3 /></SwiperSlide>
+                <SwiperSlide><Card4 /></SwiperSlide>
+            </Swiper>
+
+            <div className="overflow-y-auto">
+                <FeaturesGrid />
+                <AutoSlideshow />
+                <About />
+                <HelpCenter />
+                <DownloadSection />
             </div>
         </>
     );
