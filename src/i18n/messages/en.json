@@ -543,6 +543,39 @@
                 "subtitle": "Dinner"
             }
         },
+        "card2": {
+            "title": "VISA/MASTER Supported By",
+            "description": "Supports Apple Pay & Google Pay",
+            "listText" : [
+                {
+                    "number": "01.",
+                    "text": "Tap. Pay. Go."
+                },
+                {
+                    "number": "02.",
+                    "text": "Widely Accepted. Globally Trusted."
+                },
+                {
+                    "number": "03.",
+                    "text": "Spend confidently - wherever you go, we’ve got your back."
+                }
+            ],
+            "textButtonCardLeft": "Explore Now",
+            "textButtonCardRight": "Contact Us"
+        },
+        "card3": {
+            "title": "Gift Card System Supported",
+            "description": "Share the Joy Anytime with Friends & Family",
+            "textCardLeft": "Send digital or physical gift cards instantly for birthdays, celebrations, or just because.",
+            "textButtonCard": "Contact Us"
+        },
+        "card4": {
+            "title": "Virtual & Physical Cards",
+            "description": "Co-Branded, Payroll, Benefit, and Business Gift Cards",
+            "textCard": "Issue instantly usable virtual cards for online spending, or get sleek physical cards for in-store purchases and daily use.",
+            "textButtonCardLeft": "Explore Now",
+            "textButtonCardRight": "Contact Us"
+        },
         "featuresGrid": {
             "title": "Why Choose NewPay",
             "description": "NewPay is designed to make crypto spending easy, secure, and accessible for everyone. Here’s why you should choose NewPay for your crypto transactions:With NewPay, use your crypto for payments anytime, track spending transparently, and enjoy real-time exchange rates across all scenarios. Our gift card system is designed for joyful sharing with your loved ones.",

@@ -551,6 +551,39 @@
                 "subtitle": "晚餐"
             }
         },
+        "card2": {
+            "title": "VISA/MASTER 官方支持",
+            "description": "支持 Apple Pay 与 Google Pay",
+            "listText" : [
+                {
+                    "number": "01.",
+                    "text": "轻触即付，畅行无阻"
+                },
+                {
+                    "number": "02.",
+                    "text": "广泛适用，全球信赖"
+                },
+                {
+                    "number": "03.",
+                    "text": "无论身在何处，放心消费，我们为你保驾护航"
+                }
+            ],
+            "textButtonCardLeft": "立即了解",
+            "textButtonCardRight": "联系我们"
+        },
+        "card3": {
+            "title": "礼品卡系统",
+            "description": "随时与亲友分享你的心意与喜悦",
+            "textCardLeft": "为生日、庆祝或只是想表达心意，立即发送数字或实体礼品卡。",
+            "textButtonCard": "联系我们"
+        },
+        "card4": {
+            "title": "虚拟卡与实体卡",
+            "description": "支持联名卡、薪资卡、福利卡与企业礼品卡",
+            "textCard": "可即时发行可用于线上消费的虚拟卡，或申请外观精致的实体卡，用于门店消费与日常使用",
+            "textButtonCardLeft": "立即了解",
+            "textButtonCardRight": "联系我们"
+        },
         "featuresGrid": {
             "title": "为什么选择 NewPay",
             "description": "通过 NewPay，你可以随时使用加密资产进行支付，透明掌控每一笔消费，并享受实时汇率带来的便捷体验。我们的礼品卡系统也专为与你所爱之人分享喜悦而设计",
