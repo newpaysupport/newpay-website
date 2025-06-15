@@ -1,5 +1,8 @@
 'use client';
 import arrowright from '@/images/home/giftcard/arrowright.svg'; // Uncomment if you want to use the ArrowRight icon
+import ava1 from '@/images/home/giftcard/ava1.png';
+import ava2 from '@/images/home/giftcard/ava2.png';
+import ava3 from '@/images/home/giftcard/ava3.png';
 import letter from '@/images/home/giftcard/letter.svg';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
@@ -10,13 +13,12 @@ const HelpCenter = () => {
 
     const t = useTranslations('home');
 
-    // Sample avatar data
     const avatars = [
-        { id: 1, name: 'User 1', color: 'bg-blue-500' },
-        { id: 2, name: 'User 2', color: 'bg-green-500' },
-        { id: 3, name: 'User 3', color: 'bg-purple-500' },
-        { id: 4, name: 'User 4', color: 'bg-pink-500' },
+        { id: 1, name: 'User 1', image: ava1 },
+        { id: 2, name: 'User 2', image: ava2 },
+        { id: 3, name: 'User 3', image: ava3 }
     ];
+
 
     const handleSubmit = () => {
         console.log('Email submitted:', email);
@@ -25,13 +27,13 @@ const HelpCenter = () => {
     return (
         <section className='py-[160px] bg-[#060606]'>
             <div
-                className="mx-auto max-w-5xl relative overflow-hidden transition-transform duration-300 hover:scale-102 bg-[#060606]"
+                className="mx-auto md:w-[1200px] relative overflow-hidden transition-transform duration-300 hover:scale-102 bg-[#060606]"
                 style={{
-                    padding: '32px',
+                    padding: '64px',
                     borderRadius: '40px',
                     border: '2px solid rgba(255, 183, 0, 0.2)',
                     background: "linear-gradient(292deg, rgba(255, 143, 77, 0.20) 2.5%, rgba(255, 143, 77, 0.00) 37.03%), linear-gradient(109deg, rgba(255, 143, 77, 0.20) -3.64%, rgba(255, 143, 77, 0.00) 36.61%), rgba(255, 255, 255, 0.04)",
-                    backdropFilter: 'blur(20px)',
+                    backdropFilter: 'blur(100px)',
                 }}
             >
                 {/* Background gradient overlay */}
@@ -47,7 +49,7 @@ const HelpCenter = () => {
                         <Image src={letter} alt="Mail Icon" />
 
                         {/* Heading */}
-                        <h2 className="text-white font-semibold text-3xl leading-tight">
+                        <h2 className="text-white font-semibold text-3xl leading-tight w-[80%]">
                             {t('helpCenter.title')}
                         </h2>
 
@@ -57,12 +59,19 @@ const HelpCenter = () => {
                                 {avatars.map((avatar, index) => (
                                     <div
                                         key={avatar.id}
-                                        className={`w-10 h-10 rounded-full border-2 border-gray-800 ${avatar.color} flex items-center justify-center text-white text-sm font-semibold relative z-${10 - index}`}
+                                        className="w-12 h-12 rounded-full  overflow-hidden relative"
                                         style={{ zIndex: 10 - index }}
                                     >
-                                        {avatar.name.charAt(0)}
+                                        <Image
+                                            src={avatar.image}
+                                            alt={avatar.name}
+                                            width={48}
+                                            height={48}
+                                            className="object-cover w-full h-full"
+                                        />
                                     </div>
                                 ))}
+
                             </div>
                             <span className="text-white/80 text-sm font-medium ml-2">
                                 {t('helpCenter.amountUsers')}
