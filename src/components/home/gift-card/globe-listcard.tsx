@@ -26,7 +26,7 @@ const GlobeListCard = () => {
                             style = "rotate(8deg)";
                         }
                         return (
-                            <div className='relative overflow-hidden group hover:-translate-y-5 transition-all ease-linear duration-500'>
+                            <div className='relative overflow-hidden group hover:-translate-y-5 transition-all ease-linear duration-500 cursor-pointer'>
                                 <Image src={item.image} width={304} height={0} alt="Globe Image" className="object-cover w-76" />
                                 <div style={{
                                     transform: `${style}`,
