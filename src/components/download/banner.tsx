@@ -49,7 +49,7 @@ const Banner = () => {
                 </div>
 
                 <figure className='flex justify-center mt-[40px]'>
-                    <Image src={product} alt='' />
+                    <Image src={product} alt='' priority />
                 </figure>
             </div>
         </div>
