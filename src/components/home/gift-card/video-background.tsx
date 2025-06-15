@@ -23,7 +23,7 @@ const VideoBackground = () => {
                 }} className='text-6xl font-semibold text-center mx-auto w-full md:w-[520px]'>
                     {t('giftCard.title')}
                 </h1>
-                <p className='text-[#848484] text-center mt-4'>
+                <p className='text-[#848484] text-center mt-4 font-medium'>
                     {t('giftCard.desc')}
                 </p>
                 {/* video */}
@@ -42,7 +42,7 @@ const VideoBackground = () => {
                     background: "rgba(255, 255, 255, 0.04))",
                     backdropFilter: "blur(20px)"
                 }}
-                    className='absolute right-[10%] bottom-[10%] flex flex-col gap-5 w-[360px] p-6 rounded-3xl'
+                    className='absolute right-[10%] bottom-[10%] flex flex-col gap-2 w-[360px] p-6 rounded-3xl'
                 >
                     <h1 className='text-2xl text-white mb-4'>
                         {t('giftCard.contentRight.title')}
@@ -100,7 +100,7 @@ const VideoBackground = () => {
                             <p className="text-xs font-semibold">– 50.50 USDT</p>
                         </div>
                     </div>
-                    <button className='text-white bg-[#FF6910] text-md p-4 rounded-full cursor-pointer'>{t('giftCard.contentRight.button')}</button>
+                    <button className='text-white bg-[#FF6910] text-md p-4 rounded-full cursor-pointer mt-4'>{t('giftCard.contentRight.button')}</button>
                 </div>
             </div>
         </section>
