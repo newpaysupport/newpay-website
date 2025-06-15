@@ -10,12 +10,12 @@ import DownloadSection from '@/components/payment/download-section';
 import HelpCenter from '../gift-card/help-center';
 import About from './about';
 import CardContent from './card-scroll/card-content';
+import Card2 from './card-scroll/card2';
+import Card3 from './card-scroll/card3';
+import Card4 from './card-scroll/card4';
 import AutoSlideshow from './card-slide';
 import FeaturesGrid from './features-grid';
 import HeroJoint from './hero-joint';
-import Card2 from './card-scroll/card2';
-import Card4 from './card-scroll/card4';
-import Card3 from './card-scroll/card3';
 
 const JointScreen = () => {
     const swiperRef = useRef<any>(null);
@@ -31,12 +31,11 @@ const JointScreen = () => {
     return (
         <>
             <HeroJoint />
-
             <Swiper
                 direction="vertical"
                 slidesPerView={1}
                 spaceBetween={0}
-                speed={300}
+                speed={500}
                 pagination={{ clickable: false }}
                 mousewheel={{
                     forceToAxis: true,
@@ -46,9 +45,9 @@ const JointScreen = () => {
                 modules={[Mousewheel, Pagination]}
                 onSwiper={(swiper) => (swiperRef.current = swiper)}
                 onSlideChange={(swiper) => {
-                    const isFirst = swiper.activeIndex === 0;
                     const isLast = swiper.activeIndex === swiper.slides.length - 1;
-                    setCanScrollOutside(isFirst || isLast);
+                    const isFirst = swiper.activeIndex === 0;
+                    setCanScrollOutside(isLast && !isFirst);
                 }}
                 style={{ height: '100vh' }}
             >
@@ -57,8 +56,10 @@ const JointScreen = () => {
                 <SwiperSlide><Card3 /></SwiperSlide>
                 <SwiperSlide><Card4 /></SwiperSlide>
             </Swiper>
-
-            <div className="overflow-y-auto">
+            <div
+                className={`transition-all duration-500 ease-in-out ${canScrollOutside ? 'opacity-100 max-h-full' : 'opacity-0 max-h-0 overflow-hidden'
+                    }`}
+            >
                 <FeaturesGrid />
                 <AutoSlideshow />
                 <About />
