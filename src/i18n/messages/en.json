@@ -739,5 +739,12 @@
             "title": "Open an account in as little as 1 minute",
             "desc": "Download the app to log in to your account."
         }
+    },
+    "faqHelp": {
+        "needAHand": {
+            "title": "Need a hand?",
+            "desc": "Just pop your question below to get an answer.",
+            "placeHolder": "Tell us what you’re look for"
+        }
     }
 }
