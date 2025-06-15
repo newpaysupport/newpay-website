@@ -17,7 +17,7 @@ const DownloadSection = () => {
                 borderRadius: '80px',
                 background: 'rgba(255, 255, 255, 0.04));'
             }}
-                className="bg-gray-600/10 rounded-4xl py-16">
+                className="bg-gray-600/10 rounded-4xl py-20 px-40">
                 <div className="flex md:flex-row flex-col max-w-7xl mx-auto gap-30 justify-center items-center">
                     <Image src={product_content_end} alt="Gift Icon" width={540} height={540} />
                     <div className='md:p-0 p-6 w-1/2'>
@@ -26,7 +26,7 @@ const DownloadSection = () => {
                             {t('title')}
                         </h1>
                         <button
-                            className="md:text-md text-sm rounded-xl mt-6 md:py-3 md:px-4 md:text-sm p-4 text-black cursor-pointer bg-white hover:bg-gray-100 font-semibold">
+                            className="md:text-md text-sm md:w-[152px] md:h-[56px] rounded-2xl mt-10 md:py-2 md:px-4 md:text-sm p-4 text-black cursor-pointer bg-white hover:bg-gray-100 font-semibold">
                             {t('buttonText')}
                         </button>
                     </div>
