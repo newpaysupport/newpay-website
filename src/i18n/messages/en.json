@@ -88,24 +88,28 @@
                 "button": "Free Gift on Signup"
             }
         },
-        "globeListCard": {
-            "item1": {
+        "globeListCard": [
+            {
                 "title": "One Card for Global Travel",
-                "desc": "Accepted by 100M+ merchants, compatible with Apple Pay & Google Pay"
+                "desc": "Accepted by 100M+ merchants, compatible with Apple Pay & Google Pay",
+                "image": "/images/home/giftcard/card1.png"
             },
-            "item2": {
+            {
                 "title": "Global Subscriptions for Online Entertainment",
-                "desc": ""
+                "desc": "Accepted by 100M+ merchants, compatible with Apple Pay & Google Pay",
+                "image": "/images/home/giftcard/card2.png"
             },
-            "item3": {
+            {
                 "title": "Cross-Border Shopping Made Easy",
-                "desc": ""
+                "desc": "Accepted by 100M+ merchants, compatible with Apple Pay & Google Pay",
+                "image": "/images/home/giftcard/card3.png"
             },
-            "item4": {
+            {
                 "title": "Global Social Tipping & Verified Payments",
-                "desc": ""
+                "desc": "Accepted by 100M+ merchants, compatible with Apple Pay & Google Pay",
+                "image": "/images/home/giftcard/card4.png"
             }
-        },
+        ],
         "helpCenter": {
             "title": "Follow us to get early discounts and updates regarding new product, feature and more",
             "amountUsers": "120,438+ members",

@@ -88,24 +88,28 @@
                 "button": "注册即送礼"
             }
         },
-        "globeListCard": {
-            "item1": {
+        "globeListCard": [
+            {
                 "title": "一张卡即可应对全球旅行所需",
-                "desc": "被超过一亿家商户接受，并支持 Apple Pay 与 Google Pay"
+                "desc": "被超过一亿家商户接受，并支持 Apple Pay 与 Google Pay",
+                "image": "/images/home/giftcard/card1.png"
             },
-            "item2": {
+            {
                 "title": "全球范围的线上娱乐订阅服务",
-                "desc": ""
+                "desc": "被超过一亿家商户接受，并支持 Apple Pay 与 Google Pay",
+                "image": "/images/home/giftcard/card2.png"
             },
-            "item3": {
+            {
                 "title": "跨境购物变得更轻松便捷",
-                "desc": ""
+                "desc": "被超过一亿家商户接受，并支持 Apple Pay 与 Google Pay",
+                "image": "/images/home/giftcard/card3.png"
             },
-            "item4": {
+            {
                 "title": "全球社交平台打赏与实名验证支付",
-                "desc": ""
+                "desc": "被超过一亿家商户接受，并支持 Apple Pay 与 Google Pay",
+                "image": "/images/home/giftcard/card4.png"
             }
-        },
+        ],
         "helpCenter": {
             "title": "关注我们，抢先获取新品、功能更新及专属折扣信息",
             "amountUsers": "120,438+ 用户",

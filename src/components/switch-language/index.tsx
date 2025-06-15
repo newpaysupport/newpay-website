@@ -46,7 +46,10 @@ const SwitchLanguage = ({ locale, switchLocale, t }: Props) => {
                 </button>
 
                 {open && (
-                    <div className="absolute left-0 mt-2 w-32 rounded z-20 bg-[#060606]/80 ">
+                    <div   style={{
+                        background :"rgba(255, 255, 255, 0.08)",
+                    }}
+                    className="absolute left-0 mt-2 w-32 z-20  rounded-lg p-2">
                         {languages.map((lng) => (
                             <div
                                 key={lng.code}
@@ -54,7 +57,7 @@ const SwitchLanguage = ({ locale, switchLocale, t }: Props) => {
                                     switchLocale(lng.code);
                                     setOpen(false);
                                 }}
-                                className="flex items-center gap-2 px-4 py-2 cursor-pointer hover:bg-black"
+                                className="flex items-center gap-2 px-4 py-2 cursor-pointer hover:bg-white/8 rounded-lg"
                             >
                                 <Image
                                     src={lng.flag.src}

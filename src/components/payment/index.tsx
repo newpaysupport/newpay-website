@@ -206,7 +206,9 @@ const PaymentScreen = () => {
                     </div>
                 </div>
                 {/* content FAQ */}
-                <Faq faqSection={faqSection} faqItems={faqItems} />
+                <div className='pt-20'>
+                    <Faq faqSection={faqSection} faqItems={faqItems} />
+                </div>
                 {/* content Download section */}
                 <DownloadSection />
             </div>
