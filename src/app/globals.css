@@ -172,10 +172,6 @@ body {
   animation: slide 20s linear infinite;
 }
 
-/* .slideshow-track:hover {
-  animation-play-state: paused;
-} */
-
 @keyframes slide {
   0% {
     transform: translateX(0);
