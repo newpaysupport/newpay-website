@@ -731,5 +731,21 @@
                 }
             ]
         }
+    },
+    "download": {
+        "banner": {
+            "heading": "NewPay App",
+            "title1": "下载",
+            "title2": "您的",
+            "title3": "APP",
+            "desc1": "人人可用、随时随地访问的加密钱包",
+            "desc2": "通过 NewPay，一起拥抱加密支付的未来！"
+        },
+        "getApp": {
+            "get": "获取",
+            "theApp": "您的应用",
+            "title": "最快 1 分钟创建账户",
+            "desc": "下载 App 即可登录你的账户"
+        }
     }
 }

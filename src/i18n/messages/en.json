@@ -723,5 +723,21 @@
                 }
             ]
         }
+    },
+    "download": {
+        "banner": {
+            "heading": "NewPay App",
+            "title1": "Download",
+            "title2": "for",
+            "title3": "mobile app",
+            "desc1": "Accessible crypto wallet for everyone, everywhere.",
+            "desc2": "Let’s embrace the future with cryptocurrency payments via NewPay!"
+        },
+        "getApp": {
+            "get": "Get",
+            "theApp": "the App",
+            "title": "Open an account in as little as 1 minute",
+            "desc": "Download the app to log in to your account."
+        }
     }
 }

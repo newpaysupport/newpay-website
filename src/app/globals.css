@@ -60,6 +60,16 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+
+/* download */
+
+.btnCta {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), var(--bg-surface-surface-2, rgba(255, 255, 255, 0.08));
+}
+.btnCta:hover{
+  background: #212121;
+}
+
 /* Physical cards */
 
 .cardFront {
