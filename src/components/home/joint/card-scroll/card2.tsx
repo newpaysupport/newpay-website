@@ -12,20 +12,7 @@ const Card2 = () => {
     const locale = useLocale();
     const joint = locale === 'en' ? enBlog : ziBlog;
 
-    const listText = [
-        {
-            number: "01.",
-            text: "Tap. Pay. Go."
-        },
-        {
-            number: "02.",
-            text: "Widely Accepted. Globally Trusted."
-        },
-        {
-            number: "03.",
-            text: "Spend confidently - wherever you go, we’ve got your back."
-        }
-    ]
+    const listText = joint.card2.listText;
 
     return (
         <section className="bg-white p-10 flex items-center rounded-3xl min-h-screen">
@@ -33,7 +20,7 @@ const Card2 = () => {
                 {/* Left Section: Text Content and Small Card */}
                 <div className="flex flex-col justify-between gap-5">
                     <h2 className="md:w-[60%] text-4xl md:text-5xl font-semibold text-[#1B1B1B] mb-4 leading-tight">
-                        VISA/MASTER Supported By
+                        {joint.card2.title}
                     </h2>
                     <Image
                         src={image_card2}
@@ -45,7 +32,7 @@ const Card2 = () => {
                 {/* Right Section: Large Image Card */}
                 <div className="flex flex-col space-y-10 ">
                     <div>
-                        <h1 className='text-[#666] text-3xl'>Supports Apple Pay & Google Pay</h1>
+                        <h1 className='text-[#666] text-3xl'>{joint.card2.description}</h1>
                         <div className='flex space-x-6 pt-4'>
                             <Image src={visa} alt='arrow right' />
                             <Image src={materCard} alt='arrow right' />
@@ -66,14 +53,14 @@ const Card2 = () => {
                             border: "1px solid rgba(0, 0, 0, 0.16)"
                         }}
                             className="bg-[#060606] font-semibold py-4 px-12 rounded-full cursor-pointer">
-                            <p className="text-md text-white">Explore Now</p>
+                            <p className="text-md text-white">{joint.card2.textButtonCardLeft}</p>
 
                         </button>
                         <button style={{
                             border: "1px solid rgba(0, 0, 0, 0.16)"
                         }}
                             className="border border-white font-semibold py-4 px-12 rounded-full cursor-pointer">
-                            <p className="flex justify-center items-center gap-3 text-md">Contact us  <FaArrowRight className="font-light" /></p>
+                            <p className="flex justify-center items-center gap-3 text-md">{joint.card2.textButtonCardRight}<FaArrowRight className="font-light" /></p>
 
                         </button>
                     </div>

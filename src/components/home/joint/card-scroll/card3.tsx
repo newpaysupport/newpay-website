@@ -24,10 +24,10 @@ const Card3 = () => {
                 <div className="flex flex-col justify-between space-y-10">
                     <div className="pl-32">
                         <h2 className="text-4xl md:text-5xl font-semibold text-[#1B1B1B] mb-4 leading-tight">
-                            Gift Card System Supported
+                            {joint.card3.title}
                         </h2>
                         <p className="text-3xl text-[#666] mb-6 font-medium">
-                            Share the Joy Anytime with Friends & Family
+                            {joint.card3.description}
                         </p>
                     </div>
 
@@ -41,10 +41,10 @@ const Card3 = () => {
                         />
                         <div className="flex flex-col justify-between">
                             <p className="text-md">
-                            Send digital or physical gift cards instantly for birthdays, celebrations, or just because.
+                                {joint.card3.textCardLeft}
                             </p>
                             <button className="border border-white font-semibold py-3 px-6 rounded-3xl cursor-pointer">
-                                <p className="flex justify-center items-center gap-3"> {joint.cardContent.textButtonCard} <FaArrowRight className="font-light" /></p>
+                                <p className="flex justify-center items-center gap-3"> {joint.card3.textButtonCard} <FaArrowRight className="font-light" /></p>
 
                             </button>
                         </div>
@@ -65,10 +65,10 @@ const Card3 = () => {
                         className="absolute top-[5%] left-[-15%] flex items-center justify-between text-white rounded-2xl p-2 sm:p-3 md:p-4 shadow-md w-full max-w-xs">
                         <div className="flex items-center space-x-5">
                             <div className="flex-shrink-0">
-                                <Image src={icon_gift} alt="Gift Icon" width={50} height={50}/>
+                                <Image src={icon_gift} alt="Gift Icon" width={50} height={50} />
                             </div>
                             <div>
-                            <p className="text-lg font-semibold text-[#1B1B1B]">{t('giftCard.contentRight.item1.title')}</p>
+                                <p className="text-lg font-semibold text-[#1B1B1B]">{t('giftCard.contentRight.item1.title')}</p>
                                 <p className="text-sm text-[#979797]">{t('giftCard.contentRight.item1.desc')}</p>
                             </div>
                         </div>
@@ -84,10 +84,10 @@ const Card3 = () => {
                         className="absolute bottom-[30%] right-[-15%] flex items-center justify-between text-white rounded-2xl p-2 sm:p-3 md:p-4 shadow-md w-full max-w-xs">
                         <div className="flex items-center space-x-5">
                             <div className="flex-shrink-0">
-                                <Image src={arrow_right} alt="Gift Icon" width={50} height={50} className='text-[#FF6910]'/>
+                                <Image src={arrow_right} alt="Gift Icon" width={50} height={50} className='text-[#FF6910]' />
                             </div>
                             <div>
-                            <p className="text-lg font-semibold text-[#1B1B1B]">{t('giftCard.contentRight.item2.title')}</p>
+                                <p className="text-lg font-semibold text-[#1B1B1B]">{t('giftCard.contentRight.item2.title')}</p>
                                 <p className="text-sm text-[#979797]">{t('giftCard.contentRight.item2.desc')}</p>
                             </div>
                         </div>
@@ -103,10 +103,10 @@ const Card3 = () => {
                         className="absolute bottom-[5%] left-[-8%] flex items-center justify-between text-white rounded-2xl p-2 sm:p-3 md:p-4 shadow-md w-full max-w-xs">
                         <div className="flex items-center space-x-5">
                             <div className="flex-shrink-0">
-                                <Image src={arrow_left} alt="Gift Icon" width={50} height={50}/>
+                                <Image src={arrow_left} alt="Gift Icon" width={50} height={50} />
                             </div>
                             <div>
-                            <p className="text-lg font-semibold text-[#1B1B1B]">{t('giftCard.contentRight.item3.title')}</p>
+                                <p className="text-lg font-semibold text-[#1B1B1B]">{t('giftCard.contentRight.item3.title')}</p>
                                 <p className="text-sm text-[#979797]">{t('giftCard.contentRight.item3.desc')}</p>
                             </div>
                         </div>

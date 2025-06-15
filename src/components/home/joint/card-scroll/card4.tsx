@@ -18,7 +18,7 @@ const Card4 = () => {
                 {/* Left Section: Text Content and Small Card */}
                 <div className="flex flex-col justify-between gap-5">
                     <h2 className="md:w-[60%] text-4xl md:text-5xl font-semibold text-[#1B1B1B] mb-4 leading-tight">
-                        Virtual & Physical Cards
+                        {joint.card4.title}
                     </h2>
                     <Image
                         src={phone}
@@ -29,7 +29,7 @@ const Card4 = () => {
 
                 {/* Right Section: Large Image Card */}
                 <div className="flex flex-col justify-between">
-                    <h1 className='text-[#666] text-3xl font-medium'>Co-Branded, Payroll, Benefit, and Business Gift Cards</h1>
+                    <h1 className='text-[#666] text-3xl font-medium'>{joint.card4.description}</h1>
                     <div style={{
                         borderRadius: "24px",
                         background: "rgba(255, 105, 16, 0.08)"
@@ -37,21 +37,21 @@ const Card4 = () => {
                         className='flex flex-col space-y-8 p-8 ml-40'>
                         <Image src={cardContainer} alt='' className='mx-auto' />
                         <p className='text-[#000000]/72'>
-                            Issue instantly usable virtual cards for online spending, or get sleek physical cards for in-store purchases and daily use.
+                            {joint.card4.textCard}
                         </p>
                         <div className='flex gap-2'>
                             <button style={{
                                 border: "1px solid rgba(0, 0, 0, 0.16)"
                             }}
                                 className="bg-[#060606] font-semibold py-4 px-12 rounded-full cursor-pointer">
-                                <p className="text-md text-white">Explore Now</p>
+                                <p className="text-md text-white"> {joint.card4.textButtonCardLeft}</p>
 
                             </button>
                             <button style={{
                                 border: "1px solid rgba(0, 0, 0, 0.16)"
                             }}
                                 className="border border-white font-semibold py-4 px-12 rounded-full cursor-pointer">
-                                <p className="flex justify-center items-center gap-3 text-md">Contact us  <FaArrowRight className="font-light" /></p>
+                                <p className="flex justify-center items-center gap-3 text-md">{joint.card4.textButtonCardRight}<FaArrowRight className="font-light" /></p>
 
                             </button>
                         </div>
