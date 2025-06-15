@@ -11,7 +11,7 @@ type Props = {
 
 const languages = [
     { code: 'en', label: 'EN', flag: logoEN },
-    { code: 'zi', label: 'ZI', flag: logoZH }
+    { code: 'zi', label: 'CN', flag: logoZH }
 ];
 
 const SwitchLanguage = ({ locale, switchLocale, t }: Props) => {
