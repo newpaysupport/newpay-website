@@ -27,13 +27,13 @@ const Header = () => {
 
     return (
         <nav
-            className={`text-sm h-[70px] flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 
+            className={`text-sm h-[70px] flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4
             fixed top-0 left-0 w-full z-50 bg-transparent backdrop-blur-md
              text-white transition-all duration-300 ease-in-out shadow-sm`}
         >
-            <div className="flex items-center space-x-4">
+            <Link href={"/"} className="flex items-center space-x-4">
                 <Image src={logo} alt="NewPay Logo" className="object-contain bg-transparent" />
-            </div>
+            </Link>
 
             <ul className="hidden md:flex justify-center items-center space-x-10">
                 <li><Link href={`/${locale}/joint`}>{t('joint')}</Link></li>

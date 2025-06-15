@@ -1,7 +1,9 @@
 'use client'
 import React from 'react'
 import BtnPrimary from '../common/button/btn-primary'
+import overlay from '@/images/secure/overlay.png';
 import { useTranslations } from 'next-intl'
+import Image from 'next/image';
 
 const Hero = () => {
 
@@ -10,7 +12,9 @@ const Hero = () => {
     return (
         <div className='w-full h-screen relative overflow-hidden'>
             <video src={'/videos/secure-custodian/heroVideo.mp4'} className='w-full object-cover object-center' loop={true} autoPlay={true} muted={true} preload='true' />
-            <div className='inset-0 absolute w-full h-full z-[1]' style={{ backdropFilter: '40px', background: 'linear-gradient(180deg, rgba(6, 6, 6, 0.00) 0.02%, rgba(6, 6, 6, 0.48) 99.98%)' }}></div>
+            <figure className='absolute w-full h-[460px] z-[1] bottom-0 left-0'>
+                <Image src={overlay} alt='' className='object-cover w-full' />
+            </figure>
             <div className='absolute inset-0 w-full h-full z-[2]'>
                 <div className='flex justify-center items-end h-full pb-[120px]'>
                     <div className='w-full lg:w-[600px] text-center'>

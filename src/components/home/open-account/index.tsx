@@ -53,7 +53,6 @@ const OpenAccount = () => {
     useGSAP(() => {
         gsap.registerPlugin(ScrollTrigger);
 
-        // gsap.set('.stepPanel', { opacity: 0.2 });
         gsap.utils.toArray('.stepPanel').forEach((stepPanel, index) => {
             gsap.timeline({
                 scrollTrigger: {
@@ -66,14 +65,14 @@ const OpenAccount = () => {
                         gsap.to(stepPanel as HTMLElement, { opacity: 1, duration: 0.05 })
                         setActiveStep(index)
                     },
-                    onLeave: () => gsap.to(stepPanel as HTMLElement, { opacity: 0.2, duration: 0.05 }),
+                    // onLeave: () => gsap.to(stepPanel as HTMLElement, { opacity: 0.2, duration: 0.05 }),
                     onEnterBack: () => {
                         gsap.to(stepPanel as HTMLElement, { opacity: 1, duration: 0.05 })
                         setActiveStep(index)
                     },
                     onLeaveBack: () => {
                         if (index !== 0) {
-                            gsap.to(stepPanel as HTMLElement, { opacity: 0.2, duration: 0.05 })
+                            // gsap.to(stepPanel as HTMLElement, { opacity: 0.2, duration: 0.05 })
                         }
                     },
                 }
@@ -90,11 +89,11 @@ const OpenAccount = () => {
                     <p className='text-[#aeaeae] text-lg font-normal mt-6 mb-20'>{t('openAccount.desc')}</p>
 
                     <div className='flex justify-between'>
-                        <div className='w-full h-full lg:min-w-[800px] relative'>
+                        <div className='w-full h-full lg:w-[800px] relative'>
                             <div>
                                 {t.raw('openAccount.steps').map((step: { title: string; desc: string }, index: number) => {
                                     return (
-                                        <div key={index} className={`${index !== 0 ? "opacity-20" : "opacity-100"} stepPanel flex items-start justify-between pb-40 pt-20  `}>
+                                        <div key={index} className={`stepPanel flex items-start justify-between pb-40 pt-20  `}>
                                             <div className='flex gap-x-12'>
                                                 <div className='relative z-[10]'>
                                                     <p className={`${index === activeStep ? "bg-[#FF6910] border-none" : "bg-[#212121] border-white/16"} border-[2px] w-20 h-20 rounded-full text-white text-[40px] font-semibold flex items-center justify-center`}>{stepAccount[index].step}</p>
@@ -113,13 +112,13 @@ const OpenAccount = () => {
                                 })}
                             </div>
                             <>
-                                <div className='w-20 h-full absolute top-20 z-1'>
+                                <div className='w-20 h-[2700px] absolute top-20 z-1'>
                                     <p className='bg-white/20 w-1 h-full mx-auto'></p>
                                 </div>
                             </>
 
                         </div>
-                        <div className='sticky flex justify-end h-full grow top-[calc(50%-400px)] pt-20'>
+                        <div className='sticky flex justify-end h-[575px] min-w-[400px] w-[400px] top-[calc(50%-288px)]'>
                             <div className={`${activeStep !== -1 ? "opacity-100" : "opacity-0"} transition-all ease-linear duration-150 bg-[#060606]`}>
                                 <Image src={stepAccount[activeStep].image} alt='image' className=' mix-blend-lighten' />
                             </div>

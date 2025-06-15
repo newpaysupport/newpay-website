@@ -35,7 +35,7 @@
             },
             {
                 "title": "Support multiple crypto assets",
-                "desc": "Use stable coins as a way to exchange currency for you"
+                "desc": "Use stablecoins as a way to exchange currency for you"
             },
             {
                 "title": "NewPay Gift Card",
@@ -44,27 +44,27 @@
         ],
         "openAccount": {
             "title": "Open your NewPay Account",
-            "desc": "Just 5 steps to start – Global transparent spending, physical card ATM access, full security",
+            "desc": "Just 4 steps to start – Global transparent spending, physical card ATM access, full security",
             "steps": [
                 {
                     "title": "Spend crypto like fiat",
-                    "desc": "No need for fiat conversion, use crypto directly for everyday purchases (shopping, dining, subscriptions, etc.)."
+                    "desc": "No need for fiat conversion — use crypto directly for everyday purchases like shopping, dining, subscriptions, and more."
                 },
                 {
                     "title": "Worldwide Acceptance",
-                    "desc": "Support Apple Pay, card withdrawals, and transactions at millions of locations worldwide."
+                    "desc": "Supports Apple Pay, ATM withdrawals, and payments at millions of locations worldwide."
                 },
                 {
                     "title": "Instant Transactions",
-                    "desc": "Send, receive, and complete crypto-to-fiat transactions, whether P2P or global payments."
+                    "desc": "Send, receive, and manage crypto with instant transactions, whether it’s for a gift or paying bills."
                 },
                 {
                     "title": "Gift Card",
-                    "desc": "Easily send value and crypto gifts to friends, celebrations, or just because — no conversion fees."
+                    "desc": "Share USDT easily with friends for birthdays, celebrations, or just because — no transaction fees."
                 },
                 {
                     "title": "Referral Rewards",
-                    "desc": "Earn bonus rewards (up to 50%) in credits with our easy-to-use invite program."
+                    "desc": "Invite friends and earn up to 50% in rewards with an easy-to-use referral program."
                 }
             ]
         },
@@ -467,11 +467,11 @@
                 "items": [
                     {
                         "label": "Joint",
-                        "link": ""
+                        "link": "/en/joint"
                     },
                     {
                         "label": "Personal",
-                        "link": ""
+                        "link": "/en"
                     }
                 ]
             },
@@ -489,7 +489,7 @@
                 "items": [
                     {
                         "label": "Secure Custodian",
-                        "link": ""
+                        "link": "/en/secure"
                     }
                 ]
             },
@@ -498,7 +498,7 @@
                 "items": [
                     {
                         "label": "About NewPay",
-                        "link": "/about-us"
+                        "link": "/en/about-us"
                     },
                     {
                         "label": "Blog",
@@ -515,11 +515,11 @@
                     },
                     {
                         "label": "FAQ",
-                        "link": ""
+                        "link": "/en/faq-help"
                     },
                     {
                         "label": "Download App",
-                        "link": ""
+                        "link": "/en/download"
                     }
                 ]
             }
@@ -722,6 +722,10 @@
                     "desc": "All private keys are securely stored in top-tier HSMs with FIPS 140-2 Level 3 standards"
                 }
             ]
+        },
+        "deposit": {
+            "title": "Deposit Crypto With Ease",
+            "desc": "Deposit USDC, USDT to your NewPay account effortlessly from your own wallets"
         }
     },
     "download": {
