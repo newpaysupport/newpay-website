@@ -527,7 +527,7 @@
                     },
                     {
                         "label": "下载APP",
-                        "link": ""
+                        "link": "/download"
                     }
                 ]
             }
@@ -730,6 +730,10 @@
                     "desc": "所有私钥均存储于符合 FIPS 140-2 第三级标准的顶级硬件安全模块（HSM）中，确保密钥安全"
                 }
             ]
+        },
+        "deposit": {
+            "title": "轻松充值加密资产",
+            "desc": "可将 USDC、USDT 从您个人钱包轻松充值至 NewPay 账户，便捷无忧"
         }
     },
     "download": {

@@ -467,11 +467,11 @@
                 "items": [
                     {
                         "label": "Joint",
-                        "link": ""
+                        "link": "/en/joint"
                     },
                     {
                         "label": "Personal",
-                        "link": ""
+                        "link": "/en"
                     }
                 ]
             },
@@ -489,7 +489,7 @@
                 "items": [
                     {
                         "label": "Secure Custodian",
-                        "link": ""
+                        "link": "/en/secure"
                     }
                 ]
             },
@@ -498,7 +498,7 @@
                 "items": [
                     {
                         "label": "About NewPay",
-                        "link": "/about-us"
+                        "link": "/en/about-us"
                     },
                     {
                         "label": "Blog",
@@ -515,11 +515,11 @@
                     },
                     {
                         "label": "FAQ",
-                        "link": ""
+                        "link": "/en/faq-help"
                     },
                     {
                         "label": "Download App",
-                        "link": ""
+                        "link": "/en/download"
                     }
                 ]
             }
@@ -722,6 +722,10 @@
                     "desc": "All private keys are securely stored in top-tier HSMs with FIPS 140-2 Level 3 standards"
                 }
             ]
+        },
+        "deposit": {
+            "title": "Deposit Crypto With Ease",
+            "desc": "Deposit USDC, USDT to your NewPay account effortlessly from your own wallets"
         }
     },
     "download": {
