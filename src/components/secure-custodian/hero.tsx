@@ -20,12 +20,12 @@ const Hero = () => {
                                 backgroundClip: 'text',
                                 WebkitBackgroundClip: 'text',
                                 WebkitTextFillColor: "transparent"
-                            }} className='text-[72px] font-semibold text-center w-full lg:min-w-[472px] -tracking-[1.64px] mx-auto'>
+                            }} className='text-[72px] font-semibold text-center w-full lg:min-w-[472px] -tracking-[1.64px] mx-auto opacity-0 fadeInUp-no-delay'>
                             {t("hero.title")}
                         </p>
-                        <p className='text-[#aeaeae] text-base font-medium -tracking-[0.24px]'>{t("hero.desc1")}</p>
-                        <p className='text-[#aeaeae] text-base font-medium -tracking-[0.24px]'>{t("hero.desc2")}</p>
-                        <BtnPrimary text={t("hero.button")} variant={'primary-lighter'} className='w-[207px] mt-8 mx-auto' />
+                        <p className='text-[#aeaeae] text-base font-medium -tracking-[0.24px] opacity-0 fadeInUp-delay-03'>{t("hero.desc1")}</p>
+                        <p className='text-[#aeaeae] text-base font-medium -tracking-[0.24px] opacity-0 fadeInUp-delay-03'>{t("hero.desc2")}</p>
+                        <BtnPrimary text={t("hero.button")} variant={'primary-lighter'} className='w-[207px] mt-8 mx-auto opacity-0 fadeInUp-delay-06' />
                     </div>
                 </div>
             </div>

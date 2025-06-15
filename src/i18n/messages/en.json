@@ -704,6 +704,24 @@
             "desc1": "Accessible crypto wallet for everyone, everywhere.",
             "desc2": "Let’s embrace the future with cryptocurrency payments via NewPay!",
             "button": "Get your card now"
+        },
+        "assets": {
+            "title": "Your Assets Are Safe With Us",
+            "desc": "Swift, seamless, secure: Transform your crypto into everyday purchases with NewPay",
+            "list": [
+                {
+                    "title": "Licensed Trust and Company Service Provider",
+                    "desc": "We custody your assets with a licensed Trust and Company Service Provider in Hong Kong, segregated from our own company assets."
+                },
+                {
+                    "title": "Privacy Compliance Assurance",
+                    "desc": "We follow GDPR, PDPA, and other global privacy standards to keep your data secure and fully under your control"
+                },
+                {
+                    "title": "Industry’s Highest Level Security",
+                    "desc": "All private keys are securely stored in top-tier HSMs with FIPS 140-2 Level 3 standards"
+                }
+            ]
         }
     }
 }
