@@ -1,11 +1,11 @@
 {
     "navigation": {
-        "payment": "付款",
-        "company": "公司",
-        "support": "支持",
-        "joint": "联合",
+        "payment": "支付",
+        "company": "关于我们",
+        "support": "帮助中心",
+        "joint": "联名",
         "personal": "个人",
-        "getApp": "获取应用程序"
+        "getApp": "下载 APP"
     },
     "home": {
         "titleHero": "让加密货币真正融入日常消费 简单 安全 又划算",
@@ -96,17 +96,17 @@
             },
             {
                 "title": "全球范围的线上娱乐订阅服务",
-                "desc": "被超过一亿家商户接受，并支持 Apple Pay 与 Google Pay",
+                "desc": "ChatGPT，Netflix，Youtube，Google，暴雪娱乐，FIFA",
                 "image": "/images/home/giftcard/card2.png"
             },
             {
                 "title": "跨境购物变得更轻松便捷",
-                "desc": "被超过一亿家商户接受，并支持 Apple Pay 与 Google Pay",
+                "desc": "Amazon，Ebay，Walmart，Shopify，Lazada，Shopee，Alibaba",
                 "image": "/images/home/giftcard/card3.png"
             },
             {
                 "title": "全球社交平台打赏与实名验证支付",
-                "desc": "被超过一亿家商户接受，并支持 Apple Pay 与 Google Pay",
+                "desc": "X，Telegram，Facebook，Tiktok，Instagram",
                 "image": "/images/home/giftcard/card4.png"
             }
         ],
