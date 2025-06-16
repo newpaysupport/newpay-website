@@ -1,10 +1,9 @@
-'use client';
-
-import { useEffect, useRef, useState } from 'react';
+'use client'
+import { useEffect, useRef } from 'react';
 import 'swiper/css';
-import 'swiper/css/pagination';
-import { Mousewheel, Pagination } from 'swiper/modules';
+import { Controller } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper as SwiperCore } from 'swiper/types';
 
 import DownloadSection from '@/components/payment/download-section';
 import HelpCenter from '../gift-card/help-center';
@@ -18,48 +17,74 @@ import FeaturesGrid from './features-grid';
 import HeroJoint from './hero-joint';
 
 const JointScreen = () => {
-    const swiperRef = useRef<any>(null);
-    const [canScrollOutside, setCanScrollOutside] = useState(false);
+    const swiperRef = useRef<SwiperCore | null>(null);
+    const pinContainerRef = useRef<HTMLDivElement>(null);
+    const swiperContainerRef = useRef<HTMLDivElement>(null);
+    const slideCount = 4;
+
+    const lastSlideIndexRef = useRef<number>(-1);
 
     useEffect(() => {
-        document.body.style.overflow = canScrollOutside ? 'auto' : 'hidden';
-        return () => {
-            document.body.style.overflow = 'auto';
+        const swiper = swiperRef.current;
+        const pinContainer = pinContainerRef.current;
+        if (!swiper || !pinContainer) return;
+
+        const handleScroll = () => {
+            const pinContainerTop = pinContainer.offsetTop;
+            const scrollY = window.scrollY;
+            const scrollProgress = scrollY - pinContainerTop;
+
+            if (scrollProgress < 0 || scrollProgress > pinContainer.offsetHeight - window.innerHeight) {
+                if (scrollProgress < 0 && !swiper.isBeginning) {
+                    swiper.slideTo(0, 500);
+                    lastSlideIndexRef.current = 0;
+                }
+                if (scrollProgress > pinContainer.offsetHeight - window.innerHeight && !swiper.isEnd) {
+                    swiper.slideTo(slideCount - 1, 500);
+                    lastSlideIndexRef.current = slideCount - 1;
+                }
+                return;
+            }
+
+            const singleSlideScrollHeight = (pinContainer.offsetHeight - window.innerHeight) / (slideCount - 1);
+            const currentSlideIndex = Math.round(scrollProgress / singleSlideScrollHeight);
+
+
+            if (swiper.activeIndex !== currentSlideIndex && lastSlideIndexRef.current !== currentSlideIndex) {
+                swiper.slideTo(currentSlideIndex, 500);
+                lastSlideIndexRef.current = currentSlideIndex;
+            }
         };
-    }, [canScrollOutside]);
+
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     return (
         <>
             <HeroJoint />
-            <Swiper
-                direction="vertical"
-                slidesPerView={1}
-                spaceBetween={0}
-                speed={500}
-                pagination={{ clickable: false }}
-                mousewheel={{
-                    forceToAxis: true,
-                    sensitivity: 1.2,
-                    releaseOnEdges: false,
-                }}
-                modules={[Mousewheel, Pagination]}
-                onSwiper={(swiper) => (swiperRef.current = swiper)}
-                onSlideChange={(swiper) => {
-                    const isLast = swiper.activeIndex === swiper.slides.length - 1;
-                    const isFirst = swiper.activeIndex === 0;
-                    setCanScrollOutside(isLast && !isFirst);
-                }}
-                style={{ height: '100vh' }}
-            >
-                <SwiperSlide><CardContent /></SwiperSlide>
-                <SwiperSlide><Card2 /></SwiperSlide>
-                <SwiperSlide><Card3 /></SwiperSlide>
-                <SwiperSlide><Card4 /></SwiperSlide>
-            </Swiper>
-            <div
-                className={`transition-all duration-500 ease-in-out ${canScrollOutside ? 'opacity-100 max-h-full' : 'opacity-0 max-h-0 overflow-hidden'
-                    }`}
-            >
+            <div ref={pinContainerRef} style={{ height: `${slideCount}00vh` }} className="relative">
+                <div ref={swiperContainerRef} className="sticky top-0 h-screen w-full">
+                    <Swiper
+                        direction="vertical"
+                        slidesPerView={1}
+                        spaceBetween={0}
+                        mousewheel={false}
+                        modules={[Controller]}
+                        onSwiper={(swiper) => (swiperRef.current = swiper)}
+                        className="h-full w-full"
+                        speed={500}
+                    >
+                        <SwiperSlide><CardContent /></SwiperSlide>
+                        <SwiperSlide><Card2 /></SwiperSlide>
+                        <SwiperSlide><Card3 /></SwiperSlide>
+                        <SwiperSlide><Card4 /></SwiperSlide>
+                    </Swiper>
+                </div>
+            </div>
+            <div>
                 <FeaturesGrid />
                 <AutoSlideshow />
                 <About />
