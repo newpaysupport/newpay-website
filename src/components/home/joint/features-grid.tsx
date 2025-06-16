@@ -33,7 +33,7 @@ const FeaturesGrid = () => {
         <div className="relative">
             <Image src={bg_joint2} alt="Why Choose NewPay" className="w-full" />
             <div className="absolute inset-0 text-center mt-30">
-                <h1 className="text-4xl md:text-5xl text-[#FFF] font-bold">
+                <h1 className="text-4xl md:text-5xl text-[#FFF] font-semibold">
                     {joint.featuresGrid.title}
                 </h1>
                 <p className="text-lg md:text-xl text-[#AEAEAE] mt-6 w-full max-w-3xl mx-auto px-4">
