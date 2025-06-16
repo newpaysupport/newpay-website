@@ -13,6 +13,7 @@ import img_bg_joint4_cn from '@/images/home/joint/img_bg_joint4_cn.svg';
 import { joint as enBlog } from '@/i18n/messages/en.json';
 import { joint as ziBlog } from '@/i18n/messages/zi.json';
 import { useLocale } from 'next-intl';
+import Link from 'next/link';
 
 
 const HeroJoint = () => {
@@ -55,7 +56,7 @@ const HeroJoint = () => {
                     {/* Left Images Column */}
                     <div className="flex flex-col gap-10 md:gap-60 items-start  mb-8 lg:mb-0">
                         <Image src={jointImages.img1} alt="Joint Image 1" width={0} height={0} className='fadeInUp-no-delay w-full h-full' />
-                        <Image src={jointImages.img2} alt="Joint Image 3"  width={0} height={0} className='fadeInUp-no-delay w-full h-full'/>
+                        <Image src={jointImages.img2} alt="Joint Image 3" width={0} height={0} className='fadeInUp-no-delay w-full h-full' />
                     </div>
 
                     {/* Center Text Content */}
@@ -74,15 +75,17 @@ const HeroJoint = () => {
                         <p className="max-w-xl mx-auto text-[#AEAEAE] text-md mb-8 fadeInUp-delay-03">
                             {joint.hero.description}
                         </p>
-                        <button className="bg-[#FF6910] cursor-pointer text-white px-15 py-3 rounded-full text-md hover:bg-[#e65c00] transition-colors fadeInUp-delay-03">
-                            {joint.hero.buttonText}
-                        </button>
+                        <Link href={`/${locale}/contact`}>
+                            <button className="bg-[#FF6910] font-semibold cursor-pointer text-white px-15 py-3 md:h-[55px] md:w-[240px] rounded-full text-md hover:bg-[#e65c00] transition-colors fadeInUp-delay-03">
+                                {joint.hero.buttonText}
+                            </button>
+                        </Link>
                     </div>
 
                     {/* Right Images Column */}
                     <div className="flex flex-col gap-10 md:gap-60 items-end mt-8 lg:mt-0">
-                        <Image src={jointImages.img3} alt="Joint Image 2"  width={0} height={0} className='fadeInUp-no-delay w-full h-full'/>
-                        <Image src={jointImages.img4} alt="Joint Image 4"  width={0} height={0} className='fadeInUp-no-delay w-full h-full'/>
+                        <Image src={jointImages.img3} alt="Joint Image 2" width={0} height={0} className='fadeInUp-no-delay w-full h-full' />
+                        <Image src={jointImages.img4} alt="Joint Image 4" width={0} height={0} className='fadeInUp-no-delay w-full h-full' />
                     </div>
                 </div>
             </div>

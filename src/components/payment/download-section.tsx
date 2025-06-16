@@ -26,7 +26,7 @@ const DownloadSection = () => {
                             {t('title')}
                         </h1>
                         <button
-                            className="md:text-md text-sm md:w-[152px] md:h-[56px] rounded-2xl mt-10 md:py-2 md:px-4 md:text-sm p-4 text-black cursor-pointer bg-white hover:bg-gray-100 font-semibold">
+                            className="md:text-md text-sm md:w-[152px] md:h-[56px] rounded-2xl mt-10 md:py-2 md:px-4 p-4 text-black cursor-pointer bg-white hover:bg-gray-100 font-semibold">
                             {t('buttonText')}
                         </button>
                     </div>

@@ -443,7 +443,7 @@
                 },
                 {
                     "question": "How long does it take for funds to arrive in my account ?",
-                    "answer": "Typically, funds arrive within 1-3 business days, depending on the sending institution and method. Instant transfers may be available for certain regions."
+                    "answer": "It depends on your chosen top-up method. Bank transfers typically take 1–3 business days, while crypto deposits usually arrive within minutes after network confirmation."
                 },
                 {
                     "question": "What fees does NewPay charge ?",
@@ -578,7 +578,7 @@
         },
         "featuresGrid": {
             "title": "Why Choose NewPay",
-            "description": "NewPay is designed to make crypto spending easy, secure, and accessible for everyone. Here’s why you should choose NewPay for your crypto transactions:With NewPay, use your crypto for payments anytime, track spending transparently, and enjoy real-time exchange rates across all scenarios. Our gift card system is designed for joyful sharing with your loved ones.",
+            "description": "With NewPay, use your crypto for payments anytime, track spending transparently, and enjoy real-time exchange rates across all scenarios. Our gift card system is designed for joyful sharing with your loved ones.",
             "features": [
                 {
                     "icon": "/icons/mastercard.svg",
@@ -619,23 +619,23 @@
             "slides": [
                 {
                     "title": "INTERACTIVE MEDIA",
-                    "image": "/images/home/joint/slide1.png"
-                },
-                {
-                    "title": "VIDEO ENTERTAINMENT",
                     "image": "/images/home/joint/slide2.png"
                 },
                 {
-                    "title": "E-COMMERCE SHOPPING",
+                    "title": "VIDEO ENTERTAINMENT",
                     "image": "/images/home/joint/slide3.png"
                 },
                 {
-                    "title": "IT SERVICES",
+                    "title": "E-COMMERCE SHOPPING",
                     "image": "/images/home/joint/slide4.png"
                 },
                 {
-                    "title": "ANOTHER SLIDE",
-                    "image": "/images/home/joint/slide5.png"
+                    "title": "IT SERVICES",
+                    "image":  "/images/home/joint/slide5.png"
+                },
+                {
+                    "title": "INTERACTIVE MEDIA",
+                    "image": "/images/home/joint/slide1.png"
                 }
             ]
         },
