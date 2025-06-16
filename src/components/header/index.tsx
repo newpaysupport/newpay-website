@@ -7,8 +7,8 @@ import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import SwitchLanguage from '../switch-language';
-import PaymentDropdown from "./payment-dropdown";
 import CompanyDropdown from "./company-dropdown";
+import PaymentDropdown from "./payment-dropdown";
 
 const Header = () => {
     const locale = useLocale();
@@ -121,11 +121,11 @@ const Header = () => {
                         {/* Dropdown */}
                         {link.hasDropdown && openDropdown === link.key && (
                             <div
-                                className= {`absolute top-full transform -translate-x-1/2 pt-1 min-w-screen z-50 ${link.key === 'payment' ? 'left-[70%]' : 'left-[-20%]'}`}
+                                className={`absolute top-[full] transform -translate-x-1/2 pt-1 min-w-screen z-50 ${link.key === 'payment' ? 'left-[70%]' : 'left-[-20%]'}`}
                             >
-                                {link.key === 'payment' ? 
-                                (<PaymentDropdown link={link} locale={locale}/>) : <CompanyDropdown link={link} locale={locale} />}
-                                
+                                {link.key === 'payment' ?
+                                    (<PaymentDropdown link={link} locale={locale} />) : <CompanyDropdown link={link} locale={locale} />}
+
                             </div>
                         )}
                     </li>

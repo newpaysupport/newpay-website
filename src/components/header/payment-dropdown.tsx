@@ -50,7 +50,7 @@ const PaymentDropdown = ({ link, locale }: LinkItem) => {
                             <Image
                                 src={virual_card_dropdown}
                                 alt="Virtual Card"
-                                className="w-full h-full object-cover rounded-xl"
+                                className="w-[200px] h-[200px] object-cover rounded-xl"
                             />
                             <div className="absolute bottom-0 px-3 py-5 flex justify-between w-full z-50">
                                 <h1 className="text-sm font-semibold">Virtual Card</h1>
@@ -71,7 +71,7 @@ const PaymentDropdown = ({ link, locale }: LinkItem) => {
                             <Image
                                 src={physicard_card_dropdown}
                                 alt="Physical Card"
-                                className="w-full h-full object-cover rounded-xl"
+                                className="w-[200px] h-[200px] object-cover rounded-xl"
                             />
                             <div className="absolute bottom-0 px-3 py-5 flex justify-between w-full z-50">
                                 <h1 className="text-sm font-semibold">Physical Card</h1>
