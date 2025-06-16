@@ -15,17 +15,17 @@ const Card2 = () => {
     const listText = joint.card2.listText;
 
     return (
-        <section className="bg-white p-10 flex items-center rounded-3xl min-h-screen">
+        <section className="bg-white p-10 flex items-center rounded-3xl min-h-screen mt-5">
             <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-30">
                 {/* Left Section: Text Content and Small Card */}
-                <div className="flex flex-col justify-between gap-5">
+                <div className="flex flex-col justify-between">
                     <h2 className="md:w-[60%] text-4xl md:text-5xl font-semibold text-[#1B1B1B] mb-4 leading-tight">
                         {joint.card2.title}
                     </h2>
                     <Image
                         src={image_card2}
                         alt="Person holding a card"
-                        className="rounded-lg object-cover w-[480px] h-[450px]"
+                        className="rounded-lg object-cover"
                     />
                 </div>
 
@@ -38,7 +38,7 @@ const Card2 = () => {
                             <Image src={materCard} alt='arrow right' />
                         </div>
                     </div>
-                    <div className='py-4'>
+                    <div className=''>
                         {listText.map((item, index) => {
                             return (
                                 <p style={{

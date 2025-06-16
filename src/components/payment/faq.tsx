@@ -37,7 +37,7 @@ const Faq = ({ faqSection, faqItems }: FaqSectionProps) => {
                                         +
                                     </span>
                                 </summary>
-                                <p className="md:text-md md:w-[640px] w-full text-xs mt-8 text-[#AEAEAE] leading-6 font-medium">
+                                <p className="md:text-md md:w-[640px] w-full mt-8 text-[#AEAEAE] leading-6 font-medium">
                                     {item.answer}
                                 </p>
                             </details>
