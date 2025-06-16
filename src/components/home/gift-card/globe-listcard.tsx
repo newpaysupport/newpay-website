@@ -19,17 +19,15 @@ const GlobeListCard = () => {
                 <div className='absolute right-0 left-0 top-45 bottom-0 flex gap-5 items-start justify-center '>
 
                     {globeListCard.map((item, index) => {
-                        let style = "rotate(0deg)";
-                        if (index === 0) {
-                            style = "rotate(-8deg)";
-                        } else if (index === 3) {
-                            style = "rotate(8deg)";
-                        }
+                        let rotation = 0;
+                        if (index === 0) rotation = -8;
+                        else if (index === 3) rotation = 8;
                         return (
                             <div key={item.title} className='relative overflow-hidden group hover:-translate-y-5 transition-all ease-linear duration-500 cursor-pointer'>
                                 <Image src={item.image} width={300} height={300} alt="Globe Image" className="object-cover w-76" />
                                 <div style={{
-                                    transform: `${style}`,
+                                    transform: `skewy(${rotation}deg)`,
+
 
                                 }}
                                     className={`absolute right-[18px] left-[20px]
