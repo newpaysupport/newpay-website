@@ -23,14 +23,10 @@ const Assets = () => {
                 <div className='grid grid-cols-1 md:grid-cols-2 mt-20 gap-4'>
 
                     <div className='col-span-1 md:col-span-2 relative h-[420px]'>
-                        <div className='grid grid-cols-2'>
-                            <div>
-                                <p className='textTitleClip text-[32px] font-semibold'>{list[0].title}</p>
-                                <p className='text-[#848484] text-lg font-normal'>{list[0].desc}</p>
-                            </div>
-                            <figure>
-                                <Image src={images[0]} alt='' />
-                            </figure>
+                        <Image src={images[0]} alt='' fill />
+                        <div className='relative z-[1] w-[516px] h-full pt-4 pr-10 pl-[64px] pb-[64px] flex flex-col justify-end'>
+                            <p className='textTitleClip text-[32px] font-semibold'>{list[0].title}</p>
+                            <p className='text-[#848484] text-lg font-normal'>{list[0].desc}</p>
                         </div>
                     </div>
 

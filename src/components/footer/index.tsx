@@ -1,20 +1,19 @@
 'use client'
-import React from 'react'
-import twitter from '@/icons/Twitter-X.svg';
-import Telegram from '@/icons/Telegram.svg';
 import Discord from '@/icons/Discord.svg';
 import Facebook from '@/icons/Facebook.svg';
 import insta from '@/icons/insta.svg';
 import Linkedin from '@/icons/Linkedin.svg';
-import logoMark from '@/images/footer/newpay_mark.svg';
+import Telegram from '@/icons/Telegram.svg';
+import twitter from '@/icons/Twitter-X.svg';
+import appStore from '@/images/footer/app-store.svg';
+import ggplay from '@/images/footer/gg-play.svg';
 import logoNewpay from '@/images/footer/newpay.svg';
-import appStore from '@/images/footer/app-store.png';
-import ggplay from '@/images/footer/ggplay.png';
+import logoMark from '@/images/footer/newpay_mark.svg';
 
+import { FooterItem } from '@/interfaces/footer';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useTranslations } from 'use-intl';
-import { FooterItem } from '@/interfaces/footer';
 
 
 const socials = [
@@ -85,7 +84,6 @@ const Footer = () => {
     const t = useTranslations("footer");
 
 
-
     return (
         <div className='bg-[#060606] p-20'>
             <div className='container mx-auto'>
@@ -117,7 +115,7 @@ const Footer = () => {
                                 <h4 className='text-white text-sm font-semibold mb-6'>{menu.title}</h4>
                                 <ul>
                                     {menu.items.map((item, index) => {
-                                        return <Link href={item.link} key={index} className='mb-2 block'>
+                                        return <Link href={`${item.link}`} key={index} className='mb-2 block'>
                                             <li className='text-[#848484] text-sm font-semibold'>{item.label}</li>
                                         </Link>
                                     })}
