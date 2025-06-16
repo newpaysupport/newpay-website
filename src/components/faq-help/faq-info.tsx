@@ -19,13 +19,13 @@ const FaqInfo = () => {
     const listFaqs: { title: string; slug: string; desc: string; faqs: { question: string; answer: string }[] }[] = t.raw("information");
 
     return (
-        <div className='py-10 bg-[#060606]'>
+        <div className='bg-[#060606]'>
             <div className='container mx-auto'>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-3'>
                     {listFaqs.map((item, index) => {
                         return (
                             <Link href={`faq-help/${item.slug}`} key={index}>
-                                <div className='p-10 bg-white/4 rounded-[20px] cursor-pointer  h-[276px]'>
+                                <div className='p-10 bg-white/4 hover:bg-white/8 transition-all ease-linear duration-150 rounded-[20px] cursor-pointer  h-[276px]'>
                                     <div className='flex items-center justify-between'>
                                         <figure>
                                             <Image src={listIcons[index]} alt='' />

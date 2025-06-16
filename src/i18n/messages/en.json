@@ -910,6 +910,39 @@
                     }
                 ]
             }
+        ],
+        "topArticleTitle": "Top Viewed Articles",
+        "topArticles": [
+            {
+                "id": 0,
+                "question": "I already have one virtual card — can I get another?",
+                "answer": "Of course, You can apply for multiple cards, but please note that each user can hold up to 5 cards in total, including virtual cards, physical cards, and gift cards.\nOnce you reach the card limit, it will no longer be possible to apply for new cards, and currently, disabling or deleting existing cards does not free up card slots.\nWe recommend organizing your existing cards based on different needs to keep things clear and efficient.\nIf you have any questions, feel free to reach out to us anytime!"
+            },
+            {
+                "id": 1,
+                "question": "Why do I have to enable 2FA when withdrawing?",
+                "answer": "To protect your account and funds, NEWPAY requires Two-Factor Authentication (2FA) for withdrawals and other sensitive actions.\nEven if someone knows your password, 2FA helps prevent unauthorized access to your money.\nWe recommend using the Google Authenticator app — setup takes just a few minutes and greatly improves your security."
+            },
+            {
+                "id": 2,
+                "question": "Register Account",
+                "answer": "Visit the NEWPAY official website or download the NEWPAY app.\nClick \"Sign Up\" and fill in the following information:\nEmail address\nEnter the Invitation Code (User UID)\nRead and agree to the Registration Agreement.\nSubmit your registration by clicking \"Next\".\nComplete email or SMS code verification.\nSet your login password."
+            },
+            {
+                "id": 3,
+                "question": "Official Access & Scam Prevention",
+                "answer": "Always access NewPay through official channels and stay alert to phishing or impersonation attempts.\n▲Only use the official NewPay app and website\nDownload the NewPay app exclusively from the App Store or Google Play, and access services through our official website: www.newpay.org. Avoid clicking on unknown links or scanning unverified QR codes.\n▲Be cautious of scam messages and fake support accounts\nNewPay will never contact you via private messages on social media to request personal information. If you encounter suspicious accounts claiming to represent NewPay, do not engage and report them to us."
+            },
+            {
+                "id": 4,
+                "question": "Can I pay in installments when spending?",
+                "answer": "NewPay cards are prepaid, not credit cards — so installment payments aren't supported.\nAll purchases are charged based on the available balance on your card. If there isn't enough to cover the full amount, the payment will fail.\nWe recommend checking your card balance before making large purchases."
+            },
+            {
+                "id": 5,
+                "question": "Card & Transaction Safety",
+                "answer": "Monitoring your card activity regularly helps detect and prevent unauthorized transactions.\n▲Freeze your card if you notice suspicious activity\nIf you detect any unfamiliar transactions, use the in-app freeze function to instantly block your card and prevent further use. Then contact our support team for assistance.\n▲Review your transaction history frequently\nWe recommend checking your transaction records on a weekly basis to verify all activity. If you notice anything unusual, report it to us promptly."
+            }
         ]
     }
 }

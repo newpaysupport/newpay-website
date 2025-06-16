@@ -761,7 +761,7 @@
         "information": [
             {
                 "title": "管理卡片",
-                "desc": "卡片有效期过了还能用吗？系统会自动续吗？",
+                "desc": "NewPay App下载、账户注册、身份验证",
                 "slug": "manage-your-card",
                 "faqs": [
                     {
@@ -800,7 +800,7 @@
             },
             {
                 "title": "开设账户",
-                "desc": "NewPay App Download, Account Registration, Identity Verification",
+                "desc": "NewPay App下载、账户注册、身份验证",
                 "slug": "opening-your-account",
                 "faqs": [
                     {
@@ -823,7 +823,7 @@
             },
             {
                 "title": "交易管理",
-                "desc": "Card Transactions, ATM Withdrawals, Payment Settings, Refunds, PayPal Transfers, Card Fraud, Bill statement",
+                "desc": "银行卡交易、ATM 取款、付款设置、退款、PayPal 转账、银行卡欺诈、账单",
                 "slug": "managing-your-transaction",
                 "faqs": [
                     {
@@ -858,7 +858,7 @@
             },
             {
                 "title": "充值与提现",
-                "desc": "Deposit and Withdrawal Process, Frequently Asked Questions for Deposit and Withdrawal",
+                "desc": "存取款流程、存取款常见问题",
                 "slug": "deposit-and-withdrawal",
                 "faqs": [
                     {
@@ -901,7 +901,7 @@
             },
             {
                 "title": "安全指南",
-                "desc": "NewPay internal transfer",
+                "desc": "NewPay内部转账",
                 "slug": "safety-guide",
                 "faqs": [
                     {
@@ -917,6 +917,39 @@
                         "answer": "账号一旦注销，将无法恢复，请慎重操作。\n▲ 仅在确认不再使用时注销账户\n注销账户后，所有虚拟卡、实体卡、礼品卡及历史交易记录将被永久清除，且无法恢复或重新激活。出于数据保护、身份验证和监管要求，我们不会保留任何可恢复的用户资料。\n▲如果只是短期停用，可选择冻结账户或卡片\n若您只是暂时不使用 NewPay，建议使用「冻结卡片」功能，保留账户和卡片信息，以便未来继续使用。"
                     }
                 ]
+            }
+        ],
+        "topArticleTitle": "热门文章",
+        "topArticles": [
+            {
+                "id": 0,
+                "question": "我已经有一张虚拟卡了，还能再申请一张吗？",
+                "answer": "您可以申请多张卡片，但请注意，每位用户最多可拥有5张卡片，包括虚拟卡、实体卡与礼品卡在内。\n达到卡片上限后，将无法再申请新的卡片，目前不支持通过停用或注销已有卡片来释放名额。\n📌 建议您合理分配现有卡片的用途，确保卡片管理清晰高效。如有疑问，欢迎随时联系客户支持。"
+            },
+            {
+                "id": 1,
+                "question": "提款的时候为啥要我开 双重验证2FA？",
+                "answer": "为保障您的账户和资金安全，NEWPAY 在执行提款等关键操作时，会要求开启 双重验证（2FA）。\n这样即使账号密码被泄露，也能有效防止他人操作您的资金。\n我们建议您绑定Google Authenticato认证工具，整个过程仅需几分钟，但能大幅提升安全等级。"
+            },
+            {
+                "id": 2,
+                "question": "如何注册NEWPAY账户",
+                "answer": "访问 NEWPAY 官网或下载 NEWPAY App。\n点击「注册」，并填写以下信息：\n邮箱地址\n输入邀请码（用户 UID）\n阅读并同意《注册协议》\n点击「下一步」提交注册信息\n完成邮箱或短信验证码验证。\n设置您的登录密码。"
+            },
+            {
+                "id": 3,
+                "question": "官方渠道与防诈骗",
+                "answer": "确保通过官方渠道访问平台，并提高防骗意识，是防范账户风险的重要措施。\n▲仅使用官方 App 与官网\n请只从 App Store、Google Play 下载 NewPay App，或访问官网 www.newpay.org。不要点击陌生链接或扫描未知来源的二维码。\n▲警惕假客服与诈骗信息\nNewPay 不会通过 Instagram、Telegram、WhatsApp 等私信联系您索要资料。若遇到自称\"官方客服\"的陌生联系，请勿提供任何信息，并及时向我们报告。"
+            },
+            {
+                "id": 4,
+                "question": "消费的时候能不能分期付款？",
+                "answer": "您好，NewPay 卡为预付型卡片，并非信用卡，因此不支持分期付款功能。\n所有交易将根据卡片内的可用余额进行即时扣款，如余额不足则无法完成交易。\n建议您在消费前确认卡片内余额是否足够支付整笔交易金额。"
+            },
+            {
+                "id": 5,
+                "question": "卡片与交易监控",
+                "answer": "日常关注卡片动态，及时响应异常行为，能有效降低资金风险。\n▲发现异常交易请立即冻结卡片\n如果您察觉任何非本人授权的交易，可立即在 NEWPAY App 内冻结该卡片，避免进一步损失，并联系客服启动调查。\n▲定期查看交易记录\n建议您每周查看一次卡片明细，确认所有支出均为本人行为。如发现可疑项目，请第一时间联系客服。"
             }
         ]
     }
