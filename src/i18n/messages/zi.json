@@ -443,11 +443,11 @@
             "faqItems": [
                 {
                     "question": "如何开设个人账户 ？",
-                    "answer": "开设个人账户很简单。访问我们的注册页面并按照指示操作。您需要提供基本信息并完成身份验证。"
+                    "answer": "开设个人账户非常简单，请访问我们的开户页面并按照指示操作。您需要提供一些基本信息并完成身份验证。"
                 },
                 {
-                    "question": "资金到达我的账户需要多长时间 ？",
-                    "answer": "通常情况下，资金在1-3个工作日内到达，具体取决于发送机构和方法。某些地区可能提供即时转账。"
+                    "question": "资金到账到我的账户需要多长时间？",
+                    "answer": "资金到账时间取决于您使用的充值方式。通常情况下，银行转账可能需要1-3个工作日，而加密货币充值通常在网络确认后几分钟内到账。"
                 },
                 {
                     "question": "NewPay收取哪些费用 ？",
@@ -626,10 +626,6 @@
             "title": "行业覆盖范围",
             "slides": [
                 {
-                    "title": "游戏",
-                    "image": "/images/home/joint/slide1.png"
-                },
-                {
                     "title": "互动媒体",
                     "image": "/images/home/joint/slide2.png"
                 },
@@ -643,7 +639,11 @@
                 },
                 {
                     "title": "IT 服务",
-                    "image": "/images/home/joint/slide5.png"
+                    "image":  "/images/home/joint/slide5.png"
+                },
+                {
+                    "title": "互动媒体",
+                    "image": "/images/home/joint/slide1.png"
                 }
             ]
         },
