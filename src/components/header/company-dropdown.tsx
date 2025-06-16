@@ -1,9 +1,4 @@
-import React from 'react'
-import Image from 'next/image'
 import Link from 'next/link';
-import virual_card_dropdown from '@/images/header/virtual_card_dropdown.png';
-import physicard_card_dropdown from '@/images/payment/img_card_black.png';
-import arrow_right from '@/images/header/arrow_right.svg';
 
 type LinkItem = {
     link: {
@@ -21,7 +16,7 @@ const CompanyDropdown = ({ link, locale }: LinkItem) => {
         <div
             style={{
                 background: "linear-gradient(0deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%), rgba(6, 6, 6, 0.60)",
-                backdropFilter: "blur(25px);"
+                backdropFilter: "blur(25px)"
             }}
             className="overflow-hidden">
             <div className="p-5">
@@ -34,7 +29,7 @@ const CompanyDropdown = ({ link, locale }: LinkItem) => {
                                 href={item.href}
                                 className={`block px-6 py-2 rounded-full transition-all hover:bg-[#FFFFFF]/8 group }`}
                             >
-                                <div className="font-medium text-[#AEAEAE] group-hover:text-white transition-colors text-center">
+                                <div className="font-semibold text-sm text-[#AEAEAE] group-hover:text-white transition-colors text-center">
                                     {item.title}
                                 </div>
                             </Link>
