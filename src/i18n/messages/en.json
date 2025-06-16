@@ -44,7 +44,7 @@
         ],
         "openAccount": {
             "title": "Open your NewPay Account",
-            "desc": "Just 4 steps to start – Global transparent spending, physical card ATM access, full security",
+            "desc": "Global transparent spending, physical card ATM access, full security",
             "steps": [
                 {
                     "title": "Spend crypto like fiat",
