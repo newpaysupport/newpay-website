@@ -168,47 +168,37 @@ body {
 }
 
 /* auto slide show */
-.animate-slide {
-  animation: slide 20s linear infinite;
+.animation-slideshow {
+  width: fit-content;
+  animation: slide-left 20s linear infinite;
 }
 
-/* .slideshow-track:hover {
-  animation-play-state: paused;
-} */
-
-@keyframes slide {
+@keyframes slide-left {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-400px * 5 - 30px * 5));
+    transform: translateX(-50%);
   }
 }
 
+/* Optional responsive styles */
 @media (max-width: 768px) {
-  .slideshow-track {
-    width: calc((330px + 30px) * 10);
+  .slide-item {
+    width: 250px;
+    height: 350px;
   }
-  @keyframes slide {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(calc(-330px * 5 - 30px * 5));
-    }
+}
+@media (max-width: 640px) {
+  .slide-item {
+    width: 200px;
+    height: 300px;
   }
 }
 
-@media (max-width: 640px) {
-  .slideshow-track {
-    width: calc((200px + 30px) * 10);
-  }
-  @keyframes slide {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(calc(-200px * 5 - 30px * 5));
-    }
-  }
+/* animation card content */
+.swiper,
+.swiper-slide {
+  width: 100%;
+  height: 100vh;
 }

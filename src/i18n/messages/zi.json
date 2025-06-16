@@ -1,11 +1,11 @@
 {
     "navigation": {
-        "payment": "付款",
-        "company": "公司",
-        "support": "支持",
-        "joint": "联合",
+        "payment": "支付",
+        "company": "关于我们",
+        "support": "帮助中心",
+        "joint": "联名",
         "personal": "个人",
-        "getApp": "获取应用程序"
+        "getApp": "下载 APP"
     },
     "home": {
         "titleHero": "让加密货币真正融入日常消费 简单 安全 又划算",
@@ -96,17 +96,17 @@
             },
             {
                 "title": "全球范围的线上娱乐订阅服务",
-                "desc": "被超过一亿家商户接受，并支持 Apple Pay 与 Google Pay",
+                "desc": "ChatGPT，Netflix，Youtube，Google，暴雪娱乐，FIFA",
                 "image": "/images/home/giftcard/card2.png"
             },
             {
                 "title": "跨境购物变得更轻松便捷",
-                "desc": "被超过一亿家商户接受，并支持 Apple Pay 与 Google Pay",
+                "desc": "Amazon，Ebay，Walmart，Shopify，Lazada，Shopee，Alibaba",
                 "image": "/images/home/giftcard/card3.png"
             },
             {
                 "title": "全球社交平台打赏与实名验证支付",
-                "desc": "被超过一亿家商户接受，并支持 Apple Pay 与 Google Pay",
+                "desc": "X，Telegram，Facebook，Tiktok，Instagram",
                 "image": "/images/home/giftcard/card4.png"
             }
         ],
@@ -551,6 +551,39 @@
                 "subtitle": "晚餐"
             }
         },
+        "card2": {
+            "title": "VISA/MASTER 官方支持",
+            "description": "支持 Apple Pay 与 Google Pay",
+            "listText" : [
+                {
+                    "number": "01.",
+                    "text": "轻触即付，畅行无阻"
+                },
+                {
+                    "number": "02.",
+                    "text": "广泛适用，全球信赖"
+                },
+                {
+                    "number": "03.",
+                    "text": "无论身在何处，放心消费，我们为你保驾护航"
+                }
+            ],
+            "textButtonCardLeft": "立即了解",
+            "textButtonCardRight": "联系我们"
+        },
+        "card3": {
+            "title": "礼品卡系统",
+            "description": "随时与亲友分享你的心意与喜悦",
+            "textCardLeft": "为生日、庆祝或只是想表达心意，立即发送数字或实体礼品卡。",
+            "textButtonCard": "联系我们"
+        },
+        "card4": {
+            "title": "虚拟卡与实体卡",
+            "description": "支持联名卡、薪资卡、福利卡与企业礼品卡",
+            "textCard": "可即时发行可用于线上消费的虚拟卡，或申请外观精致的实体卡，用于门店消费与日常使用",
+            "textButtonCardLeft": "立即了解",
+            "textButtonCardRight": "联系我们"
+        },
         "featuresGrid": {
             "title": "为什么选择 NewPay",
             "description": "通过 NewPay，你可以随时使用加密资产进行支付，透明掌控每一笔消费，并享受实时汇率带来的便捷体验。我们的礼品卡系统也专为与你所爱之人分享喜悦而设计",
@@ -616,7 +649,7 @@
         },
         "about": {
             "title": "关于 NewPay",
-            "description": "NewPay 致力于帮助你消费并增值加密资产。成立于 2022 年，在香港、新加坡、马来西亚及日本设有办公室",
+            "description": "NewPay 成立于 2022 年，致力于帮助您消费和增值加密资产。我们的办公室遍布香港、新加坡、马来西亚和日本。",
             "listFlag": [
                 {
                     "flag": "/icons/Flag_HongKong.svg",

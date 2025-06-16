@@ -5,8 +5,10 @@ import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import SwitchLanguage from '../switch-language';
+import CompanyDropdown from "./company-dropdown";
+import PaymentDropdown from "./payment-dropdown";
 
 const Header = () => {
     const locale = useLocale();
@@ -15,6 +17,9 @@ const Header = () => {
     const t = useTranslations('navigation');
 
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
+    const [openDropdown, setOpenDropdown] = useState<"payment" | "company" | null>(null);
+
     const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
     const switchLocale = (newLocale: string) => {
@@ -25,26 +30,106 @@ const Header = () => {
         router.push(newPath);
     };
 
+    useEffect(() => {
+        const handleScroll = () => {
+            const offset = window.scrollY;
+            setScrolled(offset > 50);
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+    const navLinks = [
+        { href: `/${locale}/joint`, label: t('joint') },
+        { href: `/${locale}`, label: t('personal') },
+    ];
+
+    const navLinksRight = [
+        {
+            key: 'payment',
+            href: '#',
+            label: t('payment'),
+            hasDropdown: true,
+            dropdownItems: [
+                { title: 'Payment', href: `/${locale}/payment` },
+                { title: 'Payment Card', href: `/${locale}/payment-card` },
+                { title: 'Security & Protection', href: `/${locale}/security` }
+            ]
+        },
+        {
+            key: 'company',
+            href: '#',
+            label: t('company'),
+            hasDropdown: true,
+            dropdownItems: [
+                { title: 'Discover NewPay', href: `/${locale}/discover-newpay` },
+                { title: 'About NewPay', href: `/${locale}/about-us` },
+                { title: 'Contact us', href: `/${locale}/contact` },
+                { title: 'Blog', href: `/${locale}/blog` },
+                { title: 'FAQ', href: `/${locale}/faq` }
+            ]
+        },
+        { key: 'support', href: `/${locale}/support`, label: t('support'), hasDropdown: false }
+    ];
+
+    const isActive = (path: string) => pathname === path;
+
     return (
         <nav
-            className={`text-sm h-[70px] flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4
-            fixed top-0 left-0 w-full z-50 bg-transparent backdrop-blur-md
-             text-white transition-all duration-300 ease-in-out shadow-sm`}
+            style={{
+                background: scrolled ? 'rgba(0, 0, 0, 0.8)' : 'transparent',
+                backdropFilter: scrolled ? 'blur(10px)' : 'none',
+            }}
+            className="text-sm h-[70px] flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4
+                fixed top-0 left-0 w-full z-50 
+                text-white transition-all duration-300 ease-in-out shadow-sm"
         >
             <Link href={"/"} className="flex items-center space-x-4">
                 <Image src={logo} alt="NewPay Logo" className="object-contain bg-transparent" />
             </Link>
 
-            <ul className="hidden md:flex justify-center items-center space-x-10">
-                <li><Link href={`/${locale}/joint`}>{t('joint')}</Link></li>
-                <li><Link href={`/${locale}`}>{t('personal')}</Link></li>
-
+            <ul className="hidden md:flex justify-center items-center space-x-6">
+                {navLinks.map((link) => (
+                    <li key={link.href}>
+                        <Link
+                            href={link.href}
+                            className={`px-8 py-2 rounded-full transition ${isActive(link.href) ? 'bg-white/10' : 'hover:bg-white/10'}`}
+                        >
+                            {link.label}
+                        </Link>
+                    </li>
+                ))}
             </ul>
 
-            <ul className="hidden md:flex items-center space-x-8">
-                <li><Link href={`/${locale}/payment`}>{t('payment')}</Link></li>
-                <li><Link href={`/${locale}/about-us`}>{t('company')}</Link></li>
-                {/* <li><Link href={`/${locale}/support`}>{t('support')}</Link></li> */}
+            <ul className="hidden md:flex items-center gap-2 relative">
+                {navLinksRight.map((link) => (
+                    <li
+                        key={link.key}
+                        className="relative"
+                        onMouseEnter={() => link.hasDropdown && setOpenDropdown(link.key as "payment" | "company")}
+                        onMouseLeave={() => link.hasDropdown && setOpenDropdown(null)}
+                    >
+                        <Link
+                            href={link.href}
+                            className={`px-8 py-2 rounded-full transition flex items-center gap-1 ${isActive(link.href) ? 'bg-white/10' : 'hover:bg-white/10'}`}
+                        >
+                            {link.label}
+                        </Link>
+
+                        {/* Dropdown */}
+                        {link.hasDropdown && openDropdown === link.key && (
+                            <div
+                                className={`absolute top-[full] transform -translate-x-1/2 pt-1 z-50 ${link.key === 'payment' ? 'left-[70%] min-w-screen' : 'left-[50%]'}`}
+                            >
+                                {link.key === 'payment' ?
+                                    (<PaymentDropdown link={link} locale={locale} />) : <CompanyDropdown link={link} locale={locale} />}
+
+                            </div>
+                        )}
+                    </li>
+                ))}
             </ul>
 
             <SwitchLanguage locale={locale} switchLocale={switchLocale} t={t} />
@@ -61,7 +146,7 @@ const Header = () => {
             </button>
 
             {isMobileMenuOpen && (
-                <div className="md:hidden absolute top-[70px] left-0 w-full shadow-sm p-6 z-50">
+                <div className="md:hidden absolute top-[70px] left-0 w-full shadow-sm p-6 z-50 bg-white text-gray-800">
                     <ul className="flex flex-col space-y-4 text-lg">
                         <li><Link href={`/${locale}`} className="text-sm">{t('payment')}</Link></li>
                         <li><Link href={`/${locale}/company`} className="text-sm">{t('company')}</Link></li>

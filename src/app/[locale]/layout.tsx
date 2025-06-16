@@ -5,7 +5,6 @@ import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { inter } from '../fonts/fonts';
-
 export default async function LocaleLayout({
     children,
     params

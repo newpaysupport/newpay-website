@@ -11,7 +11,7 @@ type Props = {
 
 const languages = [
     { code: 'en', label: 'EN', flag: logoEN },
-    { code: 'zi', label: 'ZI', flag: logoZH }
+    { code: 'zi', label: 'CN', flag: logoZH }
 ];
 
 const SwitchLanguage = ({ locale, switchLocale, t }: Props) => {
@@ -46,10 +46,10 @@ const SwitchLanguage = ({ locale, switchLocale, t }: Props) => {
                 </button>
 
                 {open && (
-                    <div   style={{
-                        background :"rgba(255, 255, 255, 0.08)",
+                    <div style={{
+                        background: "rgba(255, 255, 255, 0.08)",
                     }}
-                    className="absolute left-0 mt-2 w-32 z-20  rounded-lg p-2">
+                        className="absolute left-0 mt-2 w-32 z-20  rounded-lg p-2">
                         {languages.map((lng) => (
                             <div
                                 key={lng.code}
@@ -57,7 +57,8 @@ const SwitchLanguage = ({ locale, switchLocale, t }: Props) => {
                                     switchLocale(lng.code);
                                     setOpen(false);
                                 }}
-                                className="flex items-center gap-2 px-4 py-2 cursor-pointer hover:bg-white/8 rounded-lg"
+                                className={`flex items-center gap-2 px-4 py-2 cursor-pointer rounded-lg my-1
+                                    ${locale === lng.code ? 'bg-white/8' : 'hover:bg-white/8'}`}
                             >
                                 <Image
                                     src={lng.flag.src}
@@ -69,6 +70,7 @@ const SwitchLanguage = ({ locale, switchLocale, t }: Props) => {
                                 <span>{lng.label}</span>
                             </div>
                         ))}
+
                     </div>
                 )}
             </div>
