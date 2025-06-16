@@ -19,7 +19,7 @@ const AutoSlideshow = () => {
     }, []);
 
     return (
-        <div className="py-20 w-full overflow-hidden bg-white relative">
+        <div className="py-30 w-full overflow-hidden bg-white relative">
             <h1 className="text-4xl md:text-6xl text-[#1B1B1B] font-semibold container mx-auto text-left">
                 {joint.cardSlide.title}
             </h1>
@@ -32,7 +32,7 @@ const AutoSlideshow = () => {
                     background: "linear-gradient(90deg, rgba(255, 255, 255, 0.00) 5%, rgba(255, 255, 255, 1) 100%)"
                 }} className='absolute w-[120px] h-[450px] right-0 bottom-[12%] z-50'></div>
 
-            <div className="relative mt-30 mb-10 flex justify-center items-center animation-slideshow gap-5">
+            <div className="relative mt-20 flex justify-center items-center animation-slideshow gap-5">
 
                 {[...slides, ...slides].map((slide, i) => (
                     <div
