@@ -5,8 +5,8 @@ import insta from '@/icons/insta.svg';
 import Linkedin from '@/icons/Linkedin.svg';
 import Telegram from '@/icons/Telegram.svg';
 import twitter from '@/icons/Twitter-X.svg';
-import appStore from '@/images/footer/app-store.png';
-import ggplay from '@/images/footer/ggplay.png';
+import appStore from '@/images/footer/app-store.svg';
+import ggplay from '@/images/footer/gg-play.svg';
 import logoNewpay from '@/images/footer/newpay.svg';
 import logoMark from '@/images/footer/newpay_mark.svg';
 
