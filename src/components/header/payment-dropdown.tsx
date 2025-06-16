@@ -21,7 +21,7 @@ const PaymentDropdown = ({ link, locale }: LinkItem) => {
         <div
             style={{
                 background: "linear-gradient(0deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%), rgba(6, 6, 6, 0.60)",
-                backdropFilter: "blur(25px);"
+                backdropFilter: "blur(25px)"
             }}
             className="overflow-hidden">
             <div className="p-5 max-w-7xl">
