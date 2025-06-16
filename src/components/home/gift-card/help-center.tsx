@@ -73,14 +73,14 @@ const HelpCenter = () => {
                                 ))}
 
                             </div>
-                            <span className="text-white/80 text-sm font-medium ml-2">
+                            <span className="text-white/80 text-xl font-medium ml-2">
                                 {t('helpCenter.amountUsers')}
                             </span>
                         </div>
                     </div>
 
                     {/* Right side - Form */}
-                    <div className="space-y-4 w-80">
+                    <div className="space-y-4 ">
                         <div className="space-y-6">
                             {/* Email input */}
                             <div className="relative">
@@ -89,7 +89,7 @@ const HelpCenter = () => {
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
                                     placeholder={t('helpCenter.enterEmail')}
-                                    className="w-full px-4 py-3 bg-[#FFFFFF]/8 border border-gray-600/50 rounded-xl placeholder-gray-400 text-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500/50 transition-all duration-200"
+                                    className="md:w-[410px] md:h-[70px] px-4 py-3 bg-[#FFFFFF]/8 rounded-xl placeholder-gray-400 text-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-600/50 focus:border-gray-600/50 transition-all duration-200"
                                 />
                             </div>
 
@@ -99,10 +99,10 @@ const HelpCenter = () => {
                                     background: "linear - gradient(90deg, rgba(235, 169, 0, 0.00) 0 %, rgba(235, 169, 0, 0.20) 100 %), #FFF;"
                                 }}
                                 onClick={handleSubmit}
-                                className="w-full cursor-pointer bg-white hover:from-orange-600 hover:to-orange-500 text-black font-semibold py-3 px-6 rounded-full transition-all duration-200 flex items-center justify-center gap-2 shadow-lg hover:shadow-orange-500/25 group"
+                                className="md:w-[410px] md:h-[55px] cursor-pointer text-lg font-bold bg-white hover:from-orange-600 hover:to-orange-500 text-black py-3 px-6 rounded-full transition-all duration-200 flex items-center justify-center gap-2 shadow-lg hover:shadow-orange-500/25 group"
                             >
                                 {t('helpCenter.sendNow')}
-                                <Image src={arrowright} alt='arrow right' className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
+                                <Image src={arrowright} alt='arrow right' className="w-6 h-6 group-hover:translate-x-1 transition-transform duration-200" />
                             </button>
                         </div>
                     </div>
