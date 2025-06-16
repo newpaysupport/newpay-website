@@ -2,12 +2,13 @@ import React from 'react'
 import card2_img2 from '@/images/home/joint/card2_img2.png'
 import card1_img1 from '@/images/home/joint/card1_img1.png'
 import { FaArrowRight } from "react-icons/fa";
-import arrowright from '@/images/home/giftcard/arrowright.svg'
+import arrowright from '@/images/home/joint/arrowright.svg'
 
 import { joint as enBlog } from '@/i18n/messages/en.json';
 import { joint as ziBlog } from '@/i18n/messages/zi.json';
 import { useLocale } from 'next-intl';
 import Image from "next/image"
+import Link from 'next/link';
 
 const CardContent = () => {
     const locale = useLocale();
@@ -27,22 +28,25 @@ const CardContent = () => {
                         </p>
                     </div>
 
-                    <div className="bg-black rounded-2xl p-6 lg:p-8 text-white max-w-xl gap-10 shadow-xl flex">
+                    <div
+                        style={{ borderRadius: '20px' }}
+                        className="bg-black p-4 text-white max-w-xl gap-4 shadow-xl flex">
                         <Image
                             src={card1_img1}
                             alt="Person holding a card"
                             width={200}
                             height={200}
-                            className="rounded-lg object-cover w-[200px] h-[200px]"
+                            className="rounded-2xl object-cover w-[200px] h-[200px]"
                         />
-                        <div className="flex flex-col justify-between">
+                        <div className="flex flex-col justify-between mx-4">
                             <p className="text-md">
-                            {joint.cardContent.textCardLeft}
+                                {joint.cardContent.textCardLeft}
                             </p>
-                            <button className="border border-white font-semibold py-3 px-6 rounded-3xl cursor-pointer">
-                                <p className="flex justify-center items-center gap-3"> {joint.cardContent.textButtonCard} <FaArrowRight className="font-light" /></p>
-
-                            </button>
+                            <Link href={`/${locale}/contact`}>
+                                <button className="border border-white font-semibold py-3 px-6 rounded-full cursor-pointer md:w-[220px] md:h-[56px] group">
+                                    <p className="flex justify-center items-center gap-3"> {joint.cardContent.textButtonCard} <FaArrowRight className="font-light group-hover:translate-x-1 transition ease-in-out" /></p>
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -52,7 +56,7 @@ const CardContent = () => {
                     <Image
                         src={card2_img2}
                         alt="Payment device being used"
-                        className="rounded-3xl h-full object-cover object-center"
+                        className="rounded-3xl object-cover object-center md:w-[600px] md:h-[600px]"
                     />
                     <div style={{
                         background: "linear-gradient(180deg, rgba(6, 6, 6, 0.00) 0%, rgba(6, 6, 6, 0.50) 100%)",
@@ -68,11 +72,9 @@ const CardContent = () => {
                     }}
                         className="absolute bottom-6 left-6 right-6 rounded-3xl p-4 flex items-center justify-between">
                         <div className="flex items-center">
-                            <span style={{
-                                transform: "rotate(-50deg)",
-                            }}
-                                className="bg-gray-100 p-3 rounded-full mr-3">
-                                <Image src={arrowright} alt='' />
+                            <span
+                                className=" p-3 rounded-full mr-3">
+                                <Image src={arrowright} alt='' className='w-12 h-12' />
                             </span>
                             <div>
                                 <p className="text-[#FFF] text-xl font-semibold"> {joint.cardContent.textCardRight.title}</p>
