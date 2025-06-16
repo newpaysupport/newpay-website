@@ -121,7 +121,7 @@ const Header = () => {
                         {/* Dropdown */}
                         {link.hasDropdown && openDropdown === link.key && (
                             <div
-                                className={`absolute top-[full] transform -translate-x-1/2 pt-1 min-w-screen z-50 ${link.key === 'payment' ? 'left-[70%]' : 'left-[-20%]'}`}
+                                className={`absolute top-[full] transform -translate-x-1/2 pt-1 z-50 ${link.key === 'payment' ? 'left-[70%] min-w-screen' : 'left-[50%]'}`}
                             >
                                 {link.key === 'payment' ?
                                     (<PaymentDropdown link={link} locale={locale} />) : <CompanyDropdown link={link} locale={locale} />}
