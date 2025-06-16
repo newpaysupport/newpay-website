@@ -7,6 +7,8 @@ import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import SwitchLanguage from '../switch-language';
+import PaymentDropdown from "./payment-dropdown";
+import CompanyDropdown from "./company-dropdown";
 
 const Header = () => {
     const locale = useLocale();
@@ -16,6 +18,7 @@ const Header = () => {
 
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const [openDropdown, setOpenDropdown] = useState<"payment" | "company" | null>(null);
 
     const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
@@ -38,17 +41,37 @@ const Header = () => {
         };
     }, []);
 
-
     const navLinks = [
         { href: `/${locale}/joint`, label: t('joint') },
         { href: `/${locale}`, label: t('personal') },
     ];
 
-
     const navLinksRight = [
-        { href: `/${locale}/payment`, label: t('payment') },
-        { href: `/${locale}/about-us`, label: t('company') },
-        { href: `/${locale}/support`, label: t('support') },
+        {
+            key: 'payment',
+            href: '#',
+            label: t('payment'),
+            hasDropdown: true,
+            dropdownItems: [
+                { title: 'Payment', href: `/${locale}/payment` },
+                { title: 'Payment Card', href: `/${locale}/payment-card` },
+                { title: 'Security & Protection', href: `/${locale}/security` }
+            ]
+        },
+        {
+            key: 'company',
+            href: '#',
+            label: t('company'),
+            hasDropdown: true,
+            dropdownItems: [
+                { title: 'Discover NewPay', href: `/${locale}/discover-newpay` },
+                { title: 'About NewPay', href: `/${locale}/about-us` },
+                { title: 'Contact us', href: `/${locale}/contact` },
+                { title: 'Blog', href: `/${locale}/blog` },
+                { title: 'FAQ', href: `/${locale}/faq` }
+            ]
+        },
+        { key: 'support', href: `/${locale}/support`, label: t('support'), hasDropdown: false }
     ];
 
     const isActive = (path: string) => pathname === path;
@@ -59,9 +82,9 @@ const Header = () => {
                 background: scrolled ? 'rgba(0, 0, 0, 0.8)' : 'transparent',
                 backdropFilter: scrolled ? 'blur(10px)' : 'none',
             }}
-            className={`text-sm h-[70px] flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4
+            className="text-sm h-[70px] flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4
                 fixed top-0 left-0 w-full z-50 
-                text-white transition-all duration-300 ease-in-out shadow-sm`}
+                text-white transition-all duration-300 ease-in-out shadow-sm"
         >
             <Link href={"/"} className="flex items-center space-x-4">
                 <Image src={logo} alt="NewPay Logo" className="object-contain bg-transparent" />
@@ -72,8 +95,7 @@ const Header = () => {
                     <li key={link.href}>
                         <Link
                             href={link.href}
-                            className={`px-8 py-2 rounded-full transition ${isActive(link.href) ? 'bg-white/10' : 'hover:bg-white/10'
-                                }`}
+                            className={`px-8 py-2 rounded-full transition ${isActive(link.href) ? 'bg-white/10' : 'hover:bg-white/10'}`}
                         >
                             {link.label}
                         </Link>
@@ -81,19 +103,35 @@ const Header = () => {
                 ))}
             </ul>
 
-            <ul className="hidden md:flex items-center space-x-2 ">
+            <ul className="hidden md:flex items-center gap-2 relative">
                 {navLinksRight.map((link) => (
-                    <li key={link.href}>
+                    <li
+                        key={link.key}
+                        className="relative"
+                        onMouseEnter={() => link.hasDropdown && setOpenDropdown(link.key as "payment" | "company")}
+                        onMouseLeave={() => link.hasDropdown && setOpenDropdown(null)}
+                    >
                         <Link
                             href={link.href}
-                            className={`px-8 py-2 rounded-full transition ${isActive(link.href) ? 'bg-white/10' : 'hover:bg-white/10'
-                                }`}
+                            className={`px-8 py-2 rounded-full transition flex items-center gap-1 ${isActive(link.href) ? 'bg-white/10' : 'hover:bg-white/10'}`}
                         >
                             {link.label}
                         </Link>
+
+                        {/* Dropdown */}
+                        {link.hasDropdown && openDropdown === link.key && (
+                            <div
+                                className= {`absolute top-full transform -translate-x-1/2 pt-1 min-w-screen z-50 ${link.key === 'payment' ? 'left-[70%]' : 'left-[-20%]'}`}
+                            >
+                                {link.key === 'payment' ? 
+                                (<PaymentDropdown link={link} locale={locale}/>) : <CompanyDropdown link={link} locale={locale} />}
+                                
+                            </div>
+                        )}
                     </li>
                 ))}
             </ul>
+
             <SwitchLanguage locale={locale} switchLocale={switchLocale} t={t} />
 
             <button
