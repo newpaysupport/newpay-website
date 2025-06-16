@@ -749,6 +749,167 @@
             "title": "Need a hand?",
             "desc": "Just pop your question below to get an answer.",
             "placeHolder": "Tell us what you’re look for"
-        }
+        },
+        "information": [
+            {
+                "title": "Managing your Card",
+                "desc": "What if my card expires — can I keep using it? Will it renew automatically?",
+                "slug": "manage-your-card",
+                "faqs": [
+                    {
+                        "question": "What if my card expires — can I keep using it? Will it renew automatically?",
+                        "answer": "Once your card expires, it can no longer be used, and automatic renewal is not supported.\nIf your card is expiring soon or already expired, you can apply for a replacement (renewal) in the app under the card's settings.\n📌 Be sure to check and update your shipping address before requesting a replacement, as it will default to your previously saved address."
+                    },
+                    {
+                        "question": "Why did my payment fail with the virtual card?",
+                        "answer": "A failed transaction doesn't necessarily mean the card is faulty.\nIt could be due to several reasons:\n▶ The merchant does not accept prepaid or virtual cards\n▶ Your card has insufficient balance or no funds transferred in\n▶ The card is inactive or past its expiration date\nWe suggest testing the card on another supported platform and checking the balance status. If issues persist, contact our support team with the transaction details."
+                    },
+                    {
+                        "question": "How many times can I use this card? Does it expire?",
+                        "answer": "NewPay cards are reusable and do not have a swipe limit — as long as there's available balance, you can keep using it.\nEach card comes with a fixed expiration date (usually 2–3 years), which you can check in the card details screen."
+                    },
+                    {
+                        "question": "Why can't I link my card to Apple Pay or Google Pay?",
+                        "answer": "We understand how frustrating that can be — linking your card should be quick and easy.\nBut don't worry, here are a few common reasons that might be causing the issue:\n▶ The card hasn't been activated or funded yet; please make sure your card is activated in the NEWPAY app and that you've transferred some funds to it\n▶ Some wallets try to make a small verification charge when linking a card — if your balance is zero, the process might fail\n▶ Card details were entered incorrectly; it's easy to overlook small details. Be sure to double-check your card number, expiration date (MM/YY), and CVV\n▶ Your device or region may not be supported; Make sure your phone's OS version and region settings are compatible with Apple Pay or Google Pay\n▶ Network issues can interfere sometimes; the connection just isn't cooperating. Try switching to a different network or restarting your phone\nIf you've gone through all these checks and it's still not working, feel free to take a screenshot of the error and contact our support team — we're here to help!"
+                    },
+                    {
+                        "question": "Can I use my physical card overseas? Will it be blocked?",
+                        "answer": "Yes, definitely! NewPay physical cards support global use in countries and regions where Visa or Mastercard is accepted.\nThis includes online payments, in-store purchases, and ATM withdrawals.\nThere are no country restrictions on our end, but please note:\n▶ Ensure your card is activated and has sufficient balance\n▶ Some regions may have ATM or merchant limitations due to local policies or systems"
+                    },
+                    {
+                        "question": "My card didn’t work at the supermarket — Is there a problem with the card?",
+                        "answer": "A failed in-store payment doesn't necessarily mean the card is faulty.\nCommon reasons for failure include:\n▶ The merchant's POS terminal doesn't support your card type or had a read error\n▶ Network issues or failure in the acquiring system\n▶ The card hasn't been activated or has insufficient balance\n▶ The transaction exceeded the card's limit setting\nPlease check that your card is activated and has sufficient balance. If the issue continues, try using the card at a different merchant or online."
+                    },
+                    {
+                        "question": "Can I use this card at gas stations or convenience stores?",
+                        "answer": "Yes, both NEWPAY virtual and physical cards are compatible with Visa/Mastercard networks worldwide, including at gas stations, convenience stores, supermarkets, restaurants, and e-commerce sites.\nOur cards are designed for broad international usability, online and offline.\nPlease ensure your card is activated and has sufficient balance. Some merchants may require tap-to-pay or chip-insertion terminals."
+                    },
+                    {
+                        "question": "Why can’t I reactivate my card after deleting my account?",
+                        "answer": "Once you delete your NEWPAY account, all cards and data are permanently erased and cannot be recovered or reactivated. This is due to:\n▶ Data protection & privacy laws: We must fully erase your ID and account records after deletion\n▶ Fraud prevention: We block repeat registrations with the same ID to prevent misuse.\n▶ Regulatory compliance: Financial platforms must ensure one identity = one account, with no re-use after deletion.\nWe recommend you only delete your account if you are certain you no longer need the service. If you simply want a break, you can freeze your cards instead."
+                    }
+                ]
+            },
+            {
+                "title": "Opening Your Account",
+                "desc": "NewPay App Download, Account Registration, Identity Verification",
+                "slug": "opening-your-account",
+                "faqs": [
+                    {
+                        "question": "What features do I get after completing KYC? Is it really required?",
+                        "answer": "Completing KYC unlocks all of NEWPAY’s features, including:\nVirtual and physical card activation/Gift card use/Transactions,/withdrawals/statements.\nKYC is mandatory for security, regulatory compliance, and fraud prevention. We appreciate your cooperation in helping us maintain a safe environment."
+                    },
+                    {
+                        "question": "My KYC got rejected and I didn’t even get a reason. How do I fix it?",
+                        "answer": "We understand it can be frustrating. However, due to anti-fraud and compliance design, the system may not disclose specific rejection reasons.\nWhen resubmitting your documents, please make sure:\n♦ The ID photo is clear, unobstructed, and shows all corners\n♦ You're using a valid, government-issued ID from a supported region\n♦ For address verification, submit a document that clearly shows your full name and residential address\n♦ Avoid uploading screenshots, filtered photos, or edited images\nIf everything looks good but it still fails, please contact support for help with resubmission."
+                    },
+                    {
+                        "question": "The system says my photo is blurry, but it looks fine to me.",
+                        "answer": "While the image may appear clear to the human eye, our system uses automated image recognition, which may detect issues not visible to you.\nYou may get this error if:\n♦ The image is slightly blurry, has glare, shadows, or is missing corners\n♦ The file size exceeds 20MB and fails to upload\n♦  The image resolution is too low or compressed\n♦ Make sure the file is clear, unedited, glare-free, and under the size limit.\nThese requirements ensure we meet international KYC compliance standards."
+                    },
+                    {
+                        "question": "Email/Phone Verification Guide",
+                        "answer": "Verification Process:\n1.Upon registration, the system will automatically send a verification email or SMS code.\n2.Complete the binding process by clicking the verification link in the email or entering the SMS code.\n3.If you do not receive the verification code, you may:\n 3.1 Check your spam or junk folder, or SMS filtering settings.\n3.2 Request a resend of the verification email or SMS.\n3.3 Contact customer support for further assistance."
+                    }
+                ]
+            },
+            {
+                "title": "Managing Your Transaction",
+                "desc": "Card Transactions, ATM Withdrawals, Payment Settings, Refunds, PayPal Transfers, Card Fraud, Bill statement",
+                "slug": "managing-your-transaction",
+                "faqs": [
+                    {
+                        "question": "My transaction keeps saying‘Pending.’Has the money been taken?",
+                        "answer": "When a transaction is marked“Pending,” it means the merchant requested authorization, but the charge hasn’t been finalized yet.\nThis amount is temporarily held but won’t be deducted until the merchant completes the settlement process.\nThis usually takes 1–5 business days, depending on the merchant, bank, and holidays.\nPlease be patient — your app will update automatically once it’s completed."
+                    },
+                    {
+                        "question": "My payment failed but money was still deducted — will I get it back?",
+                        "answer": "Some failed transactions may appear as charged because of pre-authorization holds, which are used to verify transaction intent.\nIf the transaction ultimately fails, the hold will not be settled and will be automatically released back to your account.\nThis typically happens within 1–7 business days, depending on the merchant and settlement channel."
+                    },
+                    {
+                        "question": "Why did my card binding fail during subscription setup?",
+                        "answer": "Some merchants apply strict verification rules. Certain platforms may perform a small pre-authorization charge or require support for recurring payments. If the card doesn’t meet these technical requirements, the binding may fail.\nAdditionally, even if the first subscription appears free, many platforms may still attempt a small verification charge. If your card has insufficient balance, the verification may fail and prevent successful binding.Lastly, some platforms only accept cards issued in specific regions, which may exclude NewPay cards depending on the merchant’s supported list."
+                    },
+                    {
+                        "question": "I got a refund but the money doesn’t show up in the app yet. Why?",
+                        "answer": "Refunds must be initiated by the merchant and returned through the same channel.\nNewPay can only reflect the refund after we’ve received the funds from the merchant.\nDepending on the payment gateway and merchant, refunds usually take 3–10 business days.\nIf it’s been longer than expected, feel free to contact our support team with refund details."
+                    },
+                    {
+                        "question": "Can I download my transaction history or a billing report?",
+                        "answer": "Yes! You can export transaction history within a custom date range in the app for bookkeeping or review.\nAlso, NewPay automatically sends a monthly statement to your registered email after each billing cycle."
+                    },
+                    {
+                        "question": "I paid online but the page didn’t finish loading — was it charged?",
+                        "answer": "If the payment page didn’t redirect or complete, it doesn’t always mean the transaction succeeded or failed.Here’s what you should do:\nCheck the [Transaction History] in the NewPay app to confirm if a payment was recorded.\nLog in to the merchant’s platform to see if the order was created or marked as paid.\nMake sure your network is stable when making payments to avoid errors or duplicate attempts"
+                    },
+                    {
+                        "question": "Do I get notified after each payment?",
+                        "answer": "Yes, NewPay sends instant alerts via app notifications whenever you make a payment.\nTo stay informed of your spending activity, please make sure app notifications are enabled on your device."
+                    }
+                ]
+            },
+            {
+                "title": "Deposit and Withdrawal",
+                "desc": "Deposit and Withdrawal Process, Frequently Asked Questions for Deposit and Withdrawal",
+                "slug": "deposit-and-withdrawal",
+                "faqs": [
+                    {
+                        "question": "My wallet shows the transfer as successful, but I don’t see it in the app. Is it stuck?",
+                        "answer": "“Transfer successful” in your wallet means the transaction was sent to the blockchain — but it still needs to be confirmed and synced with NEWPAY.\nTypically, this takes 1–10 minutes depending on the network.If it’s been over 15 minutes, please check:\nDid you choose the same network (ERC20/TRC20) as shown on our page?\nDid you send it to the exact address displayed in your NEWPAY recharge screen?\nDid you meet the minimum recharge amount?\nIf everything checks out, please contact support and provide the transaction hash (TXID) for assistance."
+                    },
+                    {
+                        "question": "Why is the deposit address different every time? Can’t I reuse the old one?",
+                        "answer": "For security reasons, we use dynamic deposit addresses to prevent address tampering, leaking, or repeated accidental transfers.\nAlways use the latest address shown on the payment page. Please don’t reuse previous addresses to avoid any issues."
+                    },
+                    {
+                        "question": "I just sent USDT, why hasn't it arrived yet?",
+                        "answer": "Blockchain networks sometimes get congested, causing a delay in transaction confirmation.\nSince USDT is a blockchain-based asset, the arrival time depends on the network you used (like TRC20 or ERC20), miner fees, and network traffic."
+                    },
+                    {
+                        "question": "I withdrew USDT to my wallet, but it hasn’t arrived.",
+                        "answer": "Once your withdrawal request is submitted, it enters the blockchain network for confirmation.\nTransfer times can vary depending on network congestion — especially during peak periods."
+                    },
+                    {
+                        "question": "My physical card has money, but the ATM says the balance is 0?",
+                        "answer": "The balance shown at an ATM refers to the card balance, not your main account balance in the NEWPAY app.\nThere are two common cases:\nCase 1: Funds already transferred to the card\n→ Don’t worry — even if the ATM says 0, you can still withdraw if your card has sufficient balance. Some ATM systems simply don’t sync the balance correctly but the withdrawal still works.\nCase 2: Funds are still in your main account, not on the card\n→ Go to the NEWPAY app → [Card] section → Select your physical card → Tap [Transfer In] to load funds onto the card, then try again at the ATM."
+                    },
+                    {
+                        "question": "My withdrawal show ‘processing/in progress’ — it already been deducted?",
+                        "answer": "When your withdrawal status shows “Processing” or “In Progress,” it means your request is under review or being prepared for blockchain submission.\nAt this point, your funds are not yet deducted.\nOnce the transaction is approved and sent to the blockchain, the status will change to “Completed.”\nIf a transaction fails due to address issues or risk flags, it will be automatically canceled and the funds returned."
+                    },
+                    {
+                        "question": "Can I cancel a withdrawal after submitting it?",
+                        "answer": "Once a withdrawal has been submitted and passes internal checks, it will be broadcast to the blockchain (e.g., ERC20 or TRC20).\nSince blockchain transactions are irreversible, they cannot be modified, canceled, or refunded after submission — by you or by us.\nThis is different from traditional bank systems, which sometimes allow reversals.\n📌 Please always double-check the address, network, and amount before submitting to avoid irreversible loss."
+                    },
+                    {
+                        "question": "Can I cancel a withdrawal after submitting it?",
+                        "answer": "Once a withdrawal has been submitted and passes internal checks, it will be broadcast to the blockchain (e.g., ERC20 or TRC20).\nSince blockchain transactions are irreversible, they cannot be modified, canceled, or refunded after submission — by you or by us.\nThis is different from traditional bank systems, which sometimes allow reversals.\n📌 Please always double-check the address, network, and amount before submitting to avoid irreversible loss."
+                    },
+                    {
+                        "question": "Can I withdraw directly to my bank account?",
+                        "answer": "Currently, NEWPAY doesn’t support direct withdrawals to bank accounts.\nInstead, you can withdraw in two ways:\nWithdraw USDT to a personal crypto wallet.\n→ Network fee applies (gas fee), determined by blockchain, not NEWPAY\nWithdraw cash using a physical card at ATMs\n → 2% withdrawal fee + applicable foreign exchange rate (based on bank rates)"
+                    }
+                ]
+            },
+            {
+                "title": "Safety Guide",
+                "desc": "NewPay internal transfer",
+                "slug": "safety-guide",
+                "faqs": [
+                    {
+                        "question": "Account Security",
+                        "answer": "Protecting your account credentials is the first step toward ensuring the safety of your funds.\n▲ Never share your login credentials\nDo not share your login email, password, or verification codes with anyone — not even NewPay staff. If you receive any suspicious requests, report them to us immediately.\n▲ Enable Two-Factor Authentication (2FA)\nStrengthen your account security by enabling 2FA. This adds an additional layer of protection by requiring a one-time code when logging in. You can activate this feature in Settings > Security Settings within the NewPay app.\n▲ Do not reuse your NewPay password on other platforms\nUse a strong, unique password for your NewPay account. Reusing passwords across platforms increases your exposure to credential breaches and potential fraud."
+                    },
+                    {
+                        "question": "Device & Network Safety",
+                        "answer": "Use secure devices and networks to prevent unauthorized access and data interception.\n▲ Avoid logging in through public Wi-Fi\nPublic networks can expose your data to malicious interception. Always log in to NewPay from a secure, trusted network — especially when performing sensitive actions like transfers or withdrawals.\n▲ Keep your app up to date\nEnsure you are using the latest version of the NewPay app to benefit from security patches and performance improvements. Updates often include critical fixes that protect you from emerging threats."
+                    },
+                    {
+                        "question": "Account Deletion Notice",
+                        "answer": "Please think carefully before deleting your account — this action is permanent and irreversible.\n▲ Account deletion is permanent and non-reversible\nOnce your account is deleted, all associated cards, data, and history will be permanently erased and cannot be recovered. This policy complies with data protection regulations and anti-fraud protocols.\n▲ Consider freezing your account or cards instead\nIf you’re only taking a temporary break, we recommend using the card freeze feature instead of deleting your account. This allows you to retain your account and resume usage later if needed."
+                    }
+                ]
+            }
+        ]
     }
 }
