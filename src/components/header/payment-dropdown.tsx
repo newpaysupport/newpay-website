@@ -35,7 +35,7 @@ const PaymentDropdown = ({ link, locale }: LinkItem) => {
                                 className={`block px-6 py-2 rounded-full transition-all hover:bg-[#FFFFFF]/8 group }`}
                             >
                                 <div className="flex items-start gap-3">
-                                    <div className="font-medium text-[#AEAEAE] group-hover:text-white transition-colors">
+                                    <div className="font-semibold text-sm text-[#AEAEAE] group-hover:text-white transition-colors">
                                         {item.title}
                                     </div>
                                 </div>
