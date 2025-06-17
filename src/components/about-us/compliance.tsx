@@ -39,9 +39,9 @@ const Compliance = () => {
     const t = useTranslations("aboutUs");
 
     return (
-        <div className='w-full h-[1300px] relative'>
+        <div className='w-full min-h-[1300px] relative'>
             <Image src={bg} alt='background' fill priority className='object-bottom-left object-cover' />
-            <div className='relative pt-[160px] '>
+            <div className='relative py-[160px] '>
                 <div className='container mx-auto'>
                     <h4 className='text-white text-[60px] font-semibold text-center'>{t("compliance.title")}</h4>
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-20'>
@@ -56,7 +56,7 @@ const Compliance = () => {
                             )
                         })}
                     </div>
-                    <div className='pt-[120px] pb-10'>
+                    <div className='pt-[290px] pb-10'>
                         <p className='w-full ml-auto lg:w-[416px]'>
                             <span className='text-white text-[60px] font-semibold tracking-[-2px]'>{t("compliance.partner.title")}</span>
                             <span className='mt-6 inline-block text-[#aeaeae] text-base font-medium'>

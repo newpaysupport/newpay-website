@@ -546,7 +546,7 @@
         "card2": {
             "title": "VISA/MASTER Supported By",
             "description": "Supports Apple Pay & Google Pay",
-            "listText" : [
+            "listText": [
                 {
                     "number": "01.",
                     "text": "Tap. Pay. Go."
@@ -631,7 +631,7 @@
                 },
                 {
                     "title": "IT SERVICES",
-                    "image":  "/images/home/joint/slide5.png"
+                    "image": "/images/home/joint/slide5.png"
                 },
                 {
                     "title": "INTERACTIVE MEDIA",
@@ -670,7 +670,7 @@
     "aboutUs": {
         "hero": {
             "subTitle": "— Newpay is the way.",
-            "title": "Turning digital assets into real-world spending",
+            "title": "Turning digital assets into\n real-world spending",
             "desc": "Utility is the beginning of real change.",
             "buttonHero": "Create an account"
         },

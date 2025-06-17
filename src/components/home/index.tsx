@@ -176,7 +176,9 @@ const HomeScreen = () => {
                             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-[64px]'>
                                 {t.raw('utils').map((item: { title: string; desc: string }, index: number) => {
                                     return <div key={index} className='p-8 bg-[#f8f8f8] rounded-[20px]'>
-                                        <Image src={virtualCardContent[index].icon} alt='icon' />
+                                        <figure className='w-12 h-12'>
+                                            <Image src={virtualCardContent[index].icon} alt='icon' />
+                                        </figure>
                                         <p className='mt-8 mb-2 text-[#1b1b1b] text-2xl font-semibold'>{item.title}</p>
                                         <p className='text-[#666] text-base font-medium'>{item.desc}</p>
                                     </div>
