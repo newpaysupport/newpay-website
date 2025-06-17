@@ -447,15 +447,15 @@
                 },
                 {
                     "question": "What fees does NewPay charge ?",
-                    "answer": "NewPay offers competitive fees, with many basic transactions being free. Detailed fee schedules are available on our website's pricing page."
+                    "answer": "We offer a transparent fee structure. Account opening and maintenance are free. For details on transaction, withdrawal, and currency exchange fees, see our Rates page."
                 },
                 {
                     "question": "Does NewPay offer virtual or physical cards ?",
-                    "answer": "Yes, NewPay offers both virtual and physical cards. You can easily order them through your account dashboard."
+                    "answer": "Yes, we offer both to meet different spending needs. Virtual cards can be used online immediately, while physical cards work in stores and ATMs."
                 },
                 {
                     "question": "Why choose NewPay ?",
-                    "answer": "NewPay provides a secure, user-friendly platform with fast transactions, excellent customer support, and innovative financial tools."
+                    "answer": "NewPay provides a secure, convenient global payment solution supporting multiple currencies and crypto assets. With transparent fees and both physical and virtual cards, managing your global spending is easy."
                 }
             ]
         }
@@ -618,6 +618,7 @@
             "title": "Industry Coverage",
             "slides": [
                 {
+                    "subtitle": "GAMING",
                     "title": "INTERACTIVE MEDIA",
                     "image": "/images/home/joint/slide2.png"
                 },
