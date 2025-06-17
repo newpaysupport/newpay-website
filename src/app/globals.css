@@ -170,7 +170,7 @@ body {
 /* auto slide show */
 .animation-slideshow {
   width: fit-content;
-  animation: slide-left 20s linear infinite;
+  animation: slide-left 10s linear infinite;
 }
 
 @keyframes slide-left {
