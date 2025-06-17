@@ -199,6 +199,180 @@ body {
 /* animation card content */
 .swiper,
 .swiper-slide {
-  width: 100%;
+  width: 100%; 
   height: 100vh;
+}
+/* animation icon money */
+@keyframes pulse_bitcoin {
+  0% {
+    transform: scale(1);
+    box-shadow:
+      0px 8px 20px -2px #F7931A,
+      0.5px 0.5px 1px 0px rgba(255, 255, 255, 0.2) inset,
+      0px -0.5px 1px 0px rgba(0, 0, 0, 0.2) inset;
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow:
+      0px 8px 25px -2px #f87c00,
+      0.5px 0.5px 1px 0px rgba(255, 255, 255, 0.4) inset,
+      0px -0.5px 1px 0px rgba(0, 0, 0, 0.4) inset;
+  }
+  75% {
+    transform: scale(1.03);
+    box-shadow:
+      0px 8px 30px -2px #e46b00,
+      0.5px 0.5px 1px 0px rgba(255, 255, 255, 0.6) inset,
+      0px -0.5px 1px 0px rgba(0, 0, 0, 0.6) inset;
+  }
+  100% {
+    transform: scale(1.05);
+    box-shadow:
+      0px 8px 35px -2px #cc5a00,
+      0.5px 0.5px 1px 0px rgba(255, 255, 255, 0.8) inset,
+      0px -0.5px 1px 0px rgba(0, 0, 0, 0.8) inset;
+  }
+}
+
+@keyframes pulse_eth {
+  0% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 30px rgba(98, 126, 234, 0.6));
+  }
+
+  50% {
+    transform: scale(1.02);
+    filter: drop-shadow(0 0 40px rgba(98, 126, 234, 0.7));
+  }
+
+  75% {
+    transform: scale(1.03);
+    filter: drop-shadow(0 0 50px rgba(98, 126, 234, 0.8));
+  }
+
+  100% {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 60px rgba(98, 126, 234, 0.85));
+  }
+}
+
+
+@keyframes pulse_usd {
+  0% {
+    transform: scale(1);
+    box-shadow: 
+      0px 8px 24px -2px rgba(40, 131, 230, 0.6),
+      0.5px 0.5px 1px rgba(255, 255, 255, 0.25) inset,
+      0px -0.5px 1px rgba(0, 0, 0, 0.25) inset;
+  }
+
+  50% {
+    transform: scale(1.02);
+    box-shadow: 
+      0px 10px 28px 0px rgba(40, 131, 230, 0.65),
+      0.5px 0.5px 1px rgba(255, 255, 255, 0.28) inset,
+      0px -0.5px 1px rgba(0, 0, 0, 0.28) inset;
+  }
+
+  75% {
+    transform: scale(1.03);
+    box-shadow: 
+      0px 12px 32px 1px rgba(40, 131, 230, 0.7),
+      0.5px 0.5px 1px rgba(255, 255, 255, 0.3) inset,
+      0px -0.5px 1px rgba(0, 0, 0, 0.3) inset;
+  }
+
+  100% {
+    transform: scale(1.05);
+    box-shadow: 
+      0px 14px 36px 2px rgba(40, 131, 230, 0.75),
+      0.5px 0.5px 1px rgba(255, 255, 255, 0.35) inset,
+      0px -0.5px 1px rgba(0, 0, 0, 0.35) inset;
+  }
+}
+
+
+
+@keyframes pulse_tether {
+  0% {
+    transform: scale(1);
+    box-shadow:
+      0 0 0 rgba(67, 193, 159, 0),
+      0 0 0 rgba(255, 255, 255, 0);
+  }
+
+  50% {
+    transform: scale(1.02);
+    box-shadow:
+      0 0 10px 2px rgba(67, 193, 159, 0.5),
+      0 0 10px 2px rgba(255, 255, 255, 0.3) inset,
+      0 0 10px rgba(0, 0, 0, 0.2) inset;
+  }
+
+  75% {
+    transform: scale(1.03);
+    box-shadow:
+    0 0 10px 3px rgba(67, 193, 159, 0.5),
+    0 0 10px 2px rgba(255, 255, 255, 0.3) inset,
+    0 0 10px rgba(0, 0, 0, 0.2) inset;
+  }
+
+  100% {
+    transform: scale(1.05);
+    box-shadow:
+    0 0 12px 4px rgba(67, 193, 159, 0.6),
+    0 0 12px 3px rgba(255, 255, 255, 0.4) inset,
+    0 0 12px rgba(0, 0, 0, 0.25) inset;
+  }
+}
+
+@keyframes pulse_solana {
+  0% {
+    transform: scale(1);
+    box-shadow:
+      0.5px 0.5px 1px rgba(255, 255, 255, 0.32) inset,
+      0px -0.5px 1px rgba(0, 0, 0, 0.25) inset,
+      0px 4px 20px rgba(169, 83, 234, 0.4);
+  }
+
+  50% {
+    transform: scale(1.02);
+    box-shadow:
+      0.5px 0.5px 1px rgba(255, 255, 255, 0.35) inset,
+      0px -0.5px 1px rgba(0, 0, 0, 0.28) inset,
+      0px 6px 28px rgba(169, 83, 234, 0.5);
+  }
+
+  75% {
+    transform: scale(1.03);
+    box-shadow:
+      0.5px 0.5px 1px rgba(255, 255, 255, 0.38) inset,
+      0px -0.5px 1px rgba(0, 0, 0, 0.3) inset,
+      0px 8px 36px rgba(169, 83, 234, 0.6);
+  }
+
+  100% {
+    transform: scale(1.05);
+    box-shadow:
+      0.5px 0.5px 1px rgba(255, 255, 255, 0.4) inset,
+      0px -0.5px 1px rgba(0, 0, 0, 0.32) inset,
+      0px 10px 44px rgba(169, 83, 234, 0.7);
+  }
+}
+
+
+.animate-bitcoin {
+  animation: pulse_bitcoin 1.2s ease-in-out infinite;
+}
+.animate-eth {
+  animation: pulse_eth 1.3s ease-in-out infinite;
+}
+.animate-usd {
+  animation: pulse_usd 1.6s ease-in-out infinite;
+}
+.animate-tether {
+  animation: pulse_tether 1.5s ease-in-out infinite;
+}
+.animate-solana {
+  animation: pulse_solana 1.4s ease-in-out infinite;
 }
