@@ -69,10 +69,10 @@ const PaymentScreen = () => {
 
             {/* Content Section*/}
             <div className="bg-black">
-                <div className="bg-white rounded-4xl pb-10">
+                <div className="bg-white rounded-4xl pb-10 pt-20">
                     {/* Content Section 1*/}
                     <div>
-                        <h1 className="md:text-6xl text-xl font-semibold text-center pt-10">{contentSection1.title}</h1>
+                        <h1 className="md:text-6xl text-xl font-semibold text-center">{contentSection1.title}</h1>
                         <p className="md:w-1/4 text-sm text-center text-gray-500 mt-4 mx-auto">{contentSection1.description}</p>
                         <div className="w-fit mx-auto text-md mt-8">
                             <button
