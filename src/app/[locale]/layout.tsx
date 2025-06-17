@@ -5,6 +5,7 @@ import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { inter } from '../fonts/fonts';
+import { Toaster } from 'react-hot-toast';
 export default async function LocaleLayout({
     children,
     params
@@ -25,6 +26,7 @@ export default async function LocaleLayout({
                     <Header />
                     {children}
                     <Footer />
+                    <Toaster position='bottom-right' toastOptions={{ duration: 3000 }} />
                 </NextIntlClientProvider>
             </body>
         </html>

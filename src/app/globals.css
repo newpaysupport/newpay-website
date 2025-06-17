@@ -376,3 +376,21 @@ body {
 .animate-solana {
   animation: pulse_solana 1.4s ease-in-out infinite;
 }
+
+/* toast */
+@keyframes go2645569136 {
+    0% {
+        /* Add your starting properties here */
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        /* Add your ending properties here */
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.toast-animation {
+    animation: go2645569136 0.35s cubic-bezier(0.21, 1.02, 0.73, 1) 0s 1 normal forwards;
+}

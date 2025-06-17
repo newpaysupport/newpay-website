@@ -978,5 +978,8 @@
                 "answer": "Monitoring your card activity regularly helps detect and prevent unauthorized transactions.\n▲Freeze your card if you notice suspicious activity\nIf you detect any unfamiliar transactions, use the in-app freeze function to instantly block your card and prevent further use. Then contact our support team for assistance.\n▲Review your transaction history frequently\nWe recommend checking your transaction records on a weekly basis to verify all activity. If you notice anything unusual, report it to us promptly."
             }
         ]
+    },
+    "toast": {
+        "title": "Coming soon"
     }
 }
