@@ -17,7 +17,8 @@ const Header = () => {
     const t = useTranslations('navigation');
 
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const [scrolled, setScrolled] = useState(false);
+    const [isVisible, setIsVisible] = useState(true);
+    const [isScrolled, setIsScrolled] = useState(false);
     const [openDropdown, setOpenDropdown] = useState<"payment" | "company" | null>(null);
 
     const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -31,11 +32,33 @@ const Header = () => {
     };
 
     useEffect(() => {
+        let lastScrollY = window.scrollY;
+        let ticking = false;
+
         const handleScroll = () => {
-            if (window.scrollY > 50) {
-                setScrolled(true);
-            } else {
-                setScrolled(false);
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    const currentScrollY = window.scrollY;
+                    
+                    if (currentScrollY < 10) {
+                        setIsVisible(true);
+                        setIsScrolled(false); 
+                    }
+                    // If scrolling down and past 100px, hide the header
+                    else if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                        setIsVisible(false);
+                        setOpenDropdown(null);
+                    }
+                    // If scrolling up, show the header
+                    else if (currentScrollY < lastScrollY) {
+                        setIsVisible(true);
+                        setIsScrolled(true); 
+                    }
+
+                    lastScrollY = currentScrollY;
+                    ticking = false;
+                });
+                ticking = true;
             }
         };
 
@@ -57,7 +80,7 @@ const Header = () => {
             dropdownItems: [
                 { title: 'Payment', href: `/${locale}/payment` },
                 { title: 'Payment Card', href: `/${locale}/payment-card` },
-                { title: 'Security & Protection', href: `/${locale}/security` }
+                { title: 'Security & Protection', href: `/${locale}/secure` }
             ]
         },
         {
@@ -70,7 +93,7 @@ const Header = () => {
                 { title: 'About NewPay', href: `/${locale}/about-us` },
                 { title: 'Contact us', href: `/${locale}/contact` },
                 { title: 'Blog', href: `/${locale}/blog` },
-                { title: 'FAQ', href: `/${locale}/faq` }
+                { title: 'FAQ', href: `/${locale}/faq-help` }
             ]
         },
         { key: 'support', href: `/${locale}/support`, label: t('support'), hasDropdown: false }
@@ -78,12 +101,27 @@ const Header = () => {
 
     const isActive = (path: string) => pathname === path;
 
+
+    const getHeaderStyles = () => {
+        if (isScrolled) {
+            return {
+                borderBottom: "1px solid rgba(255, 255, 255, 0.16)",
+                background: "rgba(0, 0, 0, 0.80)",
+                backdropFilter: "blur(8px)"
+            };
+        }
+        return {
+            background: "transparent"
+        };
+    };
+
     return (
         <nav
+            style={getHeaderStyles()}
             className={`text-sm h-[70px] flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4
                 fixed top-0 left-0 w-full z-50 
-                text-white transition-all duration-75 ease-in-out
-                ${scrolled ? 'translate-y-[-100%]' : 'translate-y-0 bg-transparent'}`}
+                text-white transition-all duration-300 ease-out
+                ${isVisible ? 'translate-y-0' : 'translate-y-[-100%]'}`}
         >
             <Link href={"/"} className="flex items-center space-x-4">
                 <Image src={logo} alt="NewPay Logo" className="object-contain" />

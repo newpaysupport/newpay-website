@@ -32,10 +32,10 @@ const PaymentDropdown = ({ link, locale }: LinkItem) => {
                             <Link
                                 key={index}
                                 href={item.href}
-                                className={`block px-6 py-2 rounded-full transition-all hover:bg-[#FFFFFF]/8 group }`}
+                                className={`block px-6 py-2 rounded-full transition-all ${item.title === 'Payment' ? " " : "hover:bg-[#FFFFFF]/8"}`}
                             >
                                 <div className="flex items-start gap-3">
-                                    <div className="font-normal text-sm text-[#AEAEAE] group-hover:text-white transition-colors">
+                                    <div className = {`${item.title === 'Payment' ? 'font-normal text-[#AEAEAE]' : 'text-white font-semibold '} text-sm  transition-colors`}>
                                         {item.title}
                                     </div>
                                 </div>
