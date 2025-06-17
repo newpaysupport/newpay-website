@@ -1,11 +1,11 @@
 <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M0 12C0 5.37258 5.37258 0 12 0H52C58.6274 0 64 5.37258 64 12V52C64 58.6274 58.6274 64 52 64H12C5.37258 64 0 58.6274 0 52V12Z" fill="#F8F8F8"/>
 <path d="M0 12C0 5.37258 5.37258 0 12 0H52C58.6274 0 64 5.37258 64 12V52C64 58.6274 58.6274 64 52 64H12C5.37258 64 0 58.6274 0 52V12Z" fill="url(#paint0_linear_713_14706)" fill-opacity="0.2"/>
-<path d="M15.332 33.0166H43.6654" stroke="#FF6910" strokeWidth="3" stroke-miterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
-<path d="M43.6654 29.1332V41.0498C43.6154 45.7998 42.3153 46.9998 37.3653 46.9998H21.6321C16.5987 46.9998 15.332 45.7498 15.332 40.7832V29.1332C15.332 24.6332 16.382 23.1832 20.332 22.9498C20.732 22.9332 21.1654 22.9165 21.6321 22.9165H37.3653C42.3986 22.9165 43.6654 24.1665 43.6654 29.1332Z" stroke="#FF6910" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-<path d="M48.6654 23.2167V34.8667C48.6654 39.3667 47.6154 40.8167 43.6654 41.05V29.1333C43.6654 24.1667 42.3986 22.9167 37.3653 22.9167H21.6321C21.1654 22.9167 20.732 22.9333 20.332 22.95C20.382 18.2 21.6821 17 26.6321 17H42.3653C47.3986 17 48.6654 18.25 48.6654 23.2167Z" stroke="#FF6910" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-<path d="M20.75 41.6836H23.6166" stroke="#FF6910" strokeWidth="3" stroke-miterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
-<path d="M27.1836 41.6836H32.9169" stroke="#FF6910" strokeWidth="3" stroke-miterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M15.332 33.0166H43.6654" stroke="#FF6910" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M43.6654 29.1332V41.0498C43.6154 45.7998 42.3153 46.9998 37.3653 46.9998H21.6321C16.5987 46.9998 15.332 45.7498 15.332 40.7832V29.1332C15.332 24.6332 16.382 23.1832 20.332 22.9498C20.732 22.9332 21.1654 22.9165 21.6321 22.9165H37.3653C42.3986 22.9165 43.6654 24.1665 43.6654 29.1332Z" stroke="#FF6910" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M48.6654 23.2167V34.8667C48.6654 39.3667 47.6154 40.8167 43.6654 41.05V29.1333C43.6654 24.1667 42.3986 22.9167 37.3653 22.9167H21.6321C21.1654 22.9167 20.732 22.9333 20.332 22.95C20.382 18.2 21.6821 17 26.6321 17H42.3653C47.3986 17 48.6654 18.25 48.6654 23.2167Z" stroke="#FF6910" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M20.75 41.6836H23.6166" stroke="#FF6910" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M27.1836 41.6836H32.9169" stroke="#FF6910" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
 <defs>
 <linearGradient id="paint0_linear_713_14706" x1="32" y1="0" x2="32" y2="64" gradientUnits="userSpaceOnUse">
 <stop stop-color="#FF6910" stop-opacity="0"/>
