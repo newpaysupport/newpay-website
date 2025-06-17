@@ -4,10 +4,16 @@ import BtnPrimary from '../common/button/btn-primary'
 import overlay from '@/images/secure/overlay.png';
 import { useTranslations } from 'next-intl'
 import Image from 'next/image';
+import toast from 'react-hot-toast';
+import ToastCustom from '../common/toast';
 
 const Hero = () => {
 
     const t = useTranslations('secureCustodian');
+
+    const handleToast = () => {
+        toast.custom((t) => <ToastCustom type='warning' toastId={t.id} />);
+    }
 
     return (
         <div className='w-full h-screen relative overflow-hidden'>
@@ -29,7 +35,7 @@ const Hero = () => {
                         </p>
                         <p className='text-[#aeaeae] text-base font-medium -tracking-[0.24px] opacity-0 fadeInUp-delay-03'>{t("hero.desc1")}</p>
                         <p className='text-[#aeaeae] text-base font-medium -tracking-[0.24px] opacity-0 fadeInUp-delay-03'>{t("hero.desc2")}</p>
-                        <BtnPrimary text={t("hero.button")} variant={'primary-lighter'} className='w-[207px] mt-8 mx-auto opacity-0 fadeInUp-delay-06' />
+                        <BtnPrimary onClick={handleToast} text={t("hero.button")} variant={'primary-lighter'} className='w-[207px] mt-8 mx-auto opacity-0 fadeInUp-delay-06' />
                     </div>
                 </div>
             </div>
