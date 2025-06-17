@@ -12,7 +12,7 @@ const Deposit = () => {
     return (
         <div className='bg-[#000] py-20'>
             <div className='container mx-auto relative h-[750px]'>
-                <Image src={bgDeposit} alt='' fill priority />
+                <Image src={bgDeposit} alt='' fill priority objectFit='contain' className='mix-blend-lighten' />
                 <div className='relative z-[1] h-full'>
                     <div className='w-[460px] h-full mx-auto flex flex-col justify-end'>
                         <p className='text-white text-[60px] font-semibold text-center'>{t("title")}</p>
