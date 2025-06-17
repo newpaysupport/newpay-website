@@ -24,13 +24,13 @@ const AutoSlideshow = () => {
                 {joint.cardSlide.title}
             </h1>
 
-             {/* overlay  */}
-             <div style={{
-                    background: "linear-gradient(90deg, rgba(255, 255, 255, 1) 5%, rgba(255, 255, 255, 0) 100%)",
-                }} className='absolute w-[120px] h-[450px] left-0 bottom-[12%] z-50'></div>
-                <div style={{
-                    background: "linear-gradient(90deg, rgba(255, 255, 255, 0.00) 5%, rgba(255, 255, 255, 1) 100%)"
-                }} className='absolute w-[120px] h-[450px] right-0 bottom-[12%] z-50'></div>
+            {/* overlay  */}
+            <div style={{
+                background: "linear-gradient(90deg, rgba(255, 255, 255, 1) 5%, rgba(255, 255, 255, 0) 100%)",
+            }} className='absolute w-[120px] h-[450px] left-0 bottom-[12%] z-50'></div>
+            <div style={{
+                background: "linear-gradient(90deg, rgba(255, 255, 255, 0.00) 5%, rgba(255, 255, 255, 1) 100%)"
+            }} className='absolute w-[120px] h-[450px] right-0 bottom-[12%] z-50'></div>
 
             <div className="relative mt-20 flex justify-center items-center animation-slideshow gap-5">
 
@@ -46,7 +46,17 @@ const AutoSlideshow = () => {
                             height={410}
                             className="w-full h-full object-cover rounded-3xl"
                         />
-                        <div className="absolute bottom-1 left-1 text-white p-2">
+                        <div className="absolute bottom-1 left-1 text-white p-2 flex flex-col gap-2">
+                            {slide.subtitle && <h3
+                                style={{
+                                    background:
+                                        'linear-gradient(0deg, rgba(174, 174, 174, 0.32) 0%, rgba(174, 174, 174, 0.32) 100%), rgba(255, 255, 255, 0.08)',
+                                    backdropFilter: 'blur(20px)',
+                                }}
+                                className=" md:w-[95px] text-sm font-semibold py-2 px-4 rounded-full uppercase"
+                            >
+                                {slide.subtitle}
+                            </h3>}
                             <h3
                                 style={{
                                     background:
