@@ -82,7 +82,7 @@ const Header = () => {
         <nav
             className={`text-sm h-[70px] flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4
                 fixed top-0 left-0 w-full z-50 
-                text-white transition-all duration-75 ease-in-out shadow-sm
+                text-white transition-all duration-75 ease-in-out
                 ${scrolled ? 'translate-y-[-100%]' : 'translate-y-0 bg-transparent'}`}
         >
             <Link href={"/"} className="flex items-center space-x-4">
