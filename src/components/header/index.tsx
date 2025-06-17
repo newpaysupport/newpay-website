@@ -32,13 +32,15 @@ const Header = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            const offset = window.scrollY;
-            setScrolled(offset > 50);
+            if (window.scrollY > 50) {
+                setScrolled(true);
+            } else {
+                setScrolled(false);
+            }
         };
+
         window.addEventListener('scroll', handleScroll);
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
+        return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
     const navLinks = [
@@ -78,16 +80,13 @@ const Header = () => {
 
     return (
         <nav
-            style={{
-                background: scrolled ? 'rgba(0, 0, 0, 0.8)' : 'transparent',
-                backdropFilter: scrolled ? 'blur(10px)' : 'none',
-            }}
-            className="text-sm h-[70px] flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4
+            className={`text-sm h-[70px] flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4
                 fixed top-0 left-0 w-full z-50 
-                text-white transition-all duration-300 ease-in-out shadow-sm"
+                text-white transition-all duration-75 ease-in-out shadow-sm
+                ${scrolled ? 'translate-y-[-100%]' : 'translate-y-0 bg-transparent'}`}
         >
             <Link href={"/"} className="flex items-center space-x-4">
-                <Image src={logo} alt="NewPay Logo" className="object-contain bg-transparent" />
+                <Image src={logo} alt="NewPay Logo" className="object-contain" />
             </Link>
 
             <ul className="hidden md:flex justify-center items-center space-x-6">
@@ -125,7 +124,6 @@ const Header = () => {
                             >
                                 {link.key === 'payment' ?
                                     (<PaymentDropdown link={link} locale={locale} />) : <CompanyDropdown link={link} locale={locale} />}
-
                             </div>
                         )}
                     </li>
