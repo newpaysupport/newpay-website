@@ -16,7 +16,7 @@ const CompanyDropdown = ({ link, locale }: LinkItem) => {
         <div
             style={{
                 background: "linear-gradient(0deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%), rgba(6, 6, 6, 0.60)",
-                backdropFilter: "blur(25px)"
+                backdropFilter: "blur(50px)"
             }}
             className="overflow-hidden md:h-[300px]">
             <div className="px-45 pb-20 pt-5">
