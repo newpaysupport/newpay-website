@@ -450,16 +450,16 @@
                     "answer": "资金到账时间取决于您使用的充值方式。通常情况下，银行转账可能需要1-3个工作日，而加密货币充值通常在网络确认后几分钟内到账。"
                 },
                 {
-                    "question": "NewPay收取哪些费用 ？",
-                    "answer": "NewPay提供具有竞争力的费用，许多基本交易是免费的。详细的费用表可在我们网站的价格页面上找到。"
+                    "question": "NewPay会收取哪些费用?",
+                    "answer": "我们致力于提供透明的费用结构。开户和账户维护是免费的。交易费用、提现费用和货币兑换费用请参考我们的费率页面获取详细信息。"
                 },
                 {
-                    "question": "NewPay是否提供虚拟或实体卡 ？",
-                    "answer": "是的，NewPay提供虚拟和实体卡。您可以通过账户仪表板轻松订购。"
+                    "question": "NewPay是否提供虚拟卡或实体卡？",
+                    "answer": "是的，我们同时提供虚拟卡和实体卡以满足您不同的消费需求。虚拟卡可立即用于在线支付，实体卡可用于线下商店和ATM提现。"
                 },
                 {
                     "question": "为什么选择NewPay ？",
-                    "answer": "NewPay提供安全、用户友好的平台，快速交易，出色的客户支持和创新的金融工具。"
+                    "answer": "NewPay 提供安全、便捷的全球支付解决方案，支持多种货币和加密资产，费用透明，并提供实体卡和虚拟卡选项，让您的全球消费和资金管理更加轻松。"
                 }
             ]
         },
@@ -554,7 +554,7 @@
         "card2": {
             "title": "VISA/MASTER 官方支持",
             "description": "支持 Apple Pay 与 Google Pay",
-            "listText" : [
+            "listText": [
                 {
                     "number": "01.",
                     "text": "轻触即付，畅行无阻"
@@ -626,6 +626,7 @@
             "title": "行业覆盖范围",
             "slides": [
                 {
+                    "subtitle": "游戏",
                     "title": "互动媒体",
                     "image": "/images/home/joint/slide2.png"
                 },
@@ -639,7 +640,7 @@
                 },
                 {
                     "title": "IT 服务",
-                    "image":  "/images/home/joint/slide5.png"
+                    "image": "/images/home/joint/slide5.png"
                 },
                 {
                     "title": "互动媒体",
