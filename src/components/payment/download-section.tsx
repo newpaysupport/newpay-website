@@ -3,11 +3,12 @@ import product_content_end from "@/images/payment/Product_Image.png";
 import logo_payment from "@/images/payment/newpay_square_mark_payment.svg";
 import { useTranslations } from "next-intl";
 import Image from 'next/image';
-
+import Link from "next/link";
+import { useLocale } from 'next-intl';
 const DownloadSection = () => {
 
     const t = useTranslations('downloadSection');
-
+    const locale = useLocale();
 
 
 
@@ -25,10 +26,12 @@ const DownloadSection = () => {
                         <h1 className="md:text-5xl md:leading-14 text-2xl font-semibold pt-4 lg:pt-10 text-left text-white">
                             {t('title')}
                         </h1>
-                        <button
-                            className="md:text-md text-sm lg:text-lg md:min-w-[152px] md:h-[56px] rounded-2xl mt-10 md:py-2 md:px-4 p-4 text-black cursor-pointer bg-white hover:bg-gray-100 font-semibold">
-                            {t('buttonText')}
-                        </button>
+                        <Link href={`/${locale}/download`}>
+                            <button
+                                className="md:text-md text-sm md:w-[152px] md:h-[56px] rounded-2xl mt-10 md:py-2 md:px-4 p-4 text-black cursor-pointer bg-white hover:bg-gray-100 font-semibold">
+                                {t('buttonText')}
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </div >

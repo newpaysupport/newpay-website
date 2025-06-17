@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import logoEN from '@/images/UnitedKingdom.png';
 import logoZH from '@/images/china.png';
-
+import Link from 'next/link';
 type Props = {
     locale: string;
     switchLocale: (lng: string) => void;
@@ -76,9 +76,11 @@ const SwitchLanguage = ({ locale, switchLocale, t }: Props) => {
             </div>
 
             {/* Get App Button */}
-            <button className="cursor-pointer font-semibold md:inline hidden bg-white ml-4 px-5 py-3 rounded-full active:scale-95 text-[#060606] text-sm">
-                {t('getApp')}
-            </button>
+            <Link href={`/${locale}/download`}>
+                <button className="cursor-pointer font-semibold md:inline hidden bg-white ml-4 px-5 py-3 rounded-full active:scale-95 text-[#060606] text-sm hover:scale-102">
+                    {t('getApp')}
+                </button>
+            </Link>
         </div>
     );
 };
