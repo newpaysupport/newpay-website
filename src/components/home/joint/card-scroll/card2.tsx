@@ -15,10 +15,10 @@ const Card2 = () => {
     const listText = joint.card2.listText;
 
     return (
-        <section className="bg-white p-10 flex items-center rounded-3xl min-h-screen mt-5">
+        <section className="bg-white p-10 flex items-center rounded-3xl min-h-screen">
             <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-30">
                 {/* Left Section: Text Content and Small Card */}
-                <div className="flex flex-col justify-between">
+                <div className="flex flex-col justify-between gap-10">
                     <h2 className="md:w-[60%] text-4xl md:text-5xl font-semibold text-[#1B1B1B] mb-4 leading-tight">
                         {joint.card2.title}
                     </h2>

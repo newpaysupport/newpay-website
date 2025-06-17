@@ -15,7 +15,7 @@ const CardContent = () => {
     const joint = locale === 'en' ? enBlog : ziBlog;
 
     return (
-        <section className="bg-white p-16 flex items-center rounded-3xl min-h-screen mt-10">
+        <section className="bg-white p-16 flex items-center rounded-3xl min-h-screen">
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-30">
                 {/* Left Section: Text Content and Small Card */}
                 <div className="flex flex-col justify-between space-y-10">
