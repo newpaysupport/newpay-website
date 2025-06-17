@@ -46,19 +46,19 @@ const Insight = () => {
     return (
         <div className='bg-[#060606]'>
             <div className='bg-white rounded-[80px] py-[80px] lg:py-[120px] lg:px-[160px] overflow-hidden'>
-                <div className='container mx-auto flex flex-col space-y-[120px]'>
+                <div className='container mx-auto flex flex-col items-center space-y-[120px]'>
                     {t.raw("insight").map((item: Item, index: number) => {
                         const isEven = index % 2 === 0;
                         return (
                             <div key={index} className={`flex ${isEven ? "flex-row" : "flex-row-reverse"} items-center gap-x-[80px]`}>
-                                <div>
+                                <div className='w-full lg:w-[560px] lg:min-w-[560px]'>
                                     <Image src={insights[index].icon} alt={item.title} />
                                     <p className='my-8 text-[#1b1b1b] text-[48px] font-semibold -tracking-[1.64px]'>{item.title}</p>
-                                    <p className='text-[#666] text-lg font-medium'>
+                                    <p className='text-[#666] text-lg font-medium flex flex-col gap-4'>
                                         {(item.desc as string[]).map((text, index) => {
                                             return (
                                                 <>
-                                                    <span className='inline-block' key={index}>{text}</span> <br />
+                                                    <span key={index}>{text}</span>
                                                 </>
                                             )
                                         })}
