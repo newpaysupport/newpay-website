@@ -14,76 +14,45 @@ import { FooterItem } from '@/interfaces/footer';
 import { useLocale } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useTranslations } from 'use-intl';
+import toast from 'react-hot-toast';
+import { useLocale, useTranslations } from 'use-intl';
+import ToastCustom from '../common/toast';
 
 
 const socials = [
     {
-        link: "#",
+        link: "http://x.com/NewPayOrg",
         icon: twitter
     },
     {
-        link: "#",
+        link: "http://t.me/newpayistheway",
         icon: Telegram
     },
+    // {
+    //     link: "#",
+    //     icon: Discord
+    // },
     {
-        link: "#",
-        icon: Discord
-    },
-    {
-        link: "#",
+        link: "https://www.facebook.com/people/NewPay/61576781240841",
         icon: Facebook
     },
     {
-        link: "#",
+        link: "https://www.instagram.com/newpayofficial",
         icon: insta
     },
     {
-        link: "#",
+        link: "http://linkedin.com/company/newpayucard",
         icon: Linkedin
     }
 ]
-
-// const footerMenus = [
-//     {
-//         "title": "Discover",
-//         "items": [
-//             { "label": "Joint", "link": "" },
-//             { "label": "Personal", "link": "" }
-//         ]
-//     },
-//     {
-//         "title": "Payment",
-//         "items": [
-//             { "label": "Card", "link": "" }
-//         ]
-//     },
-//     {
-//         "title": "Wallet",
-//         "items": [
-//             { "label": "Secure Custodian", "link": "" }
-//         ]
-//     },
-//     {
-//         "title": "Company",
-//         "items": [
-//             { "label": "About NewPay", "link": "" },
-//             { "label": "Blog", "link": "" }
-//         ]
-//     },
-//     {
-//         "title": "Support",
-//         "items": [
-//             { "label": "Contact Us", "link": "" },
-//             { "label": "FAQ", "link": "" },
-//             { "label": "Download App", "link": "" }
-//         ]
-//     }
-// ]
 const Footer = () => {
 
     const t = useTranslations("footer");
     const locale = useLocale();
+
+    const handleToastComingSoon = () => {
+        toast.custom(<ToastCustom type='warning' />)
+    }
 
     return (
         <div className='bg-[#060606] p-20'>
@@ -95,8 +64,8 @@ const Footer = () => {
                             <Image src={logoNewpay} alt='logo mark' />
                         </Link>
                         <div className='flex items-center gap-x-2 cursor-pointer mt-8 mb-20'>
-                            <Image src={appStore} alt='logo' />
-                            <Image src={ggplay} alt='logo' />
+                            <Image onClick={handleToastComingSoon} src={appStore} alt='logo' />
+                            <Image onClick={handleToastComingSoon} src={ggplay} alt='logo' />
                         </div>
                         <div className='flex items-center gap-x-8 cursor-pointer'>
                             {socials.map((item, index) => {
