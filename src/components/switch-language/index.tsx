@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import logoEN from '@/images/UnitedKingdom.png';
 import logoZH from '@/images/china.png';
 import Link from 'next/link';
@@ -8,6 +8,7 @@ type Props = {
     switchLocale: (lng: string) => void;
     t: (key: string) => string;
     isBlogAndContact?: boolean;
+    isVisible?: boolean;
 };
 
 const languages = [
@@ -15,7 +16,12 @@ const languages = [
     { code: 'zi', label: 'CN', flag: logoZH }
 ];
 
-const SwitchLanguage = ({ locale, switchLocale, t , isBlogAndContact}: Props) => {
+const SwitchLanguage = ({ locale, switchLocale, t, isBlogAndContact, isVisible }: Props) => {
+    useEffect(() => {
+        if (!isVisible) {
+            setOpen(false);
+        }
+    }, [isVisible])
     const [open, setOpen] = useState(false);
 
     const currentLanguage = languages.find((lng) => lng.code === locale) || languages[0];
