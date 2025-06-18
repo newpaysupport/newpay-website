@@ -32,7 +32,7 @@ const Card2 = () => {
                 {/* Right Section: Large Image Card */}
                 <div className="flex flex-col space-y-10 ">
                     <div>
-                        <h1 className='text-[#666] text-3xl'>{joint.card2.description}</h1>
+                        <h1 style={{ fontSize: '32px' }} className='text-[#666] font-medium md:w-[70%]'>{joint.card2.description}</h1>
                         <div className='flex space-x-6 pt-4'>
                             <Image src={visa} alt='arrow right' />
                             <Image src={materCard} alt='arrow right' />
@@ -41,29 +41,36 @@ const Card2 = () => {
                     <div className=''>
                         {listText.map((item, index) => {
                             return (
-                                <p key={item.text} style={{
-                                    borderBottom: `${index === listText.length - 1 ? "none" : "1px solid #D8D8D8"}`
-                                }}
-                                    className='text-[#666] text-2xl font-medium py-8'><span className='pr-12 text-[#FF6910]'>{item.number} </span> {item.text}</p>
+                                <div key={item.text}
+                                    style={{
+                                        borderBottom: `${index === listText.length - 1 ? "none" : "1px solid #D8D8D8"}`
+                                    }}
+                                    className='flex items-center text-[#666] text-2xl font-medium py-8 '>
+                                    <p className='pr-12 text-[#FF6910]'>{item.number} </p>
+                                    <p> {item.text}</p>
+                                </div>
                             )
                         })}
                     </div>
-                    <div className='flex gap-2'>
+                    <div className="flex gap-2">
+                        {/* Button Left */}
                         <button style={{
                             border: "1px solid rgba(0, 0, 0, 0.16)"
                         }}
-                            className="bg-[#060606] font-semibold py-4 px-12 rounded-full cursor-pointer">
+                            className="bg-[#060606] font-semibold py-4 px-12 rounded-full cursor-pointer hover:scale-101">
                             <p className="text-md text-white">{joint.card2.textButtonCardLeft}</p>
 
                         </button>
-                        <button style={{
-                            border: "1px solid rgba(0, 0, 0, 0.16)"
-                        }}
-                            className="border border-white font-semibold py-4 px-12 rounded-full cursor-pointer">
-                            <p className="flex justify-center items-center gap-3 text-md">{joint.card2.textButtonCardRight}<FaArrowRight className="font-light" /></p>
 
+                        {/* Button Right */}
+                        <button style={{
+                            border: "1px solid rgba(0, 0, 0, 0.16)",
+                        }}
+                            className="border border-white font-semibold py-4 px-12 rounded-full cursor-pointer hover:shadow-sm">
+                            <p className="flex justify-center items-center gap-3 text-md">{joint.card2.textButtonCardRight}<FaArrowRight className="font-light animate-translateX" /></p>
                         </button>
                     </div>
+
                 </div>
             </div>
         </section >

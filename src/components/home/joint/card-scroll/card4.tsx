@@ -39,22 +39,24 @@ const Card4 = () => {
                         <p className='text-[#000000]/72'>
                             {joint.card4.textCard}
                         </p>
-                        <div className='flex gap-2'>
-                            <button style={{
-                                border: "1px solid rgba(0, 0, 0, 0.16)"
-                            }}
-                                className="bg-[#060606] font-semibold py-4 px-12 rounded-full cursor-pointer">
-                                <p className="text-md text-white"> {joint.card4.textButtonCardLeft}</p>
+                        <div className="flex gap-2">
+                        {/* Button Left */}
+                        <button style={{
+                            border: "1px solid rgba(0, 0, 0, 0.16)"
+                        }}
+                            className="bg-[#060606] font-semibold py-4 px-12 rounded-full cursor-pointer hover:scale-101">
+                            <p className="text-md text-white">{joint.card2.textButtonCardLeft}</p>
 
-                            </button>
-                            <button style={{
-                                border: "1px solid rgba(0, 0, 0, 0.16)"
-                            }}
-                                className="border border-white font-semibold py-4 px-12 rounded-full cursor-pointer">
-                                <p className="flex justify-center items-center gap-3 text-md">{joint.card4.textButtonCardRight}<FaArrowRight className="font-light" /></p>
+                        </button>
 
-                            </button>
-                        </div>
+                        {/* Button Right */}
+                        <button style={{
+                            border: "1px solid rgba(0, 0, 0, 0.16)",
+                        }}
+                            className="border border-white font-semibold py-4 px-12 rounded-full cursor-pointer hover:shadow-sm">
+                            <p className="flex justify-center items-center gap-3 text-md">{joint.card2.textButtonCardRight}<FaArrowRight className="font-light animate-translateX" /></p>
+                        </button>
+                    </div>
                     </div>
 
 

@@ -44,7 +44,7 @@ const Card3 = () => {
                                 {joint.card3.textCardLeft}
                             </p>
                             <button className="border border-white font-semibold py-3 px-6 rounded-3xl cursor-pointer">
-                                <p className="flex justify-center items-center gap-3"> {joint.card3.textButtonCard} <FaArrowRight className="font-light" /></p>
+                                <p className="flex justify-center items-center gap-3"> {joint.card3.textButtonCard} <FaArrowRight className="font-light animate-translateX" /></p>
 
                             </button>
                         </div>
