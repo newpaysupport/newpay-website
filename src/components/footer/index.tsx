@@ -11,10 +11,11 @@ import logoNewpay from '@/images/footer/newpay.svg';
 import logoMark from '@/images/footer/newpay_mark.svg';
 
 import { FooterItem } from '@/interfaces/footer';
+import { useLocale } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 import toast from 'react-hot-toast';
-import { useLocale, useTranslations } from 'use-intl';
+import {useTranslations } from 'use-intl';
 import ToastCustom from '../common/toast';
 import { usePathname } from 'next/navigation';
 

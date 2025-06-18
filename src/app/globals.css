@@ -199,13 +199,144 @@ body {
 /* animation card content */
 .swiper,
 .swiper-slide {
-  width: 100%;
+  width: 100%; 
   height: 100vh;
+}
+/* animation icon money */
+@keyframes pulse_bitcoin {
+  0% {
+    transform: translateY(0);
+    filter: drop-shadow(0 0 30px rgba(247, 147, 26, 0.4));
+  }
+  25% {
+    transform: translateY(-4%);
+    filter: drop-shadow(0 0 35px rgba(247, 147, 26, 0.5));
+  }
+  50% {
+    transform: translateY(-8%);
+    filter: drop-shadow(0 0 40px rgba(248, 124, 0, 0.6));
+  }
+  75% {
+    transform: translateY(-4%);
+    filter: drop-shadow(0 0 50px rgba(248, 124, 0, 0.7));
+  }
+  100% {
+    transform: translateY(-2%);
+    filter: drop-shadow(0 0 60px rgba(204, 90, 0, 0.85));
+  }
 }
 
 
-/* toast */
+@keyframes pulse_eth {
+  0% {
+    transform: translateY(0);
+    filter: drop-shadow(0 0 30px rgba(98, 126, 234, 0.6));
+  }
+  25% {
+    transform: translateY(-4%);
+  }
+  50% {
+    transform: translateY(-8%);
+    filter: drop-shadow(0 0 40px rgba(98, 126, 234, 0.7));
+  }
+  75% {
+    transform: translateY(-4%);
+    filter: drop-shadow(0 0 50px rgba(98, 126, 234, 0.8));
+  }
+  100% {
+    transform: translateY(-2%);
+    filter: drop-shadow(0 0 60px rgba(98, 126, 234, 0.85));
+  }
+}
 
+@keyframes pulse_usd {
+  0% {
+    transform: translateY(0);
+    filter: drop-shadow(0 0 30px rgba(40, 131, 230, 0.4));
+  }
+  25% {
+    transform: translateY(-4%);
+    filter: drop-shadow(0 0 35px rgba(40, 131, 230, 0.5));
+  }
+  50% {
+    transform: translateY(-8%);
+    filter: drop-shadow(0 0 40px rgba(40, 131, 230, 0.6));
+  }
+  75% {
+    transform: translateY(-4%);
+    filter: drop-shadow(0 0 50px rgba(40, 131, 230, 0.7));
+  }
+  100% {
+    transform: translateY(-2%);
+    filter: drop-shadow(0 0 60px rgba(40, 131, 230, 0.85));
+  }
+}
+
+
+@keyframes pulse_tether {
+  0% {
+    transform: translateY(0);
+    filter: drop-shadow(0 0 30px rgba(67, 193, 159, 0.4));
+  }
+  25% {
+    transform: translateY(-4%);
+    filter: drop-shadow(0 0 35px rgba(67, 193, 159, 0.5));
+  }
+  50% {
+    transform: translateY(-8%);
+    filter: drop-shadow(0 0 40px rgba(67, 193, 159, 0.6));
+  }
+  75% {
+    transform: translateY(-4%);
+    filter: drop-shadow(0 0 50px rgba(67, 193, 159, 0.7));
+  }
+  100% {
+    transform: translateY(-2%);
+    filter: drop-shadow(0 0 60px rgba(67, 193, 159, 0.85));
+  }
+}
+
+
+@keyframes pulse_solana {
+  0% {
+    transform: translateY(0);
+    filter: drop-shadow(0 0 30px rgba(169, 83, 234, 0.4));
+  }
+  25% {
+    transform: translateY(-4%);
+    filter: drop-shadow(0 0 35px rgba(169, 83, 234, 0.5));
+  }
+  50% {
+    transform: translateY(-8%);
+    filter: drop-shadow(0 0 40px rgba(169, 83, 234, 0.6));
+  }
+  75% {
+    transform: translateY(-4%);
+    filter: drop-shadow(0 0 50px rgba(169, 83, 234, 0.7));
+  }
+  100% {
+    transform: translateY(-2%);
+    filter: drop-shadow(0 0 60px rgba(169, 83, 234, 0.85));
+  }
+}
+
+.animate-bitcoin {
+  animation: pulse_bitcoin 2s ease-in-out infinite;
+}
+.animate-eth {
+  animation: pulse_eth 2.3s ease-in-out infinite;
+}
+.animate-usd {
+  animation: pulse_usd 2.6s ease-in-out infinite;
+}
+.animate-tether {
+  animation: pulse_tether 2.5s ease-in-out infinite;
+}
+.animate-solana {
+  animation: pulse_solana 2.4s ease-in-out infinite;
+}
+
+/* toast */
 @keyframes go2645569136 {
     0% {
         /* Add your starting properties here */

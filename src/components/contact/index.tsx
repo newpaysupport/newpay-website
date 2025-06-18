@@ -34,7 +34,7 @@ const ContactScreen = () => {
   };
 
   return (
-    <div className="container mx-auto flex justify-center items-center mt-16">
+    <div className="container mx-auto flex justify-center items-center py-25">
       <div className="bg-white rounded-xl flex overflow-hidden">
         {/* Form Section */}
         <div className="w-full md:w-1/2 p-8">

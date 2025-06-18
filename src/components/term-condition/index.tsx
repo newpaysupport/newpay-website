@@ -8,7 +8,6 @@ import { RiArrowRightSLine } from "react-icons/ri";
 import { term as enBlog } from '@/i18n/messages/en.json';
 import { term as ziBlog } from '@/i18n/messages/zi.json';
 
-import bg_gradient from '@/images/term/bg_gradient.png';
 import logo from '@/images/term/newpay_square_mark.svg';
 
 export default function TermsAndConditions() {
@@ -56,26 +55,16 @@ export default function TermsAndConditions() {
               handleSectionClick(item.id);
             }
           }}
-          className={`w-full text-left ${item.isMain
-            ? 'text-white font-medium px-6 py-3'
-            : depth === 1
-              ? `px-6 py-3 ${isActive
-                ? 'text-orange-400 border-l-4 border-orange-400'
-                : 'text-gray-300 hover:text-white hover:bg-gray-800'
-              }`
-              : depth === 2
-                ? `px-8 py-2 border-l-4 ${isActive
-                  ? 'text-orange-400 border-orange-400'
-                  : 'text-gray-400 hover:text-white hover:bg-gray-800'
-                }`
-                : 'text-gray-300 hover:text-white hover:bg-gray-800 px-6 py-3'
+          className={`w-full text-left ${item.isMain ? 'text-[#FFF] font-medium  py-4' : depth === 1
+            ? `px-4 py-3 mb-2 ${isActive ? 'text-white bg-[#FFFFFF]/4 rounded-lg' : 'text-[#AEAEAE] hover:text-[#AEAEAE] hover:bg-[#FFFFFF]/4 hover:rounded-lg '}`
+            : depth === 2 ? `ml-8 px-4 py-3 border-l-2 ${isActive ? 'text-[#E77228] border-[#E77228] font-semibold' : 'text-[#AEAEAE] hover:text-[#AEAEAE] hover:bg-[#FFFFFF]/4'}` : ''
             }`}
         >
           <div className="flex items-center justify-between">
-            <span className="leading-tight text-sm">{item.label}</span>
+            <span className=" text-sm">{item.label}</span>
             {item.hasChildren && (
               <div className="flex-shrink-0 ml-2">
-                {isExpanded ? <MdKeyboardArrowDown size={16} /> : <RiArrowRightSLine size={16} />}
+                {isExpanded ? <MdKeyboardArrowDown size={20} /> : <RiArrowRightSLine size={20} />}
               </div>
             )}
           </div>
@@ -92,23 +81,26 @@ export default function TermsAndConditions() {
   };
 
   return (
-    <div className="bg-black min-h-screen">
+    <div className="bg-black">
       {/* Header */}
-      <div className="relative text-center">
-        <Image src={bg_gradient} alt='bg_gradient' width={400} height={400} className='w-full h-full' />
-        <div className='absolute right-[30%] left-[30%] top-[35%]'>
-          <div className="flex justify-center items-center mb-6">
-            <Image src={logo} alt="NewPay Logo" />
-          </div>
-          <h1 className="text-7xl md:text-5xl font-semibold text-white mb-4">
+      <div className="text-center md:h-[400px] flex justify-center items-center">
+        <div className='m-auto'>
+          <Image src={logo} alt="NewPay Logo" className='mx-auto' />
+          <h1 style={{
+            background: "linear-gradient(93deg, #FFF 21.92%, rgba(255, 255, 255, 0.00) 149.05%)",
+            backgroundClip: "text",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+          }}
+            className="text-7xl md:text-5xl font-semibold text-[#AEAEAE] pt-10">
             {termData.header.title}
           </h1>
         </div>
       </div>
 
-      <div className="container mx-auto flex flex-col lg:flex-row gap-8 mt-6 text-sm">
+      <div className="container mx-auto flex flex-col lg:flex-row gap-8 text-sm">
         {/* Sidebar */}
-        <div className="lg:w-1/4">
+        <div className="lg:w-1/3">
           <div className="rounded-lg overflow-hidden">
             <nav className="space-y-0">
               {sidebarItems.map((item) => renderSidebarItem(item))}
@@ -120,7 +112,7 @@ export default function TermsAndConditions() {
         {/* Main Content */}
         <div className="lg:w-3/4">
           <div className="bg-opacity-40 backdrop-blur-sm rounded-lg p-8">
-            <h2 className="text-3xl font-semibold text-white mb-6">
+            <h2 className="text-3xl font-semibold text-[#FFF] mb-6">
               {termData.mainContent.title}
             </h2>
 
@@ -129,14 +121,14 @@ export default function TermsAndConditions() {
             </p>
 
             <div className="mb-8">
-              <h3 className="text-2xl font-semibold text-white mb-4">
+              <h3 className="text-2xl font-semibold text-[#FFF] mb-4">
                 {mainContent.introSection.title}
               </h3>
 
               {mainContent.introSection.paragraphs.map(p => {
                 return (
                   <p key={p}
-                    className="text-gray-300 mb-4 leading-relaxed text-sm">
+                    className="text-[#AEAEAE] mb-4 leading-relaxed text-sm">
                     {p}
                   </p>
                 );
@@ -145,7 +137,7 @@ export default function TermsAndConditions() {
 
             <div className="space-y-8">
               <section>
-                <h3 className="text-xl font-semibold text-white mb-4">
+                <h3 className="text-xl font-semibold text-[#FFF] mb-4">
                   {generalTerms.title}
                 </h3>
 
@@ -153,17 +145,17 @@ export default function TermsAndConditions() {
                   {
                     generalTerms.sections.map((section, index) => (
                       <div className="text-sm" key={index}>
-                        <h4 className="font-semibold text-white mb-3">{section.title}</h4>
+                        <h4 className="font-semibold text-[#FFF] mb-3">{section.title}</h4>
                         {section.content.map((c, idx) => {
                           return (
-                            <>
-                              <p key={idx} className="text-gray-300 leading-relaxed mb-4">
+                            <div key={idx}>
+                              <p className="text-[#AEAEAE] leading-relaxed mb-4">
                                 {c.paragraph}
                               </p>
                               {c.subItems && c.subItems.map((subItem, subInx) => (
-                                <p key={subInx} className="text-gray-300">{subItem}</p>
+                                <p key={subInx} className="text-[#AEAEAE]">{subItem}</p>
                               ))}
-                            </>
+                            </div>
                           )
                         })}
                       </div>
@@ -175,6 +167,6 @@ export default function TermsAndConditions() {
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 }

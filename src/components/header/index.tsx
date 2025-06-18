@@ -1,5 +1,6 @@
 "use client";
 
+import logo_black from "@/images/header/newpay_logo_black.svg";
 import logo from "@/images/newpay_logo.svg";
 import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
@@ -39,10 +40,10 @@ const Header = () => {
             if (!ticking) {
                 requestAnimationFrame(() => {
                     const currentScrollY = window.scrollY;
-                    
+
                     if (currentScrollY < 10) {
                         setIsVisible(true);
-                        setIsScrolled(false); 
+                        setIsScrolled(false);
                     }
                     // If scrolling down and past 100px, hide the header
                     else if (currentScrollY > lastScrollY && currentScrollY > 100) {
@@ -52,7 +53,7 @@ const Header = () => {
                     // If scrolling up, show the header
                     else if (currentScrollY < lastScrollY) {
                         setIsVisible(true);
-                        setIsScrolled(true); 
+                        setIsScrolled(true);
                     }
 
                     lastScrollY = currentScrollY;
@@ -99,21 +100,37 @@ const Header = () => {
         { key: 'support', href: `/${locale}/support`, label: t('support'), hasDropdown: false }
     ];
 
-    const isActive = (path: string) => pathname === path;
-
-
     const getHeaderStyles = () => {
+        if (isBlogAndContact) {
+            return {
+                background: "white",
+                color: "black",
+                borderBottom: "1px solid rgba(0, 0, 0, 0.1)",
+                fontWeight: '600',
+                zIndex: 50
+            };
+        }
+
         if (isScrolled) {
             return {
                 borderBottom: "1px solid rgba(255, 255, 255, 0.16)",
                 background: "rgba(0, 0, 0, 0.80)",
-                backdropFilter: "blur(8px)"
+                backdropFilter: "blur(8px)",
+                color: "white",
+
             };
         }
+
         return {
-            background: "transparent"
+            background: "transparent",
+            color: "white"
         };
     };
+    const isActive = (path: string) => pathname === path;
+
+    const isBlogAndContact = pathname === `/${locale}/blog` || pathname === `/${locale}/contact`;
+
+    const img_logo = isBlogAndContact ? logo_black : logo;
 
     return (
         <nav
@@ -124,7 +141,7 @@ const Header = () => {
                 ${isVisible ? 'translate-y-0' : 'translate-y-[-100%]'}`}
         >
             <Link href={"/"} className="flex items-center space-x-4">
-                <Image src={logo} alt="NewPay Logo" className="object-contain" />
+                <Image src={img_logo} alt="NewPay Logo" width={120} height={25} className="object-contain" />
             </Link>
 
             <ul className="hidden md:flex justify-center items-center space-x-6">
@@ -168,7 +185,7 @@ const Header = () => {
                 ))}
             </ul>
 
-            <SwitchLanguage locale={locale} switchLocale={switchLocale} t={t} />
+            <SwitchLanguage locale={locale} switchLocale={switchLocale} t={t} isBlogAndContact={isBlogAndContact} />
 
             <button
                 aria-label="menu-btn"

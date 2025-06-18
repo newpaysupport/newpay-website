@@ -14,11 +14,9 @@ const DownloadSection = () => {
 
     return (
         <section className="bg-[#060606]">
-            <div style={{
-                borderRadius: '80px',
-                background: 'rgba(255, 255, 255, 0.04));'
-            }}
-                className="bg-gray-600/10 rounded-4xl py-20 px-40">
+            <div style={{            
+                borderRadius: '80px'}}
+                className="bg-[#FFFFFF]/4 py-20 px-40">
                 <div className="flex md:flex-row flex-col max-w-7xl mx-auto gap-30 justify-center items-center">
                     <Image src={product_content_end} alt="Gift Icon" width={540} height={540} />
                     <div className='md:p-0 p-6 w-1/2'>
