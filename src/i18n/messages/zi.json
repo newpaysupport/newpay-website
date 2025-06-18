@@ -112,9 +112,7 @@
         ],
         "helpCenter": {
             "title": "关注我们，抢先获取新品、功能更新及专属折扣信息",
-            "amountUsers": "120,438+ 用户",
-            "enterEmail": "输入您的邮箱",
-            "sendNow": "发送"
+            "buttonText": "发送"
         }
     },
     "blog": {
