@@ -13,7 +13,10 @@ import ebay from '@/images/home/consume/ebay.svg'
 import mobileUser from '@/images/home/consume/mobile-user.png'
 import nextflix from '@/images/home/consume/nextflix.svg'
 import spotify from '@/images/home/consume/spotify.svg'
-import { useTranslations } from 'use-intl'
+import { useLocale, useTranslations } from 'use-intl'
+import Link from 'next/link'
+import toast from 'react-hot-toast'
+import ToastCustom from '../common/toast'
 
 const HomeScreen = () => {
 
@@ -23,6 +26,8 @@ const HomeScreen = () => {
     const heroRef = useRef(null);
     const [scrollProgress, setScrollProgress] = useState(0);
     const t = useTranslations("home");
+    const locale = useLocale();
+
     const TabCards = [
         {
             id: 1,
@@ -97,8 +102,12 @@ const HomeScreen = () => {
                         <p className='text-[#848484] text-base font-medium -tracking-[0.24px] text-center mb-8'>{t("descHero")}</p>
 
                         <div className='flex items-center justify-center gap-x-4'>
-                            <BtnPrimary text={t("btnGetApp")} variant={'primary-lighter'} />
-                            <BtnPrimary text={t("btnCreateAccount")} variant={'surface-3'} />
+                            <Link href={`${locale}/download`}>
+                                <BtnPrimary text={t("btnGetApp")} variant={'primary-lighter'} />
+                            </Link>
+                            <BtnPrimary onClick={() => {
+                                toast.custom(<ToastCustom type='warning' />)
+                            }} text={t("btnCreateAccount")} variant={'surface-3'} />
                         </div>
                     </div>
                 </div>
