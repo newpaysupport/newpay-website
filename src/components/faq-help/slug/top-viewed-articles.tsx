@@ -34,13 +34,15 @@ const TopViewedArticles = () => {
                     {topArticles.map((item) => {
                         const isActive = item.id === faqActive;
                         return (
-                            <div onClick={() => handleOnclickSetFAQ(item.id)} key={item.id} className={`${isActive && "bg-white/4 py-2"} rounded-lg`}>
+                            <div onClick={() => handleOnclickSetFAQ(item.id)} key={item.id} className={`${isActive && "bg-white/4 py-4"} rounded-lg`}>
                                 <div className={`group flex items-center justify-between py-2 px-6 cursor-pointer rounded-lg transition-all ease-linear duration-100 ${!isActive && "hover:bg-white/4"}`}>
                                     <p className={`text-[#848484] text-base font-normal -tracking-[0.24px] ${!isActive ? "group-hover:text-white" : "text-white"}`}>{item.question}</p>
                                     <Image src={arrowRight} alt='icon' className={`${isActive ? "-rotate-90" : ""} transition-all ease-linear duration-150`} />
                                 </div>
-                                {isActive && <div style={{ whiteSpace: "pre-line" }} className='text-[#848484] text-sm font-normal py-4 px-6'>
-                                    {item.answer}
+                                {isActive && <div className='text-[#848484] text-sm font-normal py-4 px-6 flex flex-col gap-y-4'>
+                                    {item.answer.split('\n').map((item, index) => {
+                                        return <span className='' key={index}>{item}</span>
+                                    })}
                                 </div>}
                             </div>
 

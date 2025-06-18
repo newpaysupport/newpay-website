@@ -805,6 +805,10 @@
                         "answer": "We understand how frustrating that can be — linking your card should be quick and easy.\nBut don't worry, here are a few common reasons that might be causing the issue:\n▶ The card hasn't been activated or funded yet; please make sure your card is activated in the NEWPAY app and that you've transferred some funds to it\n▶ Some wallets try to make a small verification charge when linking a card — if your balance is zero, the process might fail\n▶ Card details were entered incorrectly; it's easy to overlook small details. Be sure to double-check your card number, expiration date (MM/YY), and CVV\n▶ Your device or region may not be supported; Make sure your phone's OS version and region settings are compatible with Apple Pay or Google Pay\n▶ Network issues can interfere sometimes; the connection just isn't cooperating. Try switching to a different network or restarting your phone\nIf you've gone through all these checks and it's still not working, feel free to take a screenshot of the error and contact our support team — we're here to help!"
                     },
                     {
+                        "question": "I already have one virtual card — can I get another?",
+                        "answer": "Of course, You can apply for multiple cards, but please note that each user can hold up to 5 cards in total, including virtual cards, physical cards, and gift cards.\nOnce you reach the card limit, it will no longer be possible to apply for new cards, and currently, disabling or deleting existing cards does not free up card slots.\nWe recommend organizing your existing cards based on different needs to keep things clear and efficient.\nIf you have any questions, feel free to reach out to us anytime!"
+                    },
+                    {
                         "question": "Can I use my physical card overseas? Will it be blocked?",
                         "answer": "Yes, definitely! NewPay physical cards support global use in countries and regions where Visa or Mastercard is accepted.\nThis includes online payments, in-store purchases, and ATM withdrawals.\nThere are no country restrictions on our end, but please note:\n▶ Ensure your card is activated and has sufficient balance\n▶ Some regions may have ATM or merchant limitations due to local policies or systems"
                     },
@@ -827,6 +831,10 @@
                 "desc": "NewPay App Download, Account Registration, Identity Verification",
                 "slug": "opening-your-account",
                 "faqs": [
+                    {
+                        "question": "Register Account",
+                        "answer": "Visit the NEWPAY official website or download the NEWPAY app.\nClick \"Sign Up\" and fill in the following information:\nEmail address\nEnter the Invitation Code (User UID)\nRead and agree to the Registration Agreement.\nSubmit your registration by clicking \"Next\".\nComplete email or SMS code verification.\nSet your login password."
+                    },
                     {
                         "question": "What features do I get after completing KYC? Is it really required?",
                         "answer": "Completing KYC unlocks all of NEWPAY’s features, including:\nVirtual and physical card activation/Gift card use/Transactions,/withdrawals/statements.\nKYC is mandatory for security, regulatory compliance, and fraud prevention. We appreciate your cooperation in helping us maintain a safe environment."
@@ -875,6 +883,10 @@
                         "answer": "If the payment page didn’t redirect or complete, it doesn’t always mean the transaction succeeded or failed.Here’s what you should do:\nCheck the [Transaction History] in the NewPay app to confirm if a payment was recorded.\nLog in to the merchant’s platform to see if the order was created or marked as paid.\nMake sure your network is stable when making payments to avoid errors or duplicate attempts"
                     },
                     {
+                        "question": "Can I pay in installments when spending?",
+                        "answer": "NewPay cards are prepaid, not credit cards — so installment payments aren't supported.\nAll purchases are charged based on the available balance on your card. If there isn't enough to cover the full amount, the payment will fail.\nWe recommend checking your card balance before making large purchases."
+                    },
+                    {
                         "question": "Do I get notified after each payment?",
                         "answer": "Yes, NewPay sends instant alerts via app notifications whenever you make a payment.\nTo stay informed of your spending activity, please make sure app notifications are enabled on your device."
                     }
@@ -900,6 +912,10 @@
                     {
                         "question": "I withdrew USDT to my wallet, but it hasn’t arrived.",
                         "answer": "Once your withdrawal request is submitted, it enters the blockchain network for confirmation.\nTransfer times can vary depending on network congestion — especially during peak periods."
+                    },
+                    {
+                        "question": "Why do I have to enable 2FA when withdrawing?",
+                        "answer": "To protect your account and funds, NEWPAY requires Two-Factor Authentication (2FA) for withdrawals and other sensitive actions.\nEven if someone knows your password, 2FA helps prevent unauthorized access to your money.\nWe recommend using the Google Authenticator app — setup takes just a few minutes and greatly improves your security."
                     },
                     {
                         "question": "My physical card has money, but the ATM says the balance is 0?",
@@ -933,8 +949,16 @@
                         "answer": "Protecting your account credentials is the first step toward ensuring the safety of your funds.\n▲ Never share your login credentials\nDo not share your login email, password, or verification codes with anyone — not even NewPay staff. If you receive any suspicious requests, report them to us immediately.\n▲ Enable Two-Factor Authentication (2FA)\nStrengthen your account security by enabling 2FA. This adds an additional layer of protection by requiring a one-time code when logging in. You can activate this feature in Settings > Security Settings within the NewPay app.\n▲ Do not reuse your NewPay password on other platforms\nUse a strong, unique password for your NewPay account. Reusing passwords across platforms increases your exposure to credential breaches and potential fraud."
                     },
                     {
+                        "question": "Official Access & Scam Prevention",
+                        "answer": "Always access NewPay through official channels and stay alert to phishing or impersonation attempts.\n▲Only use the official NewPay app and website\nDownload the NewPay app exclusively from the App Store or Google Play, and access services through our official website: www.newpay.org. Avoid clicking on unknown links or scanning unverified QR codes.\n▲Be cautious of scam messages and fake support accounts\nNewPay will never contact you via private messages on social media to request personal information. If you encounter suspicious accounts claiming to represent NewPay, do not engage and report them to us."
+                    },
+                    {
                         "question": "Device & Network Safety",
                         "answer": "Use secure devices and networks to prevent unauthorized access and data interception.\n▲ Avoid logging in through public Wi-Fi\nPublic networks can expose your data to malicious interception. Always log in to NewPay from a secure, trusted network — especially when performing sensitive actions like transfers or withdrawals.\n▲ Keep your app up to date\nEnsure you are using the latest version of the NewPay app to benefit from security patches and performance improvements. Updates often include critical fixes that protect you from emerging threats."
+                    },
+                    {
+                        "question": "Card & Transaction Safety",
+                        "answer": "Monitoring your card activity regularly helps detect and prevent unauthorized transactions.\n▲Freeze your card if you notice suspicious activity\nIf you detect any unfamiliar transactions, use the in-app freeze function to instantly block your card and prevent further use. Then contact our support team for assistance.\n▲Review your transaction history frequently\nWe recommend checking your transaction records on a weekly basis to verify all activity. If you notice anything unusual, report it to us promptly."
                     },
                     {
                         "question": "Account Deletion Notice",

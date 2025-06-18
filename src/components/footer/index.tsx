@@ -17,6 +17,7 @@ import Link from 'next/link';
 import toast from 'react-hot-toast';
 import {useTranslations } from 'use-intl';
 import ToastCustom from '../common/toast';
+import { usePathname } from 'next/navigation';
 
 
 const socials = [
@@ -49,6 +50,10 @@ const Footer = () => {
 
     const t = useTranslations("footer");
     const locale = useLocale();
+    const pathname = usePathname();
+    const currentLocale = pathname.split('/')[1]
+
+    console.log('currentLocale', currentLocale)
 
     const handleToastComingSoon = () => {
         toast.custom(<ToastCustom type='warning' />)
@@ -99,7 +104,7 @@ const Footer = () => {
 
                 <div className='text-[#848484] text-base font-normal -tracking-[0.24px] flex items-center justify-between pt-10 border-t-[1px] border-white/8'>
                     <span>{t('copyright')}</span>
-                    <Link href={`/${locale}/term`}>{t('terms')}</Link>
+                    <Link href={`/${currentLocale}/term`}>{t('terms')}</Link>
                 </div>
             </div>
         </div>
