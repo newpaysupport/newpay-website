@@ -11,6 +11,7 @@ import logoNewpay from '@/images/footer/newpay.svg';
 import logoMark from '@/images/footer/newpay_mark.svg';
 
 import { FooterItem } from '@/interfaces/footer';
+import { useLocale } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useTranslations } from 'use-intl';
@@ -82,7 +83,7 @@ const socials = [
 const Footer = () => {
 
     const t = useTranslations("footer");
-
+    const locale = useLocale();
 
     return (
         <div className='bg-[#060606] p-20'>
@@ -129,7 +130,7 @@ const Footer = () => {
 
                 <div className='text-[#848484] text-base font-normal -tracking-[0.24px] flex items-center justify-between pt-10 border-t-[1px] border-white/8'>
                     <span>{t('copyright')}</span>
-                    <Link href={''}>{t('terms')}</Link>
+                    <Link href={`/${locale}/term`}>{t('terms')}</Link>
                 </div>
             </div>
         </div>
