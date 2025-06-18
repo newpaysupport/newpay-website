@@ -467,11 +467,11 @@
                 "items": [
                     {
                         "label": "Joint",
-                        "link": "/en/joint"
+                        "link": "/joint"
                     },
                     {
                         "label": "Personal",
-                        "link": "/en"
+                        "link": ""
                     }
                 ]
             },
@@ -489,7 +489,7 @@
                 "items": [
                     {
                         "label": "Secure Custodian",
-                        "link": "/en/secure"
+                        "link": "/secure"
                     }
                 ]
             },
@@ -498,7 +498,7 @@
                 "items": [
                     {
                         "label": "About NewPay",
-                        "link": "/en/about-us"
+                        "link": "/about-us"
                     },
                     {
                         "label": "Blog",
@@ -511,15 +511,15 @@
                 "items": [
                     {
                         "label": "Contact Us",
-                        "link": ""
+                        "link": "/contact"
                     },
                     {
                         "label": "FAQ",
-                        "link": "/en/faq-help"
+                        "link": "/faq-help"
                     },
                     {
                         "label": "Download App",
-                        "link": "/en/download"
+                        "link": "/download"
                     }
                 ]
             }

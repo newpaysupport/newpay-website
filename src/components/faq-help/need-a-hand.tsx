@@ -12,8 +12,8 @@ const NeedAHand = () => {
     const t = useTranslations("faqHelp.needAHand");
 
     return (
-        <div className='h-[400px] relative'>
-            <Image src={bgGradient} alt='' fill />
+        <div className='h-[400px] relative bg-[#060606]'>
+            {/* <Image src={bgGradient} alt='' fill /> */}
             <div className='relative z-[1] container mx-auto flex flex-col justify-end items-center pb-10 w-full h-full'>
                 <p className='textTitleClip text-[72px] font-semibold'>{t("title")}</p>
                 <p className='text-lg text-[#aeaeae] font-medium mt-3 mb-10'>{t("desc")}</p>

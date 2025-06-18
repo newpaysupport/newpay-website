@@ -519,11 +519,11 @@
                 "items": [
                     {
                         "label": "联系我们",
-                        "link": ""
+                        "link": "/contact"
                     },
                     {
                         "label": "常见问题",
-                        "link": ""
+                        "link": "/faq-help"
                     },
                     {
                         "label": "下载APP",

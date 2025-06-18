@@ -89,7 +89,7 @@ const Footer = () => {
                                 <h4 className='text-white text-sm font-semibold mb-6'>{menu.title}</h4>
                                 <ul>
                                     {menu.items.map((item, index) => {
-                                        return <Link href={`${item.link}`} key={index} className='mb-2 block'>
+                                        return <Link href={`/${currentLocale}${item.link}`} key={index} className='mb-2 block'>
                                             <li className='text-[#848484] text-sm font-semibold'>{item.label}</li>
                                         </Link>
                                     })}
