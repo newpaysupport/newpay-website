@@ -15,7 +15,7 @@ import { useLocale } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 import toast from 'react-hot-toast';
-import { useLocale, useTranslations } from 'use-intl';
+import {useTranslations } from 'use-intl';
 import ToastCustom from '../common/toast';
 
 
