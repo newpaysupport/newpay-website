@@ -44,7 +44,7 @@ const CardContent = () => {
                             </p>
                             <Link href={`/${locale}/contact`}>
                                 <button className="border border-white font-semibold py-3 px-6 rounded-full cursor-pointer md:w-[220px] md:h-[56px] group">
-                                    <p className="flex justify-center items-center gap-3"> {joint.cardContent.textButtonCard} <FaArrowRight className="font-light group-hover:translate-x-1 transition ease-in-out" /></p>
+                                    <p className="flex justify-center items-center gap-3"> {joint.cardContent.textButtonCard} <FaArrowRight className="font-light group-hover:translate-x-1.5 transition ease-in-out animate-translateX" /></p>
                                 </button>
                             </Link>
                         </div>
@@ -68,7 +68,7 @@ const CardContent = () => {
                     {/* Overlay card at the bottom */}
                     <div style={{
                         background: "rgba(255, 255, 255, 0.20)",
-                        backdropFilter: "blur(12px)"
+                        backdropFilter: "blur(24px)"
                     }}
                         className="absolute bottom-6 left-6 right-6 rounded-3xl p-4 flex items-center justify-between">
                         <div className="flex items-center">

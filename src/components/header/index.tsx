@@ -113,11 +113,9 @@ const Header = () => {
 
         if (isScrolled) {
             return {
-                borderBottom: "1px solid rgba(255, 255, 255, 0.16)",
                 background: "rgba(0, 0, 0, 0.80)",
                 backdropFilter: "blur(8px)",
                 color: "white",
-
             };
         }
 
@@ -178,14 +176,14 @@ const Header = () => {
                                 className={`md:w-[220vh] absolute top-[full] transform -translate-x-[50%] pt-4 z-50 ${link.key === 'payment' ? 'left-10/12 ' : 'left-[2%]'}`}
                             >
                                 {link.key === 'payment' ?
-                                    (<PaymentDropdown link={link} locale={locale} />) : <CompanyDropdown link={link} locale={locale} />}
+                                    (<PaymentDropdown link={link} locale={locale} isBlogAndContact={isBlogAndContact} />) : <CompanyDropdown link={link} locale={locale} isBlogAndContact={isBlogAndContact} isScrolled={isScrolled} />}
                             </div>
                         )}
                     </li>
                 ))}
             </ul>
 
-            <SwitchLanguage locale={locale} switchLocale={switchLocale} t={t} isBlogAndContact={isBlogAndContact} />
+            <SwitchLanguage locale={locale} switchLocale={switchLocale} t={t} isBlogAndContact={isBlogAndContact} isVisible={isVisible} />
 
             <button
                 aria-label="menu-btn"

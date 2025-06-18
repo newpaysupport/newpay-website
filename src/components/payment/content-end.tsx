@@ -77,9 +77,9 @@ const ContentEnd = () => {
                     </div>
                 </div>
                 <div className="relative md:w-[700px] md:h-[680px]">
-                    <Image src={img_top_right} alt="Top Right Decoration" className="absolute top-0 right-0 z-10" />
-                    <Image src={img_bottom_left} alt="Bottom Left Decoration" className="absolute bottom-[11%] left-[13%] z-20" />
-                    <Image src={img_center} alt="Center Decoration" className="absolute inset-0 m-auto z-30" />
+                    <Image src={img_top_right} alt="Top Right Decoration" className="absolute top-0 right-0 z-10 animate-translateY " />
+                    <Image src={img_bottom_left} alt="Bottom Left Decoration" className="absolute bottom-[11%] left-[13%] z-20 animate-translateY " />
+                    <Image src={img_center} alt="Center Decoration" className="absolute inset-0 m-auto z-30 " />
 
 
 

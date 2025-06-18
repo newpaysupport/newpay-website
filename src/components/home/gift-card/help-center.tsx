@@ -9,7 +9,7 @@ import Link from 'next/link';
 const HelpCenter = () => {
     const t = useTranslations('home');
     const locale = useLocale();
-
+    
     return (
         <>
             <section className='py-[160px] bg-[#060606]'>

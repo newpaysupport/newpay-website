@@ -12,6 +12,7 @@ import { joint as ziBlog } from '@/i18n/messages/zi.json';
 import { useLocale } from 'next-intl';
 import Image from "next/image"
 import { useTranslations } from 'use-intl';
+import Link from 'next/link';
 const Card3 = () => {
     const locale = useLocale();
     const joint = locale === 'en' ? enBlog : ziBlog;
@@ -31,7 +32,7 @@ const Card3 = () => {
                         </p>
                     </div>
 
-                    <div className="bg-[#FF6910] rounded-3xl p-6 lg:p-8 text-white max-w-xl gap-10 shadow-xl flex">
+                    <div className="bg-[#FF6910] rounded-3xl p-4 text-white shadow-xl flex md:w-[500px] md:h-[230px]">
                         <Image
                             src={card1_img1}
                             alt="Person holding a card"
@@ -39,14 +40,15 @@ const Card3 = () => {
                             height={200}
                             className="rounded-lg object-cover w-[200px] h-[200px]"
                         />
-                        <div className="flex flex-col justify-between">
+                        <div className="flex flex-col justify-between px-8">
                             <p className="text-md">
                                 {joint.card3.textCardLeft}
                             </p>
-                            <button className="border border-white font-semibold py-3 px-6 rounded-3xl cursor-pointer">
-                                <p className="flex justify-center items-center gap-3"> {joint.card3.textButtonCard} <FaArrowRight className="font-light" /></p>
-
-                            </button>
+                            <Link href={`/${locale}/contact`}>
+                                <button className="border border-white font-semibold py-3 px-11 rounded-full cursor-pointer">
+                                    <p className="flex justify-center items-center gap-2.5 text-md"> {joint.card3.textButtonCard} <FaArrowRight className="font-light animate-translateX" /></p>
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -56,10 +58,10 @@ const Card3 = () => {
                     <Image
                         src={img_right}
                         alt="Payment device being used"
-                        className="rounded-3xl h-full object-cover object-center"
+                        className="rounded-3xl md:h-[610px] md:w-[530px] object-cover object-center mx-auto"
                     />
                     <div
-                        className="absolute top-[5%] left-[-15%] flex items-center justify-between text-white rounded-2xl p-2 sm:p-3 md:p-4 bg-[#FFF] shadow-md w-full max-w-xs">
+                        className="absolute top-[5%] left-[-10%] flex items-center justify-between text-white rounded-2xl p-2 sm:p-3 md:p-4 bg-[#FFF] shadow-md w-full max-w-xs">
                         <div className="flex items-center space-x-5">
                             <div className="flex-shrink-0">
                                 <Image src={icon_gift} alt="Gift Icon" width={50} height={50} />
@@ -74,8 +76,8 @@ const Card3 = () => {
                         </div>
                     </div>
 
-                    <div 
-                        className="absolute bottom-[30%] right-[-15%] flex items-center justify-between text-white rounded-2xl p-2 sm:p-3 md:p-4 bg-[#FFF] shadow-md w-full max-w-xs">
+                    <div
+                        className="absolute bottom-[30%] right-[-5%] flex items-center justify-between text-white rounded-2xl p-2 sm:p-3 md:p-4 bg-[#FFF] shadow-md w-full max-w-xs">
                         <div className="flex items-center space-x-5">
                             <div className="flex-shrink-0">
                                 <Image src={arrow_right} alt="Gift Icon" width={50} height={50} className='text-[#FF6910]' />
@@ -90,8 +92,8 @@ const Card3 = () => {
                         </div>
                     </div>
 
-                    <div 
-                        className="absolute bottom-[5%] left-[-8%] flex items-center justify-between text-white rounded-2xl p-2 sm:p-3 md:p-4 bg-[#FFF] shadow-md w-full max-w-xs">
+                    <div
+                        className="absolute bottom-[5%] left-[-5%] flex items-center justify-between text-white rounded-2xl p-2 sm:p-3 md:p-4 bg-[#FFF] shadow-md w-full max-w-xs">
                         <div className="flex items-center space-x-5">
                             <div className="flex-shrink-0">
                                 <Image src={arrow_left} alt="Gift Icon" width={50} height={50} />

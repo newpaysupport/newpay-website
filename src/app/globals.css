@@ -353,3 +353,37 @@ body {
 .toast-animation {
     animation: go2645569136 0.35s cubic-bezier(0.21, 1.02, 0.73, 1) 0s 1 normal forwards;
 }
+
+/* animation translate x */
+@keyframes translateX {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20%);
+  }
+  75% {
+    transform: translateX(10%);
+  }
+}
+.animate-translateX {
+  animation: translateX 1s ease-in-out infinite;
+}
+/* animation translate y */
+@keyframes translateY {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-translateY {
+  animation: translateY 1.8s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+  will-change: transform;
+}
+
