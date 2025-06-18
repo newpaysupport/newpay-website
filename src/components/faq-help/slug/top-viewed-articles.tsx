@@ -33,7 +33,6 @@ const TopViewedArticles = () => {
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-4'>
                     {topArticles.map((item) => {
                         const isActive = item.id === faqActive;
-                        console.log(item.answer.split('\n'))
                         return (
                             <div onClick={() => handleOnclickSetFAQ(item.id)} key={item.id} className={`${isActive && "bg-white/4 py-4"} rounded-lg`}>
                                 <div className={`group flex items-center justify-between py-2 px-6 cursor-pointer rounded-lg transition-all ease-linear duration-100 ${!isActive && "hover:bg-white/4"}`}>
