@@ -9,42 +9,49 @@ import product from '@/images/download/product.png'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
+import toast from 'react-hot-toast'
+import ToastCustom from '../common/toast'
 
 const Banner = () => {
 
     const t = useTranslations("download.banner");
 
+    const handleToast = () => {
+        toast.custom(<ToastCustom type='warning' />)
+    }
+
+
     return (
         <div className='bg-[#060606] pt-[120px]'>
-            <div className='container mx-auto'>
+            <div className='container mx-auto lg:px-[120px]'>
                 <div>
                     <p className='text-[#FF6910] text-xl font-semibold text-center opacity-0 fadeInUp-no-delay'>{t("heading")}</p>
                     <div className='textTitleClip text-[72px] text-center font-semibold' >
                         <span>{t("title1")}</span> <br />
-                        <p className='flex justify-center items-center gap-x-2'>
+                        <div className='flex justify-center items-center gap-x-2'>
                             <span>{t("title2")}</span>
                             <figure className='min-w-[72px] w-[72px] h-[72px]'>
                                 <Image src={newpayMask} alt='' />
                             </figure>
                             <span>{t("title3")}</span>
-                        </p>
+                        </div>
                     </div>
                     <p className='my-10 text-[#aeaeae] text-lg font-medium text-center opacity-0 fadeInUp-delay-03'>
                         {t("desc1")} <br />
                         {t("desc2")}
                     </p>
                     <div className='flex items-center justify-center gap-x-6 opacity-0 fadeInUp-delay-06'>
-                        <Link href={"/"}>
-                            <button
-                                className='hover:bg-[#212121] btnCta transition-all ease-linear duration-300 w-[287px] h-[84px] py-[10px] rounded-2xl flex items-center justify-center cursor-pointer'>
-                                <Image src={appStore} alt='' />
-                            </button>
-                        </Link>
-                        <Link href={"/"}>
-                            <button className='hover:bg-[#212121] btnCta transition-all ease-linear duration-300 w-[287px] h-[84px] py-[10px] rounded-2xl flex items-center justify-center cursor-pointer'>
-                                <Image src={googleStore} alt='' />
-                            </button>
-                        </Link>
+                        <button
+                            onClick={handleToast}
+                            className='hover:bg-[#212121] btnCta transition-all ease-linear duration-300 w-[287px] h-[84px] py-[10px] rounded-2xl flex items-center justify-center cursor-pointer'>
+                            <Image src={appStore} alt='' />
+                        </button>
+
+                        <button
+                            onClick={handleToast}
+                            className='hover:bg-[#212121] btnCta transition-all ease-linear duration-300 w-[287px] h-[84px] py-[10px] rounded-2xl flex items-center justify-center cursor-pointer'>
+                            <Image src={googleStore} alt='' />
+                        </button>
                     </div>
                 </div>
 
