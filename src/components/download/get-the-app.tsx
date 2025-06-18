@@ -5,11 +5,12 @@ import iconMark from '@/images/download/newpay_mark.svg';
 import newpayCard from '@/images/download/newpayCard.png';
 
 import Image from 'next/image';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 const GetTheApp = () => {
 
     const t = useTranslations("download.getApp");
+    const locale = useLocale();
 
 
     return (
@@ -23,7 +24,7 @@ const GetTheApp = () => {
                                 {t("get")} <br />
                                 {t("theApp")}
                             </p>
-                            <Image src={iconMark} alt='' className='absolute top-[3px] left-[134px]' />
+                            <Image src={iconMark} alt='' className={`absolute top-[3px] ${locale === 'zi' ? "left-[160px]" : "left-[134px]"}`} />
                         </div>
 
                         <div>
