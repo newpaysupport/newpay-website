@@ -40,7 +40,7 @@ const VideoBackground = () => {
                 {/* content right */}
                 <div style={{
                     background: "rgba(255, 255, 255, 0.04))",
-                    backdropFilter: "blur(20px)"
+                    backdropFilter: "blur(40px)"
                 }}
                     className='absolute right-[10%] bottom-[10%] flex flex-col gap-2 w-[360px] p-6 rounded-3xl'
                 >
