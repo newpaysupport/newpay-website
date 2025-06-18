@@ -60,10 +60,10 @@ const PaymentScreen = () => {
                         backgroundClip: 'text',
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: "transparent"
-                    }} className="fadeInUp-no-delay md:text-5xl md:my-6 md:leading-14 text-xl my-4 text-white leading-8">
+                    }} className="fadeInUp-no-delay md:text-5xl md:my-6 md:leading-14 my-4 text-white leading-8">
                         {heroSection.title}
                     </h1>
-                    <button className="fadeInUp-no-delay rounded-full md:py-3 md:px-4 md:text-sm p-2 text-xs text-white cursor-pointer bg-orange-500 hover:bg-orange-600">{heroSection.buttonText}</button>
+                    <button className="fadeInUp-no-delay rounded-full md:py-4 md:px-8 text-md font-semibold p-2 text-white cursor-pointer bg-orange-500 hover:bg-orange-600">{heroSection.buttonText}</button>
                 </div>
             </div>
 
