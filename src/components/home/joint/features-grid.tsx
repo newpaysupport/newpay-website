@@ -13,21 +13,21 @@ const FeaturesGrid = () => {
     const locale = useLocale();
     const joint = locale === 'en' ? enBlog : ziBlog;
     const gridRef = useRef(null);
-    const isInView = useInView(gridRef, { once: true, amount: 0.3 });
+    const isInView = useInView(gridRef, { once: false, amount: 0.5 });
 
     const iconVariants: Variants = {
         hidden: { opacity: 0, x: -20, scale: 0.8 },
         visible: (index: number) => ({
-          opacity: 1,
-          x: 0,
-          scale: 1,
-          transition: {
-            duration: 0.8,
-            ease: 'easeOut',
-            delay: index * 0.2,
-          },
+            opacity: 1,
+            x: 0,
+            scale: 1,
+            transition: {
+                duration: 0.8,
+                ease: 'easeOut',
+                delay: index * 0.01,
+            },
         }),
-      };
+    };
 
     return (
         <div className="relative">
