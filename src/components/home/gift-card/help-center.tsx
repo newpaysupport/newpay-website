@@ -14,7 +14,7 @@ const HelpCenter = () => {
         <>
             <section className='py-[160px] bg-[#060606]'>
                 <div
-                    className="mx-auto md:w-[1200px] relative overflow-hidden transition-transform duration-300 hover:scale-101 bg-[#060606]"
+                    className="mx-auto md:w-[1200px] relative overflow-hidden transition-transform duration-300 hover:scale-101"
                     style={{
                         padding: '64px',
                         borderRadius: '40px',
@@ -23,13 +23,6 @@ const HelpCenter = () => {
                         backdropFilter: 'blur(100px)',
                     }}
                 >
-                    {/* Background gradient overlay */}
-                    <div style={{
-                        background: "linear-gradient(292deg, rgba(255, 143, 77, 0.20) 2.5%, rgba(255, 143, 77, 0.00) 37.03%), linear-gradient(109deg, rgba(255, 143, 77, 0.20) -3.64%, rgba(255, 143, 77, 0.00) 36.61%), bg-[#FFFFFF]/4, rgba(255, 255, 255, 0.04);",
-                        border: "2px solid rgba(255, 183, 0, 0.00);"
-                    }}
-                        className="absolute inset-0 rounded-24" />
-
                     {/* Content */}
                     <div className="relative flex items-end justify-between gap-8">
                         <div className="flex-1 space-y-8">
@@ -42,9 +35,6 @@ const HelpCenter = () => {
                         <div className="space-y-4">
                             <Link href={`/${locale}/contact`}>
                                 <button
-                                    style={{
-                                        background: "linear-gradient(90deg, rgba(235, 169, 0, 0.00) 0%, rgba(235, 169, 0, 0.20) 100%), #FFF;"
-                                    }}
                                     className="md:w-[410px] md:h-[55px] cursor-pointer text-lg font-bold bg-white hover:from-orange-600 hover:to-orange-500 text-black py-3 px-6 rounded-full transition-all duration-200 flex items-center justify-center gap-2 shadow-lg hover:shadow-orange-500/25 group"
                                 >
                                     {t('helpCenter.buttonText')}

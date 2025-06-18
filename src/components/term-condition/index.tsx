@@ -148,14 +148,14 @@ export default function TermsAndConditions() {
                         <h4 className="font-semibold text-[#FFF] mb-3">{section.title}</h4>
                         {section.content.map((c, idx) => {
                           return (
-                            <>
-                              <p key={idx} className="text-[#AEAEAE] leading-relaxed mb-4">
+                            <div key={idx}>
+                              <p className="text-[#AEAEAE] leading-relaxed mb-4">
                                 {c.paragraph}
                               </p>
                               {c.subItems && c.subItems.map((subItem, subInx) => (
                                 <p key={subInx} className="text-[#AEAEAE]">{subItem}</p>
                               ))}
-                            </>
+                            </div>
                           )
                         })}
                       </div>

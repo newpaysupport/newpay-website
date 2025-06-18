@@ -41,7 +41,7 @@ const Card2 = () => {
                     <div className=''>
                         {listText.map((item, index) => {
                             return (
-                                <p style={{
+                                <p key={item.text} style={{
                                     borderBottom: `${index === listText.length - 1 ? "none" : "1px solid #D8D8D8"}`
                                 }}
                                     className='text-[#666] text-2xl font-medium py-8'><span className='pr-12 text-[#FF6910]'>{item.number} </span> {item.text}</p>
