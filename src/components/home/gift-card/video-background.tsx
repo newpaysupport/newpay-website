@@ -7,10 +7,15 @@ import icon_gift from '@/images/home/giftcard/icon_gift.svg';
 import arrow_left from '@/images/home/giftcard/arrow_left.svg';
 import arrow_right from '@/images/home/giftcard/arrow_right.svg';
 import { useTranslations } from 'use-intl';
+import ToastCustom from '@/components/common/toast';
+import toast from 'react-hot-toast';
 
 const VideoBackground = () => {
 
     const t = useTranslations("home");
+    const handleToast = () => {
+        toast.custom(<ToastCustom type='warning' />)
+    }
     return (
         <section className='bg-[#060606] pt-[120px]'>
             <div className='container mx-auto relative'>
@@ -100,7 +105,9 @@ const VideoBackground = () => {
                             <p className="text-xs font-semibold">– 50.50 USDT</p>
                         </div>
                     </div>
-                    <button className='text-white bg-[#FF6910] text-md p-4 rounded-full cursor-pointer mt-4'>{t('giftCard.contentRight.button')}</button>
+                    <button 
+                        onClick={handleToast}
+                        className='text-white bg-[#FF6910] text-md p-4 rounded-full cursor-pointer mt-4'>{t('giftCard.contentRight.button')}</button>
                 </div>
             </div>
         </section>
