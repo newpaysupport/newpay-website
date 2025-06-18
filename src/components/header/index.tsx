@@ -178,14 +178,14 @@ const Header = () => {
                                 className={`md:w-[220vh] absolute top-[full] transform -translate-x-[50%] pt-4 z-50 ${link.key === 'payment' ? 'left-10/12 ' : 'left-[2%]'}`}
                             >
                                 {link.key === 'payment' ?
-                                    (<PaymentDropdown link={link} locale={locale} />) : <CompanyDropdown link={link} locale={locale} />}
+                                    (<PaymentDropdown link={link} locale={locale} isBlogAndContact={isBlogAndContact}/>) : <CompanyDropdown link={link} locale={locale} isBlogAndContact={isBlogAndContact}/>}
                             </div>
                         )}
                     </li>
                 ))}
             </ul>
 
-            <SwitchLanguage locale={locale} switchLocale={switchLocale} t={t} isBlogAndContact={isBlogAndContact} />
+            <SwitchLanguage locale={locale} switchLocale={switchLocale} t={t} isBlogAndContact={isBlogAndContact} isVisible={isVisible}/>
 
             <button
                 aria-label="menu-btn"
