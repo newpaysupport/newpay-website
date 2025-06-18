@@ -111,10 +111,8 @@
             }
         ],
         "helpCenter": {
-            "title": "Follow us to get early discounts and updates regarding new product, feature and more",
-            "amountUsers": "120,438+ members",
-            "enterEmail": "Enter your email",
-            "sendNow": "SEND NOW"
+            "title": "For more details, please visit our Help Center or contact support.",
+            "buttonText": "HELP CENTER"
         }
     },
     "blog": {

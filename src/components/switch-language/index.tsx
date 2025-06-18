@@ -7,6 +7,7 @@ type Props = {
     locale: string;
     switchLocale: (lng: string) => void;
     t: (key: string) => string;
+    isBlogAndContact?: boolean;
 };
 
 const languages = [
@@ -14,7 +15,7 @@ const languages = [
     { code: 'zi', label: 'CN', flag: logoZH }
 ];
 
-const SwitchLanguage = ({ locale, switchLocale, t }: Props) => {
+const SwitchLanguage = ({ locale, switchLocale, t , isBlogAndContact}: Props) => {
     const [open, setOpen] = useState(false);
 
     const currentLanguage = languages.find((lng) => lng.code === locale) || languages[0];
@@ -77,7 +78,7 @@ const SwitchLanguage = ({ locale, switchLocale, t }: Props) => {
 
             {/* Get App Button */}
             <Link href={`/${locale}/download`}>
-                <button className="cursor-pointer font-semibold md:inline hidden bg-white ml-4 px-5 py-3 rounded-full active:scale-95 text-[#060606] text-sm hover:scale-102">
+                <button className={`${isBlogAndContact ? 'bg-black text-white' : 'bg-white '} text-[#060606] cursor-pointer font-semibold md:inline hidden  ml-4 px-5 py-3 rounded-full active:scale-95  text-sm hover:scale-102`}>
                     {t('getApp')}
                 </button>
             </Link>

@@ -58,11 +58,8 @@ const Card3 = () => {
                         alt="Payment device being used"
                         className="rounded-3xl h-full object-cover object-center"
                     />
-                    <div style={{
-                        background: "#FFF",
-                        boxShadow: "0px 6px 12px -2px rgba(0, 0, 0, 0.10);"
-                    }}
-                        className="absolute top-[5%] left-[-15%] flex items-center justify-between text-white rounded-2xl p-2 sm:p-3 md:p-4 shadow-md w-full max-w-xs">
+                    <div
+                        className="absolute top-[5%] left-[-15%] flex items-center justify-between text-white rounded-2xl p-2 sm:p-3 md:p-4 bg-[#FFF] shadow-md w-full max-w-xs">
                         <div className="flex items-center space-x-5">
                             <div className="flex-shrink-0">
                                 <Image src={icon_gift} alt="Gift Icon" width={50} height={50} />
@@ -77,11 +74,8 @@ const Card3 = () => {
                         </div>
                     </div>
 
-                    <div style={{
-                        background: "#FFF",
-                        boxShadow: "0px 6px 12px -2px rgba(0, 0, 0, 0.10);"
-                    }}
-                        className="absolute bottom-[30%] right-[-15%] flex items-center justify-between text-white rounded-2xl p-2 sm:p-3 md:p-4 shadow-md w-full max-w-xs">
+                    <div 
+                        className="absolute bottom-[30%] right-[-15%] flex items-center justify-between text-white rounded-2xl p-2 sm:p-3 md:p-4 bg-[#FFF] shadow-md w-full max-w-xs">
                         <div className="flex items-center space-x-5">
                             <div className="flex-shrink-0">
                                 <Image src={arrow_right} alt="Gift Icon" width={50} height={50} className='text-[#FF6910]' />
@@ -96,11 +90,8 @@ const Card3 = () => {
                         </div>
                     </div>
 
-                    <div style={{
-                        background: "#FFF",
-                        boxShadow: "0px 6px 12px -2px rgba(0, 0, 0, 0.10);"
-                    }}
-                        className="absolute bottom-[5%] left-[-8%] flex items-center justify-between text-white rounded-2xl p-2 sm:p-3 md:p-4 shadow-md w-full max-w-xs">
+                    <div 
+                        className="absolute bottom-[5%] left-[-8%] flex items-center justify-between text-white rounded-2xl p-2 sm:p-3 md:p-4 bg-[#FFF] shadow-md w-full max-w-xs">
                         <div className="flex items-center space-x-5">
                             <div className="flex-shrink-0">
                                 <Image src={arrow_left} alt="Gift Icon" width={50} height={50} />
