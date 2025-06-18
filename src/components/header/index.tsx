@@ -79,8 +79,8 @@ const Header = () => {
             label: t('payment'),
             hasDropdown: true,
             dropdownItems: [
-                { title: 'Payment', href: `/${locale}/payment` },
-                { title: 'Payment Card', href: `/${locale}/payment-card` },
+                { title: 'Payment', href: `` },
+                { title: 'Payment Card', href: `/${locale}/payment` },
                 { title: 'Security & Protection', href: `/${locale}/secure` }
             ]
         },
