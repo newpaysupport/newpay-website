@@ -24,7 +24,7 @@ const FeaturesGrid = () => {
             transition: {
                 duration: 0.8,
                 ease: 'easeOut',
-                delay: index * 0.01,
+                delay: index * 0.1,
             },
         }),
     };
