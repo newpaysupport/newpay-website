@@ -11,7 +11,7 @@ type Props = {
 export default function AnimationFade({ children, direction = 'right', inView = true }: Props) {
   let offsetX = 0;
   let offsetY = 0;
-  let ease: 'easeIn' | 'easeOut' | 'easeInOut' = 'easeInOut';
+  let ease: 'easeIn' | 'easeOut' | 'easeInOut' | 'easeLinear' | 'easeInitial' = 'easeInOut';
   let duration = 0.5
   switch (direction) {
     case 'left':
