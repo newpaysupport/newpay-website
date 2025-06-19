@@ -9,8 +9,9 @@ import img_top_right from "@/images/payment/content_end/img_top_right.png";
 import icon_gift from "@/images/payment/didi.png";
 import icon_arrow from "@/images/payment/didi_arrow.png";
 import gift from "@/images/payment/gift.svg";
-import { motion, useInView } from 'motion/react';
+import { useInView } from 'motion/react';
 import { useRef } from 'react';
+import AnimationFade from '../animation/animation-fade';
 const ContentEnd = () => {
     const locale = useLocale();
     const payment = locale === 'en' ? enBlog : ziBlog;
@@ -30,20 +31,19 @@ const ContentEnd = () => {
 
     return (
         <div className='pt-20 pb-30 container mx-auto'>
-            <motion.div
-                ref={textRef}
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
-                transition={{ duration: 0.8, ease: 'easeOut' }}
-                className="pb-30 text-center"
-            >
-                <h1 className="md:text-6xl text-3xl font-semibold pt-4 sm:pt-6 lg:pt-10">
-                    {cardSection.title}
-                </h1>
-                <p className="text-gray-500 mt-2 sm:mt-4 mx-auto w-full sm:w-[50%] lg:w-[20%] text-sm sm:text-base">
-                    {cardSection.description}
-                </p>
-            </motion.div>
+            <AnimationFade inView={isInView} direction='up-title'>
+                <div
+                    ref={textRef}
+                    className="pb-30 text-center"
+                >
+                    <h1 className="md:text-6xl text-3xl font-semibold pt-4 sm:pt-6 lg:pt-10">
+                        {cardSection.title}
+                    </h1>
+                    <p className="text-gray-500 mt-2 sm:mt-4 mx-auto w-full sm:w-[50%] lg:w-[20%] text-sm sm:text-base">
+                        {cardSection.description}
+                    </p>
+                </div>
+            </AnimationFade>
 
 
             <div className="pt-30 flex flex-col md:flex-row items-center justify-center">

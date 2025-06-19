@@ -12,16 +12,16 @@ import hero_payment from "@/images/payment/hero_payment.png";
 import logo_payment from "@/images/payment/newpay_square_mark_payment.png";
 import scan_icon from "@/images/payment/scan.svg";
 
+import { AnimatePresence, useInView } from 'motion/react';
 import Image from "next/image";
+import AnimationFade from '../animation/animation-fade';
+import ContentCard from './content-card';
+import ContentEnd from './content-end';
+import ContentMain from './content-main';
 import DownloadSection from './download-section';
 import Faq from './faq';
 import PhysicalCard from "./physical-card";
 import VirtualCard from "./virtual-card";
-import ContentMain from './content-main';
-import ContentEnd from './content-end';
-import ContentCard from './content-card';
-import { AnimatePresence, motion, useInView } from 'motion/react';
-import SlideFadeCard from '../animation/slide-fade-card';
 
 const PaymentScreen = () => {
     const [activeCard, setActiveCard] = useState<'virtual' | 'physical'>('virtual');
@@ -50,6 +50,7 @@ const PaymentScreen = () => {
     const textRef = useRef(null);
     const isInView = useInView(textRef, { once: false, amount: 0.5 });
 
+
     return (
         <div>
             {/* Hero Section */}
@@ -77,45 +78,42 @@ const PaymentScreen = () => {
             <div className="bg-black">
                 <div className="bg-white rounded-4xl pb-10 pt-20">
                     {/* Content Section 1*/}
-                    <motion.div
-                        ref={textRef}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-                        transition={{ duration: 0.5, ease: 'easeOut' }}
-                    >
-                        <h1 className="md:text-6xl text-xl font-semibold text-center">{contentSection1.title}</h1>
-                        <p className="md:w-1/4 text-sm text-center text-gray-500 mt-4 mx-auto">{contentSection1.description}</p>
-                        <div className="w-fit mx-auto text-md mt-8">
-                            <button
-                                className={`${activeCard === 'virtual' ? 'bg-black text-white' : ''} border border-gray-300 font-semibold py-3 px-7 rounded-full mx-2 cursor-pointer`}
-                                onClick={() => setActiveCard('virtual')}
-                            >
-                                {virtualCard.label}
-                            </button>
-                            <button
-                                className={`${activeCard === 'virtual' ? '' : 'bg-black text-white'} border border-gray-300 font-semibold py-3 px-7 rounded-full mx-2 cursor-pointer`}
-                                onClick={() => setActiveCard('physical')}
-                            >
-                                {physicalCard.label}
-                            </button>
+                    <AnimationFade direction="up" inView={isInView}>
+                        <div ref={textRef}>
+                            <h1 className="md:text-6xl text-xl font-semibold text-center">{contentSection1.title}</h1>
+                            <p className="md:w-1/4 text-sm text-center text-gray-500 mt-4 mx-auto">{contentSection1.description}</p>
+                            <div className="w-fit mx-auto text-md mt-8">
+                                <button
+                                    className={`${activeCard === 'virtual' ? 'bg-black text-white' : ''} border border-gray-300 font-semibold py-3 px-7 rounded-full mx-2 cursor-pointer`}
+                                    onClick={() => setActiveCard('virtual')}
+                                >
+                                    {virtualCard.label}
+                                </button>
+                                <button
+                                    className={`${activeCard === 'virtual' ? '' : 'bg-black text-white'} border border-gray-300 font-semibold py-3 px-7 rounded-full mx-2 cursor-pointer`}
+                                    onClick={() => setActiveCard('physical')}
+                                >
+                                    {physicalCard.label}
+                                </button>
+                            </div>
                         </div>
-                    </motion.div>
+                    </AnimationFade>
                     {/* content Virtual and Physical Card*/}
                     <AnimatePresence mode='wait'>
                         {activeCard === 'virtual' ? (
-                            <SlideFadeCard key="virtual" direction="right">
+                            <AnimationFade key="virtual" direction="right">
                                 <VirtualCard
                                     virtualItems={virtualCard.virtualItems}
                                     labelButton={contentSection1.labelButton}
                                 />
-                            </SlideFadeCard>
+                            </AnimationFade>
                         ) : (
-                            <SlideFadeCard key="physical" direction="left">
+                            <AnimationFade key="physical" direction="left">
                                 <PhysicalCard
                                     physicalItems={physicalCard.physicalItems}
                                     labelButton={contentSection1.labelButton}
                                 />
-                            </SlideFadeCard>
+                            </AnimationFade>
                         )}
 
                     </AnimatePresence>
