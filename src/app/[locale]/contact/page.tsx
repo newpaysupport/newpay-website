@@ -1,11 +1,15 @@
 import ContactScreen from '@/components/contact'
+import ReactLenis from 'lenis/react'
 import React from 'react'
 
 const Contact = () => {
   return (
-    <main>
-        <ContactScreen/>
-    </main>
+    <ReactLenis root>
+      <main>
+        <ContactScreen />
+      </main>
+    </ReactLenis>
+
   )
 }
 

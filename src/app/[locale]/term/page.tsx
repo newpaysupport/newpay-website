@@ -1,10 +1,14 @@
 import TermsAndConditions from '@/components/term-condition'
+import ReactLenis from 'lenis/react'
 
 const TermsAndCondition = () => {
     return (
-        <main>
-            <TermsAndConditions />
-        </main>
+        <ReactLenis root>
+            <main>
+                <TermsAndConditions />
+            </main>
+        </ReactLenis>
+
     )
 }
 
