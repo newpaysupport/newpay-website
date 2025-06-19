@@ -2,7 +2,7 @@
 import { payment as enBlog } from '@/i18n/messages/en.json';
 import { payment as ziBlog } from '@/i18n/messages/zi.json';
 import { useLocale } from 'next-intl';
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 import card_container from "@/images/payment/Card_Container.png";
 import access_icon from "@/images/payment/access.svg";
@@ -20,9 +20,11 @@ import VirtualCard from "./virtual-card";
 import ContentMain from './content-main';
 import ContentEnd from './content-end';
 import ContentCard from './content-card';
+import { AnimatePresence, motion, useInView } from 'motion/react';
+import SlideFadeCard from '../animation/slide-fade-card';
 
 const PaymentScreen = () => {
-    const [activeCard, setActiveCard] = useState(true);
+    const [activeCard, setActiveCard] = useState<'virtual' | 'physical'>('virtual');
 
     const locale = useLocale();
     const payment = locale === 'en' ? enBlog : ziBlog;
@@ -44,6 +46,10 @@ const PaymentScreen = () => {
     const faqSection = payment.faqSection;
     const faqItems = faqSection.faqItems;
 
+
+    const textRef = useRef(null);
+    const isInView = useInView(textRef, { once: false, amount: 0.5 });
+
     return (
         <div>
             {/* Hero Section */}
@@ -51,7 +57,7 @@ const PaymentScreen = () => {
                 <Image src={hero_payment} alt="background" width={0} height={0} className="object-cover md:w-full md:h-full h-[1000px]" />
                 <p className="fadeInUp-no-delay md:text-sm md:w-[20%] w-[50%] text-xs text-gray-600 text-right absolute top-[30%] bottom-[60%] right-[12%]">{heroSection.description}</p>
                 <div className="absolute md:right-[9.2%] bottom-[24%]">
-                    <Image src={card_container} alt="background" width={0} height={0} className='fadeInUp-no-delay'/>
+                    <Image src={card_container} alt="background" width={0} height={0} className='fadeInUp-no-delay' />
                 </div>
                 <div className="absolute md:w-[25%] w-[50%] top-[30%] bottom-[60%] left-[12%]">
                     <Image src={logo_payment} alt="background" width={0} height={0} className="fadeInUp-no-delay w-12 h-12 mb-10" />
@@ -71,30 +77,52 @@ const PaymentScreen = () => {
             <div className="bg-black">
                 <div className="bg-white rounded-4xl pb-10 pt-20">
                     {/* Content Section 1*/}
-                    <div>
+                    <motion.div
+                        ref={textRef}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+                        transition={{ duration: 0.5, ease: 'easeOut' }}
+                    >
                         <h1 className="md:text-6xl text-xl font-semibold text-center">{contentSection1.title}</h1>
                         <p className="md:w-1/4 text-sm text-center text-gray-500 mt-4 mx-auto">{contentSection1.description}</p>
                         <div className="w-fit mx-auto text-md mt-8">
                             <button
-                                className={`${activeCard ? 'bg-black text-white' : ''} border border-gray-300 font-semibold py-3 px-7 rounded-full mx-2 cursor-pointer`}
-                                onClick={() => setActiveCard(true)}
+                                className={`${activeCard === 'virtual' ? 'bg-black text-white' : ''} border border-gray-300 font-semibold py-3 px-7 rounded-full mx-2 cursor-pointer`}
+                                onClick={() => setActiveCard('virtual')}
                             >
                                 {virtualCard.label}
                             </button>
                             <button
-                                className={`${activeCard ? '' : 'bg-black text-white'} border border-gray-300 font-semibold py-3 px-7 rounded-full mx-2 cursor-pointer`}
-                                onClick={() => setActiveCard(false)}
+                                className={`${activeCard === 'virtual' ? '' : 'bg-black text-white'} border border-gray-300 font-semibold py-3 px-7 rounded-full mx-2 cursor-pointer`}
+                                onClick={() => setActiveCard('physical')}
                             >
                                 {physicalCard.label}
                             </button>
                         </div>
-                    </div>
+                    </motion.div>
                     {/* content Virtual and Physical Card*/}
-                    {activeCard ? <VirtualCard virtualItems={virtualCard.virtualItems} labelButton={contentSection1.labelButton} />
-                        : <PhysicalCard physicalItems={physicalCard.physicalItems} labelButton={contentSection1.labelButton} />}
+                    <AnimatePresence mode='wait'>
+                        {activeCard === 'virtual' ? (
+                            <SlideFadeCard key="virtual" direction="right">
+                                <VirtualCard
+                                    virtualItems={virtualCard.virtualItems}
+                                    labelButton={contentSection1.labelButton}
+                                />
+                            </SlideFadeCard>
+                        ) : (
+                            <SlideFadeCard key="physical" direction="left">
+                                <PhysicalCard
+                                    physicalItems={physicalCard.physicalItems}
+                                    labelButton={contentSection1.labelButton}
+                                />
+                            </SlideFadeCard>
+                        )}
+
+                    </AnimatePresence>
+
 
                     {/* Content Section 2*/}
-                    <ContentMain/>
+                    <ContentMain />
                     {/* content background */}
                     <div className="relative w-full h-[370px] mt-10">
                         <Image src={bg_content3} alt="social" fill className="object-cover w-full h-full" quality={100} />
@@ -122,9 +150,9 @@ const PaymentScreen = () => {
                         </div>
                     </div>
                     {/* Content Section: Card */}
-                    <ContentCard/>
+                    <ContentCard />
                     {/* Content: Share Happy Moment */}
-                    <ContentEnd/>
+                    <ContentEnd />
                 </div>
                 {/* content FAQ */}
                 <div className='pt-20'>
