@@ -21,7 +21,7 @@ const Card4 = () => {
         <section className="bg-white p-10 flex items-center rounded-3xl min-h-screen">
             <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 ">
                 {/* Left Section: Text Content and Small Card */}
-                <div className="flex flex-col justify-between gap-10">
+                <div className="flex flex-col justify-between items-center gap-10">
                     <h2 className="md:w-[60%] text-4xl md:text-5xl font-semibold text-[#1B1B1B] mb-4 leading-tight">
                         {joint.card4.title}
                     </h2>
@@ -34,7 +34,7 @@ const Card4 = () => {
 
                 {/* Right Section: Large Image Card */}
                 <div className="flex flex-col items-end justify-between">
-                    <h1 className='text-[#666] text-3xl font-medium'>{joint.card4.description}</h1>
+                    <h1 className='text-[#666] text-3xl font-medium text-left w-[80%]'>{joint.card4.description}</h1>
                     <div style={{
                         borderRadius: "24px",
                         background: "rgba(255, 105, 16, 0.08)"
