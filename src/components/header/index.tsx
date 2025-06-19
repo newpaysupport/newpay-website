@@ -173,7 +173,7 @@ const Header = () => {
                         {/* Dropdown */}
                         {link.hasDropdown && openDropdown === link.key && (
                             <div
-                                className={`md:w-[220vh] absolute top-[full] transform -translate-x-[50%] pt-4 z-50 ${link.key === 'payment' ? 'left-10/12 ' : 'left-[2%]'}`}
+                                className={`md:w-[230vh] absolute top-[full] transform -translate-x-[50%] pt-4 z-50 ${link.key === 'payment' ? 'md:left-1/2 ' : 'left-[-25%]'}`}
                             >
                                 {link.key === 'payment' ?
                                     (<PaymentDropdown link={link} locale={locale} isBlogAndContact={isBlogAndContact} />) : <CompanyDropdown link={link} locale={locale} isBlogAndContact={isBlogAndContact} isScrolled={isScrolled} />}
