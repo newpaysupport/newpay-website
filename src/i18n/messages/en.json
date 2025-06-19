@@ -1000,5 +1000,24 @@
     },
     "toast": {
         "title": "Coming soon"
+    },
+    "contactUs": {
+        "title": "Contact Us",
+        "desc": "We handle all law enforcement requests from any jurisdiction in strict compliance with our Terms & Conditions, Privacy Policy, and all relevant laws and regulations.",
+        "firstName": "First name",
+        "lastName": "Last name",
+        "email": "Your work email",
+        "phone": "Phone number",
+        "typeCollaboration": "Collaboration type",
+        "companyName": "Company name",
+        "companyWebsite": "Company website",
+        "message": "Message",
+        "checkBox": "If you do not wish to receive marketing and promotional materials from NewPay, please check the box.",
+        "submit": "Submit Now",
+        "isRequire": "is required",
+        "rightTitle": "Talk with the team",
+        "rightDesc": "Work with NewPay to explore the world of payment together. Want to become our partners? Please give us a little details of yourself and we will be in touch soon!",
+        "rightSupport": "Support Center",
+        "rightSupportEmail": "support@newpay.com"
     }
 }

@@ -6,4 +6,5 @@ export interface ContactUsForm {
     companyWebsite: string;
     message: string;
     phone: string;
+    typeCollaboration: string;
 }

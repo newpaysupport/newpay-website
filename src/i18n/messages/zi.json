@@ -1008,5 +1008,24 @@
     },
     "toast": {
         "title": "即将推出"
+    },
+    "contactUs": {
+        "title": "联系我们",
+        "desc": "我们会严格按照我们的《条款与条件》、《隐私政策》以及所有相关法律法规，处理来自任何司法辖区的执法请求。",
+        "firstName": "名字",
+        "lastName": "姓氏",
+        "email": "您的工作邮箱",
+        "phone": "电话号码",
+        "typeCollaboration": "合作类型",
+        "companyName": "公司名称",
+        "companyWebsite": "公司网站",
+        "message": "留言内容",
+        "checkBox": "若您不希望接收 NewPay 的市场营销及推广资讯，请勾选此框。",
+        "submit": "立即提交",
+        "isRequire": "是必须的",
+        "rightTitle": "与我们团队交流",
+        "rightDesc": "与 NewPay 携手，共同探索支付的未来。要成为我们的合作伙伴？请简单介绍一下您自己，我们会尽快与您取得联系！",
+        "rightSupport": "支持中心",
+        "rightSupportEmail": "support@newpay.com"
     }
 }
