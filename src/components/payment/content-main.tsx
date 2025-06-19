@@ -64,7 +64,7 @@ const ContentMain = () => {
 
             <div className="mx-auto mt-10 relative" >
                 <div className='flex gap-8 justify-center animation-slideshow'>
-                    {[...listImage, ...listImage].map((image, index) => {
+                    {[...listImage, ...listImage, ...listImage].map((image, index) => {
                         return (
                             <Image src={image} alt="Netflix" key={index}/>
                         )
