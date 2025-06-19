@@ -6,9 +6,10 @@ type Props = {
   children: ReactNode;
   direction?: 'left' | 'right' | 'up' | 'down' | 'up-title';
   inView?: boolean;
+  className?: string;
 };
 
-export default function AnimationFade({ children, direction = 'right', inView = true }: Props) {
+export default function AnimationFade({ children, direction = 'right', inView = true, className }: Props) {
   let offsetX = 0;
   let offsetY = 0;
   let ease: 'easeIn' | 'easeOut' | 'easeInOut' | 'easeLinear' | 'easeInitial' = 'easeInOut';
@@ -37,10 +38,10 @@ export default function AnimationFade({ children, direction = 'right', inView = 
 
   return (
     <motion.div
+      className={className}
       initial={{ opacity: 0, x: offsetX, y: offsetY, scale: 1 }}
       animate={inView ? { opacity: 1, x: 0, y: 0, scale: 1 } : { opacity: 0, x: offsetX, y: offsetY, scale: 1 }}
       transition={{ duration: duration, ease: ease }}
-      className="w-full"
     >
       {children}
     </motion.div>
