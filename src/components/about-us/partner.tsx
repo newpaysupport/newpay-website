@@ -4,11 +4,17 @@ import badge from '@/images/partner/Card Chip.png'
 import Image from 'next/image'
 import BtnPrimary from '../common/button/btn-primary'
 import { useTranslations } from 'next-intl'
+import toast from 'react-hot-toast'
+import ToastCustom from '../common/toast'
 
 const Partner = () => {
 
     const t = useTranslations("aboutUs");
 
+
+    const handleShowToast = () => {
+        toast.custom(<ToastCustom type='warning' />)
+    }
 
     return (
         <div className='w-full h-[700px] relative overflow-hidden'>
@@ -27,7 +33,7 @@ const Partner = () => {
                                 WebkitTextFillColor: "transparent"
                             }} className='text-[60px] font-semibold tracking-[-2px]'>{t("partner.title")}</p>
                             <p className='text-[#aeaeae] text-base font-medium text-center mb-8'>{t("partner.desc")}</p>
-                            <BtnPrimary text={t("partner.button")} variant={'primary-lighter'} className='mx-auto w-[254px]' />
+                            <BtnPrimary onClick={handleShowToast} text={t("partner.button")} variant={'primary-lighter'} className='mx-auto w-[254px]' />
                         </div>
                     </div>
                 </div>

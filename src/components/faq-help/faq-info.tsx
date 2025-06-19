@@ -37,7 +37,7 @@ const FaqInfo = () => {
 
                                     <p className='text-white text-xl font-semibold my-4'>{item.title}</p>
                                     <p className='text-[#aeaeae] text-base font-normal -tracking-[0.24px] mb-8'>{item.desc}</p>
-                                    <p className='text-[rgba(255,255,255,0.56)] text-sm font-normal'>{item.faqs.length} articles</p>
+                                    <p className='text-[rgba(255,255,255,0.56)] text-sm font-normal'>{item.faqs.length} {t("articles")}</p>
                                 </div>
                             </Link>
 

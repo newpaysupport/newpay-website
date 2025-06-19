@@ -930,10 +930,6 @@
                         "answer": "Once a withdrawal has been submitted and passes internal checks, it will be broadcast to the blockchain (e.g., ERC20 or TRC20).\nSince blockchain transactions are irreversible, they cannot be modified, canceled, or refunded after submission — by you or by us.\nThis is different from traditional bank systems, which sometimes allow reversals.\n📌 Please always double-check the address, network, and amount before submitting to avoid irreversible loss."
                     },
                     {
-                        "question": "Can I cancel a withdrawal after submitting it?",
-                        "answer": "Once a withdrawal has been submitted and passes internal checks, it will be broadcast to the blockchain (e.g., ERC20 or TRC20).\nSince blockchain transactions are irreversible, they cannot be modified, canceled, or refunded after submission — by you or by us.\nThis is different from traditional bank systems, which sometimes allow reversals.\n📌 Please always double-check the address, network, and amount before submitting to avoid irreversible loss."
-                    },
-                    {
                         "question": "Can I withdraw directly to my bank account?",
                         "answer": "Currently, NEWPAY doesn’t support direct withdrawals to bank accounts.\nInstead, you can withdraw in two ways:\nWithdraw USDT to a personal crypto wallet.\n→ Network fee applies (gas fee), determined by blockchain, not NEWPAY\nWithdraw cash using a physical card at ATMs\n → 2% withdrawal fee + applicable foreign exchange rate (based on bank rates)"
                     }
@@ -968,6 +964,7 @@
             }
         ],
         "topArticleTitle": "Top Viewed Articles",
+        "articles": "articles",
         "topArticles": [
             {
                 "id": 0,
