@@ -10,11 +10,14 @@ const withBundleAnalyzer = initializeBundleAnalyzer({
 // https://nextjs.org/docs/pages/api-reference/next-config-js
 const nextConfig: NextConfig = {
     output: 'standalone',
-    pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx']
+    pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
+    experimental: {
+        mdxRs: true
+    }
 };
 const withNextIntl = createNextIntlPlugin();
 const withMDX = createMDX({
-    extension: '/\.(md|mdx)$/',
+    extension: /\.mdx?$/,
     options: {
         remarkPlugins: [],
         rehypePlugins: [],
