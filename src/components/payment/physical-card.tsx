@@ -3,6 +3,8 @@ import wifi from "@/images/payment/wifi.svg"
 import time from "@/images/payment/time.svg"
 import money from "@/images/payment/money.svg"
 import Image from 'next/image'
+import ToastCustom from "../common/toast"
+import toast from "react-hot-toast"
 
 type PhysicalCardProps = {
     physicalItems: {
@@ -12,6 +14,9 @@ type PhysicalCardProps = {
     labelButton: string
 }
 const PhysicalCard = ({ physicalItems, labelButton }: PhysicalCardProps) => {
+    const handleToast = () => {
+        toast.custom(<ToastCustom type='warning' />)
+    }
     return (
         <>
             {/* content Physical Card*/}
@@ -32,7 +37,7 @@ const PhysicalCard = ({ physicalItems, labelButton }: PhysicalCardProps) => {
                         <h2 className="md:text-2xl font-semibold mt-4">{physicalItems[2].title}</h2>
                         <p className="md:text-md text-gray-500 mt-2">{physicalItems[2].subtitle}</p>
                     </div>
-                    <button className="rounded-full mt-6 md:py-4 md:px-10 font-semibold p-4 text-md text-white cursor-pointer bg-orange-500 hover:bg-orange-600">{labelButton}</button>
+                    <button onClick={handleToast} className="rounded-full mt-6 md:py-4 md:px-10 font-semibold p-4 text-md text-white cursor-pointer bg-orange-500 hover:bg-orange-600">{labelButton}</button>
                 </div>
                 <div className="md:w-[45%] mt-10 md:mt-0">
                     <Image src={img_card_black} alt="Spend Crypto" width={500} height={400} className='md:mt-4 md:h-[560px]' />
