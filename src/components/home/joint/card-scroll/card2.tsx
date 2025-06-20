@@ -21,11 +21,11 @@ const Card2 = () => {
     }
 
     return (
-        <section className="bg-white p-10 flex items-center rounded-3xl container mx-auto">
+        <section className="bg-white pt-20 flex items-center rounded-3xl container mx-auto">
             <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-30">
                 {/* Left Section: Text Content and Small Card */}
                 <div className="flex flex-col justify-between gap-10 items-end">
-                    <h2 className="md:w-[60%] text-4xl md:text-5xl font-semibold text-[#1B1B1B] mb-4 leading-tight">
+                    <h2 className="md:w-[66%] text-4xl md:text-5xl font-semibold text-[#1B1B1B] mb-4 leading-tight">
                         {joint.card2.title}
                     </h2>
                     <Image
