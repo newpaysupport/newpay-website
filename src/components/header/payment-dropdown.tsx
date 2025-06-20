@@ -83,7 +83,7 @@ const PaymentDropdown = ({ link, locale, isBlogAndContact }: LinkItem) => {
                                     className="w-[200px] h-[200px] object-cover rounded-xl"
                                 />
                                 <div className="absolute bottom-0 px-3 py-5 flex justify-between w-full z-50">
-                                    <h1 className="text-sm font-semibold text-white">Virtual Card</h1>
+                                    <h1 className="text-sm font-semibold text-white">{locale === 'en' ? "Virtual Card" : "虚拟卡"}</h1>
                                     <Image
                                         src={arrow_right}
                                         alt="arrow right"
@@ -106,7 +106,7 @@ const PaymentDropdown = ({ link, locale, isBlogAndContact }: LinkItem) => {
                                     className="w-[200px] h-[200px] object-cover rounded-xl"
                                 />
                                 <div className="absolute bottom-0 px-3 py-5 flex justify-between w-full z-50">
-                                    <h1 className="text-sm font-semibold text-white">Physical Card</h1>
+                                    <h1 className="text-sm font-semibold text-white">{locale === 'en' ? "Physical Card" : "实体卡"}  </h1>
                                     <Image
                                         src={arrow_right}
                                         alt="arrow right"

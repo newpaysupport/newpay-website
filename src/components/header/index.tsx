@@ -81,9 +81,9 @@ const Header = () => {
             label: t('payment'),
             hasDropdown: true,
             dropdownItems: [
-                { title: 'Payment', href: `` },
-                { title: 'Payment Card', href: `/${locale}/payment` },
-                { title: 'Security & Protection', href: `/${locale}/secure` }
+                { title: locale === 'en' ? 'Payment' : '支付', href: `` },
+                { title: locale === 'en' ? 'Payment Card' : '支付卡', href: `/${locale}/payment` },
+                { title: locale === 'en' ? 'Security & Protection' : '安全与保护', href: `/${locale}/secure` }
             ]
         },
         {
@@ -92,15 +92,16 @@ const Header = () => {
             label: t('company'),
             hasDropdown: true,
             dropdownItems: [
-                { title: 'Discover NewPay', href: `` },
-                { title: 'About NewPay', href: `/${locale}/about-us` },
-                { title: 'Contact us', href: `/${locale}/contact` },
-                { title: 'Blog', href: `/${locale}/blog` },
-                { title: 'FAQ', href: `/${locale}/faq-help` }
+                { title: locale === 'en' ? 'Discover NewPay' : '认识 NewPay', href: `` },
+                { title: locale === 'en' ? 'About NewPay' : '关于 NewPay', href: `/${locale}/about-us` },
+                { title: locale === 'en' ? 'Contact us' : '联系我们', href: `/${locale}/contact` },
+                { title: locale === 'en' ? 'Blog' : '博客', href: `/${locale}/blog` },
+                { title: locale === 'en' ? 'FAQ' : '常见问题', href: `/${locale}/faq-help` }
             ]
         },
         { key: 'support', href: `/${locale}/support`, label: t('support'), hasDropdown: false }
     ];
+    
 
     const getHeaderStyles = () => {
         if (isBlogAndContact) {
