@@ -58,7 +58,7 @@ const ContentEnd = () => {
                     </p>
 
                     <div className='pt-22'>
-                        <div className="flex items-center justify-between bg-orange-500 text-white rounded-2xl p-2 sm:p-3 md:p-4 shadow-md md:w-[400px] animate-translateX">
+                        <div className="flex items-center justify-between bg-orange-500 text-white rounded-2xl p-2 sm:p-3 md:p-4 shadow-md md:w-[400px]">
                             <div className="flex items-center gap-3">
                                 <div className="flex-shrink-0">
                                     <Image src={icon_gift} alt="Gift Icon" width={24} height={24} className="w-8 h-8 md:w-12 md:h-12" />
@@ -72,7 +72,7 @@ const ContentEnd = () => {
                                 <p className="text-base sm:text-lg font-semibold">{giftCard.amount}</p>
                             </div>
                         </div>
-                        <div className="flex items-center justify-between bg-green-400 text-white rounded-2xl p-2 sm:p-3 md:p-4 shadow-md mt-6 ml-0 md:ml-20 md:w-[400px] animate-translate-rightX">
+                        <div className="flex items-center justify-between bg-green-400 text-white rounded-2xl p-2 sm:p-3 md:p-4 shadow-md mt-6 ml-0 md:ml-20 md:w-[400px]">
                             <div className="flex items-center gap-3">
                                 <div className="flex-shrink-0">
                                     <Image src={icon_arrow} alt="Receive Icon" width={24} height={24} className="w-8 md:w-12 h-8 md:h-12" />

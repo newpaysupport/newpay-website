@@ -101,14 +101,14 @@ const PaymentScreen = () => {
                     {/* content Virtual and Physical Card*/}
                     <AnimatePresence mode='wait'>
                         {activeCard === 'virtual' ? (
-                            <AnimationFade key="virtual" direction="right">
+                            <AnimationFade key="virtual" direction="up">
                                 <VirtualCard
                                     virtualItems={virtualCard.virtualItems}
                                     labelButton={contentSection1.labelButton}
                                 />
                             </AnimationFade>
                         ) : (
-                            <AnimationFade key="physical" direction="left">
+                            <AnimationFade key="physical" direction="up">
                                 <PhysicalCard
                                     physicalItems={physicalCard.physicalItems}
                                     labelButton={contentSection1.labelButton}

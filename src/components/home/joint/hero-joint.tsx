@@ -52,9 +52,9 @@ const HeroJoint = () => {
 
             {/* Content */}
             <div className="absolute inset-0 flex justify-start items-start  text-white p-4">
-                <div className="container mx-auto flex flex-col lg:flex-row justify-between gap-5 items-center pt-[8%] pb-[5%]">
+                <div className="container mx-auto flex flex-col lg:flex-row justify-between gap-5 items-center pt-[5%] pb-[5%]">
                     {/* Left Images Column */}
-                    <div className="flex flex-col gap-10 md:gap-60 items-start  mb-8 lg:mb-0">
+                    <div className="flex flex-col gap-10 md:gap-60 items-start mb-8 lg:mb-0">
                         <Image src={jointImages.img1} alt="Joint Image 1" width={0} height={0} className='fadeInUp-no-delay w-full h-full' />
                         <Image src={jointImages.img2} alt="Joint Image 3" width={0} height={0} className='fadeInUp-no-delay w-full h-full' />
                     </div>
