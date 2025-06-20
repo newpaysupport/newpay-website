@@ -54,9 +54,9 @@ const SwitchLanguage = ({ locale, switchLocale, t, isBlogAndContact, isVisible }
 
                 {open && (
                     <div style={{
-                        background: "rgba(255, 255, 255, 0.08)",
+                        // background: "rgba(255, 255, 255, 0.08)",
                     }}
-                        className="absolute left-0 mt-2 w-32 z-20  rounded-lg p-2">
+                        className={`absolute left-0 mt-2 w-32 z-20  rounded-lg p-2 bg-[#131313]`}>
                         {languages.map((lng) => (
                             <div
                                 key={lng.code}
@@ -74,7 +74,7 @@ const SwitchLanguage = ({ locale, switchLocale, t, isBlogAndContact, isVisible }
                                     height={20}
                                     className="w-5 h-5 rounded-full"
                                 />
-                                <span>{lng.label}</span>
+                                <span className={`${isBlogAndContact ? 'text-white' : ''}`}>{lng.label}</span>
                             </div>
                         ))}
 

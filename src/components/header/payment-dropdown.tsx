@@ -30,8 +30,9 @@ const PaymentDropdown = ({ link, locale, isBlogAndContact }: LinkItem) => {
             };
         }
         return {
-            background: "linear-gradient(0deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%), rgba(6, 6, 6, 0.60)",
-            backdropFilter: "blur(50px)"
+            // background: "linear-gradient(0deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%), rgba(6, 6, 6, 0.60)",
+            // backdropFilter: "blur(50px)"
+            background: "#060606"
         };
     }
 

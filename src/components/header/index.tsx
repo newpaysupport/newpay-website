@@ -21,6 +21,8 @@ const Header = () => {
     const [isVisible, setIsVisible] = useState(true);
     const [isScrolled, setIsScrolled] = useState(false);
     const [openDropdown, setOpenDropdown] = useState<"payment" | "company" | null>(null);
+    const [hoveringDropdown, setHoveringDropdown] = useState<"payment" | "company" | null>(null);
+
 
     const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
@@ -108,9 +110,19 @@ const Header = () => {
                 borderBottom: "1px solid rgba(0, 0, 0, 0.1)",
                 fontWeight: '600',
                 zIndex: 50,
+                transition: "background 0.3s ease",
             };
         }
-
+    
+        if (hoveringDropdown) {
+            return {
+                background: "#060606",
+                color: "white",
+                backdropFilter: "blur(8px)",
+                transition: "background 0.3s ease",
+            };
+        }
+    
         if (isScrolled) {
             return {
                 background: "rgba(0, 0, 0, 0.80)",
@@ -118,12 +130,13 @@ const Header = () => {
                 color: "white",
             };
         }
-
+    
         return {
             background: "transparent",
             color: "white"
         };
     };
+    
     const isActive = (path: string) => pathname === path;
 
     const isBlogAndContact = pathname === `/${locale}/blog` || pathname === `/${locale}/contact`;
@@ -169,12 +182,23 @@ const Header = () => {
                     <li
                         key={link.key}
                         className="relative"
-                        onMouseEnter={() => link.hasDropdown && setOpenDropdown(link.key as "payment" | "company")}
-                        onMouseLeave={() => link.hasDropdown && setOpenDropdown(null)}
+                        onMouseEnter={() => {
+                            if (link.hasDropdown) {
+                              setOpenDropdown(link.key as "payment" | "company");
+                              setHoveringDropdown(link.key as "payment" | "company");
+                            }
+                          }}
+                          
+                          onMouseLeave={() => {
+                            if (link.hasDropdown) {
+                              setOpenDropdown(null);
+                              setHoveringDropdown(null);
+                            }
+                          }}
                     >
                         <Link
                             href={link.href}
-                            className={`px-8 py-2 rounded-full transition flex items-center gap-1 
+                            className={`px-8 py-2 rounded-full transition flex items-center gap-1
                             ${isActive(link.href)
                                     ? isBlogAndContact
                                         ? 'bg-black/10 text-black'
