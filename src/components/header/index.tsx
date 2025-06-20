@@ -81,7 +81,7 @@ const Header = () => {
             label: t('payment'),
             hasDropdown: true,
             dropdownItems: [
-                { title: 'Payment', href: `/${locale}/payment` },
+                { title: 'Payment', href: `` },
                 { title: 'Payment Card', href: `/${locale}/payment` },
                 { title: 'Security & Protection', href: `/${locale}/secure` }
             ]
@@ -92,7 +92,7 @@ const Header = () => {
             label: t('company'),
             hasDropdown: true,
             dropdownItems: [
-                { title: 'Discover NewPay', href: `/${locale}/discover-newpay` },
+                { title: 'Discover NewPay', href: `` },
                 { title: 'About NewPay', href: `/${locale}/about-us` },
                 { title: 'Contact us', href: `/${locale}/contact` },
                 { title: 'Blog', href: `/${locale}/blog` },
