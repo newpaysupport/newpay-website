@@ -9,7 +9,7 @@ type Props = {
   className?: string;
 };
 
-export default function AnimationFade({ children, direction = 'right', inView = true, className }: Props) {
+export default function AnimationFade({ children, direction, inView = true, className }: Props) {
   let offsetX = 0;
   let offsetY = 0;
   let ease: 'easeIn' | 'easeOut' | 'easeInOut' | 'easeLinear' | 'easeInitial' = 'easeInOut';
