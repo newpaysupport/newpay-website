@@ -1,23 +1,20 @@
 "use client"
-import React, { useState } from 'react'
-
 interface LatestProps {
     title: string;
+    selectTag: string;
+    setSelectTag: (tag: string) => void;
 }
+
 
 const tags = ["all", "announcements", "insights", "media", "trends"];
 
-const LatestBlog = ({ title }: LatestProps) => {
-
-    const [selectTag, setSelectTag] = useState('all');
-
+const LatestBlog = ({ title, selectTag, setSelectTag }: LatestProps) => {
 
     const handleClickTag = (tag: string) => {
         if (tag !== selectTag) {
             setSelectTag(tag)
         }
     }
-
     return (
         <div className='container mx-auto py-12'>
             <div className='w-full lg:w-[1200px] mx-auto'>
@@ -34,7 +31,6 @@ const LatestBlog = ({ title }: LatestProps) => {
                     ))}
                 </div>
                 <div>
-
                 </div>
             </div>
         </div>
