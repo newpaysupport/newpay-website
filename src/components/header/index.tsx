@@ -107,7 +107,7 @@ const Header = () => {
                 color: "black",
                 borderBottom: "1px solid rgba(0, 0, 0, 0.1)",
                 fontWeight: '600',
-                zIndex: 50
+                zIndex: 50,
             };
         }
 
@@ -147,7 +147,16 @@ const Header = () => {
                     <li key={link.href}>
                         <Link
                             href={link.href}
-                            className={`px-8 py-2 rounded-full transition ${isActive(link.href) ? 'bg-white/10' : 'hover:bg-white/10'}`}
+                            className={`px-8 py-2 rounded-full transition 
+                            ${isActive(link.href)
+                                    ? isBlogAndContact
+                                        ? 'bg-black/10 text-black'
+                                        : 'bg-white/8 text-white'
+                                    : isBlogAndContact
+                                        ? 'hover:bg-black/10 text-black'
+                                        : 'hover:bg-white/8 text-white'
+                                }
+                            `}
                         >
                             {link.label}
                         </Link>
@@ -165,7 +174,16 @@ const Header = () => {
                     >
                         <Link
                             href={link.href}
-                            className={`px-8 py-2 rounded-full transition flex items-center gap-1 ${isActive(link.href) ? 'bg-white/10' : 'hover:bg-white/10'}`}
+                            className={`px-8 py-2 rounded-full transition flex items-center gap-1 
+                            ${isActive(link.href)
+                                    ? isBlogAndContact
+                                        ? 'bg-black/10 text-black'
+                                        : 'bg-white/8 text-white'
+                                    : isBlogAndContact
+                                        ? 'hover:bg-black/10 text-black'
+                                        : 'hover:bg-white/8 text-white'
+                                }
+                            `}
                         >
                             {link.label}
                         </Link>

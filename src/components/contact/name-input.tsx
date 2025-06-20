@@ -35,7 +35,7 @@ const NameInput = ({ label, name, type = 'normal', placeholder, register, inputT
                 onFocus={() => handleFocus()}
                 onBlur={() => setFocused(null)}
                 placeholder={placeholder}
-                className={`w-full bg-transparent border-0 outline-none text-base font-medium text-[#0E121B] placeholder:text-[#aeaeae] placeholder:font-normal`}
+                className={`w-full bg-transparent border-0 outline-none text-sm font-medium text-[#0E121B] placeholder:text-[#aeaeae] placeholder:font-normal`}
             />
         </div>
     )

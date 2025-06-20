@@ -53,7 +53,7 @@ const ContactForm = () => {
         <div className='grow relative'>
             <div>
                 <h2 className="text-[#1b1b1b] text-[48px] font-semibold -tracking-[1.64px] mb-2">{t("title")}</h2>
-                <p className="text-sm text-[#666] font-normal mb-6">
+                <p className="text-sm text-[#666] font-normal mb-10">
                     {t("desc")}
                 </p>
 
@@ -101,15 +101,15 @@ const ContactForm = () => {
                         <p className='text-sm text-red-700 mt-1'>{errors.message?.message}</p>
                     </div>
 
-                    <div className='flex items-center gap-4'>
+                    <div className='flex items-center gap-4 pt-6'>
                         <CheckboxInput enabled={enabled} setEnabled={setEnabled} />
                         <p className='w-[340px] text-[#666] text-sm font-medium'>{t("checkBox")}</p>
                     </div>
 
-                    <button disabled={!enabled} className='absolute bottom-10 right-[-100px] z-[10] h-20 box-border flex w-[267px] cursor-pointer'>
-                        <span style={{ borderRadius: '16px 0px 0px 16px' }} className='py-4 px-6 h-full box-border flex items-center bg-[#FF6910] text-white font-medium text-2xl'>{t("submit")}</span>
+                    <button disabled={!enabled} className='absolute bottom-10 right-[-100px] z-[10] h-20 box-border flex w-[267px] cursor-pointer group transition-all ease-in-out'>
+                        <span style={{ borderRadius: '16px 0px 0px 16px' }} className='py-4 px-6 h-full box-border flex items-center bg-[#FF6910] text-white font-medium text-2xl group-hover:bg-[#ff5810]'>{t("submit")}</span>
                         <p style={{ borderRadius: '0px 16px 16px 0px' }} className='bg-white py-4 px-6 flex items-center'>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" className='group-hover:translate-x-0.5 group-hover:-translate-y-0.5'>
                                 <path d="M9.33203 22.6668L22.6654 9.3335" stroke="#1B1B1B" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
                                 <path d="M9.33203 9.3335H22.6654V22.6668" stroke="#1B1B1B" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
