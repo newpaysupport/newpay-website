@@ -44,9 +44,9 @@ const About = () => {
                             })}
                         </div>
                     </div>
-                    <Image src={about_joint} alt='' className='absolute md:h-[640px] top-[60%] right-[8%] left-[8%] visible rounded-4xl max-w-7xl mx-auto object-cover object-center ' />
+                    <Image src={about_joint} alt='' className='absolute md:h-[640px] md:w-[1200px] top-[60%] right-[8%] left-[8%] visible rounded-4xl mx-auto object-cover object-center ' />
                     <Link href={`/${locale}/contact`}>
-                        <button className='absolute bottom-[-40%] right-[10%] p-3 text-[#060606] bg-[#FFF] flex gap-4 items-center rounded-full group'>
+                        <button className='absolute bottom-[-40%] right-[17%] p-3 text-[#060606] bg-[#FFF] flex gap-4 items-center rounded-full group'>
                             <Image src={phone_icon} alt='message icon' className='h-12 w-12 group-hover:scale-105' />
                             <span className='text-2xl font-semibold pr-3'>{joint.about.buttonText}</span>
                         </button>
