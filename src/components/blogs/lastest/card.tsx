@@ -26,7 +26,7 @@ const Card = ({ title, tag, image, slug }: CardProps) => {
 
     return (
         <div
-            className={`flex flex-col rounded-[28px] group cursor-pointer md:w-[385px] md:h-[380px] mb-10 p-3 hover:border border-[#FF6910]/16 hover:bg-[#FF6910]/4`}
+            className={`flex flex-col rounded-[28px] group cursor-pointer md:w-[385px] md:h-[380px] mb-10 p-3 border border-transparent hover:border-[#FF6910]/16 hover:bg-[#FF6910]/4`}
         >
             <div className="w-full h-full relative">
                 <Image
