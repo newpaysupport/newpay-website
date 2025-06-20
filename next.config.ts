@@ -1,5 +1,6 @@
 import type { NextConfig } from 'next';
 import createMDX from '@next/mdx'
+import remarkGfm from 'remark-gfm'
 import initializeBundleAnalyzer from '@next/bundle-analyzer';
 import createNextIntlPlugin from 'next-intl/plugin';
 // // https://www.npmjs.com/package/@next/bundle-analyzer
@@ -19,7 +20,7 @@ const withNextIntl = createNextIntlPlugin();
 const withMDX = createMDX({
     extension: /\.mdx?$/,
     options: {
-        remarkPlugins: [],
+        remarkPlugins: [remarkGfm],
         rehypePlugins: [],
     },
 });
