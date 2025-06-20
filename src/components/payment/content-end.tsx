@@ -48,7 +48,7 @@ const ContentEnd = () => {
 
             <div className="pt-30 flex flex-col md:flex-row items-center justify-center">
                 <div className="flex flex-col w-full md:w-[35%]">
-                    <Image src={gift} alt="Share Happy Moment" />
+                    <Image src={gift} alt="Share Happy Moment" className='animation-gift-box'/>
 
                     <h1 className="text-6xl font-semibold pt-4 sm:pt-6 lg:pt-10 text-left">
                         {shareHappyMoment.title}

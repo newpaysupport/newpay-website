@@ -394,39 +394,6 @@ body {
     animation: go2645569136 0.35s cubic-bezier(0.21, 1.02, 0.73, 1) 0s 1 normal forwards;
 }
 
-/* animation translate x */
-@keyframes translateX {
-  0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(6px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-.animate-translateX {
-  animation: translateX 0.8s ease-in-out infinite;
-}
-
-/* animation translate x */
-@keyframes translate-rightX {
-  0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(-6px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-.animate-translate-rightX {
-  animation: translate-rightX 0.8s ease-in-out infinite;
-}
 /* animation translate y */
 @keyframes translateY {
   0% {
@@ -444,4 +411,23 @@ body {
   animation: translateY 1.5s cubic-bezier(0.45, 0, 0.55, 1) infinite;
   will-change: transform;
 }
+/* animation gift box */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  2% { transform: translateX(-2px); }
+  4% { transform: translateX(2px); }
+  6% { transform: translateX(-1.5px); }
+  8% { transform: translateX(1.5px); }
+  10% { transform: translateX(-1px); }
+  12% { transform: translateX(1px); }
+  14% { transform: translateX(0); }
+  100% { transform: translateX(0); }
+}
+
+
+.animation-gift-box {
+  animation: shake 2s ease-in-out infinite;
+}
+
+
 
