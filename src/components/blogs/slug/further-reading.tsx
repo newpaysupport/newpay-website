@@ -1,16 +1,19 @@
 import { Blogs } from '@/interfaces/blogs';
 import { listBlogs } from '@/markdown';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
 import Card from '../lastest/card';
 
 import card2 from '@/images/blog/card2.png';
 import card3 from '@/images/blog/card3.png';
 import card4 from '@/images/blog/card4.png';
+import { objectConvertTagLanguage } from '@/constants/convert-object-language';
 
 const images = [card2, card3, card4]
 
 const FurtherReading = () => {
+
+    const t = useTranslations('blog');
 
     const locale = useLocale();
     type InsightsLocale = 'zi' | 'en';
@@ -43,10 +46,14 @@ const FurtherReading = () => {
                                 id={item.id}
                                 key={index}
                                 title={item.title.split('.')[1]}
-                                tag={`media,${item.tag}`}
+                                tag={`${t('title')},${item.tag}`}
+                                tagShow={`${t('title')},${objectConvertTagLanguage[insightsLocale][item.tag as 'insights' | 'media' | 'trends']}`}
                                 desc={item.desc}
                                 slug={item.slug}
-                                image={images[Math.floor(Math.random() * images.length)]}
+                                image={images[Math.min(
+                                    Math.floor(Math.random() * images.length),
+                                    images.length - 1
+                                )]}
                             />
                         )
                     })

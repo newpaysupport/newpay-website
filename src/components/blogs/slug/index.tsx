@@ -6,7 +6,7 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import { useEffect, useMemo } from "react";
 import ShareSocial from './share-social';
 import FurtherReading from "./further-reading";
-import { defaultLocale } from "@/i18n/config";
+
 
 
 
@@ -34,6 +34,7 @@ const BlogDetailSlug = ({ slug }: { slug: string }) => {
             .filter(item => item.id === Number(id))[0]
         return item;
     }, [locale, id])
+
 
     useEffect(() => {
         router.push(`?slug=${blogDetail.slug}&category=${`blog,${blogDetail.tag}`}`)

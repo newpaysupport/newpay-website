@@ -14,9 +14,10 @@ type CardProps = {
     slug: string;
     desc: string;
     id: number;
+    tagShow: string;
 };
 
-const Card = ({ title, tag, image, slug, desc, id }: CardProps) => {
+const Card = ({ title, tag, image, slug, desc, id, tagShow }: CardProps) => {
     const router = useRouter();
     // const params = useParams();
     const locale = useLocale();
@@ -53,7 +54,7 @@ const Card = ({ title, tag, image, slug, desc, id }: CardProps) => {
                 </div>
                 <div className="flex items-center justify-between relative">
                     <div className='flex items-center gap-3 mt-4'>
-                        {tag.split(',').map((item, index) => {
+                        {tagShow.split(',').map((item, index) => {
                             return (
                                 <p key={index} className='py-2 px-4 border border-[#d8d8d8] rounded-full w-fit capitalize text-[#1b1b1b] font-medium text-sm'>{item}</p>
                             )

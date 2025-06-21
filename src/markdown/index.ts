@@ -36,7 +36,7 @@ export const listBlogs = {
                 desc: "在数字金融不断演进的时代，虚拟卡（Virtual Card） 正迅速成为新一代用户的首选支付工具。无论是为了保护隐私、跨境支付，还是绑定数字钱包，虚拟卡都展现出远超传统银行卡的灵活性与安全性。本文将带你了解什么是虚拟卡、它的运作方式、与传统卡的区别，以及它为何适合加密货币用户和 Web3 世界。",
                 slug: "什么是虚拟卡？一篇文章带你快速了解",
                 content: InsightChina1,
-                tag: "教学"
+                tag: "insights"
             },
             {
                 id: 2,
@@ -44,7 +44,7 @@ export const listBlogs = {
                 desc: "虚拟卡正在成为加密支付、Web3 消费与跨境交易的首选工具。市面上的虚拟卡大多基于两个全球卡组织发行：**Visa** 或 **Mastercard**。很多用户常问：这两种卡有什么区别？哪一种更适合我？本篇文章将从功能、使用体验、全球接受度、安全性、加密支付兼容性等方面，深入比较 Visa 与 Mastercard 虚拟卡的异同，帮助你在使用 NewPay 或其他平台时做出最合适的选择。",
                 slug: "visa-vs-mastercard-虚拟卡：有什么不同？",
                 content: InsightChina2,
-                tag: "教学"
+                tag: "insights"
             },
             {
                 id: 3,
@@ -52,7 +52,7 @@ export const listBlogs = {
                 desc: "在过去，加密资产只能“屯币”“交易”或“换成法币”，要想直接拿来消费几乎不可能。但今天，通过虚拟卡和 PayFi 技术的结合，越来越多用户可以像使用普通银行卡一样，**用 USDT 去买咖啡、订阅 Netflix、支付出差账单**",
                 slug: "用加密货币像法币一样消费：payfi-如何打通支付断层",
                 content: InsightChina3,
-                tag: "教学"
+                tag: "insights"
             },
             {
                 id: 4,
@@ -60,7 +60,7 @@ export const listBlogs = {
                 desc: "如果你是第一次接触加密支付，一定听说过“稳定币”这个词。它不是比特币、也不是以太坊，但却被广泛应用于支付、转账、储值、虚拟卡等场景，成为现实世界中“最像现金”的加密资产。NewPay 就是一个以稳定币为核心的加密支付平台，而我们所选用的，是全球流通量最大的稳定币——USDT/USDC。",
                 slug: "什么是稳定币，为什么-newpay-选择使用-usdt",
                 content: InsightChina4,
-                tag: "教学"
+                tag: "insights"
             },
             {
                 id: 5,
@@ -68,7 +68,7 @@ export const listBlogs = {
                 desc: "在数字支付高速发展的今天，传统银行卡已经不再是唯一选择。越来越多用户，尤其是使用加密货币、重视隐私、跨境消费频繁的人，正在转向一个更灵活、更安全的工具——虚拟卡（Virtual Card）。",
                 slug: "为什么你应该选择虚拟卡，而不是传统银行卡",
                 content: InsightChina5,
-                tag: "教学"
+                tag: "insights"
             },
             {
                 id: 6,
@@ -76,7 +76,7 @@ export const listBlogs = {
                 desc: "在传统金融和加密世界的交汇点，“KYC” 和 “AML” 是两个绕不开的重要概念。尤其是在使用虚拟卡或加密卡进行支付时，这两个词常常出现在注册、审核、甚至交易限制流程中。",
                 slug: "kyc、aml-与加密卡：你需要了解的关键事项",
                 content: InsightChina6,
-                tag: "教学"
+                tag: "insights"
 
             },
             {
@@ -85,7 +85,7 @@ export const listBlogs = {
                 desc: "曾几何时，国际转账是一个繁琐而昂贵的过程：高昂的手续费、漫长的到账时间、中间银行的层层过手，甚至还伴随着外汇限制与汇率不透明。",
                 slug: "跨境支付的崛起：稳定币如何实现全球转账自由",
                 content: InsightChina7,
-                tag: "教学"
+                tag: "insights"
 
             }
         ],
@@ -162,7 +162,7 @@ export const listBlogs = {
                 slug: "虚拟卡的全球热潮-从希腊到尼日利亚的增长机遇",
                 desc: "虚拟卡正在席卷全球，成为数字支付的先锋。从希腊到尼日利亚，虚拟卡市场展现出强劲的增长势头，预计2025年希腊市场将达38.2亿美元，年增长率5.7%，尼日利亚市场则将达152亿美元，年增长率17%。",
                 content: MediaChina,
-                tag: "媒体"
+                tag: "media"
             }
         ],
         "en": [
@@ -184,7 +184,7 @@ export const listBlogs = {
                 desc: "如果你曾经尝试过跨境汇款，你一定对传统国际支付的痛点深有体会：高昂的手续费、漫长的处理时间以及不可预测的汇率波动。到了2025年，稳定币如USDT（Tether）正在彻底改变这一局面，以更快速、更低成本、更透明的方式重塑全球支付生态。作为领先的加密货币支付平台，NewPay通过其虚拟卡和实体卡，利用USDT为用户提供无缝的跨境支付体验。本文将探讨稳定币如何革新跨境支付，以及NewPay如何抓住2025年的新机遇。",
                 slug: "稳定币如何重塑跨境支付-2025年的新机遇",
                 content: TrendChina1,
-                tag: "趋势观察"
+                tag: "trends"
             },
             {
                 id: 2,
@@ -192,7 +192,7 @@ export const listBlogs = {
                 desc: "如果你关注加密货币领域，可能会注意到“稳定币”正逐渐成为支付场景的主角。它不像比特币（BTC）那样因价格剧变而备受瞩目，也不像以太坊（ETH）以技术创新为核心，但它却在支付、转账和储值领域占据了重要地位。USDT（Tether）作为全球流通量最大的稳定币，已成为加密支付的支柱。",
                 slug: "从比特币到usdt-加密支付为何转向稳定币",
                 content: TrendChina2,
-                tag: "趋势观察"
+                tag: "trends"
             },
             {
                 id: 3,
@@ -200,7 +200,7 @@ export const listBlogs = {
                 desc: "曾几何时，国际转账是一个繁琐而昂贵的过程：高昂的手续费、漫长的到账时间、中间银行的层层过手，甚至还伴随着外汇限制与汇率不透明。",
                 slug: "跨境支付的崛起-稳定币如何实现全球转账自由",
                 content: TrendChina3,
-                tag: "趋势观察"
+                tag: "trends"
             },
             {
                 id: 4,
@@ -208,7 +208,7 @@ export const listBlogs = {
                 desc: "在快速发展的数字经济中，虚拟卡正在改变我们的支付方式，带来无与伦比的便捷性、安全性和灵活性。作为Newpay，我们很高兴看到虚拟卡如何在全球范围内获得广泛关注并重塑支付习惯。以下是推动虚拟卡崛起的四大趋势，以及它们对消费者和企业的意义。",
                 slug: "虚拟卡的崛起-塑造支付未来的趋势",
                 content: TrendChina4,
-                tag: "趋势观察"
+                tag: "trends"
 
             }
         ],

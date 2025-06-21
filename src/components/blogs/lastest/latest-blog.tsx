@@ -9,6 +9,7 @@ import { useLocale } from 'next-intl';
 import { listBlogs } from '@/markdown';
 import { MDXProps } from 'mdx/types';
 import { Blogs } from '@/interfaces/blogs';
+import { objectConvertTagLanguage } from '@/constants/convert-object-language';
 interface LatestProps {
     title: string;
     tags: string[];
@@ -64,10 +65,14 @@ const LatestBlog = ({ title, tags, blogTag }: LatestProps) => {
                                 key={index}
                                 title={item.title.split('.')[1]}
                                 tag={`${blogTag},${item.tag}`}
+                                tagShow={`${blogTag},${objectConvertTagLanguage[insightsLocale][item.tag as 'insights' | 'media' | 'trends']}`}
                                 desc={item.desc}
                                 slug={item.slug}
                                 id={item.id}
-                                image={images[Math.floor(Math.random() * images.length)]}
+                                image={images[Math.min(
+                                    Math.floor(Math.random() * images.length),
+                                    images.length - 1
+                                )]}
                             />
                         )
                     })
