@@ -5,7 +5,7 @@ import logo from "@/images/newpay_logo.svg";
 import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import SwitchLanguage from '../switch-language';
 import CompanyDropdown from "./company-dropdown";
@@ -16,22 +16,31 @@ const Header = () => {
     const router = useRouter();
     const pathname = usePathname();
     const t = useTranslations('navigation');
+    const searchParams = useSearchParams();
 
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isVisible, setIsVisible] = useState(true);
     const [isScrolled, setIsScrolled] = useState(false);
     const [openDropdown, setOpenDropdown] = useState<"payment" | "company" | null>(null);
+    const [hoveringDropdown, setHoveringDropdown] = useState<"payment" | "company" | null>(null);
+
 
     const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
     const switchLocale = (newLocale: string) => {
+
+        if (newLocale === locale) return;
+
         if (!pathname) return;
+
         const segments = pathname.split("/");
         segments[1] = newLocale;
         const newPath = segments.join("/");
-        router.push(newPath);
-    };
+        const currentParams = searchParams.toString();
+        const newUrl = currentParams ? `${newPath}?${currentParams}` : newPath;
 
+        router.push(newUrl);
+    };
     useEffect(() => {
         let lastScrollY = window.scrollY;
         let ticking = false;
@@ -79,9 +88,9 @@ const Header = () => {
             label: t('payment'),
             hasDropdown: true,
             dropdownItems: [
-                { title: 'Payment', href: `` },
-                { title: 'Payment Card', href: `/${locale}/payment` },
-                { title: 'Security & Protection', href: `/${locale}/secure` }
+                { title: locale === 'en' ? 'Payment' : '支付', href: `` },
+                { title: locale === 'en' ? 'Payment Card' : '支付卡', href: `/${locale}/payment` },
+                { title: locale === 'en' ? 'Security & Protection' : '安全与保护', href: `/${locale}/secure` }
             ]
         },
         {
@@ -90,15 +99,16 @@ const Header = () => {
             label: t('company'),
             hasDropdown: true,
             dropdownItems: [
-                { title: 'Discover NewPay', href: `/${locale}/discover-newpay` },
-                { title: 'About NewPay', href: `/${locale}/about-us` },
-                { title: 'Contact us', href: `/${locale}/contact` },
-                { title: 'Blog', href: `/${locale}/blog` },
-                { title: 'FAQ', href: `/${locale}/faq-help` }
+                { title: locale === 'en' ? 'Discover NewPay' : '认识 NewPay', href: `` },
+                { title: locale === 'en' ? 'About NewPay' : '关于 NewPay', href: `/${locale}/about-us` },
+                { title: locale === 'en' ? 'Contact us' : '联系我们', href: `/${locale}/contact` },
+                { title: locale === 'en' ? 'Blog' : '博客', href: `/${locale}/blog` },
+                { title: locale === 'en' ? 'FAQ' : '常见问题', href: `/${locale}/faq-help` }
             ]
         },
         { key: 'support', href: `/${locale}/support`, label: t('support'), hasDropdown: false }
     ];
+    
 
     const getHeaderStyles = () => {
         if (isBlogAndContact) {
@@ -107,10 +117,20 @@ const Header = () => {
                 color: "black",
                 borderBottom: "1px solid rgba(0, 0, 0, 0.1)",
                 fontWeight: '600',
-                zIndex: 50
+                zIndex: 50,
+                transition: "background 0.3s ease",
             };
         }
-
+    
+        if (hoveringDropdown) {
+            return {
+                background: "#060606",
+                color: "white",
+                backdropFilter: "blur(8px)",
+                transition: "background 0.3s ease",
+            };
+        }
+    
         if (isScrolled) {
             return {
                 background: "rgba(0, 0, 0, 0.80)",
@@ -118,12 +138,13 @@ const Header = () => {
                 color: "white",
             };
         }
-
+    
         return {
             background: "transparent",
             color: "white"
         };
     };
+    
     const isActive = (path: string) => pathname === path;
 
     const isBlogAndContact = pathname === `/${locale}/blog` || pathname === `/${locale}/contact`;
@@ -147,7 +168,16 @@ const Header = () => {
                     <li key={link.href}>
                         <Link
                             href={link.href}
-                            className={`px-8 py-2 rounded-full transition ${isActive(link.href) ? 'bg-white/10' : 'hover:bg-white/10'}`}
+                            className={`px-8 py-2 rounded-full transition
+                            ${isActive(link.href)
+                                    ? isBlogAndContact
+                                        ? 'bg-black/10 text-black'
+                                        : 'bg-white/8 text-white'
+                                    : isBlogAndContact
+                                        ? 'hover:bg-black/10 text-black'
+                                        : 'hover:bg-white/8 text-white'
+                                }
+                            `}
                         >
                             {link.label}
                         </Link>
@@ -160,12 +190,32 @@ const Header = () => {
                     <li
                         key={link.key}
                         className="relative"
-                        onMouseEnter={() => link.hasDropdown && setOpenDropdown(link.key as "payment" | "company")}
-                        onMouseLeave={() => link.hasDropdown && setOpenDropdown(null)}
+                        onMouseEnter={() => {
+                            if (link.hasDropdown) {
+                              setOpenDropdown(link.key as "payment" | "company");
+                              setHoveringDropdown(link.key as "payment" | "company");
+                            }
+                          }}
+                          
+                          onMouseLeave={() => {
+                            if (link.hasDropdown) {
+                              setOpenDropdown(null);
+                              setHoveringDropdown(null);
+                            }
+                          }}
                     >
                         <Link
                             href={link.href}
-                            className={`px-8 py-2 rounded-full transition flex items-center gap-1 ${isActive(link.href) ? 'bg-white/10' : 'hover:bg-white/10'}`}
+                            className={`px-8 py-2 rounded-full transition flex items-center gap-1
+                            ${isActive(link.href)
+                                    ? isBlogAndContact
+                                        ? 'bg-black/10 text-black'
+                                        : 'bg-white/8 text-white'
+                                    : isBlogAndContact
+                                        ? 'hover:bg-black/10 text-black'
+                                        : 'hover:bg-white/8 text-white'
+                                }
+                            `}
                         >
                             {link.label}
                         </Link>

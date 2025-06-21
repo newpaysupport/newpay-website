@@ -1,10 +1,14 @@
 import BlogScreen from '@/components/blogs'
+import ReactLenis from 'lenis/react'
 
 const Blog = () => {
     return (
-        <main>
-            <BlogScreen />
-        </main>
+        <ReactLenis root>
+            <main>
+                <BlogScreen />
+            </main>
+        </ReactLenis>
+
     )
 }
 

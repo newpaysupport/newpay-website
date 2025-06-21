@@ -8,7 +8,6 @@ import img_bg_joint3 from '@/images/home/joint/img_bg_joint3.svg';
 import img_bg_joint4 from '@/images/home/joint/img_bg_joint4.svg';
 import img_bg_joint1_cn from '@/images/home/joint/img_bg_joint1_cn.svg';
 import img_bg_joint2_cn from '@/images/home/joint/img_bg_joint2_cn.svg';
-import img_bg_joint3_cn from '@/images/home/joint/img_bg_joint3_cn.svg';
 import img_bg_joint4_cn from '@/images/home/joint/img_bg_joint4_cn.svg';
 import { joint as enBlog } from '@/i18n/messages/en.json';
 import { joint as ziBlog } from '@/i18n/messages/zi.json';
@@ -23,7 +22,6 @@ const HeroJoint = () => {
     const jointImages = {
         img1: locale === 'en' ? img_bg_joint1 : img_bg_joint1_cn,
         img2: locale === 'en' ? img_bg_joint2 : img_bg_joint2_cn,
-        img3: locale === 'en' ? img_bg_joint3 : img_bg_joint3_cn,
         img4: locale === 'en' ? img_bg_joint4 : img_bg_joint4_cn,
     };
 
@@ -52,9 +50,9 @@ const HeroJoint = () => {
 
             {/* Content */}
             <div className="absolute inset-0 flex justify-start items-start  text-white p-4">
-                <div className="container mx-auto flex flex-col lg:flex-row justify-between gap-5 items-center pt-[8%] pb-[5%]">
+                <div className="container mx-auto flex flex-col lg:flex-row justify-between gap-5 items-center pt-[5%] pb-[5%]">
                     {/* Left Images Column */}
-                    <div className="flex flex-col gap-10 md:gap-60 items-start  mb-8 lg:mb-0">
+                    <div className="flex flex-col gap-10 md:gap-60 items-start mb-8 lg:mb-0">
                         <Image src={jointImages.img1} alt="Joint Image 1" width={0} height={0} className='fadeInUp-no-delay w-full h-full' />
                         <Image src={jointImages.img2} alt="Joint Image 3" width={0} height={0} className='fadeInUp-no-delay w-full h-full' />
                     </div>
@@ -84,7 +82,7 @@ const HeroJoint = () => {
 
                     {/* Right Images Column */}
                     <div className="flex flex-col gap-10 md:gap-60 items-end mt-8 lg:mt-0">
-                        <Image src={jointImages.img3} alt="Joint Image 2" width={0} height={0} className='fadeInUp-no-delay w-full h-full' />
+                        <Image src={img_bg_joint3} alt="Joint Image 2" width={0} height={0} className='fadeInUp-no-delay w-full h-full' />
                         <Image src={jointImages.img4} alt="Joint Image 4" width={0} height={0} className='fadeInUp-no-delay w-full h-full' />
                     </div>
                 </div>

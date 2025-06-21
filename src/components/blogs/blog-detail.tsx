@@ -1,5 +1,5 @@
 'use client';
-import Card from '@/components/blogs/card';
+import Card from '@/components/blogs/lastest/card';
 import { blog as enBlog } from '@/i18n/messages/en.json';
 import { blog as ziBlog } from '@/i18n/messages/zi.json';
 import { useLocale, useTranslations } from 'next-intl';
@@ -118,7 +118,7 @@ const BlogDetail = ({ id }: BlogDetailProps) => {
             </div>
 
             {/* Related Posts */}
-            <div className="mt-16">
+            {/* <div className="mt-16">
                 <h2 className="text-2xl md:text-3xl font-semibold mb-6">
                     {locale === 'en' ? 'Further Reading' : '进一步阅读'}
                 </h2>
@@ -136,7 +136,7 @@ const BlogDetail = ({ id }: BlogDetailProps) => {
                         />
                     ))}
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 };

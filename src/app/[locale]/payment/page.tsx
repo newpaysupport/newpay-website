@@ -1,10 +1,14 @@
 import PaymentScreen from "@/components/payment"
+import ReactLenis from "lenis/react"
 
 const Payment = () => {
     return (
-        <main>
-            <PaymentScreen />
-        </main>
+        <ReactLenis root>
+            <main>
+                <PaymentScreen />
+            </main>
+        </ReactLenis>
+
     )
 }
 
