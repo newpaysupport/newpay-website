@@ -1,7 +1,7 @@
 "use client"
 import { listBlogs } from "@/markdown";
 import { MDXWrapper } from '@/MDXWrapper';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useEffect, useMemo } from "react";
 import ShareSocial from './share-social';
@@ -17,7 +17,7 @@ const BlogDetailSlug = ({ slug }: { slug: string }) => {
     const router = useRouter();
     const [id, category] = slug.split("-");
 
-
+    const t = useTranslations('blog');
 
 
     const data = useMemo(() => {
@@ -64,9 +64,9 @@ const BlogDetailSlug = ({ slug }: { slug: string }) => {
                             <blogDetail.content />
                         </MDXWrapper>
                     </div>
-                    <ShareSocial />
+                    <ShareSocial title={t('shareThisPost')} />
                 </div>
-                <FurtherReading />
+                <FurtherReading blogTitle={t('title')} />
             </div>
         </div>
     )

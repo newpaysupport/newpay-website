@@ -11,9 +11,7 @@ import { objectConvertTagLanguage } from '@/constants/convert-object-language';
 
 const images = [card2, card3, card4]
 
-const FurtherReading = () => {
-
-    const t = useTranslations('blog');
+const FurtherReading = ({ blogTitle }: { blogTitle: string }) => {
 
     const locale = useLocale();
     type InsightsLocale = 'zi' | 'en';
@@ -46,8 +44,8 @@ const FurtherReading = () => {
                                 id={item.id}
                                 key={index}
                                 title={item.title.split('.')[1]}
-                                tag={`${t('title')},${item.tag}`}
-                                tagShow={`${t('title')},${objectConvertTagLanguage[insightsLocale][item.tag as 'insights' | 'media' | 'trends']}`}
+                                tag={`${blogTitle},${item.tag}`}
+                                tagShow={`${blogTitle},${objectConvertTagLanguage[insightsLocale][item.tag as 'insights' | 'media' | 'trends']}`}
                                 desc={item.desc}
                                 slug={item.slug}
                                 image={images[Math.min(

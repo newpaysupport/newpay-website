@@ -20,7 +20,7 @@ import toast from 'react-hot-toast';
 import { usePathname, useSearchParams } from 'next/navigation';
 
 
-const ShareSocial = () => {
+const ShareSocial = ({ title }: { title: string }) => {
 
     const pathName = usePathname();
     const searchParams = useSearchParams();
@@ -37,7 +37,7 @@ const ShareSocial = () => {
 
     return (
         <div className='w-full lg:w-[312px]'>
-            <p className='text-[#1B1B1B] text-base font-medium mb-6'>Share this post</p>
+            <p className='text-[#1B1B1B] text-base font-medium mb-6'>{title}</p>
             <div className='flex items-center gap-x-6'>
 
                 <figure onClick={handleCopyLink} className='group cursor-pointer'>
