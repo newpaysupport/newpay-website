@@ -43,7 +43,7 @@ const FaqHelpSlugDetail = ({ slug }: { slug: string }) => {
 
                 <div className='flex flex-col gap-4 mt-12'>
                     <p className='text-white text-[32px] font-semibold'>{currentFaq.title}</p>
-                    <p className='text-[#666] text-base font-normal -tracking-[0.24px]'>{currentFaq.desc}</p>
+                    {/* <p className='text-[#666] text-base font-normal -tracking-[0.24px]'>{currentFaq.desc}</p> */}
                     <p className='py-2 px-4 bg-[#1c1c1c] rounded-full w-fit'>
                         <span className='text-white text-sm font-normal'>
                             {currentFaq.faqs.length} articles
