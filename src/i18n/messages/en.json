@@ -802,7 +802,7 @@
                     },
                     {
                         "question": "Why can't I link my card to Apple Pay or Google Pay?",
-                        "answer": "We understand how frustrating that can be — linking your card should be quick and easy.\nBut don't worry, here are a few common reasons that might be causing the issue:\n▶ The card hasn't been activated or funded yet; please make sure your card is activated in the NEWPAY app and that you've transferred some funds to it\n▶ Some wallets try to make a small verification charge when linking a card — if your balance is zero, the process might fail\n▶ Card details were entered incorrectly; it's easy to overlook small details. Be sure to double-check your card number, expiration date (MM/YY), and CVV\n▶ Your device or region may not be supported; Make sure your phone's OS version and region settings are compatible with Apple Pay or Google Pay\n▶ Network issues can interfere sometimes; the connection just isn't cooperating. Try switching to a different network or restarting your phone\nIf you've gone through all these checks and it's still not working, feel free to take a screenshot of the error and contact our support team — we're here to help!"
+                        "answer": "We understand how frustrating that can be — linking your card should be quick and easy.\nBut don’t worry, here are a few common reasons that might be causing the issue:\n▶ The card hasn’t been activated or funded yet, please make sure your card is activated in the NEWPAY app and that you've transferred some balance into it.\n▶ Some wallets try to make a small verification charge when linking a card — if your balance is zero, the process might fail.\n▶ Card details were entered incorrectly.It’s easy to overlook small details. Be sure to double-check your card number, expiration date (MM/YY), and CVV.Even a single wrong digit or formatting issue can stop the card from linking.\n▶ Your device or region may not be supported.Make sure your phone’s OS version and region settings are compatible with Apple Pay or Google Pay.Some devices or locations might not support wallet linking yet.\n▶ Network issues can interfere. Sometimes the connection just isn’t cooperating. Try switching to a different network or restarting your phone, then attempt to link the card again.\nIf you’ve gone through all these checks and it’s still not working, feel free to take a screenshot of the error and contact our support team — we’re here to help."
                     },
                     {
                         "question": "I already have one virtual card — can I get another?",
@@ -814,7 +814,7 @@
                     },
                     {
                         "question": "My card didn’t work at the supermarket — Is there a problem with the card?",
-                        "answer": "A failed in-store payment doesn't necessarily mean the card is faulty.\nCommon reasons for failure include:\n▶ The merchant's POS terminal doesn't support your card type or had a read error\n▶ Network issues or failure in the acquiring system\n▶ The card hasn't been activated or has insufficient balance\n▶ The transaction exceeded the card's limit setting\nPlease check that your card is activated and has sufficient balance. If the issue continues, try using the card at a different merchant or online."
+                        "answer": "A failed in-store payment doesn't necessarily mean the card is faulty.\nCommon reasons for failure include:\n▶ The merchant's POS terminal doesn't support your card type or had a read error\n▶ Network issues or failure in the acquiring system\n▶ The card hasn't been activated or has insufficient balance\n▶ The transaction exceeded the card's limit setting\nPlease check that your card is activated and has enough balance. If the issue continues, try using the card at a different merchant or online. Feel free to contact support for help."
                     },
                     {
                         "question": "Can I use this card at gas stations or convenience stores?",
@@ -849,7 +849,7 @@
                     },
                     {
                         "question": "Email/Phone Verification Guide",
-                        "answer": "Verification Process:\n1.Upon registration, the system will automatically send a verification email or SMS code.\n2.Complete the binding process by clicking the verification link in the email or entering the SMS code.\n3.If you do not receive the verification code, you may:\n 3.1 Check your spam or junk folder, or SMS filtering settings.\n3.2 Request a resend of the verification email or SMS.\n3.3 Contact customer support for further assistance."
+                        "answer": "Verification Process:\n1.Upon registration, the system will automatically send a verification email or SMS code.\n2.Complete the binding process by clicking the verification link in the email or entering the SMS code.\n3.If you do not receive the verification code, you may:\nㅤ3.1 Check your spam or junk folder, or SMS filtering settings.\nㅤ3.2 Request a resend of the verification email or SMS.\nㅤ3.3 Contact customer support for further assistance."
                     }
                 ]
             },
