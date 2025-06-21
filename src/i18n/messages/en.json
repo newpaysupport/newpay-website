@@ -122,6 +122,7 @@
         "featuredArticle": "Featured article",
         "latestBlog": "Latest Blog",
         "readMore": "Read More",
+        "shareThisPost": "Share this post",
         "date": "Date",
         "readTime": "Read Time",
         "listCardData": [
@@ -226,11 +227,11 @@
             }
         ],
         "tags": [
-            "All",
-            "Announcements",
-            "Blog",
-            "Media",
-            "Press Releases"
+            "all",
+            "announcements",
+            "insights",
+            "media",
+            "trends"
         ]
     },
     "term": {
@@ -500,7 +501,7 @@
                     },
                     {
                         "label": "Blog",
-                        "link": ""
+                        "link": "/blog"
                     }
                 ]
             },

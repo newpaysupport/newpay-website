@@ -10,7 +10,6 @@ const TopViewedArticles = () => {
     const t = useTranslations("faqHelp");
     const topArticles: { question: string; answer: string; id: number }[] = t.raw("topArticles");
 
-    console.log(topArticles)
     const [faqActive, setFaqActive] = useState(-1);
 
     const handleOnclickSetFAQ = (index: number) => {

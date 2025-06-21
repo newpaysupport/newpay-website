@@ -27,6 +27,8 @@ const BlogScreen = () => {
             <FeaturedArticles featuredArticle={t("featuredArticle")} />
             <LatestBlog
                 title={t('latestBlog')}
+                tags={t.raw('tags')}
+                blogTag={t('title')}
             />
             <div className='w-full flex justify-center py-20'>
                 <button className='cursor-pointer rounded-full px-12 py-5 border border-[#D8D8D8] text-lg font-semibold text-[#1B1B1B]'>Load more</button>

@@ -5,7 +5,7 @@ import logo from "@/images/newpay_logo.svg";
 import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import SwitchLanguage from '../switch-language';
 import CompanyDropdown from "./company-dropdown";
@@ -16,6 +16,7 @@ const Header = () => {
     const router = useRouter();
     const pathname = usePathname();
     const t = useTranslations('navigation');
+    const searchParams = useSearchParams();
 
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isVisible, setIsVisible] = useState(true);
@@ -27,13 +28,19 @@ const Header = () => {
     const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
     const switchLocale = (newLocale: string) => {
+
+        if (newLocale === locale) return;
+
         if (!pathname) return;
+
         const segments = pathname.split("/");
         segments[1] = newLocale;
         const newPath = segments.join("/");
-        router.push(newPath);
-    };
+        const currentParams = searchParams.toString();
+        const newUrl = currentParams ? `${newPath}?${currentParams}` : newPath;
 
+        router.push(newUrl);
+    };
     useEffect(() => {
         let lastScrollY = window.scrollY;
         let ticking = false;
@@ -161,7 +168,7 @@ const Header = () => {
                     <li key={link.href}>
                         <Link
                             href={link.href}
-                            className={`px-8 py-2 rounded-full transition 
+                            className={`px-8 py-2 rounded-full transition
                             ${isActive(link.href)
                                     ? isBlogAndContact
                                         ? 'bg-black/10 text-black'

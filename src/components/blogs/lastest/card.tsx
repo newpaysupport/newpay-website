@@ -5,27 +5,32 @@ import { useParams, useRouter } from 'next/navigation';
 import { FaLink } from 'react-icons/fa';
 import link from '@/images/blog/link.svg';
 import link_hover from '@/images/blog/link_hover.svg';
+import { useLocale } from 'next-intl';
 
 type CardProps = {
     title: string;
-    tag: string[];
+    tag: string;
     image: string | StaticImageData;
     slug: string;
+    desc: string;
+    id: number;
+    tagShow: string;
 };
 
-const Card = ({ title, tag, image, slug }: CardProps) => {
-    // const router = useRouter();
+const Card = ({ title, tag, image, slug, desc, id, tagShow }: CardProps) => {
+    const router = useRouter();
     // const params = useParams();
-    // const locale = params.locale as string;
+    const locale = useLocale();
 
-    // const handleClick = () => {
-    //     if (id) {
-    //         router.push(`/${locale}/blog-detail/${id}`);
-    //     }
-    // };
+    const handleClick = () => {
+        if (slug) {
+            router.push(`/${locale}/blog/${id}-${tag.split(',')[1]}?slug=${slug}&category=${tag}`);
+        }
+    };
 
     return (
         <div
+            onClick={handleClick}
             className={`flex flex-col rounded-[28px] group cursor-pointer md:w-[385px] md:h-[380px] mb-10 p-3 border border-transparent hover:border-[#FF6910]/16 hover:bg-[#FF6910]/4`}
         >
             <div className="w-full h-full relative">
@@ -38,7 +43,7 @@ const Card = ({ title, tag, image, slug }: CardProps) => {
                 {/* Hover overlay content */}
                 <div className="pt-5 absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-left">
                     <h3 className="text-base font-semibold text-[#1B1B1B] mb-2">{title}</h3>
-                    <p className="text-sm text-gray-600 break-words">{slug}</p>
+                    <p className="text-sm text-gray-600 break-words">{desc}</p>
                 </div>
             </div>
             <div className="w-full flex flex-col justify-between mt-4">
@@ -49,7 +54,7 @@ const Card = ({ title, tag, image, slug }: CardProps) => {
                 </div>
                 <div className="flex items-center justify-between relative">
                     <div className='flex items-center gap-3 mt-4'>
-                        {tag.map((item, index) => {
+                        {tagShow.split(',').map((item, index) => {
                             return (
                                 <p key={index} className='py-2 px-4 border border-[#d8d8d8] rounded-full w-fit capitalize text-[#1b1b1b] font-medium text-sm'>{item}</p>
                             )
