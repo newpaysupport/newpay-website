@@ -26,7 +26,12 @@ const NameInput = ({ label, name, type = 'normal', placeholder, register, inputT
 
     return (
         <div className={`${focused === name ? "border-[#FF6910] border-[1.5px]" : "border-[rgba(216,216,216,0.64)]"} h-[56px] flex-1 relative bg-white rounded-[10px] border p-4 transition-colors outline-none`}>
-            {type === 'name' && <span className={`${focused === name ? "text-[#FF6910]" : "text-[#aeaeae]"} absolute left-4 top-[-22%] bg-white capitalize font-medium`}>{label}</span>}
+            {type === 'name' && <span className={`${focused === name ? "text-[#FF6910] left-4 top-[-22%] bg-white" : "text-[#aeaeae]"} text-sm absolute capitalize font-medium pointer-events-none`}
+                style={{
+                    transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)'
+                }}>
+                {label}
+            </span>}
             <input
                 type={inputType}
                 // value={first}

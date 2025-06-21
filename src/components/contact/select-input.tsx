@@ -1,5 +1,6 @@
 "use client"
 import { ContactUsForm } from '@/interfaces/contact-form'
+import { useTranslations } from 'next-intl'
 import React, { useState } from 'react'
 import { UseFormSetValue } from 'react-hook-form'
 
@@ -32,7 +33,7 @@ const SelectInput = ({ setValue }: SelectInputProps) => {
 
     const [open, setOpen] = useState(false);
     const [typeSelected, setTypeSelected] = useState("");
-
+    const t = useTranslations("contactUs")
 
     const handleOpen = () => {
         setOpen(!open);
@@ -48,7 +49,7 @@ const SelectInput = ({ setValue }: SelectInputProps) => {
     return (
         <div className='relative'>
             <div onClick={handleOpen} className='border-[rgba(216,216,216,0.64)] cursor-pointer h-[56px] flex justify-between gap-4 relative bg-white rounded-[10px] border p-4 transition-colors outline-none'>
-                <p className={`${typeSelected ? "text-[#0E121B]" : "text-[#aeaeae]"} text-base font-normal`}>{typeSelected ? typeSelected : "Collaboration Type"}</p>
+                <p className={`${typeSelected ? "text-[#0E121B]" : "text-[#aeaeae]"} text-base font-normal`}>{typeSelected ? typeSelected : t("typeCollaboration")}</p>
                 <figure>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <path d="M5 7.5L10 12.5L15 7.5" stroke="#AEAEAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
