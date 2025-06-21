@@ -15,7 +15,7 @@ import { useLocale } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 import toast from 'react-hot-toast';
-import {useTranslations } from 'use-intl';
+import { useTranslations } from 'use-intl';
 import ToastCustom from '../common/toast';
 import { usePathname } from 'next/navigation';
 
@@ -52,8 +52,6 @@ const Footer = () => {
     const locale = useLocale();
     const pathname = usePathname();
     const currentLocale = pathname.split('/')[1]
-
-    console.log('currentLocale', currentLocale)
 
     const handleToastComingSoon = () => {
         toast.custom(<ToastCustom type='warning' />)

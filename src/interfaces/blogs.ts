@@ -5,5 +5,15 @@ export interface Blogs {
     desc: string;
     slug: string;
     content: (props: MDXProps) => Element;
-    tag: string
+    tag: string;
+    id: number;
 }
+
+
+// interface Blogs {
+//     title: string;
+//     desc: string;
+//     slug: string;
+//     content: (props: MDXProps) => JSX.Element;
+//     tag: string
+// }

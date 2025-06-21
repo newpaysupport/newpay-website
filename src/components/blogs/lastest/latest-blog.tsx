@@ -3,7 +3,7 @@
 import card2 from '@/images/blog/card2.png';
 import card3 from '@/images/blog/card3.png';
 import card4 from '@/images/blog/card4.png';
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import Card from "./card";
 import { useLocale } from 'next-intl';
 import { listBlogs } from '@/markdown';
@@ -11,12 +11,14 @@ import { MDXProps } from 'mdx/types';
 import { Blogs } from '@/interfaces/blogs';
 interface LatestProps {
     title: string;
-    tags: string[]
+    tags: string[];
+    blogTag: string;
 }
 
 const images = [card2, card3, card4]
 
-const LatestBlog = ({ title, tags }: LatestProps) => {
+
+const LatestBlog = ({ title, tags, blogTag }: LatestProps) => {
     const [selectTag, setSelectTag] = useState(tags[0]);
     const locale = useLocale();
     type InsightsLocale = 'zi' | 'en';
@@ -27,6 +29,12 @@ const LatestBlog = ({ title, tags }: LatestProps) => {
         .flat()
         .filter((item): item is Blogs => typeof item.tag === 'string');
 
+    const listBlogsFiltered = useMemo(() => {
+        if (!blogs.length) return;
+        if (selectTag === tags[0]) return blogs;
+
+        return blogs.filter(item => item.tag === selectTag)
+    }, [selectTag])
 
 
     const handleClickTag = (tag: string) => {
@@ -50,14 +58,15 @@ const LatestBlog = ({ title, tags }: LatestProps) => {
             </div>
             <div className='flex mx-auto gap-5 items-center justify-center flex-wrap'>
                 {
-                    blogs.map((item, index) => {
+                    listBlogsFiltered?.map((item, index) => {
                         return (
                             <Card
                                 key={index}
                                 title={item.title.split('.')[1]}
-                                tag={`media,${item.tag}`}
+                                tag={`${blogTag},${item.tag}`}
                                 desc={item.desc}
                                 slug={item.slug}
+                                id={item.id}
                                 image={images[Math.floor(Math.random() * images.length)]}
                             />
                         )

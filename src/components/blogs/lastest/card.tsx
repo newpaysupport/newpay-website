@@ -13,16 +13,17 @@ type CardProps = {
     image: string | StaticImageData;
     slug: string;
     desc: string;
+    id: number;
 };
 
-const Card = ({ title, tag, image, slug, desc }: CardProps) => {
+const Card = ({ title, tag, image, slug, desc, id }: CardProps) => {
     const router = useRouter();
     // const params = useParams();
     const locale = useLocale();
 
     const handleClick = () => {
         if (slug) {
-            router.push(`/${locale}/blog/${slug}`);
+            router.push(`/${locale}/blog/${id}-${tag.split(',')[1]}?slug=${slug}&category=${tag}`);
         }
     };
 

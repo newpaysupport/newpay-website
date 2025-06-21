@@ -1,25 +1,48 @@
 "use client"
-import { useLocale } from 'next-intl';
 import { listBlogs } from "@/markdown";
-import React, { useMemo } from "react";
 import { MDXWrapper } from '@/MDXWrapper';
-import { useRouter } from 'next/navigation';
+import { useLocale } from 'next-intl';
+import { useRouter, useSearchParams } from 'next/navigation';
+import { useEffect, useMemo } from "react";
+import ShareSocial from './share-social';
+import FurtherReading from "./further-reading";
+import { defaultLocale } from "@/i18n/config";
 
 
 
 const BlogDetailSlug = ({ slug }: { slug: string }) => {
-
     const locale = useLocale();
     type InsightsLocale = 'zi' | 'en';
     const insightsLocale = (locale === 'zi' || locale === 'en' ? locale : 'en') as InsightsLocale;
     const router = useRouter();
+    const [id, category] = slug.split("-");
 
-    const blogDetail = useMemo(() => {
+
+
+
+    const data = useMemo(() => {
         return Object.values(listBlogs)
             .map(item => item[insightsLocale])
             .flat()
-            .filter(item => 'slug' in item && item.slug === slug)[0]
-    }, [slug])
+            .filter(item => item.tag === category)
+    }, [slug, category, locale])
+
+
+
+    const blogDetail = useMemo(() => {
+        const item = data
+            .filter(item => item.id === Number(id))[0]
+        return item;
+    }, [locale, id])
+
+    useEffect(() => {
+        router.push(`?slug=${blogDetail.slug}&category=${`blog,${blogDetail.tag}`}`)
+    }, [locale, blogDetail])
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
 
     const previousBack = () => {
         router.back();
@@ -34,11 +57,15 @@ const BlogDetailSlug = ({ slug }: { slug: string }) => {
                     </svg>
                     <span className='text-[#FF6910] text-base font-semibold -tracking-[0.24px]'>NewPay Blog</span>
                 </div>
-                <div className='w-[780px]'>
-                    <MDXWrapper>
-                        <blogDetail.content />
-                    </MDXWrapper>
+                <div className='flex justify-between'>
+                    <div className='w-[780px]'>
+                        <MDXWrapper>
+                            <blogDetail.content />
+                        </MDXWrapper>
+                    </div>
+                    <ShareSocial />
                 </div>
+                <FurtherReading />
             </div>
         </div>
     )
