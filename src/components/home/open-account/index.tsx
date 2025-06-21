@@ -81,7 +81,6 @@ const OpenAccount = () => {
         })
 
     });
-
     return (
         <ReactLenis root>
             <div className="bg-[#060606] py-20 px-[120px]">
