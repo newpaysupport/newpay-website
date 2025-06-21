@@ -32,7 +32,7 @@ const Faq = ({ faqSection, faqItems }: FaqSectionProps) => {
                         return (
                             <details key={item.question} className="border-b border-gray-800 py-6 group">
                                 <summary className="md:w-[640px] w-full flex justify-between items-center text-left focus:outline-none cursor-pointer">
-                                    <h3 className="md:text-2xl text-sm font-medium">{item.question}</h3>
+                                    <p className="md:text-2xl text-sm font-medium">{item.question}</p>
                                     <span className="text-3xl transition-transform duration-300 group-open:rotate-45">
                                         +
                                     </span>
