@@ -1,20 +1,27 @@
 import Image from 'next/image';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import logoEN from '@/images/UnitedKingdom.png';
 import logoZH from '@/images/china.png';
-
+import Link from 'next/link';
 type Props = {
     locale: string;
     switchLocale: (lng: string) => void;
     t: (key: string) => string;
+    isBlogAndContact?: boolean;
+    isVisible?: boolean;
 };
 
 const languages = [
     { code: 'en', label: 'EN', flag: logoEN },
-    { code: 'zi', label: 'ZI', flag: logoZH }
+    { code: 'zi', label: 'CN', flag: logoZH }
 ];
 
-const SwitchLanguage = ({ locale, switchLocale, t }: Props) => {
+const SwitchLanguage = ({ locale, switchLocale, t, isBlogAndContact, isVisible }: Props) => {
+    useEffect(() => {
+        if (!isVisible) {
+            setOpen(false);
+        }
+    }, [isVisible])
     const [open, setOpen] = useState(false);
 
     const currentLanguage = languages.find((lng) => lng.code === locale) || languages[0];
@@ -29,7 +36,7 @@ const SwitchLanguage = ({ locale, switchLocale, t }: Props) => {
                 >
                     <Image
                         src={currentLanguage.flag.src}
-                        alt={currentLanguage.label}
+                        alt={""}
                         width={20}
                         height={20}
                         className="w-5 h-5 rounded-full"
@@ -46,7 +53,10 @@ const SwitchLanguage = ({ locale, switchLocale, t }: Props) => {
                 </button>
 
                 {open && (
-                    <div className="absolute left-0 mt-2 w-32 rounded z-20 bg-[#060606]/80 ">
+                    <div style={{
+                        // background: "rgba(255, 255, 255, 0.08)",
+                    }}
+                        className={`absolute left-0 mt-2 w-32 z-20  rounded-lg p-2 bg-[#131313]`}>
                         {languages.map((lng) => (
                             <div
                                 key={lng.code}
@@ -54,26 +64,30 @@ const SwitchLanguage = ({ locale, switchLocale, t }: Props) => {
                                     switchLocale(lng.code);
                                     setOpen(false);
                                 }}
-                                className="flex items-center gap-2 px-4 py-2 cursor-pointer hover:bg-black"
+                                className={`flex items-center gap-2 px-4 py-2 cursor-pointer rounded-lg my-1
+                                    ${locale === lng.code ? 'bg-white/8' : 'hover:bg-white/8'}`}
                             >
                                 <Image
                                     src={lng.flag.src}
-                                    alt={lng.label}
+                                    alt={""}
                                     width={20}
                                     height={20}
                                     className="w-5 h-5 rounded-full"
                                 />
-                                <span>{lng.label}</span>
+                                <span className={`${isBlogAndContact ? 'text-white' : ''}`}>{lng.label}</span>
                             </div>
                         ))}
+
                     </div>
                 )}
             </div>
 
             {/* Get App Button */}
-            <button className="cursor-pointer font-semibold md:inline hidden bg-white ml-4 px-5 py-3 rounded-full active:scale-95 text-[#060606] text-sm">
-                {t('getApp')}
-            </button>
+            <Link href={`/${locale}/download`}>
+                <button className={`${isBlogAndContact ? 'bg-black text-white' : 'bg-white '} text-[#060606] cursor-pointer font-semibold md:inline hidden px-5 py-3 rounded-full active:scale-95  text-sm hover:scale-102`}>
+                    {t('getApp')}
+                </button>
+            </Link>
         </div>
     );
 };

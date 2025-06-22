@@ -7,10 +7,15 @@ import icon_gift from '@/images/home/giftcard/icon_gift.svg';
 import arrow_left from '@/images/home/giftcard/arrow_left.svg';
 import arrow_right from '@/images/home/giftcard/arrow_right.svg';
 import { useTranslations } from 'use-intl';
+import ToastCustom from '@/components/common/toast';
+import toast from 'react-hot-toast';
 
 const VideoBackground = () => {
 
     const t = useTranslations("home");
+    const handleToast = () => {
+        toast.custom(<ToastCustom type='warning' />)
+    }
     return (
         <section className='bg-[#060606] pt-[120px]'>
             <div className='container mx-auto relative'>
@@ -23,7 +28,7 @@ const VideoBackground = () => {
                 }} className='text-6xl font-semibold text-center mx-auto w-full md:w-[520px]'>
                     {t('giftCard.title')}
                 </h1>
-                <p className='text-[#848484] text-center mt-4'>
+                <p className='text-[#848484] text-center mt-4 font-medium'>
                     {t('giftCard.desc')}
                 </p>
                 {/* video */}
@@ -40,9 +45,9 @@ const VideoBackground = () => {
                 {/* content right */}
                 <div style={{
                     background: "rgba(255, 255, 255, 0.04))",
-                    backdropFilter: "blur(20px)"
+                    backdropFilter: "blur(40px)"
                 }}
-                    className='absolute right-[10%] bottom-[10%] flex flex-col gap-5 w-[360px] p-6 rounded-3xl'
+                    className='absolute right-[10%] bottom-[10%] flex flex-col gap-2 w-[360px] p-6 rounded-3xl'
                 >
                     <h1 className='text-2xl text-white mb-4'>
                         {t('giftCard.contentRight.title')}
@@ -100,7 +105,9 @@ const VideoBackground = () => {
                             <p className="text-xs font-semibold">– 50.50 USDT</p>
                         </div>
                     </div>
-                    <button className='text-white bg-[#FF6910] text-md p-4 rounded-full cursor-pointer'>{t('giftCard.contentRight.button')}</button>
+                    <button 
+                        onClick={handleToast}
+                        className='text-white bg-[#FF6910] text-md p-4 rounded-full cursor-pointer mt-4'>{t('giftCard.contentRight.button')}</button>
                 </div>
             </div>
         </section>

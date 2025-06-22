@@ -5,6 +5,8 @@ import cards from '@/images/about-us/cards.svg';
 import coin from '@/images/about-us/coin.svg';
 import gift from '@/images/about-us/gift.svg';
 import arrowRight from '@/images/about-us/arrow-right.svg';
+import arrowRightWhite from '@/images/about-us/arrow-right-white.svg';
+
 import visa from '@/images/about-us/visa.svg';
 import masterCard from '@/images/about-us/master-card.svg';
 import item from '@/images/about-us/Item.svg';
@@ -39,9 +41,9 @@ const Compliance = () => {
     const t = useTranslations("aboutUs");
 
     return (
-        <div className='w-full h-[1300px] relative'>
+        <div className='w-full min-h-[1300px] relative'>
             <Image src={bg} alt='background' fill priority className='object-bottom-left object-cover' />
-            <div className='relative pt-[160px] '>
+            <div className='relative py-[160px] '>
                 <div className='container mx-auto'>
                     <h4 className='text-white text-[60px] font-semibold text-center'>{t("compliance.title")}</h4>
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-20'>
@@ -56,7 +58,7 @@ const Compliance = () => {
                             )
                         })}
                     </div>
-                    <div className='pt-[120px] pb-10'>
+                    <div className='pt-[290px] pb-10'>
                         <p className='w-full ml-auto lg:w-[416px]'>
                             <span className='text-white text-[60px] font-semibold tracking-[-2px]'>{t("compliance.partner.title")}</span>
                             <span className='mt-6 inline-block text-[#aeaeae] text-base font-medium'>
@@ -67,8 +69,10 @@ const Compliance = () => {
                 </div>
                 <div className='flex items-center space-x-2 mt-20 pr-4'>
                     <div style={{ borderRadius: '0px 1920px 1920px 0px', backdropFilter: '20px' }}
-                        className='w-[441px] bg-[rgba(255,105,16,0.16)] flex items-center justify-end '>
-                        <Image src={arrowRight} alt='' />
+                        className='w-[441px] bg-[rgba(255,105,16,0.16)] backdrop-blur-[20px] flex items-center justify-end p-2'>
+                        <figure className='w-20 h-20 bg-[#FF6910] rounded-full flex items-center justify-center'>
+                            <Image src={arrowRightWhite} alt='' />
+                        </figure>
                     </div>
                     <div className='flex space-x-2 ml-4'>
                         {icons.map((item, index) => {

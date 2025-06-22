@@ -44,35 +44,35 @@ const Insight = () => {
     const t = useTranslations("aboutUs");
 
     return (
-        <div className='bg-white rounded-[80px] py-[80px] lg:py-[120px] overflow-hidden'>
-            <div className='container mx-auto flex flex-col space-y-[120px]'>
-                {t.raw("insight").map((item: Item, index: number) => {
-                    const isEven = index % 2 === 0;
-                    return (
-                        <div key={index} className={`flex ${isEven ? "flex-row" : "flex-row-reverse"} items-center gap-x-[60px]`}>
-                            <div>
-                                <Image src={insights[index].icon} alt={item.title} />
-                                <p className='my-8 text-[#1b1b1b] text-[48px] font-semibold -tracking-[1.64px]'>{item.title}</p>
-                                <p className='text-[#666] text-lg font-medium'>
-                                    {(item.desc as string[]).map((text, index) => {
-                                        return (
-                                            <>
-                                                <span className='inline-block' key={index}>{text}</span> <br />
-                                            </>
-                                        )
-                                    })}
-                                </p>
-                                <button className='border border-black/16 rounded-full py-4 w-[260px] flex items-center justify-center space-x-[10px] mt-12'>
-                                    <span>{t('hero.buttonHero')}</span>
-                                    <Image src={arrowRight} alt='' />
-                                </button>
+        <div className='bg-[#060606]'>
+            <div className='bg-white rounded-[80px] py-[80px] lg:py-[120px] lg:px-[160px] overflow-hidden'>
+                <div className='container mx-auto flex flex-col items-center space-y-[120px]'>
+                    {t.raw("insight").map((item: Item, index: number) => {
+                        const isEven = index % 2 === 0;
+                        return (
+                            <div key={index} className={`flex ${isEven ? "flex-row" : "flex-row-reverse"} items-center gap-x-[80px]`}>
+                                <div className='w-full lg:w-[560px] lg:min-w-[560px]'>
+                                    <Image src={insights[index].icon} alt={item.title} />
+                                    <p className='my-8 text-[#1b1b1b] text-[48px] font-semibold -tracking-[1.64px]'>{item.title}</p>
+                                    <p className='text-[#666] text-lg font-medium flex flex-col gap-4'>
+                                        {(item.desc as string[]).map((text, index) => {
+                                            return (
+                                                <span key={index}>{text}</span>
+                                            )
+                                        })}
+                                    </p>
+                                    <button className='border border-black/16 font-semibold cursor-pointer rounded-full py-4 w-[260px] flex items-center justify-center space-x-[10px] mt-12'>
+                                        <span>{t('hero.buttonHero')}</span>
+                                        <Image src={arrowRight} alt='' />
+                                    </button>
+                                </div>
+                                <figure className='w-full lg:w-[480px] lg:min-w-[480px]'>
+                                    <Image src={insights[index].image} alt={item.title} />
+                                </figure>
                             </div>
-                            <figure className='w-full lg:w-[480px] lg:min-w-[480px]'>
-                                <Image src={insights[index].image} alt={item.title} />
-                            </figure>
-                        </div>
-                    )
-                })}
+                        )
+                    })}
+                </div>
             </div>
         </div>
     )

@@ -1,4 +1,6 @@
 import type { NextConfig } from 'next';
+import createMDX from '@next/mdx'
+import remarkGfm from 'remark-gfm'
 import initializeBundleAnalyzer from '@next/bundle-analyzer';
 import createNextIntlPlugin from 'next-intl/plugin';
 // // https://www.npmjs.com/package/@next/bundle-analyzer
@@ -8,9 +10,19 @@ const withBundleAnalyzer = initializeBundleAnalyzer({
 
 // https://nextjs.org/docs/pages/api-reference/next-config-js
 const nextConfig: NextConfig = {
-    output: 'standalone'
+    output: 'standalone',
+    pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
+    experimental: {
+        mdxRs: true
+    }
 };
 const withNextIntl = createNextIntlPlugin();
-
-const combinedConfig = withBundleAnalyzer(withNextIntl(nextConfig));
+const withMDX = createMDX({
+    extension: /\.mdx?$/,
+    options: {
+        remarkPlugins: [remarkGfm],
+        rehypePlugins: [],
+    },
+});
+const combinedConfig = withBundleAnalyzer(withNextIntl(withMDX(nextConfig)));
 export default combinedConfig;

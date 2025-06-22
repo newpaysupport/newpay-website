@@ -1,90 +1,61 @@
 'use client'
-import React from 'react'
-import twitter from '@/icons/Twitter-X.svg';
-import Telegram from '@/icons/Telegram.svg';
 import Discord from '@/icons/Discord.svg';
 import Facebook from '@/icons/Facebook.svg';
 import insta from '@/icons/insta.svg';
 import Linkedin from '@/icons/Linkedin.svg';
-import logoMark from '@/images/footer/newpay_mark.svg';
+import Telegram from '@/icons/Telegram.svg';
+import twitter from '@/icons/Twitter-X.svg';
+import appStore from '@/images/footer/app-store.svg';
+import ggplay from '@/images/footer/gg-play.svg';
 import logoNewpay from '@/images/footer/newpay.svg';
-import appStore from '@/images/footer/app-store.png';
-import ggplay from '@/images/footer/ggplay.png';
+import logoMark from '@/images/footer/newpay_mark.svg';
 
+import { FooterItem } from '@/interfaces/footer';
+import { useLocale } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
+import toast from 'react-hot-toast';
 import { useTranslations } from 'use-intl';
-import { FooterItem } from '@/interfaces/footer';
+import ToastCustom from '../common/toast';
+import { usePathname } from 'next/navigation';
 
 
 const socials = [
     {
-        link: "#",
+        link: "http://x.com/NewPayOrg",
         icon: twitter
     },
     {
-        link: "#",
+        link: "http://t.me/newpayistheway",
         icon: Telegram
     },
+    // {
+    //     link: "#",
+    //     icon: Discord
+    // },
     {
-        link: "#",
-        icon: Discord
-    },
-    {
-        link: "#",
+        link: "https://www.facebook.com/people/NewPay/61576781240841",
         icon: Facebook
     },
     {
-        link: "#",
+        link: "https://www.instagram.com/newpayofficial",
         icon: insta
     },
     {
-        link: "#",
+        link: "http://linkedin.com/company/newpayucard",
         icon: Linkedin
     }
 ]
-
-// const footerMenus = [
-//     {
-//         "title": "Discover",
-//         "items": [
-//             { "label": "Joint", "link": "" },
-//             { "label": "Personal", "link": "" }
-//         ]
-//     },
-//     {
-//         "title": "Payment",
-//         "items": [
-//             { "label": "Card", "link": "" }
-//         ]
-//     },
-//     {
-//         "title": "Wallet",
-//         "items": [
-//             { "label": "Secure Custodian", "link": "" }
-//         ]
-//     },
-//     {
-//         "title": "Company",
-//         "items": [
-//             { "label": "About NewPay", "link": "" },
-//             { "label": "Blog", "link": "" }
-//         ]
-//     },
-//     {
-//         "title": "Support",
-//         "items": [
-//             { "label": "Contact Us", "link": "" },
-//             { "label": "FAQ", "link": "" },
-//             { "label": "Download App", "link": "" }
-//         ]
-//     }
-// ]
 const Footer = () => {
 
     const t = useTranslations("footer");
+    const locale = useLocale();
+    const pathname = usePathname();
+    const currentLocale = pathname.split('/')[1]
 
-
+    const handleToastComingSoon = () => {
+        toast.custom(<ToastCustom type='warning' />)
+    }
 
     return (
         <div className='bg-[#060606] p-20'>
@@ -96,8 +67,8 @@ const Footer = () => {
                             <Image src={logoNewpay} alt='logo mark' />
                         </Link>
                         <div className='flex items-center gap-x-2 cursor-pointer mt-8 mb-20'>
-                            <Image src={appStore} alt='logo' />
-                            <Image src={ggplay} alt='logo' />
+                            <Image onClick={handleToastComingSoon} src={appStore} alt='logo' />
+                            <Image onClick={handleToastComingSoon} src={ggplay} alt='logo' />
                         </div>
                         <div className='flex items-center gap-x-8 cursor-pointer'>
                             {socials.map((item, index) => {
@@ -114,12 +85,14 @@ const Footer = () => {
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10'>
                         {t.raw('information').map((menu: FooterItem, index: number) => {
                             return <div key={index}>
-                                <h4 className='text-white text-sm font-semibold mb-6'>{menu.title}</h4>
+                                <p className='text-white text-sm font-semibold mb-6'>{menu.title}</p>
                                 <ul>
                                     {menu.items.map((item, index) => {
-                                        return <Link href={item.link} key={index} className='mb-2 block'>
-                                            <li className='text-[#848484] text-sm font-semibold'>{item.label}</li>
-                                        </Link>
+                                        return <li key={index} className='mb-2'>
+                                            <Link href={`/${currentLocale}${item.link}`} className='text-[#848484] text-sm font-semibold block'>
+                                                {item.label}
+                                            </Link>
+                                        </li>
                                     })}
                                 </ul>
                             </div>
@@ -131,7 +104,7 @@ const Footer = () => {
 
                 <div className='text-[#848484] text-base font-normal -tracking-[0.24px] flex items-center justify-between pt-10 border-t-[1px] border-white/8'>
                     <span>{t('copyright')}</span>
-                    <Link href={''}>{t('terms')}</Link>
+                    <Link href={`/${currentLocale}/term`}>{t('terms')}</Link>
                 </div>
             </div>
         </div>

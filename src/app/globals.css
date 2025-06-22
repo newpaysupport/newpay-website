@@ -45,12 +45,29 @@ body {
   text-align: center;
   leading-trim: both;
   text-edge: cap;
-  -webkit-text-strokeWidth: 1px;
+  -webkit-text-strokewidth: 1px;
   -webkit-text-stroke-color: #000;
   background: linear-gradient(180deg, rgba(100, 100, 100, 0.24) 8.38%, rgba(6, 6, 6, 0.24) 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.textTitleClip {
+  background: linear-gradient(94deg, #fff 26.92%, rgba(255, 255, 255, 0) 116.96%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* download */
+
+.btnCta {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), var(--bg-surface-surface-2, rgba(255, 255, 255, 0.08));
+}
+.btnCta:hover{
+  background: #212121;
 }
 
 /* Physical cards */
@@ -106,11 +123,11 @@ body {
   animation: fadeInUp 1s ease-out forwards;
 }
 
-.fadeInUp-delay-03  {
+.fadeInUp-delay-03 {
   animation: fadeInUp 1s ease-out 0.3s forwards;
 }
 
-.fadeInUp-delay-06  {
+.fadeInUp-delay-06 {
   animation: fadeInUp 1s ease-out 0.6s forwards;
 }
 
@@ -131,11 +148,11 @@ body {
   animation: fadeInUp 1s ease-out forwards;
 }
 
-.fadeInUp-delay-03  {
+.fadeInUp-delay-03 {
   animation: fadeInUp 1s ease-out 0.3s forwards;
 }
 
-.fadeInUp-delay-06  {
+.fadeInUp-delay-06 {
   animation: fadeInUp 1s ease-out 0.6s forwards;
 }
 
@@ -151,49 +168,282 @@ body {
 }
 
 /* auto slide show */
-.animate-slide {
-  animation: slide 20s linear infinite;
+.animation-slideshow {
+  width: fit-content;
+  animation: slide-left 10s linear infinite;
 }
 
-/* .slideshow-track:hover {
-  animation-play-state: paused;
-} */
-
-@keyframes slide {
+@keyframes slide-left {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-400px * 5 - 30px * 5));
+    transform: translateX(-50%);
   }
 }
 
+/* Optional responsive styles */
 @media (max-width: 768px) {
-  .slideshow-track {
-    width: calc((330px + 30px) * 10);
+  .slide-item {
+    width: 250px;
+    height: 350px;
   }
-  @keyframes slide {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(calc(-330px * 5 - 30px * 5));
-    }
+}
+@media (max-width: 640px) {
+  .slide-item {
+    width: 200px;
+    height: 300px;
   }
 }
 
-@media (max-width: 640px) {
-  .slideshow-track {
-    width: calc((200px + 30px) * 10);
+/* animation card content */
+.swiper,
+.swiper-slide {
+  width: 100%; 
+  height: 100vh;
+}
+/* animation icon money */
+@keyframes pulse_bitcoin {
+  0% {
+    transform: translateY(0);
+    filter: drop-shadow(0 0 20px rgba(247, 147, 26, 0.4));
   }
-  @keyframes slide {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(calc(-200px * 5 - 30px * 5));
-    }
+  10% {
+    transform: translateY(-5%);
+    filter: drop-shadow(0 0 25px rgba(247, 147, 26, 0.45));
+  }
+  20% {
+    transform: translateY(-10%);
+    filter: drop-shadow(0 0 30px rgba(247, 147, 26, 0.5));
+  }
+  40% {
+    transform: translateY(-15%);
+    filter: drop-shadow(0 0 40px rgba(248, 124, 0, 0.6));
+  }
+  60% {
+    transform: translateY(-10%);
+    filter: drop-shadow(0 0 45px rgba(248, 100, 0, 0.7));
+  }
+  80% {
+    transform: translateY(-5%);
+    filter: drop-shadow(0 0 50px rgba(248, 100, 0, 0.8));
+  }
+  100% {
+    transform: translateY(2%);
+    filter: drop-shadow(0 0 60px rgba(204, 90, 0, 0.85));
   }
 }
+
+
+@keyframes pulse_eth {
+  0% {
+    transform: translateY(0);
+    filter: drop-shadow(0 0 20px rgba(98, 126, 234, 0.4));
+  }
+  10% {
+    transform: translateY(-5%);
+    filter: drop-shadow(0 0 25px rgba(98, 126, 234, 0.45));
+  }
+  20% {
+    transform: translateY(-10%);
+    filter: drop-shadow(0 0 30px rgba(98, 126, 234, 0.5));
+  }
+  40% {
+    transform: translateY(-15%);
+    filter: drop-shadow(0 0 40px rgba(98, 126, 234, 0.6));
+  }
+  60% {
+    transform: translateY(-10%);
+    filter: drop-shadow(0 0 45px rgba(98, 126, 234, 0.7));
+  }
+  80% {
+    transform: translateY(-5%);
+    filter: drop-shadow(0 0 50px rgba(98, 126, 234, 0.8));
+  }
+  100% {
+    transform: translateY(2%);
+    filter: drop-shadow(0 0 60px rgba(98, 126, 234, 0.85));
+  }
+}
+
+@keyframes pulse_usd {
+  0% {
+    transform: translateY(0);
+    filter: drop-shadow(0 0 20px rgba(40, 131, 230, 0.4));
+  }
+  10% {
+    transform: translateY(-5%);
+    filter: drop-shadow(0 0 25px rgba(40, 131, 230, 0.45));
+  }
+  20% {
+    transform: translateY(-10%);
+    filter: drop-shadow(0 0 30px rgba(40, 131, 230, 0.5));
+  }
+  40% {
+    transform: translateY(-15%);
+    filter: drop-shadow(0 0 40px rgba(40, 131, 230, 0.6));
+  }
+  60% {
+    transform: translateY(-10%);
+    filter: drop-shadow(0 0 45px rgba(40, 131, 230, 0.7));
+  }
+  80% {
+    transform: translateY(-5%);
+    filter: drop-shadow(0 0 50px rgba(40, 131, 230, 0.8));
+  }
+  100% {
+    transform: translateY(-2%);
+    filter: drop-shadow(0 0 60px rgba(40, 131, 230, 0.85));
+  }
+}
+
+@keyframes pulse_tether {
+  0% {
+    transform: translateY(0);
+    filter: drop-shadow(0 0 20px rgba(67, 193, 159, 0.4));
+  }
+  10% {
+    transform: translateY(-5%);
+    filter: drop-shadow(0 0 25px rgba(67, 193, 159, 0.45));
+  }
+  20% {
+    transform: translateY(-10%);
+    filter: drop-shadow(0 0 30px rgba(67, 193, 159, 0.5));
+  }
+  40% {
+    transform: translateY(-15%);
+    filter: drop-shadow(0 0 40px rgba(67, 193, 159, 0.6));
+  }
+  60% {
+    transform: translateY(-10%);
+    filter: drop-shadow(0 0 45px rgba(67, 193, 159, 0.7));
+  }
+  80% {
+    transform: translateY(-5%);
+    filter: drop-shadow(0 0 50px rgba(67, 193, 159, 0.8));
+  }
+  100% {
+    transform: translateY(-2%);
+    filter: drop-shadow(0 0 60px rgba(67, 193, 159, 0.85));
+  }
+}
+
+@keyframes pulse_solana {
+  0% {
+    transform: translateY(0);
+    filter: drop-shadow(0 0 20px rgba(169, 83, 234, 0.4));
+  }
+  10% {
+    transform: translateY(-5%);
+    filter: drop-shadow(0 0 25px rgba(169, 83, 234, 0.45));
+  }
+  20% {
+    transform: translateY(-10%);
+    filter: drop-shadow(0 0 30px rgba(169, 83, 234, 0.5));
+  }
+  40% {
+    transform: translateY(-15%);
+    filter: drop-shadow(0 0 40px rgba(169, 83, 234, 0.6));
+  }
+  60% {
+    transform: translateY(-10%);
+    filter: drop-shadow(0 0 45px rgba(169, 83, 234, 0.7));
+  }
+  80% {
+    transform: translateY(-5%);
+    filter: drop-shadow(0 0 50px rgba(169, 83, 234, 0.8));
+  }
+  100% {
+    transform: translateY(-2%);
+    filter: drop-shadow(0 0 60px rgba(169, 83, 234, 0.85));
+  }
+}
+
+
+.animate-bitcoin {
+  animation: pulse_bitcoin 2s ease-in-out infinite;
+}
+.animate-eth {
+  animation: pulse_eth 2.3s ease-in-out infinite;
+}
+.animate-usd {
+  animation: pulse_usd 2.6s ease-in-out infinite;
+}
+.animate-tether {
+  animation: pulse_tether 2.5s ease-in-out infinite;
+}
+.animate-solana {
+  animation: pulse_solana 2.4s ease-in-out infinite;
+}
+
+/* toast */
+@keyframes go2645569136 {
+    0% {
+        /* Add your starting properties here */
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        /* Add your ending properties here */
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.toast-animation {
+    animation: go2645569136 0.35s cubic-bezier(0.21, 1.02, 0.73, 1) 0s 1 normal forwards;
+}
+
+/* animation translate y */
+@keyframes translateY {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-translateY {
+  animation: translateY 1.5s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+  will-change: transform;
+}
+/* animation translate x */
+@keyframes translateX {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(6px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.animate-translateX {
+  animation: translateX 1s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+  will-change: transform;
+}
+/* animation gift box */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  2% { transform: translateX(-2px); }
+  4% { transform: translateX(2px); }
+  6% { transform: translateX(-1.5px); }
+  8% { transform: translateX(1.5px); }
+  10% { transform: translateX(-1px); }
+  12% { transform: translateX(1px); }
+  14% { transform: translateX(0); }
+  100% { transform: translateX(0); }
+}
+
+
+.animation-gift-box {
+  animation: shake 2s ease-in-out infinite;
+}
+
 
 
