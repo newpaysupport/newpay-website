@@ -39,7 +39,7 @@ const ContentEnd = () => {
                     <h1 className="md:text-6xl text-3xl font-semibold pt-4 sm:pt-6 lg:pt-10">
                         {cardSection.title}
                     </h1>
-                    <p className="text-gray-500 mt-2 sm:mt-4 mx-auto w-full sm:w-[50%] lg:w-[20%] text-sm sm:text-base">
+                    <p className="text-2xl font-medium text-gray-500 mt-2 sm:mt-4 mx-auto md:w-[35%]">
                         {cardSection.description}
                     </p>
                 </div>

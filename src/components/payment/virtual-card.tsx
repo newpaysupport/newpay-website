@@ -40,7 +40,7 @@ const VirtualCard = ({ virtualItems, labelButton }: VirtualCardProps) => {
                             <h2 className="md:text-2xl font-semibold mt-4">{virtualItems[1].title}</h2>
                             <p className="md:text-md text-gray-500 mt-2">{virtualItems[1].subtitle}</p>
                         </div>
-                        <button onClick={handleToast} className="rounded-full mt-6 md:py-4 md:px-10 font-semibold p-4 text-md text-white cursor-pointer bg-orange-500 hover:bg-orange-600">{labelButton}</button>
+                        <button onClick={handleToast} className="rounded-full mt-12 md:py-4 md:px-10 font-semibold p-4 text-md text-white cursor-pointer bg-orange-500 hover:bg-orange-600">{labelButton}</button>
                     </div>
                 </AnimationFade>
                 <AnimationFade  inView={isRightInView} direction="right" className="md:w-[45%] mt-10 md:mt-0">
