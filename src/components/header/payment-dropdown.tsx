@@ -30,8 +30,6 @@ const PaymentDropdown = ({ link, locale, isBlogAndContact }: LinkItem) => {
             };
         }
         return {
-            // background: "linear-gradient(0deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%), rgba(6, 6, 6, 0.60)",
-            // backdropFilter: "blur(50px)"
             background: "#060606"
         };
     }
@@ -40,7 +38,7 @@ const PaymentDropdown = ({ link, locale, isBlogAndContact }: LinkItem) => {
         <div
             style={getHeaderStyles()}
             className="overflow-hidden md:h-[300px]">
-            <div className="px-45 pb-20 pt-5">
+            <div className="md:w-[840px] mx-auto pb-20 pt-5">
                 <div className="flex">
                     {/* Left sidebar with menu items */}
                     <div className="space-y-4 mr-16">
@@ -91,9 +89,9 @@ const PaymentDropdown = ({ link, locale, isBlogAndContact }: LinkItem) => {
                                 </div>
                                 <div style={{
                                     background: "linear-gradient(180deg, rgba(6, 6, 6, 0.00) 0%, #060606 100%)",
-                                    backdropFilter: "blur(2.6666667461395264px)"
+                                    backdropFilter: "blur(2px)"
                                 }}
-                                    className="absolute bottom-0 right-0 left-0 h-[30%] opacity-70"></div>
+                                    className="absolute bottom-0 right-0 left-0 h-[60%] opacity-50"></div>
                             </div>
                         </Link>
 
@@ -114,9 +112,9 @@ const PaymentDropdown = ({ link, locale, isBlogAndContact }: LinkItem) => {
                                 </div>
                                 <div style={{
                                     background: "linear-gradient(180deg, rgba(6, 6, 6, 0.00) 0%, #060606 100%)",
-                                    backdropFilter: "blur(2.6666667461395264px)"
+                                    backdropFilter: "blur(2px)"
                                 }}
-                                    className="absolute bottom-0 right-0 left-0 h-[30%] opacity-70"></div>
+                                    className="absolute bottom-0 right-0 left-0 h-[30%] opacity-50"></div>
                             </div>
                         </Link>
                     </div>

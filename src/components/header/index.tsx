@@ -108,7 +108,7 @@ const Header = () => {
         },
         { key: 'support', href: `/${locale}/support`, label: t('support'), hasDropdown: false }
     ];
-    
+
 
     const getHeaderStyles = () => {
         if (isBlogAndContact) {
@@ -121,7 +121,7 @@ const Header = () => {
                 transition: "background 0.3s ease",
             };
         }
-    
+
         if (hoveringDropdown) {
             return {
                 background: "#060606",
@@ -130,7 +130,7 @@ const Header = () => {
                 transition: "background 0.3s ease",
             };
         }
-    
+
         if (isScrolled) {
             return {
                 background: "rgba(0, 0, 0, 0.80)",
@@ -138,13 +138,13 @@ const Header = () => {
                 color: "white",
             };
         }
-    
+
         return {
             background: "transparent",
             color: "white"
         };
     };
-    
+
     const isActive = (path: string) => pathname === path;
 
     const isBlogAndContact = pathname === `/${locale}/blog` || pathname === `/${locale}/contact`;
@@ -185,24 +185,24 @@ const Header = () => {
                 ))}
             </ul>
 
-            <ul className="hidden md:flex items-center gap-2 relative">
+            <ul className="hidden md:flex items-center gap-2 ">
                 {navLinksRight.map((link) => (
                     <li
                         key={link.key}
-                        className="relative"
+                        // className="relative"
                         onMouseEnter={() => {
                             if (link.hasDropdown) {
-                              setOpenDropdown(link.key as "payment" | "company");
-                              setHoveringDropdown(link.key as "payment" | "company");
+                                setOpenDropdown(link.key as "payment" | "company");
+                                setHoveringDropdown(link.key as "payment" | "company");
                             }
-                          }}
-                          
-                          onMouseLeave={() => {
+                        }}
+
+                        onMouseLeave={() => {
                             if (link.hasDropdown) {
-                              setOpenDropdown(null);
-                              setHoveringDropdown(null);
+                                setOpenDropdown(null);
+                                setHoveringDropdown(null);
                             }
-                          }}
+                        }}
                     >
                         <Link
                             href={link.href}
@@ -223,7 +223,7 @@ const Header = () => {
                         {/* Dropdown */}
                         {link.hasDropdown && openDropdown === link.key && (
                             <div
-                                className={`md:w-[230vh] absolute top-[full] transform -translate-x-[50%] pt-4 z-50 ${link.key === 'payment' ? 'md:left-1/2 ' : 'left-[-25%]'}`}
+                                className={`absolute top-[full] left-0 w-[100vw] pt-4 z-50`}
                             >
                                 {link.key === 'payment' ?
                                     (<PaymentDropdown link={link} locale={locale} isBlogAndContact={isBlogAndContact} />) : <CompanyDropdown link={link} locale={locale} isBlogAndContact={isBlogAndContact} isScrolled={isScrolled} />}
