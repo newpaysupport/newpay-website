@@ -29,7 +29,7 @@ const ContentMain = () => {
     return (
         <div className="mt-30 container mx-auto overflow-hidden">
             <h1 className="md:text-6xl text-2xl font-semibold text-center pt-10">{contentSection2.title}</h1>
-            <p className="md:text-md text-sm text-center text-gray-500 mt-4 mx-auto">{contentSection2.description}</p>
+            <p className="text-lg font-medium text-center text-gray-500 mt-4 mx-auto">{contentSection2.description}</p>
             <div className="mx-auto mt-10 relative">
                 <Image src={world} alt="world" className="mx-auto" />
 

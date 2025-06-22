@@ -54,13 +54,13 @@ const PaymentScreen = () => {
                             <p className="md:w-[430px] text-lg font-medium text-center text-[#666] mt-4 mx-auto">{contentSection1.description}</p>
                             <div className="w-fit mx-auto text-md mt-8">
                                 <button
-                                    className={`${activeCard === 'virtual' ? 'bg-black text-white' : ''} border border-gray-300 font-semibold py-3 px-7 rounded-full mx-2 cursor-pointer`}
+                                    className={`${activeCard === 'virtual' ? 'bg-black text-white' : ''} border border-gray-300 font-semibold py-4 px-12 rounded-full mx-2 cursor-pointer`}
                                     onClick={() => setActiveCard('virtual')}
                                 >
                                     {virtualCard.label}
                                 </button>
                                 <button
-                                    className={`${activeCard === 'virtual' ? '' : 'bg-black text-white'} border border-gray-300 font-semibold py-3 px-7 rounded-full mx-2 cursor-pointer`}
+                                    className={`${activeCard === 'virtual' ? '' : 'bg-black text-white'} border border-gray-300 font-semibold py-4 px-12 rounded-full mx-2 cursor-pointer`}
                                     onClick={() => setActiveCard('physical')}
                                 >
                                     {physicalCard.label}
@@ -92,23 +92,23 @@ const PaymentScreen = () => {
                         <Image src={bg_content3} alt="social" fill className="object-cover w-full h-full" quality={100} />
                         <div className="absolute inset-0 flex flex-col lg:flex-row justify-between items-center w-full max-w-7xl mx-auto sm:px-6 lg:px-8 gap-8">
                             <div className="flex flex-col md:mt-0 mt-5 items-center lg:items-start text-center lg:text-left max-w-2xl">
-                                <h2 className="md:text-4xl text-2xl font-semibold text-white mb-2">
+                                <h2 className="md:text-4xl text-2xl font-semibold text-white mb-4">
                                     {safeAssetsSection.title}
                                 </h2>
-                                <p className="text-gray-300 text-sm md:text-md">
+                                <p className="text-gray-300 text-lg font-medium">
                                     {safeAssetsSection.description}
                                 </p>
                             </div>
                             <div className="flex gap-4 sm:gap-5">
-                                <div className="flex flex-col justify-center items-center sm:p-6 bg-gray-600/20 rounded-2xl max-w-md">
+                                <div className="md:w-[272px] md:-[210px] flex flex-col justify-center items-center p-4 sm:p-6 bg-gray-600/20 rounded-2xl">
                                     <Image src={scan_icon} alt="Biometric Icon" className='w-[64px] h-[64px]' />
-                                    <p className="text-xl sm:text-2xl text-white mt-2 md:px-4 px-6">{safeAssetsSection.biometric.title}</p>
-                                    <p className="text-sm text-gray-300">{safeAssetsSection.biometric.subtitle}</p>
+                                    <p className="font-medium text-2xl text-white mt-2 md:px-4 px-6">{safeAssetsSection.biometric.title}</p>
+                                    <p className="text-2xl text-[#848484] font-medium">{safeAssetsSection.biometric.subtitle}</p>
                                 </div>
-                                <div className="flex flex-col justify-center items-center p-4 sm:p-6 bg-gray-600/20 rounded-2xl ">
+                                <div className="md:w-[272px] md:-[210px] flex flex-col justify-center items-center p-4 sm:p-6 bg-gray-600/20 rounded-2xl ">
                                     <Image src={access_icon} alt="Access Code Icon" className='w-[64px] h-[64px]' />
-                                    <p className="text-xl sm:text-2xl text-white mt-2">{safeAssetsSection.accessCode.title}</p>
-                                    <p className="text-sm text-gray-300">{safeAssetsSection.accessCode.subtitle}</p>
+                                    <p className="text-2xl font-medium text-white mt-2">{safeAssetsSection.accessCode.title}</p>
+                                    <p className="text-2xl text-[#848484] font-medium">{safeAssetsSection.accessCode.subtitle}</p>
                                 </div>
                             </div>
                         </div>

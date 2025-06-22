@@ -37,7 +37,7 @@ const PhysicalCard = ({ physicalItems, labelButton }: PhysicalCardProps) => {
                         <h2 className="md:text-2xl font-semibold mt-4">{physicalItems[2].title}</h2>
                         <p className="md:text-md text-gray-500 mt-2">{physicalItems[2].subtitle}</p>
                     </div>
-                    <button onClick={handleToast} className="rounded-full mt-6 md:py-4 md:px-10 font-semibold p-4 text-md text-white cursor-pointer bg-orange-500 hover:bg-orange-600">{labelButton}</button>
+                    <button onClick={handleToast} className="rounded-full mt-12 md:py-4 md:px-10 font-semibold p-4 text-md text-white cursor-pointer bg-orange-500 hover:bg-orange-600">{labelButton}</button>
                 </div>
                 <div className="md:w-[45%] mt-10 md:mt-0">
                     <Image src={img_card_black} alt="Spend Crypto" width={500} height={400} className='md:mt-4 md:h-[560px]' />

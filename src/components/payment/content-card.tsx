@@ -52,7 +52,7 @@ const ContentCard = () => {
                         src={card_payment}
                         alt="card payment"
                         ref={cardRef}
-                        className={`mx-auto transition-transform duration-300 ease-linear ${isSticky ? 'sticky top-[30%]' : ''} ${isCardVisible ? 'opacity-100' : 'opacity-0'}`}
+                        className={`mx-auto pl-2 transition-transform duration-300 ease-linear ${isSticky ? 'sticky top-[30%]' : ''} ${isCardVisible ? 'opacity-100' : 'opacity-0'}`}
                     />
                     <div className='pt-20'>
                         {
