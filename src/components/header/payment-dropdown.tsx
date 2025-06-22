@@ -89,9 +89,9 @@ const PaymentDropdown = ({ link, locale, isBlogAndContact }: LinkItem) => {
                                 </div>
                                 <div style={{
                                     background: "linear-gradient(180deg, rgba(6, 6, 6, 0.00) 0%, #060606 100%)",
-                                    backdropFilter: "blur(2.6666667461395264px)"
+                                    backdropFilter: "blur(2px)"
                                 }}
-                                    className="absolute bottom-0 right-0 left-0 h-[30%] opacity-70"></div>
+                                    className="absolute bottom-0 right-0 left-0 h-[60%] opacity-50"></div>
                             </div>
                         </Link>
 
@@ -112,9 +112,9 @@ const PaymentDropdown = ({ link, locale, isBlogAndContact }: LinkItem) => {
                                 </div>
                                 <div style={{
                                     background: "linear-gradient(180deg, rgba(6, 6, 6, 0.00) 0%, #060606 100%)",
-                                    backdropFilter: "blur(2.6666667461395264px)"
+                                    backdropFilter: "blur(2px)"
                                 }}
-                                    className="absolute bottom-0 right-0 left-0 h-[30%] opacity-70"></div>
+                                    className="absolute bottom-0 right-0 left-0 h-[30%] opacity-50"></div>
                             </div>
                         </Link>
                     </div>
