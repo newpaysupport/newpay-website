@@ -85,12 +85,14 @@ const Footer = () => {
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10'>
                         {t.raw('information').map((menu: FooterItem, index: number) => {
                             return <div key={index}>
-                                <h4 className='text-white text-sm font-semibold mb-6'>{menu.title}</h4>
+                                <p className='text-white text-sm font-semibold mb-6'>{menu.title}</p>
                                 <ul>
                                     {menu.items.map((item, index) => {
-                                        return <Link href={`/${currentLocale}${item.link}`} key={index} className='mb-2 block'>
-                                            <li className='text-[#848484] text-sm font-semibold'>{item.label}</li>
-                                        </Link>
+                                        return <li key={index} className='mb-2'>
+                                            <Link href={`/${currentLocale}${item.link}`} className='text-[#848484] text-sm font-semibold block'>
+                                                {item.label}
+                                            </Link>
+                                        </li>
                                     })}
                                 </ul>
                             </div>

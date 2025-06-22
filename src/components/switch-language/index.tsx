@@ -36,7 +36,7 @@ const SwitchLanguage = ({ locale, switchLocale, t, isBlogAndContact, isVisible }
                 >
                     <Image
                         src={currentLanguage.flag.src}
-                        alt={currentLanguage.label}
+                        alt={""}
                         width={20}
                         height={20}
                         className="w-5 h-5 rounded-full"
@@ -69,7 +69,7 @@ const SwitchLanguage = ({ locale, switchLocale, t, isBlogAndContact, isVisible }
                             >
                                 <Image
                                     src={lng.flag.src}
-                                    alt={lng.label}
+                                    alt={""}
                                     width={20}
                                     height={20}
                                     className="w-5 h-5 rounded-full"
@@ -84,7 +84,7 @@ const SwitchLanguage = ({ locale, switchLocale, t, isBlogAndContact, isVisible }
 
             {/* Get App Button */}
             <Link href={`/${locale}/download`}>
-                <button className={`${isBlogAndContact ? 'bg-black text-white' : 'bg-white '} text-[#060606] cursor-pointer font-semibold md:inline hidden  ml-4 px-5 py-3 rounded-full active:scale-95  text-sm hover:scale-102`}>
+                <button className={`${isBlogAndContact ? 'bg-black text-white' : 'bg-white '} text-[#060606] cursor-pointer font-semibold md:inline hidden px-5 py-3 rounded-full active:scale-95  text-sm hover:scale-102`}>
                     {t('getApp')}
                 </button>
             </Link>

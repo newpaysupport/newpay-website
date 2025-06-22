@@ -774,7 +774,7 @@
             "get": "Get",
             "theApp": "the App",
             "title": "Open an account in as little as 1 minute",
-            "desc": "Download the app to log in to your account."
+            "desc": "Download the app to login into your account"
         }
     },
     "faqHelp": {
@@ -869,7 +869,7 @@
                     },
                     {
                         "question": "Why did my card binding fail during subscription setup?",
-                        "answer": "Some merchants apply strict verification rules. Certain platforms may perform a small pre-authorization charge or require support for recurring payments. If the card doesn’t meet these technical requirements, the binding may fail.\nAdditionally, even if the first subscription appears free, many platforms may still attempt a small verification charge. If your card has insufficient balance, the verification may fail and prevent successful binding.Lastly, some platforms only accept cards issued in specific regions, which may exclude NewPay cards depending on the merchant’s supported list."
+                        "answer": "Some merchants apply strict verification rules. Certain platforms may perform a small pre-authorization charge or require support for recurring payments. If the card doesn’t meet these technical requirements, the binding may fail.\nAdditionally, even if the first subscription appears free, many platforms may still attempt a small verification charge. If your card has insufficient balance, the verification may fail and prevent successful binding.\nLastly, some platforms only accept cards issued in specific regions, which may exclude NewPay cards depending on the merchant’s supported list."
                     },
                     {
                         "question": "I got a refund but the money doesn’t show up in the app yet. Why?",
@@ -900,7 +900,7 @@
                 "faqs": [
                     {
                         "question": "My wallet shows the transfer as successful, but I don’t see it in the app. Is it stuck?",
-                        "answer": "“Transfer successful” in your wallet means the transaction was sent to the blockchain — but it still needs to be confirmed and synced with NEWPAY.\nTypically, this takes 1–10 minutes depending on the network.If it’s been over 15 minutes, please check:\nDid you choose the same network (ERC20/TRC20) as shown on our page?\nDid you send it to the exact address displayed in your NEWPAY recharge screen?\nDid you meet the minimum recharge amount?\nIf everything checks out, please contact support and provide the transaction hash (TXID) for assistance."
+                        "answer": "“Transfer successful” in your wallet means the transaction was sent to the blockchain — but it still needs to be confirmed and synced with NEWPAY.\nTypically, this takes 1–10 minutes depending on the network.\nIf it’s been over 15 minutes, please check:\nDid you choose the same network (ERC20/TRC20) as shown on our page?\nDid you send it to the exact address displayed in your NEWPAY recharge screen?\nDid you meet the minimum recharge amount?\nIf everything checks out, please contact support and provide the transaction hash (TXID) for assistance."
                     },
                     {
                         "question": "Why is the deposit address different every time? Can’t I reuse the old one?",

@@ -57,9 +57,7 @@ const Insight = () => {
                                     <p className='text-[#666] text-lg font-medium flex flex-col gap-4'>
                                         {(item.desc as string[]).map((text, index) => {
                                             return (
-                                                <>
-                                                    <span key={index}>{text}</span>
-                                                </>
+                                                <span key={index}>{text}</span>
                                             )
                                         })}
                                     </p>

@@ -4,7 +4,7 @@ import { virtualCardContent } from '@/constants/virtual-card'
 import card from '@/images/home/hero/card.png'
 import hero from '@/images/home/hero/Hero.png'
 import Image from 'next/image'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import PhysicCard from './consume/physic-card'
 import OpenAccount from './open-account'
 
@@ -17,6 +17,7 @@ import { useLocale, useTranslations } from 'use-intl'
 import Link from 'next/link'
 import toast from 'react-hot-toast'
 import ToastCustom from '../common/toast'
+import { useBreakpointFlags } from '@/hooks/useBreakpointFlags'
 
 const HomeScreen = () => {
 
@@ -25,8 +26,32 @@ const HomeScreen = () => {
     const mobileRef = useRef(null);
     const heroRef = useRef(null);
     const [scrollProgress, setScrollProgress] = useState(0);
+
     const t = useTranslations("home");
     const locale = useLocale();
+
+    const { flag } = useBreakpointFlags();
+
+
+    console.log('scrollProgress', scrollProgress)
+
+    const cardThreshold = useMemo(() => {
+        if (flag === 2) return 0.47657952069716775; // min 2xl
+        if (flag === 1) return 0.4528403001071811;
+        return 0;
+    }, [flag])
+
+    const textThreshold = useMemo(() => {
+        if (flag === 2) return 0.44820065430752454; // min 2xl
+        if (flag === 1) return 0.3140407288317256;
+        return 0;
+    }, [flag])
+
+    const textSubThreshold = useMemo(() => {
+        if (flag === 2) return 0.44820065430752454; // min 2xl
+        if (flag === 1) return 0.3504823151125402;
+        return 0;
+    }, [flag])
 
     const TabCards = [
         {
@@ -114,11 +139,11 @@ const HomeScreen = () => {
             </div>
             {
                 tabActive === TabCards[0].id ? <>
-                    <div className={`${scrollProgress >= 0.47657952069716775 ? "hidden" : "fixed flex justify-center inset-0 top-[383px] z-[1000]"}  `}>
+                    <div className={`${scrollProgress >= cardThreshold ? "hidden" : "fixed flex justify-center inset-0 top-[383px] z-[1000]"}  `}>
                         <figure
                             style={{
                                 transform: scrollProgress < 0.05 ? "scale(1)" : `scale(${1 - scrollProgress})`,
-                                visibility: scrollProgress >= 0.47657952069716775 ? "hidden" : "visible",
+                                visibility: scrollProgress >= cardThreshold ? "hidden" : "visible",
                             }}
                             className='lg:w-[530px] lg:h-[320px]'
                             ref={cardRef}>
@@ -144,12 +169,20 @@ const HomeScreen = () => {
                     <div className='container mx-auto'>
                         <div className=' pb-20 '>
                             <div className='w-full lg:w-[573px] mx-auto'>
-                                <p className='text-[#060606] font-semibold text-[60px] text-center -tracking-[2px] leading-normal'>
+                                <p
+                                    style={{
+                                        opacity: scrollProgress < textThreshold ? scrollProgress : 1
+                                    }}
+                                    className='text-[#060606] font-semibold text-[60px] text-center -tracking-[2px] leading-normal'>
                                     {t("consumeEasily")}
                                 </p>
-                                <p className='my-6 text-[#aeaeae] text-base font-medium -tracking-[0.24px] text-center'>{t("consumeEasilyDesc")}</p>
+                                <p
+                                    style={{
+                                        opacity: scrollProgress < textSubThreshold ? scrollProgress : 1
+                                    }}
+                                    className='my-6 text-[#aeaeae] text-base font-medium -tracking-[0.24px] text-center'>{t("consumeEasilyDesc")}</p>
 
-                                <div className='bg-[#f8f8f8] rounded-full w-full lg:w-[341px] h-[72px] p-1 flex mx-auto overflow-hidden'>
+                                <div style={{ opacity: scrollProgress < cardThreshold ? scrollProgress : 1 }} className='bg-[#f8f8f8] rounded-full w-full lg:w-[341px] h-[72px] p-1 flex mx-auto overflow-hidden'>
                                     {TabCards.map((item, index) => {
                                         return <div
                                             key={index}
@@ -172,7 +205,7 @@ const HomeScreen = () => {
                                             <Image src={ebay} alt='apple' className='absolute top-[280px] right-[110px]' />
                                         </div>
 
-                                        <figure style={{ opacity: scrollProgress < 0.47657952069716775 ? 0 : 1 }} ref={mobileRef} className='w-[164px] h-[117px] absolute top-[-17px] left-[41%] z-[2]'>
+                                        <figure style={{ opacity: scrollProgress < cardThreshold ? 0 : 1 }} ref={mobileRef} className='w-[164px] h-[117px] absolute top-[-17px] left-[41%] z-[2]'>
                                             <Image src={card} alt='card' />
                                         </figure>
 

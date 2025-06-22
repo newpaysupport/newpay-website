@@ -81,7 +81,6 @@ const OpenAccount = () => {
         })
 
     });
-
     return (
         <ReactLenis root>
             <div className="bg-[#060606] py-20 px-[120px]">
@@ -100,7 +99,7 @@ const OpenAccount = () => {
                                                     <p className={`${index === activeStep ? "bg-[#FF6910] border-none" : "bg-[#212121] border-white/16"} border-[2px] w-20 h-20 rounded-full text-white text-[40px] font-semibold flex items-center justify-center`}>{stepAccount[index].step}</p>
 
                                                     {index !== stepAccount.length - 1 && <div className={`bg-white/20 w-1 h-[355px]  mx-auto relative`}>
-                                                        <p className={`${activeStep === index ? "bg-[#FF6910] h-[355px]" : "bg-white/20 h-0"} w-1 absolute top-0 duration-150 transition-all ease-linear mx-auto`}> </p>
+                                                        <p className={`${activeStep === index ? "bg-[#FF6910] h-[600px]" : "bg-white/20 h-0"} w-1 absolute top-0 duration-150 transition-all ease-linear mx-auto`}> </p>
                                                     </div>}
                                                 </div>
                                                 <div>
