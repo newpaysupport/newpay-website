@@ -44,6 +44,7 @@ const PaymentScreen = () => {
     return (
         <div>
             <HeroPayment />
+            
             {/* Content Section*/}
             <div className="bg-black">
                 <div className="bg-white rounded-[80px] pb-10 pt-20">
