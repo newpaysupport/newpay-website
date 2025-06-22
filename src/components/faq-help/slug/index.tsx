@@ -3,13 +3,14 @@ import arrowRight from "@/images/faq-help/arrow-right.svg";
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import BreadCrumbSearch from './bread-crumb-search';
 
 const FaqHelpSlugDetail = ({ slug }: { slug: string }) => {
 
     const t = useTranslations("faqHelp");
     const listFaqs: { title: string; slug: string; desc: string; faqs: { question: string; answer: string }[] }[] = t.raw("information");
+    const [articleSearch, setArticleSearch] = useState("");
 
     const currentFaq = listFaqs.find(item => item.slug === slug);
     const router = useRouter();
@@ -28,17 +29,21 @@ const FaqHelpSlugDetail = ({ slug }: { slug: string }) => {
         }
     }
 
+    const fags = useMemo(() => {
+        if (!articleSearch) return currentFaq.faqs;
+        return currentFaq.faqs.filter(item => item.question.toLowerCase().includes(articleSearch.toLowerCase()));
+    }, [articleSearch])
 
     return (
         <div className='bg-[#060606] py-[120px]'>
             <div className='container mx-auto'>
                 <div className='flex items-center justify-between'>
                     <div className='flex items-center space-x-4 text-[#848484] text-base font-normal'>
-                        <span onClick={() => router.back()} className='cursor-pointer'>All Collection</span>
+                        <span onClick={() => router.back()} className='cursor-pointer'>{t("allCollection")}</span>
                         <span>/</span>
                         <span className='text-[#FF6910]'>{currentFaq.title}</span>
                     </div>
-                    <BreadCrumbSearch />
+                    <BreadCrumbSearch articleSearch={articleSearch} setArticleSearch={setArticleSearch} placeHolder={t('placeHolderSearchArticles')} />
                 </div>
 
                 <div className='flex flex-col gap-4 mt-12'>
@@ -46,13 +51,13 @@ const FaqHelpSlugDetail = ({ slug }: { slug: string }) => {
                     {/* <p className='text-[#666] text-base font-normal -tracking-[0.24px]'>{currentFaq.desc}</p> */}
                     <p className='py-2 px-4 bg-[#1c1c1c] rounded-full w-fit'>
                         <span className='text-white text-sm font-normal'>
-                            {currentFaq.faqs.length} articles
+                            {fags.length} {t("articles")}
                         </span>
                     </p>
                 </div>
 
                 <div className='bg-white/4 rounded-3xl p-10 mt-8 flex flex-col space-y-6'>
-                    {currentFaq.faqs.map((faq, index) => {
+                    {!fags.length ? <p className='text-white text-lg font-semibold text-center'>No articles</p> : fags.map((faq, index) => {
                         return (
                             <div
                                 onClick={() => handleOnclickSetFAQ(index)}
