@@ -56,19 +56,19 @@ const CardContent = () => {
                     <Image
                         src={card2_img2}
                         alt="Payment device being used"
-                        className="rounded-3xl object-cover object-center md:w-[600px] md:h-[600px]"
+                        className="rounded-3xl object-cover md:w-[600px] md:h-[600px]"
                     />
-                    <div style={{
+                    {/* <div style={{
                         background: "linear-gradient(180deg, rgba(6, 6, 6, 0.00) 0%, rgba(6, 6, 6, 0.50) 100%)",
                         backdropFilter: "blur(20px)",
                         mixBlendMode: 'color',
                         borderRadius: '24px 24px 24px 24px'
-                    }} className="absolute bottom-0 left-0 right-0 h-[40%] opacity-30"></div>
+                    }} className="absolute bottom-0 left-0 right-0 h-[40%] opacity-30"></div> */}
 
                     {/* Overlay card at the bottom */}
                     <div style={{
                         background: "rgba(255, 255, 255, 0.20)",
-                        backdropFilter: "blur(24px)"
+                        backdropFilter: "blur(12px)"
                     }}
                         className="absolute bottom-6 left-6 right-6 rounded-3xl p-4 flex items-center justify-between">
                         <div className="flex items-center">
