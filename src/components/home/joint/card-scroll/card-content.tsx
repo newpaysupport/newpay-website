@@ -56,7 +56,7 @@ const CardContent = () => {
                     <Image
                         src={card2_img2}
                         alt="Payment device being used"
-                        className="rounded-3xl object-cover object-center md:w-[600px] md:h-[600px]"
+                        className="rounded-3xl object-cover md:w-[600px] md:h-[600px]"
                     />
                     {/* <div style={{
                         background: "linear-gradient(180deg, rgba(6, 6, 6, 0.00) 0%, rgba(6, 6, 6, 0.50) 100%)",
