@@ -1018,6 +1018,24 @@
         "email": "您的工作邮箱",
         "phone": "电话号码",
         "typeCollaboration": "合作类型",
+        "typeCollaborations": [
+            {
+                "value": "一般咨询",
+                "id": 1
+            },
+            {
+                "value": "成为联盟",
+                "id": 2
+            },
+            {
+                "value": "合作伙伴",
+                "id": 3
+            },
+            {
+                "value": "职业与招聘",
+                "id": 4
+            }
+        ],
         "companyName": "公司名称",
         "companyWebsite": "公司网站",
         "message": "留言内容…",

@@ -46,10 +46,26 @@ const SelectInput = ({ setValue }: SelectInputProps) => {
         handleOpen();
     }
 
+    const isAbove = (open || typeSelected)
+
+
+    const classContainerOnOpenDropdown = open ? "border-[#FF6910] border-[1.5px]" : "border-[rgba(216,216,216,0.64)]";
+    const classAboveOnOpen = isAbove ? "left-4 top-[-22%] bg-white" : " top-[16px]";
+    const classSpanOnFocusInput = open ? "text-[#FF6910]" : "text-[#aeaeae]";
+
     return (
         <div className='relative'>
-            <div onClick={handleOpen} className='border-[rgba(216,216,216,0.64)] cursor-pointer h-[56px] flex justify-between gap-4 relative bg-white rounded-[10px] border p-4 transition-colors outline-none'>
-                <p className={`${typeSelected ? "text-[#0E121B]" : "text-[#aeaeae]"} text-base font-normal`}>{typeSelected ? typeSelected : t("typeCollaboration")}</p>
+            <div onClick={handleOpen} className={`${classContainerOnOpenDropdown} cursor-pointer h-[56px] flex justify-between gap-4 relative bg-white rounded-[10px] border p-4 transition-colors outline-none`}>
+                {/* <p className={`${typeSelected ? "text-[#0E121B]" : "text-[#aeaeae]"} text-base font-normal`}>{typeSelected ? typeSelected : t("typeCollaboration")}</p> */}
+
+                <span className={`${classAboveOnOpen} ${classSpanOnFocusInput} text-sm absolute capitalize font-medium pointer-events-none`}
+                    style={{
+                        transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)'
+                    }}>
+                    {t("typeCollaboration")}
+                </span>
+
+                <p className={`text-[#0E121B] text-base font-normal`}>{typeSelected ? typeSelected : ""}</p>
                 <figure>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <path d="M5 7.5L10 12.5L15 7.5" stroke="#AEAEAE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -60,7 +76,7 @@ const SelectInput = ({ setValue }: SelectInputProps) => {
             {open && <>
 
                 <div style={{ boxShadow: "0px 12px 40px -2px rgba(0, 0, 0, 0.12)" }} className='absolute w-full h-[170px] left-0 top-[66px] z-[20] p-1 bg-white border border-[rgba(216,216,216,0.64)] rounded-2xl'>
-                    {CollaborationTypes.map((item, index) => {
+                    {t.raw('typeCollaborations').map((item: { id: number; value: string }, index: number) => {
                         return <div key={index} onClick={() => handleSetTypeSelected(item.value)} className='p-2 cursor-pointer hover:bg-black/4 rounded'>
                             {item.value}
                         </div>

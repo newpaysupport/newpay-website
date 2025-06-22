@@ -1010,6 +1010,24 @@
         "email": "Your work email",
         "phone": "Phone number",
         "typeCollaboration": "Collaboration type",
+        "typeCollaborations": [
+            {
+                "value": "General Inquiries",
+                "id": 1
+            },
+            {
+                "value": "Affiliate Program",
+                "id": 2
+            },
+            {
+                "value": "Partnerships",
+                "id": 3
+            },
+            {
+                "value": "Careers",
+                "id": 4
+            }
+        ],
         "companyName": "Company name",
         "companyWebsite": "Company website",
         "message": "Message",

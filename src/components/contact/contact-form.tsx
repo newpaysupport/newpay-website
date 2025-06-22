@@ -40,7 +40,8 @@ const ContactForm = () => {
         register,
         handleSubmit,
         formState: { errors },
-        setValue
+        setValue,
+        control
     } = useForm({
         resolver: yupResolver(schema),
     })
@@ -60,33 +61,33 @@ const ContactForm = () => {
                 <form className="space-y-4" onSubmit={handleSubmit(onSubmit)} >
                     <div className='grid grid-cols-2 gap-4'>
                         <div>
-                            <NameInput inputType='text' name="firstName" label={t("firstName")} type='name' placeholder={""} register={register} />
+                            <NameInput control={control} inputType='text' name="firstName" label={t("firstName")} type='name' placeholder={""} register={register} />
                             <p className='text-sm text-red-700 mt-1'>{errors.firstName?.message}</p>
                         </div>
                         <div>
-                            <NameInput inputType='text' name='lastName' label={t("lastName")} type='name' placeholder={""} register={register} />
+                            <NameInput control={control} inputType='text' name='lastName' label={t("lastName")} type='name' placeholder={""} register={register} />
                             <p className='text-sm text-red-700 mt-1'>{errors.lastName?.message}</p>
                         </div>
                     </div>
 
                     <div className='grid grid-cols-2 gap-4'>
                         <div>
-                            <NameInput name='email' inputType='email' placeholder={t('email')} register={register} />
+                            <NameInput control={control} name='email' inputType='email' label={t('email')} placeholder='' register={register} />
                             <p className='text-sm text-red-700 mt-1'>{errors.email?.message}</p>
                         </div>
                         <div>
-                            <NumberInput name="phone" placeholder={t("phone")} register={register} />
+                            <NumberInput name="phone" label={t('phone')} placeholder='' register={register} control={control} />
                             <p className='text-sm text-red-700 mt-1'>{errors.phone?.message}</p>
                         </div>
                     </div>
 
                     <div className='grid grid-cols-2 gap-4'>
                         <div>
-                            <NameInput inputType='text' name='companyName' placeholder={t("companyName")} register={register} />
+                            <NameInput control={control} inputType='text' name='companyName' label={t('companyName')} placeholder='' register={register} />
                             <p className='text-sm text-red-700 mt-1'>{errors.companyName?.message}</p>
                         </div>
                         <div>
-                            <NameInput inputType='text' name='companyWebsite' placeholder={t("companyWebsite")} register={register} />
+                            <NameInput control={control} inputType='text' name='companyWebsite' label={t('companyWebsite')} placeholder='' register={register} />
                             <p className='text-sm text-red-700 mt-1'>{errors.companyWebsite?.message}</p>
                         </div>
                     </div>
@@ -96,17 +97,17 @@ const ContactForm = () => {
                         <p className='text-sm text-red-700 mt-1'>{errors.typeCollaboration?.message}</p>
                     </div>
 
-                    <div>
-                        <textarea {...register('message')} id="" placeholder={t("message")} className={`w-full p-4 rounded-[10px] bg-transparent border border-[rgba(216,216,216,0.64)] outline-none text-base font-medium text-[#0E121B] placeholder:text-[#aeaeae] placeholder:font-normal`} />
+                    <div className='h-[56px]'>
+                        <textarea {...register('message')} id="" placeholder={t("message")} className={`w-full h-full px-4 py-2 rounded-[10px] bg-transparent border border-[rgba(216,216,216,0.64)] outline-none text-base font-medium text-[#0E121B] placeholder:text-[#aeaeae] placeholder:font-normal`} />
                         <p className='text-sm text-red-700 mt-1'>{errors.message?.message}</p>
                     </div>
 
-                    <div className='flex items-center gap-4 pt-6'>
+                    <div className='flex items-center gap-4'>
                         <CheckboxInput enabled={enabled} setEnabled={setEnabled} />
                         <p className='w-[340px] text-[#666] text-sm font-medium'>{t("checkBox")}</p>
                     </div>
 
-                    <button disabled={!enabled} className='absolute bottom-10 right-[-100px] z-[10] h-20 box-border flex min-w-[267px] cursor-pointer group transition-all ease-in-out'>
+                    <button disabled={!enabled} className='absolute bottom-3 right-[-100px] z-[10] h-20 box-border flex cursor-pointer group transition-all ease-in-out'>
                         <span style={{ borderRadius: '16px 0px 0px 16px' }} className='py-4 px-6 h-full box-border flex items-center bg-[#FF6910] text-white font-medium text-2xl group-hover:bg-[#ff5810]'>{t("submit")}</span>
                         <p style={{ borderRadius: '0px 16px 16px 0px' }} className='bg-white py-4 px-6 flex items-center'>
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" className='group-hover:translate-x-0.5 group-hover:-translate-y-0.5'>

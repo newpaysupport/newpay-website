@@ -4,11 +4,16 @@ import hero from '@/images/about-us/hero.png'
 import Image from 'next/image'
 import BtnPrimary from '../common/button/btn-primary'
 import { useTranslations } from 'next-intl'
+import toast from 'react-hot-toast'
+import ToastCustom from '../common/toast'
 
 const Hero = () => {
 
     const t = useTranslations('aboutUs');
 
+    const handleShowToast = () => {
+        toast.custom(<ToastCustom type='warning' />)
+    }
 
     return (
         <div className='relative w-full h-[calc(100vh-70px)]'>
@@ -18,7 +23,7 @@ const Hero = () => {
                     <p className=' text-white text-base font-medium tracking-[-0.24px] opacity-0 fadeInUp-no-delay'>{t("hero.subTitle")}</p>
                     <p style={{ whiteSpace: "pre-line" }} className='text-white text-[60px] leading-[60px] font-semibold tracking-[-1.64px] my-4 opacity-0 fadeInUp-delay-03'>{t("hero.title")}</p>
                     <p className='text-[#aeaeae] text-base font-medium tracking-[-0.24px] mb-8 opacity-0 fadeInUp-delay-03'>{t("hero.desc")}</p>
-                    <BtnPrimary text={t("hero.buttonHero")} variant={'primary-lighter'} className='w-[258px] opacity-0 fadeInUp-delay-06' />
+                    <BtnPrimary onClick={handleShowToast} text={t("hero.buttonHero")} variant={'primary-lighter'} className='w-[258px] opacity-0 fadeInUp-delay-06' />
                 </div>
             </div>
         </div>
