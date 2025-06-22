@@ -783,6 +783,8 @@
             "desc": "Just pop your question below to get an answer.",
             "placeHolder": "Tell us what you’re look for"
         },
+        "allCollection": "All Collection",
+        "placeHolderSearchArticles": "Search for article",
         "information": [
             {
                 "title": "Managing your Card",

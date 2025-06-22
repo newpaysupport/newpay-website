@@ -31,10 +31,6 @@ const HomeScreen = () => {
     const locale = useLocale();
 
     const { flag } = useBreakpointFlags();
-
-
-    console.log('scrollProgress', scrollProgress)
-
     const cardThreshold = useMemo(() => {
         if (flag === 2) return 0.47657952069716775; // min 2xl
         if (flag === 1) return 0.4528403001071811;
