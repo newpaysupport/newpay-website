@@ -15,8 +15,8 @@ const AboutUs = () => {
                 <Insight />
                 <Compliance />
                 <Partner />
-                {/* <HelpCenter /> */}
-                {/* <DownloadSection /> */}
+                <HelpCenter />
+                <DownloadSection />
             </main>
         </ReactLenis>
     )
