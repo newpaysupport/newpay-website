@@ -108,11 +108,20 @@ const Header = () => {
                 { title: locale === 'en' ? 'Discover NewPay' : '认识 NewPay', href: `` },
                 { title: locale === 'en' ? 'About NewPay' : '关于 NewPay', href: `/${locale}/about-us` },
                 { title: locale === 'en' ? 'Contact us' : '联系我们', href: `/${locale}/contact` },
-                { title: locale === 'en' ? 'Blog' : '博客', href: `/${locale}/blog` },
-                { title: locale === 'en' ? 'FAQ' : '常见问题', href: `/${locale}/faq-help` }
+                { title: locale === 'en' ? 'Blog' : '博客', href: `/${locale}/blog` }
             ]
         },
-        { key: 'support', href: `/${locale}/support`, label: t('support'), hasDropdown: false }
+        {
+            key: 'support',
+            href: `#`,
+            label: t('support'),
+            hasDropdown: true,
+            dropdownItems: [
+                { title: locale === 'en' ? 'Our Support' : '我们的支持', href: `` },
+                { title: locale === 'en' ? 'FAQ' : '常见问题', href: `/${locale}/faq-help` },
+                { title: locale === 'en' ? 'Download App' : '下载应用', href: `/${locale}/download` },
+            ]
+        }        
     ];
 
     const getHeaderStyles = () => {
@@ -160,7 +169,7 @@ const Header = () => {
     };
 
     const isActive = (path: string) => pathname === path;
-    const isBlogAndContact = pathname === `/${locale}/blog` || pathname === `/${locale}/contact`;
+    const isBlogAndContact = pathname === `/${locale}/blog` || pathname === `/${locale}/contact` ||  new RegExp(`^/${locale}/blog/\\d+-`).test(pathname);;
     const img_logo = isBlogAndContact ? logo_black : logo;
 
     return (
@@ -235,7 +244,9 @@ const Header = () => {
                             <div className={`absolute top-[full] left-0 w-[100vw] pt-4 z-50`}>
                                 {link.key === 'payment' ?
                                     (<PaymentDropdown link={link} locale={locale} isBlogAndContact={isBlogAndContact} />) :
-                                    <CompanyDropdown link={link} locale={locale} isBlogAndContact={isBlogAndContact} isScrolled={isScrolled} />}
+                                    (
+                                        <CompanyDropdown link={link} locale={locale} isBlogAndContact={isBlogAndContact} isScrolled={isScrolled} />
+                                    )}
                             </div>
                         )}
                     </li>

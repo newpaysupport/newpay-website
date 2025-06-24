@@ -29,7 +29,6 @@ const CompanyDropdown = ({ link, locale, isBlogAndContact, isScrolled }: LinkIte
             background: "#060606"
         };
     }
-
     return (
         <div
             style={getHeaderStyles()}
@@ -41,9 +40,9 @@ const CompanyDropdown = ({ link, locale, isBlogAndContact, isScrolled }: LinkIte
                         {link.dropdownItems?.map((item, index) => {
                             let style = ''
                             let hover = ''
-                            if (isBlogAndContact && item.title === 'Discover NewPay') {
+                            if (isBlogAndContact && (item.title === 'Discover NewPay' || item.title === '认识 NewPay' || item.title === 'Our Support' || item.title === '我们的支持')) {
                                 style = 'text-[#AEAEAE]'
-                            } else if (!isBlogAndContact && item.title === 'Discover NewPay') {
+                            } else if (!isBlogAndContact && (item.title === 'Discover NewPay' || item.title === '认识 NewPay' || item.title === 'Our Support' || item.title === '我们的支持')) {
                                 style = 'text-[#AEAEAE]'
                             } else if (isBlogAndContact) {
                                 hover = "hover:bg-[#000000]/10"
@@ -70,5 +69,4 @@ const CompanyDropdown = ({ link, locale, isBlogAndContact, isScrolled }: LinkIte
         </div>
     )
 }
-
 export default CompanyDropdown
