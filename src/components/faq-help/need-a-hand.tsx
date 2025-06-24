@@ -13,10 +13,9 @@ const NeedAHand = () => {
 
     return (
         <div className='h-[400px] relative bg-[#060606]'>
-            {/* <Image src={bgGradient} alt='' fill /> */}
-            <div className='relative z-[1] container mx-auto flex flex-col justify-end items-center pb-10 w-full h-full'>
-                <p className='textTitleClip text-[72px] font-semibold'>{t("title")}</p>
-                <p className='text-lg text-[#aeaeae] font-medium mt-3 mb-10'>{t("desc")}</p>
+            <div className='relative z-[1] container mx-auto flex flex-col justify-end items-center pb-10 w-full h-full px-6 lg:px-0'>
+                <p className='textTitleClip text-[32px] lg:text-[72px] font-semibold'>{t("title")}</p>
+                <p className='text-sm lg:text-lg text-[#aeaeae] font-medium mt-3 mb-10'>{t("desc")}</p>
                 <div className='w-full lg:w-[480px] mx-auto h-[72px] bg-white/8 rounded-2xl box-border p-6 flex items-center gap-x-[10px]'>
                     <figure>
                         <Image src={searchIcon} alt='' />
