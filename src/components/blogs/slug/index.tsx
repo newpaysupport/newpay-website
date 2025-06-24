@@ -2,7 +2,7 @@
 import { listBlogs } from "@/markdown";
 import { MDXWrapper } from '@/MDXWrapper';
 import { useLocale, useTranslations } from 'next-intl';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useEffect, useMemo } from "react";
 import ShareSocial from './share-social';
 import FurtherReading from "./further-reading";
@@ -16,6 +16,8 @@ const BlogDetailSlug = ({ slug }: { slug: string }) => {
     const insightsLocale = (locale === 'zi' || locale === 'en' ? locale : 'en') as InsightsLocale;
     const router = useRouter();
     const [id, category] = slug.split("-");
+    const pathname = usePathname();
+    const currentLocale = pathname.split('/')[1]
 
     const t = useTranslations('blog');
 
@@ -46,7 +48,7 @@ const BlogDetailSlug = ({ slug }: { slug: string }) => {
 
 
     const previousBack = () => {
-        router.back();
+        router.push(`/${currentLocale}/blog`);
     }
 
     return (
