@@ -9,7 +9,7 @@ const FAQHelpCenter = () => {
         <ReactLenis root>
             <main>
                 <NeedAHand />
-                <div className='py-10 bg-[#060606] lg:px-[120px]'>
+                <div className='py-10 bg-[#060606] px-6 lg:px-[120px]'>
                     <TopViewedArticles />
                     <FaqInfo />
                 </div>

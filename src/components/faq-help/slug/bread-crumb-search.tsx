@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const BreadCrumbSearch = ({ placeHolder, articleSearch, setArticleSearch }: { placeHolder: string; articleSearch: string; setArticleSearch: (value: string) => void; }) => {
     return (
-        <div className='w-[200px] h-[56px] box-border p-4 pr-6 flex items-center space-x-[10px] bg-white/8 rounded-2xl'>
+        <div className='lg:w-[200px] h-[56px] box-border p-4 pr-6 flex items-center space-x-[10px] bg-white/8 rounded-2xl'>
             <figure className='w-6 min-w-6 h-6'>
                 <Image src={searchIcon} alt='' />
             </figure>

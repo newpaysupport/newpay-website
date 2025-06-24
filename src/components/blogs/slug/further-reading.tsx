@@ -34,8 +34,8 @@ const FurtherReading = ({ blogTitle }: { blogTitle: string }) => {
 
 
     return (
-        <div className='container mx-auto'>
-            <h2 className={`text-[32px] text-[#1b1b1b] font-semibold -tracking-[0.64px] text-left`}>Further Reading</h2>
+        <div className='container mx-auto mt-8'>
+            <h2 className={`text-2xl lg:text-[32px] text-[#1b1b1b] font-semibold -tracking-[0.64px] text-left`}>Further Reading</h2>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-5 lg:grid-cols-3 mt-6'>
                 {
                     randomBlogs?.map((item, index) => {

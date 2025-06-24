@@ -38,9 +38,9 @@ const FaqHelpSlugDetail = ({ slug }: { slug: string }) => {
 
     return (
         <div className='bg-[#060606] py-[120px]'>
-            <div className='container mx-auto'>
-                <div className='flex items-center justify-between'>
-                    <div className='flex items-center space-x-4 text-[#848484] text-base font-normal'>
+            <div className='container mx-auto px-6 lg:px-0'>
+                <div className='flex gap-y-6 lg:gap-y-0 flex-col lg:flex-row lg:items-center lg:justify-between'>
+                    <div className='flex items-center space-x-4 text-[#848484] text-sm lg:text-base font-normal'>
                         <Link href={`/${currentLocale}/faq-help`} className='cursor-pointer'>{t("allCollection")}</Link>
                         <span>/</span>
                         <span className='text-[#FF6910]'>{currentFaq.title}</span>
@@ -49,7 +49,7 @@ const FaqHelpSlugDetail = ({ slug }: { slug: string }) => {
                 </div>
 
                 <div className='flex flex-col gap-4 mt-12'>
-                    <p className='text-white text-[32px] font-semibold'>{currentFaq.title}</p>
+                    <p className='text-white text-2xl lg:text-[32px] font-semibold'>{currentFaq.title}</p>
                     {/* <p className='text-[#666] text-base font-normal -tracking-[0.24px]'>{currentFaq.desc}</p> */}
                     <p className='py-2 px-4 bg-[#1c1c1c] rounded-full w-fit'>
                         <span className='text-white text-sm font-normal'>
@@ -58,7 +58,7 @@ const FaqHelpSlugDetail = ({ slug }: { slug: string }) => {
                     </p>
                 </div>
 
-                <div className='bg-white/4 rounded-3xl p-10 mt-8 flex flex-col space-y-6'>
+                <div className='bg-white/4 rounded-3xl py-4 px-6 lg:p-10 mt-8 flex flex-col space-y-6'>
                     {!fags.length ? <p className='text-white text-lg font-semibold text-center'>No articles</p> : fags.map((faq, index) => {
                         return (
                             <div
