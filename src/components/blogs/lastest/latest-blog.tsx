@@ -51,7 +51,7 @@ const LatestBlog = ({ title, tags, blogTag }: LatestProps) => {
                     <p
                         onClick={() => handleClickTag(tag)}
                         key={index}
-                        className={`${selectTag === tag ? 'bg-[#212121] text-white' : 'hover:bg-[#212121] hover:text-white bg-black/10'} transition-all ease-linear duration-150 capitalize rounded-full px-4 py-2 cursor-pointer`}
+                        className={`${selectTag === tag ? 'bg-[#212121] text-white' : 'hover:bg-black/10 bg-[#f8f8f8] text-[#1b1b1b]'} transition-all ease-linear duration-150 capitalize rounded-full px-4 py-2 cursor-pointer`}
                     >
                         <span className='text-sm font-medium'>{tag}</span>
                     </p>

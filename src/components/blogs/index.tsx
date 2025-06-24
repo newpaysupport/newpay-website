@@ -1,5 +1,5 @@
 'use client'
-import blog_logo from '@/images/blog/image1991.png';
+import blog_logo from '@/images/blog/image 1991.png';
 import search from '@/images/blog/search.svg';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
@@ -14,14 +14,14 @@ const BlogScreen = () => {
         <div className='pt-[128px] container mx-auto'>
             {/* Header Section */}
             <div className='flex flex-col justify-center items-center'>
-                <Image src={blog_logo} alt="Blog Logo" />
-                <h1 className='text-5xl font-semibold text-center'><span style={{ color: '#FF6910' }}>NewPay</span> {t('title')}</h1>
-                <p className='text-center text-gray-500 mt-5 text-md'>{t('subtitle')}</p>
-                <div className="mt-5 flex items-center h-12 w-[320px] text-sm text-gray-500 bg-white border border-gray-500/30 rounded-full ">
+                <Image src={blog_logo} alt="Blog Logo" className='w-20 h-20' />
+                <h1 className='text-[60px] font-semibold text-center'><span className='text-[#FF6910]'>NewPay</span> {t('title')}</h1>
+                <p className='text-center text-[#666666] mt-5 text-md font-medium'>{t('subtitle')}</p>
+                <div className="mt-10 flex items-center h-[56px] w-[320px] bg-[#f8f8f8] border border-[#d8d8d8] rounded-full ">
                     <button type="button" className="h-full px-3">
                         <Image src={search} alt="Search Icon" width={20} height={20} />
                     </button>
-                    <input className="outline-none bg-transparent h-full w-full" type="text" placeholder={t('searchPlaceholder')} />
+                    <input className="outline-none bg-transparent h-full w-full placeholder:text-[#aeaeae] text-black text-base font-medium" type="text" placeholder={t('searchPlaceholder')} />
                 </div>
             </div>
             <FeaturedArticles featuredArticle={t("featuredArticle")} />
