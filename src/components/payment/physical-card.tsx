@@ -11,16 +11,17 @@ type PhysicalCardProps = {
         title: string,
         subtitle: string
     }[],
-    labelButton: string
+    labelButton: string,
+    id?: string
 }
-const PhysicalCard = ({ physicalItems, labelButton }: PhysicalCardProps) => {
+const PhysicalCard = ({ physicalItems, labelButton, id }: PhysicalCardProps) => {
     const handleToast = () => {
         toast.custom(<ToastCustom type='warning' />)
     }
     return (
         <>
             {/* content Physical Card*/}
-            <div className="flex justify-between  mt-10 mx-auto container w-[80%] md:flex-row flex-col">
+            <div id={id} className="flex justify-between  mt-10 mx-auto container w-[80%] md:flex-row flex-col">
                 <div className="md:w-[45%]">
                     <div className="my-4 p-6 bg-gray-100 rounded-2xl">
                         <Image src={wifi} alt="Wifi" />
