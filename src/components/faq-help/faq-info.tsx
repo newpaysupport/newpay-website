@@ -25,7 +25,7 @@ const FaqInfo = () => {
                     {listFaqs.map((item, index) => {
                         return (
                             <Link href={`faq-help/${item.slug}`} key={index}>
-                                <div className='p-10 bg-white/4 hover:bg-white/8 transition-all ease-linear duration-150 rounded-[20px] cursor-pointer  h-[276px]'>
+                                <div className='p-10 bg-white/4 hover:bg-white/8 transition-all ease-linear duration-150 rounded-[20px] cursor-pointer flex flex-col justify-center  h-[276px]'>
                                     <div className='flex items-center justify-between'>
                                         <figure>
                                             <Image src={listIcons[index]} alt='' />
@@ -34,7 +34,6 @@ const FaqInfo = () => {
                                             <Image src={arrowUpRight} alt='' />
                                         </figure>
                                     </div>
-
                                     <p className='text-white text-xl font-semibold my-4'>{item.title}</p>
                                     {/* <p className='text-[#aeaeae] text-base font-normal -tracking-[0.24px] mb-8'>{item.desc}</p> */}
                                     <p className='text-[rgba(255,255,255,0.56)] text-sm font-normal'>{item.faqs.length} {t("articles")}</p>

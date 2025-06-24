@@ -14,27 +14,28 @@ const GetTheApp = () => {
 
 
     return (
-        <div className='bg-[#060606] pt-[120px]'>
+        <div className='bg-[#060606] pt-[64px] lg:pt-[120px]'>
             <div className='container mx-auto'>
-                <div className='w-full h-[400px] relative'>
+                <div className='w-full h-full lg:h-[400px] relative py-10'>
                     <Image src={card} alt='' fill priority />
-                    <div className='relative z-[1] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-20 items-center'>
+                    <div className='relative z-[1] grid grid-cols-1 lg:grid-cols-3 gap-y-12 lg:gap-y-0 lg:gap-x-20 items-center'>
                         <div className='relative'>
-                            <p className='textTitleClip text-[72px] font-semibold leading-[72px]'>
+                            <Image src={iconMark} alt='' className={`mx-auto block lg:hidden`} />
+                            <p className='textTitleClip text-[40px] text-center lg:text-left lg:text-[72px] font-semibold lg:leading-[72px]'>
                                 {t("get")} <br />
                                 {t("theApp")}
                             </p>
-                            <Image src={iconMark} alt='' className={`absolute top-[3px] ${locale === 'zi' ? "left-[160px]" : "left-[134px]"}`} />
+                            <Image src={iconMark} alt='' className={`hidden lg:block absolute top-[3px] ${locale === 'zi' ? "left-[160px]" : "left-[134px]"}`} />
                         </div>
 
                         <div>
-                            <p className='text-white text-[36px] font-medium -tracking-[0.64px]'>
+                            <p className='text-white text-center text-2xl lg:text-[36px] font-medium -tracking-[0.64px]'>
                                 {t("title")}
                             </p>
-                            <p className='text-[#aeaeae] text-xl font-normal mt-6'>{t("desc")}</p>
+                            <p className='text-[#aeaeae] text-sm text-center lg:text-xl font-normal mt-4 lg:mt-6'>{t("desc")}</p>
                         </div>
 
-                        <figure className='flex justify-center'>
+                        <figure className='flex justify-center lg:justify-end'>
                             <Image src={newpayCard} alt='' />
                         </figure>
                     </div>

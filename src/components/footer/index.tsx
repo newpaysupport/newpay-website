@@ -1,5 +1,4 @@
 'use client'
-import Discord from '@/icons/Discord.svg';
 import Facebook from '@/icons/Facebook.svg';
 import insta from '@/icons/insta.svg';
 import Linkedin from '@/icons/Linkedin.svg';
@@ -11,13 +10,12 @@ import logoNewpay from '@/images/footer/newpay.svg';
 import logoMark from '@/images/footer/newpay_mark.svg';
 
 import { FooterItem } from '@/interfaces/footer';
-import { useLocale } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import toast from 'react-hot-toast';
 import { useTranslations } from 'use-intl';
 import ToastCustom from '../common/toast';
-import { usePathname } from 'next/navigation';
 
 
 const socials = [
@@ -49,7 +47,6 @@ const socials = [
 const Footer = () => {
 
     const t = useTranslations("footer");
-    const locale = useLocale();
     const pathname = usePathname();
     const currentLocale = pathname.split('/')[1]
 
@@ -58,15 +55,15 @@ const Footer = () => {
     }
 
     return (
-        <div className='bg-[#060606] p-20'>
+        <div className='bg-[#060606] lg:p-20 px-4 py-12'>
             <div className='container mx-auto'>
-                <div className='flex justify-between'>
+                <div className='flex flex-col lg:flex-row lg:justify-between'>
                     <div>
                         <Link href={'/'} className='flex items-center gap-x-2 cursor-pointer'>
                             <Image src={logoMark} alt='logo mark' />
                             <Image src={logoNewpay} alt='logo mark' />
                         </Link>
-                        <div className='flex items-center gap-x-2 cursor-pointer mt-8 mb-20'>
+                        <div className='flex items-center gap-x-2 cursor-pointer mt-8 mb-12 lg:mb-20'>
                             <Image onClick={handleToastComingSoon} src={appStore} alt='logo' />
                             <Image onClick={handleToastComingSoon} src={ggplay} alt='logo' />
                         </div>
@@ -82,7 +79,7 @@ const Footer = () => {
                             })}
                         </div>
                     </div>
-                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10'>
+                    <div className='grid grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10 mt-12 lg:mt-0'>
                         {t.raw('information').map((menu: FooterItem, index: number) => {
                             return <div key={index}>
                                 <p className='text-white text-sm font-semibold mb-6'>{menu.title}</p>
@@ -100,10 +97,10 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <p className='newpayFooterText lg:text-[300px] 2xl:text-[312px] font-bold -tracking-[7px] uppercase text-center'>NewPay</p>
+                <p className='newpayFooterText text-[75px] sm:text-[96px] lg:text-[300px] 2xl:text-[312px] font-bold -tracking-[7px] uppercase text-center'>NewPay</p>
 
-                <div className='text-[#848484] text-base font-normal -tracking-[0.24px] flex items-center justify-between pt-10 border-t-[1px] border-white/8'>
-                    <span>{t('copyright')}</span>
+                <div className='text-[#848484] text-sm lg:text-base font-normal -tracking-[0.24px] flex flex-col-reverse md:flex-row items-center justify-between pt-10 border-t-[1px] border-white/8'>
+                    <span className='text-xs mt-2 md:mt-0'>{t('copyright')}</span>
                     <Link href={`/${currentLocale}/term`}>{t('terms')}</Link>
                 </div>
             </div>
