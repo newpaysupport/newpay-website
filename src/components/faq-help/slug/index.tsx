@@ -2,7 +2,8 @@
 import arrowRight from "@/images/faq-help/arrow-right.svg";
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
+import Link from "next/link";
+import { usePathname } from 'next/navigation';
 import { useMemo, useState } from 'react';
 import BreadCrumbSearch from './bread-crumb-search';
 
@@ -11,9 +12,9 @@ const FaqHelpSlugDetail = ({ slug }: { slug: string }) => {
     const t = useTranslations("faqHelp");
     const listFaqs: { title: string; slug: string; desc: string; faqs: { question: string; answer: string }[] }[] = t.raw("information");
     const [articleSearch, setArticleSearch] = useState("");
-
+    const pathname = usePathname();
+    const currentLocale = pathname.split('/')[1]
     const currentFaq = listFaqs.find(item => item.slug === slug);
-    const router = useRouter();
     const [faqActive, setFaqActive] = useState(-1);
 
     if (!currentFaq) {
@@ -34,12 +35,13 @@ const FaqHelpSlugDetail = ({ slug }: { slug: string }) => {
         return currentFaq.faqs.filter(item => item.question.toLowerCase().includes(articleSearch.toLowerCase()));
     }, [articleSearch])
 
+
     return (
         <div className='bg-[#060606] py-[120px]'>
             <div className='container mx-auto'>
                 <div className='flex items-center justify-between'>
                     <div className='flex items-center space-x-4 text-[#848484] text-base font-normal'>
-                        <span onClick={() => router.back()} className='cursor-pointer'>{t("allCollection")}</span>
+                        <Link href={`/${currentLocale}/faq-help`} className='cursor-pointer'>{t("allCollection")}</Link>
                         <span>/</span>
                         <span className='text-[#FF6910]'>{currentFaq.title}</span>
                     </div>
