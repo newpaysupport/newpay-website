@@ -31,7 +31,7 @@ const Card = ({ title, tag, image, slug, desc, id, tagShow }: CardProps) => {
     return (
         <div
             onClick={handleClick}
-            className={`flex flex-col rounded-[28px] group cursor-pointer md:w-[385px] md:h-[380px] mb-10 p-3 border border-transparent hover:border-[#FF6910]/16 hover:bg-[#FF6910]/4`}
+            className={`flex flex-col rounded-[28px] group cursor-pointer md:w-[385px] lg:w-full lg:h-auto md:h-[380px] mb-10 p-3 border border-transparent hover:border-[#FF6910]/16 hover:bg-[#FF6910]/4`}
         >
             <div className="w-full h-full relative">
                 <Image
