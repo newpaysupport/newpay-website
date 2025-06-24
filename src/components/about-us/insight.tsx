@@ -13,6 +13,8 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Item } from '@/interfaces/common';
 import arrowRight from '@/images/about-us/arrow-right-black.svg';
+import toast from 'react-hot-toast';
+import ToastCustom from '../common/toast';
 
 const insights = [
     {
@@ -43,6 +45,10 @@ const Insight = () => {
 
     const t = useTranslations("aboutUs");
 
+    const handleClick = () => {
+        toast.custom(<ToastCustom type='warning' />)
+    }
+
     return (
         <div className='bg-[#060606]'>
             <div className='bg-white rounded-4xl lg:rounded-[80px] py-12 px-6 lg:py-[120px] lg:px-[160px] overflow-hidden'>
@@ -61,7 +67,7 @@ const Insight = () => {
                                             )
                                         })}
                                     </p>
-                                    <button className='border border-black/16 font-semibold cursor-pointer rounded-full py-4 w-[260px] flex items-center justify-center space-x-[10px] mt-12'>
+                                    <button onClick={handleClick} className='border border-black/16 font-semibold cursor-pointer rounded-full py-4 w-[260px] flex items-center justify-center space-x-[10px] mt-12'>
                                         <span>{t('hero.buttonHero')}</span>
                                         <Image src={arrowRight} alt='' />
                                     </button>
