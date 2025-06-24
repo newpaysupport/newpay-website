@@ -641,7 +641,7 @@
         },
         "about": {
             "title": "About NewPay",
-            "description": "Founded in 2022, NewPay is committed to helping you spend and grow your crypto assets, with offices in Hong Kong, Singapore, Malaysia, and Japan.",
+            "description": "NewPay is dedicated to helping you spend and grow your crypto assets. Founded in 2022, with offices in Hong Kong, Singapore, Malaysia, and Japan.",
             "listFlag": [
                 {
                     "flag": "/icons/Flag_HongKong.svg",
@@ -664,7 +664,7 @@
         }
     },
     "downloadSection": {
-        "title": "Join NewPay.\nSpend Safe & Smart",
+        "title": "Join NewPay. Spend Safe & Smart",
         "buttonText": "Download App"
     },
     "aboutUs": {
