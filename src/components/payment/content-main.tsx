@@ -27,9 +27,9 @@ const ContentMain = () => {
         netflix, tiktok, spotify, youtube, facebook, aliexpress
     ]
     return (
-        <div className="mt-30 container mx-auto overflow-hidden">
-            <h1 className="md:text-6xl text-2xl font-semibold text-center pt-10">{contentSection2.title}</h1>
-            <p className="text-lg font-medium text-center text-gray-500 mt-4 mx-auto">{contentSection2.description}</p>
+        <div className="md:mt-30 mt-12 md:container md:mx-auto overflow-hidden">
+            <h1 className="md:text-6xl text-[32px] font-semibold text-center md:pt-10 pt-12">{contentSection2.title}</h1>
+            <p className="md:text-lg text-sm font-medium text-center text-gray-500 mt-4 mx-auto">{contentSection2.description}</p>
             <div className="mx-auto mt-10 relative">
                 <Image src={world} alt="world" className="mx-auto" />
 
@@ -37,28 +37,28 @@ const ContentMain = () => {
                     borderRadius: "999px",
                     background: "#FFF",
                     boxShadow: "0px 8px 30px -2px #F7931A, 0.5px 0.5px 1px 0px rgba(255, 255, 255, 0.32) inset, 0px -0.5px 1px 0px rgba(0, 0, 0, 0.25) inset"
-                }} className="animate-bitcoin absolute top-[14%] left-[26%]" />
+                }} className="animate-bitcoin absolute top-[14%] md:left-[26%] left-[20%] md:w-[50px] md:h-[50px] w-[18px] h-[18px]" />
 
-                <Image src={eth} alt="eth" className="animate-eth absolute top-[8%] left-[43%]" />
+                <Image src={eth} alt="eth" className="animate-eth absolute top-[8%] left-[43%] md:w-[100px] md:h-[100px] w-[36px] h-[36px]" />
 
                 <Image src={usd} alt="usd" style={{
                     borderRadius: "999px",
                     background: "#FFF",
                     boxShadow: "0px 8px 30px -2px #2883E6, 0px 0.5px 1px 0px rgba(255, 255, 255, 0.32) inset, 0px -0.5px 1px 0px rgba(0, 0, 0, 0.25) inset"
-                }} className="animate-usd absolute top-[18%] right-[28%]" />
+                }} className="animate-usd absolute top-[18%] right-[28%] md:w-[50px] md:h-[50px] w-[18px] h-[18px]" />
 
                 <Image src={tether} alt="tether" style={{
                     borderRadius: "999px",
                     background: "#FFF",
                     boxShadow: "0px 8px 30px -2px #43C19F, 0.5px 0.5px 1px 0px rgba(255, 255, 255, 0.32) inset, 0px -0.5px 1px 0px rgba(0, 0, 0, 0.25) inset"
-                }} className="animate-tether absolute top-[57%] left-[30%]" />
+                }} className="animate-tether absolute top-[57%] md:left-[30%] left-[25%] md:w-[50px] md:h-[50px] w-[18px] h-[18px]" />
 
 
                 <Image src={solana} alt="solana" style={{
                     borderRadius: "999px",
                     background: "#FFF",
                     boxShadow: "0.5px 0.5px 1px 0px rgba(255, 255, 255, 0.32) inset, 0px -0.5px 1px 0px rgba(0, 0, 0, 0.25) inset, 0px 8px 30px -2px #A953EA"
-                }} className="animate-solana absolute top-[52%] right-[22%]" />
+                }} className="animate-solana absolute top-[52%] md:right-[22%] right-[18%] md:w-[50px] md:h-[50px] w-[18px] h-[18px]" />
             </div>
 
 
@@ -66,18 +66,18 @@ const ContentMain = () => {
                 <div className='flex gap-8 justify-center animation-slideshow'>
                     {[...listImage, ...listImage, ...listImage].map((image, index) => {
                         return (
-                            <Image src={image} alt="Netflix" key={index}/>
+                            <Image src={image} alt="Netflix" key={index} className="md:w-full md:h-full w-[80px] h-[40px]"/>
                         )
                     })}
                 </div>
                 <div style={{
                     background: "linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%)",
                     backdropFilter: "blur(4px)"
-                }} className='absolute left-0 top-0 bottom-0 md:w-[80px]'></div>
+                }} className='absolute left-0 top-0 bottom-0 md:w-[80px] w-[40px]'></div>
                 <div style={{
                     background: "linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%)",
                     backdropFilter: "blur(4px)"
-                }} className='absolute right-0 top-0 bottom-0 md:w-[80px]'></div>
+                }} className='absolute right-0 top-0 bottom-0 md:w-[80px] w-[40px]'></div>
             </div>
         </div>
     )

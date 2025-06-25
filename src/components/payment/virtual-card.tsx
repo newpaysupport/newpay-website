@@ -27,21 +27,21 @@ const VirtualCard = ({ virtualItems, labelButton, id }: VirtualCardProps) => {
     return (
         <>
             {/* content Virtual Card*/}
-            <div id={id} className="flex justify-between items-center mt-10 mx-auto container w-[80%] md:flex-row flex-col">
+            <div id={id} className="flex justify-between items-center md:mt-10 mt-8 mx-auto container md:w-[80%] md:flex-row flex-col">
                 <AnimationFade inView={isLeftInView} direction="left" className="md:w-[45%]">
                     <div ref={leftRef}>
                         <div className="my-4 p-6 bg-gray-100 rounded-2xl">
                             <Image src={two_arrow} alt="Virtual Card Icon" />
-                            <h2 className="md:text-2xl font-semibold mt-4">{virtualItems[0].title}</h2>
-                            <p className="md:text-md text-gray-500 mt-2">{virtualItems[0].subtitle}</p>
+                            <h2 className="md:text-2xl text-lg font-semibold md:mt-4 mt-6">{virtualItems[0].title}</h2>
+                            <p className="md:text-base text-sm text-gray-500 mt-2 md:w-full w-[60%]">{virtualItems[0].subtitle}</p>
                         </div>
                         <div className="mt-6 p-6 bg-gray-100 rounded-2xl">
                             <Image src={wallet} alt="Virtual Card Icon" />
 
-                            <h2 className="md:text-2xl font-semibold mt-4">{virtualItems[1].title}</h2>
-                            <p className="md:text-md text-gray-500 mt-2">{virtualItems[1].subtitle}</p>
+                            <h2 className="md:text-2xl text-lg font-semibold md:mt-4 mt-6">{virtualItems[1].title}</h2>
+                            <p className="md:text-base text-sm text-gray-500 mt-2 md:w-full w-[60%]">{virtualItems[1].subtitle}</p>
                         </div>
-                        <button onClick={handleToast} className="rounded-full mt-12 md:py-4 md:px-10 font-semibold p-4 text-md text-white cursor-pointer bg-orange-500 hover:bg-orange-600">{labelButton}</button>
+                        <button onClick={handleToast} className="rounded-full md:mt-12 mt-6 md:py-4 md:px-10 font-semibold px-6 py-3 text-md text-white cursor-pointer bg-orange-500 hover:bg-orange-600">{labelButton}</button>
                     </div>
                 </AnimationFade>
                 <AnimationFade  inView={isRightInView} direction="right" className="md:w-[45%] mt-10 md:mt-0">

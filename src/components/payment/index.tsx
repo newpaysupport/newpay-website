@@ -52,21 +52,21 @@ const PaymentScreen = () => {
             <HeroPayment />
             {/* Content Section*/}
             <div className="bg-black">
-                <div className="bg-white rounded-[80px] pb-10 pt-20">
+                <div className="bg-white md:rounded-[80px] rounded-4xl pb-10 md:pt-20 md:px-0 pt-12 px-6">
                     {/* Content Section 1*/}
                     <AnimationFade direction="up" inView={isInView}>
                         <div ref={textRef}>
-                            <h1 className="md:text-[60px] text-xl font-semibold text-center text-[#1b1b1b]">{contentSection1.title}</h1>
-                            <p className="md:w-[430px] text-lg font-medium text-center text-[#666] mt-4 mx-auto">{contentSection1.description}</p>
-                            <div className="w-fit mx-auto text-md mt-8">
+                            <h1 className="md:text-[60px] text-[32px] font-semibold text-center text-[#1b1b1b]">{contentSection1.title}</h1>
+                            <p className="md:w-[430px] md:text-lg text-sm font-medium text-center text-[#666] mt-4 mx-auto">{contentSection1.description}</p>
+                            <div className="justify-center items-center md:text-base text-sm md:mt-8 my-8 flex gap-4">
                                 <button
-                                    className={`${activeCard === 'virtual' ? 'bg-black text-white' : ''} border border-gray-300 font-semibold py-4 px-12 rounded-full mx-2 cursor-pointer`}
+                                    className={`${activeCard === 'virtual' ? 'bg-black text-white' : ''} border border-gray-300 font-semibold md:py-4 md:px-12 py-3 px-10 rounded-full cursor-pointer`}
                                     onClick={() => setActiveCard('virtual')}
                                 >
                                     {virtualCard.label}
                                 </button>
                                 <button
-                                    className={`${activeCard === 'virtual' ? '' : 'bg-black text-white'} border border-gray-300 font-semibold py-4 px-12 rounded-full mx-2 cursor-pointer`}
+                                    className={`${activeCard === 'virtual' ? '' : 'bg-black text-white'} border border-gray-300 font-semibold md:py-4 md:px-12 py-3 px-10 rounded-full cursor-pointer`}
                                     onClick={() => setActiveCard('physical')}
                                 >
                                     {physicalCard.label}
