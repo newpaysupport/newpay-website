@@ -101,7 +101,7 @@ const Footer = () => {
 
                 <div className='text-[#848484] text-sm lg:text-base font-normal -tracking-[0.24px] flex flex-col-reverse md:flex-row items-center justify-between pt-10 border-t-[1px] border-white/8'>
                     <span className='text-xs mt-2 md:mt-0'>{t('copyright')}</span>
-                    <Link href={`/${currentLocale}/term`}>{t('terms')}</Link>
+                    <Link target='_blank' href={`https://newpay-doc-en.gitbook.io/newpay-docs-en/commission-policy`}>{t('terms')}</Link>
                 </div>
             </div>
         </div>
