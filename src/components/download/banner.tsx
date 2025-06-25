@@ -10,9 +10,11 @@ import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import toast from 'react-hot-toast'
 import ToastCustom from '../common/toast'
+import { useWindowSize } from '@/hooks/useWindowSize'
 
 const Banner = () => {
-
+    const { width, height, devicePixelRatio } = useWindowSize();
+    console.log('width:', width, 'height:', height, 'devicePixelRatio:', devicePixelRatio);
     const t = useTranslations("download.banner");
 
     const handleToast = () => {
