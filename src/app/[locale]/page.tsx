@@ -11,11 +11,11 @@ export default function HomePage() {
     return (
         <main>
             <HomeScreen />
-            {/* <DownloadSection />
+            <DownloadSection />
             <VideoBackground />
             <GlobeListCard />
             <FAQ />
-            <HelpCenter /> */}
+            <HelpCenter />
         </main>
     );
 }
