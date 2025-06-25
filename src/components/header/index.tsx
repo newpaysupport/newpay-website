@@ -121,7 +121,7 @@ const Header = () => {
                 { title: locale === 'en' ? 'FAQ' : '常见问题', href: `/${locale}/faq-help` },
                 { title: locale === 'en' ? 'Download App' : '下载应用', href: `/${locale}/download` },
             ]
-        }        
+        }
     ];
 
     const getHeaderStyles = () => {
@@ -169,12 +169,12 @@ const Header = () => {
     };
 
     const isActive = (path: string) => pathname === path;
-    const isBlogAndContact = pathname === `/${locale}/blog` || pathname === `/${locale}/contact` ||  new RegExp(`^/${locale}/blog/\\d+-`).test(pathname);;
+    const isBlogAndContact = pathname === `/${locale}/blog` || pathname === `/${locale}/contact` || new RegExp(`^/${locale}/blog/\\d+-`).test(pathname);;
     const img_logo = isBlogAndContact ? logo_black : logo;
 
     return (
         <nav style={getHeaderStyles()}
-            className={`text-sm h-[70px] flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4
+            className={`text-sm h-[70px] flex items-center justify-between px-6 md:px-16 lg:px-24 2xl:px-32 py-4
                 fixed top-0 left-0 w-full z-50
                 text-white transition-all duration-300 ease-out
                 ${isVisible ? 'translate-y-0' : 'translate-y-[-100%]'}`}>

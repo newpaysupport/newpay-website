@@ -50,7 +50,7 @@ const OpenAccount = () => {
 
     const [activeStep, setActiveStep] = useState(0);
     const t = useTranslations("home");
-    const { is2xl, isLg } = useBreakpointFlags();
+    const { is2xl, isLg, isXl } = useBreakpointFlags();
 
     useGSAP(() => {
         gsap.registerPlugin(ScrollTrigger);
@@ -80,16 +80,15 @@ const OpenAccount = () => {
                     },
                 }
             })
-
         })
-
     });
 
     const fixedHeight = useMemo(() => {
         if (is2xl) return 610;
-        if (isLg) return 630;
+        if (isXl) return 590;
+        if (isLg) return 620;
         return 480;
-    }, [is2xl, isLg]);
+    }, [is2xl, isXl, isLg]);
 
     return (
         <ReactLenis root>
@@ -110,7 +109,7 @@ const OpenAccount = () => {
                                                         <p className={`${index === activeStep ? "bg-[#FF6910] border-none" : "bg-[#212121] border-white/16"} border-[2px] w-20 h-20 rounded-full text-white text-[40px] font-semibold flex items-center justify-center`}>{stepAccount[index].step}</p>
                                                     </div>
                                                     <div>
-                                                        <p className='text-white text-[60px] font-medium'>{step.title}</p>
+                                                        <p className='text-white lg:text-[40px] 2xl:text-[60px] font-medium'>{step.title}</p>
                                                         <p className='text-[#aeaeae] text-xl font-medium'>{step.desc}</p>
                                                     </div>
                                                 </div>
@@ -121,7 +120,7 @@ const OpenAccount = () => {
                                 })}
                             </div>
                             <>
-                                <div className='w-20 lg:h-[2520px] 2xl:h-[2430px] absolute top-20 z-1'>
+                                <div className='w-20 lg:h-[2370px] 2xl:h-[2430px] absolute top-20 z-1'>
                                     <p className='bg-white/20 w-1 h-full mx-auto'></p>
                                 </div>
                                 <motion.div

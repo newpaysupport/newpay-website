@@ -7,13 +7,13 @@ const PhysicCard = () => {
     return (
         <div className='w-full mx-auto flex justify-center space-x-[-200px] mt-20'>
             <figure className='w-[380px] h-[239px] z-[3] cardFront'>
-                <Image src={cardFront} alt='' />
+                <Image src={cardFront} alt='' priority />
             </figure>
             <figure className='w-[380px] h-[239px] z-[2] cardMid'>
-                <Image src={cardMid} alt='' />
+                <Image src={cardMid} alt='' priority />
             </figure>
             <figure className='w-[380px] h-[239px] z-[1] cardBack'>
-                <Image src={cardBack} alt='' />
+                <Image src={cardBack} alt='' priority />
             </figure>
         </div>
     )
