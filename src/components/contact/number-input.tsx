@@ -20,7 +20,7 @@ const NumberInput = ({ label, name, type = 'normal', placeholder, register, cont
 
     const [focused, setFocused] = useState<string | null>(null);
     const [isOpenNation, setIsOpenNation] = useState(false);
-    const [nationSelected, setNationSelected] = useState<{ code: string; country: string; flag: string }>({ code: "", country: "", flag: "" });
+    const [nationSelected, setNationSelected] = useState<{ code: string; country: string; flag: string }>(countryCode[0]);
 
     const handleFocus = () => {
         if (!label) return;
