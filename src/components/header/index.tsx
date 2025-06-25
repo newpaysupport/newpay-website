@@ -9,6 +9,7 @@ import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import SwitchLanguage from '../switch-language';
 import CompanyDropdown from "./company-dropdown";
+import MobileHeader from "./mobile-header";
 import PaymentDropdown from "./payment-dropdown";
 
 const Header = () => {
@@ -23,14 +24,21 @@ const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [openDropdown, setOpenDropdown] = useState<"payment" | "company" | null>(null);
     const [hoveringDropdown, setHoveringDropdown] = useState<"payment" | "company" | null>(null);
+    const [mobileOpenDropdown, setMobileOpenDropdown] = useState<"payment" | "company" | null>(null);
+    const [mobileCardOpen, setMobileCardOpen] = useState(false);
 
+    const toggleMobileMenu = () => {
+        setIsMobileMenuOpen(!isMobileMenuOpen);
+        setMobileOpenDropdown(null);
+        setMobileCardOpen(false);
+    };
 
-    const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
+    const toggleMobileDropdown = (key: "payment" | "company") => {
+        setMobileOpenDropdown(mobileOpenDropdown === key ? null : key);
+    };
 
     const switchLocale = (newLocale: string) => {
-
         if (newLocale === locale) return;
-
         if (!pathname) return;
 
         const segments = pathname.split("/");
@@ -41,6 +49,7 @@ const Header = () => {
 
         router.push(newUrl);
     };
+
     useEffect(() => {
         let lastScrollY = window.scrollY;
         let ticking = false;
@@ -54,24 +63,21 @@ const Header = () => {
                         setIsVisible(true);
                         setIsScrolled(false);
                     }
-                    // If scrolling down and past 100px, hide the header
                     else if (currentScrollY > lastScrollY && currentScrollY > 100) {
                         setIsVisible(false);
                         setOpenDropdown(null);
+                        setIsMobileMenuOpen(false);
                     }
-                    // If scrolling up, show the header
                     else if (currentScrollY < lastScrollY) {
                         setIsVisible(true);
                         setIsScrolled(true);
                     }
-
                     lastScrollY = currentScrollY;
                     ticking = false;
                 });
                 ticking = true;
             }
         };
-
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
@@ -89,7 +95,7 @@ const Header = () => {
             hasDropdown: true,
             dropdownItems: [
                 { title: locale === 'en' ? 'Payment' : '支付', href: `` },
-                { title: locale === 'en' ? 'Payment Card' : '支付卡', href: `/${locale}/payment` },
+                { title: locale === 'en' ? 'Payment Card' : '支付卡', href: `/${locale}/payment`, type: 'cardGroup' },
                 { title: locale === 'en' ? 'Security & Protection' : '安全与保护', href: `/${locale}/secure` }
             ]
         },
@@ -102,15 +108,35 @@ const Header = () => {
                 { title: locale === 'en' ? 'Discover NewPay' : '认识 NewPay', href: `` },
                 { title: locale === 'en' ? 'About NewPay' : '关于 NewPay', href: `/${locale}/about-us` },
                 { title: locale === 'en' ? 'Contact us' : '联系我们', href: `/${locale}/contact` },
-                { title: locale === 'en' ? 'Blog' : '博客', href: `/${locale}/blog` },
-                { title: locale === 'en' ? 'FAQ' : '常见问题', href: `/${locale}/faq-help` }
+                { title: locale === 'en' ? 'Blog' : '博客', href: `/${locale}/blog` }
             ]
         },
-        { key: 'support', href: `/${locale}/support`, label: t('support'), hasDropdown: false }
+        {
+            key: 'support',
+            href: `#`,
+            label: t('support'),
+            hasDropdown: true,
+            dropdownItems: [
+                { title: locale === 'en' ? 'Our Support' : '我们的支持', href: `` },
+                { title: locale === 'en' ? 'FAQ' : '常见问题', href: `/${locale}/faq-help` },
+                { title: locale === 'en' ? 'Download App' : '下载应用', href: `/${locale}/download` },
+            ]
+        }        
     ];
 
-
     const getHeaderStyles = () => {
+        if (isMobileMenuOpen && isBlogAndContact) {
+            return {
+                background: "white",
+                color: "black",
+            };
+        }
+        if (isMobileMenuOpen) {
+            return {
+                background: "#060606",
+                color: "white",
+            };
+        }
         if (isBlogAndContact) {
             return {
                 background: "white",
@@ -121,7 +147,6 @@ const Header = () => {
                 transition: "background 0.3s ease",
             };
         }
-
         if (hoveringDropdown) {
             return {
                 background: "#060606",
@@ -130,7 +155,6 @@ const Header = () => {
                 transition: "background 0.3s ease",
             };
         }
-
         if (isScrolled) {
             return {
                 background: "rgba(0, 0, 0, 0.80)",
@@ -138,7 +162,6 @@ const Header = () => {
                 color: "white",
             };
         }
-
         return {
             background: "transparent",
             color: "white"
@@ -146,29 +169,26 @@ const Header = () => {
     };
 
     const isActive = (path: string) => pathname === path;
-
-    const isBlogAndContact = pathname === `/${locale}/blog` || pathname === `/${locale}/contact`;
-
+    const isBlogAndContact = pathname === `/${locale}/blog` || pathname === `/${locale}/contact` ||  new RegExp(`^/${locale}/blog/\\d+-`).test(pathname);;
     const img_logo = isBlogAndContact ? logo_black : logo;
 
     return (
-        <nav
-            style={getHeaderStyles()}
+        <nav style={getHeaderStyles()}
             className={`text-sm h-[70px] flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4
                 fixed top-0 left-0 w-full z-50
                 text-white transition-all duration-300 ease-out
-                ${isVisible ? 'translate-y-0' : 'translate-y-[-100%]'}`}
-        >
-            <Link href={`/${locale}`} className="flex items-center space-x-4">
+                ${isVisible ? 'translate-y-0' : 'translate-y-[-100%]'}`}>
+            <Link href={`/${locale}`} className="md:flex md:items-center md:space-x-4">
                 <Image src={img_logo} alt="NewPay Logo" width={120} height={25} className="object-contain" />
             </Link>
 
-            <ul className="hidden md:flex justify-center items-center space-x-6">
+            {/* Desktop Navigation */}
+            <ul className="flex md:justify-center items-center md:space-x-6">
                 {navLinks.map((link) => (
                     <li key={link.href}>
                         <Link
                             href={link.href}
-                            className={`px-8 py-2 rounded-full transition
+                            className={`md:px-8 md:py-2 px-5 py-2 rounded-full transition
                             ${isActive(link.href)
                                     ? isBlogAndContact
                                         ? 'bg-black/10 text-black'
@@ -185,18 +205,17 @@ const Header = () => {
                 ))}
             </ul>
 
+            {/* Desktop Right Navigation */}
             <ul className="hidden md:flex items-center gap-2 ">
                 {navLinksRight.map((link) => (
                     <li
                         key={link.key}
-                        // className="relative"
                         onMouseEnter={() => {
                             if (link.hasDropdown) {
                                 setOpenDropdown(link.key as "payment" | "company");
                                 setHoveringDropdown(link.key as "payment" | "company");
                             }
                         }}
-
                         onMouseLeave={() => {
                             if (link.hasDropdown) {
                                 setOpenDropdown(null);
@@ -220,47 +239,63 @@ const Header = () => {
                             {link.label}
                         </Link>
 
-                        {/* Dropdown */}
+                        {/* Desktop Dropdown */}
                         {link.hasDropdown && openDropdown === link.key && (
-                            <div
-                                className={`absolute top-[full] left-0 w-[100vw] pt-4 z-50`}
-                            >
+                            <div className={`absolute top-[full] left-0 w-[100vw] pt-4 z-50`}>
                                 {link.key === 'payment' ?
-                                    (<PaymentDropdown link={link} locale={locale} isBlogAndContact={isBlogAndContact} />) : <CompanyDropdown link={link} locale={locale} isBlogAndContact={isBlogAndContact} isScrolled={isScrolled} />}
+                                    (<PaymentDropdown link={link} locale={locale} isBlogAndContact={isBlogAndContact} />) :
+                                    (
+                                        <CompanyDropdown link={link} locale={locale} isBlogAndContact={isBlogAndContact} isScrolled={isScrolled} />
+                                    )}
                             </div>
                         )}
                     </li>
                 ))}
             </ul>
 
-            <SwitchLanguage locale={locale} switchLocale={switchLocale} t={t} isBlogAndContact={isBlogAndContact} isVisible={isVisible} />
+            <div className="hidden md:block">
+                <SwitchLanguage locale={locale} switchLocale={switchLocale} t={t} isBlogAndContact={isBlogAndContact} isVisible={isVisible} />
+            </div>
 
+            {/* Mobile Menu Button */}
             <button
                 aria-label="menu-btn"
                 type="button"
-                className="cursor-pointer menu-btn inline-block md:hidden active:scale-90 transition"
-                onClick={toggleMobileMenu}
-            >
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <path d="M4 6L8 10L12 6" stroke="white" strokeOpacity="0.16" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
+                className={`cursor-pointer menu-btn flex items-center justify-center w-10 h-10 md:hidden active:scale-90 transition-all duration-200 rounded-lg border
+                    ${isBlogAndContact
+                        ? 'text-black hover:bg-black/10 border-black/20'
+                        : 'text-white hover:bg-white/10 border-white/20'
+                    }
+                `}
+                onClick={toggleMobileMenu}>
+
+                {isMobileMenuOpen ? (
+                    <span className="text-xl font-light">×</span>
+                ) : (
+                    <div className="flex flex-col gap-1">
+                        <div className={`w-5 h-0.5 ${isBlogAndContact ? 'bg-black' : 'bg-white'}`}></div>
+                        <div className={`w-5 h-0.5 ${isBlogAndContact ? 'bg-black' : 'bg-white'}`}></div>
+                        <div className={`w-5 h-0.5 ${isBlogAndContact ? 'bg-black' : 'bg-white'}`}></div>
+                    </div>
+                )}
             </button>
 
+            {/* Mobile Menu */}
             {isMobileMenuOpen && (
-                <div className="md:hidden absolute top-[70px] left-0 w-full shadow-sm p-6 z-50 bg-white text-gray-800">
-                    <ul className="flex flex-col space-y-4 text-lg">
-                        <li><Link href={`/${locale}`} className="text-sm">{t('payment')}</Link></li>
-                        <li><Link href={`/${locale}/company`} className="text-sm">{t('company')}</Link></li>
-                        <li><Link href={`/${locale}/support`} className="text-sm">{t('support')}</Link></li>
-                        <li><Link href={`/${locale}/pricing`} className="text-sm">{t('pricing')}</Link></li>
-                    </ul>
-                    <button
-                        type="button"
-                        className="cursor-pointer bg-white text-gray-600 border mt-6 text-sm hover:bg-gray-50 active:scale-95 transition-all w-40 h-11 rounded-full"
-                    >
-                        {t('getApp')}
-                    </button>
-                </div>
+                <MobileHeader
+                    locale={locale}
+                    navLinksRight={navLinksRight}
+                    isBlogAndContact={isBlogAndContact}
+                    isVisible={isVisible}
+                    isMobileMenuOpen={isMobileMenuOpen}
+                    toggleMobileDropdown={toggleMobileDropdown}
+                    mobileOpenDropdown={mobileOpenDropdown}
+                    mobileCardOpen={mobileCardOpen}
+                    setMobileCardOpen={setMobileCardOpen}
+                    setIsMobileMenuOpen={setIsMobileMenuOpen}
+                    switchLocale={switchLocale}
+                    t={t}
+                />
             )}
         </nav>
     );

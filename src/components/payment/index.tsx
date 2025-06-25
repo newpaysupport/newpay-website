@@ -2,8 +2,7 @@
 import { payment as enBlog } from '@/i18n/messages/en.json';
 import { payment as ziBlog } from '@/i18n/messages/zi.json';
 import { useLocale } from 'next-intl';
-import { useRef, useState } from "react";
-
+import { useRef, useState, useEffect } from "react";
 import access_icon from "@/images/payment/access.svg";
 import bg_content3 from "@/images/payment/bg_content3.png";
 
@@ -33,13 +32,20 @@ const PaymentScreen = () => {
     const physicalCard = contentSection1.physicalCard
     {/* Centered Content */ }
     const safeAssetsSection = payment.safeAssetsSection;
-    {/* Content Section: FAQ */ }
-    const faqSection = payment.faqSection;
-    const faqItems = faqSection.faqItems;
+
 
     const textRef = useRef(null);
     const isInView = useInView(textRef, { once: false, amount: 0.5 });
 
+    useEffect(() => {
+        //get hash is anchor from URL (#physical-card or #virtual-card)
+        const hash = window.location.hash;
+        if (hash === '#physical-card') {
+            setActiveCard('physical');
+        } else if (hash === '#virtual-card') {
+            setActiveCard('virtual');
+        }
+    }, []);
 
     return (
         <div>
@@ -75,6 +81,7 @@ const PaymentScreen = () => {
                                 <VirtualCard
                                     virtualItems={virtualCard.virtualItems}
                                     labelButton={contentSection1.labelButton}
+                                    id="virtual-card"
                                 />
                             </AnimationFade>
                         ) : (
@@ -82,6 +89,7 @@ const PaymentScreen = () => {
                                 <PhysicalCard
                                     physicalItems={physicalCard.physicalItems}
                                     labelButton={contentSection1.labelButton}
+                                    id="physical-card"
                                 />
                             </AnimationFade>
                         )}
@@ -117,7 +125,7 @@ const PaymentScreen = () => {
                     <ContentEnd />
                 </div>
                 <div className='pt-20'>
-                    <Faq faqSection={faqSection} faqItems={faqItems} />
+                    <Faq />
                 </div>
                 <DownloadSection />
             </div>

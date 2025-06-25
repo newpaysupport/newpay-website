@@ -83,8 +83,9 @@ const Card3 = () => {
                                 <Image src={arrow_right} alt="Gift Icon" width={50} height={50} className='text-[#FF6910]' />
                             </div>
                             <div>
-                                <p className="text-lg font-semibold text-[#1B1B1B]">{t('giftCard.contentRight.item2.title')}</p>
-                                <p className="text-sm text-[#979797]">{t('giftCard.contentRight.item2.desc')}</p>
+                                <p className="text-lg font-semibold text-[#1B1B1B]">{t('giftCard.contentRight.item3.title')}</p>
+                                <p className="text-sm text-[#979797]">{t('giftCard.contentRight.item3.desc')}</p>
+
                             </div>
                         </div>
                         <div className="text-right">
@@ -99,8 +100,8 @@ const Card3 = () => {
                                 <Image src={arrow_left} alt="Gift Icon" width={50} height={50} />
                             </div>
                             <div>
-                                <p className="text-lg font-semibold text-[#1B1B1B]">{t('giftCard.contentRight.item3.title')}</p>
-                                <p className="text-sm text-[#979797]">{t('giftCard.contentRight.item3.desc')}</p>
+                                <p className="text-lg font-semibold text-[#1B1B1B]">{locale === 'en' ? 'Receive' : '接收'}</p>
+                                <p className="text-sm text-[#979797]">{locale === 'en' ? 'Dinner' : '晚餐'}</p>
                             </div>
                         </div>
                         <div className="text-right">

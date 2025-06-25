@@ -1,11 +1,15 @@
 'use client';
 import insert_wallet_no_card from "@/images/payment/content-card/Group_14.svg";
+import insert_wallet_no_card_cn from "@/images/payment/content-card/Group_14_CN.svg";
 import card_payment from "@/images/payment/content-card/card_payment.svg";
 import wallet_no_card from "@/images/payment/content-card/wallet_no_card.svg";
+import { useLocale } from "next-intl";
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 
 const ContentCard = () => {
+    const locale = useLocale()
+    const img = locale === 'en' ? insert_wallet_no_card : insert_wallet_no_card_cn;
     const [isSticky, setIsSticky] = useState(false);
     const wrapperRef = useRef<HTMLDivElement>(null);
     const cardRef = useRef<HTMLImageElement>(null);
@@ -29,7 +33,7 @@ const ContentCard = () => {
             <div className='pt-20 transition-transform duration-300 ease-linear'>
                 <div className='relative w-[430px] h-[320px] mx-auto' ref={walletRef}>
                     <Image src={wallet_no_card} alt="Wallet no card" className={`mx-auto z-1 `} />
-                    <Image src={insert_wallet_no_card} alt="Wallet no card" className={`absolute bottom-2 right-0 left-2 z-3`} />
+                    <Image src={img} alt="Wallet no card" className={`absolute bottom-2 right-0 left-2 z-3`} />
                 </div>
             </div>
         </div>

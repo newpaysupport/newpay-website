@@ -31,18 +31,15 @@ const HelpCenter = () => {
                             </h2>
                         </div>
                         {/* Right side - Form */}
-                        <Link href={`/${locale}/contact`}>
+                        <Link href={`/${locale}/contact`} className="md:w-[410px] md:h-[55px] w-full">
                             <button
-                                className="md:w-[410px] md:h-[55px] w-[330px] md:py-3 md:px-6 px-[30px] py-4 cursor-pointer text-lg font-bold bg-white hover:from-orange-600 hover:to-orange-500 text-black rounded-full transition-all duration-200 flex items-center justify-center gap-2 shadow-lg hover:shadow-orange-500/25 group"
+                                className="w-full md:py-3 md:px-6 px-[30px] py-4 cursor-pointer text-lg font-bold bg-white hover:from-orange-600 hover:to-orange-500 text-black rounded-full transition-all duration-200 flex items-center justify-center gap-2 shadow-lg hover:shadow-orange-500/25 group"
                             >
                                 {t('helpCenter.buttonText')}
                                 <Image src={arrowright} alt='arrow right' className="w-6 h-6 group-hover:translate-x-1 transition-transform duration-200" />
                             </button>
                         </Link>
                     </div>
-
-                    {/* Decorative elements */}
-                    <div className="absolute bottom-4 left-4 w-16 h-16 bg-gradient-to-r from-orange-400/5 to-transparent rounded-full blur-lg" />
                 </div>
             </section>
         </>
