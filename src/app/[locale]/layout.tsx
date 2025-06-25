@@ -23,7 +23,7 @@ export default async function LocaleLayout({
         <html lang={locale} suppressHydrationWarning>
             <body className={`${inter.variable} font-sans antialiased`}>
                 <NextIntlClientProvider>
-                    {/* <Header /> */}
+                    <Header />
                     {children}
                     <Footer />
                     <Toaster position='bottom-right' toastOptions={{ duration: 3000 }} />
