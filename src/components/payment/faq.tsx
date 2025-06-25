@@ -1,23 +1,21 @@
 import message from '@/images/payment/message.png';
 import Image from 'next/image';
-
-type FaqSectionProps = {
-    faqSection: {
-        title: string;
-        subtitle: string;
-    };
-    faqItems: {
-        question: string;
-        answer: string;
-    }[];
-}
+import { payment as enBlog } from '@/i18n/messages/en.json';
+import { payment as ziBlog } from '@/i18n/messages/zi.json';
+import { useLocale } from 'next-intl';
 
 
-const Faq = ({ faqSection, faqItems }: FaqSectionProps) => {
+const Faq = () => {
+    const locale = useLocale();
+    const payment = locale === 'en' ? enBlog : ziBlog;
+
+    {/* Content Section: FAQ */ }
+    const faqSection = payment.faqSection;
+    const faqItems = faqSection.faqItems;
     return (
         <div className="md:py-20 md:p-0 px-4 py-12">
             <div className="flex md:flex-row flex-col mx-auto max-w-7xl justify-between">
-                <div className="text-white flex md:flex-col flex-row justify-between">
+                <div className="text-white flex md:flex-col flex-row justify-between md:h-[450px]">
                     <div>
                         <h1 className="md:text-6xl text-[32px] font-semibold">
                             {faqSection.title}

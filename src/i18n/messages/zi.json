@@ -363,24 +363,24 @@
     },
     "payment": {
         "heroSection": {
-            "description": "适合每个人的加密货币钱包，无处不在。让我们通过NewPay拥抱未来加密货币支付！",
-            "title": "您的全能加密支付解决方案",
-            "buttonText": "立即获取您的卡"
+            "description": "人人可用、全球通行的加密钱包。\n通过 NewPay，一起迈入加密支付的未来！",
+            "title": "您的加密货币一站式支付解决方案",
+            "buttonText": "立即申请您的卡片"
         },
         "contentSection1": {
-            "title": "像法币一样花费加密货币",
-            "description": "快速、无缝、安全：通过NewPay将您的加密货币转化为日常购买",
-            "labelButton": "立即获取您的卡",
+            "title": "像法币一样使用加密货币",
+            "description": "快速、顺畅、安全：通过 NewPay 轻松将加密资产用于日常消费。",
+            "labelButton": "立即申请您的卡片",
             "virtualCard": {
                 "label": "虚拟卡",
                 "virtualItems": [
                     {
-                        "title": "适用于任何类型的交易",
-                        "subtitle": "由OneDegree提供的4200万美元保险保护。"
+                        "title": "适用于任何场景的交易",
+                        "subtitle": "由 OneDegree 提供最高 4200 万美元保险保障。"
                     },
                     {
-                        "title": "兼容移动钱包",
-                        "subtitle": "在Apple Pay和Google Pay上最高4200万美元保险。"
+                        "title": "支持移动钱包",
+                        "subtitle": "即使绑定 Apple Pay / Google Pay，也享有 4200 万美元保险保障。"
                     }
                 ]
             },
@@ -388,46 +388,46 @@
                 "label": "实体卡",
                 "physicalItems": [
                     {
-                        "title": "轻触支付",
-                        "subtitle": "只需轻触——快速、无缝、安全。"
+                        "title": "闪付体验",
+                        "subtitle": "轻轻一碰，即可支付——快速、顺畅、安全。"
                     },
                     {
-                        "title": "实时交易",
-                        "subtitle": "实时更新——快速、无缝、安全。"
+                        "title": "实时交易更新",
+                        "subtitle": "消费即时提醒——快速、顺畅、安全。"
                     },
                     {
-                        "title": "ATM取款",
-                        "subtitle": "提取现金——快速、无缝、安全。"
+                        "title": "ATM 取现",
+                        "subtitle": "全球取现无忧——快速、顺畅、安全。"
                     }
                 ]
             }
         },
         "contentSection2": {
-            "title": "全球花费加密货币",
-            "description": "将您的加密货币兑换成法币，发送给世界各地的任何人"
+            "title": "加密货币，畅花全球",
+            "description": "用加密资产向全球任何人转账法币。"
         },
         "safeAssetsSection": {
-            "title": "您的资产在我们这里是安全的",
-            "description": "通过获得许可的信托公司实现客户资产隔离",
+            "title": "您的资产安全无忧",
+            "description": "用户资产由持牌信托公司独立托管，严格隔离。",
             "biometric": {
                 "title": "生物识别",
                 "subtitle": "安全"
             },
             "accessCode": {
-                "title": "访问代码",
+                "title": "访问码",
                 "subtitle": "保护"
             }
         },
         "cardSection": {
             "title": "随时随地支付",
-            "description": "只需将NewPay卡添加到Apple或Google Wallet，即可随时随地快速方便地访问"
+            "description": "将 NewPay 卡添加至 Apple 或 Google 钱包，随时轻松支付，畅行无阻。"
         },
         "shareHappyMoment": {
-            "title": "分享快乐时光",
-            "description": "与朋友分摊账单或通过零转账费用发送加密货币礼物",
+            "title": "分享快乐时刻",
+            "description": "与好友轻松分账，或 0 手续费发送加密礼物！",
             "giftCard": {
                 "title": "奖励",
-                "subtitle": "免费礼物",
+                "subtitle": "免费礼品",
                 "amount": "+20.68 USDT"
             },
             "receiveCard": {
@@ -649,7 +649,7 @@
         },
         "about": {
             "title": "关于 NewPay",
-            "description": "NewPay 成立于 2022 年，致力于帮助您消费和增值加密资产。我们的办公室遍布香港、新加坡、马来西亚和日本。",
+            "description": "NewPay 致力于帮助你消费并增值加密资产。成立于 2022 年，在香港、新加坡、马来西亚及日本设有办公室",
             "listFlag": [
                 {
                     "flag": "/icons/Flag_HongKong.svg",

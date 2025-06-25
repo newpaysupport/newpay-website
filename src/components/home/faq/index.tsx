@@ -14,7 +14,7 @@ const FAQ = () => {
 
     return (
         <div className='bg-[#060606]'>
-            <Faq faqSection={faqSection} faqItems={faqItems} />
+            <Faq />
         </div>
     )
 }

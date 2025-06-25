@@ -45,9 +45,9 @@ const PaymentDropdown = ({ link, locale, isBlogAndContact }: LinkItem) => {
                         {link.dropdownItems?.map((item, index) => {
                             let style = ''
                             let hover = ''
-                            if (isBlogAndContact && item.title === 'Payment') {
+                            if (isBlogAndContact && (item.title === 'Payment' || item.title === '支付')) {
                                 style = 'text-[#AEAEAE]'
-                            } else if (!isBlogAndContact && item.title === 'Payment') {
+                            } else if (!isBlogAndContact && (item.title === 'Payment' || item.title === '支付')) {
                                 style = 'text-[#AEAEAE]'
                             } else if (isBlogAndContact) {
                                 hover = "hover:bg-[#000000]/10"
@@ -73,7 +73,7 @@ const PaymentDropdown = ({ link, locale, isBlogAndContact }: LinkItem) => {
                     {/* Right side with visual cards */}
                     <div className="flex gap-4">
                         {/* Virtual Card */}
-                        <Link href={`/${locale}/payment`}>
+                        <Link href={`/${locale}/payment#virtual-card`}>
                             <div className="rounded-xl relative overflow-hidden cursor-pointer hover:scale-102 transition-transform">
                                 <Image
                                     src={virual_card_dropdown}
@@ -96,7 +96,7 @@ const PaymentDropdown = ({ link, locale, isBlogAndContact }: LinkItem) => {
                         </Link>
 
                         {/* Physical Card */}
-                        <Link href={`/${locale}/payment`}>
+                        <Link href={`/${locale}/payment#physical-card`}>
                             <div className="rounded-xl relative overflow-hidden cursor-pointer hover:scale-102 transition-transform">
                                 <Image
                                     src={physicard_card_dropdown}
