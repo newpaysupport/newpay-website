@@ -61,7 +61,7 @@ const Compliance = () => {
                     <div className='pt-[64px] lg:pt-[290px] pb-10'>
                         <p className='w-full ml-auto lg:w-[416px]'>
                             <span className='text-white text-[32px] lg:text-[60px] font-semibold tracking-[-2px]'>{t("compliance.partner.title")}</span>
-                            <span className='mt-6 inline-block text-[#aeaeae] text-sm lg:text-base font-medium'>
+                            <span style={{ whiteSpace: "pre-line" }} className='mt-6 inline-block text-[#aeaeae] text-sm lg:text-base font-medium'>
                                 {t("compliance.partner.desc")}
                             </span>
                         </p>

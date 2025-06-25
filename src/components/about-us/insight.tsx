@@ -5,6 +5,10 @@ import insight1 from '@/images/about-us/insight1.png';
 import insight2 from '@/images/about-us/insight2.png';
 import insight3 from '@/images/about-us/insight3.png';
 import insight4 from '@/images/about-us/insight4.png';
+import insightMobile1 from '@/images/about-us/insight-mobile1.png';
+import insightMobile2 from '@/images/about-us/insight-mobile2.png';
+import insightMobile3 from '@/images/about-us/insight-mobile3.png';
+import insightMobile4 from '@/images/about-us/insight-mobile4.png';
 import chart from '@/images/about-us/chart.svg';
 import approach from '@/images/about-us/approach.svg';
 import looking from '@/images/about-us/looking.svg';
@@ -39,6 +43,12 @@ const insights = [
     },
 ]
 
+const mobileInsights = [
+    insightMobile1,
+    insightMobile2,
+    insightMobile3,
+    insightMobile4
+]
 
 
 const Insight = () => {
@@ -52,7 +62,7 @@ const Insight = () => {
     return (
         <div className='bg-[#060606]'>
             <div className='bg-white rounded-4xl lg:rounded-[80px] py-12 px-6 lg:py-[120px] lg:px-[160px] overflow-hidden'>
-                <div className='container mx-auto flex flex-col items-center space-y-[120px]'>
+                <div className='container mx-auto flex flex-col items-center space-y-6 lg:space-y-[120px]'>
                     {t.raw("insight").map((item: Item, index: number) => {
                         const isEven = index % 2 === 0;
                         return (
@@ -73,7 +83,8 @@ const Insight = () => {
                                     </button>
                                 </div>
                                 <figure className='w-full lg:w-[480px] lg:min-w-[480px]'>
-                                    <Image src={insights[index].image} alt={item.title} />
+                                    <Image src={insights[index].image} alt={item.title} className='hidden lg:block' />
+                                    <Image src={mobileInsights[index]} alt={item.title} className='lg:hidden' />
                                 </figure>
                             </div>
                         )
