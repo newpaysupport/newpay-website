@@ -1,15 +1,25 @@
 'use client';
-import Image from 'next/image';
-import { useEffect, useState } from 'react';
 import { joint as enBlog } from '@/i18n/messages/en.json';
 import { joint as ziBlog } from '@/i18n/messages/zi.json';
 import { useLocale } from 'next-intl';
+import Image from 'next/image';
+import { useEffect, useState } from 'react';
 
 const AutoSlideshow = () => {
+    const [isMobile, setIsMobile] = useState(false);
     const locale = useLocale();
     const joint = locale === 'en' ? enBlog : ziBlog;
     const slides = joint.cardSlide.slides
     const [current, setCurrent] = useState(0);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 1024);
+        }
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, [])
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -19,60 +29,131 @@ const AutoSlideshow = () => {
     }, []);
 
     return (
-        <div className="py-30 w-full overflow-hidden bg-white relative">
-            <h1 className="text-4xl md:text-6xl text-[#1B1B1B] font-semibold container mx-auto text-left">
-                {joint.cardSlide.title}
-            </h1>
+        <>
+            {isMobile ? (
+                //Mobile View
+                <div className="py-16 w-full overflow-hidden bg-white relative">
+                    {/* Title */}
+                    <h1 className="text-[32px]  text-[#1B1B1B] font-semibold container mx-auto px-4 text-left">
+                        {joint.cardSlide.title}
+                    </h1>
 
-            {/* overlay  */}
-            <div style={{
-                background: "linear-gradient(90deg, rgba(255, 255, 255, 1) 5%, rgba(255, 255, 255, 0) 100%)",
-            }} className='absolute w-[120px] h-[450px] left-0 bottom-[12%] z-50'></div>
-            <div style={{
-                background: "linear-gradient(90deg, rgba(255, 255, 255, 0.00) 5%, rgba(255, 255, 255, 1) 100%)"
-            }} className='absolute w-[120px] h-[450px] right-0 bottom-[12%] z-50'></div>
-
-            <div className="relative mt-20 flex justify-center items-center animation-slideshow gap-5">
-
-                {[...slides, ...slides].map((slide, i) => (
+                    {/* Overlay Left */}
                     <div
-                        key={i}
-                        className="slide-item md:w-[330px] md:h-[410px] w-[200px] h-[300px] rounded-3xl relative overflow-hidden flex-shrink-0"
-                    >
-                        <Image
-                            src={slide.image}
-                            alt={slide.title}
-                            width={330}
-                            height={410}
-                            className="w-full h-full object-cover rounded-3xl"
-                        />
-                        <div className="absolute bottom-1 left-1 text-white p-2 flex flex-col gap-2">
-                            {slide.subtitle && <h3
-                                style={{
-                                    background:
-                                        'linear-gradient(0deg, rgba(174, 174, 174, 0.32) 0%, rgba(174, 174, 174, 0.32) 100%), rgba(255, 255, 255, 0.08)',
-                                    backdropFilter: 'blur(20px)',
-                                }}
-                                className=" md:w-[95px] text-sm font-semibold py-2 px-4 rounded-full uppercase"
-                            >
-                                {slide.subtitle}
-                            </h3>}
-                            <h3
-                                style={{
-                                    background:
-                                        'linear-gradient(0deg, rgba(174, 174, 174, 0.32) 0%, rgba(174, 174, 174, 0.32) 100%), rgba(255, 255, 255, 0.08)',
-                                    backdropFilter: 'blur(20px)',
-                                }}
-                                className="text-sm font-semibold py-2 px-4 rounded-full uppercase"
-                            >
-                                {slide.title}
-                            </h3>
+                        style={{
+                            background: 'linear-gradient(90deg, rgba(255, 255, 255, 1) 5%, rgba(255, 255, 255, 0) 100%)',
+                        }}
+                        className="absolute w-[100px] h-[450px] left-0 bottom-[6%] z-50"
+                    ></div>
+
+                    {/* Overlay Right */}
+                    <div
+                        style={{
+                            background: 'linear-gradient(90deg, rgba(255, 255, 255, 0.00) 5%, rgba(255, 255, 255, 1) 100%)',
+                        }}
+                        className="absolute w-[100px] h-[450px] right-0 bottom-[6%] z-50"
+                    ></div>
+
+                    {/* Slide container */}
+                    <div className="relative mt-12">
+                        <div className="flex gap-5 overflow-x-auto px-4 animation-slideshow">
+                            {[...slides, ...slides].map((slide, i) => (
+                                <div
+                                    key={i}
+                                    className="min-w-[260px] sm:min-w-[300px] md:w-[330px] h-[410px] rounded-3xl relative overflow-hidden flex-shrink-0"
+                                >
+                                    <Image
+                                        src={slide.image}
+                                        alt={slide.title}
+                                        width={330}
+                                        height={410}
+                                        className="w-full h-full object-cover rounded-3xl"
+                                    />
+                                    <div className="absolute bottom-1 left-1 text-white p-2 flex flex-col gap-2">
+                                        {slide.subtitle && (
+                                            <h3
+                                                style={{
+                                                    background:
+                                                        'linear-gradient(0deg, rgba(174, 174, 174, 0.32) 0%, rgba(174, 174, 174, 0.32) 100%), rgba(255, 255, 255, 0.08)',
+                                                    backdropFilter: 'blur(20px)',
+                                                }}
+                                                className="w-fit text-base font-semibold py-2 px-4 rounded-full uppercase"
+                                            >
+                                                {slide.subtitle}
+                                            </h3>
+                                        )}
+                                        <h3
+                                            style={{
+                                                background:
+                                                    'linear-gradient(0deg, rgba(174, 174, 174, 0.32) 0%, rgba(174, 174, 174, 0.32) 100%), rgba(255, 255, 255, 0.08)',
+                                                backdropFilter: 'blur(20px)',
+                                            }}
+                                            className="w-fit text-base font-semibold py-2 px-4 rounded-full uppercase"
+                                        >
+                                            {slide.title}
+                                        </h3>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
                     </div>
-                ))}
-            </div>
-        </div>
+                </div>
+            ) : (
+                //Desktop View
+                <div className="py-30 w-full overflow-hidden bg-white relative">
+                    <h1 className="text-6xl text-[#1B1B1B] font-semibold container mx-auto text-left">
+                        {joint.cardSlide.title}
+                    </h1>
+                    {/* overlay  */}
+                    <div style={{
+                        background: "linear-gradient(90deg, rgba(255, 255, 255, 1) 5%, rgba(255, 255, 255, 0) 100%)",
+                    }} className='absolute w-[120px] h-[450px] left-0 bottom-[12%] z-50'></div>
+                    <div style={{
+                        background: "linear-gradient(90deg, rgba(255, 255, 255, 0.00) 5%, rgba(255, 255, 255, 1) 100%)"
+                    }} className='absolute w-[120px] h-[450px] right-0 bottom-[12%] z-50'></div>
+
+                    <div className="relative mt-20 flex justify-center items-center animation-slideshow gap-5">
+
+                        {[...slides, ...slides].map((slide, i) => (
+                            <div
+                                key={i}
+                                className="slide-item md:w-[330px] md:h-[410px] w-[200px] h-[300px] rounded-3xl relative overflow-hidden flex-shrink-0"
+                            >
+                                <Image
+                                    src={slide.image}
+                                    alt={slide.title}
+                                    width={330}
+                                    height={410}
+                                    className="w-full h-full object-cover rounded-3xl"
+                                />
+                                <div className="absolute bottom-1 left-1 text-white p-2 flex flex-col gap-2">
+                                    {slide.subtitle && <h3
+                                        style={{
+                                            background:
+                                                'linear-gradient(0deg, rgba(174, 174, 174, 0.32) 0%, rgba(174, 174, 174, 0.32) 100%), rgba(255, 255, 255, 0.08)',
+                                            backdropFilter: 'blur(20px)',
+                                        }}
+                                        className=" md:w-[95px] text-sm font-semibold py-2 px-4 rounded-full uppercase"
+                                    >
+                                        {slide.subtitle}
+                                    </h3>}
+                                    <h3
+                                        style={{
+                                            background:
+                                                'linear-gradient(0deg, rgba(174, 174, 174, 0.32) 0%, rgba(174, 174, 174, 0.32) 100%), rgba(255, 255, 255, 0.08)',
+                                            backdropFilter: 'blur(20px)',
+                                        }}
+                                        className="text-sm font-semibold py-2 px-4 rounded-full uppercase"
+                                    >
+                                        {slide.title}
+                                    </h3>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            )}
+        </>
     );
 };
-
 export default AutoSlideshow;

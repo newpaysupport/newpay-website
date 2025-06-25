@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import card2_img2 from '@/images/home/joint/card2_img2.png'
 import card1_img1 from '@/images/home/joint/card1_img1.png'
 import { FaArrowRight } from "react-icons/fa";
@@ -11,83 +11,157 @@ import Image from "next/image"
 import Link from 'next/link';
 
 const CardContent = () => {
+    const [isMobile, setIsMobile] = useState(false);
     const locale = useLocale();
     const joint = locale === 'en' ? enBlog : ziBlog;
 
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 1024);
+        };
+
+        handleResize();
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
     return (
-        <section className="bg-white p-16 flex items-center rounded-3xl min-h-screen">
-            <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-30">
-                {/* Left Section: Text Content and Small Card */}
-                <div className="flex flex-col justify-between space-y-10">
-                    <div className="pl-32">
-                        <h2 className="text-4xl md:text-5xl font-semibold text-[#1B1B1B] mb-4 leading-tight">
-                            {joint.cardContent.title}
-                        </h2>
-                        <p className="text-3xl text-[#666] mb-6 font-medium">
-                            {joint.cardContent.description}
-                        </p>
-                    </div>
+        <>
+            {isMobile ? (
+                //mobile
+                < section className="bg-white py-12 px-6 flex items-center rounded-3xl " >
+                    <div className="mx-auto ">
+                        {/* Left Section: Text Content and Small Card */}
+                        <div className="flex flex-col justify-between space-y-6" >
+                            <div className="">
+                                <h2 className="text-[32px] font-semibold text-[#1B1B1B] mb-4 leading-tight">
+                                    {joint.cardContent.title}
+                                </h2>
+                                <p className="text-lg text-[#666] font-medium">
+                                    {joint.cardContent.description}
+                                </p>
+                            </div>
+                            <div className="relative ">
+                                <Image
+                                    src={card2_img2}
+                                    alt="Payment device being used"
+                                    className="rounded-3xl object-cover h-[380px]"
+                                />
+                                {/* Overlay card at the bottom */}
+                                <div style={{
+                                    background: "rgba(255, 255, 255, 0.20)",
+                                    backdropFilter: "blur(12px)"
+                                }}
+                                    className="absolute bottom-4 left-4 right-4 rounded-2xl p-4 flex items-center justify-between">
+                                    <div className="flex items-center">
+                                        <span
+                                            className="mr-3 rounded-full">
+                                            <Image src={arrowright} alt='' className='w-12 h-12' />
+                                        </span>
+                                        <div>
+                                            <p className="text-[#FFF] text-base font-medium"> {joint.cardContent.textCardRight.title}</p>
+                                            <p className="text-[#D8D8D8] text-sm">{joint.cardContent.textCardRight.subtitle}</p>
+                                        </div>
+                                    </div>
+                                    <p className="text-[#FFF] font-semibold text-base">- 120.00 USDT</p>
+                                </div>
+                            </div>
 
-                    <div
-                        style={{ borderRadius: '20px' }}
-                        className="bg-black p-4 text-white max-w-xl gap-4 shadow-xl flex">
-                        <Image
-                            src={card1_img1}
-                            alt="Person holding a card"
-                            width={200}
-                            height={200}
-                            className="rounded-2xl object-cover w-[200px] h-[200px]"
-                        />
-                        <div className="flex flex-col justify-between mx-4">
-                            <p className="text-md">
-                                {joint.cardContent.textCardLeft}
-                            </p>
-                            <Link href={`/${locale}/contact`}>
-                                <button className="border border-white font-semibold py-3 px-6 rounded-full cursor-pointer md:w-[220px] md:h-[56px] group">
-                                    <p className="flex justify-center items-center gap-3"> {joint.cardContent.textButtonCard} <FaArrowRight className="font-light group-hover:translate-x-1.5 transition ease-in-out animate-translateX" /></p>
-                                </button>
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Right Section: Large Image Card */}
-                <div className="relative ">
-                    <Image
-                        src={card2_img2}
-                        alt="Payment device being used"
-                        className="rounded-3xl object-cover md:w-[600px] md:h-[600px]"
-                    />
-                    {/* <div style={{
-                        background: "linear-gradient(180deg, rgba(6, 6, 6, 0.00) 0%, rgba(6, 6, 6, 0.50) 100%)",
-                        backdropFilter: "blur(20px)",
-                        mixBlendMode: 'color',
-                        borderRadius: '24px 24px 24px 24px'
-                    }} className="absolute bottom-0 left-0 right-0 h-[40%] opacity-30"></div> */}
-
-                    {/* Overlay card at the bottom */}
-                    <div style={{
-                        background: "rgba(255, 255, 255, 0.20)",
-                        backdropFilter: "blur(12px)"
-                    }}
-                        className="absolute bottom-6 left-6 right-6 rounded-3xl p-4 flex items-center justify-between">
-                        <div className="flex items-center">
-                            <span
-                                className=" p-3 rounded-full mr-3">
-                                <Image src={arrowright} alt='' className='w-12 h-12' />
-                            </span>
-                            <div>
-                                <p className="text-[#FFF] text-xl font-semibold"> {joint.cardContent.textCardRight.title}</p>
-                                <p className="text-[#D8D8D8] text-lg">{joint.cardContent.textCardRight.subtitle}</p>
+                            <div
+                                style={{ borderRadius: '20px' }}
+                                className="bg-black p-3 text-white shadow-xl gap-4 flex mt-2">
+                                <div>
+                                    <Image
+                                        src={card1_img1}
+                                        alt="Person holding a card"
+                                        width={200}
+                                        height={200}
+                                        className="rounded-2xl object-cover w-full h-full "
+                                    />
+                                </div>
+                                <div className="flex flex-col justify-between ">
+                                    <p className="text-sm mb-4">
+                                        {joint.cardContent.textCardLeft}
+                                    </p>
+                                    <Link href={`/${locale}/contact`}>
+                                        <button className="border border-white font-semibold py-3 px-6 rounded-full cursor-pointer text-sm group">
+                                            <p className="flex justify-center items-center gap-3"> {joint.cardContent.textButtonCard} <FaArrowRight className="font-light group-hover:translate-x-1.5 transition ease-in-out animate-translateX" /></p>
+                                        </button>
+                                    </Link>
+                                </div>
                             </div>
                         </div>
-                        <p className="text-[#FFF] font-semibold text-xl">- 120.00 USDT</p>
+                    </div >
+                </section >
+            ) : (
+                //desktop
+                <section className="bg-white p-16 flex items-center rounded-3xl min-h-screen" >
+                    <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-30">
+                        {/* Left Section: Text Content and Small Card */}
+                        <div className="flex flex-col justify-between space-y-10">
+                            <div className="pl-32">
+                                <h2 className="text-4xl md:text-5xl font-semibold text-[#1B1B1B] mb-4 leading-tight">
+                                    {joint.cardContent.title}
+                                </h2>
+                                <p className="text-3xl text-[#666] mb-6 font-medium">
+                                    {joint.cardContent.description}
+                                </p>
+                            </div>
+
+                            <div
+                                style={{ borderRadius: '20px' }}
+                                className="bg-black p-4 text-white max-w-xl gap-4 shadow-xl flex">
+                                <Image
+                                    src={card1_img1}
+                                    alt="Person holding a card"
+                                    width={200}
+                                    height={200}
+                                    className="rounded-2xl object-cover w-[200px] h-[200px]"
+                                />
+                                <div className="flex flex-col justify-between mx-4">
+                                    <p className="text-md">
+                                        {joint.cardContent.textCardLeft}
+                                    </p>
+                                    <Link href={`/${locale}/contact`}>
+                                        <button className="border border-white font-semibold py-3 px-6 rounded-full cursor-pointer md:w-[220px] md:h-[56px] group">
+                                            <p className="flex justify-center items-center gap-3"> {joint.cardContent.textButtonCard} <FaArrowRight className="font-light group-hover:translate-x-1.5 transition ease-in-out animate-translateX" /></p>
+                                        </button>
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+                        {/* Right Section: Large Image Card */}
+                        <div className="relative ">
+                            <Image
+                                src={card2_img2}
+                                alt="Payment device being used"
+                                className="rounded-3xl object-cover md:w-[600px] md:h-[600px]"
+                            />
+                            {/* Overlay card at the bottom */}
+                            <div style={{
+                                background: "rgba(255, 255, 255, 0.20)",
+                                backdropFilter: "blur(12px)"
+                            }}
+                                className="absolute bottom-6 left-6 right-6 rounded-3xl p-4 flex items-center justify-between">
+                                <div className="flex items-center">
+                                    <span
+                                        className=" p-3 rounded-full mr-3">
+                                        <Image src={arrowright} alt='' className='w-12 h-12' />
+                                    </span>
+                                    <div>
+                                        <p className="text-[#FFF] text-xl font-semibold"> {joint.cardContent.textCardRight.title}</p>
+                                        <p className="text-[#D8D8D8] text-lg">{joint.cardContent.textCardRight.subtitle}</p>
+                                    </div>
+                                </div>
+                                <p className="text-[#FFF] font-semibold text-xl">- 120.00 USDT</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </section >
+                </section >
+            )
+            }
+        </>
     )
-
 }
-
 export default CardContent
