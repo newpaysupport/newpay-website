@@ -84,7 +84,7 @@ const Insight = () => {
                                 </div>
                                 <figure className='w-full lg:w-[480px] lg:min-w-[480px]'>
                                     <Image src={insights[index].image} alt={item.title} className='hidden lg:block' />
-                                    <Image src={mobileInsights[index]} alt={item.title} className='lg:hidden' />
+                                    <Image src={mobileInsights[index]} alt={item.title} priority className='lg:hidden' />
                                 </figure>
                             </div>
                         )
