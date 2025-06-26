@@ -8,25 +8,26 @@ import hero_payment from "@/images/payment/hero_payment.png";
 import logo_payment from "@/images/payment/newpay_square_mark_payment.png";
 import ToastCustom from '../common/toast';
 import toast from 'react-hot-toast';
+import { useWindowSize } from '@/hooks/useWindowSize';
+import { useState, useEffect } from 'react'; 
 
 const HeroPayment = () => {
     const locale = useLocale();
     const payment = locale === 'en' ? enBlog : ziBlog;
 
-    {/* Hero Section */ }
     const heroSection = payment.heroSection;
     const handleToast = () => {
-        toast.custom(<ToastCustom type='warning' />)
-    }
+        toast.custom(<ToastCustom type='warning' />);
+    };
     return (
         <div className="relative">
             <Image src={hero_payment} alt="background" width={0} height={0} className="object-cover md:w-full md:h-full h-[800px] w-full" />
-            <p className="fadeInUp-no-delay text-sm font-normal w-[60%] text-[#AEAEAE] text-right absolute top-[26%] right-[6%]  md:top-[30%] md:bottom-[60%] md:right-[12%] md:w-[20%]">{heroSection.description}</p>
+            <p className="fadeInUp-no-delay text-sm font-normal w-[60%] text-[#AEAEAE] text-right absolute top-[26%] right-[6%]  md:top-[28%] md:bottom-[60%] md:right-[12%] md:w-[20%]">{heroSection.description}</p>
             <div className="absolute right-0 bottom-[24%] md:right-[9.2%]">
-                <Image src={card_container} alt="background" width={0} height={0} className='fadeInUp-no-delay w-[320px] h-[145px] md:w-[670px] md:h-[300px]' />
+                <Image src={card_container} alt="background" width={0} height={0} className={`fadeInUp-no-delay w-[320px] h-[145px] md:w-[640px] md:h-[250px]`} />
             </div>
-            <div className="absolute w-[80%] top-[26%] bottom-[60%] left-[6%] md:w-[25%] md:top-[30%] md:bottom-[60%] md:left-[12%]">
-                <Image src={logo_payment} alt="background" width={0} height={0} className="fadeInUp-no-delay w-12 h-12 mb-10" />
+            <div className="absolute w-[80%] top-[26%] bottom-[60%] left-[6%] md:w-[30%] md:top-[28%] md:bottom-[60%] md:left-[12%]">
+                <Image src={logo_payment} alt="background" width={0} height={0} className="fadeInUp-no-delay w-12 h-12 mb-8" />
                 <h1 style={{
                     background: "linear-gradient(90deg, #FFF 0.13%, rgba(255, 255, 255, 0.00) 128.16%)",
                     backgroundClip: 'text',
@@ -38,8 +39,7 @@ const HeroPayment = () => {
                 <button onClick={handleToast} className="fadeInUp-no-delay rounded-full text-sm font-semibold px-6 py-3 md:py-4 md:px-8 text-[#FFF] cursor-pointer bg-orange-500 hover:bg-orange-600">{heroSection.buttonText}</button>
             </div>
         </div>
-
-    )
+    );
 }
 
-export default HeroPayment
+export default HeroPayment;
