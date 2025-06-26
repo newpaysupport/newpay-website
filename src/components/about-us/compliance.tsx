@@ -44,7 +44,7 @@ const Compliance = () => {
         <div className='w-full min-h-[1300px] relative'>
             <Image src={bg} alt='background' fill priority className='object-bottom-left object-cover' />
             <div className='relative py-[64px] lg:py-[160px] lg:px-0'>
-                <div className='container mx-auto px-4 lg:px-20'>
+                <div className='container mx-auto px-4 xl:px-20'>
                     <h4 className='text-white text-[32px] lg:text-[60px] font-semibold text-center'>{t("compliance.title")}</h4>
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 lg:mt-20'>
                         {t.raw("compliance.list").map((item: Item, index: number) => {
