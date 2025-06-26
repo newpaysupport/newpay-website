@@ -27,7 +27,7 @@ const Card4Mobile = ({joint, locale, handleToast} : Card4Props) => {
             <div className="container flex flex-col gap-6">
                 {/* Left Section: Text Content and Small Card */}
                 <div className="flex flex-col justify-start items-start gap-6">
-                    <h2 className="w-[70%] text-4xl font-semibold text-[#1B1B1B]">
+                    <h2 className="w-[80%] text-4xl font-semibold text-[#1B1B1B]">
                         {joint.card4.title}
                     </h2>
                     <Image
