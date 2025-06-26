@@ -16,7 +16,7 @@ const GlobeListCard = () => {
             <div className='pt-60'>
                 <Image src={globe} alt="Globe Image" className="w-full object-cover" />
 
-                <div className='absolute right-0 left-0 top-45 bottom-0 flex gap-5 items-start justify-center '>
+                <div className='absolute right-0 left-0 md:top-[20%] bottom-0 flex gap-5 items-start justify-center '>
 
                     {globeListCard.map((item, index) => {
                         let rotation = 0;
@@ -24,7 +24,9 @@ const GlobeListCard = () => {
                         else if (index === 3) rotation = 8;
                         return (
                             <div key={item.title} className='relative overflow-hidden group hover:-translate-y-5 transition-all ease-linear duration-500 cursor-pointer'>
-                                <Image src={item.image} width={300} height={300} alt="Globe Image" className="object-cover w-76" />
+                                <div className='container mx-auto'>
+                                    <Image src={item.image} width={280} height={280} alt="Globe Image" className="object-cover" />
+                                </div>
                                 <div style={{
                                     transform: `skewy(${rotation}deg)`,
 
@@ -52,7 +54,11 @@ const GlobeListCard = () => {
                         )
                     })}
                 </div>
-                <Image src={shadow_globe} alt="Globe Image" className='absolute right-[12%] left-[12%] bottom-0 object-cover' />
+                <div className='absolute inset-0 bottom-0 left-0 flex items-end justify-center'>
+                    <div>
+                        <Image src={shadow_globe} alt="Globe Image" />
+                    </div>
+                </div>
             </div>
 
         </div>
