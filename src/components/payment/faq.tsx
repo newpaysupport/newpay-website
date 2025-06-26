@@ -13,7 +13,7 @@ const Faq = () => {
     const faqSection = payment.faqSection;
     const faqItems = faqSection.faqItems;
     return (
-        <div className="md:py-20 md:p-0 px-4 py-12">
+        <div className="md:py-20 md:px-30 px-4 py-12">
             <div className="flex md:flex-row flex-col mx-auto max-w-7xl justify-between">
                 <div className="text-white flex md:flex-col flex-row justify-between md:h-[450px]">
                     <div>

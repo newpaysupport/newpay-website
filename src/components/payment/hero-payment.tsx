@@ -8,8 +8,6 @@ import hero_payment from "@/images/payment/hero_payment.png";
 import logo_payment from "@/images/payment/newpay_square_mark_payment.png";
 import ToastCustom from '../common/toast';
 import toast from 'react-hot-toast';
-import { useWindowSize } from '@/hooks/useWindowSize';
-import { useState, useEffect } from 'react'; 
 
 const HeroPayment = () => {
     const locale = useLocale();
