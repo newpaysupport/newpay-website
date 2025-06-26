@@ -92,13 +92,13 @@ const OpenAccount = () => {
 
     return (
         <ReactLenis root>
-            <div className="bg-[#060606] pt-20 pb-[200px] px-[120px]">
+            <div className="bg-[#060606] pt-20 px-[120px]">
                 <div className='container mx-auto'>
                     <h3 className='text-white text-[48px] font-semibold'>{t('openAccount.title')}</h3>
                     <p className='text-[#aeaeae] text-lg font-normal mt-6 mb-20'>{t('openAccount.desc')}</p>
 
                     <div className='flex justify-between'>
-                        <div className='w-full h-full lg:w-[800px] relative'>
+                        <div className='w-full h-full lg:w-[800px] relative pb-[200px]'>
                             <div className='flex flex-col gap-y-[480px]'>
                                 {t.raw('openAccount.steps').map((step: { title: string; desc: string }, index: number) => {
                                     return (
