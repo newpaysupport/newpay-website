@@ -774,6 +774,7 @@
             "get": "Get",
             "theApp": "the App",
             "title": "Open an account in as little as 1 minute",
+            "titleMobile": "Open an account\n in as little as 1 minute",
             "desc": "Download the app to login into your account"
         }
     },

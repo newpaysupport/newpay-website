@@ -17,7 +17,9 @@ const Hero = () => {
 
     return (
         <div className='w-full h-[800px] lg:h-screen relative overflow-hidden'>
-            <video src={'/videos/secure-custodian/heroVideo.mp4'} className='w-full h-full object-cover object-center' loop={true} autoPlay={true} muted={true} preload='true' />
+            <video src={'/videos/secure-custodian/heroVideo.mp4'} className='w-full h-full object-cover object-center hidden lg:block' loop={true} autoPlay={true} muted={true} preload='true' />
+            <video src={'/videos/secure-custodian/heroVideoMobile.mp4'} className='w-full h-full object-cover object-center lg:hidden' loop={true} autoPlay={true} muted={true} preload='true' />
+
             <figure className='absolute w-full lg:h-[460px] z-[1] bottom-0 left-0'>
                 <Image src={overlay} alt='' className='object-cover w-full h-full lg:h-auto' />
             </figure>

@@ -1,6 +1,7 @@
 "use client"
 import React from 'react'
 import card from '@/images/download/Card.png';
+import cardMobile from '@/images/download/Card-mobile.png';
 import iconMark from '@/images/download/newpay_mark.svg';
 import newpayCard from '@/images/download/newpayCard.png';
 
@@ -17,7 +18,8 @@ const GetTheApp = () => {
         <div className='bg-[#060606] pt-[64px] lg:pt-[120px]'>
             <div className='container mx-auto'>
                 <div className='w-full h-full lg:h-[400px] relative py-10'>
-                    <Image src={card} alt='' fill priority />
+                    <Image src={card} alt='' fill priority className='hidden lg:block' />
+                    <Image src={cardMobile} alt='' fill priority className='lg:hidden' />
                     <div className='relative z-[1] grid grid-cols-1 lg:grid-cols-3 gap-y-12 lg:gap-y-0 lg:gap-x-20 items-center'>
                         <div className='relative'>
                             <Image src={iconMark} alt='' className={`mx-auto block lg:hidden`} />
@@ -29,8 +31,11 @@ const GetTheApp = () => {
                         </div>
 
                         <div>
-                            <p className='text-white text-center text-2xl lg:text-[36px] font-medium -tracking-[0.64px]'>
+                            <p className='text-white text-center text-2xl lg:text-[36px] font-medium -tracking-[0.64px] hidden lg:block'>
                                 {t("title")}
+                            </p>
+                            <p style={{ whiteSpace: 'pre-line' }} className='text-white text-center text-2xl lg:text-[36px] font-medium -tracking-[0.64px] lg:hidden'>
+                                {t("titleMobile")}
                             </p>
                             <p className='text-[#aeaeae] text-sm text-center lg:text-xl font-normal mt-4 lg:mt-6'>{t("desc")}</p>
                         </div>

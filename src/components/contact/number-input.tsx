@@ -15,12 +15,18 @@ interface NameInputProps {
     register: UseFormRegister<ContactUsForm>
 }
 
+interface National {
+    code: string;
+    country: string;
+    flag: string
+}
+
 
 const NumberInput = ({ label, name, type = 'normal', placeholder, register, control }: NameInputProps & { control: Control<ContactUsForm> }) => {
 
     const [focused, setFocused] = useState<string | null>(null);
     const [isOpenNation, setIsOpenNation] = useState(false);
-    const [nationSelected, setNationSelected] = useState<{ code: string; country: string; flag: string }>(countryCode[0]);
+    const [nationSelected, setNationSelected] = useState<National>(countryCode[41]);
 
     const handleFocus = () => {
         if (!label) return;
@@ -34,7 +40,7 @@ const NumberInput = ({ label, name, type = 'normal', placeholder, register, cont
     const handleSetOpenNation = () => {
         setIsOpenNation(!isOpenNation);
     }
-    const handleNationSelect = (country: { code: string; country: string; flag: string }) => {
+    const handleNationSelect = (country: National) => {
         setNationSelected(country);
         setIsOpenNation(false);
     }
@@ -43,7 +49,7 @@ const NumberInput = ({ label, name, type = 'normal', placeholder, register, cont
 
     const isAbove = (focused === name || hasValue);
 
-    const classAbove = isAbove ? "left-4 top-[-22%] bg-white" : "left-[116px] top-[16px]";
+    const classAbove = isAbove ? "left-4 top-[-22%] bg-white" : "left-[132px] top-[16px]";
     const classSpanOnFocusInput = focused === name ? "text-[#FF6910]" : "text-[#aeaeae]";
     const classContainerOnFocusInput = focused === name ? "border-[#FF6910] border-[1.5px]" : "border-[rgba(216,216,216,0.64)]";
 
@@ -71,20 +77,21 @@ const NumberInput = ({ label, name, type = 'normal', placeholder, register, cont
                 onFocus={() => handleFocus()}
                 onBlur={() => setFocused(null)}
                 placeholder={placeholder}
-                className={`w-full pl-4 bg-transparent border-0 outline-none text-base font-medium text-[#0E121B] placeholder:text-[#aeaeae] placeholder:font-normal`}
+                className={`pl-4 bg-transparent border-0 outline-none text-base font-medium text-[#0E121B] placeholder:text-[#aeaeae] placeholder:font-normal`}
             />
 
-            <DropDownNation isOpenNation={isOpenNation} handleNationSelect={handleNationSelect} />
+            <DropDownNation isOpenNation={isOpenNation} handleNationSelect={handleNationSelect} nationSelected={nationSelected} />
         </div>
     )
 }
 
 export default NumberInput
 
-const DropDownNation = ({ isOpenNation, handleNationSelect }:
+const DropDownNation = ({ isOpenNation, handleNationSelect, nationSelected }:
     {
         isOpenNation: boolean;
-        handleNationSelect: (country: { code: string; country: string; flag: string }) => void
+        handleNationSelect: (country: National) => void
+        nationSelected: National
     }) => {
 
 
@@ -114,10 +121,20 @@ const DropDownNation = ({ isOpenNation, handleNationSelect }:
             <ul className='p-2 h-[230px] overflow-y-scroll'>
                 {filteredCountries.map((item, index) => {
                     return (
-                        <li onClick={() => handleNationSelect(item)} key={index} className='p-3 w-full flex rounded-[12px] hover:bg-black/8 items-center gap-x-4  cursor-pointer'>
-                            <Image loader={() => item.flag} src={item.flag} alt={""} width={24} height={24} />
-                            <span className='text-[#666] text-sm font-medium'>{item.code}</span>
-                            <span className='text-sm font-medium text-[#1b1b1b]'>{item.country}</span>
+                        <li
+                            onClick={() => handleNationSelect(item)}
+                            key={index}
+                            className='p-3 w-full flex rounded-[12px] hover:bg-black/8 items-center justify-between cursor-pointer'>
+                            <div className='flex items-center gap-x-2'>
+                                <Image loader={() => item.flag} src={item.flag} alt={""} width={24} height={24} />
+                                <span className='text-[#666] text-sm font-medium'>{item.code}</span>
+                                <span className='text-sm font-medium text-[#1b1b1b]'>{item.country}</span>
+                            </div>
+                            {nationSelected.country.toLowerCase() === item.country.toLowerCase() && (
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 2C6.49 2 2 6.49 2 12C2 17.51 6.49 22 12 22C17.51 22 22 17.51 22 12C22 6.49 17.51 2 12 2ZM16.71 10.71L11.71 15.71C11.51 15.9 11.26 16 11 16C10.74 16 10.49 15.9 10.29 15.71L7.29001 12.71C6.90001 12.32 6.90001 11.68 7.29001 11.29C7.68001 10.9 8.31999 10.9 8.70999 11.29L11 13.5901L15.29 9.29004C15.68 8.90004 16.32 8.90004 16.71 9.29004C17.1 9.68004 17.1 10.32 16.71 10.71Z" fill="#1B1B1B" />
+                                </svg>
+                            )}
                         </li>
                     )
                 })}
