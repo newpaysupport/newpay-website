@@ -4,6 +4,8 @@ import { home as en } from '@/i18n/messages/en.json';
 import { home as zi } from '@/i18n/messages/zi.json';
 import globe from '@/images/home/giftcard/Globe.png';
 import shadow_globe from '@/images/home/giftcard/shadow_globe.png';
+import card1_mobile from '@/images/home/giftcard/card1_mobile.png';
+import card4_mobile from '@/images/home/giftcard/card4_mobile.png';
 import { useLocale } from 'next-intl';
 import Image from 'next/image';
 
@@ -13,10 +15,10 @@ const GlobeListCard = () => {
     const globeListCard = home.globeListCard;
 
     const listImg = [
-        { id: 1, image: globeListCard[1].image },
+        { id: 1, image: card1_mobile },
         { id: 2, image: globeListCard[1].image },
         { id: 3, image: globeListCard[2].image },
-        { id: 4, image: globeListCard[1].image },
+        { id: 4, image: card4_mobile },
     ]
 
     return (
