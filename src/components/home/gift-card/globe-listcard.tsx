@@ -54,7 +54,11 @@ const GlobeListCard = () => {
                         )
                     })}
                 </div>
-                <Image src={shadow_globe} alt="Globe Image" className='absolute right-[12%] left-[12%] bottom-0 object-cover' />
+                <div className='absolute inset-0 bottom-0 left-0 flex items-end justify-center'>
+                    <div>
+                        <Image src={shadow_globe} alt="Globe Image" />
+                    </div>
+                </div>
             </div>
 
         </div>
