@@ -24,7 +24,7 @@ const Assets = () => {
                 <h4 className='text-white font-semibold text-[32px] lg:text-[60px] text-center'>{t("assets.title")}</h4>
                 <p className='text-[#666] mt-4 text-sm lg:text-lg font-medium text-center'>{t("assets.desc")}</p>
 
-                <div className='grid grid-cols-1 md:grid-cols-2 mt-20 gap-4 xl:w-[1200px] lg:mx-auto'>
+                <div className='grid grid-cols-1 md:grid-cols-2 mt-20 gap-4 2xl:w-[1200px] lg:mx-auto'>
 
                     <div style={{ background: 'linear-gradient(0deg, #110F0D 0%, #110F0D 100%), var(--bg-surface-surface-1, rgba(255, 255, 255, 0.04))' }} className='col-span-1 md:col-span-2 relative h-[444px] lg:h-[500px] rounded-3xl overflow-hidden'>
                         <Image src={images[0]} alt='' fill className='hidden lg:block' />
@@ -37,7 +37,7 @@ const Assets = () => {
                         </div>
                     </div>
 
-                    <div className='w-full xl:w-[592px] h-[500px] relative bg-[#020000] rounded-3xl overflow-hidden'>
+                    <div className='w-full 2xl:w-[592px] h-[500px] relative bg-[#020000] rounded-3xl overflow-hidden'>
                         <Image src={images[1]} fill alt='' className='object-center hidden lg:block' />
                         <Image src={asset2Mobile} priority fill alt='' className='lg:hidden object-cover w-full' />
 
@@ -48,7 +48,7 @@ const Assets = () => {
                     </div>
                     <div
                         style={{ background: 'linear-gradient(0deg, #110F0D 0%, #110F0D 100%), var(--bg-surface-surface-1, rgba(255, 255, 255, 0.04))' }}
-                        className='w-full xl:w-[592px] h-[500px] relative bg-[#020000] rounded-3xl overflow-hidden'>
+                        className='w-full 2xl:w-[592px] h-[500px] relative bg-[#020000] rounded-3xl overflow-hidden'>
                         <Image src={asset3} fill alt='' className='hidden lg:block' />
                         <figure className='w-full h-[316px] lg:hidden'>
                             <Image src={asset3Mobile} priority alt='' className='object-cover w-full h-full' />
