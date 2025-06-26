@@ -30,74 +30,70 @@ const ContentEnd = () => {
     const isInView = useInView(textRef, { once: false, amount: 0.5 });
 
     return (
-        <div className='pt-20 pb-30 container mx-auto'>
+        <div className='md:pt-20 md:pb-30 py-8 md:px-0 px-6 container mx-auto'>
             <AnimationFade inView={isInView} direction='up-title'>
                 <div
                     ref={textRef}
-                    className="pb-30 text-center"
+                    className="md:pb-30 pb-12 text-center"
                 >
-                    <h1 className="md:text-6xl text-3xl font-semibold pt-4 sm:pt-6 lg:pt-10">
+                    <h1 className="md:text-6xl text-[32px] text-[#1B1B1B] font-semibold lg:pt-10">
                         {cardSection.title}
                     </h1>
-                    <p className="text-2xl font-medium text-gray-500 mt-2 sm:mt-4 mx-auto md:w-[35%]">
+                    <p className="md:text-2xl text-base font-medium text-[#AEAEAE] mt-4 mx-auto md:w-[35%]">
                         {cardSection.description}
                     </p>
                 </div>
             </AnimationFade>
 
 
-            <div className="pt-30 flex flex-col md:flex-row items-center justify-center">
+            <div className="md:pt-30 pt-16 flex flex-col md:flex-row items-center justify-center">
                 <div className="flex flex-col w-full md:w-[35%]">
-                    <Image src={gift} alt="Share Happy Moment" className='animation-gift-box'/>
+                    <Image src={gift} alt="Share Happy Moment" className='animation-gift-box lg:w-16 lg:h-16 h-12 w-12' />
 
-                    <h1 className="text-6xl font-semibold pt-4 sm:pt-6 lg:pt-10 text-left">
+                    <h1 className="lg:text-6xl text-[32px] font-semibold pt-4 sm:pt-6 lg:pt-10 text-left text-[#1B1B1B]">
                         {shareHappyMoment.title}
                     </h1>
-                    <p className="text-left text-gray-500 pt-4 sm:mt-4 w-full sm:w-[70%] text-lg font-medium">
+                    <p className="text-left text-[#666] pt-4 w-[80%] md:text-lg text-sm font-medium">
                         {shareHappyMoment.description}
                     </p>
 
-                    <div className='pt-22'>
-                        <div className="flex items-center justify-between bg-orange-500 text-white rounded-[20px] p-2 md:p-6 shadow-md md:w-[400px]">
+                    <div className='lg:pt-22 pt-6'>
+                        <div className="flex items-center md:justify-between md:gap-0 gap-10 bg-orange-500 text-white rounded-[20px] p-4.5 md:p-6 shadow-md md:w-[400px] w-fit">
                             <div className="flex items-center gap-3">
                                 <div className="flex-shrink-0">
-                                    <Image src={icon_gift} alt="Gift Icon" width={24} height={24} className="w-8 h-8 md:w-[60px] md:h-[60px]" />
+                                    <Image src={icon_gift} alt="Gift Icon" width={24} height={24} className="w-[45px] h-[45px] md:w-[60px] md:h-[60px]" />
                                 </div>
                                 <div>
-                                    <p className="text-2xl font-semibold">{giftCard.title}</p>
-                                    <p className="text-lg font-medium">{giftCard.subtitle}</p>
+                                    <p className="lg:text-2xl text-lg font-semibold">{giftCard.title}</p>
+                                    <p className="lg:text-lg text-sm font-medium">{giftCard.subtitle}</p>
                                 </div>
                             </div>
                             <div className="text-right">
-                                <p className="text-base sm:text-lg font-semibold">{giftCard.amount}</p>
+                                <p className="text-lg font-semibold">{giftCard.amount}</p>
                             </div>
                         </div>
-                        <div className="flex items-center justify-between bg-green-400 text-white rounded-[20px] p-2 md:p-6 shadow-md mt-6 ml-0 md:ml-20 md:w-[400px]">
+                        <div className="flex items-center md:justify-between md:gap-0 gap-10 bg-green-400 text-white rounded-[20px] p-4.5 md:p-6 shadow-md mt-6 ml-[10%] md:ml-[15%] md:w-[400px] w-fit">
                             <div className="flex items-center gap-3">
                                 <div className="flex-shrink-0">
-                                    <Image src={icon_arrow} alt="Receive Icon" width={24} height={24} className="w-8 h-8 md:w-[60px] md:h-[60px]" />
+                                    <Image src={icon_arrow} alt="Receive Icon" width={24} height={24} className="w-[45px] h-[45px] md:w-[60px] md:h-[60px]" />
                                 </div>
                                 <div>
-                                    <p className="text-2xl font-semibold">{receiveCard.title}</p>
-                                    <p className="text-lg font-medium">{receiveCard.subtitle}</p>
+                                    <p className="lg:text-2xl text-lg  font-semibold">{receiveCard.title}</p>
+                                    <p className="lg:text-lg text-sm font-medium">{receiveCard.subtitle}</p>
                                 </div>
                             </div>
                             <div className="text-right">
-                                <p className="text-base sm:text-lg font-semibold">{receiveCard.amount}</p>
+                                <p className="text-lg font-semibold">{receiveCard.amount}</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="relative md:w-[700px] md:h-[680px]">
-                    <Image src={img_top_right} alt="Top Right Decoration" className="absolute top-0 right-0 z-10 animate-translateY " />
-                    <Image src={img_bottom_left} alt="Bottom Left Decoration" className="absolute bottom-[11%] left-[13%] z-20 animate-translateY " />
-                    <Image src={img_center} alt="Center Decoration" className="absolute inset-0 m-auto z-30 " />
-
-
-
+                <div className="relative md:w-[700px] md:h-[680px] w-[380px] h-[370px] md:mt-0 mt-12">
+                    <Image src={img_top_right} alt="Top Right Decoration" className="absolute top-0 right-0 z-10 animate-translateY md:w-[250px] md:h-[250px] w-[135px]" />
+                    <Image src={img_bottom_left} alt="Bottom Left Decoration" className="absolute bottom-[11%] left-[13%] z-20 animate-translateY md:w-[165px] md:h-[165px] w-[90px]" />
+                    <Image src={img_center} alt="Center Decoration" className="absolute inset-0 m-auto z-30 md:w-[680px] md:h-[645px] w-[370px] h-[350px]" />
                 </div>
             </div>
-
         </div>
     )
 }

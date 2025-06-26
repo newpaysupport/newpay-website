@@ -28,8 +28,8 @@ const ContentMain = () => {
     ]
     return (
         <div className="md:mt-30 mt-12 md:container md:mx-auto overflow-hidden">
-            <h1 className="md:text-6xl text-[32px] font-semibold text-center md:pt-10 pt-12">{contentSection2.title}</h1>
-            <p className="md:text-lg text-sm font-medium text-center text-gray-500 mt-4 mx-auto">{contentSection2.description}</p>
+            <h1 className="md:text-6xl text-[32px] text-[#1B1B1B] font-semibold text-center md:pt-10 pt-12 px-6 md:px-0">{contentSection2.title}</h1>
+            <p className="md:text-lg text-sm font-medium text-center text-[#666] mt-4 mx-auto px-6 md:px-0">{contentSection2.description}</p>
             <div className="mx-auto mt-10 relative">
                 <Image src={world} alt="world" className="mx-auto" />
 

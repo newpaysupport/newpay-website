@@ -21,7 +21,7 @@ const PhysicalCard = ({ physicalItems, labelButton, id }: PhysicalCardProps) => 
     return (
         <>
             {/* content Physical Card*/}
-            <div id={id} className="flex justify-between md:mt-10 mt-8 mx-auto container md:w-[80%] md:flex-row flex-col">
+            <div id={id} className="flex justify-between md:mt-10 mt-8 mx-auto container md:w-[80%] md:flex-row flex-col px-6 md:px-0">
                 <div className="md:w-[45%]">
                     <div className="my-4 p-6 bg-gray-100 rounded-2xl">
                         <Image src={wifi} alt="Wifi" />
