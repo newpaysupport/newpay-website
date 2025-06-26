@@ -16,7 +16,7 @@ const AutoSlideshow = () => {
             <CardSlideMobile slides={slides} joint={joint} />
             {/* Desktop View */}
             <div className="py-30 w-full overflow-hidden bg-white relative md:block hidden">
-                <h1 className="text-6xl text-[#1B1B1B] font-semibold container mx-auto text-left">
+                <h1 className="text-6xl text-[#1B1B1B] font-semibold md:px-20 px-12 text-left">
                     {joint.cardSlide.title}
                 </h1>
                 {/* overlay  */}
