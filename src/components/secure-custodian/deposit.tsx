@@ -20,7 +20,7 @@ const Deposit = () => {
                 </figure>
 
                 <div className='relative z-[1] h-full'>
-                    <div className='lg:w-[460px] h-full mx-auto flex flex-col justify-end pb-[74px] lg:pb-0 px-6 lg:px-0'>
+                    <div className='lg:w-[460px] h-full mx-auto flex flex-col justify-end pb-[74px] xl:pb-10 px-6 lg:px-0'>
                         <p className='text-white text-[30px] lg:text-[60px] font-semibold text-center'>{t("title")}</p>
                         <p className='text-[#848484] text-sm lg:text-lg font-medium text-center'>{t("desc")}</p>
                     </div>

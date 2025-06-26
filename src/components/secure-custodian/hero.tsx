@@ -21,7 +21,7 @@ const Hero = () => {
             <video src={'/videos/secure-custodian/heroVideoMobile.mp4'} className='w-full h-full object-cover object-center lg:hidden' loop={true} autoPlay={true} muted={true} preload='true' />
 
             <figure className='absolute w-full lg:h-[460px] z-[1] bottom-0 left-0'>
-                <Image src={overlay} alt='' className='object-cover w-full h-full lg:h-auto' />
+                <Image src={overlay} alt='' className='object-cover w-full h-full 2xl:h-auto' />
             </figure>
             <div className='absolute inset-0 w-full h-full z-[2]'>
                 <div className='flex justify-center items-end h-full pb-12 px-4 lg:px-0 lg:pb-[120px]'>
