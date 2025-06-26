@@ -14,7 +14,7 @@ const TalkTheTeam = () => {
             <Image src={bgTalkTheTeam} alt='' fill className='w-full h-full ' />
             <div className='relative z-[1] flex flex-col justify-end items-end h-full p-4 lg:p-8'>
                 <h3 className='text-xl lg:text-[40px] text-white font-semibold -tracking-[0.64px]'>{t("rightTitle")}</h3>
-                <p className="w-full lg:w-[410px] ml-auto text-white text-xs lg:text-base font-normal text-end -tracking-[0.24px]">
+                <p style={{ whiteSpace: "pre-line" }} className="w-full lg:w-[410px] ml-auto text-white text-xs lg:text-base font-normal text-end -tracking-[0.24px]">
                     {t("rightDesc")}
                 </p>
                 <div className="text-sm mt-6 flex flex-row justify-end items-center gap-4">
