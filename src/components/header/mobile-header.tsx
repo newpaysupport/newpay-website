@@ -46,13 +46,24 @@ const MobileHeader = ({
                                 onClick={() => link.hasDropdown ? toggleMobileDropdown(link.key) : null}
                             >
                                 {link.hasDropdown ? (
-                                    <span className={`text-base font-medium cursor-pointer ${isBlogAndContact ? 'text-black' : 'text-white'}`}>
+                                    <span
+                                        className={`text-base font-medium cursor-pointer 
+                                      ${isBlogAndContact
+                                                ? mobileOpenDropdown === link.key
+                                                    ? 'text-black'
+                                                    : 'text-[#AEAEAE]'
+                                                : mobileOpenDropdown === link.key
+                                                    ? 'text-white'
+                                                    : 'text-[#AEAEAE]'
+                                            }`}
+                                    >
                                         {link.label}
                                     </span>
+
                                 ) : (
                                     <Link
                                         href={link.href}
-                                        className={`text-base font-medium ${isBlogAndContact ? 'text-black' : 'text-white'}`}
+                                        className={`text-base font-medium ${isBlogAndContact ? 'text-black' : 'text-white'} `}
                                         onClick={() => setIsMobileMenuOpen(false)}
                                     >
                                         {link.label}
@@ -60,7 +71,7 @@ const MobileHeader = ({
                                 )}
 
                                 {link.hasDropdown && (
-                                    <svg className={`transition-transform ${mobileOpenDropdown === link.key ? 'rotate-180' : ''} ${isBlogAndContact ? 'text-black' : 'text-white'}`}
+                                    <svg className={`transition-transform -rotate-90 ${mobileOpenDropdown === link.key ? 'rotate-360' : ''} ${isBlogAndContact ? 'text-black' : 'text-white'}`}
                                         xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                         <path d="M4 6L8 10L12 6" stroke={isBlogAndContact ? "black" : "white"} strokeOpacity="0.6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
@@ -74,11 +85,19 @@ const MobileHeader = ({
                                         <li key={index}>
                                             {item.type === 'cardGroup' ? (
                                                 <>
-                                                    <div className="text-sm py-2 cursor-pointer flex items-center justify-between text-[#AEAEAE]"
-                                                        onClick={() => setMobileCardOpen(!mobileCardOpen)}>
+                                                    <div
+                                                        className={`text-sm py-2 cursor-pointer flex items-center justify-between ${isBlogAndContact
+                                                            ? mobileCardOpen
+                                                                ? 'text-black'
+                                                                : 'text-[#AEAEAE]'
+                                                            : mobileCardOpen
+                                                                ? 'text-white'
+                                                                : 'text-[#AEAEAE]'
+                                                            }`}
+                                                        onClick={() => setMobileCardOpen(!mobileCardOpen)}
+                                                    >
                                                         <span>{item.title}</span>
-                                                        <svg className={`transition-transform ${mobileCardOpen ? 'rotate-180' : ''}`} xmlns="http://www.w3.org/2000/svg"
-                                                            width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                        <svg className={`transition-transform -rotate-90 ${mobileCardOpen ? 'rotate-360' : ''}`} xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                                             <path d="M4 6L8 10L12 6" stroke={isBlogAndContact ? "black" : "white"} strokeOpacity="0.6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                                         </svg>
                                                     </div>
