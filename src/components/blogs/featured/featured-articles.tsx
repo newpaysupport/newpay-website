@@ -14,7 +14,7 @@ const images = [image1, image2, image3]
 
 const FeaturedArticles = ({ featuredArticle }: FeaturedArticlesProps) => {
     return (
-        <div className='container mx-auto py-12 px-4 lg:px-0'>
+        <div className='container mx-auto lg:py-12 px-4 lg:px-0'>
             <div className='w-full lg:w-[1200px] mx-auto'>
                 <h2 className={`text-2xl lg:text-[40px] text-[#1b1b1b] font-semibold -tracking-[0.64px] mb-6`}>{featuredArticle}</h2>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
