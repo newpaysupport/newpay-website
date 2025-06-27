@@ -3,6 +3,8 @@ import Image from 'next/image';
 import { payment as enBlog } from '@/i18n/messages/en.json';
 import { payment as ziBlog } from '@/i18n/messages/zi.json';
 import { useLocale } from 'next-intl';
+import Link from 'next/link';
+import arrow_right from '@/images/payment/arrow_right.svg';
 
 
 const Faq = () => {
@@ -23,6 +25,11 @@ const Faq = () => {
                         <p className="md:text-base text-sm mt-3 text-[#AEAEAE]">
                             {faqSection.subtitle}
                         </p>
+                        <Link href={`/${locale}/faq-help`} className='md:block hidden'>
+                            <button className='lg:mt-10 bg-[#1C1C1C] text-lg rounded-2xl px-6 py-4 font-semibold'>
+                                <p className="flex justify-center items-center gap-3"> {locale === 'en' ? 'View more' : '查看更多'} <Image src={arrow_right} alt='arrow' className="font-light group-hover:translate-x-1.5 transition ease-in-out animate-translateX" /></p>
+                            </button>
+                        </Link>
                     </div>
                     <Image src={message} alt="Message Icon" width={205} height={180} className='md:w-full md:h-[180px] w-[190px] h-[150px] object-cover object-bottom' />
                 </div>
@@ -42,6 +49,11 @@ const Faq = () => {
                             </details>
                         )
                     })}
+                    <Link href={`/${locale}/faq-help`} className='md:hidden flex justify-center'>
+                        <button className='mt-6 bg-[#1C1C1C] text-sm text-[#fff] rounded-2xl px-6 py-4 font-semibold'>
+                            <p className="flex justify-center items-center gap-3"> {locale === 'en' ? 'View more' : '查看更多'} <Image src={arrow_right} alt='arrow' className="font-light group-hover:translate-x-1.5 transition ease-in-out animate-translateX" /></p>
+                        </button>
+                    </Link>
                 </div>
             </div>
         </div>
