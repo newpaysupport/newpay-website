@@ -6,16 +6,9 @@ import { FaLink } from 'react-icons/fa';
 import link from '@/images/blog/link.svg';
 import link_hover from '@/images/blog/link_hover.svg';
 import { useLocale } from 'next-intl';
+import { CardProps } from '@/interfaces/card';
 
-type CardProps = {
-    title: string;
-    tag: string;
-    image: string | StaticImageData;
-    slug: string;
-    desc: string;
-    id: number;
-    tagShow: string;
-};
+
 
 const Card = ({ title, tag, image, slug, desc, id, tagShow }: CardProps) => {
     const router = useRouter();

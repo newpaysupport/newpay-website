@@ -2,19 +2,33 @@ import Image, { StaticImageData } from 'next/image';
 import React from 'react'
 import link from '@/images/blog/link.svg';
 import link_hover from '@/images/blog/link_hover.svg';
+import { useRouter } from 'next/navigation';
+import { CardProps } from '@/interfaces/card';
 
 interface FeaturedCardProps {
     title: string;
     desc?: string;
-    tag: string[];
+    tag: string;
     image: string | StaticImageData;
     className?: string;
     index: number;
+    insightsLocale: 'zi' | 'en';
+    item: CardProps
 }
 
-const FeaturedCard = ({ title, desc, tag, image, className, index }: FeaturedCardProps) => {
+const FeaturedCard = ({ title, desc, tag, image, className, index, insightsLocale, item }: FeaturedCardProps) => {
+
+    const router = useRouter();
+
+    const handleClick = () => {
+        if (item.slug) {
+            router.push(`/${insightsLocale}/blog/${item.id}-${tag.split(',')[1]}?slug=${item.slug}&category=${tag}`);
+        }
+    };
     return (
-        <div className={`${className} p-4 border border-[#d8d8d8] rounded-4xl h-full group cursor-pointer overflow-hidden`}>
+        <div
+            onClick={handleClick}
+            className={`${className} p-4 border border-[#d8d8d8] rounded-4xl h-full group cursor-pointer overflow-hidden`}>
             <figure className={`lg:min-h-[194px] lg:min-w-[260px] rounded-[12px] overflow-hidden ${index === 0 ? "aspect-[2/1]" : "min-w-[160px] h-[124px]"}`}>
                 <Image src={image} alt='image' className='group-hover:[transform:scale(1.25)] transition-all ease-linear duration-200 w-full h-full' />
             </figure>
@@ -24,7 +38,7 @@ const FeaturedCard = ({ title, desc, tag, image, className, index }: FeaturedCar
                 <p>{desc}</p>
                 <div className='flex  items-center w-full justify-between  mt-4'>
                     <div className='flex  items-center gap-3'>
-                        {tag.map((item, index) => {
+                        {tag.split(',').map((item, index) => {
                             return (
                                 <p key={index} className='py-2 px-4 border border-[#d8d8d8] rounded-full w-fit capitalize text-[#1b1b1b] font-medium text-sm'>{item}</p>
                             )
