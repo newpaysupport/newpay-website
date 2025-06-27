@@ -56,7 +56,14 @@ const About = () => {
                         <div className="absolute inset-0 md:flex flex-col mt-20 justify-start items-center text-center p-4 hidden">
                             <h1 className="text-4xl md:text-6xl text-[#FFF] font-semibold mb-4">{joint.about.title}</h1>
                             <p className="text-lg md:text-xl text-white/80 mt-6 w-full max-w-3xl mx-auto px-4 font-medium">
-                                {joint.about.description}
+                                {locale === 'en' ?
+                                    <>
+                                        NewPay is dedicated to helping you spend and grow your crypto assets. <br />
+                                        Founded in 2022, with offices in Hong Kong, Singapore, Malaysia, and Japan.
+                                    </>
+                                    : <>
+                                        NewPay 致力于帮助你消费并增值加密资产。<br />成立于 2022 年，在香港、新加坡、马来西亚及日本设有办公室
+                                    </>}
                             </p>
                             <div className='mt-8 flex gap-3'>
                                 {listFlag.map(item => {
