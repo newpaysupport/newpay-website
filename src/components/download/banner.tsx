@@ -20,7 +20,7 @@ const Banner = () => {
 
 
     return (
-        <div className='bg-[#060606] pt-[120px]'>
+        <div className='bg-[#060606] pt-[120px] pb-12'>
             <div className='container mx-auto lg:px-[120px] px-4'>
                 <div>
                     <p className='text-[#FF6910] text-xl font-semibold text-center opacity-0 fadeInUp-no-delay'>{t("heading")}</p>

@@ -8,7 +8,7 @@ import searchIcon from '@/images/faq-help/search-icon.svg';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 
-const NeedAHand = () => {
+const NeedAHand = ({ searchTerm, handleSearchChange }: { searchTerm: string, handleSearchChange: (event: React.ChangeEvent<HTMLInputElement>) => void }) => {
 
 
     const t = useTranslations("faqHelp.needAHand");
@@ -27,7 +27,8 @@ const NeedAHand = () => {
                         <Image src={searchIcon} alt='' />
                     </figure>
                     <input
-                        autoFocus={true}
+                        value={searchTerm}
+                        onChange={handleSearchChange}
                         type="text"
                         placeholder={t("placeHolder")}
                         className='text-white w-full placeholder:text-[#848484] text-base font-medium border-none outline-none' />

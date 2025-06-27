@@ -15,24 +15,20 @@ interface LatestProps {
     title: string;
     tags: string[];
     blogTag: string;
+    blogs: Blogs[];
+    insightsLocale: 'zi' | 'en';
 }
 
 const images = [card2, card3, card4]
 
 
-const LatestBlog = ({ title, tags, blogTag }: LatestProps) => {
+const LatestBlog = ({ title, tags, blogTag, blogs, insightsLocale }: LatestProps) => {
     const [selectTag, setSelectTag] = useState(tags[0]);
     const { isSm, isMd } = useBreakpointFlags();
-    const locale = useLocale();
     const [listBlogsFiltered, setListBlogsFiltered] = useState<Blogs[]>();
 
-    type InsightsLocale = 'zi' | 'en';
-    const insightsLocale = (locale === 'zi' || locale === 'en' ? locale : 'en') as InsightsLocale;
 
-    const blogs: Blogs[] = Object.values(listBlogs)
-        .map(item => item[insightsLocale])
-        .flat()
-        .filter((item): item is Blogs => typeof item.tag === 'string');
+
 
     useEffect(() => {
         if (!blogs.length) setListBlogsFiltered([]);
