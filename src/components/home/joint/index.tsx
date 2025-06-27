@@ -66,6 +66,7 @@ const JointScreen = () => {
     return (
         <>
             <HeroJoint />
+            {/* Desktop */}
             <div ref={pinContainerRef} style={{ height: `${slideCount}00vh` }} className="relative md:block hidden">
                 <div ref={swiperContainerRef} className="sticky top-0 h-screen w-full">
                     <Swiper
@@ -91,36 +92,13 @@ const JointScreen = () => {
                     </Swiper>
                 </div>
             </div >
-            <div className="h-screen w-full md:hidden">
-                <Swiper
-                    direction="vertical"
-                    slidesPerView={1}
-                    spaceBetween={0}
-                    mousewheel={{
-                        forceToAxis: true,
-                        releaseOnEdges: false,
-                        sensitivity: 1,
-                    }}
-                    modules={[Controller, Mousewheel]}
-                    onSwiper={(swiper) => (swiperRef.current = swiper)}
-                    className="h-full w-full"
-                    speed={600}
-                >
-                    <SwiperSlide>
-                        <CardContent />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <Card2 />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <Card3 />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <Card4 />
-                    </SwiperSlide>
-                </Swiper>
+            {/* Mobile */}
+            <div className="md:hidden">
+                <CardContent />
+                <Card2 />
+                <Card3 />
+                <Card4 />
             </div>
-
             <div>
                 <FeaturesGrid />
                 <AutoSlideshow />
