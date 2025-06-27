@@ -16,7 +16,7 @@ const GetTheApp = () => {
 
     return (
         <div className='bg-[#060606] pt-[64px] lg:pt-[120px]'>
-            <div className='container mx-auto'>
+            <div className='container mx-auto lg:px-20'>
                 <div className='w-full h-full lg:h-[400px] relative py-10'>
                     <Image src={card} alt='' fill priority className='hidden lg:block' />
                     <Image src={cardMobile} alt='' fill priority className='lg:hidden' />

@@ -40,18 +40,22 @@ const ContactForm = () => {
     const {
         register,
         handleSubmit,
-        formState: { errors },
+        formState: { errors, isValid },
         setValue,
-        control
+        control,
+        watch
     } = useForm({
         resolver: yupResolver(schema),
+        mode: "onChange"
     })
 
     const onSubmit = (data: ContactUsForm, event: any) => {
         event.preventDefault()
     }
 
-    const disabled = Object.keys(errors).length > 0;
+    const watchedValues = watch();
+
+    const isDisabled = !isValid || Object.keys(errors).length > 0;
 
     return (
         <div className='w-full lg:grow relative'>
@@ -107,10 +111,10 @@ const ContactForm = () => {
 
                     <div className='flex items-center gap-4 mt-8'>
                         <CheckboxInput enabled={enabled} setEnabled={setEnabled} />
-                        <p className='w-[340px] text-[#666] text-sm font-medium'>{t("checkBox")}</p>
+                        <p className='w-[340px] md:w-full xl:w-[340px] text-[#666] text-sm font-medium'>{t("checkBox")}</p>
                     </div>
 
-                    <button className={`absolute bottom-3 right-[-100px] z-[10] h-20 box-border hidden lg:flex cursor-pointer group transition-all ease-in-out`}>
+                    <button disabled={isDisabled} className={`${isDisabled && "opacity-50"} absolute bottom-3 right-[-100px] z-[10] h-20 box-border hidden xl:flex cursor-pointer group transition-all ease-in-out`}>
                         <span style={{ borderRadius: '16px 0px 0px 16px' }} className='py-4 px-6 h-full box-border flex items-center bg-[#FF6910] text-white font-medium text-2xl group-hover:bg-[#ff5810]'>{t("submit")}</span>
                         <p style={{ borderRadius: '0px 16px 16px 0px' }} className='bg-white py-4 px-6 flex items-center'>
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" className='group-hover:translate-x-0.5 group-hover:-translate-y-0.5'>
@@ -120,8 +124,8 @@ const ContactForm = () => {
                         </p>
                     </button>
 
-                    <div className='block lg:hidden'>
-                        <button className={`flex justify-center items-center bg-[#FF6910] w-full rounded-2xl py-4 lg:hidden `}>
+                    <div className='block xl:hidden'>
+                        <button disabled={isDisabled} className={`${isDisabled && "opacity-50"} flex justify-center items-center bg-[#FF6910] w-full rounded-2xl py-4 lg:hidden `}>
                             <span className='h-full bg-[#FF6910] text-white font-medium text-lg mr-3'>{t("submit")}</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
                                 <path d="M7.5 17L17.5 7" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />

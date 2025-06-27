@@ -10,7 +10,7 @@ const TalkTheTeam = () => {
     const t = useTranslations("contactUs");
 
     return (
-        <div className='w-full md:w-[400px] mx-auto lg:w-[690px] lg:min-w-[690px] h-[400px] lg:h-[668px] relative mt-8 lg:mt-0'>
+        <div className='w-full md:w-[400px] mx-auto xl:h-[668px] lg:min-w-[500px]  2xl:w-[690px] 2xl:min-w-[690px] h-[400px] relative mt-8 lg:mt-0'>
             <Image src={bgTalkTheTeam} alt='' fill className='w-full h-full ' />
             <div className='relative z-[1] flex flex-col justify-end items-end h-full p-4 lg:p-8'>
                 <h3 className='text-xl lg:text-[40px] text-white font-semibold -tracking-[0.64px]'>{t("rightTitle")}</h3>

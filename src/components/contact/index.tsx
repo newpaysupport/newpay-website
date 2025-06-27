@@ -6,8 +6,8 @@ const ContactScreen = () => {
 
 
     return (
-        <div className="container mx-auto mt-16">
-            <div className="bg-white rounded-xl flex flex-col lg:flex-row lg:justify-between gap-x-5 lg:h-[708px] pt-8 pb-12 px-5 lg:px-0 lg:py-5 relative">
+        <div className="mt-16 container mx-auto xl:px-20">
+            <div className="bg-white rounded-xl flex flex-col xl:flex-row xl:justify-between gap-5 h-full pt-8 pb-12 px-5 xl:px-0 lg:py-5 relative">
                 <ContactForm />
                 <TalkTheTeam />
             </div>

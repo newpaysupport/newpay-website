@@ -38,7 +38,7 @@ const FaqHelpSlugDetail = ({ slug }: { slug: string }) => {
 
     return (
         <div className='bg-[#060606] py-[120px]'>
-            <div className='container mx-auto px-6 lg:px-0'>
+            <div className='container mx-auto px-6 lg:px-0 xl:px-[200px]'>
                 <div className='flex gap-y-6 lg:gap-y-0 flex-col lg:flex-row lg:items-center lg:justify-between'>
                     <div className='flex items-center space-x-4 text-[#848484] text-sm lg:text-base font-normal'>
                         <Link href={`/${currentLocale}/faq-help`} className='cursor-pointer'>{t("allCollection")}</Link>
