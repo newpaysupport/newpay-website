@@ -118,7 +118,7 @@ const MobileHeader = ({
                                                                     }} 
                                                                     className="rounded-xl relative overflow-hidden cursor-pointer hover:scale-102 transition-transform w-[160px]">
                                                                         <Image src={card.src} alt={card.title} className="w-[160px] h-[160px] object-cover rounded-xl" />
-                                                                        <div className="absolute bottom-0 p-3 flex justify-between w-full z-50">
+                                                                        <div className="absolute bottom-0 p-2 flex justify-between w-full z-50">
                                                                             <h1 className="text-sm font-semibold text-white">{card.title}</h1>
                                                                             <Image src={arrow_right} alt="arrow right" />
                                                                         </div>

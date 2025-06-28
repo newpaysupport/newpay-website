@@ -16,6 +16,9 @@ import tether from "@/images/payment/content-main/tether.svg";
 import tiktok from "@/images/payment/content-main/tiktok.svg";
 import usd from "@/images/payment/content-main/usd.svg";
 import youtube from "@/images/payment/content-main/youtube.svg";
+import { useRef } from "react";
+import { useInView } from "motion/react";
+import AnimationFade from "../animation/animation-fade";
 
 const ContentMain = () => {
     const locale = useLocale();
@@ -26,10 +29,16 @@ const ContentMain = () => {
     const listImage = [
         netflix, tiktok, spotify, youtube, facebook, aliexpress
     ]
+    const textRef = useRef(null);
+    const isInView = useInView(textRef, { once: false, amount: 0.5 });
+
     return (
         <div className="lg:mt-30 mt-12 lg:container lg:mx-auto overflow-hidden">
-            <h1 className="lg:text-6xl text-[32px] text-[#1B1B1B] font-semibold text-center lg:pt-10 pt-12 px-6 lg:px-0">{contentSection2.title}</h1>
-            <p className="lg:text-lg text-sm font-medium text-center text-[#666] mt-4 mx-auto px-6 lg:px-0">{contentSection2.description}</p>
+            <AnimationFade direction="up" inView={isInView}>
+                <h1 ref={textRef} className="lg:text-6xl text-[32px] text-[#1B1B1B] font-semibold text-center lg:pt-10 pt-12 px-6 lg:px-0">{contentSection2.title}</h1>
+                <p ref={textRef} className="lg:text-lg text-sm font-medium text-center text-[#666] mt-4 mx-auto px-6 lg:px-0">{contentSection2.description}</p>
+            </AnimationFade>
+
             <div className="mx-auto mt-10 relative">
                 <Image src={world} alt="world" className="mx-auto" />
 
@@ -66,7 +75,7 @@ const ContentMain = () => {
                 <div className='flex gap-8 justify-center animation-slideshow'>
                     {[...listImage, ...listImage, ...listImage].map((image, index) => {
                         return (
-                            <Image src={image} alt="Netflix" key={index} className="lg:w-full lg:h-full w-[80px] h-[40px]"/>
+                            <Image src={image} alt="Netflix" key={index} className="lg:w-full lg:h-full w-[80px] h-[40px]" />
                         )
                     })}
                 </div>

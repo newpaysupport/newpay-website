@@ -14,7 +14,15 @@ const FeaturesGrid = () => {
     const joint = locale === 'en' ? enBlog : ziBlog;
 
     const gridRef = useRef(null);
+    const mobileGridRef = useRef(null);
+
     const isInView = useInView(gridRef, { once: false, amount: 0.1 });
+
+    const isMobileInView = useInView(mobileGridRef, { 
+        once: false, 
+        amount: 0.05,
+        margin: "-5% 0px -5% 0px"
+    });
 
     const iconVariants: Variants = {
         hidden: { opacity: 0, x: -20, scale: 0.8 },
@@ -48,7 +56,7 @@ const FeaturesGrid = () => {
                     <p className="text-sm text-[#AEAEAE]">
                         {joint.featuresGrid.description}
                     </p>
-                    <div ref={gridRef} className="mx-auto">
+                    <div ref={mobileGridRef} className="mx-auto">
                         <div className="grid grid-cols-2 border-[#565656]">
                             {joint.featuresGrid.features.map((feature, index) => {
                                 const isStart = index % 2 === 0;
@@ -62,7 +70,7 @@ const FeaturesGrid = () => {
                                             <motion.div
                                                 custom={index}
                                                 initial="hidden"
-                                                animate={isInView ? 'visible' : 'hidden'}
+                                                animate={isMobileInView ? 'visible' : 'hidden'}
                                                 variants={iconVariants}
                                             >
                                                 <Image
@@ -96,7 +104,7 @@ const FeaturesGrid = () => {
                     </p>
 
                     <div ref={gridRef} className="max-w-7xl mx-auto mt-20">
-                        <div className="grid grid-cols-1 lg:grid-cols-2 lg:grid-cols-4 gap-0">
+                        <div className="grid grid-cols-1 lg:grid-cols-4 gap-0">
                             {joint.featuresGrid.features.map((feature, index) => {
                                 const isLastInRow = index === 3 || index === 7;
                                 const isBelowFirstRow = index > 3;

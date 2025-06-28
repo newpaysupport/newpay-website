@@ -1,15 +1,13 @@
-import React, { useEffect, useState } from 'react'
-import image_card2 from '@/images/home/joint/card-scroll/image_card2.png'
-import { FaArrowRight } from "react-icons/fa";
-import phone from '@/images/home/joint/card-scroll/phone.png'
-import cardContainer from '@/images/home/joint/card-scroll/CardContainer.svg'
+import ToastCustom from '@/components/common/toast';
 import { joint as enBlog } from '@/i18n/messages/en.json';
 import { joint as ziBlog } from '@/i18n/messages/zi.json';
+import cardContainer from '@/images/home/joint/card-scroll/CardContainer.svg';
+import phone from '@/images/home/joint/card-scroll/phone.png';
 import { useLocale } from 'next-intl';
-import Image from "next/image"
+import Image from "next/image";
 import Link from 'next/link';
-import ToastCustom from '@/components/common/toast';
 import toast from 'react-hot-toast';
+import { FaArrowRight } from "react-icons/fa";
 import Card4Mobile from './card4-mobile';
 
 const Card4 = () => {

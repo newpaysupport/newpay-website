@@ -15,7 +15,7 @@ const Faq = () => {
     const faqSection = payment.faqSection;
     const faqItems = faqSection.faqItems;
     return (
-        <div className="lg:py-20 lg:px-30 px-4 py-12 ">
+        <div className="lg:py-20 lg:px-30 px-6 py-12 ">
             <div className="flex lg:flex-row flex-col mx-auto max-w-7xl justify-between">
                 <div className="text-white flex lg:flex-col flex-row justify-between lg:h-[450px]">
                     <div>
