@@ -80,7 +80,7 @@ const MobileHeader = ({
 
                             {/* Dropdown Items */}
                             {link.hasDropdown && mobileOpenDropdown === link.key && (
-                                <ul className="pl-4 py-2 space-y-3">
+                                <ul className="pl-4 py-2 space-y-3 z-50">
                                     {link.dropdownItems?.map((item: any, index: any) => (
                                         <li key={index}>
                                             {item.type === 'cardGroup' ? (

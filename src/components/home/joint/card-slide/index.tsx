@@ -22,10 +22,10 @@ const AutoSlideshow = () => {
                 {/* overlay  */}
                 <div style={{
                     background: "linear-gradient(90deg, rgba(255, 255, 255, 1) 5%, rgba(255, 255, 255, 0) 100%)",
-                }} className='absolute w-[120px] h-[450px] left-0 bottom-[12%] z-50'></div>
+                }} className='absolute w-[120px] h-[450px] left-0 bottom-[12%] z-30'></div>
                 <div style={{
                     background: "linear-gradient(90deg, rgba(255, 255, 255, 0.00) 5%, rgba(255, 255, 255, 1) 100%)"
-                }} className='absolute w-[120px] h-[450px] right-0 bottom-[12%] z-50'></div>
+                }} className='absolute w-[120px] h-[450px] right-0 bottom-[12%] z-30'></div>
 
                 <div className="relative mt-20 flex justify-center items-center animation-slideshow gap-5">
 
