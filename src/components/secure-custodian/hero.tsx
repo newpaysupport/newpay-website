@@ -2,6 +2,7 @@
 import React from 'react'
 import BtnPrimary from '../common/button/btn-primary'
 import overlay from '@/images/secure/overlay.png';
+import overlayMobile from '@/images/secure/overlay-mobile.png';
 import { useTranslations } from 'next-intl'
 import Image from 'next/image';
 import toast from 'react-hot-toast';
@@ -20,10 +21,15 @@ const Hero = () => {
             <video src={'/videos/secure-custodian/heroVideo.mp4'} className='w-full h-full object-cover object-center hidden lg:block' loop={true} autoPlay={true} muted={true} preload='true' />
             <video src={'/videos/secure-custodian/heroVideoMobile.mp4'} className='w-full h-full object-cover object-center lg:hidden' loop={true} autoPlay={true} muted={true} preload='true' />
 
-            <figure className='absolute w-full lg:h-[460px] z-[1] bottom-0 left-0'>
+            <figure className='absolute w-full h-full lg:h-[460px] z-[1] bottom-0 left-0 '>
                 <Image src={overlay} alt='' className='object-cover w-full h-full 2xl:h-auto' />
             </figure>
-            <div className='absolute inset-0 w-full h-full z-[2]'>
+
+            <div
+                style={{ background: 'linear-gradient(180deg, rgba(6, 6, 6, 0.00) 50%, #060606 99.98%)', backdropFilter: 'blur(40px)' }}
+                className='absolute w-full h-[280px] z-[2] bottom-0 left-0 lg:hidden'></div>
+
+            <div className='absolute inset-0 w-full h-full z-[10]'>
                 <div className='flex justify-center items-end h-full pb-12 px-4 lg:px-0 lg:pb-[120px]'>
                     <div className='w-full lg:w-[600px] text-center'>
                         <p
