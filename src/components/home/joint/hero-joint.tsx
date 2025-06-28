@@ -47,8 +47,8 @@ const HeroJoint = () => {
             </div>
 
             {/* Mobile Layout */}
-            <div className="absolute inset-0 flex justify-start items-start text-white p-4 md:hidden">
-                <div className="container mx-auto flex md:flex-col flex-row justify-between gap-5 items-center pt-[15%]">
+            <div className="absolute inset-0 flex justify-start items-start text-white p-4 lg:hidden">
+                <div className="container mx-auto flex lg:flex-col flex-row justify-between gap-5 items-center pt-[15%]">
                     {/* Left Images Column */}
                     <div className="flex flex-col gap-100 items-start mb-8 lg:mb-0">
                         <Image src={jointImages.img1} alt="Joint Image 1" width={160} height={160} className="fadeInUp-no-delay w-[180px]" priority />
@@ -65,15 +65,15 @@ const HeroJoint = () => {
                                 WebkitBackgroundClip: 'text',
                                 WebkitTextFillColor: 'transparent',
                             }}
-                            className="text-[32px] md:text-6xl font-semibold mb-4 leading-tight fadeInUp-no-delay"
+                            className="text-[32px] lg:text-6xl font-semibold mb-4 leading-tight fadeInUp-no-delay"
                         >
                             {joint.hero.title}
                         </h1>
-                        <p className="md:max-w-xl md:mx-auto text-[#AEAEAE] md:text-md text-sm mb-8 fadeInUp-delay-03">
+                        <p className="lg:max-w-xl lg:mx-auto text-[#AEAEAE] lg:text-lg text-sm mb-8 fadeInUp-delay-03">
                             {joint.hero.description}
                         </p>
                         <Link href={`/${locale}/contact`}>
-                            <button className="bg-[#FF6910] font-semibold cursor-pointer text-white px-15 py-3 md:h-[55px] md:w-[240px] rounded-full text-md hover:bg-[#e65c00] transition-colors fadeInUp-delay-03">
+                            <button className="bg-[#FF6910] font-semibold cursor-pointer text-white px-15 py-3 lg:h-[55px] lg:w-[240px] rounded-full text-lg hover:bg-[#e65c00] transition-colors fadeInUp-delay-03">
                                 {joint.hero.buttonText}
                             </button>
                         </Link>
@@ -88,10 +88,10 @@ const HeroJoint = () => {
             </div>
 
             {/* Desktop Layout */}
-            <div className="absolute inset-0 md:flex justify-start items-start text-white p-4 hidden">
+            <div className="absolute inset-0 lg:flex justify-start items-start text-white p-4 hidden">
                 <div className="container mx-auto flex flex-col lg:flex-row justify-between gap-5 items-center pt-[5%] pb-[5%]">
                     {/* Left Images Column */}
-                    <div className="flex flex-col gap-10 md:gap-60 items-start mb-8 lg:mb-0">
+                    <div className="flex flex-col gap-10 lg:gap-60 items-start mb-8 lg:mb-0">
                         <Image src={jointImages.img1} alt="Joint Image 1" width={400} height={400} className="fadeInUp-no-delay w-full h-full" priority />
                         <Image src={jointImages.img2} alt="Joint Image 2" width={400} height={400} className="fadeInUp-no-delay w-full h-full" priority />
                     </div>
@@ -106,22 +106,22 @@ const HeroJoint = () => {
                                 WebkitBackgroundClip: 'text',
                                 WebkitTextFillColor: 'transparent',
                             }}
-                            className="text-4xl md:text-6xl font-semibold mb-4 leading-tight fadeInUp-no-delay"
+                            className="text-4xl lg:text-6xl font-semibold mb-4 leading-tight fadeInUp-no-delay"
                         >
                             {joint.hero.title}
                         </h1>
-                        <p className="max-w-xl mx-auto text-[#AEAEAE] text-md mb-8 fadeInUp-delay-03">
+                        <p className="max-w-xl mx-auto text-[#AEAEAE] text-lg mb-8 fadeInUp-delay-03">
                             {joint.hero.description}
                         </p>
                         <Link href={`/${locale}/contact`}>
-                            <button className="bg-[#FF6910] font-semibold cursor-pointer text-white px-15 py-3 md:h-[55px] md:w-[240px] rounded-full text-md hover:bg-[#e65c00] transition-colors fadeInUp-delay-03">
+                            <button className="bg-[#FF6910] font-semibold cursor-pointer text-white px-15 py-3 lg:h-[55px] lg:w-[240px] rounded-full text-lg hover:bg-[#e65c00] transition-colors fadeInUp-delay-03">
                                 {joint.hero.buttonText}
                             </button>
                         </Link>
                     </div>
 
                     {/* Right Images Column */}
-                    <div className="flex flex-col gap-10 md:gap-60 items-end mt-8 lg:mt-0">
+                    <div className="flex flex-col gap-10 lg:gap-60 items-end mt-8 lg:mt-0">
                         <Image src={img_bg_joint3} alt="Joint Image 3" width={400} height={400} className="fadeInUp-no-delay w-full h-full" priority />
                         <Image src={jointImages.img4} alt="Joint Image 4" width={400} height={400} className="fadeInUp-no-delay w-full h-full" priority />
                     </div>

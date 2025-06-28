@@ -174,21 +174,21 @@ const Header = () => {
 
     return (
         <nav style={getHeaderStyles()}
-            className={`text-sm h-[70px] flex items-center justify-between px-6 md:px-16 lg:px-24 2xl:px-32 py-4
+            className={`text-sm h-[70px] flex items-center justify-between px-6 lg:px-16 2xl:px-32 py-4
                 fixed top-0 left-0 w-full z-50
                 text-white transition-all duration-300 ease-out
                 ${isVisible ? 'translate-y-0' : 'translate-y-[-100%]'}`}>
-            <Link href={`/${locale}`} className="md:flex md:items-center md:space-x-4">
+            <Link href={`/${locale}`} className="lg:flex lg:items-center lg:space-x-4">
                 <Image src={img_logo} alt="NewPay Logo" width={120} height={25} className="object-contain" />
             </Link>
 
             {/* Desktop Navigation */}
-            <ul className="flex md:justify-center items-center md:space-x-3">
+            <ul className="flex lg:justify-center items-center lg:space-x-3">
                 {navLinks.map((link) => (
                     <li key={link.href}>
                         <Link
                             href={link.href}
-                            className={`md:px-6 font-semibold lg:font-normal md:py-2 px-5 py-2 rounded-full transition
+                            className={`lg:px-6 font-semibold lg:font-normal lg:py-2 px-5 py-2 rounded-full transition
                             ${isActive(link.href)
                                     ? isBlogAndContact
                                         ? 'bg-black/10 text-black'
@@ -206,7 +206,7 @@ const Header = () => {
             </ul>
 
             {/* Desktop Right Navigation */}
-            <ul className="hidden md:flex items-center gap-2 ">
+            <ul className="hidden lg:flex items-center gap-2 ">
                 {navLinksRight.map((link) => (
                     <li
                         key={link.key}
@@ -253,7 +253,7 @@ const Header = () => {
                 ))}
             </ul>
 
-            <div className="hidden md:block">
+            <div className="hidden lg:block">
                 <SwitchLanguage locale={locale} switchLocale={switchLocale} t={t} isBlogAndContact={isBlogAndContact} isVisible={isVisible} />
             </div>
 
@@ -261,7 +261,7 @@ const Header = () => {
             <button
                 aria-label="menu-btn"
                 type="button"
-                className={`cursor-pointer menu-btn flex items-center justify-center w-10 h-10 md:hidden active:scale-90 transition-all duration-200
+                className={`cursor-pointer menu-btn flex items-center justify-center w-10 h-10 lg:hidden active:scale-90 transition-all duration-200
                     ${isBlogAndContact
                         ? 'text-black hover:bg-black/10'
                         : 'text-white hover:bg-white/10'

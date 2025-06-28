@@ -35,7 +35,7 @@ const MobileHeader = ({
     t: any,
 }) => {
     return (
-        <div className={`md:hidden fixed top-[70px] left-0 w-full h-[calc(100vh-70px)] backdrop-blur-md z-50 overflow-y-auto ${isBlogAndContact ? 'bg-white text-black' : 'bg-[#060606] text-white'}`}>
+        <div className={`lg:hidden fixed top-[70px] left-0 w-full h-[calc(100vh-70px)] backdrop-blur-md z-50 overflow-y-auto ${isBlogAndContact ? 'bg-white text-black' : 'bg-[#060606] text-white'}`}>
             <div className="px-6 py-6">
                 {/* Navigation Links */}
                 <ul className="space-y-0">
@@ -80,7 +80,7 @@ const MobileHeader = ({
 
                             {/* Dropdown Items */}
                             {link.hasDropdown && mobileOpenDropdown === link.key && (
-                                <ul className="pl-4 py-2 space-y-3">
+                                <ul className="pl-4 py-2 space-y-3 z-50">
                                     {link.dropdownItems?.map((item: any, index: any) => (
                                         <li key={index}>
                                             {item.type === 'cardGroup' ? (

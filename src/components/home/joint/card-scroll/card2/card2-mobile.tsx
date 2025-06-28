@@ -29,7 +29,7 @@ type Card2 = {
 
 const Card2Mobile = ({joint, listText, locale, handleToast } : Card2) => {
     return (
-        <section className="bg-white py-12 px-6 flex items-center rounded-3xl container mx-auto md:hidden">
+        <section className="bg-white py-12 px-6 flex items-center rounded-3xl container mx-auto lg:hidden">
             <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6">
                 {/* Left Section: Text Content and Small Card */}
                 <div className="flex flex-col justify-between gap-6 items-end">
@@ -76,7 +76,7 @@ const Card2Mobile = ({joint, listText, locale, handleToast } : Card2) => {
                             style={{
                                 border: "1px solid rgba(0, 0, 0, 0.16)"
                             }}
-                            className="md:w-[245px] bg-[#060606] font-semibold py-4 px-10 rounded-full cursor-pointer hover:scale-101">
+                            className="lg:w-[245px] bg-[#060606] font-semibold py-4 px-10 rounded-full cursor-pointer hover:scale-101">
                             <p className="text-sm text-white">{joint.card2.textButtonCardLeft}</p>
 
                         </button>
@@ -85,7 +85,7 @@ const Card2Mobile = ({joint, listText, locale, handleToast } : Card2) => {
                             <button style={{
                                 border: "1px solid rgba(0, 0, 0, 0.16)",
                             }}
-                                className="md:w-[254px] border border-white font-semibold py-4 px-10 rounded-full cursor-pointer hover:shadow-sm">
+                                className="lg:w-[254px] border border-white font-semibold py-4 px-10 rounded-full cursor-pointer hover:shadow-sm">
                                 <p className="flex justify-center items-center gap-2.5 text-sm">{joint.card2.textButtonCardRight}<FaArrowRight className="font-light animate-translateX" /></p>
                             </button>
                         </Link>

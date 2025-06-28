@@ -23,11 +23,11 @@ const Card4 = () => {
             {/* mobile */}
             <Card4Mobile joint={joint} locale={locale} handleToast={handleToast} />
             {/* desktop */}
-            <section className="bg-white p-10 md:flex items-center rounded-3xl min-h-screen hidden">
+            <section className="bg-white p-10 lg:flex items-center rounded-3xl min-h-screen hidden">
                 <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 ">
                     {/* Left Section: Text Content and Small Card */}
                     <div className="flex flex-col justify-between items-center gap-10">
-                        <h2 className="md:w-[60%] text-4xl md:text-5xl font-semibold text-[#1B1B1B] mb-4 leading-tight">
+                        <h2 className="lg:w-[60%] text-4xl lg:text-5xl font-semibold text-[#1B1B1B] mb-4 leading-tight">
                             {joint.card4.title}
                         </h2>
                         <Image
@@ -43,8 +43,8 @@ const Card4 = () => {
                             borderRadius: "24px",
                             background: "rgba(255, 105, 16, 0.08)"
                         }}
-                            className='flex flex-col space-y-8 p-8 md:w-[400px] items-end'>
-                            <Image src={cardContainer} alt='' className='mx-auto md:w-[337px] md:h-[160px]' />
+                            className='flex flex-col space-y-8 p-8 lg:w-[400px] items-end'>
+                            <Image src={cardContainer} alt='' className='mx-auto lg:w-[337px] lg:h-[160px]' />
                             <p className='text-[#000000]/72'>
                                 {joint.card4.textCard}
                             </p>

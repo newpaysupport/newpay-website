@@ -63,7 +63,7 @@ const Footer = () => {
                             <Image src={logoMark} alt='logo mark' />
                             <Image src={logoNewpay} alt='logo mark' />
                         </Link>
-                        <div className='flex items-center gap-x-2 cursor-pointer mt-8 mb-12 lg:mb-20'>
+                        <div className='flex flex-wrap items-center gap-2 cursor-pointer mt-8 mb-12 lg:mb-20'>
                             <Image onClick={handleToastComingSoon} src={appStore} alt='logo' />
                             <Image onClick={handleToastComingSoon} src={ggplay} alt='logo' />
                         </div>

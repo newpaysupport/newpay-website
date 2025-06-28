@@ -67,7 +67,7 @@ const JointScreen = () => {
         <>
             <HeroJoint />
             {/* Desktop */}
-            <div ref={pinContainerRef} style={{ height: `${slideCount}00vh` }} className="relative md:block hidden">
+            <div ref={pinContainerRef} style={{ height: `${slideCount}00vh` }} className="relative lg:block hidden">
                 <div ref={swiperContainerRef} className="sticky top-0 h-screen w-full">
                     <Swiper
                         direction="vertical"
@@ -93,7 +93,7 @@ const JointScreen = () => {
                 </div>
             </div >
             {/* Mobile */}
-            <div className="md:hidden">
+            <div className="lg:hidden">
                 <CardContent />
                 <Card2 />
                 <Card3 />

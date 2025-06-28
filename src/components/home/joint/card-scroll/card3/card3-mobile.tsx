@@ -23,7 +23,7 @@ type Card3Props = {
 }
 const Card3Mobile = ({ locale, t, joint }: Card3Props) => {
     return (
-        <section className="bg-white py-12 px-6 flex items-center rounded-3xl md:hidden">
+        <section className="bg-white py-12 px-6 flex items-center rounded-3xl lg:hidden">
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 space-y-8">
                 {/* Left Section: Text Content and Small Card */}
                 <div className="flex flex-col justify-between">
@@ -65,7 +65,7 @@ const Card3Mobile = ({ locale, t, joint }: Card3Props) => {
                         className="rounded-3xl h-[405px] object-cover object-center mx-auto"
                     />
                     <div
-                        className="absolute top-[5%] left-[2%] flex items-center justify-between text-white rounded-2xl p-2 sm:p-3 md:p-4 bg-[#FFF] shadow-md w-full max-w-xs">
+                        className="absolute top-[5%] left-[2%] flex items-center justify-between text-white rounded-2xl p-2 sm:p-3 lg:p-4 bg-[#FFF] shadow-lg w-full max-w-xs">
                         <div className="flex items-center space-x-5">
                             <div className="flex-shrink-0">
                                 <Image src={icon_gift} alt="Gift Icon" width={50} height={50} />
@@ -81,7 +81,7 @@ const Card3Mobile = ({ locale, t, joint }: Card3Props) => {
                     </div>
 
                     <div
-                        className="absolute bottom-[30%] right-[-3%] flex items-center justify-between text-white rounded-2xl p-2 sm:p-3 md:p-4 bg-[#FFF] shadow-md w-full max-w-xs">
+                        className="absolute bottom-[30%] right-[-3%] flex items-center justify-between text-white rounded-2xl p-2 sm:p-3 lg:p-4 bg-[#FFF] shadow-lg w-full max-w-xs">
                         <div className="flex items-center space-x-5">
                             <div className="flex-shrink-0">
                                 <Image src={arrow_right} alt="Gift Icon" width={50} height={50} className='text-[#FF6910]' />
@@ -98,7 +98,7 @@ const Card3Mobile = ({ locale, t, joint }: Card3Props) => {
                     </div>
 
                     <div
-                        className="absolute bottom-[5%] left-[-3%] flex items-center justify-between text-white rounded-2xl p-2 sm:p-3 md:p-4 bg-[#FFF] shadow-md w-full max-w-xs">
+                        className="absolute bottom-[5%] left-[-3%] flex items-center justify-between text-white rounded-2xl p-2 sm:p-3 lg:p-4 bg-[#FFF] shadow-lg w-full max-w-xs">
                         <div className="flex items-center space-x-5">
                             <div className="flex-shrink-0">
                                 <Image src={arrow_left} alt="Gift Icon" width={50} height={50} />
