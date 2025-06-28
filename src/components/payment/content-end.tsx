@@ -27,7 +27,9 @@ const ContentEnd = () => {
     const cardSection = payment.cardSection;
 
     const textRef = useRef(null);
+    const giftRef = useRef(null);
     const isInView = useInView(textRef, { once: false, amount: 0.5 });
+    const isInViewGift = useInView(textRef, { once: true, amount: 0.8 });
 
     return (
         <div className='lg:pt-20 lg:pb-30 py-8 lg:px-0 px-6 container mx-auto'>
@@ -36,7 +38,7 @@ const ContentEnd = () => {
                     ref={textRef}
                     className="lg:pb-30 pb-12 text-center"
                 >
-                    <h1 className="lg:text-6xl text-[32px] text-[#1B1B1B] font-semibold lg:pt-10">
+                    <h1 className="lg:text-6xl text-[32px] text-[#1B1B1B] font-semibold">
                         {cardSection.title}
                     </h1>
                     <p className="lg:text-2xl text-base font-medium text-[#AEAEAE] mt-4 mx-auto lg:w-[35%]">
@@ -49,14 +51,12 @@ const ContentEnd = () => {
             <div className="lg:pt-30 pt-16 flex flex-col lg:flex-row items-center justify-center">
                 <div className="flex flex-col w-full lg:w-[35%]">
                     <Image src={gift} alt="Share Happy Moment" className='animation-gift-box lg:w-16 lg:h-16 h-12 w-12' />
-
                     <h1 className="lg:text-6xl text-[32px] font-semibold pt-4 sm:pt-6 lg:pt-10 text-left text-[#1B1B1B]">
                         {shareHappyMoment.title}
                     </h1>
                     <p className="text-left text-[#666] pt-4 w-[80%] lg:text-lg text-sm font-medium">
                         {shareHappyMoment.description}
                     </p>
-
                     <div className='lg:pt-22 pt-6'>
                         <div className="flex items-center lg:justify-between lg:gap-0 gap-10 bg-orange-500 text-white rounded-[20px] p-4.5 lg:p-6 shadow-lg lg:w-[400px] w-fit">
                             <div className="flex items-center gap-3">
