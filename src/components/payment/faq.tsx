@@ -26,7 +26,7 @@ const Faq = () => {
                             {faqSection.subtitle}
                         </p>
                         <Link href={`/${locale}/faq-help`} className='md:block hidden'>
-                            <button className='lg:mt-10 bg-[#1C1C1C] text-lg rounded-2xl px-6 py-4 font-semibold'>
+                            <button className='lg:mt-10 bg-[#1C1C1C] text-lg rounded-2xl px-6 py-4 font-semibold cursor-pointer'>
                                 <p className="flex justify-center items-center gap-3"> {locale === 'en' ? 'View more' : '查看更多'} <Image src={arrow_right} alt='arrow' className="font-light group-hover:translate-x-1.5 transition ease-in-out animate-translateX" /></p>
                             </button>
                         </Link>
@@ -36,21 +36,21 @@ const Faq = () => {
                 <div className="text-white">
                     {faqItems.map((item, index) => {
                         return (
-                            <details key={item.question} className="border-b border-gray-800 py-6 group">
-                                <summary className="md:w-[640px] w-full flex justify-between items-center text-left focus:outline-none cursor-pointer">
+                            <details key={item.question} className="cursor-pointer focus:outline-none group border-b border-gray-800 ">
+                                <summary className="md:w-[640px] w-full flex justify-between items-center text-left py-6">
                                     <p className="md:text-2xl text-lg font-medium md:w-full w-[90%]">{item.question}</p>
                                     <span className="text-3xl transition-transform duration-300 group-open:rotate-45">
                                         +
                                     </span>
                                 </summary>
-                                <p className="md:text-base text-sm md:w-[640px] w-full mt-8 text-[#AEAEAE] leading-6 font-medium">
+                                <p className="md:text-base text-sm md:w-[640px] w-full pb-6 text-[#AEAEAE] leading-6 font-medium">
                                     {item.answer}
                                 </p>
                             </details>
                         )
                     })}
                     <Link href={`/${locale}/faq-help`} className='md:hidden flex justify-center'>
-                        <button className='mt-6 bg-[#1C1C1C] text-sm text-[#fff] rounded-2xl px-6 py-4 font-semibold'>
+                        <button className='mt-6 bg-[#1C1C1C] text-sm text-[#fff] rounded-2xl px-6 py-4 font-semibold cursor-pointer'>
                             <p className="flex justify-center items-center gap-3"> {locale === 'en' ? 'View more' : '查看更多'} <Image src={arrow_right} alt='arrow' className="font-light group-hover:translate-x-1.5 transition ease-in-out animate-translateX" /></p>
                         </button>
                     </Link>
