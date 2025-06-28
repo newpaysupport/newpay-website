@@ -794,6 +794,7 @@
         },
         "allCollection": "全部合集",
         "placeHolderSearchArticles": "搜索文章",
+        "noResult": "未找到与您的搜索匹配的结果 ",
         "information": [
             {
                 "title": "管理卡片",

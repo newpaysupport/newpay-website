@@ -786,6 +786,7 @@
         },
         "allCollection": "All Collection",
         "placeHolderSearchArticles": "Search for article",
+        "noResult": "No results found for your search",
         "information": [
             {
                 "title": "Managing your Card",
