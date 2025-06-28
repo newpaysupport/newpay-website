@@ -33,7 +33,7 @@ const FaqInfo = ({ searchTerm }: { searchTerm: string }) => {
         <div className='bg-[#060606]'>
             <div className='container mx-auto'>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-3'>
-                    {filteredFaqs.map((item, index) => {
+                    {!filteredFaqs.length ? <p className='text-white text-lg font-semibold text-center col-span-1 md:col-span-2'>No results found for your search</p> : filteredFaqs.map((item, index) => {
                         return (
                             <Link href={`faq-help/${item.slug}`} key={index}>
                                 <div className='p-6 lg:p-10 bg-white/4 hover:bg-white/8 transition-all ease-linear duration-150 rounded-[20px] cursor-pointer flex flex-col justify-center h-[260px] lg:h-[276px]'>
