@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import Image from 'next/image';
 
@@ -14,7 +15,7 @@ type CardSlideMobileProps = {
     };
 };
 
-const CardSlideMobile = ({slides, joint} : CardSlideMobileProps) => {
+const CardSlideMobile = ({ slides, joint }: CardSlideMobileProps) => {
     return (
         <div className="py-16 w-full overflow-hidden bg-white relative md:hidden">
             {/* Title */}
@@ -25,17 +26,18 @@ const CardSlideMobile = ({slides, joint} : CardSlideMobileProps) => {
             {/* Overlay Left */}
             <div
                 style={{
-                    background: 'linear-gradient(90deg, rgba(255, 255, 255, 1) 5%, rgba(255, 255, 255, 0) 100%)',
+                    background: "linear-gradient(90deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.00) 100%)"
+
                 }}
-                className="absolute w-[100px] h-[450px] left-0 bottom-[6%] z-50"
+                className="absolute w-[60px] h-[450px] left-0 bottom-[6%] z-50"
             ></div>
 
             {/* Overlay Right */}
             <div
                 style={{
-                    background: 'linear-gradient(90deg, rgba(255, 255, 255, 0.00) 5%, rgba(255, 255, 255, 1) 100%)',
+                    background: "linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.80) 100%)"
                 }}
-                className="absolute w-[100px] h-[450px] right-0 bottom-[6%] z-50"
+                className="absolute w-[60px] h-[450px] right-0 bottom-[6%] z-50"
             ></div>
 
             {/* Slide container */}
