@@ -46,13 +46,24 @@ const MobileHeader = ({
                                 onClick={() => link.hasDropdown ? toggleMobileDropdown(link.key) : null}
                             >
                                 {link.hasDropdown ? (
-                                    <span className={`text-base font-medium cursor-pointer ${isBlogAndContact ? 'text-black' : 'text-white'}`}>
+                                    <span
+                                        className={`text-base font-medium cursor-pointer 
+                                      ${isBlogAndContact
+                                                ? mobileOpenDropdown === link.key
+                                                    ? 'text-black'
+                                                    : 'text-[#666]'
+                                                : mobileOpenDropdown === link.key
+                                                    ? 'text-white'
+                                                    : 'text-[#AEAEAE]'
+                                            }`}
+                                    >
                                         {link.label}
                                     </span>
+
                                 ) : (
                                     <Link
                                         href={link.href}
-                                        className={`text-base font-medium ${isBlogAndContact ? 'text-black' : 'text-white'}`}
+                                        className={`text-base font-medium ${isBlogAndContact ? 'text-black' : 'text-white'} `}
                                         onClick={() => setIsMobileMenuOpen(false)}
                                     >
                                         {link.label}
@@ -60,7 +71,7 @@ const MobileHeader = ({
                                 )}
 
                                 {link.hasDropdown && (
-                                    <svg className={`transition-transform ${mobileOpenDropdown === link.key ? 'rotate-180' : ''} ${isBlogAndContact ? 'text-black' : 'text-white'}`}
+                                    <svg className={`transition-transform -rotate-90 ${mobileOpenDropdown === link.key ? 'rotate-360' : ''} ${isBlogAndContact ? 'text-black' : 'text-white'}`}
                                         xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                         <path d="M4 6L8 10L12 6" stroke={isBlogAndContact ? "black" : "white"} strokeOpacity="0.6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
@@ -74,11 +85,19 @@ const MobileHeader = ({
                                         <li key={index}>
                                             {item.type === 'cardGroup' ? (
                                                 <>
-                                                    <div className="text-sm py-2 cursor-pointer flex items-center justify-between text-[#AEAEAE]"
-                                                        onClick={() => setMobileCardOpen(!mobileCardOpen)}>
+                                                    <div
+                                                        className={`text-sm py-2 cursor-pointer flex items-center justify-between ${isBlogAndContact
+                                                            ? mobileCardOpen
+                                                                ? 'text-black'
+                                                                : 'text-[#666]'
+                                                            : mobileCardOpen
+                                                                ? 'text-white'
+                                                                : 'text-[#AEAEAE]'
+                                                            }`}
+                                                        onClick={() => setMobileCardOpen(!mobileCardOpen)}
+                                                    >
                                                         <span>{item.title}</span>
-                                                        <svg className={`transition-transform ${mobileCardOpen ? 'rotate-180' : ''}`} xmlns="http://www.w3.org/2000/svg"
-                                                            width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                        <svg className={`transition-transform -rotate-90 ${mobileCardOpen ? 'rotate-360' : ''}`} xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                                             <path d="M4 6L8 10L12 6" stroke={isBlogAndContact ? "black" : "white"} strokeOpacity="0.6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                                         </svg>
                                                     </div>
@@ -94,13 +113,16 @@ const MobileHeader = ({
                                                                 src: physicard_card_dropdown
                                                             }].map((card, i) => (
                                                                 <Link key={i} href={`/${locale}/payment`} onClick={() => setIsMobileMenuOpen(false)}>
-                                                                    <div className="rounded-xl relative overflow-hidden cursor-pointer hover:scale-102 transition-transform w-[160px]">
+                                                                    <div style={{
+                                                                        border: "1px solid rgba(255, 255, 255, 0.08)"
+                                                                    }} 
+                                                                    className="rounded-xl relative overflow-hidden cursor-pointer hover:scale-102 transition-transform w-[160px]">
                                                                         <Image src={card.src} alt={card.title} className="w-[160px] h-[160px] object-cover rounded-xl" />
-                                                                        <div className="absolute bottom-0 px-3 py-5 flex justify-between w-full z-50">
+                                                                        <div className="absolute bottom-0 p-3 flex justify-between w-full z-50">
                                                                             <h1 className="text-sm font-semibold text-white">{card.title}</h1>
                                                                             <Image src={arrow_right} alt="arrow right" />
                                                                         </div>
-                                                                        <div className="absolute bottom-0 left-0 right-0 h-[60%] opacity-50"
+                                                                        <div className="absolute bottom-0 left-0 right-0 h-[30%] opacity-50 shadow-lg"
                                                                             style={{ background: "linear-gradient(180deg, rgba(6,6,6,0.00) 0%, #060606 100%)", backdropFilter: "blur(2px)" }} />
                                                                     </div>
                                                                 </Link>
@@ -111,7 +133,7 @@ const MobileHeader = ({
                                             ) : (
                                                 <Link
                                                     href={item.href || '#'}
-                                                    className={`text-sm transition block py-2 ${isBlogAndContact ? 'text-[#AEAEAE] hover:text-black' : 'text-white/70 hover:text-white'}`}
+                                                    className={`text-sm transition block py-2 ${isBlogAndContact ? 'text-[#666] hover:text-black' : 'text-white/70 hover:text-white'}`}
                                                     onClick={() => setIsMobileMenuOpen(false)}
                                                 >
                                                     {item.title}

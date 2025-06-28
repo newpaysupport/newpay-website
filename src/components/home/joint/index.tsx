@@ -1,9 +1,10 @@
 'use client'
 import { useEffect, useRef } from 'react';
 import 'swiper/css';
-import { Controller } from 'swiper/modules';
+import { Controller, Mousewheel } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperCore } from 'swiper/types';
+
 
 import DownloadSection from '@/components/payment/download-section';
 import HelpCenter from '../gift-card/help-center';
@@ -65,17 +66,24 @@ const JointScreen = () => {
     return (
         <>
             <HeroJoint />
-            <div ref={pinContainerRef} style={{ height: `${slideCount}00vh` }} className="relative">
+            {/* Desktop */}
+            <div ref={pinContainerRef} style={{ height: `${slideCount}00vh` }} className="relative md:block hidden">
                 <div ref={swiperContainerRef} className="sticky top-0 h-screen w-full">
                     <Swiper
                         direction="vertical"
                         slidesPerView={1}
                         spaceBetween={0}
-                        mousewheel={false}
-                        modules={[Controller]}
+                        mousewheel={{
+                            forceToAxis: true,
+                            releaseOnEdges: false,
+                            sensitivity: 1,
+                        }}
+                        touchRatio={1}
+                        threshold={10}
+                        modules={[Controller, Mousewheel]}
                         onSwiper={(swiper) => (swiperRef.current = swiper)}
                         className="h-full w-full"
-                        speed={500}
+                        speed={600}
                     >
                         <SwiperSlide><CardContent /></SwiperSlide>
                         <SwiperSlide><Card2 /></SwiperSlide>
@@ -83,6 +91,13 @@ const JointScreen = () => {
                         <SwiperSlide><Card4 /></SwiperSlide>
                     </Swiper>
                 </div>
+            </div >
+            {/* Mobile */}
+            <div className="md:hidden">
+                <CardContent />
+                <Card2 />
+                <Card3 />
+                <Card4 />
             </div>
             <div>
                 <FeaturesGrid />

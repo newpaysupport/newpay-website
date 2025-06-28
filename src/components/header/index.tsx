@@ -183,12 +183,12 @@ const Header = () => {
             </Link>
 
             {/* Desktop Navigation */}
-            <ul className="flex md:justify-center items-center md:space-x-6">
+            <ul className="flex md:justify-center items-center md:space-x-3">
                 {navLinks.map((link) => (
                     <li key={link.href}>
                         <Link
                             href={link.href}
-                            className={`md:px-8 md:py-2 px-5 py-2 rounded-full transition
+                            className={`md:px-6 font-semibold lg:font-normal md:py-2 px-5 py-2 rounded-full transition
                             ${isActive(link.href)
                                     ? isBlogAndContact
                                         ? 'bg-black/10 text-black'
@@ -225,7 +225,7 @@ const Header = () => {
                     >
                         <Link
                             href={link.href}
-                            className={`px-8 py-2 rounded-full transition flex items-center gap-1
+                            className={`px-6 py-2 rounded-full transition flex items-center gap-1
                             ${isActive(link.href)
                                     ? isBlogAndContact
                                         ? 'bg-black/10 text-black'
@@ -261,10 +261,10 @@ const Header = () => {
             <button
                 aria-label="menu-btn"
                 type="button"
-                className={`cursor-pointer menu-btn flex items-center justify-center w-10 h-10 md:hidden active:scale-90 transition-all duration-200 rounded-lg border
+                className={`cursor-pointer menu-btn flex items-center justify-center w-10 h-10 md:hidden active:scale-90 transition-all duration-200
                     ${isBlogAndContact
-                        ? 'text-black hover:bg-black/10 border-black/20'
-                        : 'text-white hover:bg-white/10 border-white/20'
+                        ? 'text-black hover:bg-black/10'
+                        : 'text-white hover:bg-white/10'
                     }
                 `}
                 onClick={toggleMobileMenu}>
