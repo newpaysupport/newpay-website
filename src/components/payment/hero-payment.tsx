@@ -21,7 +21,6 @@ const HeroPayment = () => {
         <div className="relative">
             <Image src={hero_payment} alt="background" width={0} height={0} className="object-cover md:w-full md:h-full h-[800px] w-full" />
             <p className="fadeInUp-no-delay lg:text-sm text-xs font-normal w-[60%]  text-[#AEAEAE] text-right absolute top-[26%] right-[6%]  2xl:top-[30%] md:bottom-[60%] md:right-[12%] md:w-[20%]">
-                {/* {heroSection.description} */}
                 {locale === 'en' ?
                     <>
                         Accessible crypto wallet for everyone, everywhere. Let’s embrace the future with cryptocurrency payments via NewPay!
