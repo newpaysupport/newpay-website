@@ -171,7 +171,22 @@ const HomeScreen = () => {
         <div>
             {/* hero section */}
             <div ref={heroRef} className='w-full h-[750px] lg:h-[872px] overflow-y-hidden relative'>
-                <video src={'/videos/home/prism-coin.mp4'} className='w-full h-full object-cover object-top z-[2] absolute mix-blend-lighten' loop={true} autoPlay={true} muted={true} preload='true' />
+                <video
+                    src={'/videos/home/prism-coin.mp4'}
+                    className='w-full h-full object-cover object-top z-[2] absolute mix-blend-lighten'
+                    controls={false}
+                    loop={true}
+                    autoPlay={true}
+                    muted={true}
+                    preload='true'
+                    playsInline={true}
+                    webkit-playsinline="true"
+                    disablePictureInPicture={true}
+                    controlsList="nodownload nofullscreen noremoteplayback"
+                    style={{
+                        pointerEvents: 'none'
+                    }}
+                />
                 <figure className='absolute inset-0 bottom-0 left-0 w-full'>
                     <Image src={hero} alt='' className='w-full h-full' priority />
                 </figure>
