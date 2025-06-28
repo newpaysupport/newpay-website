@@ -1,3 +1,4 @@
+'use client';
 import arrowright from '@/images/home/joint/arrowright.svg';
 import card1_img1 from '@/images/home/joint/card1_img1.png';
 import card2_img2 from '@/images/home/joint/card2_img2.png';
