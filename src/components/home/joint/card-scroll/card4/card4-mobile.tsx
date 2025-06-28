@@ -23,7 +23,7 @@ type Card4Props = {
 }
 const Card4Mobile = ({joint, locale, handleToast} : Card4Props) => {
     return (
-        <section className="bg-white py-12 px-6 flex items-center rounded-3xl min-h-screen md:hidden">
+        <section className="bg-white py-12 px-6 flex items-center rounded-3xl min-h-screen lg:hidden">
             <div className="container flex flex-col gap-6">
                 {/* Left Section: Text Content and Small Card */}
                 <div className="flex flex-col justify-start items-start gap-6">
@@ -43,7 +43,7 @@ const Card4Mobile = ({joint, locale, handleToast} : Card4Props) => {
                         borderRadius: "24px",
                         background: "rgba(255, 105, 16, 0.08)"
                     }}
-                        className='flex flex-col p-4 md:w-[400px] items-end space-y-4'>
+                        className='flex flex-col p-4 lg:w-[400px] items-end space-y-4'>
                         <div className='flex gap-4'>
                             <Image src={cardContainer} alt='' className='mx-auto w-[170px]' />
                             <p className='text-[#000000]/72 text-sm'>
@@ -56,7 +56,7 @@ const Card4Mobile = ({joint, locale, handleToast} : Card4Props) => {
                                 style={{
                                     border: "1px solid rgba(0, 0, 0, 0.16)"
                                 }}
-                                className="md:w-[245px] bg-[#060606] font-semibold py-4 px-8 rounded-full cursor-pointer hover:scale-101">
+                                className="lg:w-[245px] bg-[#060606] font-semibold py-4 px-8 rounded-full cursor-pointer hover:scale-101">
                                 <p className="text-sm text-white">{joint.card2.textButtonCardLeft}</p>
 
                             </button>
@@ -66,7 +66,7 @@ const Card4Mobile = ({joint, locale, handleToast} : Card4Props) => {
                                 <button style={{
                                     border: "1px solid rgba(0, 0, 0, 0.16)",
                                 }}
-                                    className="md:w-[254px] border border-white font-semibold py-4 px-8 rounded-full cursor-pointer hover:shadow-sm">
+                                    className="lg:w-[254px] border border-white font-semibold py-4 px-8 rounded-full cursor-pointer hover:shadow-sm">
                                     <p className="flex justify-center items-center gap-2.5 text-sm">{joint.card2.textButtonCardRight}<FaArrowRight className="font-light animate-translateX" /></p>
                                 </button>
                             </Link>

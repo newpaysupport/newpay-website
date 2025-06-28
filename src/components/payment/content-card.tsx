@@ -29,11 +29,11 @@ const ContentCard = () => {
     }, []);
     return (
         <div className="relative container mx-auto pt-30" ref={wrapperRef}>
-            <Image src={card_payment} alt="card payment" ref={cardRef} className={`mx-auto md:w-[440px] scale-y-95 md:h-[290px] h-[255px] pl-1.5 md:pl-2.5 transition-transform duration-300 ease-linear z-2 ${isSticky ? 'sticky top-[30%]' : ''}`} />
+            <Image src={card_payment} alt="card payment" ref={cardRef} className={`mx-auto lg:w-[440px] scale-y-95 lg:h-[290px] h-[255px] pl-1.5 lg:pl-2.5 transition-transform duration-300 ease-linear z-2 ${isSticky ? 'sticky top-[30%]' : ''}`} />
             <div className='pt-20 transition-transform duration-300 ease-linear'>
-                <div className='relative md:w-[430px] md:h-[340px] w-[385px] h-[300px] mx-auto' ref={walletRef}>
+                <div className='relative lg:w-[430px] lg:h-[340px] w-[385px] h-[300px] mx-auto' ref={walletRef}>
                     <Image src={wallet_no_card} alt="Wallet no card" className={`mx-auto z-1 `} />
-                    <Image src={img} alt="Wallet no card" className={`absolute md:bottom-[7%] right-0 md:left-[1.5%] left-0 bottom-[5%] z-3`} />
+                    <Image src={img} alt="Wallet no card" className={`absolute lg:bottom-[7%] right-0 lg:left-[1.5%] left-0 bottom-[5%] z-3`} />
                 </div>
             </div>
         </div>

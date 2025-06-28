@@ -25,11 +25,11 @@ const Card2 = () => {
             {/* mobile */}
             <Card2Mobile joint={joint} listText={listText} locale={locale} handleToast={handleToast} />
             {/* desktop */}
-            <section className="bg-white pt-20 md:flex items-center rounded-3xl container mx-auto hidden">
+            <section className="bg-white pt-20 lg:flex items-center rounded-3xl container mx-auto hidden">
                 <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-30">
                     {/* Left Section: Text Content and Small Card */}
                     <div className="flex flex-col justify-between gap-10 items-end">
-                        <h2 className="pl-[32%] text-4xl md:text-5xl font-semibold text-[#1B1B1B] mb-4 leading-tight">
+                        <h2 className="pl-[32%] text-4xl lg:text-5xl font-semibold text-[#1B1B1B] mb-4 leading-tight">
                             {joint.card2.title}
                         </h2>
                         <Image
@@ -42,7 +42,7 @@ const Card2 = () => {
                     {/* Right Section: Large Image Card */}
                     <div className="flex flex-col space-y-10 ">
                         <div>
-                            <h1 style={{ fontSize: '32px' }} className='text-[#666] font-medium md:w-[70%]'>{joint.card2.description}</h1>
+                            <h1 style={{ fontSize: '32px' }} className='text-[#666] font-medium lg:w-[70%]'>{joint.card2.description}</h1>
                             <div className='flex space-x-6 pt-4'>
                                 <Image src={visa} alt='arrow right' />
                                 <Image src={materCard} alt='arrow right' />
@@ -68,8 +68,8 @@ const Card2 = () => {
                                 style={{
                                     border: "1px solid rgba(0, 0, 0, 0.16)"
                                 }}
-                                className="md:w-[245px] bg-[#060606] font-semibold py-4 px-12 rounded-full cursor-pointer hover:scale-101">
-                                <p className="text-md text-white">{joint.card2.textButtonCardLeft}</p>
+                                className="lg:w-[245px] bg-[#060606] font-semibold py-4 px-12 rounded-full cursor-pointer hover:scale-101">
+                                <p className="text-lg text-white">{joint.card2.textButtonCardLeft}</p>
 
                             </button>
 
@@ -78,8 +78,8 @@ const Card2 = () => {
                                 <button style={{
                                     border: "1px solid rgba(0, 0, 0, 0.16)",
                                 }}
-                                    className="md:w-[254px] border border-white font-semibold py-4 px-12 rounded-full cursor-pointer hover:shadow-sm">
-                                    <p className="flex justify-center items-center gap-2.5 text-md">{joint.card2.textButtonCardRight}<FaArrowRight className="font-light animate-translateX" /></p>
+                                    className="lg:w-[254px] border border-white font-semibold py-4 px-12 rounded-full cursor-pointer hover:shadow-sm">
+                                    <p className="flex justify-center items-center gap-2.5 text-lg">{joint.card2.textButtonCardRight}<FaArrowRight className="font-light animate-translateX" /></p>
                                 </button>
                             </Link>
                         </div>

@@ -9,7 +9,7 @@ import Link from 'next/link';
 
 const CardContentMobile = ({ joint, locale }: { joint: any; locale: string }) => {
     return (
-        < section className="bg-white py-12 px-6 flex items-center rounded-3xl md:hidden" >
+        < section className="bg-white py-12 px-6 flex items-center rounded-3xl lg:hidden" >
             <div className="mx-auto ">
                 {/* Left Section: Text Content and Small Card */}
                 <div className="flex flex-col justify-between space-y-6" >

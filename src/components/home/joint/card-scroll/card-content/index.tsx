@@ -19,12 +19,12 @@ const CardContent = () => {
             {/* mobile */}
             <CardContentMobile joint={joint} locale={locale} />
             {/* desktop */}
-            <section className="bg-white p-16 md:flex items-center rounded-3xl min-h-screen hidden" >
+            <section className="bg-white p-16 lg:flex items-center rounded-3xl min-h-screen hidden" >
                 <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-30">
                     {/* Left Section: Text Content and Small Card */}
                     <div className="flex flex-col justify-between space-y-10">
                         <div className="pl-32">
-                            <h2 className="text-4xl md:text-5xl font-semibold text-[#1B1B1B] mb-4 leading-tight">
+                            <h2 className="text-4xl lg:text-5xl font-semibold text-[#1B1B1B] mb-4 leading-tight">
                                 {joint.cardContent.title}
                             </h2>
                             <p className="text-3xl text-[#666] mb-6 font-medium">
@@ -43,11 +43,11 @@ const CardContent = () => {
                                 className="rounded-2xl object-cover w-[200px] h-[200px]"
                             />
                             <div className="flex flex-col justify-between mx-4">
-                                <p className="text-md">
+                                <p className="text-lg">
                                     {joint.cardContent.textCardLeft}
                                 </p>
                                 <Link href={`/${locale}/contact`}>
-                                    <button className="border border-white font-semibold py-3 px-6 rounded-full cursor-pointer md:w-[220px] md:h-[56px] group">
+                                    <button className="border border-white font-semibold py-3 px-6 rounded-full cursor-pointer lg:w-[220px] lg:h-[56px] group">
                                         <p className="flex justify-center items-center gap-3"> {joint.cardContent.textButtonCard} <FaArrowRight className="font-light group-hover:translate-x-1.5 transition ease-in-out animate-translateX" /></p>
                                     </button>
                                 </Link>
@@ -59,7 +59,7 @@ const CardContent = () => {
                         <Image
                             src={card2_img2}
                             alt="Payment device being used"
-                            className="rounded-3xl object-cover md:w-[600px] md:h-[600px]"
+                            className="rounded-3xl object-cover lg:w-[600px] lg:h-[600px]"
                         />
                         {/* Overlay card at the bottom */}
                         <div style={{

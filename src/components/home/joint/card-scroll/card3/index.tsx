@@ -25,12 +25,12 @@ const Card3 = () => {
             {/* mobile */}
             <Card3Mobile  joint={joint} locale={locale} t={t}/>
             {/* desktop */}
-            <section className="bg-white p-16 md:flex items-center rounded-3xl min-h-screen hidden">
+            <section className="bg-white p-16 lg:flex items-center rounded-3xl min-h-screen hidden">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-30">
                     {/* Left Section: Text Content and Small Card */}
                     <div className="flex flex-col justify-between space-y-10">
                         <div className="pl-32">
-                            <h2 className="text-4xl md:text-5xl font-semibold text-[#1B1B1B] mb-4 leading-tight">
+                            <h2 className="text-4xl lg:text-5xl font-semibold text-[#1B1B1B] mb-4 leading-tight">
                                 {joint.card3.title}
                             </h2>
                             <p className="text-3xl text-[#666] mb-6 font-medium">
@@ -38,7 +38,7 @@ const Card3 = () => {
                             </p>
                         </div>
 
-                        <div className="bg-[#FF6910] rounded-3xl p-4 text-white shadow-xl flex md:w-[500px] md:h-[230px]">
+                        <div className="bg-[#FF6910] rounded-3xl p-4 text-white shadow-xl flex lg:w-[500px] lg:h-[230px]">
                             <Image
                                 src={card1_img1}
                                 alt="Person holding a card"
@@ -64,10 +64,10 @@ const Card3 = () => {
                         <Image
                             src={img_right}
                             alt="Payment device being used"
-                            className="rounded-3xl md:h-[610px] md:w-[530px] object-cover object-center mx-auto"
+                            className="rounded-3xl lg:h-[610px] lg:w-[530px] object-cover object-center mx-auto"
                         />
                         <div
-                            className="absolute top-[5%] left-[-10%] flex items-center justify-between text-white rounded-2xl p-2 sm:p-3 md:p-4 bg-[#FFF] shadow-md w-full max-w-xs">
+                            className="absolute top-[5%] left-[-10%] flex items-center justify-between text-white rounded-2xl p-2 sm:p-3 lg:p-4 bg-[#FFF] shadow-md w-full max-w-xs">
                             <div className="flex items-center space-x-5">
                                 <div className="flex-shrink-0">
                                     <Image src={icon_gift} alt="Gift Icon" width={50} height={50} />
@@ -83,7 +83,7 @@ const Card3 = () => {
                         </div>
 
                         <div
-                            className="absolute bottom-[30%] right-[-5%] flex items-center justify-between text-white rounded-2xl p-2 sm:p-3 md:p-4 bg-[#FFF] shadow-md w-full max-w-xs">
+                            className="absolute bottom-[30%] right-[-5%] flex items-center justify-between text-white rounded-2xl p-2 sm:p-3 lg:p-4 bg-[#FFF] shadow-md w-full max-w-xs">
                             <div className="flex items-center space-x-5">
                                 <div className="flex-shrink-0">
                                     <Image src={arrow_right} alt="Gift Icon" width={50} height={50} className='text-[#FF6910]' />
@@ -100,7 +100,7 @@ const Card3 = () => {
                         </div>
 
                         <div
-                            className="absolute bottom-[5%] left-[-5%] flex items-center justify-between text-white rounded-2xl p-2 sm:p-3 md:p-4 bg-[#FFF] shadow-md w-full max-w-xs">
+                            className="absolute bottom-[5%] left-[-5%] flex items-center justify-between text-white rounded-2xl p-2 sm:p-3 lg:p-4 bg-[#FFF] shadow-md w-full max-w-xs">
                             <div className="flex items-center space-x-5">
                                 <div className="flex-shrink-0">
                                     <Image src={arrow_left} alt="Gift Icon" width={50} height={50} />

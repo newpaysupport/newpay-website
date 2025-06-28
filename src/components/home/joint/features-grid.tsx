@@ -33,7 +33,7 @@ const FeaturesGrid = () => {
     return (
         <>
             {/* mobile */}
-            <div className="relative w-full h-[1030px] md:hidden">
+            <div className="relative w-full h-[1030px] lg:hidden">
                 <div
                     className="absolute inset-0 bg-cover bg-center flex flex-col gap-6 items-center text-center px-4 py-12 object-top"
                     style={{
@@ -85,18 +85,18 @@ const FeaturesGrid = () => {
                 </div>
             </div>
             {/* desktop */}
-            <div className="relative hidden md:block">
+            <div className="relative hidden lg:block">
                 <Image src={bg_joint2} alt="Why Choose NewPay" className="w-full" />
                 <div className="absolute inset-0 text-center mt-30">
-                    <h1 className="text-4xl md:text-5xl text-[#FFF] font-semibold">
+                    <h1 className="text-4xl lg:text-5xl text-[#FFF] font-semibold">
                         {joint.featuresGrid.title}
                     </h1>
-                    <p className="text-lg md:text-xl text-[#AEAEAE] mt-6 w-full max-w-3xl mx-auto px-4">
+                    <p className="text-lg lg:text-xl text-[#AEAEAE] mt-6 w-full max-w-3xl mx-auto px-4">
                         {joint.featuresGrid.description}
                     </p>
 
                     <div ref={gridRef} className="max-w-7xl mx-auto mt-20">
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 lg:grid-cols-4 gap-0">
                             {joint.featuresGrid.features.map((feature, index) => {
                                 const isLastInRow = index === 3 || index === 7;
                                 const isBelowFirstRow = index > 3;
@@ -106,7 +106,7 @@ const FeaturesGrid = () => {
                                         key={index}
                                         className={`p-[2px] ${!isLastInRow ? 'border-r border-[#565656]' : ''} ${!isBelowFirstRow ? 'border-b border-[#565656]' : ''}`}
                                     >
-                                        <div className="rounded-md p-6 flex flex-col items-start justify-start">
+                                        <div className="rounded-lg p-6 flex flex-col items-start justify-start">
                                             <div className="mb-4">
                                                 {feature.icon ? (
                                                     <motion.div

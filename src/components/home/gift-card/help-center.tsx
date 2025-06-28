@@ -12,9 +12,9 @@ const HelpCenter = () => {
 
     return (
         <>
-            <section className='md:py-[160px] py-12 px-6 bg-[#060606]'>
+            <section className='lg:py-[160px] py-12 px-6 bg-[#060606]'>
                 <div
-                    className="md:mx-auto md:w-[1200px] md:p-16 py-8 px-6 relative overflow-hidden transition-transform duration-300 hover:scale-101"
+                    className="lg:mx-auto lg:w-[1200px] lg:p-16 py-8 px-6 relative overflow-hidden transition-transform duration-300 hover:scale-101"
                     style={{
                         borderRadius: '40px',
                         border: '2px solid rgba(255, 183, 0, 0.2)',
@@ -23,17 +23,17 @@ const HelpCenter = () => {
                     }}
                 >
                     {/* Content */}
-                    <div className="relative flex md:flex-row flex-col items-end justify-between md:gap-8 gap-12">
-                        <div className="flex-1 md:space-y-8 space-y-6">
+                    <div className="relative flex lg:flex-row flex-col items-end justify-between lg:gap-8 gap-12">
+                        <div className="flex-1 lg:space-y-8 space-y-6">
                             <Image src={head_phone} alt="Mail Icon" />
-                            <h2 className="text-white md:font-semibold font-medium md:text-3xl text-2xl leading-tight">
+                            <h2 className="text-white lg:font-semibold font-medium lg:text-3xl text-2xl leading-tight">
                                 {t('helpCenter.title')}
                             </h2>
                         </div>
                         {/* Right side - Form */}
-                        <Link href={`/${locale}/contact`} className="md:w-[410px] md:h-[55px] w-full">
+                        <Link href={`/${locale}/contact`} className="lg:w-[410px] lg:h-[55px] w-full">
                             <button
-                                className="w-full md:py-3 md:px-6 px-[30px] py-4 cursor-pointer text-lg font-bold bg-white hover:from-orange-600 hover:to-orange-500 text-black rounded-full transition-all duration-200 flex items-center justify-center gap-2 shadow-lg hover:shadow-orange-500/25 group"
+                                className="w-full lg:py-3 lg:px-6 px-[30px] py-4 cursor-pointer text-lg font-bold bg-white hover:from-orange-600 hover:to-orange-500 text-black rounded-full transition-all duration-200 flex items-center justify-center gap-2 shadow-lg hover:shadow-orange-500/25 group"
                             >
                                 {t('helpCenter.buttonText')}
                                 <Image src={arrowright} alt='arrow right' className="w-6 h-6 group-hover:translate-x-1 transition-transform duration-200" />
