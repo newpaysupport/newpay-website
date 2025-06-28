@@ -31,7 +31,7 @@ const About = () => {
                             <p className="text-sm text-white/80 mx-auto font-medium">
                                 {joint.about.description}
                             </p>
-                            <div className='mt-2 flex gap-1'>
+                            <div className='mt-2 flex gap-1 flex-wrap justify-center'>
                                 {listFlag.map(item => {
                                     return (
                                         <div key={item.country} className='rounded-full bg-[#FFF] p-2 flex items-center gap-1'>
