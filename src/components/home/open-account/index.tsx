@@ -84,57 +84,65 @@ const OpenAccount = () => {
     });
 
     const fixedHeight = useMemo(() => {
-        if (is2xl) return 610;
-        if (isXl) return 590;
-        if (isLg) return 620;
-        return 480;
+        if (is2xl) return 580;
+        if (isXl) return 580;
+        // if (isLg) return 620;
+        return 584;
     }, [is2xl, isXl, isLg]);
 
     return (
         <ReactLenis root>
-            <div className="bg-[#060606] pt-20 px-[120px]">
+            <div className="bg-[#060606] pt-[64px] px-4 xl:pt-20 xl:px-[120px]">
                 <div className='container mx-auto'>
-                    <h3 className='text-white text-[48px] font-semibold'>{t('openAccount.title')}</h3>
-                    <p className='text-[#aeaeae] text-lg font-normal mt-6 mb-20'>{t('openAccount.desc')}</p>
+                    <h3 className='text-white text-[32px] xl:text-[48px] font-semibold'>{t('openAccount.title')}</h3>
+                    <p className='text-[#aeaeae] text-sm xl:text-lg font-normal mt-6 mb-20'>{t('openAccount.desc')}</p>
 
                     <div className='flex justify-between'>
-                        <div className='w-full h-full lg:w-[800px] relative pb-[200px]'>
+                        <div className='w-full h-full lg:w-[800px] relative pb-[500px] xl:pb-[200px]'>
                             <div className='flex flex-col gap-y-[480px]'>
                                 {t.raw('openAccount.steps').map((step: { title: string; desc: string }, index: number) => {
                                     return (
-                                        <div key={index} className={`stepPanel flex items-start justify-between`}>
+                                        <div key={index} className={`stepPanel flex items-start justify-between h-[108px]`}>
                                             <div className='content-wrapper'>
-                                                <div className='flex gap-x-12'>
+                                                <div className='flex gap-x-6 xl:gap-x-12'>
                                                     <div className='relative z-[10]'>
-                                                        <p className={`${index === activeStep ? "bg-[#FF6910] border-none" : "bg-[#212121] border-white/16"} border-[2px] w-20 h-20 rounded-full text-white text-[40px] font-semibold flex items-center justify-center`}>{stepAccount[index].step}</p>
+                                                        <p
+                                                            className={`${index === activeStep ? "bg-[#FF6910] border-none" : "bg-[#212121] border-white/16"}
+                                                            border-[2px] w-12 h-12 xl:w-20 xl:h-20 rounded-full text-white text-2xl xl:text-[40px] font-semibold flex items-center justify-center`}>
+                                                            {stepAccount[index].step}
+                                                        </p>
                                                     </div>
                                                     <div>
-                                                        <p className='text-white lg:text-[40px] 2xl:text-[60px] font-medium'>{step.title}</p>
-                                                        <p className='text-[#aeaeae] text-xl font-medium'>{step.desc}</p>
+                                                        <div>
+                                                            <p className='text-white text-2xl lg:text-[40px] 2xl:text-[60px] font-medium'>{step.title}</p>
+                                                            <p className='text-[#aeaeae] text-sm xl:text-xl font-medium mt-4 xl:mt-0'>{step.desc}</p>
+                                                        </div>
+                                                        <div className={`transition-all ease-linear duration-150 bg-[#060606] block mx-auto xl:hidden mt-12 w-[250px] md:w-[300px]`}>
+                                                            <Image src={stepAccount[index].image} alt='image' className=' mix-blend-lighten w-full h-full' />
+                                                        </div>
                                                     </div>
+
                                                 </div>
                                             </div>
-
                                         </div>
                                     )
                                 })}
                             </div>
                             <>
-                                <div className='w-20 lg:h-[2370px] 2xl:h-[2430px] absolute top-20 z-1'>
+                                <div style={{ height: (fixedHeight * 4) }} className='w-12 xl:w-20 lg:h-[2370px] 2xl:h-[2430px] absolute top-12 xl:top-20 z-1'>
                                     <p className='bg-white/20 w-1 h-full mx-auto'></p>
                                 </div>
                                 <motion.div
                                     initial={false}
-                                    animate={{ height: activeStep * fixedHeight }}
+                                    animate={{ height: (activeStep * fixedHeight) }}
                                     transition={{ duration: 0.15, ease: "linear" }}
-                                    className="w-20 absolute top-20 z-2 "
+                                    className="w-12 xl:w-20 absolute top-12 xl:top-20 z-2 "
                                 >
                                     <p className='bg-[#FF6910] w-1 h-full mx-auto'></p>
                                 </motion.div>
                             </>
-
                         </div>
-                        <div className='sticky flex justify-end h-[575px] min-w-[400px] w-[400px] top-[calc(50%-288px)]'>
+                        <div className='sticky hidden xl:flex justify-end h-[575px] min-w-[400px] w-[400px] top-[calc(50%-288px)]'>
                             <div className={`${activeStep !== -1 ? "opacity-100" : "opacity-0"} transition-all ease-linear duration-150 bg-[#060606]`}>
                                 <Image src={stepAccount[activeStep].image} alt='image' className=' mix-blend-lighten' />
                             </div>
