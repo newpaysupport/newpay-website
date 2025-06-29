@@ -1,11 +1,11 @@
 "use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import arrow_right from '@/images/header/arrow_right.svg';
 import virual_card_dropdown from '@/images/header/virtual_card_dropdown.png';
 import physicard_card_dropdown from '@/images/payment/img_card_black.png';
 import SwitchLanguage from "../switch-language";
+import { useEffect, useState } from "react";
 
 const MobileHeader = ({
     locale,
@@ -115,8 +115,8 @@ const MobileHeader = ({
                                                                 <Link key={i} href={`/${locale}/payment`} onClick={() => setIsMobileMenuOpen(false)}>
                                                                     <div style={{
                                                                         border: "1px solid rgba(255, 255, 255, 0.08)"
-                                                                    }} 
-                                                                    className="rounded-xl relative overflow-hidden cursor-pointer hover:scale-102 transition-transform w-[160px]">
+                                                                    }}
+                                                                        className="rounded-xl relative overflow-hidden cursor-pointer hover:scale-102 transition-transform w-[160px]">
                                                                         <Image src={card.src} alt={card.title} className="w-[160px] h-[160px] object-cover rounded-xl" />
                                                                         <div className="absolute bottom-0 p-2 flex justify-between w-full z-50">
                                                                             <h1 className="text-sm font-semibold text-white">{card.title}</h1>
@@ -151,14 +151,16 @@ const MobileHeader = ({
                     <div className="mb-6">
                         <SwitchLanguage locale={locale} switchLocale={switchLocale} t={t} isBlogAndContact={isBlogAndContact} isVisible={isVisible} />
                     </div>
-                    <button
-                        type="button"
-                        className={`w-full text-sm font-medium active:scale-95 transition-all h-12 rounded-full 
+                    <Link href={`/${locale}/download`}>
+                        <button
+                            type="button"
+                            className={`w-full text-sm font-medium active:scale-95 transition-all h-12 rounded-full 
               ${isBlogAndContact ? 'bg-black text-white hover:bg-black/80' : 'bg-white text-black hover:bg-gray-100'}`}
-                        onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                        {t('getApp')}
-                    </button>
+                            onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                            {t('getApp')}
+                        </button>
+                    </Link>
                 </div>
             </div>
         </div>
