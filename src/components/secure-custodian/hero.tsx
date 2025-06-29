@@ -19,7 +19,21 @@ const Hero = () => {
     return (
         <div className='w-full h-[800px] lg:h-screen relative overflow-hidden'>
             <video src={'/videos/secure-custodian/heroVideo.mp4'} className='w-full h-full object-cover object-center hidden lg:block' loop={true} autoPlay={true} muted={true} preload='true' />
-            <video src={'/videos/secure-custodian/heroVideoMobile.mp4'} className='w-full h-full object-cover object-center lg:hidden' loop={true} autoPlay={true} muted={true} preload='true' />
+            <video
+                src={'/videos/secure-custodian/heroVideoMobile.mp4'}
+                className='w-full h-full object-cover object-center lg:hidden'
+                loop={true}
+                autoPlay={true}
+                muted={true}
+                preload='true'
+                playsInline={true}
+                webkit-playsinline="true"
+                disablePictureInPicture={true}
+                controlsList="nodownload nofullscreen noremoteplayback"
+                style={{
+                    pointerEvents: 'none'
+                }}
+            />
 
             <figure className='absolute w-full h-full lg:h-[460px] z-[1] bottom-0 left-0 '>
                 <Image src={overlay} alt='' className='object-cover w-full h-full 2xl:h-auto' />
@@ -43,7 +57,9 @@ const Hero = () => {
                         </p>
                         <p className='text-[#aeaeae] text-sm lg:text-base font-medium -tracking-[0.24px] opacity-0 fadeInUp-delay-03'>{t("hero.desc1")}</p>
                         <p className='text-[#aeaeae] text-sm lg:text-base font-medium -tracking-[0.24px] opacity-0 fadeInUp-delay-03'>{t("hero.desc2")}</p>
-                        <BtnPrimary onClick={handleToast} text={t("hero.button")} variant={'primary-lighter'} className='w-[207px] mt-8 mx-auto opacity-0 fadeInUp-delay-06' />
+                        <div className='w-[207px] mx-auto'>
+                            <BtnPrimary onClick={handleToast} text={t("hero.button")} variant={'primary-lighter'} className='mt-8 mx-auto opacity-0 fadeInUp-delay-06' />
+                        </div>
                     </div>
                 </div>
             </div>
