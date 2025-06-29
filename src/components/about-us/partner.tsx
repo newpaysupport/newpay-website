@@ -18,7 +18,21 @@ const Partner = () => {
 
     return (
         <div className='w-full h-[700px] relative overflow-hidden'>
-            <video src={'/videos/home/prism-coin.mp4'} className='w-full h-full object-cover object-center' loop={true} autoPlay={true} muted={true} preload='true' />
+            <video
+                src={'/videos/home/prism-coin.mp4'}
+                className='w-full h-full object-cover object-center'
+                loop={true}
+                autoPlay={true}
+                muted={true}
+                preload='true'
+                playsInline={true}
+                webkit-playsinline="true"
+                disablePictureInPicture={true}
+                controlsList="nodownload nofullscreen noremoteplayback"
+                style={{
+                    pointerEvents: 'none'
+                }}
+            />
             <div className='absolute inset-0 w-full h-full lg:pt-20'>
                 <div className='flex items-center justify-center h-full'>
                     <div>
