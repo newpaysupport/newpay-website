@@ -36,7 +36,7 @@ const HeroPayment = () => {
             </p>
             
             <div className="absolute right-[5%] bottom-[24%] md:right-[9.2%]">
-                <Image src={card_container} alt="background" width={0} height={0} className={`fadeInUp-no-delay w-[320px] h-[145px] lg:w-[640px] lg:h-[250px] 2xl:w-[670px] 2xl:h-[300px]`} />
+                <Image src={card_container} alt="background" width={0} height={0} className={`fadeInUp-no-delay w-[300px] h-[130px] lg:w-[640px] lg:h-[250px] 2xl:w-[670px] 2xl:h-[300px]`} />
             </div>
             
             <div className="absolute md:w-[40%] w-[80%] top-[27%] lg:top-[28%] bottom-[60%] left-[8%] lg:w-[30%] lg:bottom-[60%] md:left-[12%]">
