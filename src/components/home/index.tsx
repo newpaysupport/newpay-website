@@ -104,12 +104,6 @@ const HomeScreen = () => {
 
     const { cardThreshold = 0, textThreshold = 0, textSubThreshold = 0, compareThreshold = 0 } = scrollThreshold || {};
 
-    console.log('scrollProgress', scrollProgress)
-
-    // console.log('cardThreshold', cardThreshold);
-    // console.log('textThreshold', textThreshold);
-    // console.log('textSubThreshold', textSubThreshold);
-
 
     const TabCards = [
         {
@@ -170,10 +164,26 @@ const HomeScreen = () => {
     return (
         <div>
             {/* hero section */}
-            <div ref={heroRef} className='w-full h-[750px] lg:h-[872px] overflow-y-hidden relative'>
+            <div ref={heroRef} className='w-full h-[872px] overflow-y-hidden relative'>
                 <video
                     src={'/videos/home/prism-coin.mp4'}
-                    className='w-full h-full object-cover object-top z-[2] absolute mix-blend-lighten'
+                    className='w-full h-full object-cover object-top z-[2] absolute mix-blend-lighten hidden lg:block'
+                    controls={false}
+                    loop={true}
+                    autoPlay={true}
+                    muted={true}
+                    preload='true'
+                    playsInline={true}
+                    webkit-playsinline="true"
+                    disablePictureInPicture={true}
+                    controlsList="nodownload nofullscreen noremoteplayback"
+                    style={{
+                        pointerEvents: 'none'
+                    }}
+                />
+                <video
+                    src={'/videos/home/prism-coin-mobile.mp4'}
+                    className='w-full h-full object-cover object-bottom z-[2] absolute mix-blend-lighten lg:hidden'
                     controls={false}
                     loop={true}
                     autoPlay={true}
