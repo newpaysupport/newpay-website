@@ -26,7 +26,14 @@ const Hero = () => {
                     <p className=' text-white text-sm lg:text-base font-medium tracking-[-0.24px] opacity-0 fadeInUp-no-delay'>{t("hero.subTitle")}</p>
                     <p style={{ whiteSpace: "pre-line" }} className='text-white text-[32px] lg:text-[60px] lg:leading-[60px] font-semibold tracking-[-1.64px] my-4 opacity-0 fadeInUp-delay-03'>{t("hero.title")}</p>
                     <p className='text-[#aeaeae] text-sm lg:text-base font-medium tracking-[-0.24px] mb-8 opacity-0 fadeInUp-delay-03'>{t("hero.desc")}</p>
-                    <BtnPrimary onClick={handleShowToast} text={t("hero.buttonHero")} variant={'primary-lighter'} className='w-[258px] opacity-0 fadeInUp-delay-06' />
+                    <div className='w-[258px]'>
+                        <BtnPrimary
+                            onClick={handleShowToast}
+                            text={t("hero.buttonHero")}
+                            variant={'primary-lighter'}
+                            className='opacity-0 fadeInUp-delay-06' />
+                    </div>
+
                 </div>
             </div>
         </div>

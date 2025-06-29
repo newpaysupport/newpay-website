@@ -232,7 +232,9 @@
             "insights",
             "media",
             "trends"
-        ]
+        ],
+        "newPayBlog": "NewPay Blog",
+        "furtherReading": "Further Reading"
     },
     "term": {
         "header": {
