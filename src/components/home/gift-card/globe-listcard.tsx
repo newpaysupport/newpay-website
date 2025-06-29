@@ -65,7 +65,7 @@ const GlobeListCard = () => {
 
                 {/* Mobile */}
                 <div className="absolute right-0 left-0 bottom-0 top-[20%] md:hidden">
-                    <div className="flex gap-5 items-start justify-start overflow-x-auto flex-nowrap px-4">
+                    <div className="flex gap-5 items-start justify-start overflow-x-auto flex-nowrap px-4 animation-slideshow">
                         {listImg.map((img, index) => {
                             const item = globeListCard[index];
 
