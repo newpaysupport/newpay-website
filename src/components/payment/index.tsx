@@ -35,7 +35,7 @@ const PaymentScreen = () => {
 
 
     const textRef = useRef(null);
-    const isInView = useInView(textRef, { once: false, amount: 0.5 });
+    const isInView = useInView(textRef, { once: true, amount: 0.5 });
 
     useEffect(() => {
         //get hash is anchor from URL (#physical-card or #virtual-card)
