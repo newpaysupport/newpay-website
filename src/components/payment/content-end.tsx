@@ -88,7 +88,7 @@ const ContentEnd = () => {
                         </div>
                     </div>
                 </div>
-                <div className="relative lg:w-[700px] lg:h-[680px] w-[380px] h-[370px] lg:mt-0 mt-12">
+                <div className="relative lg:w-[700px] lg:h-[680px] w-[350px] h-[370px] lg:mt-0 mt-12">
                     <Image src={img_top_right} alt="Top Right Decoration" className="absolute top-0 right-0 z-10 animate-translateY lg:w-[250px] lg:h-[250px] w-[135px]" />
                     <Image src={img_bottom_left} alt="Bottom Left Decoration" className="absolute bottom-[11%] left-[13%] z-20 animate-translateY lg:w-[165px] lg:h-[165px] w-[90px]" />
                     <Image src={img_center} alt="Center Decoration" className="absolute inset-0 m-auto z-30 lg:w-[680px] lg:h-[645px] w-[370px] h-[350px]" />
