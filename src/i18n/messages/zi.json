@@ -236,7 +236,9 @@
             "教学",
             "媒体",
             "趋势观察"
-        ]
+        ],
+        "newPayBlog": "NewPay 博客",
+        "furtherReading": "延伸阅读"
     },
     "term": {
         "header": {
@@ -1042,7 +1044,7 @@
         ],
         "companyName": "公司名称",
         "companyWebsite": "公司网站",
-        "message": "留言内容…",
+        "message": " 留言内容 是必须的",
         "checkBox": "若您不希望接收 NewPay 的市场营销及推广资讯，请勾选此框。",
         "submit": "立即提交",
         "isRequire": "是必须的",
