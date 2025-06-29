@@ -65,36 +65,38 @@ const GlobeListCard = () => {
 
                 {/* Mobile */}
                 <div className="absolute right-0 left-0 bottom-0 top-[20%] md:hidden">
-                    <div className="flex gap-5 items-start justify-start overflow-x-auto flex-nowrap px-4 animation-slideshow">
-                        {listImg.map((img, index) => {
-                            const item = globeListCard[index];
+                    <div className="flex items-start justify-start overflow-x-auto flex-nowrap px-4">
+                        <div className='animation-slideshow flex gap-5'>
+                            {listImg.map((img, index) => {
+                                const item = globeListCard[index];
 
-                            return (
-                                <div
-                                    key={img.id}
-                                    className="relative mt-4 min-w-[260px] h-[340px] flex flex-col justify-between overflow-hidden group hover:-translate-y-5 transition-all ease-linear duration-500 cursor-pointer"
-                                >
-                                    <div>
-                                        <Image
-                                            src={img.image}
-                                            width={300}
-                                            height={300}
-                                            alt={`Globe Image ${img.id}`}
-                                            className="object-cover"
-                                        />
-                                    </div>
+                                return (
+                                    <div
+                                        key={img.id}
+                                        className="relative mt-4 min-w-[260px] h-[340px] flex flex-col justify-between overflow-hidden group hover:-translate-y-5 transition-all ease-linear duration-500 cursor-pointer"
+                                    >
+                                        <div>
+                                            <Image
+                                                src={img.image}
+                                                width={300}
+                                                height={300}
+                                                alt={`Globe Image ${img.id}`}
+                                                className="object-cover"
+                                            />
+                                        </div>
 
-                                    <div className="absolute left-1/2 -translate-x-1/2 bottom-[30%] w-full ">
-                                        <h2 className="text-white text-xl font-medium text-center transform translate-y-5 transition-all duration-500 ease-in-out group-hover:translate-y-0">
-                                            {item?.title}
-                                        </h2>
-                                        <p className="text-[#848484] text-sm text-center transform translate-y-10 opacity-0 transition-all duration-500 ease-in-out group-hover:translate-y-0 group-hover:opacity-100">
-                                            {item?.desc}
-                                        </p>
+                                        <div className="absolute left-1/2 -translate-x-1/2 bottom-[30%] w-full ">
+                                            <h2 className="text-white text-xl font-medium text-center transform translate-y-5 transition-all duration-500 ease-in-out group-hover:translate-y-0">
+                                                {item?.title}
+                                            </h2>
+                                            <p className="text-[#848484] text-sm text-center transform translate-y-10 opacity-0 transition-all duration-500 ease-in-out group-hover:translate-y-0 group-hover:opacity-100">
+                                                {item?.desc}
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
-                            );
-                        })}
+                                );
+                            })}
+                        </div>
                     </div>
                 </div>
 

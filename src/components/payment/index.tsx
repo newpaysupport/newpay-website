@@ -96,9 +96,9 @@ const PaymentScreen = () => {
                     </AnimatePresence>
                     <ContentMain />
                     {/* content background */}
-                    <div className="relative w-full h-[370px] mt-10">
+                    <div className="relative w-full lg:h-[370px] h-[400px] mt-10">
                         <Image src={bg_content3} alt="social" fill className="object-cover w-full h-full" quality={100} />
-                        <div className="absolute inset-0 flex flex-col lg:flex-row lg:justify-between items-center px-6 w-full lg:max-w-7xl mx-auto lg:px-8 gap-8">
+                        <div className="absolute inset-0 flex flex-col lg:flex-row lg:justify-between items-center px-4 w-full lg:max-w-7xl mx-auto lg:px-8 gap-8">
                             <div className="flex flex-col lg:mt-0 mt-16 items-center lg:items-start text-left lg:text-left max-w-2xl">
                                 <h2 className="lg:text-4xl text-2xl font-semibold text-white lg:mb-4 mb-2 w-full">
                                     {safeAssetsSection.title}
@@ -108,12 +108,12 @@ const PaymentScreen = () => {
                                 </p>
                             </div>
                             <div className="flex gap-4 sm:gap-5">
-                                <div className="lg:w-[272px] lg:-[210px] flex flex-col justify-center items-center lg:p-4 p-6 bg-gray-600/20 rounded-2xl">
+                                <div className="lg:w-[272px] lg:-[210px] flex flex-col justify-center items-center p-4 bg-gray-600/20 rounded-2xl">
                                     <Image src={scan_icon} alt="Biometric Icon" className='w-[64px] h-[64px]' />
                                     <p className="font-medium lg:text-2xl text-lg text-white mt-2 lg:px-4 px-3">{safeAssetsSection.biometric.title}</p>
                                     <p className="lg:text-2xl text-lg text-[#848484] font-medium">{safeAssetsSection.biometric.subtitle}</p>
                                 </div>
-                                <div className="lg:w-[272px] lg:-[210px] flex flex-col justify-center items-center lg:p-4 p-6 bg-gray-600/20 rounded-2xl ">
+                                <div className="lg:w-[272px] lg:-[210px] flex flex-col justify-center items-center p-4 bg-gray-600/20 rounded-2xl ">
                                     <Image src={access_icon} alt="Access Code Icon" className='w-[64px] h-[64px]' />
                                     <p className="lg:text-2xl text-lg font-medium text-white mt-2 ">{safeAssetsSection.accessCode.title}</p>
                                     <p className="lg:text-2xl text-lg text-[#848484] font-medium">{safeAssetsSection.accessCode.subtitle}</p>
