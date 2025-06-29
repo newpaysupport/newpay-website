@@ -96,7 +96,7 @@ const HomeScreenMobile = () => {
         setTabActive(id);
     }
     const classNameCardRefMobile = (isXsMobile || isSmallMobile) ? "h-[180px]" : "h-[230px]";
-    const classNameMobileCardRefMobile = (isXsMobile || isSmallMobile) ? "w-[90px]" : "w-[111px]";
+    const classNameMobileCardRefMobile = (isXsMobile || isSmallMobile) ? "w-[90px]" : "sm:w-[180px] w-[111px]";
 
 
     return (
@@ -123,7 +123,7 @@ const HomeScreenMobile = () => {
                     <figure className='absolute inset-0 bottom-0 left-0 w-full'>
                         <Image src={hero} alt='' className='w-full h-full' priority />
                     </figure>
-                    <div className='absolute inset-0 flex top-[130px] lg:top-20 justify-center z-[3]'>
+                    <div className='absolute inset-0 flex top-[130px] sm:top-[77px] md:top-[130px] lg:top-20 justify-center z-[3]'>
                         <div className="w-full lg:w-[600px] 2xl:w-[806px] px-4">
                             <p
                                 style={{
@@ -136,14 +136,14 @@ const HomeScreenMobile = () => {
                             </p>
                             <p className='text-[#848484] text-sm lg:text-base font-medium -tracking-[0.24px] text-center mb-8'>{t("descHero")}</p>
 
-                            <div className={`flex items-center justify-between md:justify-center gap-4 px-4 lg:px-0`}>
-                                <Link href={`${locale}/download`} className='flex-1 md:flex-none'>
-                                    <BtnPrimary text={t("btnGetApp")} variant={'primary-lighter'} className='md:w-[178px]' />
+                            <div className={`flex items-center justify-between sm:justify-center gap-4 px-4 lg:px-0`}>
+                                <Link href={`${locale}/download`} className='flex-1 sm:flex-none'>
+                                    <BtnPrimary text={t("btnGetApp")} variant={'primary-lighter'} className='sm:w-[178px]' />
                                 </Link>
                                 <div onClick={() => {
                                     toast.custom(<ToastCustom type='warning' />)
-                                }} className='flex-1 md:flex-none'>
-                                    <BtnPrimary text={t("btnCreateAccount")} variant={'surface-3'} className='md:w-[178px]' />
+                                }} className='flex-1 sm:flex-none'>
+                                    <BtnPrimary text={t("btnCreateAccount")} variant={'surface-3'} className='sm:w-[178px]' />
                                 </div>
                             </div>
                         </div>
@@ -217,7 +217,7 @@ const HomeScreenMobile = () => {
                                                     transform: 'translateX(-50%)',
                                                     opacity: isVisible ? 0 : 1
                                                 }}
-                                                className={`${classNameMobileCardRefMobile} h-[117px] absolute top-[40px] left-[50%] z-[2] block md:hidden`}>
+                                                className={`${classNameMobileCardRefMobile} h-[117px] absolute top-[40px] sm:top-[66px] left-[50%] z-[2] block md:hidden`}>
                                                 <Image src={card} alt='card' />
                                             </figure>
 
