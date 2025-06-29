@@ -83,7 +83,7 @@ const SwitchLanguage = ({ locale, switchLocale, t, isBlogAndContact, isVisible }
             </div>
 
             {/* Get App Button */}
-            <Link href={`/${locale}/download`}>
+            <Link href={`/${locale}/download`} className='lg:block hidden'>
                 <button className={`${isBlogAndContact ? 'bg-black text-white' : 'bg-white '} text-[#060606] cursor-pointer font-semibold md:inline hidden px-5 py-3 rounded-full active:scale-95  text-sm hover:scale-102`}>
                     {t('getApp')}
                 </button>
