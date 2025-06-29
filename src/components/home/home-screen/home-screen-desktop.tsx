@@ -5,8 +5,6 @@ import card from '@/images/home/hero/card.png'
 import hero from '@/images/home/hero/Hero.png'
 import Image from 'next/image'
 import { useEffect, useMemo, useRef, useState } from 'react'
-import PhysicCard from './consume/physic-card'
-import OpenAccount from './open-account'
 
 import apple from '@/images/home/consume/apple.svg'
 import ebay from '@/images/home/consume/ebay.svg'
@@ -16,10 +14,11 @@ import spotify from '@/images/home/consume/spotify.svg'
 import { useLocale, useTranslations } from 'use-intl'
 import Link from 'next/link'
 import toast from 'react-hot-toast'
-import ToastCustom from '../common/toast'
 import { useBreakpointFlags } from '@/hooks/useBreakpointFlags'
+import ToastCustom from '@/components/common/toast'
+import PhysicCard from '../consume/physic-card'
 
-const HomeScreen = () => {
+const HomeScreenDesktop = () => {
 
     const containerRef = useRef<HTMLDivElement | null>(null);
     const cardRef = useRef<HTMLElement | null>(null);
@@ -31,9 +30,6 @@ const HomeScreen = () => {
     const locale = useLocale();
 
     const { flag, isXsMobile, isSmallMobile, isTablet } = useBreakpointFlags();
-
-    console.log('flag', flag)
-    console.log('isTablet', isTablet)
 
     const scrollThreshold = useMemo(() => {
         if (isTablet) {
@@ -338,7 +334,7 @@ const HomeScreen = () => {
     )
 }
 
-export default HomeScreen
+export default HomeScreenDesktop
 
 
 
