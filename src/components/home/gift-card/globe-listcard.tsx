@@ -24,10 +24,10 @@ const GlobeListCard = () => {
     return (
         <div className='bg-[#060606] relative'>
             <div className='pt-60'>
-                <Image src={globe} alt="Globe Image" className="w-full md:h-full h-[600px] object-cover" />
+                <Image src={globe} alt="Globe Image" className="w-full lg:h-full h-[600px] object-cover" />
 
                 {/* Desktop */}
-                <div className='absolute right-0 left-0 top-[20%] bottom-0 md:flex gap-5 items-start justify-center hidden h-fit z-10'>
+                <div className='absolute right-0 left-0 top-[20%] bottom-0 lg:flex gap-5 items-start justify-center hidden h-fit z-10'>
                     {globeListCard.map((item, index) => {
                         let rotation = 0;
                         if (index === 0) rotation = -8;
@@ -64,15 +64,15 @@ const GlobeListCard = () => {
                 </div>
 
                 {/* Mobile */}
-                <div className="absolute right-0 left-0 bottom-0 top-[20%] md:hidden">
+                <div className="absolute right-0 left-0 bottom-0 top-[20%] lg:hidden">
                     <div className="flex items-start justify-start overflow-x-auto flex-nowrap px-4">
                         <div className='animation-slideshow flex gap-5'>
-                            {listImg.map((img, index) => {
-                                const item = globeListCard[index];
+                            {[...listImg,...listImg].map((img, index) => {
+                                const item = globeListCard[index % globeListCard.length]
 
                                 return (
                                     <div
-                                        key={img.id}
+                                        key={index}
                                         className="relative mt-4 min-w-[260px] h-[340px] flex flex-col justify-between overflow-hidden group hover:-translate-y-5 transition-all ease-linear duration-500 cursor-pointer"
                                     >
                                         <div>
@@ -100,7 +100,7 @@ const GlobeListCard = () => {
                     </div>
                 </div>
 
-                <div className='absolute inset-0 bottom-0 left-0 md:flex items-end justify-center hidden z-0'>
+                <div className='absolute inset-0 bottom-0 left-0 lg:flex items-end justify-center hidden z-0'>
                     <Image src={shadow_globe} alt="Globe Image" />
                 </div>
             </div>
