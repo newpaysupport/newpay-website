@@ -14,7 +14,7 @@ const HelpCenter = () => {
         <>
             <section className='lg:py-[160px] py-12 px-6 bg-[#060606]'>
                 <div
-                    className="lg:mx-auto lg:w-[1200px] lg:p-16 py-8 px-6 relative overflow-hidden transition-transform duration-300 hover:scale-101"
+                    className="lg:mx-auto xl:w-[1200px] lg:p-16 py-8 px-6 relative overflow-hidden transition-transform duration-300 hover:scale-101"
                     style={{
                         borderRadius: '40px',
                         border: '2px solid rgba(255, 183, 0, 0.2)',

@@ -27,7 +27,7 @@ const VirtualCard = ({ virtualItems, labelButton, id }: VirtualCardProps) => {
     return (
         <>
             {/* content Virtual Card*/}
-            <div id={id} className="flex justify-between items-center lg:mt-10 mt-8 mx-auto container lg:w-[80%] lg:flex-row flex-col px-6 lg:px-0">
+            <div id={id} className="flex justify-between lg:items-center lg:mt-10 mt-8 mx-auto container lg:w-[80%] lg:flex-row flex-col px-6 lg:px-0">
                 <AnimationFade inView={isLeftInView} direction="left" className="lg:w-[45%]">
                     <div ref={leftRef}>
                         <div className="my-4 p-6 bg-gray-100 rounded-2xl">
