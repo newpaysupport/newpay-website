@@ -1,29 +1,34 @@
+"use client"
 import message from '@/images/payment/message.png';
 import Image from 'next/image';
 import { payment as enBlog } from '@/i18n/messages/en.json';
 import { payment as ziBlog } from '@/i18n/messages/zi.json';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import Link from 'next/link';
 import arrow_right from '@/images/payment/arrow_right.svg';
+import { FAQ } from '@/interfaces/common';
 
 
 const Faq = () => {
-    const locale = useLocale();
-    const payment = locale === 'en' ? enBlog : ziBlog;
 
-    {/* Content Section: FAQ */ }
-    const faqSection = payment.faqSection;
-    const faqItems = faqSection.faqItems;
+    const t = useTranslations("payment.faqSection");
+
+    const locale = useLocale();
+    // const payment = locale === 'en' ? enBlog : ziBlog;
+
+    // {/* Content Section: FAQ */ }
+    // const faqSection = payment.faqSection;
+    // const faqItems = faqSection.faqItems;
     return (
         <div className="lg:py-20 lg:px-30 px-6 py-12 ">
             <div className="flex lg:flex-row flex-col mx-auto max-w-7xl justify-between">
                 <div className="text-white flex lg:flex-col flex-row justify-between lg:h-[450px]">
                     <div>
                         <h1 className="lg:text-6xl text-[32px] font-semibold">
-                            {faqSection.title}
+                            {t('title')}
                         </h1>
                         <p className="lg:text-base text-sm mt-3 text-[#AEAEAE]">
-                            {faqSection.subtitle}
+                            {t('subtitle')}
                         </p>
                         <Link href={`/${locale}/faq-help`} className='lg:block hidden'>
                             <button className='lg:mt-10 bg-[#1C1C1C] text-lg rounded-2xl px-6 py-4 font-semibold cursor-pointer'>
@@ -34,9 +39,9 @@ const Faq = () => {
                     <Image src={message} alt="Message Icon" width={205} height={180} className='lg:w-full lg:h-[180px] w-[190px] h-[150px] object-cover object-bottom' />
                 </div>
                 <div className="text-white">
-                    {faqItems.map((item, index) => {
+                    {t.raw("faqItems").map((item: FAQ, index: number) => {
                         return (
-                            <details key={item.question} className="cursor-pointer focus:outline-none group border-b border-gray-800 ">
+                            <details key={index} className="cursor-pointer focus:outline-none group border-b border-gray-800 ">
                                 <summary className="lg:w-[640px] w-full flex justify-between items-center text-left py-6">
                                     <p className="lg:text-2xl text-lg font-medium lg:w-full w-[90%]">{item.question}</p>
                                     <span className="text-3xl transition-transform duration-300 group-open:rotate-45">
