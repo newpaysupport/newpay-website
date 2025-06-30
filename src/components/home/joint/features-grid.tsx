@@ -18,8 +18,8 @@ const FeaturesGrid = () => {
 
     const isInView = useInView(gridRef, { once: false, amount: 0.1 });
 
-    const isMobileInView = useInView(mobileGridRef, { 
-        once: false, 
+    const isMobileInView = useInView(mobileGridRef, {
+        once: false,
         amount: 0.05,
         margin: "-5% 0px -5% 0px"
     });
