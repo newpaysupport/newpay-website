@@ -1,3 +1,4 @@
+"use client"
 import message from '@/images/payment/message.png';
 import Image from 'next/image';
 import { payment as enBlog } from '@/i18n/messages/en.json';
