@@ -59,7 +59,7 @@ const FaqHelpSlugDetail = ({ slug }: { slug: string }) => {
                 </div>
 
                 <div className='bg-white/4 rounded-3xl py-4 px-6 lg:p-10 mt-8 flex flex-col space-y-6'>
-                    {!fags.length ? <p className='text-white text-lg font-semibold text-center'>No articles</p> : fags.map((faq, index) => {
+                    {!fags.length ? <p className='text-white text-lg font-semibold text-center'>{t("noArticles")}</p> : fags.map((faq, index) => {
                         return (
                             <div
                                 onClick={() => handleOnclickSetFAQ(index)}
