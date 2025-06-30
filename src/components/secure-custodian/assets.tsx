@@ -26,12 +26,13 @@ const Assets = () => {
 
                 <div className='grid grid-cols-1 md:grid-cols-2 mt-20 gap-4 2xl:w-[1200px] lg:mx-auto'>
 
-                    <div style={{ background: 'linear-gradient(0deg, #110F0D 0%, #110F0D 100%), var(--bg-surface-surface-1, rgba(255, 255, 255, 0.04))' }} className='col-span-1 md:col-span-2 relative h-[444px] lg:h-[500px] rounded-3xl overflow-hidden'>
-                        <Image src={images[0]} alt='' fill className='hidden lg:block' />
-                        <figure className='w-full h-[240px] lg:hidden '>
-                            <Image src={asset1Mobile} priority alt='' className='object-cover w-full' />
+                    <div style={{ background: 'linear-gradient(0deg, #110F0D 0%, #110F0D 100%), var(--bg-surface-surface-1, rgba(255, 255, 255, 0.04))' }}
+                        className='col-span-1 md:col-span-2 relative h-full md:h-[420px] rounded-3xl overflow-hidden'>
+                        <Image src={images[0]} alt='' fill className='hidden md:block' />
+                        <figure className='w-full h-[240px] md:hidden '>
+                            <Image src={asset1Mobile} priority alt='' className='object-cover w-full h-full' />
                         </figure>
-                        <div className='relative z-[1] lg:w-[516px] lg:h-full px-6 lg:pt-4 lg:pr-10 lg:pl-[64px] lg:pb-[64px] flex flex-col gap-y-4 justify-end'>
+                        <div className='relative z-[1] md:w-[43%] py-8 lg:w-[516px] md:h-full px-6 md:pt-4 md:pr-10 md:pl-10 md:pb-[64px] lg:pr-10 lg:pl-[64px] lg:pb-[64px] flex flex-col gap-y-4 justify-end'>
                             <p className='textTitleClip text-2xl lg:text-[32px] font-semibold'>{list[0].title}</p>
                             <p className='text-[#848484] text-sm lg:text-lg font-normal'>{list[0].desc}</p>
                         </div>

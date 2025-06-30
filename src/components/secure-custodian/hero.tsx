@@ -39,9 +39,9 @@ const Hero = () => {
                 <Image src={overlay} alt='' className='object-cover w-full h-full 2xl:h-auto' />
             </figure>
 
-            <div
+            {/* <div
                 style={{ background: 'linear-gradient(180deg, rgba(6, 6, 6, 0.00) 50%, #060606 99.98%)', backdropFilter: 'blur(40px)' }}
-                className='absolute w-full h-[280px] z-[2] bottom-0 left-0 lg:hidden'></div>
+                className='absolute w-full h-[280px] z-[2] bottom-0 left-0 lg:hidden'></div> */}
 
             <div className='absolute inset-0 w-full h-full z-[10]'>
                 <div className='flex justify-center items-end h-full pb-12 px-4 lg:px-0 lg:pb-[120px]'>

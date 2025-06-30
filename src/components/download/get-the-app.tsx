@@ -38,7 +38,7 @@ const GetTheApp = () => {
                                 <p style={{ whiteSpace: 'pre-line' }} className='text-white text-center text-2xl lg:text-[36px] font-medium -tracking-[0.64px] lg:hidden'>
                                     {t("titleMobile")}
                                 </p>
-                                <p className='text-[#aeaeae] text-sm text-left lg:text-xl font-normal mt-4 lg:mt-6'>{t("desc")}</p>
+                                <p className='text-[#aeaeae] text-sm text-center xl:text-left lg:text-xl font-normal mt-4 lg:mt-6'>{t("desc")}</p>
                             </div>
 
                             <figure className='flex justify-center lg:justify-end'>

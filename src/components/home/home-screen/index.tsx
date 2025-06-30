@@ -1,6 +1,7 @@
 import React from 'react'
 import HomeScreenDesktop from './home-screen-desktop'
 import HomeScreenMobile from './home-screen-mobile'
+import HomeScreenMobileNoAnimation from './home-screen-mobile-no-animation'
 
 const HomeScreen = () => {
     return (
@@ -9,7 +10,8 @@ const HomeScreen = () => {
                 <HomeScreenDesktop />
             </div>
             <div className='lg:hidden'>
-                <HomeScreenMobile />
+                {/* <HomeScreenMobile /> */}
+                <HomeScreenMobileNoAnimation />
             </div>
         </>
     )
