@@ -29,7 +29,7 @@ const ContentCard = () => {
     }, []);
     return (
         <div className="relative container mx-auto pt-30" ref={wrapperRef}>
-            <Image src={card_payment} alt="card payment" ref={cardRef} className={`mx-auto lg:w-[440px] lg:scale-y-88 lg:h-[290px] scale-y-90 w-[360px] h-[290px] pl-2 lg:pl-2.5 transition-transform duration-300 ease-linear z-2 ${isSticky ? 'sticky top-[30%]' : ''}`} />
+            <Image src={card_payment} alt="card payment" ref={cardRef} className={`mx-auto lg:w-[442px] lg:scale-y-88 lg:h-[290px] scale-y-90 w-[360px] h-[290px] pl-2 lg:pl-2.5 transition-transform duration-300 ease-linear z-2 ${isSticky ? 'sticky top-[30%]' : ''}`} />
             <div className='pt-20 transition-transform duration-300 ease-linear'>
                 <div className='relative lg:w-[430px] lg:h-[340px] w-[350px] h-[300px] mx-auto' ref={walletRef}>
                     <Image src={wallet_no_card} alt="Wallet no card" className={`mx-auto z-1 lg:w-full lg:h-full w-[350px] h-[260px]`} />
