@@ -65,7 +65,7 @@ const GlobeListCard = () => {
 
                 {/* Mobile */}
                 <div className="absolute right-0 left-0 bottom-0 top-[20%] lg:hidden">
-                    <div className="flex items-start justify-start overflow-x-auto flex-nowrap px-4">
+                    <div className="flex items-start justify-start overflow-hidden flex-nowrap px-4">
                         <div className='animation-slideshow flex gap-5'>
                             {[...listImg,...listImg].map((img, index) => {
                                 const item = globeListCard[index % globeListCard.length]
