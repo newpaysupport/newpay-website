@@ -15,6 +15,7 @@ const About = () => {
         flag: item.flag,
         country: item.country,
     }));
+    
     return (
         <>
             <div className="relative w-full h-[500px] md:h-[750px]">

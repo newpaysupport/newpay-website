@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import logoEN from '@/images/UnitedKingdom.png';
 import logoZH from '@/images/china.png';
 import Link from 'next/link';
+
 type Props = {
     locale: string;
     switchLocale: (lng: string) => void;
@@ -22,8 +23,8 @@ const SwitchLanguage = ({ locale, switchLocale, t, isBlogAndContact, isVisible }
             setOpen(false);
         }
     }, [isVisible])
+    
     const [open, setOpen] = useState(false);
-
     const currentLanguage = languages.find((lng) => lng.code === locale) || languages[0];
 
     return (
@@ -51,12 +52,8 @@ const SwitchLanguage = ({ locale, switchLocale, t, isBlogAndContact, isVisible }
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                 </button>
-
                 {open && (
-                    <div style={{
-                        // background: "rgba(255, 255, 255, 0.08)",
-                    }}
-                        className={`absolute left-0 mt-2 w-32 z-20  rounded-lg p-2 bg-[#131313]`}>
+                    <div className={`absolute left-0 mt-2 w-32 z-20  rounded-lg p-2 bg-[#131313]`}>
                         {languages.map((lng) => (
                             <div
                                 key={lng.code}
@@ -81,7 +78,6 @@ const SwitchLanguage = ({ locale, switchLocale, t, isBlogAndContact, isVisible }
                     </div>
                 )}
             </div>
-
             {/* Get App Button */}
             <Link href={`/${locale}/download`} className='lg:block hidden'>
                 <button className={`${isBlogAndContact ? 'bg-black text-white' : 'bg-white '} text-[#060606] cursor-pointer font-semibold md:inline hidden px-5 py-3 rounded-full active:scale-95  text-sm hover:scale-102`}>
@@ -91,5 +87,4 @@ const SwitchLanguage = ({ locale, switchLocale, t, isBlogAndContact, isVisible }
         </div>
     );
 };
-
 export default SwitchLanguage;

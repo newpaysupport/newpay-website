@@ -28,7 +28,6 @@ const AutoSlideshow = () => {
                 }} className='absolute w-[120px] h-[450px] right-0 bottom-[12%] z-30'></div>
 
                 <div className="relative mt-20 flex justify-center items-center animation-slideshow gap-5">
-
                     {[...slides, ...slides].map((slide, i) => (
                         <div
                             key={i}
