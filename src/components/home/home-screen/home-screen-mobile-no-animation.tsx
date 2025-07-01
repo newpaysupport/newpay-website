@@ -91,7 +91,7 @@ const HomeScreenMobileNoAnimation = () => {
                         </div>
                     </div>
                 </div>
-                <div className='top-[383px] z-[1000] absolute flex justify-center inset-0 h-fit'>
+                <div className='top-[383px] z-[10] absolute flex justify-center inset-0 h-fit'>
                     <figure
                         className={`w-4/5 ${classNameCardRefMobile} sm:w-[530px] sm:h-[320px]`}>
                         <Image src={card} alt='card' className='w-full h-full' />
