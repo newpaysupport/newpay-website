@@ -1,5 +1,4 @@
 "use client"
-import React from 'react'
 import Image from 'next/image';
 
 type CardSlideMobileProps = {
@@ -42,11 +41,11 @@ const CardSlideMobile = ({ slides, joint }: CardSlideMobileProps) => {
 
             {/* Slide container */}
             <div className="relative mt-12">
-                <div className="flex gap-5 overflow-x-auto px-4 animation-slideshow">
+                <div className="flex gap-5 overflow-hidden px-4 animation-slideshow">
                     {[...slides, ...slides].map((slide, i) => (
                         <div
                             key={i}
-                            className="min-w-[260px] sm:min-w-[300px] md:w-[330px] h-[410px] rounded-3xl relative overflow-hidden flex-shrink-0"
+                            className="w-[330px] h-[410px] rounded-3xl relative overflow-hidden flex-shrink-0"
                         >
                             <Image
                                 src={slide.image}
