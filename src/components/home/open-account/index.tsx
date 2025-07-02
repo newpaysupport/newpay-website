@@ -92,12 +92,12 @@ const OpenAccount = () => {
 
     return (
         <ReactLenis root>
-            <div className="bg-[#060606] pt-[64px] px-4 xl:pt-[120px] xl:px-[140px]">
-                <div className='container mx-auto'>
+            <div className="bg-[#060606] pt-[64px] px-4 xl:pt-[120px] xl:pb-[220px] xl:px-[140px] h-[4105px] lg:h-[4007px]">
+                <div className='container mx-auto h-full'>
                     <h3 className='text-white text-[32px] xl:text-[48px] font-semibold'>{t('openAccount.title')}</h3>
                     <p className='text-[#aeaeae] text-sm xl:text-lg font-normal mt-6 mb-20'>{t('openAccount.desc')}</p>
 
-                    <div className='flex xl:gap-x-20 h-[3820px] lg:h-full'>
+                    <div className='flex xl:gap-x-20 h-full'>
                         <div className='w-full h-full lg:w-[800px] relative pb-[500px] xl:pb-[200px]'>
                             <div className='flex flex-col gap-y-[630px] lg:gap-y-[580px]'>
                                 {t.raw('openAccount.steps').map((step: { title: string; desc: string }, index: number) => {
@@ -115,7 +115,7 @@ const OpenAccount = () => {
                                                     <div>
                                                         <div>
                                                             <p className='text-white text-2xl lg:text-[40px] font-medium'>{step.title}</p>
-                                                            <p className='text-[#aeaeae] text-sm xl:text-xl font-medium mt-4 lg:mt-6'>{step.desc}</p>
+                                                            <p className='text-[#aeaeae] text-sm xl:text-xl font-normal mt-4 lg:mt-6'>{step.desc}</p>
                                                         </div>
                                                     </div>
 
