@@ -84,27 +84,27 @@ const OpenAccount = () => {
     });
 
     const fixedHeight = useMemo(() => {
-        if (is2xl) return 580;
-        if (isXl) return 580;
+        if (is2xl) return 710;
+        if (isXl) return 710;
         // if (isLg) return 620;
-        return 584;
+        return 760;
     }, [is2xl, isXl, isLg]);
 
     return (
         <ReactLenis root>
-            <div className="bg-[#060606] pt-[64px] px-4 xl:pt-20 xl:px-[120px]">
+            <div className="bg-[#060606] pt-[64px] px-4 xl:pt-[120px] xl:px-[140px]">
                 <div className='container mx-auto'>
                     <h3 className='text-white text-[32px] xl:text-[48px] font-semibold'>{t('openAccount.title')}</h3>
                     <p className='text-[#aeaeae] text-sm xl:text-lg font-normal mt-6 mb-20'>{t('openAccount.desc')}</p>
 
-                    <div className='flex justify-between'>
+                    <div className='flex xl:gap-x-20 h-[3820px] lg:h-full'>
                         <div className='w-full h-full lg:w-[800px] relative pb-[500px] xl:pb-[200px]'>
-                            <div className='flex flex-col gap-y-[480px]'>
+                            <div className='flex flex-col gap-y-[630px] lg:gap-y-[580px]'>
                                 {t.raw('openAccount.steps').map((step: { title: string; desc: string }, index: number) => {
                                     return (
-                                        <div key={index} className={`stepPanel flex items-start justify-between h-[108px]`}>
+                                        <div key={index} className={`stepPanel flex items-start justify-between h-[130px]`}>
                                             <div className='content-wrapper'>
-                                                <div className='flex gap-x-6 xl:gap-x-12'>
+                                                <div className='flex gap-x-6 xl:gap-x-[64px]'>
                                                     <div className='relative z-[10]'>
                                                         <p
                                                             className={`${index === activeStep ? "bg-[#FF6910] border-none" : "bg-[#212121] border-white/16"}
@@ -114,14 +114,14 @@ const OpenAccount = () => {
                                                     </div>
                                                     <div>
                                                         <div>
-                                                            <p className='text-white text-2xl lg:text-[40px] 2xl:text-[60px] font-medium'>{step.title}</p>
-                                                            <p className='text-[#aeaeae] text-sm xl:text-xl font-medium mt-4 xl:mt-0'>{step.desc}</p>
-                                                        </div>
-                                                        <div className={`transition-all ease-linear duration-150 bg-[#060606] block mx-auto xl:hidden mt-12 w-[250px] md:w-[300px]`}>
-                                                            <Image src={stepAccount[index].image} alt='image' className=' mix-blend-lighten w-full h-full' />
+                                                            <p className='text-white text-2xl lg:text-[40px] font-medium'>{step.title}</p>
+                                                            <p className='text-[#aeaeae] text-sm xl:text-xl font-medium mt-4 lg:mt-6'>{step.desc}</p>
                                                         </div>
                                                     </div>
 
+                                                </div>
+                                                <div className={`py-12  transition-all ease-linear duration-150 bg-[#060606] md:mx-auto block xl:hidden  w-full max-w-[400px] md:w-[400px]`}>
+                                                    <Image src={stepAccount[index].image} alt='image' className=' mix-blend-lighten w-full h-full' />
                                                 </div>
                                             </div>
                                         </div>
@@ -142,7 +142,7 @@ const OpenAccount = () => {
                                 </motion.div>
                             </>
                         </div>
-                        <div className='sticky hidden xl:flex justify-end h-[575px] min-w-[400px] w-[400px] top-[calc(50%-288px)]'>
+                        <div className='sticky hidden xl:flex justify-end h-[690px] min-w-[480px] w-[480px] top-[calc(50%-288px)]'>
                             <div className={`${activeStep !== -1 ? "opacity-100" : "opacity-0"} transition-all ease-linear duration-150 bg-[#060606]`}>
                                 <Image src={stepAccount[activeStep].image} alt='image' className=' mix-blend-lighten' />
                             </div>
