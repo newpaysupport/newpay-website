@@ -124,9 +124,7 @@ const PaymentScreen = () => {
                     <ContentCard />
                     <ContentEnd />
                 </div>
-                <div className='pt-20'>
-                    <Faq />
-                </div>
+                <Faq />
                 <DownloadSection />
             </div>
         </div>
