@@ -13,7 +13,7 @@ const DownloadSection = () => {
     return (
         <section className="bg-[#060606]">
             <div className="bg-[#FFFFFF]/4 lg:py-20 xl:px-50 px-6 py-12 lg:rounded-[80px] rounded-[24px]">
-                <div className="flex lg:flex-row flex-col-reverse lg:max-w-7xl mx-auto lg:gap-30 lg:justify-center items-center">
+                <div className="flex lg:flex-row flex-col-reverse lg:container mx-auto lg:gap-30 lg:justify-center items-center">
                     <Image src={product_content_end} alt="Gift Icon" width={540} height={540} className="w-full h-full lg:w-[540px] lg:h-[540px]" />
                     <div className='lg:p-0 p-6 lg:w-1/2 lg:text-left text-center lg:pb-0 pb-8'>
                         <Image src={logo_payment} alt="Gift Icon" width={100} height={100} className="w-16 h-16 lg:w-20 lg:h-20 lg:m-0 mx-auto" />

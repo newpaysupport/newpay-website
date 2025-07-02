@@ -21,8 +21,8 @@ const Card4 = () => {
             {/* mobile */}
             <Card4Mobile joint={joint} locale={locale} handleToast={handleToast} />
             {/* desktop */}
-            <section className="bg-white p-10 lg:flex items-center rounded-3xl min-h-screen hidden">
-                <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 ">
+            <section className="container mx-auto bg-white p-16 lg:flex items-center rounded-3xl my-auto hidden">
+                <div className="grid grid-cols-1 lg:grid-cols-2 ">
                     {/* Left Section: Text Content and Small Card */}
                     <div className="flex flex-col justify-between items-center gap-10">
                         <h2 className="lg:w-[60%] text-4xl lg:text-5xl font-semibold text-[#1B1B1B] mb-4 leading-tight">
