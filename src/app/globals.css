@@ -191,6 +191,17 @@ body {
   }
 }
 
+/* animation-slideshow-globle */
+@keyframes scrollX {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+.animation-slideshow-globle {
+  animation: scrollX 10s linear infinite;
+}
+
+
 /* Optional responsive styles */
 @media (max-width: 768px) {
   .slide-item {

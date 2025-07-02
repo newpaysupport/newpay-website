@@ -8,6 +8,7 @@ import card1_mobile from '@/images/home/giftcard/card1_mobile.png';
 import card4_mobile from '@/images/home/giftcard/card4_mobile.png';
 import { useLocale } from 'next-intl';
 import Image from 'next/image';
+import { useEffect, useRef, useState } from 'react';
 
 const GlobeListCard = () => {
     const locale = useLocale()
@@ -20,6 +21,29 @@ const GlobeListCard = () => {
         { id: 3, image: globeListCard[2].image },
         { id: 4, image: card4_mobile },
     ]
+    const [activeIndex, setActiveIndex] = useState(0);
+    const scrollRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        let index = 0;
+        const interval = setInterval(() => {
+            index = (index + 1) % listImg.length;
+            setActiveIndex(index);
+        }, 2500);
+
+        return () => clearInterval(interval);
+    }, []);
+
+    // Scroll container theo activeIndex
+    useEffect(() => {
+        if (!scrollRef.current) return;
+        const scrollX = activeIndex * 265;
+        scrollRef.current.scrollTo({
+            left: scrollX,
+            behavior: 'smooth',
+        });
+    }, [activeIndex]);
+
 
     return (
         <div className='bg-[#060606] relative'>
@@ -65,15 +89,14 @@ const GlobeListCard = () => {
 
                 {/* Mobile */}
                 <div className="absolute right-0 left-0 bottom-0 top-[20%] lg:hidden">
-                    <div className="flex items-start justify-start overflow-hidden flex-nowrap px-4">
-                        <div className='animation-slideshow flex gap-5'>
-                            {[...listImg,...listImg].map((img, index) => {
-                                const item = globeListCard[index % globeListCard.length]
-
+                    <div ref={scrollRef} className="flex items-start justify-start overflow-x-hidden flex-nowrap px-4 snap-mandatory scroll-smooth">
+                        <div className='flex gap-5'>
+                            {listImg.map((img, index) => {
+                                const item = globeListCard[index % globeListCard.length];
                                 return (
                                     <div
                                         key={index}
-                                        className="relative mt-4 min-w-[260px] h-[340px] flex flex-col justify-between overflow-hidden group hover:-translate-y-5 transition-all ease-linear duration-500 cursor-pointer"
+                                        className="snap-start relative mt-4 min-w-[260px] h-[340px] flex flex-col justify-between overflow-hidden group hover:-translate-y-5 transition-all ease-linear duration-500 cursor-pointer"
                                     >
                                         <div>
                                             <Image
@@ -98,7 +121,18 @@ const GlobeListCard = () => {
                             })}
                         </div>
                     </div>
+                    {/* Dots indicator */}
+                    <div className="top-[50%] flex justify-center gap-2 mt-4 absolute bottom-4 w-full">
+                        {listImg.map((_, index) => (
+                            <div
+                                key={index}
+                                className={`w-2 h-2 rounded-full transition-all duration-300 ${activeIndex === index ? 'bg-white' : 'bg-[#444]'
+                                    }`}
+                            />
+                        ))}
+                    </div>
                 </div>
+
 
                 <div className='absolute inset-0 bottom-0 left-0 lg:flex items-end justify-center hidden z-0'>
                     <Image src={shadow_globe} alt="Globe Image" />
