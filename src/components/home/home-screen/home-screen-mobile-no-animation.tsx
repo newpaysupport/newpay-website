@@ -38,7 +38,7 @@ const HomeScreenMobileNoAnimation = () => {
     const handleSetTabActive = (id: number) => {
         setTabActive(id);
     }
-    const classNameCardRefMobile = (isXsMobile || isSmallMobile) ? "h-[180px]" : "h-[230px]";
+    const classNameCardRefMobile = (isXsMobile || isSmallMobile) ? "h-[230px]" : "h-[230px]";
     const classNameMobileCardRefMobile = (isXsMobile || isSmallMobile) ? "w-[90px]" : "sm:w-[180px] w-[111px]";
 
     return (
@@ -48,7 +48,7 @@ const HomeScreenMobileNoAnimation = () => {
                 <div className='w-full h-[872px] overflow-y-hidden relative'>
                     <video
                         src={'/videos/home/prism-coin-mobile.mp4'}
-                        className='w-full h-full object-cover object-bottom z-[2] absolute mix-blend-lighten'
+                        className='w-full h-full object-cover object-center z-[2] absolute mix-blend-lighten'
                         controls={false}
                         loop={true}
                         autoPlay={true}
@@ -91,7 +91,7 @@ const HomeScreenMobileNoAnimation = () => {
                         </div>
                     </div>
                 </div>
-                <div className='top-[383px] z-[10] absolute flex justify-center inset-0 h-fit'>
+                <div className='top-[520px] z-[10] absolute flex justify-center inset-0 h-fit'>
                     <figure
                         className={`w-4/5 ${classNameCardRefMobile} sm:w-[530px] sm:h-[320px]`}>
                         <Image src={card} alt='card' className='w-full h-full' />
