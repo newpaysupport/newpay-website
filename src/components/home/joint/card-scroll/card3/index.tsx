@@ -25,8 +25,8 @@ const Card3 = () => {
             {/* mobile */}
             <Card3Mobile  joint={joint} locale={locale} t={t}/>
             {/* desktop */}
-            <section className="bg-white p-16 lg:flex items-center rounded-3xl min-h-screen hidden">
-                <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-30">
+            <section className="container mx-auto bg-white p-16 lg:flex items-center rounded-3xl min-h-screen hidden">
+                <div className=" grid grid-cols-1 lg:grid-cols-2 gap-30">
                     {/* Left Section: Text Content and Small Card */}
                     <div className="flex flex-col justify-between space-y-10">
                         <div className="pl-32">

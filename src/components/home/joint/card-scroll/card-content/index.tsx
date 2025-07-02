@@ -24,18 +24,18 @@ const CardContent = () => {
                 <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-30">
                     {/* Left Section: Text Content and Small Card */}
                     <div className="flex flex-col justify-between space-y-10">
-                        <div className="pl-32">
-                            <h2 className="text-4xl lg:text-5xl font-semibold text-[#1B1B1B] mb-4 leading-tight">
+                        <div className="pl-36">
+                            <h2 className="text-5xl lg:text-5xl font-semibold text-[#1B1B1B] mb-4 leading-tight">
                                 {joint.cardContent.title}
                             </h2>
-                            <p className="text-3xl text-[#666] mb-6 font-medium">
+                            <p className="text-[32px] text-[#666] mb-6 font-medium">
                                 {joint.cardContent.description}
                             </p>
                         </div>
 
                         <div
                             style={{ borderRadius: '20px' }}
-                            className="bg-black p-4 text-white max-w-xl gap-4 shadow-xl flex">
+                            className="bg-black p-4 text-white max-w-lg gap-4 shadow-xl flex">
                             <Image
                                 src={card1_img1}
                                 alt="Person holding a card"
@@ -44,7 +44,7 @@ const CardContent = () => {
                                 className="rounded-2xl object-cover w-[200px] h-[200px]"
                             />
                             <div className="flex flex-col justify-between mx-4">
-                                <p className="text-lg">
+                                <p className="text-base">
                                     {joint.cardContent.textCardLeft}
                                 </p>
                                 <Link href={`/${locale}/contact`}>
