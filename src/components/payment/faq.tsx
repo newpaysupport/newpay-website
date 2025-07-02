@@ -20,8 +20,8 @@ const Faq = () => {
     // const faqSection = payment.faqSection;
     // const faqItems = faqSection.faqItems;
     return (
-        <div className="lg:py-20 lg:px-30 px-6 py-12 mx-auto container ">
-            <div className="flex lg:flex-row flex-col justify-between">
+        <div className="lg:py-20 lg:px-30 px-6 py-12">
+            <div className="flex lg:flex-row flex-col justify-between mx-auto container">
                 <div className="text-white flex lg:flex-col flex-row justify-between lg:h-[450px]">
                     <div>
                         <h1 className="lg:text-6xl text-[32px] font-semibold">
