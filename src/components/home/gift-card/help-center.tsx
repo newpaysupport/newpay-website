@@ -33,7 +33,7 @@ const HelpCenter = () => {
                     }}
                 >
                     <div
-                        className="lg:mx-auto xl:w-[1200px] lg:p-16 py-8 px-6 relative overflow-hidden"
+                        className="lg:mx-auto lg:p-16 py-8 px-6 relative overflow-hidden"
                         style={{
                             borderRadius: '40px',
                             border: '2px solid rgba(255, 183, 0, 0.2)',
