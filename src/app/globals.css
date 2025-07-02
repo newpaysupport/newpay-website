@@ -54,13 +54,9 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  letter-spacing: -7px;
 }
 
-@media (min-width: 1440px) {
-  .newpayFooterText {
-    font-size: 312px;
-  }
-}
 
 
 
