@@ -1,6 +1,6 @@
 'use client'
 import product_content_end from "@/images/payment/Product_Image.png";
-import logo_payment from "@/images/payment/newpay_square_mark_payment.svg";
+import logo_payment from "@/images/payment/newpay_square_mark_payment.png";
 import { useTranslations } from "next-intl";
 import Image from 'next/image';
 import Link from "next/link";

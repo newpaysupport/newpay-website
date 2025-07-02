@@ -36,7 +36,7 @@ const MobileHeader = ({
 }) => {
     return (
         <div className={`lg:hidden fixed top-[70px] left-0 w-full h-[calc(100vh-70px)] backdrop-blur-md z-50 overflow-y-auto ${isBlogAndContact ? 'bg-white text-black' : 'bg-[#060606] text-white'}`}>
-            <div className="px-6 py-6">
+            <div className="px-6 py-6 flex flex-col justify-between h-[calc(100vh-70px)]">
                 {/* Navigation Links */}
                 <ul className="space-y-0">
                     {navLinksRight.map((link) => (
@@ -147,20 +147,21 @@ const MobileHeader = ({
                     ))}
                 </ul>
                 {/* Bottom Section */}
-                <div className={`mt-8 pt-6 border-t ${isBlogAndContact ? 'border-black/10' : 'border-white/10'}`}>
-                    <div className="mb-6">
+                <div className={`${isBlogAndContact ? 'border-black/10' : 'border-white/10'}`}>
+                    <div className="flex justify-between items-center">
                         <SwitchLanguage locale={locale} switchLocale={switchLocale} t={t} isBlogAndContact={isBlogAndContact} isVisible={isVisible} />
+                        <Link href={`/${locale}/download`}>
+                            <button
+                                type="button"
+                                className={`py-3 px-6 text-sm font-medium active:scale-95 transition-all rounded-full 
+                                ${isBlogAndContact ? 'bg-black text-white hover:bg-black/80' : 'bg-white text-black hover:bg-gray-100'}`}
+                                onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                                {t('getApp')}
+                            </button>
+                        </Link>
                     </div>
-                    <Link href={`/${locale}/download`}>
-                        <button
-                            type="button"
-                            className={`w-full text-sm font-medium active:scale-95 transition-all h-12 rounded-full 
-              ${isBlogAndContact ? 'bg-black text-white hover:bg-black/80' : 'bg-white text-black hover:bg-gray-100'}`}
-                            onClick={() => setIsMobileMenuOpen(false)}
-                        >
-                            {t('getApp')}
-                        </button>
-                    </Link>
+
                 </div>
             </div>
         </div>
