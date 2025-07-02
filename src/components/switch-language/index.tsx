@@ -1,8 +1,8 @@
-import Image from 'next/image';
-import { useEffect, useState } from 'react';
 import logoEN from '@/images/UnitedKingdom.png';
 import logoZH from '@/images/china.png';
+import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
 type Props = {
     locale: string;
@@ -23,12 +23,12 @@ const SwitchLanguage = ({ locale, switchLocale, t, isBlogAndContact, isVisible }
             setOpen(false);
         }
     }, [isVisible])
-    
+
     const [open, setOpen] = useState(false);
     const currentLanguage = languages.find((lng) => lng.code === locale) || languages[0];
 
     return (
-        <div className="flex items-center space-x-4 relative hover: cursor-pointer">
+        <div className="lg:rounded-none rounded-full lg:bg-transparent bg-[#FFFFFF]/8 lg:p-0 p-1 flex items-center lg:space-x-4 relative hover:cursor-pointer">
             {/* Language Dropdown */}
             <div className="relative">
                 <button
@@ -53,29 +53,53 @@ const SwitchLanguage = ({ locale, switchLocale, t, isBlogAndContact, isVisible }
                     </svg>
                 </button>
                 {open && (
-                    <div className={`absolute left-0 mt-2 w-32 z-20  rounded-lg p-2 bg-[#131313]`}>
-                        {languages.map((lng) => (
-                            <div
-                                key={lng.code}
-                                onClick={() => {
-                                    switchLocale(lng.code);
-                                    setOpen(false);
-                                }}
-                                className={`flex items-center gap-2 px-4 py-2 cursor-pointer rounded-lg my-1
+                    <>
+                        <div className={`absolute lg:block hidden left-0 mt-2 w-32 z-20  rounded-lg p-2 bg-[#131313]`}>
+                            {languages.map((lng) => (
+                                <div
+                                    key={lng.code}
+                                    onClick={() => {
+                                        switchLocale(lng.code);
+                                        setOpen(false);
+                                    }}
+                                    className={`flex items-center gap-2 px-4 py-2 cursor-pointer rounded-lg my-1
                                     ${locale === lng.code ? 'bg-white/8' : 'hover:bg-white/8'}`}
-                            >
-                                <Image
-                                    src={lng.flag.src}
-                                    alt={""}
-                                    width={20}
-                                    height={20}
-                                    className="w-5 h-5 rounded-full"
-                                />
-                                <span className={`${isBlogAndContact ? 'text-white' : ''}`}>{lng.label}</span>
-                            </div>
-                        ))}
+                                >
+                                    <Image
+                                        src={lng.flag.src}
+                                        alt={""}
+                                        width={20}
+                                        height={20}
+                                        className="w-5 h-5 rounded-full"
+                                    />
+                                    <span className={`${isBlogAndContact ? 'text-white' : ''}`}>{lng.label}</span>
+                                </div>
+                            ))}
+                        </div>
+                        <div className={`absolute lg:hidden bottom-12 mt-2 w-32 z-20  rounded-lg p-2 bg-[#131313]`}>
+                            {languages.map((lng) => (
+                                <div
+                                    key={lng.code}
+                                    onClick={() => {
+                                        switchLocale(lng.code);
+                                        setOpen(false);
+                                    }}
+                                    className={`flex items-center gap-2 px-4 py-2 cursor-pointer rounded-lg my-1
+                                    ${locale === lng.code ? 'bg-white/8' : 'hover:bg-white/8'}`}
+                                >
+                                    <Image
+                                        src={lng.flag.src}
+                                        alt={""}
+                                        width={20}
+                                        height={20}
+                                        className="w-5 h-5 rounded-full"
+                                    />
+                                    <span className={`${isBlogAndContact ? 'text-white' : ''}`}>{lng.label}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </>
 
-                    </div>
                 )}
             </div>
             {/* Get App Button */}
