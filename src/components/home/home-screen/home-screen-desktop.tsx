@@ -163,7 +163,7 @@ const HomeScreenDesktop = () => {
             <div ref={heroRef} className='w-full h-[872px] overflow-y-hidden relative'>
                 <video
                     src={'/videos/home/prism-coin.mp4'}
-                    className='w-full h-full object-cover object-top z-[2] absolute mix-blend-lighten hidden lg:block'
+                    className='w-full h-full object-cover object-bottom z-[2] absolute mix-blend-lighten hidden lg:block'
                     controls={false}
                     loop={true}
                     autoPlay={true}
