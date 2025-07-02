@@ -20,7 +20,7 @@ const CardContent = () => {
             {/* mobile */}
             <CardContentMobile joint={joint} locale={locale} />
             {/* desktop */}
-            <section className="bg-white p-16 lg:flex items-center rounded-3xl min-h-screen hidden" >
+            <section className="bg-white p-16 lg:flex items-center rounded-3xl hidden my-auto" >
                 <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-30">
                     {/* Left Section: Text Content and Small Card */}
                     <div className="flex flex-col justify-between space-y-10">
