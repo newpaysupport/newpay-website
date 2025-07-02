@@ -25,7 +25,7 @@ const CardSlideMobile = ({ slides, joint }: CardSlideMobileProps) => {
             {/* Overlay Left */}
             <div
                 style={{
-                    background: "linear-gradient(90deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.00) 100%)"
+                    background: "linear-gradient(90deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.00) 100%)"
 
                 }}
                 className="absolute w-[60px] h-[450px] left-0 bottom-[6%] z-30"
@@ -34,7 +34,7 @@ const CardSlideMobile = ({ slides, joint }: CardSlideMobileProps) => {
             {/* Overlay Right */}
             <div
                 style={{
-                    background: "linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.80) 100%)"
+                    background: "linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.5) 100%)"
                 }}
                 className="absolute w-[60px] h-[450px] right-0 bottom-[6%] z-30"
             ></div>

@@ -14,6 +14,9 @@ html {
 .text-5xl {
   letter-spacing: -2px;
 }
+.text-6xl {
+  letter-spacing: -2px;
+}
 .text-md {
   letter-spacing: -0.24px;
 }
