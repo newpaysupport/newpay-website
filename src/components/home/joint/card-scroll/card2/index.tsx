@@ -26,7 +26,7 @@ const Card2 = () => {
             {/* mobile */}
             <Card2Mobile joint={joint} listText={listText} locale={locale} handleToast={handleToast} />
             {/* desktop */}
-            <BoxWrapped className="bg-white p-5 lg:flex items-center rounded-3xl hidden my-auto">
+            <BoxWrapped className="bg-white md:px-5 xl:px-16 lg:flex items-center rounded-3xl hidden my-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-30">
                     {/* Left Section: Text Content and Small Card */}
                     <div className="flex flex-col justify-between gap-10 items-end">

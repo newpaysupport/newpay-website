@@ -80,9 +80,9 @@ const About = () => {
                             </div>
                         </div>
 
-                        <Image src={about_joint} alt='' className='absolute md:h-[640px] md:w-[1200px] top-[60%] left-1/2 -translate-x-1/2 visible rounded-4xl mx-auto object-cover object-center hidden md:block' />
+                        <Image src={about_joint} alt='' className='absolute lg:h-[640px] xl:w-[1200px] top-[60%] left-1/2 -translate-x-1/2 visible rounded-4xl mx-auto object-cover object-center hidden md:block' />
                         <Link href={`/${locale}/contact`}>
-                            <button className='absolute bottom-[-40%] right-[17%] p-3 text-[#060606] bg-[#FFF] md:flex gap-4 items-center rounded-full group hidden'>
+                            <button className='absolute xl:bottom-[-40%] left-3/4 -translate-x-1/3 p-3 text-[#060606] bg-[#FFF] md:flex gap-4 items-center rounded-full group hidden'>
                                 <Image src={phone_icon} alt='message icon' className='h-12 w-12 group-hover:scale-105' />
                                 <span className='text-2xl font-semibold pr-3'>{joint.about.buttonText}</span>
                             </button>
