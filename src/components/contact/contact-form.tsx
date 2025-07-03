@@ -17,8 +17,6 @@ import TextArea from './text-area';
 
 
 
-
-
 const ContactForm = () => {
 
     const [enabled, setEnabled] = useState(false);
@@ -53,8 +51,6 @@ const ContactForm = () => {
         event.preventDefault()
     }
 
-    const watchedValues = watch();
-
     const isDisabled = !isValid || Object.keys(errors).length > 0;
 
     return (
@@ -65,7 +61,7 @@ const ContactForm = () => {
                     {t("desc")}
                 </p>
 
-                <form className="space-y-4" onSubmit={handleSubmit(onSubmit)} >
+                <form className="space-y-4" method='POST' action={"https://formspree.io/f/xeokdplv"}>
                     <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
                         <div>
                             <NameInput control={control} inputType='text' name="firstName" label={t("firstName")} type='name' placeholder={""} register={register} />
