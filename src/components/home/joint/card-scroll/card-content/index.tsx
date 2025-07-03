@@ -10,6 +10,7 @@ import { useLocale } from 'next-intl';
 import Image from "next/image";
 import Link from 'next/link';
 import CardContentMobile from './card-content-mobile';
+import BoxWrapped from '@/components/common/box-wrapped';
 
 const CardContent = () => {
     const locale = useLocale();
@@ -20,7 +21,7 @@ const CardContent = () => {
             {/* mobile */}
             <CardContentMobile joint={joint} locale={locale} />
             {/* desktop */}
-            <section className="bg-white p-16 lg:flex items-center rounded-3xl hidden my-auto" >
+            <BoxWrapped className="bg-white p-5 lg:flex items-center rounded-3xl hidden my-auto" >
                 <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-30">
                     {/* Left Section: Text Content and Small Card */}
                     <div className="flex flex-col justify-between space-y-10">
@@ -41,9 +42,9 @@ const CardContent = () => {
                                 alt="Person holding a card"
                                 width={200}
                                 height={200}
-                                className="rounded-2xl object-cover w-[200px] h-[200px]"
+                                className="rounded-2xl object-cover w-[200px] h-full"
                             />
-                            <div className="flex flex-col justify-between mx-4">
+                            <div className="flex flex-col justify-between mx-4 gap-5">
                                 <p className="text-base">
                                     {joint.cardContent.textCardLeft}
                                 </p>
@@ -82,7 +83,8 @@ const CardContent = () => {
                         </div>
                     </div>
                 </div>
-            </section >
+
+            </BoxWrapped >
         </>
     )
 }

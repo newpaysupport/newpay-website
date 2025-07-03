@@ -9,6 +9,7 @@ import Link from 'next/link';
 import toast from 'react-hot-toast';
 import { FaArrowRight } from "react-icons/fa";
 import Card4Mobile from './card4-mobile';
+import BoxWrapped from '@/components/common/box-wrapped';
 
 const Card4 = () => {
     const locale = useLocale();
@@ -21,7 +22,7 @@ const Card4 = () => {
             {/* mobile */}
             <Card4Mobile joint={joint} locale={locale} handleToast={handleToast} />
             {/* desktop */}
-            <section className="container mx-auto bg-white p-16 lg:flex items-center rounded-3xl my-auto hidden">
+            <BoxWrapped className="bg-white p-5 lg:flex items-center rounded-3xl my-auto hidden">
                 <div className="grid grid-cols-1 lg:grid-cols-2 ">
                     {/* Left Section: Text Content and Small Card */}
                     <div className="flex flex-col justify-between items-center gap-10">
@@ -70,7 +71,7 @@ const Card4 = () => {
                         </div>
                     </div>
                 </div>
-            </section >
+            </BoxWrapped >
         </>
     )
 }

@@ -10,6 +10,7 @@ import Link from 'next/link';
 import toast from 'react-hot-toast';
 import { FaArrowRight } from "react-icons/fa";
 import Card2Mobile from './card2-mobile';
+import BoxWrapped from '@/components/common/box-wrapped';
 
 const Card2 = () => {
     const locale = useLocale();
@@ -25,11 +26,11 @@ const Card2 = () => {
             {/* mobile */}
             <Card2Mobile joint={joint} listText={listText} locale={locale} handleToast={handleToast} />
             {/* desktop */}
-            <section className="bg-white p-16 lg:flex items-center rounded-3xl container mx-auto hidden my-auto">
-                <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-30">
+            <BoxWrapped className="bg-white p-5 lg:flex items-center rounded-3xl hidden my-auto">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-30">
                     {/* Left Section: Text Content and Small Card */}
                     <div className="flex flex-col justify-between gap-10 items-end">
-                        <h2 className="pl-[32%] text-4xl lg:text-5xl font-semibold text-[#1B1B1B] mb-4 leading-tight">
+                        <h2 className="pl-[30%] text-4xl lg:text-5xl font-semibold text-[#1B1B1B] mb-4 leading-tight">
                             {joint.card2.title}
                         </h2>
                         <Image
@@ -86,7 +87,7 @@ const Card2 = () => {
 
                     </div>
                 </div>
-            </section >
+            </BoxWrapped >
         </>
     )
 }

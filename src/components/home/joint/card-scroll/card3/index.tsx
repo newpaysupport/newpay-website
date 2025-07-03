@@ -14,6 +14,7 @@ import Image from "next/image"
 import { useTranslations } from 'use-intl';
 import Link from 'next/link';
 import Card3Mobile from './card3-mobile';
+import BoxWrapped from '@/components/common/box-wrapped';
 
 const Card3 = () => {
     const locale = useLocale();
@@ -23,100 +24,100 @@ const Card3 = () => {
     return (
         <>
             {/* mobile */}
-            <Card3Mobile  joint={joint} locale={locale} t={t}/>
+            <Card3Mobile joint={joint} locale={locale} t={t} />
             {/* desktop */}
-            <section className="container mx-auto bg-white p-16 lg:flex items-center rounded-3xl my-auto hidden">
-                <div className=" grid grid-cols-1 lg:grid-cols-2 gap-30">
-                    {/* Left Section: Text Content and Small Card */}
-                    <div className="flex flex-col justify-between space-y-10">
-                        <div className="pl-32">
-                            <h2 className="text-4xl lg:text-5xl font-semibold text-[#1B1B1B] mb-4 leading-tight">
-                                {joint.card3.title}
-                            </h2>
-                            <p className="text-3xl text-[#666] mb-6 font-medium">
-                                {joint.card3.description}
-                            </p>
-                        </div>
-
-                        <div className="bg-[#FF6910] rounded-3xl p-4 text-white shadow-xl flex lg:w-[500px] lg:h-[230px]">
-                            <Image
-                                src={card1_img1}
-                                alt="Person holding a card"
-                                width={200}
-                                height={200}
-                                className="rounded-lg object-cover w-[200px] h-[200px]"
-                            />
-                            <div className="flex flex-col justify-between px-8">
-                                <p className="text-md">
-                                    {joint.card3.textCardLeft}
+                <BoxWrapped className="bg-white p-5 lg:flex items-center rounded-3xl my-auto hidden">
+                    <div className=" grid grid-cols-1 lg:grid-cols-2 gap-30">
+                        {/* Left Section: Text Content and Small Card */}
+                        <div className="flex flex-col justify-between space-y-10">
+                            <div className="pl-32">
+                                <h2 className="text-4xl lg:text-5xl font-semibold text-[#1B1B1B] mb-4 leading-tight">
+                                    {joint.card3.title}
+                                </h2>
+                                <p className="text-3xl text-[#666] mb-6 font-medium">
+                                    {joint.card3.description}
                                 </p>
-                                <Link href={`/${locale}/contact`}>
-                                    <button className="border border-white font-semibold py-3 px-11 rounded-full cursor-pointer">
-                                        <p className="flex justify-center items-center gap-2.5 text-md"> {joint.card3.textButtonCard} <FaArrowRight className="font-light animate-translateX" /></p>
-                                    </button>
-                                </Link>
+                            </div>
+
+                            <div className="bg-[#FF6910] rounded-3xl p-4 text-white shadow-xl flex lg:w-[500px] lg:h-[230px]">
+                                <Image
+                                    src={card1_img1}
+                                    alt="Person holding a card"
+                                    width={200}
+                                    height={200}
+                                    className="rounded-lg object-cover w-[200px] h-[200px]"
+                                />
+                                <div className="flex flex-col justify-between px-8">
+                                    <p className="text-md">
+                                        {joint.card3.textCardLeft}
+                                    </p>
+                                    <Link href={`/${locale}/contact`}>
+                                        <button className="border border-white font-semibold py-3 px-11 rounded-full cursor-pointer">
+                                            <p className="flex justify-center items-center gap-2.5 text-md"> {joint.card3.textButtonCard} <FaArrowRight className="font-light animate-translateX" /></p>
+                                        </button>
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Right Section: Large Image Card */}
+                        <div className="relative ">
+                            <Image
+                                src={img_right}
+                                alt="Payment device being used"
+                                className="rounded-3xl lg:h-[610px] lg:w-[530px] object-cover object-center mx-auto"
+                            />
+                            <div
+                                className="absolute top-[5%] left-[-10%] flex items-center justify-between text-white rounded-2xl p-2 sm:p-3 lg:p-4 bg-[#FFF] shadow-md w-full max-w-xs">
+                                <div className="flex items-center space-x-5">
+                                    <div className="flex-shrink-0">
+                                        <Image src={icon_gift} alt="Gift Icon" width={50} height={50} />
+                                    </div>
+                                    <div>
+                                        <p className="text-lg font-semibold text-[#1B1B1B]">{t('giftCard.contentRight.item1.title')}</p>
+                                        <p className="text-sm text-[#979797]">{t('giftCard.contentRight.item1.desc')}</p>
+                                    </div>
+                                </div>
+                                <div className="text-right">
+                                    <p className="text-sm font-semibold text-[#1B1B1B]">+20.68 USDT</p>
+                                </div>
+                            </div>
+
+                            <div
+                                className="absolute bottom-[30%] right-[-5%] flex items-center justify-between text-white rounded-2xl p-2 sm:p-3 lg:p-4 bg-[#FFF] shadow-md w-full max-w-xs">
+                                <div className="flex items-center space-x-5">
+                                    <div className="flex-shrink-0">
+                                        <Image src={arrow_right} alt="Gift Icon" width={50} height={50} className='text-[#FF6910]' />
+                                    </div>
+                                    <div>
+                                        <p className="text-lg font-semibold text-[#1B1B1B]">{t('giftCard.contentRight.item3.title')}</p>
+                                        <p className="text-sm text-[#979797]">{t('giftCard.contentRight.item3.desc')}</p>
+
+                                    </div>
+                                </div>
+                                <div className="text-right">
+                                    <p className="text-sm font-semibold text-[#1B1B1B]">-50.50 USDT</p>
+                                </div>
+                            </div>
+
+                            <div
+                                className="absolute bottom-[5%] left-[-5%] flex items-center justify-between text-white rounded-2xl p-2 sm:p-3 lg:p-4 bg-[#FFF] shadow-md w-full max-w-xs">
+                                <div className="flex items-center space-x-5">
+                                    <div className="flex-shrink-0">
+                                        <Image src={arrow_left} alt="Gift Icon" width={50} height={50} />
+                                    </div>
+                                    <div>
+                                        <p className="text-lg font-semibold text-[#1B1B1B]">{locale === 'en' ? 'Receive' : '接收'}</p>
+                                        <p className="text-sm text-[#979797]">{locale === 'en' ? 'Dinner' : '晚餐'}</p>
+                                    </div>
+                                </div>
+                                <div className="text-right">
+                                    <p className="text-sm font-semibold text-[#1B1B1B]">+250.00 USDT</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                    {/* Right Section: Large Image Card */}
-                    <div className="relative ">
-                        <Image
-                            src={img_right}
-                            alt="Payment device being used"
-                            className="rounded-3xl lg:h-[610px] lg:w-[530px] object-cover object-center mx-auto"
-                        />
-                        <div
-                            className="absolute top-[5%] left-[-10%] flex items-center justify-between text-white rounded-2xl p-2 sm:p-3 lg:p-4 bg-[#FFF] shadow-md w-full max-w-xs">
-                            <div className="flex items-center space-x-5">
-                                <div className="flex-shrink-0">
-                                    <Image src={icon_gift} alt="Gift Icon" width={50} height={50} />
-                                </div>
-                                <div>
-                                    <p className="text-lg font-semibold text-[#1B1B1B]">{t('giftCard.contentRight.item1.title')}</p>
-                                    <p className="text-sm text-[#979797]">{t('giftCard.contentRight.item1.desc')}</p>
-                                </div>
-                            </div>
-                            <div className="text-right">
-                                <p className="text-sm font-semibold text-[#1B1B1B]">+20.68 USDT</p>
-                            </div>
-                        </div>
-
-                        <div
-                            className="absolute bottom-[30%] right-[-5%] flex items-center justify-between text-white rounded-2xl p-2 sm:p-3 lg:p-4 bg-[#FFF] shadow-md w-full max-w-xs">
-                            <div className="flex items-center space-x-5">
-                                <div className="flex-shrink-0">
-                                    <Image src={arrow_right} alt="Gift Icon" width={50} height={50} className='text-[#FF6910]' />
-                                </div>
-                                <div>
-                                    <p className="text-lg font-semibold text-[#1B1B1B]">{t('giftCard.contentRight.item3.title')}</p>
-                                    <p className="text-sm text-[#979797]">{t('giftCard.contentRight.item3.desc')}</p>
-
-                                </div>
-                            </div>
-                            <div className="text-right">
-                                <p className="text-sm font-semibold text-[#1B1B1B]">-50.50 USDT</p>
-                            </div>
-                        </div>
-
-                        <div
-                            className="absolute bottom-[5%] left-[-5%] flex items-center justify-between text-white rounded-2xl p-2 sm:p-3 lg:p-4 bg-[#FFF] shadow-md w-full max-w-xs">
-                            <div className="flex items-center space-x-5">
-                                <div className="flex-shrink-0">
-                                    <Image src={arrow_left} alt="Gift Icon" width={50} height={50} />
-                                </div>
-                                <div>
-                                    <p className="text-lg font-semibold text-[#1B1B1B]">{locale === 'en' ? 'Receive' : '接收'}</p>
-                                    <p className="text-sm text-[#979797]">{locale === 'en' ? 'Dinner' : '晚餐'}</p>
-                                </div>
-                            </div>
-                            <div className="text-right">
-                                <p className="text-sm font-semibold text-[#1B1B1B]">+250.00 USDT</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section >
+                </BoxWrapped>
         </>
     )
 }

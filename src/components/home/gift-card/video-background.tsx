@@ -9,6 +9,7 @@ import arrow_right from '@/images/home/giftcard/arrow_right.svg';
 import { useTranslations } from 'use-intl';
 import ToastCustom from '@/components/common/toast';
 import toast from 'react-hot-toast';
+import BoxWrapped from '@/components/common/box-wrapped';
 
 const VideoBackground = () => {
 
@@ -18,7 +19,7 @@ const VideoBackground = () => {
     }
     return (
         <section className='bg-[#060606] pt-[120px]'>
-            <div className='container mx-auto relative'>
+            <BoxWrapped className='mx-auto relative'>
                 {/* title */}
                 <h1 style={{
                     background: "linear-gradient(90deg, #FFF 0.13%, rgba(255, 255, 255, 0.00) 128.16%)",
@@ -109,7 +110,7 @@ const VideoBackground = () => {
                         onClick={handleToast}
                         className='text-white bg-[#FF6910] lg:text-md text-sm lg:p-4 p-3 rounded-full cursor-pointer mt-4'>{t('giftCard.contentRight.button')}</button>
                 </div>
-            </div>
+            </BoxWrapped>
         </section>
     )
 }

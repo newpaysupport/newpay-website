@@ -12,6 +12,7 @@ import gift from "@/images/payment/gift.svg";
 import { useInView } from 'motion/react';
 import { useRef } from 'react';
 import AnimationFade from '../animation/animation-fade';
+import BoxWrapped from '../common/box-wrapped';
 const ContentEnd = () => {
     const locale = useLocale();
     const payment = locale === 'en' ? enBlog : ziBlog;
@@ -27,12 +28,10 @@ const ContentEnd = () => {
     const cardSection = payment.cardSection;
 
     const textRef = useRef(null);
-    const giftRef = useRef(null);
     const isInView = useInView(textRef, { once: false, amount: 0.5 });
-    const isInViewGift = useInView(textRef, { once: true, amount: 0.8 });
 
     return (
-        <div className='lg:pt-20 lg:pb-30 py-8 lg:px-0 px-6 container mx-auto'>
+        <BoxWrapped className='lg:pt-20 lg:pb-30 py-8 lg:px-0 px-6 mx-auto'>
             <AnimationFade inView={isInView} direction='up-title'>
                 <div
                     ref={textRef}
@@ -94,7 +93,7 @@ const ContentEnd = () => {
                     <Image src={img_center} alt="Center Decoration" className="absolute inset-0 m-auto z-30 lg:w-[680px] lg:h-[645px] w-[370px] h-[350px]" />
                 </div>
             </div>
-        </div>
+        </BoxWrapped>
     )
 }
 

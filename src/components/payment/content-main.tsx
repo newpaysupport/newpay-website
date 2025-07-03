@@ -19,6 +19,7 @@ import youtube from "@/images/payment/content-main/youtube.svg";
 import { useRef } from "react";
 import { useInView } from "motion/react";
 import AnimationFade from "../animation/animation-fade";
+import BoxWrapped from "../common/box-wrapped";
 
 const ContentMain = () => {
     const locale = useLocale();
@@ -33,7 +34,7 @@ const ContentMain = () => {
     const isInView = useInView(textRef, { once: false, amount: 0.5 });
 
     return (
-        <div className="lg:mt-30 mt-12 lg:container lg:mx-auto overflow-hidden">
+        <BoxWrapped className="lg:mt-30 mt-12 lg:mx-auto overflow-hidden">
             <AnimationFade direction="up" inView={isInView}>
                 <h1 ref={textRef} className="lg:text-6xl text-[32px] text-[#1B1B1B] font-semibold text-center lg:pt-10 pt-12 px-6 lg:px-0">{contentSection2.title}</h1>
                 <p ref={textRef} className="lg:text-lg text-sm font-medium text-center text-[#666] mt-4 mx-auto px-6 lg:px-0">{contentSection2.description}</p>
@@ -88,7 +89,7 @@ const ContentMain = () => {
                     backdropFilter: "blur(4px)"
                 }} className='absolute right-0 top-0 bottom-0 lg:w-[80px] w-[40px]'></div>
             </div>
-        </div>
+        </BoxWrapped>
     )
 }
 

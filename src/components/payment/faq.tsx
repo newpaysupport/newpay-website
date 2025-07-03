@@ -7,6 +7,7 @@ import { useLocale, useTranslations } from 'next-intl';
 import Link from 'next/link';
 import arrow_right from '@/images/payment/arrow_right.svg';
 import { FAQ } from '@/interfaces/common';
+import BoxWrapped from '../common/box-wrapped';
 
 
 const Faq = () => {
@@ -21,7 +22,7 @@ const Faq = () => {
     // const faqItems = faqSection.faqItems;
     return (
         <div className="lg:py-20 lg:px-30 px-6 py-12">
-            <div className="flex lg:flex-row flex-col justify-between mx-auto container">
+            <BoxWrapped className="flex lg:flex-row flex-col justify-between mx-auto">
                 <div className="text-white flex lg:flex-col flex-row justify-between lg:h-[450px]">
                     <div>
                         <h1 className="lg:text-6xl text-[32px] font-semibold">
@@ -60,7 +61,7 @@ const Faq = () => {
                         </button>
                     </Link>
                 </div>
-            </div>
+            </BoxWrapped>
         </div>
     )
 }
