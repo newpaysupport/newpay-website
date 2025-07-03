@@ -11,6 +11,7 @@ import SwitchLanguage from '../switch-language';
 import CompanyDropdown from "./company-dropdown";
 import MobileHeader from "./mobile-header";
 import PaymentDropdown from "./payment-dropdown";
+import BoxWrapped from "../common/box-wrapped";
 
 const Header = () => {
     const locale = useLocale();
@@ -173,131 +174,133 @@ const Header = () => {
     const img_logo = isBlogAndContact ? logo_black : logo;
 
     return (
-        <nav style={getHeaderStyles()}
-            className={`text-sm h-[70px] flex items-center justify-between px-6 lg:px-16 2xl:px-32 py-4
+        <BoxWrapped>
+            <nav style={getHeaderStyles()}
+                className={`text-sm h-[70px] flex items-center justify-between px-6 lg:px-16 2xl:px-32 py-4
                 fixed top-0 left-0 w-full z-50
                 text-white transition-all duration-300 ease-out
                 ${isVisible ? 'translate-y-0' : 'translate-y-[-100%]'}`}>
-            <Link href={`/${locale}`} className="lg:flex lg:items-center lg:space-x-4">
-                <Image src={img_logo} alt="NewPay Logo" width={120} height={25} className="object-contain" />
-            </Link>
+                <Link href={`/${locale}`} className="lg:flex lg:items-center lg:space-x-4">
+                    <Image src={img_logo} alt="NewPay Logo" width={120} height={25} className="object-contain" />
+                </Link>
 
-            {/* Desktop Navigation */}
-            <ul className="flex lg:justify-center items-center lg:space-x-3">
-                {navLinks.map((link) => (
-                    <li key={link.href}>
-                        <Link
-                            href={link.href}
-                            className={`lg:px-6 font-semibold lg:font-normal lg:py-2 px-5 py-2 rounded-full transition
+                {/* Desktop Navigation */}
+                <ul className="flex lg:justify-center items-center lg:space-x-3">
+                    {navLinks.map((link) => (
+                        <li key={link.href}>
+                            <Link
+                                href={link.href}
+                                className={`lg:px-6 font-semibold lg:font-normal lg:py-2 px-5 py-2 rounded-full transition
                             ${isActive(link.href)
-                                    ? isBlogAndContact
-                                        ? 'bg-black/10 text-black'
-                                        : 'bg-white/8 text-white'
-                                    : isBlogAndContact
-                                        ? 'hover:bg-black/10 text-black'
-                                        : 'hover:bg-white/8 text-white'
-                                }
+                                        ? isBlogAndContact
+                                            ? 'bg-black/10 text-black'
+                                            : 'bg-white/8 text-white'
+                                        : isBlogAndContact
+                                            ? 'hover:bg-black/10 text-black'
+                                            : 'hover:bg-white/8 text-white'
+                                    }
                             `}
-                        >
-                            {link.label}
-                        </Link>
-                    </li>
-                ))}
-            </ul>
+                            >
+                                {link.label}
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
 
-            {/* Desktop Right Navigation */}
-            <ul className="hidden lg:flex items-center gap-2 ">
-                {navLinksRight.map((link) => (
-                    <li
-                        key={link.key}
-                        onMouseEnter={() => {
-                            if (link.hasDropdown) {
-                                setOpenDropdown(link.key as "payment" | "company");
-                                setHoveringDropdown(link.key as "payment" | "company");
-                            }
-                        }}
-                        onMouseLeave={() => {
-                            if (link.hasDropdown) {
-                                setOpenDropdown(null);
-                                setHoveringDropdown(null);
-                            }
-                        }}
-                    >
-                        <Link
-                            href={link.href}
-                            className={`px-6 py-2 rounded-full transition flex items-center gap-1
+                {/* Desktop Right Navigation */}
+                <ul className="hidden lg:flex items-center gap-2 ">
+                    {navLinksRight.map((link) => (
+                        <li
+                            key={link.key}
+                            onMouseEnter={() => {
+                                if (link.hasDropdown) {
+                                    setOpenDropdown(link.key as "payment" | "company");
+                                    setHoveringDropdown(link.key as "payment" | "company");
+                                }
+                            }}
+                            onMouseLeave={() => {
+                                if (link.hasDropdown) {
+                                    setOpenDropdown(null);
+                                    setHoveringDropdown(null);
+                                }
+                            }}
+                        >
+                            <Link
+                                href={link.href}
+                                className={`px-6 py-2 rounded-full transition flex items-center gap-1
                             ${isActive(link.href)
-                                    ? isBlogAndContact
-                                        ? 'bg-black/10 text-black'
-                                        : 'bg-white/8 text-white'
-                                    : isBlogAndContact
-                                        ? 'hover:bg-black/10 text-black'
-                                        : 'hover:bg-white/8 text-white'
-                                }
+                                        ? isBlogAndContact
+                                            ? 'bg-black/10 text-black'
+                                            : 'bg-white/8 text-white'
+                                        : isBlogAndContact
+                                            ? 'hover:bg-black/10 text-black'
+                                            : 'hover:bg-white/8 text-white'
+                                    }
                             `}
-                        >
-                            {link.label}
-                        </Link>
+                            >
+                                {link.label}
+                            </Link>
 
-                        {/* Desktop Dropdown */}
-                        {link.hasDropdown && openDropdown === link.key && (
-                            <div className={`absolute top-[full] left-0 w-[100vw] pt-4 z-50`}>
-                                {link.key === 'payment' ?
-                                    (<PaymentDropdown link={link} locale={locale} isBlogAndContact={isBlogAndContact} />) :
-                                    (
-                                        <CompanyDropdown link={link} locale={locale} isBlogAndContact={isBlogAndContact} isScrolled={isScrolled} />
-                                    )}
-                            </div>
-                        )}
-                    </li>
-                ))}
-            </ul>
+                            {/* Desktop Dropdown */}
+                            {link.hasDropdown && openDropdown === link.key && (
+                                <div className={`absolute top-[full] left-0 w-[100vw] pt-4 z-50`}>
+                                    {link.key === 'payment' ?
+                                        (<PaymentDropdown link={link} locale={locale} isBlogAndContact={isBlogAndContact} />) :
+                                        (
+                                            <CompanyDropdown link={link} locale={locale} isBlogAndContact={isBlogAndContact} isScrolled={isScrolled} />
+                                        )}
+                                </div>
+                            )}
+                        </li>
+                    ))}
+                </ul>
 
-            <div className="hidden lg:block">
-                <SwitchLanguage locale={locale} switchLocale={switchLocale} t={t} isBlogAndContact={isBlogAndContact} isVisible={isVisible} />
-            </div>
+                <div className="hidden lg:block">
+                    <SwitchLanguage locale={locale} switchLocale={switchLocale} t={t} isBlogAndContact={isBlogAndContact} isVisible={isVisible} />
+                </div>
 
-            {/* Mobile Menu Button */}
-            <button
-                aria-label="menu-btn"
-                type="button"
-                className={`cursor-pointer menu-btn flex items-center justify-center w-10 h-10 lg:hidden active:scale-90 transition-all duration-200
+                {/* Mobile Menu Button */}
+                <button
+                    aria-label="menu-btn"
+                    type="button"
+                    className={`cursor-pointer menu-btn flex items-center justify-center w-10 h-10 lg:hidden active:scale-90 transition-all duration-200
                     ${isBlogAndContact
-                        ? 'text-black hover:bg-black/10'
-                        : 'text-white hover:bg-white/10'
-                    }
+                            ? 'text-black hover:bg-black/10'
+                            : 'text-white hover:bg-white/10'
+                        }
                 `}
-                onClick={toggleMobileMenu}>
+                    onClick={toggleMobileMenu}>
 
-                {isMobileMenuOpen ? (
-                    <span className="text-xl font-light">×</span>
-                ) : (
-                    <div className="flex flex-col gap-1">
-                        <div className={`w-5 h-0.5 ${isBlogAndContact ? 'bg-black' : 'bg-white'}`}></div>
-                        <div className={`w-5 h-0.5 ${isBlogAndContact ? 'bg-black' : 'bg-white'}`}></div>
-                        <div className={`w-5 h-0.5 ${isBlogAndContact ? 'bg-black' : 'bg-white'}`}></div>
-                    </div>
+                    {isMobileMenuOpen ? (
+                        <span className="text-xl font-light">×</span>
+                    ) : (
+                        <div className="flex flex-col gap-1">
+                            <div className={`w-5 h-0.5 ${isBlogAndContact ? 'bg-black' : 'bg-white'}`}></div>
+                            <div className={`w-5 h-0.5 ${isBlogAndContact ? 'bg-black' : 'bg-white'}`}></div>
+                            <div className={`w-5 h-0.5 ${isBlogAndContact ? 'bg-black' : 'bg-white'}`}></div>
+                        </div>
+                    )}
+                </button>
+
+                {/* Mobile Menu */}
+                {isMobileMenuOpen && (
+                    <MobileHeader
+                        locale={locale}
+                        navLinksRight={navLinksRight}
+                        isBlogAndContact={isBlogAndContact}
+                        isVisible={isVisible}
+                        isMobileMenuOpen={isMobileMenuOpen}
+                        toggleMobileDropdown={toggleMobileDropdown}
+                        mobileOpenDropdown={mobileOpenDropdown}
+                        mobileCardOpen={mobileCardOpen}
+                        setMobileCardOpen={setMobileCardOpen}
+                        setIsMobileMenuOpen={setIsMobileMenuOpen}
+                        switchLocale={switchLocale}
+                        t={t}
+                    />
                 )}
-            </button>
-
-            {/* Mobile Menu */}
-            {isMobileMenuOpen && (
-                <MobileHeader
-                    locale={locale}
-                    navLinksRight={navLinksRight}
-                    isBlogAndContact={isBlogAndContact}
-                    isVisible={isVisible}
-                    isMobileMenuOpen={isMobileMenuOpen}
-                    toggleMobileDropdown={toggleMobileDropdown}
-                    mobileOpenDropdown={mobileOpenDropdown}
-                    mobileCardOpen={mobileCardOpen}
-                    setMobileCardOpen={setMobileCardOpen}
-                    setIsMobileMenuOpen={setIsMobileMenuOpen}
-                    switchLocale={switchLocale}
-                    t={t}
-                />
-            )}
-        </nav>
+            </nav>
+        </BoxWrapped>
     );
 };
 export default Header;
