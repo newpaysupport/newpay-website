@@ -23,8 +23,8 @@ type Card4Props = {
 }
 const Card4Mobile = ({joint, locale, handleToast} : Card4Props) => {
     return (
-        <section className="bg-white py-12 px-6 flex items-center rounded-3xl min-h-screen lg:hidden">
-            <div className="container flex flex-col gap-6">
+        <section className="bg-white py-12 px-6 rounded-3xl lg:hidden">
+            <div className="flex flex-col gap-6">
                 {/* Left Section: Text Content and Small Card */}
                 <div className="flex flex-col justify-start items-start gap-6">
                     <h2 className="w-[80%] text-4xl font-semibold text-[#1B1B1B]">
@@ -33,7 +33,7 @@ const Card4Mobile = ({joint, locale, handleToast} : Card4Props) => {
                     <Image
                         src={phone}
                         alt="Person holding a card"
-                        className="rounded-3xl object-cover object-top h-[335px]"
+                        className="rounded-3xl object-cover object-top w-full h-full"
                     />
                 </div>
                 {/* Right Section: Large Image Card */}
