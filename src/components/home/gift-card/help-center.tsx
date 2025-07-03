@@ -12,7 +12,7 @@ const HelpCenter = () => {
 
     return (
         <>
-            <section className='lg:py-[160px] py-12 px-6 xl:px-0 bg-[#060606]'>
+            <section className='lg:py-[160px] py-12 lg:px-30 xl:px-0 bg-[#060606]'>
                 <div
                     className="lg:mx-auto xl:w-[1200px] transition-transform duration-300 hover:scale-101"
                     style={{
