@@ -11,6 +11,7 @@ import SwitchLanguage from '../switch-language';
 import CompanyDropdown from "./company-dropdown";
 import MobileHeader from "./mobile-header";
 import PaymentDropdown from "./payment-dropdown";
+import BoxWrapped from "../common/box-wrapped";
 
 const Header = () => {
     const locale = useLocale();
@@ -174,7 +175,7 @@ const Header = () => {
 
     return (
         <nav style={getHeaderStyles()}
-            className={`text-sm h-[70px] flex items-center justify-between px-6 lg:px-16 2xl:px-32 py-4
+            className={`text-sm h-[70px] flex items-center justify-between px-6 lg:px-20 py-4
                 fixed top-0 left-0 w-full z-50
                 text-white transition-all duration-300 ease-out
                 ${isVisible ? 'translate-y-0' : 'translate-y-[-100%]'}`}>
