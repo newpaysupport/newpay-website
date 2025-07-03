@@ -8,6 +8,7 @@ const config: Config = {
     theme: {
         extend: {
             screens: {
+                tablet: { raw: '(min-width: 768px) and (max-width: 1023px)' },
                 between1280and1440: { raw: '(min-width: 1280px) and (max-width: 1439px)' },
                 xl1440: '1440px'
             },
