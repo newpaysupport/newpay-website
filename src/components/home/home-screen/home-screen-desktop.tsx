@@ -17,6 +17,7 @@ import toast from 'react-hot-toast'
 import { useBreakpointFlags } from '@/hooks/useBreakpointFlags'
 import ToastCustom from '@/components/common/toast'
 import PhysicCard from '../consume/physic-card'
+import BoxWrapped from '@/components/common/box-wrapped'
 
 const HomeScreenDesktop = () => {
 
@@ -250,8 +251,8 @@ const HomeScreenDesktop = () => {
 
             {/* consume section */}
             <div className='bg-[#060606]'>
-                <div ref={containerRef} className='py-12 lg:py-20 bg-white min-h-[700px] rounded-4xl lg:rounded-[80px]'>
-                    <div className='container mx-auto'>
+                <BoxWrapped>
+                    <div ref={containerRef} className='py-12 lg:py-20 bg-white min-h-[700px] rounded-4xl lg:rounded-[80px]'>
                         <div>
                             <div className='w-full md:w-[573px] mx-auto px-4'>
                                 <p
@@ -278,7 +279,6 @@ const HomeScreenDesktop = () => {
                                     })}
                                 </div>
                             </div>
-
                             <div className='mt-[64px] min-h-[410px] lg:min-h-[606px] flex lg:justify-center'>
                                 {tabActive === 1 ? <>
                                     <div className='lg:mt-20 relative w-full lg:w-auto'>
@@ -313,7 +313,7 @@ const HomeScreenDesktop = () => {
                                     </div>
                                 </> : <PhysicCard />}
                             </div>
-                            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-4 md:mt-[160px] lg:mt-[64px] lg:px-[120px]'>
+                            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-4 md:mt-[160px] lg:mt-[64px] px-4 2xl:px-[120px]'>
                                 {t.raw('utils').map((item: { title: string; desc: string }, index: number) => {
                                     return <div key={index} className='p-8 bg-[#f8f8f8] rounded-[20px]'>
                                         <figure className='w-12 h-12'>
@@ -326,9 +326,10 @@ const HomeScreenDesktop = () => {
                             </div>
 
                         </div>
-                    </div>
 
-                </div>
+                    </div>
+                </BoxWrapped>
+
             </div>
         </div>
     )
