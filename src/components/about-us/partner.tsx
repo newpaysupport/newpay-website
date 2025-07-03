@@ -47,7 +47,9 @@ const Partner = () => {
                                 WebkitTextFillColor: "transparent"
                             }} className='text-[32px] lg:text-[60px] font-semibold tracking-[-2px] text-center'>{t("partner.title")}</p>
                             <p style={{ whiteSpace: "pre-line" }} className='text-[#aeaeae] text-sm lg:text-base font-medium text-center mb-8'>{t("partner.desc")}</p>
-                            <BtnPrimary onClick={handleShowToast} text={t("partner.button")} variant={'primary-lighter'} className='mx-auto w-[254px]' />
+                            <div className='mx-auto w-[254px]' >
+                                <BtnPrimary onClick={handleShowToast} text={t("partner.button")} variant={'primary-lighter'} />
+                            </div>
                         </div>
                     </div>
                 </div>
