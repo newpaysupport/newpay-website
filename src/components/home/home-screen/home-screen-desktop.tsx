@@ -251,8 +251,8 @@ const HomeScreenDesktop = () => {
 
             {/* consume section */}
             <div className='bg-[#060606]'>
-                <BoxWrapped>
-                    <div ref={containerRef} className='py-12 lg:py-20 bg-white min-h-[700px] rounded-4xl lg:rounded-[80px]'>
+                <div ref={containerRef} className='py-12 lg:py-20 bg-white min-h-[700px] rounded-4xl lg:rounded-[80px]'>
+                    <BoxWrapped>
                         <div>
                             <div className='w-full md:w-[573px] mx-auto px-4'>
                                 <p
@@ -326,10 +326,8 @@ const HomeScreenDesktop = () => {
                             </div>
 
                         </div>
-
-                    </div>
-                </BoxWrapped>
-
+                    </BoxWrapped>
+                </div>
             </div>
         </div>
     )
