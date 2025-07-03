@@ -8,6 +8,7 @@ import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import bg_joint2 from '@/images/home/joint/bg_joint2.svg';
 import { Easing, Variants } from 'motion/react';
+import BoxWrapped from '@/components/common/box-wrapped';
 
 const FeaturesGrid = () => {
     const locale = useLocale();
@@ -95,7 +96,7 @@ const FeaturesGrid = () => {
             {/* desktop */}
             <div className="relative hidden lg:block">
                 <Image src={bg_joint2} alt="Why Choose NewPay" className="w-full" />
-                <div className="absolute inset-0 text-center mt-30">
+                <BoxWrapped className="absolute inset-0 text-center mt-30 px-30">
                     <h1 className="text-4xl lg:text-5xl text-[#FFF] font-semibold">
                         {joint.featuresGrid.title}
                     </h1>
@@ -103,7 +104,7 @@ const FeaturesGrid = () => {
                         {joint.featuresGrid.description}
                     </p>
 
-                    <div ref={gridRef} className="max-w-7xl mx-auto mt-20">
+                    <div ref={gridRef} className="mx-auto lg:mt-10 xl:mt-20">
                         <div className="grid grid-cols-1 lg:grid-cols-4 gap-0">
                             {joint.featuresGrid.features.map((feature, index) => {
                                 const isLastInRow = index === 3 || index === 7;
@@ -112,10 +113,10 @@ const FeaturesGrid = () => {
                                 return (
                                     <div
                                         key={index}
-                                        className={`p-[2px] ${!isLastInRow ? 'border-r border-[#565656]' : ''} ${!isBelowFirstRow ? 'border-b border-[#565656]' : ''}`}
+                                        className={`${!isLastInRow ? 'border-r border-[#565656]' : ''} ${!isBelowFirstRow ? 'border-b border-[#565656]' : ''}`}
                                     >
                                         <div className="rounded-lg p-6 flex flex-col items-start justify-start">
-                                            <div className="mb-4">
+                                            {/* <div className="mb-4"> */}
                                                 {feature.icon ? (
                                                     <motion.div
                                                         custom={index}
@@ -130,12 +131,12 @@ const FeaturesGrid = () => {
                                                             width={80}
                                                             height={80}
                                                         />
-                                                        <h3 className="text-white text-xl font-semibold mb-2 text-left w-[90%]">
+                                                        <h3 className="text-white text-xl font-semibold text-left">
                                                             {feature.title}
                                                         </h3>
                                                     </motion.div>
                                                 ) : null}
-                                            </div>
+                                            {/* </div> */}
 
                                         </div>
                                     </div>
@@ -143,7 +144,7 @@ const FeaturesGrid = () => {
                             })}
                         </div>
                     </div>
-                </div>
+                </BoxWrapped>
             </div>
         </>
     );

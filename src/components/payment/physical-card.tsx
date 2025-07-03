@@ -5,6 +5,7 @@ import money from "@/images/payment/money.svg"
 import Image from 'next/image'
 import ToastCustom from "../common/toast"
 import toast from "react-hot-toast"
+import BoxWrapped from "../common/box-wrapped"
 
 type PhysicalCardProps = {
     physicalItems: {
@@ -19,9 +20,9 @@ const PhysicalCard = ({ physicalItems, labelButton, id }: PhysicalCardProps) => 
         toast.custom(<ToastCustom type='warning' />)
     }
     return (
-        <>
+        <BoxWrapped className="lg:px-30">
             {/* content Physical Card*/}
-            <div id={id} className="flex justify-between lg:mt-10 mt-8 mx-auto container lg:w-[80%] lg:flex-row flex-col px-6 lg:px-0">
+            <div id={id} className="flex justify-between lg:mt-10 mt-8 lg:flex-row flex-col px-6 lg:px-0">
                 <div className="lg:w-[45%]">
                     <div className="my-4 p-6 bg-gray-100 rounded-2xl">
                         <Image src={wifi} alt="Wifi" />
@@ -44,7 +45,7 @@ const PhysicalCard = ({ physicalItems, labelButton, id }: PhysicalCardProps) => 
                     <Image src={img_card_black} alt="Spend Crypto" width={500} height={400} className='lg:mt-4 lg:h-[560px]' />
                 </div>
             </div>
-        </>
+        </BoxWrapped>
     )
 }
 

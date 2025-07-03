@@ -7,6 +7,7 @@ import { useInView } from 'motion/react';
 import AnimationFade from "../animation/animation-fade";
 import ToastCustom from "../common/toast";
 import toast from "react-hot-toast";
+import BoxWrapped from "../common/box-wrapped";
 
 type VirtualCardProps = {
     virtualItems: {
@@ -22,12 +23,11 @@ const VirtualCard = ({ virtualItems, labelButton, id }: VirtualCardProps) => {
     }
     const leftRef = useRef(null);
     const rightRef = useRef(null);
-    const isLeftInView = useInView(leftRef, { once: true, amount: 0.5 });
-    const isRightInView = useInView(rightRef, { once: true, amount: 0.5 });
+
     return (
-        <>
+        <BoxWrapped className="lg:px-30">
             {/* content Virtual Card*/}
-            <div id={id} className="flex justify-between lg:items-center lg:mt-10 mt-8 mx-auto container lg:w-[80%] lg:flex-row flex-col px-6 lg:px-0">
+            <div id={id} className="flex justify-between lg:items-start lg:mt-10 mt-8 lg:flex-row flex-col px-6 lg:px-0">
                     <div className="lg:w-[45%]">
                         <div className="my-4 p-6 bg-gray-100 rounded-2xl">
                             <Image src={two_arrow} alt="Virtual Card Icon" />
@@ -42,11 +42,11 @@ const VirtualCard = ({ virtualItems, labelButton, id }: VirtualCardProps) => {
                         </div>
                         <button onClick={handleToast} className="rounded-full lg:mt-12 mt-6 lg:py-4 lg:px-10 font-semibold px-6 py-3 text-lg text-white cursor-pointer bg-orange-500 hover:bg-orange-600">{labelButton}</button>
                     </div>
-                    <div className="lg:w-[45%] mt-10 lg:mt-0">
+                    <div className="lg:w-[45%] mt-10 lg:mt-4">
                         <Image src={img_content1} alt="Spend Crypto" width={500} height={300} />
                     </div>
             </div>
-        </>
+        </BoxWrapped>
     )
 }
 
