@@ -95,7 +95,7 @@ const OpenAccount = () => {
         <ReactLenis root>
             <div className='bg-[#060606]'>
                 <BoxWrapped>
-                    <div className="pt-[64px] px-4 2xl:pt-[120px] xl:pb-[220px] 2xl:px-[140px] h-[4105px] lg:h-[4007px] xl:h-[]">
+                    <div className="pt-[64px] px-4 2xl:pt-[120px] xl:pb-[220px] xl:px-[120px] h-[4105px] lg:h-[4007px]">
                         <div className='container mx-auto h-full'>
                             <h3 className='text-white text-[32px] xl:text-[48px] font-semibold'>{t('openAccount.title')}</h3>
                             <p className='text-[#aeaeae] text-sm xl:text-lg font-normal mt-6 mb-20'>{t('openAccount.desc')}</p>

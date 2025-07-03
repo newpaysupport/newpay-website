@@ -7,6 +7,10 @@ const config: Config = {
     ],
     theme: {
         extend: {
+            screens: {
+                between1280and1440: { raw: '(min-width: 1280px) and (max-width: 1439px)' },
+                xl1440: '1440px'
+            },
             keyframes: {
                 fanoutLeft: {
                     '0%': { transform: 'translateX(0) rotate(0)', opacity: '0' },

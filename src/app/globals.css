@@ -4,8 +4,8 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-inter: var(--font-inter);
-
   --shadow-tab-card-item: 0px 0px 4px 0px rgba(0, 0, 0, 0.04), 0px 1px 8px -1px rgba(0, 0, 0, 0.08);
+  --container-custom-2xl: 1440px;
 }
 
 html {
@@ -56,11 +56,6 @@ body {
   -webkit-text-fill-color: transparent;
   letter-spacing: -7px;
 }
-
-
-
-
-
 
 .textTitleClip {
   background: linear-gradient(94deg, #fff 26.92%, rgba(255, 255, 255, 0) 116.96%);

@@ -313,7 +313,7 @@ const HomeScreenDesktop = () => {
                                     </div>
                                 </> : <PhysicCard />}
                             </div>
-                            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-4 md:mt-[160px] lg:mt-[64px] px-4 2xl:px-[120px]'>
+                            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-4 md:mt-[160px] lg:mt-[64px] xl:px-[120px]'>
                                 {t.raw('utils').map((item: { title: string; desc: string }, index: number) => {
                                     return <div key={index} className='p-8 bg-[#f8f8f8] rounded-[20px]'>
                                         <figure className='w-12 h-12'>

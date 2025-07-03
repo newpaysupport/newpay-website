@@ -12,14 +12,14 @@ const HelpCenter = () => {
 
     return (
         <>
-            <section className='lg:py-[160px] py-12 px-6 bg-[#060606]'>
+            <section className='lg:py-[160px] py-12 px-6 xl:px-0 bg-[#060606]'>
                 <div
                     className="lg:mx-auto xl:w-[1200px] transition-transform duration-300 hover:scale-101"
                     style={{
                         borderRadius: '40px',
                         border: '2px solid transparent',
                         backgroundImage: `
-                          linear-gradient(#060606, #060606), 
+                          linear-gradient(#060606, #060606),
                           linear-gradient(-45deg,
                             #FFB700 0%,
                             #FFB281 10%,

@@ -57,7 +57,7 @@ const Footer = () => {
 
     return (
         <div className='bg-[#060606]'>
-            <div className='xl:p-20 px-4 py-12'>
+            <div className='xl:p-20 px-4 lg:px-6 py-12'>
                 <div className='flex flex-col lg:flex-row lg:justify-between'>
                     <div>
                         <Link href={'/'} className='flex items-center gap-x-2 cursor-pointer'>
