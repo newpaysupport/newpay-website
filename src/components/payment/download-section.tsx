@@ -13,34 +13,32 @@ const DownloadSection = () => {
 
     return (
         <section className="bg-[#060606]">
-            <div className="bg-[#FFFFFF]/4 lg:py-20 xl:px-50 px-6 py-12 lg:rounded-[80px] rounded-[24px]">
-                <BoxWrapped className="flex lg:flex-row flex-col-reverse mx-auto lg:gap-30 lg:justify-center items-center">
-                    <Image src={product_content_end} alt="Gift Icon" width={540} height={540} className="w-full h-full lg:w-[540px] lg:h-[540px]" />
-                    <div className='lg:p-0 p-6 lg:w-1/2 lg:text-left text-center lg:pb-0 pb-8'>
-                        <Image src={logo_payment} alt="Gift Icon" width={100} height={100} className="w-16 h-16 lg:w-20 lg:h-20 lg:m-0 mx-auto" />
-                        <h1 className="lg:text-5xl lg:leading-14 lg:text-left text-center text-2xl font-semibold pt-4 lg:pt-10  text-white">
-                            {locale === 'en' ? (
-                                <>
-                                    Join NewPay.<br />
-                                    Spend Safe & Smart
-                                </>
-                            ) : (
-                                <>
-                                    加入 NewPay.<br />
-                                    开启安全精明的消费方式
-                                </>
-                            )}
-                        </h1>
+            <BoxWrapped className="flex lg:flex-row flex-col-reverse mx-auto lg:gap-30 lg:justify-center items-center bg-[#FFFFFF]/4 lg:py-20 2xl:px-50 px-6 py-12 lg:rounded-[80px] rounded-[24px]">
+                <Image src={product_content_end} alt="Gift Icon" width={540} height={540} className="w-full h-full lg:w-[540px] lg:h-[540px]" />
+                <div className='lg:p-0 p-6 lg:text-left text-center lg:pb-0 pb-8'>
+                    <Image src={logo_payment} alt="Gift Icon" width={100} height={100} className="w-16 h-16 lg:w-20 lg:h-20 lg:m-0 mx-auto" />
+                    <h1 className="lg:text-5xl lg:leading-14 lg:text-left text-center text-2xl font-semibold pt-4 lg:pt-10  text-white">
+                        {locale === 'en' ? (
+                            <>
+                                Join NewPay.<br />
+                                Spend Safe & Smart
+                            </>
+                        ) : (
+                            <>
+                                加入 NewPay.<br />
+                                开启安全精明的消费方式
+                            </>
+                        )}
+                    </h1>
 
-                        <Link href={`/${locale}/download`}>
-                            <button
-                                className="lg:text-lg rounded-2xl text-sm lg:mt-10 mt-4 px-4 py-3 lg:p-4 text-black cursor-pointer bg-white hover:bg-gray-100 font-semibold">
-                                {t('buttonText')}
-                            </button>
-                        </Link>
-                    </div>
-                </BoxWrapped>
-            </div >
+                    <Link href={`/${locale}/download`}>
+                        <button
+                            className="lg:text-lg rounded-2xl text-sm lg:mt-10 mt-4 px-4 py-3 lg:p-4 text-black cursor-pointer bg-white hover:bg-gray-100 font-semibold">
+                            {t('buttonText')}
+                        </button>
+                    </Link>
+                </div>
+            </BoxWrapped>
         </section>
     )
 }
