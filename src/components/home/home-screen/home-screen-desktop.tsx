@@ -198,13 +198,14 @@ const HomeScreenDesktop = () => {
                     <Image src={hero} alt='' className='w-full h-full' priority />
                 </figure>
                 <div className='absolute inset-0 flex top-[130px] lg:top-20 justify-center z-[3]'>
-                    <div className="w-full lg:w-[600px] 2xl:w-[806px] px-4">
+                    <div className="w-full lg:w-[600px] xl:w-[806px] px-4">
                         <p
                             style={{
                                 background: "linear-gradient(90deg, #FFF 0.13%, rgba(255, 255, 255, 0.00) 128.16%)",
                                 backgroundClip: 'text',
                                 WebkitBackgroundClip: 'text',
-                                WebkitTextFillColor: "transparent"
+                                WebkitTextFillColor: "transparent",
+                                whiteSpace: "pre-line"
                             }} className='text-[32px] lg:text-[48px] font-semibold text-center w-full lg:min-w-[472px] -tracking-[1.64px] mx-auto'>
                             {t("titleHero")}
                         </p>
@@ -225,7 +226,7 @@ const HomeScreenDesktop = () => {
             </div>
             {
                 tabActive === TabCards[0].id ? <>
-                    <div className={`${scrollProgress >= cardThreshold ? "hidden" : "fixed flex justify-center inset-0 h-fit top-[383px] md:top-[320px] lg:top-[383px] z-[1000]"}  `}>
+                    <div className={`${scrollProgress >= cardThreshold ? "hidden" : "fixed flex justify-center inset-0 h-fit top-[383px] md:top-[320px] lg:top-[383px] xl:top-[450px] z-[1000]"}  `}>
                         <figure
                             style={{
                                 transform: scrollProgress < compareThreshold ? "scale(1)" : `scale(${1 - scrollProgress})`,

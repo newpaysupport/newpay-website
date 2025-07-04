@@ -130,7 +130,8 @@ const HomeScreenMobile = () => {
                                     background: "linear-gradient(90deg, #FFF 0.13%, rgba(255, 255, 255, 0.00) 128.16%)",
                                     backgroundClip: 'text',
                                     WebkitBackgroundClip: 'text',
-                                    WebkitTextFillColor: "transparent"
+                                    WebkitTextFillColor: "transparent",
+                                    whiteSpace: "pre-line"
                                 }} className='text-[32px] lg:text-[48px] font-semibold text-center w-full lg:min-w-[472px] -tracking-[1.64px] mx-auto'>
                                 {t("titleHero")}
                             </p>
