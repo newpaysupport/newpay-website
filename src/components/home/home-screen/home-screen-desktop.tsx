@@ -198,7 +198,7 @@ const HomeScreenDesktop = () => {
                     <Image src={hero} alt='' className='w-full h-full' priority />
                 </figure>
                 <div className='absolute inset-0 flex top-[130px] lg:top-20 justify-center z-[3]'>
-                    <div className="w-full lg:w-[600px] xl:w-[806px] px-4">
+                    <div className="w-full lg:w-[600px] xl:w-[806px] px-4 xl:pt-[50px]">
                         <p
                             style={{
                                 background: "linear-gradient(90deg, #FFF 0.13%, rgba(255, 255, 255, 0.00) 128.16%)",
