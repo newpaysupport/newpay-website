@@ -24,7 +24,7 @@ const TalkTheTeam = () => {
                     </p>
                     <p className='bg-black/10 cursor-pointer py-2 px-4 h-[36px] rounded-md backdrop-blur-[20px] flex justify-center items-center gap-3'>
                         <Image src={letter} alt="world Image" />
-                        <span className='text-white text-[11px] lg:text-sm leading-[16px] font-medium'>support@newpay.com</span>
+                        <span className='text-white text-[11px] lg:text-sm leading-[16px] font-medium'>support@newpay.org</span>
                     </p>
                 </div>
             </div>
