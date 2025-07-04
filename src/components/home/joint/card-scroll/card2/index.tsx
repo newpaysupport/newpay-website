@@ -30,7 +30,7 @@ const Card2 = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-30">
                     {/* Left Section: Text Content and Small Card */}
                     <div className="flex flex-col justify-between gap-10 items-end">
-                        <h2 className="pl-[30%] text-4xl lg:text-5xl font-semibold text-[#1B1B1B] mb-4 leading-tight">
+                        <h2 className="lg:w-[475px] text-4xl lg:text-5xl font-semibold text-[#1B1B1B] mb-4 leading-tight">
                             {joint.card2.title}
                         </h2>
                         <Image
