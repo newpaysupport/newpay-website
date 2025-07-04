@@ -31,7 +31,7 @@ const ToastCustom = ({ type, desc, toastId }: ToastCustomProps) => {
                     <path d="M12.4994 6.00016V6.46956C12.4994 7.03289 12.6602 7.58361 12.9615 8.05233L13.6998 9.20093C14.3741 10.2501 13.8593 11.6761 12.6864 12.0079C9.61817 12.8758 6.38183 12.8758 3.31357 12.0079C2.1407 11.6761 1.62588 10.2501 2.30024 9.20093L3.03853 8.05233C3.33981 7.58361 3.50058 7.03289 3.50058 6.46956V6.00016C3.50058 3.42283 5.51504 1.3335 8 1.3335C10.485 1.3335 12.4994 3.42283 12.4994 6.00016Z" fill="#FF6800" />
                 </svg> : <FaCheck color='green' />}
             </figure>
-            <span className='text-white text-sm font-medium'>{t("title")}</span>
+            <span className='text-white text-sm font-medium'>{type === 'warning' ? t("title") : t("success")}</span>
             <figure className='w-6 h-6 min-w-6 cursor-pointer' onClick={handleCloseToast} >
                 <Image src={x} alt='' className='w-full h-full' />
             </figure>

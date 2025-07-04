@@ -1007,9 +1007,12 @@
         ]
     },
     "toast": {
-        "title": "Coming soon"
+        "title": "Coming soon",
+        "success": "Submit Successfully"
     },
     "contactUs": {
+        "submitText": "Submit",
+        "submitting": "Submitting...",
         "title": "Contact Us",
         "desc": "We handle all law enforcement requests from any jurisdiction in strict compliance with our Terms & Conditions, Privacy Policy, and all relevant laws and regulations.",
         "firstName": "First name",
