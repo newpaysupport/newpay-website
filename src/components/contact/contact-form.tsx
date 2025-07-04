@@ -4,23 +4,24 @@ import CheckboxInput from './checkbox';
 import NameInput from './name-input';
 import NumberInput from './number-input';
 import arrowRight from '@/images/contact/arrow_right.svg';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup"
 import { useForm } from 'react-hook-form';
-import { ContactUsForm } from '@/interfaces/contact-form';
+import { ContactUsForm, ContactUsFormType } from '@/interfaces/contact-form';
 import { useTranslations } from 'next-intl';
 import SelectInput from './select-input';
 import TextArea from './text-area';
-
-
-
-
+import { useForm as useFormspree } from '@formspree/react';
+import toast from 'react-hot-toast';
+import ToastCustom from '../common/toast';
 
 const ContactForm = () => {
-
     const [enabled, setEnabled] = useState(false);
     const t = useTranslations("contactUs");
+
+    // Formspree hook
+    const [state, handleFormspreeSubmit] = useFormspree("mzzgwjqq");
 
     const schema = yup
         .object({
@@ -41,17 +42,47 @@ const ContactForm = () => {
         formState: { errors, isValid },
         setValue,
         control,
-        watch
-    } = useForm({
+        watch,
+        setError,
+        reset,
+    } = useForm<ContactUsFormType>({
         resolver: yupResolver(schema),
         mode: "onChange"
     })
 
-    const onSubmit = (data: ContactUsForm, event: any) => {
-        event.preventDefault()
-    }
+    const onSubmit = async (data: ContactUsForm) => {
+        // Create a form data object for Formspree
+        const formData = new FormData();
+        Object.entries(data).forEach(([key, value]) => {
+            formData.append(key, value?.toString() || '');
+        });
 
-    const isDisabled = !isValid || Object.keys(errors).length > 0;
+        // Submit to Formspree
+        try {
+            await fetch(process.env.NEXT_PUBLIC_FORM_ID as string, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+            reset();
+            toast.success("Submit Successfully")
+        } catch (error) {
+            console.error('Form submission error:', error);
+            toast.custom(<ToastCustom type='error' />);
+        }
+    };
+
+    // Handle Formspree errors
+    useEffect(() => {
+        if (state.errors) {
+            // Simple error handling - just show a toast for any errors
+            toast.custom(<ToastCustom type='error' />);
+        }
+    }, [state.errors]);
+
+    const isDisabled = !isValid || Object.keys(errors).length > 0 || state.submitting;
 
     return (
         <div className='w-full lg:grow relative'>
@@ -61,7 +92,7 @@ const ContactForm = () => {
                     {t("desc")}
                 </p>
 
-                <form className="space-y-4" method='POST' action={"https://formspree.io/f/xeokdplv"}>
+                <form className="space-y-4" onSubmit={handleSubmit(onSubmit)}>
                     <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
                         <div>
                             <NameInput control={control} inputType='text' name="firstName" label={t("firstName")} type='name' placeholder={""} register={register} />
@@ -110,8 +141,19 @@ const ContactForm = () => {
                         <p className='w-[340px] md:w-full xl:w-[340px] text-[#666] text-sm font-medium'>{t("checkBox")}</p>
                     </div>
 
-                    <button disabled={isDisabled} className={`${isDisabled && "opacity-50"} absolute bottom-3 right-[-100px] z-[10] h-20 box-border hidden xl:flex cursor-pointer group transition-all ease-in-out`}>
-                        <span style={{ borderRadius: '16px 0px 0px 16px' }} className='py-4 px-6 h-full box-border flex items-center bg-[#FF6910] text-white font-medium text-2xl group-hover:bg-[#ff5810]'>{t("submit")}</span>
+                    {/* Display root errors */}
+                    {errors.root && (
+                        <p className='text-sm text-red-700 mt-1'>{errors.root.message}</p>
+                    )}
+
+                    <button
+                        type="submit"
+                        disabled={isDisabled}
+                        className={`${isDisabled && "opacity-50"} absolute bottom-3 right-[-100px] z-[10] h-20 box-border hidden xl:flex cursor-pointer group transition-all ease-in-out`}
+                    >
+                        <span style={{ borderRadius: '16px 0px 0px 16px' }} className='py-4 px-6 h-full box-border flex items-center bg-[#FF6910] text-white font-medium text-2xl group-hover:bg-[#ff5810]'>
+                            {state.submitting ? 'Submitting...' : t("submit")}
+                        </span>
                         <p style={{ borderRadius: '0px 16px 16px 0px' }} className='bg-white py-4 px-6 flex items-center'>
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" className='group-hover:translate-x-0.5 group-hover:-translate-y-0.5'>
                                 <path d="M9.33203 22.6668L22.6654 9.3335" stroke="#1B1B1B" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -121,15 +163,20 @@ const ContactForm = () => {
                     </button>
 
                     <div className='block xl:hidden'>
-                        <button disabled={isDisabled} className={`${isDisabled && "opacity-50"} flex justify-center items-center bg-[#FF6910] w-full rounded-2xl py-4 lg:hidden `}>
-                            <span className='h-full bg-[#FF6910] text-white font-medium text-lg mr-3'>{t("submit")}</span>
+                        <button
+                            type="submit"
+                            disabled={isDisabled}
+                            className={`${isDisabled && "opacity-50"} flex justify-center items-center bg-[#FF6910] w-full rounded-2xl py-4 lg:hidden `}
+                        >
+                            <span className='h-full bg-[#FF6910] text-white font-medium text-lg mr-3'>
+                                {state.submitting ? 'Submitting...' : t("submit")}
+                            </span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
                                 <path d="M7.5 17L17.5 7" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                                 <path d="M7.5 7H17.5V17" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
                         </button>
                     </div>
-
                 </form>
             </div>
         </div>
