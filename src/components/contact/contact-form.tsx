@@ -23,6 +23,7 @@ const ContactForm = () => {
     // Formspree hook
     const [state, handleFormspreeSubmit] = useFormspree("mzzgwjqq");
     const [isSubmit, setIsSubmit] = useState(false);
+    const [typeSelected, setTypeSelected] = useState("");
 
     const schema = yup
         .object({
@@ -70,6 +71,7 @@ const ContactForm = () => {
             });
             setIsSubmit(false);
             reset();
+            setTypeSelected("")
             toast.custom(<ToastCustom type='success' />)
         } catch (error) {
             console.error('Form submission error:', error);
@@ -87,7 +89,7 @@ const ContactForm = () => {
 
     const isDisabled = useMemo(() => {
         return !isValid || Object.keys(errors).length > 0 || isSubmit
-    }, [isSubmit]);
+    }, [isSubmit, isValid, errors]);
 
     return (
         <div className='w-full lg:grow relative'>
@@ -132,7 +134,7 @@ const ContactForm = () => {
                     </div>
 
                     <div>
-                        <SelectInput setValue={setValue} />
+                        <SelectInput setValue={setValue} setTypeSelected={setTypeSelected} typeSelected={typeSelected} />
                         <p className='text-sm text-red-700 mt-1'>{errors.typeCollaboration?.message}</p>
                     </div>
 

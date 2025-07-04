@@ -25,14 +25,15 @@ const CollaborationTypes = [
 ]
 
 interface SelectInputProps {
-    setValue: UseFormSetValue<ContactUsForm>
+    setValue: UseFormSetValue<ContactUsForm>;
+    setTypeSelected: (val: string) => void;
+    typeSelected: string;
 }
 
 
-const SelectInput = ({ setValue }: SelectInputProps) => {
+const SelectInput = ({ setValue, setTypeSelected, typeSelected }: SelectInputProps) => {
 
     const [open, setOpen] = useState(false);
-    const [typeSelected, setTypeSelected] = useState("");
     const t = useTranslations("contactUs")
 
     const handleOpen = () => {
