@@ -4,7 +4,7 @@ import CheckboxInput from './checkbox';
 import NameInput from './name-input';
 import NumberInput from './number-input';
 import arrowRight from '@/images/contact/arrow_right.svg';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup"
 import { useForm } from 'react-hook-form';
@@ -22,6 +22,7 @@ const ContactForm = () => {
 
     // Formspree hook
     const [state, handleFormspreeSubmit] = useFormspree("mzzgwjqq");
+    const [isSubmit, setIsSubmit] = useState(false);
 
     const schema = yup
         .object({
@@ -59,6 +60,7 @@ const ContactForm = () => {
 
         // Submit to Formspree
         try {
+            setIsSubmit(true)
             await fetch(process.env.NEXT_PUBLIC_FORM_ID as string, {
                 method: 'POST',
                 body: formData,
@@ -66,8 +68,9 @@ const ContactForm = () => {
                     'Accept': 'application/json'
                 }
             });
+            setIsSubmit(false);
             reset();
-            toast.success("Submit Successfully")
+            toast.custom(<ToastCustom type='success' />)
         } catch (error) {
             console.error('Form submission error:', error);
             toast.custom(<ToastCustom type='error' />);
@@ -82,7 +85,9 @@ const ContactForm = () => {
         }
     }, [state.errors]);
 
-    const isDisabled = !isValid || Object.keys(errors).length > 0 || state.submitting;
+    const isDisabled = useMemo(() => {
+        return !isValid || Object.keys(errors).length > 0 || isSubmit
+    }, [isSubmit]);
 
     return (
         <div className='w-full lg:grow relative'>
@@ -152,7 +157,7 @@ const ContactForm = () => {
                         className={`${isDisabled && "opacity-50"} absolute bottom-3 right-[-100px] z-[10] h-20 box-border hidden xl:flex cursor-pointer group transition-all ease-in-out`}
                     >
                         <span style={{ borderRadius: '16px 0px 0px 16px' }} className='py-4 px-6 h-full box-border flex items-center bg-[#FF6910] text-white font-medium text-2xl group-hover:bg-[#ff5810]'>
-                            {state.submitting ? 'Submitting...' : t("submit")}
+                            {isSubmit ? 'Submitting...' : t("submit")}
                         </span>
                         <p style={{ borderRadius: '0px 16px 16px 0px' }} className='bg-white py-4 px-6 flex items-center'>
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" className='group-hover:translate-x-0.5 group-hover:-translate-y-0.5'>
