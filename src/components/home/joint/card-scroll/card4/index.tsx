@@ -22,11 +22,11 @@ const Card4 = () => {
             {/* mobile */}
             <Card4Mobile joint={joint} locale={locale} handleToast={handleToast} />
             {/* desktop */}
-            <BoxWrapped className="bg-white md:px-5 xl:px-16 lg:flex items-center rounded-3xl my-auto hidden">
+            <BoxWrapped className="bg-white md:px-5 xl:px-16 lg:flex  rounded-3xl my-auto hidden">
                 <div className="grid grid-cols-1 lg:grid-cols-2 ">
                     {/* Left Section: Text Content and Small Card */}
                     <div className="flex flex-col justify-between items-center gap-10">
-                        <h2 className="lg:w-[60%] text-4xl lg:text-5xl font-semibold text-[#1B1B1B] mb-4 leading-tight">
+                        <h2 className="lg:w-[475px] text-4xl lg:text-5xl font-semibold text-[#1B1B1B] mb-4 leading-tight">
                             {joint.card4.title}
                         </h2>
                         <Image
