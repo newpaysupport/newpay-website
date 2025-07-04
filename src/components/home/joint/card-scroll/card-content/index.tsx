@@ -24,8 +24,8 @@ const CardContent = () => {
             <BoxWrapped className="bg-white md:px-5 xl:px-16 lg:flex items-center rounded-3xl hidden my-auto" >
                 <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-30">
                     {/* Left Section: Text Content and Small Card */}
-                    <div className="flex flex-col justify-between space-y-10">
-                        <div className="pl-36">
+                    <div className="flex flex-col justify-between items-end space-y-10">
+                        <div className="lg:w-[475px]">
                             <h2 className="text-5xl lg:text-5xl font-semibold text-[#1B1B1B] mb-4 leading-tight">
                                 {joint.cardContent.title}
                             </h2>

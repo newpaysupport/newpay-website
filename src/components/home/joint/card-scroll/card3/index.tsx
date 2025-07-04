@@ -29,8 +29,8 @@ const Card3 = () => {
                 <BoxWrapped className="bg-white md:px-5 xl:px-16 lg:flex items-center rounded-3xl my-auto hidden">
                     <div className=" grid grid-cols-1 lg:grid-cols-2 gap-30">
                         {/* Left Section: Text Content and Small Card */}
-                        <div className="flex flex-col justify-between space-y-10">
-                            <div className="pl-32">
+                        <div className="flex flex-col justify-between items-end space-y-10">
+                            <div className="lg:w-[475px]">
                                 <h2 className="text-4xl lg:text-5xl font-semibold text-[#1B1B1B] mb-4 leading-tight">
                                     {joint.card3.title}
                                 </h2>
@@ -39,7 +39,7 @@ const Card3 = () => {
                                 </p>
                             </div>
 
-                            <div className="bg-[#FF6910] rounded-3xl p-4 text-white shadow-xl flex lg:w-[500px] lg:h-[230px]">
+                            <div className="bg-[#FF6910] rounded-3xl p-4 text-white shadow-xl flex lg:w-full lg:h-[230px]">
                                 <Image
                                     src={card1_img1}
                                     alt="Person holding a card"
