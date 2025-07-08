@@ -118,7 +118,7 @@ const DropDownNation = ({ isOpenNation, handleNationSelect, nationSelected }:
                 />
             </div>
 
-            <ul className='p-2 h-[230px] overflow-y-scroll'>
+            <ul className='p-2 h-[230px] overflow-y-auto'>
                 {filteredCountries.map((item, index) => {
                     return (
                         <li

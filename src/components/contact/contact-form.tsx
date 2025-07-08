@@ -1,20 +1,18 @@
 "use client"
-import Image from 'next/image';
+import { ContactUsForm, ContactUsFormType } from '@/interfaces/contact-form';
+import { useForm as useFormspree } from '@formspree/react';
+import { yupResolver } from "@hookform/resolvers/yup";
+import { useTranslations } from 'next-intl';
+import { useEffect, useState } from 'react';
+import { useForm } from 'react-hook-form';
+import toast from 'react-hot-toast';
+import * as yup from "yup";
+import ToastCustom from '../common/toast';
 import CheckboxInput from './checkbox';
 import NameInput from './name-input';
 import NumberInput from './number-input';
-import arrowRight from '@/images/contact/arrow_right.svg';
-import { useState, useEffect, useMemo } from 'react';
-import { yupResolver } from "@hookform/resolvers/yup"
-import * as yup from "yup"
-import { useForm } from 'react-hook-form';
-import { ContactUsForm, ContactUsFormType } from '@/interfaces/contact-form';
-import { useTranslations } from 'next-intl';
 import SelectInput from './select-input';
 import TextArea from './text-area';
-import { useForm as useFormspree } from '@formspree/react';
-import toast from 'react-hot-toast';
-import ToastCustom from '../common/toast';
 
 const ContactForm = () => {
     const [enabled, setEnabled] = useState(false);
@@ -30,8 +28,8 @@ const ContactForm = () => {
             firstName: yup.string().required(`${t("firstName")} ${t("isRequire")}`),
             lastName: yup.string().required(`${t("lastName")} ${t("isRequire")}`),
             email: yup.string().required(`${t("email")} ${t("isRequire")}`),
-            companyName: yup.string().required(`${t("companyName")} ${t("isRequire")}`),
-            companyWebsite: yup.string().required(`${t("companyWebsite")} ${t("isRequire")}`),
+            // companyName: yup.string().required(`${t("companyName")} ${t("isRequire")}`),
+            // companyWebsite: yup.string().required(`${t("companyWebsite")} ${t("isRequire")}`),
             message: yup.string().required(`${t("message")} ${t("isRequire")}`),
             typeCollaboration: yup.string().required(`${t("typeCollaboration")} ${t("isRequire")}`),
             phone: yup.string().required(`${t("phone")} ${t("isRequire")}`),
@@ -82,14 +80,9 @@ const ContactForm = () => {
     // Handle Formspree errors
     useEffect(() => {
         if (state.errors) {
-            // Simple error handling - just show a toast for any errors
             toast.custom(<ToastCustom type='error' />);
         }
     }, [state.errors]);
-
-    const isDisabled = useMemo(() => {
-        return !isValid || Object.keys(errors).length > 0 || isSubmit
-    }, [isSubmit, isValid, errors]);
 
     return (
         <div className='w-full lg:grow relative'>
@@ -135,7 +128,7 @@ const ContactForm = () => {
 
                     <div>
                         <SelectInput setValue={setValue} setTypeSelected={setTypeSelected} typeSelected={typeSelected} />
-                        <p className='text-sm text-red-700 mt-1'>{errors.typeCollaboration?.message}</p>
+                        <p className='text-sm text-red-700 mt-1'>{!watch("typeCollaboration") ? errors.typeCollaboration?.message : ""}</p>
                     </div>
 
                     <div>
@@ -155,8 +148,7 @@ const ContactForm = () => {
 
                     <button
                         type="submit"
-                        disabled={isDisabled}
-                        className={`${isDisabled && "opacity-50"} absolute bottom-3 right-[-100px] z-[10] h-20 box-border hidden xl:flex cursor-pointer group transition-all ease-in-out`}
+                        className={`absolute bottom-3 right-[-100px] z-[10] h-20 box-border hidden xl:flex cursor-pointer group transition-all ease-in-out`}
                     >
                         <span style={{ borderRadius: '16px 0px 0px 16px' }} className='py-4 px-6 h-full box-border flex items-center bg-[#FF6910] text-white font-medium text-2xl group-hover:bg-[#ff5810]'>
                             {!isSubmit ? t('submit') : t("submitting")}
@@ -172,8 +164,7 @@ const ContactForm = () => {
                     <div className='block xl:hidden'>
                         <button
                             type="submit"
-                            disabled={isDisabled}
-                            className={`${isDisabled && "opacity-50"} flex justify-center items-center bg-[#FF6910] w-full rounded-2xl py-4 lg:hidden `}
+                            className={`flex justify-center items-center bg-[#FF6910] w-full rounded-2xl py-4 lg:hidden `}
                         >
                             <span className='h-full bg-[#FF6910] text-white font-medium text-lg mr-3'>
                                 {!isSubmit ? t('submit') : t("submitting")}

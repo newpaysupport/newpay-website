@@ -3,14 +3,14 @@ import ReactLenis from 'lenis/react'
 import React from 'react'
 
 const Contact = () => {
-  return (
-    <ReactLenis root>
-      <main>
-        <ContactScreen />
-      </main>
-    </ReactLenis>
+    return (
+        <main>
+            <main>
+                <ContactScreen />
+            </main>
+        </main>
 
-  )
+    )
 }
 
 export default Contact
