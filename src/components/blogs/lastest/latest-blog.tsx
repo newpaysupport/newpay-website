@@ -27,9 +27,8 @@ const LatestBlog = ({ title, tags, blogTag, blogs, insightsLocale }: LatestProps
     const { isMobile: isSm, isTablet: isMd } = useBreakpointFlags();
     const [listBlogsFiltered, setListBlogsFiltered] = useState<Blogs[]>();
 
-    console.log('isSm', isSm);
-    console.log('isMd', isMd)
 
+    console.log('blogs', blogs)
 
     useEffect(() => {
         if (!blogs.length) setListBlogsFiltered([]);
@@ -72,6 +71,8 @@ const LatestBlog = ({ title, tags, blogTag, blogs, insightsLocale }: LatestProps
         })
 
     }
+
+    console.log('selectTag', selectTag)
 
     const isLoadMoreVisible = useMemo(() => {
         if (!isMd && !isSm) return false;
