@@ -17,6 +17,7 @@ import toast from 'react-hot-toast';
 import { useTranslations } from 'use-intl';
 import ToastCustom from '../common/toast';
 import BoxWrapped from '../common/box-wrapped';
+import { useLocale } from 'next-intl';
 
 
 const socials = [
@@ -48,6 +49,7 @@ const socials = [
 const Footer = () => {
 
     const t = useTranslations("footer");
+    const locale = useLocale();
     const pathname = usePathname();
     const currentLocale = pathname.split('/')[1]
 
@@ -102,7 +104,7 @@ const Footer = () => {
 
                 <div className='text-[#848484] text-sm lg:text-base font-normal -tracking-[0.24px] flex flex-col-reverse md:flex-row items-center justify-between pt-10 border-t-[1px] border-white/8'>
                     <span className='text-xs mt-2 md:mt-0'>{t('copyright')}</span>
-                    <Link target='_blank' href={`https://newpay-doc-en.gitbook.io/newpay-docs-en/commission-policy`}>{t('terms')}</Link>
+                    <Link target='_blank' href={`/${locale}/term`}>{t('terms')}</Link>
                 </div>
             </div>
         </div>

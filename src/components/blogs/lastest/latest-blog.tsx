@@ -11,6 +11,7 @@ import { MDXProps } from 'mdx/types';
 import { Blogs } from '@/interfaces/blogs';
 import { objectConvertTagLanguage } from '@/constants/convert-object-language';
 import { useBreakpointFlags } from '@/hooks/useBreakpointFlags';
+import { tagsConstant } from '@/constants/tab';
 interface LatestProps {
     title: string;
     tags: string[];
@@ -23,21 +24,19 @@ const images = [card2, card3, card4]
 
 
 const LatestBlog = ({ title, tags, blogTag, blogs, insightsLocale }: LatestProps) => {
-    const [selectTag, setSelectTag] = useState(tags[0]);
+    const [selectTag, setSelectTag] = useState(tagsConstant[0]);
     const { isMobile: isSm, isTablet: isMd } = useBreakpointFlags();
     const [listBlogsFiltered, setListBlogsFiltered] = useState<Blogs[]>();
-
-
-    console.log('blogs', blogs)
 
     useEffect(() => {
         if (!blogs.length) setListBlogsFiltered([]);
 
-        if (selectTag === tags[0]) {
+        if (selectTag === tagsConstant[0]) {
             const list = (!isMd && !isSm) ? blogs : blogs.slice(0, 4);
             setListBlogsFiltered(list);
             return;
         }
+
         const filteredBlogs = blogs.filter((item) => item.tag === selectTag);
         setListBlogsFiltered(filteredBlogs.slice(0, 4));
     }, [isMd, selectTag, isSm]);
@@ -45,7 +44,12 @@ const LatestBlog = ({ title, tags, blogTag, blogs, insightsLocale }: LatestProps
 
     const handleClickTag = (tag: string) => {
         if (tag !== selectTag) {
-            setSelectTag(tag)
+            if (insightsLocale === 'en') {
+                setSelectTag(tag)
+            } else {
+                const index = tags.findIndex(item => item === tag);
+                setSelectTag(tagsConstant[index]);
+            }
         }
     }
 
@@ -72,14 +76,11 @@ const LatestBlog = ({ title, tags, blogTag, blogs, insightsLocale }: LatestProps
 
     }
 
-    console.log('selectTag', selectTag)
-
     const isLoadMoreVisible = useMemo(() => {
         if (!isMd && !isSm) return false;
         if (listBlogsFiltered && listBlogsFiltered.length >= listFilter.length) return false;
         return true;
     }, [listBlogsFiltered, listFilter, isMd, isSm]);
-
 
     return (
         <div className='container mx-auto pt-12 pb-20 overflow-x-auto'>
@@ -87,15 +88,18 @@ const LatestBlog = ({ title, tags, blogTag, blogs, insightsLocale }: LatestProps
                 <h2 className={`text-2xl lg:text-[40px] text-[#1b1b1b] font-semibold -tracking-[0.64px] text-center`}>{title}</h2>
                 <div className='w-full overflow-auto pl-4 my-8'>
                     <div className="flex w-[460px] mx-auto gap-2 pb-4">
-                        {tags.map((tag, index) => (
-                            <p
-                                onClick={() => handleClickTag(tag)}
-                                key={index}
-                                className={`${selectTag === tag ? 'bg-[#212121] text-white' : 'hover:bg-black/10 bg-[#f8f8f8] text-[#1b1b1b]'} transition-all ease-linear duration-150 capitalize rounded-full px-4 py-2 cursor-pointer`}
-                            >
-                                <span className='text-sm font-medium'>{tag}</span>
-                            </p>
-                        ))}
+                        {tags.map((tag, index) => {
+                            const activeIndex = tagsConstant.findIndex(item => item === selectTag);
+                            return (
+                                <p
+                                    onClick={() => handleClickTag(tag)}
+                                    key={index}
+                                    className={`${index === activeIndex ? 'bg-[#212121] text-white' : 'hover:bg-black/10 bg-[#f8f8f8] text-[#1b1b1b]'} transition-all ease-linear duration-150 capitalize rounded-full px-4 py-2 cursor-pointer`}
+                                >
+                                    <span className='text-sm font-medium'>{tag}</span>
+                                </p>
+                            )
+                        })}
                     </div>
                 </div>
 
