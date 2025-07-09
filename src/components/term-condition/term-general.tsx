@@ -1,4 +1,3 @@
-import React from 'react'
 
 const TermGeneral = ({ currentSectionContent, ids, idSubitems }: { currentSectionContent: any, ids: string[], idSubitems: string[] }) => {
     let globalIdx = 0;
@@ -30,7 +29,7 @@ const TermGeneral = ({ currentSectionContent, ids, idSubitems }: { currentSectio
                 {/* Sections */}
                 <div className="space-y-8">
                     {currentSectionContent.sections.map((section: any, idx: number) => (
-                        <div key={idx} id={ids[idx+1]} className="text-sm">
+                        <div key={idx} id={ids[idx + 1]} className="text-sm">
                             <h4 className="font-semibold text-[#FFF] mb-3">{section.title}</h4>
 
 
@@ -64,15 +63,20 @@ const TermGeneral = ({ currentSectionContent, ids, idSubitems }: { currentSectio
                                         )}
 
                                         {contentItem.services && (
-                                            <ul className="list-disc text-[#AEAEAE] ml-6 mb-2">
+                                            <ul className="text-[#AEAEAE] mb-2">
                                                 {contentItem.services.map((service: any, i: number) => (
-                                                    <li key={i}>
-                                                        <p className="text-[#FFF] font-semibold">{service.name}</p>
-                                                        <p>{service.description}</p>
+                                                    <li key={i} className="mb-4">
+                                                        <p className="text-[#FFF] font-semibold mb-1">{service.name}</p>
+                                                        <ul className="list-disc ml-6 text-[#AEAEAE]">
+                                                            {service.description.map((desc: string, j: number) => (
+                                                                <li key={j}>{desc}</li>
+                                                            ))}
+                                                        </ul>
                                                     </li>
                                                 ))}
                                             </ul>
                                         )}
+
 
                                         {contentItem.restrictions && (
                                             <ul className="list-disc text-[#AEAEAE] ml-6 mb-2">
@@ -89,6 +93,7 @@ const TermGeneral = ({ currentSectionContent, ids, idSubitems }: { currentSectio
                                                 ))}
                                             </ul>
                                         )}
+
 
                                         {contentItem.steps && (
                                             <ol className="list-decimal text-[#AEAEAE] ml-6 mb-2">
@@ -121,6 +126,27 @@ const TermGeneral = ({ currentSectionContent, ids, idSubitems }: { currentSectio
                                                 ))}
                                             </ul>
                                         )}
+
+                                        {contentItem.refund && (
+                                            <div className="mb-6">
+                                                <ul className="space-y-6 text-sm text-[#AEAEAE]">
+                                                    {contentItem.refund.map((refundItem: any, i: number) => (
+                                                        <li key={i}>
+                                                            <p className="text-[#FFF] font-semibold mb-1">{refundItem.type}</p>
+                                                            <p className="mb-2">{refundItem.paragraph}</p>
+                                                            {refundItem['description-refund'] && (
+                                                                <ul className="list-disc ml-6">
+                                                                    {refundItem['description-refund'].map((desc: string, j: number) => (
+                                                                        <li key={j}>{desc}</li>
+                                                                    ))}
+                                                                </ul>
+                                                            )}
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            </div>
+                                        )}
+
 
                                         {contentItem.feeTable && (
                                             <div className="overflow-x-auto border border-gray-700 rounded mt-4">
@@ -155,6 +181,10 @@ const TermGeneral = ({ currentSectionContent, ids, idSubitems }: { currentSectio
                                                     <li key={i}>{fee}</li>
                                                 ))}
                                             </ul>
+                                        )}
+
+                                        {contentItem.paragraph2 && (
+                                            <p className="text-[#AEAEAE] mb-2 leading-relaxed">{contentItem.paragraph2}</p>
                                         )}
                                     </div>
                                 )
