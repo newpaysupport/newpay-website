@@ -1,15 +1,15 @@
 'use client'
+import { term as enBlog } from '@/i18n/messages/en.json';
+import { term as ziBlog } from '@/i18n/messages/zi.json';
+import bg_term from '@/images/faq-help/gradient.png';
+import logo from '@/images/term/newpay_square_mark.svg';
 import { useLocale } from 'next-intl';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { RiArrowRightSLine } from "react-icons/ri";
-import { term as enBlog } from '@/i18n/messages/en.json';
-import { term as ziBlog } from '@/i18n/messages/zi.json';
-import logo from '@/images/term/newpay_square_mark.svg';
 import TermContent from './term-content';
 import TermGeneral from './term-general';
-import bg_term from '@/images/faq-help/gradient.png';
 
 export default function TermsAndConditions() {
   const generalChildrenIds = ['general', 'general-1', 'general-2', 'general-3', 'general-4', 'general-5', 'general-6', 'general-7', 'general-8', 'general-9', 'general-10', 'general-11', 'general-12', 'general-13', 'general-14'];

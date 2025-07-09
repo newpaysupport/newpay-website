@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react'
 
 const TermGeneral = ({ currentSectionContent, ids, idSubitems }: { currentSectionContent: any, ids: string[], idSubitems: string[] }) => {
     let globalIdx = 0;

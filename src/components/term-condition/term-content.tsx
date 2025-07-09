@@ -1,10 +1,7 @@
-import React, { useEffect } from 'react';
 
 const TermContent = ({ content, idPivacy, idCommission }: { content: any, idPivacy: string[], idCommission: string[] }) => {
 
     if (!content) return null;
-
-    // Xác định mảng ID dựa trên loại nội dung
     const idArray = content.title.toLowerCase().includes('privacy') ? idPivacy : idCommission;
 
     return (
@@ -20,11 +17,11 @@ const TermContent = ({ content, idPivacy, idCommission }: { content: any, idPiva
                                 <div
                                     className="text-sm"
                                     key={index}
-                                    id={idArray[index]} 
+                                    id={idArray[index]}
                                 >
                                     <h4 className="font-semibold text-[#FFF] mb-3">{section.title}</h4>
 
-                                    {/* Render subsections nếu có */}
+                                    {/* Render subsections */}
                                     {section.subsections ? (
                                         section.subsections.map((sub: any, subIdx: number) => {
                                             return (
@@ -66,7 +63,7 @@ const TermContent = ({ content, idPivacy, idCommission }: { content: any, idPiva
                                             );
                                         })
                                     ) : (
-                                        // Render nội dung nếu không có subsections
+                                        // Render if no has subsections
                                         section.content.map((c: any, idx: number) => {
                                             return (
                                                 <div key={idx} className="mb-4">
