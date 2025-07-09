@@ -941,48 +941,576 @@
         "mainContent": {
             "general": {
                 "header": {
-                    "title": "NEWPAY SERVICES TERMS & CONDITIONS",
-                    "lastUpdated": "29 April 2024",
+                    "title": "NEWPAY TERMS AND CONDITIONS",
+                    "lastUpdated": "Current Version",
                     "introSection": {
-                        "title": "THIS IS AN IMPORTANT DOCUMENT. PLEASE READ IT CAREFULLY.",
+                        "title": "IMPORTANT NOTICE",
                         "paragraphs": [
-                            "These terms and conditions (\"Terms\") contain important information which applies to your dealings with us in relation to your Account with us and the Services which we provide to you accordingly. You should read these Terms carefully. Further additional terms and conditions may apply in relation to specific Services offered by us. Any such terms and conditions are additional to the terms set out in these Terms.",
-                            "You are required to comply with these Terms at all times. If you do not comply with any of these Terms, we may take various actions including financial actions and you must not regard us as acting in that capacity. You should consult your independent professional advisers before entering into any transaction and only enter into a transaction if you have fully understood its nature, the contractual relationships you which are dealt with and the risks associated with the transaction."
+                            "Before using the NewPay platform and its related services, please carefully read and fully understand these Terms and Conditions. These Terms constitute a legally binding agreement between you and NEWPAY, governing your rights, obligations, and limitations when using our services.",
+                            "By accessing or using the NewPay platform, you acknowledge that you have agreed to accept all terms contained herein. If you do not agree with any part of these Terms, please immediately cease using our services."
                         ]
                     }
                 },
-                "title": "GENERAL TERMS AND CONDITIONS",
+                "title": "NEWPAY TERMS AND CONDITIONS",
                 "sections": [
                     {
-                        "id": "introduction",
-                        "title": "1. INTRODUCTION",
+                        "id": "general-provisions",
+                        "title": "1. GENERAL PROVISIONS",
                         "content": [
                             {
-                                "paragraph": "1.1 Your Account and the related Services are provided to you by the following groups, including but not limited to Technology Limited (a private company limited by shares incorporated in Hong Kong with company number 2484457) (\"HTL\"). Red Dot Technology Limited (a private company limited by shares incorporated in Hong Kong with company number 2908456) (\"RDTL\"). Red Dot Trust Limited (Red Dot Trust\"). Bangkok Fintech Limited (Bangkok Fintech\"), and such other companies as determined by us from time to time (\"Group\" or \"we\")."
+                                "subsection": "1.1 About Us",
+                                "paragraph": "NewPay (\"we,\" \"us,\" or \"our platform\") is a global financial technology platform focused on digital asset payment solutions. We are committed to providing users with secure, convenient digital asset consumption experiences."
+                            },
+                            {
+                                "subsection": "1.2 Definitions",
+                                "paragraph": "In these Terms:",
+                                "definitions": [
+                                    "\"Terms\" means these Terms and Conditions and any subsequent amendments;",
+                                    "\"Services\" means all products and features provided by NewPay, including but not limited to virtual cards, physical cards, gift cards, deposits, withdrawals, etc.;",
+                                    "\"User\" or \"you\" means any individual or entity accessing or using NewPay services;",
+                                    "\"Account\" means the personal account you obtain after registering and completing identity verification on the NewPay platform;",
+                                    "\"Digital Assets\" means cryptocurrencies or stablecoins such as USDT, USDC, etc.;",
+                                    "\"KYC\" means Know-Your-Customer, the identity verification process we conduct to meet regulatory requirements;",
+                                    "\"Wallet Balance\" means the digital assets you hold on the NewPay platform;",
+                                    "\"Card Balance\" means the funds transferred from your Wallet Balance that are available for use with payment cards;",
+                                    "\"Payment Card\" means virtual or physical cards provided by NewPay that support payments through the Visa or Mastercard network."
+                                ]
+                            },
+                            {
+                                "subsection": "1.3 Acceptance of Terms",
+                                "paragraph": "You can indicate your acceptance of these Terms by:",
+                                "subItems": [
+                                    "Clicking \"I agree\" or a similar button indicating acceptance;",
+                                    "Registering for a NewPay account;",
+                                    "Accessing or using any NewPay service;",
+                                    "Otherwise indicating agreement."
+                                ]
+                            },
+                            {
+                                "subsection": "1.4 Amendments to Terms",
+                                "paragraph": "We reserve the right to modify these Terms at any time. Modified Terms will take effect upon posting, with the specific effective date noted in the revised version. For significant changes, we will notify you in advance through one or more of the following methods:",
+                                "subItems": [
+                                    "Posting a notice in a prominent location on the platform;",
+                                    "Sending an email to your registered email address;",
+                                    "Sending an in-app push notification."
+                                ]
                             }
                         ]
                     },
                     {
-                        "id": "scope",
-                        "title": "2. SCOPE",
+                        "id": "service-description",
+                        "title": "2. SERVICE DESCRIPTION",
                         "content": [
                             {
-                                "paragraph": "2.1 These Terms govern your Account and your use of the Services. Please take the time to read and understand these Terms before using these Services so that you are aware of your legal rights and obligations. By using any of the Services and/or completing the registration process, you are agreeing to be legally binding contract with the Group and shall be deemed to have accepted these separate terms."
+                                "subsection": "2.1 Platform Positioning",
+                                "paragraph": "NewPay is a Web3 financial technology platform designed to connect cryptocurrencies with traditional payment systems, enabling users to use digital assets for everyday consumption. Our core functionality is converting digital assets such as USDT and USDC into payment card balances that can be used globally."
                             },
                             {
-                                "paragraph": "2.2 These Terms comprise:",
+                                "subsection": "2.2 Main Services",
+                                "paragraph": "We provide the following main services:",
+                                "services": [
+                                    {
+                                        "name": "2.2.1 Virtual Cards",
+                                        "description": "Instantly issued digital payment cards that can be linked to Apple Pay, Google Pay, and other mobile payment tools; Support for online payments and authorized offline merchant transactions; Multiple card tiers with different limits and features."
+                                    },
+                                    {
+                                        "name": "2.2.2 Physical Cards",
+                                        "description": "Physical plastic cards usable at Visa/Mastercard-supported POS terminals and ATMs worldwide; Linked to your NewPay account, sharing the card balance; Equipped with chip and contactless payment functionality."
+                                    },
+                                    {
+                                        "name": "2.2.3 Gift Cards",
+                                        "description": "Transferable prepaid cards that can be sent to other NewPay users; Single-use or rechargeable; Support for customized amounts and personalized designs."
+                                    },
+                                    {
+                                        "name": "2.2.4 Wallet Services",
+                                        "description": "Storage of supported digital assets including USDT, USDC, etc.; Deposit, withdrawal, and asset conversion functionality; Real-time balance and transaction history display."
+                                    },
+                                    {
+                                        "name": "2.2.5 Other Services",
+                                        "description": "Transaction monitoring and security alerts; Spending analysis and reports; Customer support and dispute resolution; User referral and reward programs."
+                                    }
+                                ]
+                            },
+                            {
+                                "subsection": "2.3 Service Availability",
+                                "paragraph": "We strive to provide continuous, stable services but do not guarantee that services will be uninterrupted or error-free. Services may be affected by: System maintenance and upgrades; Network or device failures; Force majeure events; Blockchain network congestion or failures; Payment network or banking system issues."
+                            },
+                            {
+                                "subsection": "2.4 Service Restrictions",
+                                "paragraph": "Our services may be unavailable or restricted in certain countries/regions. Currently, we do not provide services to residents of:",
+                                "restrictions": [
+                                    "Mainland China;",
+                                    "United States;",
+                                    "Countries/regions under international sanctions (such as North Korea, Iran, Syria, etc.);",
+                                    "Other regions where providing such services is prohibited by laws and regulations."
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": "account-registration",
+                        "title": "3. ACCOUNT REGISTRATION AND MANAGEMENT",
+                        "content": [
+                            {
+                                "subsection": "3.1 Registration Eligibility",
+                                "paragraph": "To register for a NewPay account, you must:",
+                                "requirements": [
+                                    "Be at least 18 years old or the legal age of majority in your jurisdiction;",
+                                    "Have full legal capacity;",
+                                    "Not be on our service restriction region list;",
+                                    "Not be on any sanctions list or regulatory blacklist."
+                                ]
+                            },
+                            {
+                                "subsection": "3.2 Registration Process",
+                                "paragraph": "Registering for a NewPay account requires completing the following steps:",
+                                "steps": [
+                                    "Providing a valid email address and phone number;",
+                                    "Creating a secure password;",
+                                    "Agreeing to these Terms and our Privacy Policy;",
+                                    "Completing the identity verification (KYC) process."
+                                ]
+                            },
+                            {
+                                "subsection": "3.3 Identity Verification (KYC) Requirements",
+                                "paragraph": "To comply with global Anti-Money Laundering (AML) and Know-Your-Customer (KYC) regulations, we require all users to complete an identity verification process, which is performed by our partner. The verification process may include:",
+                                "requirements": [
+                                    "Submitting government-issued identity documents (such as passport, ID card);",
+                                    "Completing facial recognition verification;",
+                                    "Providing proof of address (applicable for certain service levels);",
+                                    "Answering other identity-related questions."
+                                ]
+                            },
+                            {
+                                "subsection": "3.4 Account Security",
+                                "paragraph": "You are responsible for maintaining the security of your account, including:",
+                                "responsibilities": [
+                                    "Using strong passwords and changing them regularly;",
+                                    "Enabling two-factor authentication (2FA);",
+                                    "Protecting your login credentials and private keys;",
+                                    "Ensuring the security of your devices and software;",
+                                    "Promptly reporting suspicious activities."
+                                ]
+                            },
+                            {
+                                "subsection": "3.5 Account Freezing and Termination",
+                                "paragraph": "We may freeze or terminate your account in the following situations:",
+                                "situations": [
+                                    "Violation of these Terms or other platform policies;",
+                                    "Providing false or misleading information;",
+                                    "Suspected fraud or illegal activities;",
+                                    "Long-term inactivity (no transactions for over 12 months);",
+                                    "At the request of regulatory authorities;",
+                                    "Other reasonable causes."
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": "fund-management",
+                        "title": "4. FUND MANAGEMENT AND TRANSACTIONS",
+                        "content": [
+                            {
+                                "subsection": "4.1 Account Structure",
+                                "paragraph": "A NewPay account consists of two main components:",
+                                "components": [
+                                    "Wallet Balance: Stores your digital assets (USDT, USDC, etc.);",
+                                    "Card Balance: Funds transferred from your wallet balance for use with payment cards."
+                                ]
+                            },
+                            {
+                                "subsection": "4.2 Deposits",
+                                "paragraph": "You can deposit funds to your wallet balance through:",
+                                "methods": [
+                                    "Transferring supported digital assets (USDT, USDC, etc.) from external cryptocurrency wallets;",
+                                    "Transacting through supported blockchain networks (such as Ethereum, Tron, Solana, etc.);",
+                                    "Transfers from other NewPay users."
+                                ]
+                            },
+                            {
+                                "subsection": "4.3 Card Funding",
+                                "paragraph": "To use payment cards, you need to transfer funds from your wallet balance to your card balance: Select the target card in the application; Enter the funding amount; Confirm the transfer."
+                            },
+                            {
+                                "subsection": "4.4 Payments and Spending",
+                                "paragraph": "When using NewPay cards for spending: Ensure sufficient card balance; Comply with daily/monthly transaction limits for the card; Understand usage restrictions for different merchant categories; Be aware of potential additional fees for cross-border transactions."
+                            },
+                            {
+                                "subsection": "4.5 Withdrawals",
+                                "paragraph": "You can withdraw your wallet balance through:",
+                                "methods": [
+                                    "Transfers to external cryptocurrency wallets;",
+                                    "Cash withdrawals at ATMs using physical cards (if applicable);",
+                                    "Conversion to other supported digital assets."
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": "fees-pricing",
+                        "title": "5. FEES AND PRICING",
+                        "content": [
+                            {
+                                "subsection": "5.1 Fee Structure",
+                                "paragraph": "Using NewPay services may incur the following fees:",
+                                "feeTable": {
+                                    "headers": [
+                                        "Fee Type",
+                                        "Applicable Service",
+                                        "Fee Standard",
+                                        "Charging Time"
+                                    ],
+                                    "rows": [
+                                        [
+                                            "Card issuance fee",
+                                            "Virtual/physical cards",
+                                            "10/100",
+                                            "Upon card application"
+                                        ],
+                                        [
+                                            "Monthly fee",
+                                            "Premium card tiers",
+                                            "Free",
+                                            "Fixed date each month"
+                                        ],
+                                        [
+                                            "Deposit fee",
+                                            "Wallet deposits",
+                                            "Free",
+                                            "Upon deposit"
+                                        ],
+                                        [
+                                            "Card funding fee",
+                                            "Card balance funding",
+                                            "Free",
+                                            "Upon funding"
+                                        ],
+                                        [
+                                            "Transaction fee",
+                                            "Card spending",
+                                            "1%",
+                                            "Upon transaction"
+                                        ],
+                                        [
+                                            "Currency conversion fee",
+                                            "Cross-currency transactions",
+                                            "1-1.5%",
+                                            "Upon transaction"
+                                        ],
+                                        [
+                                            "Withdrawal fee",
+                                            "Wallet withdrawals",
+                                            "Varies by network and amount",
+                                            "Upon withdrawal"
+                                        ],
+                                        [
+                                            "ATM withdrawal fee",
+                                            "Physical card ATM withdrawals",
+                                            "2%",
+                                            "Upon withdrawal"
+                                        ],
+                                        [
+                                            "Account inactivity fee",
+                                            "Long-unused accounts",
+                                            "Free",
+                                            "After 12 months of inactivity"
+                                        ]
+                                    ]
+                                }
+                            },
+                            {
+                                "subsection": "5.2 Fee Changes",
+                                "paragraph": "We reserve the right to adjust fees. Fee changes will be notified through: Platform announcements; Email notifications; In-app pushes. Significant fee changes will be announced 3 days in advance."
+                            },
+                            {
+                                "subsection": "5.3 Third-Party Fees",
+                                "paragraph": "When using our services, you may also need to pay third-party fees, including but not limited to:",
+                                "fees": [
+                                    "Blockchain network transaction fees;",
+                                    "Fees charged by banks or payment processors;",
+                                    "Currency exchange fees;",
+                                    "Data fees from telecommunications operators;",
+                                    "Fees charged by ATM operators."
+                                ]
+                            },
+                            {
+                                "subsection": "5.4 Tax Responsibilities",
+                                "paragraph": "You are responsible for determining and paying all applicable taxes related to using our services, including but not limited to: Capital gains tax that may arise from digital asset transactions; Value-added tax or sales tax; Income tax; Other applicable taxes."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "card-usage",
+                        "title": "6. CARD USAGE RULES",
+                        "content": [
+                            {
+                                "subsection": "6.1 Card Activation and Validity",
+                                "paragraph": "Virtual cards are activated immediately upon successful application; Physical cards need to be activated through the application after receipt; Cards typically have a validity period of 2-4 years, with the specific date printed on the card or displayed in the application."
+                            },
+                            {
+                                "subsection": "6.2 Card Usage Limitations",
+                                "paragraph": "Your cards are subject to the following limitations:",
                                 "subItems": [
-                                    "(a) these general terms and conditions, which apply to your Account and the Services generally;",
-                                    "(b) Part A of these Terms, which applies to the Customers Accounts;",
-                                    "(c) Part B of these Terms, which applies to NewPay Card (including Card Insurance Services);",
-                                    "(d) Part C of these Terms, which applies to Swap Transactions;",
-                                    "(e) Part D of these Terms, which applies to Self-Custody Wallet and Smart Contract Vault, and Virtual Account;",
-                                    "(f) Part E of these Terms, which applies to Other Third-Party Services;",
-                                    "(g) Part F of these Terms, which applies to Virtual Assets Loan Services;",
-                                    "(h) our Privacy Policy;",
-                                    "(i) any document setting out the Fees and charges that may apply to a Service, transaction and/or Swap Transactions;",
-                                    "(j) any other rules, instructions, guidelines, terms or agreements designated by us from time to time as part of these Terms; and",
-                                    "(k) any supplements, variations, exclusions, forms incorporated by reference and/or notices issued by the Group, including any Commission."
+                                    "Daily/monthly transaction amount limits (based on card tier and usage history);",
+                                    "Single transaction amount limits;",
+                                    "Specific merchant category restrictions;",
+                                    "Geographical restrictions (sanctioned countries/regions)."
+                                ]
+                            },
+                            {
+                                "subsection": "6.3 Prohibited Card Uses",
+                                "paragraph": "NewPay cards are strictly prohibited from being used for:",
+                                "subItems": [
+                                    "Any illegal activities or actions violating applicable laws;",
+                                    "Money laundering, terrorist financing, or tax evasion;",
+                                    "Circumventing foreign exchange controls or sanctions;",
+                                    "Gambling (in regions where it is legally prohibited);",
+                                    "Purchasing illegal goods or services;",
+                                    "Unauthorized commercial activities;",
+                                    "Fraud or abuse of platform policies."
+                                ]
+                            },
+                            {
+                                "subsection": "6.4 Card Security",
+                                "paragraph": "Protecting your card security is your responsibility:",
+                                "subItems": [
+                                    "Do not share card details (card number, expiration date, CVV code) with others;",
+                                    "Safeguard physical cards to prevent loss or theft;",
+                                    "Regularly check transaction records and promptly report suspicious activities;",
+                                    "Avoid using cards on insecure websites or devices;",
+                                    "Immediately freeze cards through the application if lost."
+                                ]
+                            },
+                            {
+                                "subsection": "6.5 Special Provisions for Gift Cards",
+                                "paragraph": "Gift cards have the following special provisions:",
+                                "subItems": [
+                                    "Once purchased, they are non-refundable;",
+                                    "They can be transferred to other NewPay users;",
+                                    "They cannot be transferred again after being bound by the recipient;",
+                                    "They typically have a validity period of 2-4 years (viewable in the application);",
+                                    "They cannot be exchanged for cash or other digital assets."
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": "refunds-disputes",
+                        "title": "7. REFUNDS AND DISPUTE RESOLUTION",
+                        "content": [
+                            {
+                                "subsection": "7.1 Refund Policy",
+                                "paragraph": "NewPay does not directly provide refund services. Refund processing depends on the transaction type:",
+                                "subItems": [
+                                    "7.1.1 Merchant Refunds : When a merchant initiates a refund: The refund amount will be returned to the original card balance; Processing time is typically 5-15 business days, depending on the merchant and payment network; Refunds may not include currency conversion fees or other fees from the original transaction.",
+                                    "7.1.2 Platform Fee Refunds : In special circumstances, we may refund fees charged by the platform: Technical errors resulting in duplicate charges; Other situations we deem reasonable.",
+                                    "7.1.3 Non-Refundable Situations : The following situations are typically non-refundable: User operational errors (such as entering incorrect addresses); Completed blockchain transactions; Gift card purchases; Account freezing or termination due to Terms violations."
+                                ]
+                            },
+                            {
+                                "subsection": "7.2 Dispute Resolution Process",
+                                "paragraph": "If you have a dispute regarding a transaction, please follow these steps:",
+                                "steps": [
+                                    "Initial Contact: Contact us through the in-app customer service function, providing transaction details and the reason for the dispute;",
+                                    "Evidence Submission: Provide relevant evidence, such as transaction records, communications with merchants, etc.;",
+                                    "Preliminary Review: We will conduct a preliminary review and respond within 5 business days;",
+                                    "Investigation Phase: Complex cases may require a 45-90 day investigation period;",
+                                    "Mediation: When necessary, we will coordinate with payment networks, merchants, or other relevant parties;",
+                                    "Final Decision: After the investigation is complete, we will notify you of the result and next steps."
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": "compliance-risk",
+                        "title": "8. COMPLIANCE AND RISK CONTROL",
+                        "content": [
+                            {
+                                "subsection": "8.1 Regulatory Compliance",
+                                "paragraph": "NewPay is committed to complying with all applicable laws and regulations, including but not limited to:",
+                                "subItems": [
+                                    "Anti-Money Laundering (AML) and Know-Your-Customer (KYC) regulations;",
+                                    "Counter-Terrorist Financing (CTF) requirements;",
+                                    "Data protection and privacy regulations;",
+                                    "Payment services and electronic money regulations;",
+                                    "Consumer protection regulations;",
+                                    "Applicable sanctions programs."
+                                ]
+                            },
+                            {
+                                "subsection": "8.2 Risk Control Measures",
+                                "paragraph": "To protect platform and user security, we implement the following risk control measures:",
+                                "subItems": [
+                                    "Transaction monitoring systems to identify suspicious activities;",
+                                    "Multi-level identity verification;",
+                                    "Device fingerprinting and behavioral analysis;",
+                                    "Geolocation verification;",
+                                    "Transaction limit and threshold controls;",
+                                    "Real-time fraud detection."
+                                ]
+                            },
+                            {
+                                "subsection": "8.3 Suspicious Activity Handling",
+                                "paragraph": "When we detect suspicious activities, we may take the following measures:",
+                                "subItems": [
+                                    "Suspend or limit account functionality;",
+                                    "Request additional identity verification or transaction proof;",
+                                    "Freeze related funds until the investigation is complete;",
+                                    "Refuse to process suspicious transactions;",
+                                    "Report to regulatory authorities when legally required."
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": "rewards-referral",
+                        "title": "9. USER REWARDS AND REFERRAL PROGRAM",
+                        "content": [
+                            {
+                                "subsection": "9.1 Rewards Program Overview",
+                                "paragraph": "NewPay offers various user reward mechanisms, including but not limited to:",
+                                "subItems": [
+                                    "Spending cashback;",
+                                    "Referral rewards;",
+                                    "Loyalty points;",
+                                    "Limited-time promotional activities."
+                                ]
+                            },
+                            {
+                                "subsection": "9.2 Cashback Rules",
+                                "paragraph": "Spending cashback is subject to the following rules:",
+                                "subItems": [
+                                    "Cashback rates vary by card tier and spending category;",
+                                    "Cashback is issued to your wallet in the form of USDT or platform points;",
+                                    "Certain merchant categories or transaction types may not qualify for cashback;",
+                                    "Cashback is typically issued within 3-5 business days after transaction settlement;",
+                                    "Disputed or refunded transactions do not qualify for cashback, and issued cashback may be withdrawn."
+                                ]
+                            },
+                            {
+                                "subsection": "9.3 Referral Program",
+                                "paragraph": "By referring new users to join NewPay, you can earn rewards:",
+                                "requirements": [
+                                    "New users must register through your unique referral link or code;",
+                                    "New users must complete identity verification and meet specified activity criteria;",
+                                    "Referral rewards may include one-time bonuses and/or ongoing commissions;",
+                                    "Referral rewards will be issued to your wallet after conditions are met."
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": "intellectual-property",
+                        "title": "10. INTELLECTUAL PROPERTY AND BRAND USAGE",
+                        "content": [
+                            {
+                                "subsection": "10.1 Platform Intellectual Property",
+                                "paragraph": "NewPay and its affiliates own all intellectual property related to the platform, including but not limited to:",
+                                "subItems": [
+                                    "Trademarks, service marks, and trade names;",
+                                    "Copyrighted materials (such as text, images, videos, audio);",
+                                    "Patents and patent applications;",
+                                    "Trade secrets and know-how;",
+                                    "Software code and user interfaces;",
+                                    "Domain names and applications."
+                                ]
+                            },
+                            {
+                                "subsection": "10.2 Limited License",
+                                "paragraph": "We grant you a limited, non-exclusive, non-transferable, revocable license solely for personal use of our services. This license does not permit:",
+                                "restrictions": [
+                                    "Commercial use or sublicensing;",
+                                    "Modification or creation of derivative works;",
+                                    "Reverse engineering or decompilation;",
+                                    "Removal of copyright or other proprietary notices;",
+                                    "Use for any illegal or unauthorized purpose."
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": "liability-disclaimers",
+                        "title": "11. LIMITATION OF LIABILITY AND DISCLAIMERS",
+                        "content": [
+                            {
+                                "subsection": "11.1 Services Provided 'As Is'",
+                                "paragraph": "NewPay services are provided 'as is' and 'as available' without warranties of any kind, whether express, implied, or statutory, including but not limited to warranties of merchantability, fitness for a particular purpose, and non-infringement."
+                            },
+                            {
+                                "subsection": "11.2 Limitation of Liability",
+                                "paragraph": "To the maximum extent permitted by law, NEWPAY and its affiliates, directors, employees, and agents shall not be liable for any indirect, incidental, special, punitive, or consequential damages, including but not limited to:",
+                                "subItems": [
+                                    "Loss of profits;",
+                                    "Loss of revenue;",
+                                    "Loss of data;",
+                                    "Loss of goodwill;",
+                                    "Business interruption."
+                                ]
+                            },
+                            {
+                                "subsection": "11.3 Specific Liability Disclaimers",
+                                "paragraph": "We specifically disclaim liability for:",
+                                "subItems": [
+                                    "Actions or omissions of merchants, payment processors, or other third parties;",
+                                    "Internet or communication failures;",
+                                    "Device or software failures;",
+                                    "Digital asset value fluctuations;",
+                                    "Regulatory environment changes;",
+                                    "Market liquidity issues."
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": "dispute-resolution",
+                        "title": "12. DISPUTE RESOLUTION",
+                        "content": [
+                            {
+                                "subsection": "12.1 Governing Law",
+                                "paragraph": "These Terms are governed by the laws of the Hong Kong Special Administrative Region of China, without regard to conflict of law principles. The United Nations Convention on Contracts for the International Sale of Goods does not apply to these Terms."
+                            },
+                            {
+                                "subsection": "12.2 Dispute Resolution Process",
+                                "paragraph": "We encourage resolving disputes through the following progressive process:",
+                                "subItems": [
+                                    "Amicable Negotiation: Any dispute should first be resolved through amicable negotiation. Please contact our customer support team at support@newpay.org.",
+                                    "Mediation: If negotiation fails to resolve the dispute, either party may request mediation under the mediation rules of the Hong Kong International Arbitration Centre (HKIAC).",
+                                    "Arbitration: If mediation fails to resolve the dispute, either party may submit the dispute to the Hong Kong International Arbitration Centre (HKIAC) for final arbitration."
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": "general-provisions-final",
+                        "title": "13. GENERAL PROVISIONS",
+                        "content": [
+                            {
+                                "subsection": "13.1 Entire Agreement",
+                                "paragraph": "These Terms constitute the entire agreement between you and NewPay regarding the use of services and supersede all prior or contemporaneous communications, proposals, and agreements, whether oral or written."
+                            },
+                            {
+                                "subsection": "13.2 Severability",
+                                "paragraph": "If any provision of these Terms is found to be invalid, illegal, or unenforceable, that provision shall be deemed severed from these Terms and shall not affect the validity and enforceability of the remaining provisions."
+                            },
+                            {
+                                "subsection": "13.3 Assignment",
+                                "paragraph": "You may not assign or delegate any rights or obligations under these Terms without our prior written consent. We may freely assign these Terms without your consent."
+                            },
+                            {
+                                "subsection": "13.4 Force Majeure",
+                                "paragraph": "Neither party shall be liable for any delay or failure to perform obligations due to events beyond reasonable control, including but not limited to natural disasters, war, terrorism, riots, embargoes, acts of civil or military authorities, fire, floods, accidents, strikes, epidemics, network failures, or supply shortages."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "contact",
+                        "title": "14. CONTACT US",
+                        "content": [
+                            {
+                                "subsection": "14.1 Contact Information",
+                                "paragraph": "If you have any questions or suggestions regarding these Terms, please contact us through:",
+                                "subItems": [
+                                    "Support: support@newpay.org"
                                 ]
                             }
                         ]
@@ -1716,215 +2244,239 @@
                     {
                         "title": "10. COOKIES AND TRACKING TECHNOLOGIES",
                         "subsections": [
-                          {
-                            "title": "10.1 Cookie Usage",
-                            "content": [
-                              {
-                                "paragraph": "We use cookies and similar technologies (such as web beacons, pixel tags, device identifiers) to provide, improve, and protect our services. Cookies are small text files stored on your device that help us identify your browser or device."
-                              }
-                            ]
-                          },
-                          {
-                            "title": "10.2 Types of Cookies",
-                            "content": [
-                              {
-                                "paragraph": "We use the following types of cookies:",
-                                "table": {
-                                  "headers": ["Cookie Type", "Purpose", "Retention Period", "Necessary"],
-                                  "rows": [
-                                    ["Necessary", "Enable core website functionality", "Session or persistent (up to 2 years)", "Yes"],
-                                    ["Functional cookies", "Remember your preferences and settings", "Persistent (up to 1 year)", "No"],
-                                    ["Analytical cookies", "Help us understand how users use our services", "Persistent (up to 2 years)", "No"],
-                                    ["Marketing cookies", "Used for advertising and content personalization", "Persistent (up to 1 year)", "No"]
-                                  ]
-                                }
-                              }
-                            ]
-                          },
-                          {
-                            "title": "10.3 Third-Party Cookies",
-                            "content": [
-                              {
-                                "paragraph": "Some cookies are set by third parties, including:"
-                              },
-                              {
-                                "subItems": [
-                                  "Analytics service providers (such as Google Analytics);",
-                                  "Social media platforms (such as Facebook, Twitter);",
-                                  "Advertising partners."
+                            {
+                                "title": "10.1 Cookie Usage",
+                                "content": [
+                                    {
+                                        "paragraph": "We use cookies and similar technologies (such as web beacons, pixel tags, device identifiers) to provide, improve, and protect our services. Cookies are small text files stored on your device that help us identify your browser or device."
+                                    }
                                 ]
-                              },
-                              {
-                                "paragraph": "These third parties may use cookies to collect information about your activities on our website and other websites. We do not control these third parties' use of cookies. Please review the relevant third parties' privacy policies for more information."
-                              }
-                            ]
-                          },
-                          {
-                            "title": "10.4 Cookie Management",
-                            "content": [
-                              {
-                                "paragraph": "You can manage cookies through the following methods:",
-                                "subItems": [
-                                  "Browser settings: Most browsers allow you to view, manage, delete, and block cookies;",
-                                  "Cookie banner: When first visiting our website, you can choose to accept or reject non-necessary cookies;",
-                                  "Preference center: You can change your choices at any time through the \"Cookie Preferences\" page on our website."
+                            },
+                            {
+                                "title": "10.2 Types of Cookies",
+                                "content": [
+                                    {
+                                        "paragraph": "We use the following types of cookies:",
+                                        "table": {
+                                            "headers": [
+                                                "Cookie Type",
+                                                "Purpose",
+                                                "Retention Period",
+                                                "Necessary"
+                                            ],
+                                            "rows": [
+                                                [
+                                                    "Necessary",
+                                                    "Enable core website functionality",
+                                                    "Session or persistent (up to 2 years)",
+                                                    "Yes"
+                                                ],
+                                                [
+                                                    "Functional cookies",
+                                                    "Remember your preferences and settings",
+                                                    "Persistent (up to 1 year)",
+                                                    "No"
+                                                ],
+                                                [
+                                                    "Analytical cookies",
+                                                    "Help us understand how users use our services",
+                                                    "Persistent (up to 2 years)",
+                                                    "No"
+                                                ],
+                                                [
+                                                    "Marketing cookies",
+                                                    "Used for advertising and content personalization",
+                                                    "Persistent (up to 1 year)",
+                                                    "No"
+                                                ]
+                                            ]
+                                        }
+                                    }
                                 ]
-                              },
-                              {
-                                "paragraph": "Please note that blocking certain types of cookies may impact your experience and available features when using our services."
-                              }
-                            ]
-                          },
-                          {
-                            "title": "10.5 Do Not Track Signals",
-                            "content": [
-                              {
-                                "paragraph": "Some browsers send \"Do Not Track\" (DNT) signals. As there is currently no industry consensus on how to interpret these signals, we do not currently respond to DNT signals. However, you can use the methods described above to manage your cookie preferences."
-                              }
-                            ]
-                          }
+                            },
+                            {
+                                "title": "10.3 Third-Party Cookies",
+                                "content": [
+                                    {
+                                        "paragraph": "Some cookies are set by third parties, including:"
+                                    },
+                                    {
+                                        "subItems": [
+                                            "Analytics service providers (such as Google Analytics);",
+                                            "Social media platforms (such as Facebook, Twitter);",
+                                            "Advertising partners."
+                                        ]
+                                    },
+                                    {
+                                        "paragraph": "These third parties may use cookies to collect information about your activities on our website and other websites. We do not control these third parties' use of cookies. Please review the relevant third parties' privacy policies for more information."
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "10.4 Cookie Management",
+                                "content": [
+                                    {
+                                        "paragraph": "You can manage cookies through the following methods:",
+                                        "subItems": [
+                                            "Browser settings: Most browsers allow you to view, manage, delete, and block cookies;",
+                                            "Cookie banner: When first visiting our website, you can choose to accept or reject non-necessary cookies;",
+                                            "Preference center: You can change your choices at any time through the \"Cookie Preferences\" page on our website."
+                                        ]
+                                    },
+                                    {
+                                        "paragraph": "Please note that blocking certain types of cookies may impact your experience and available features when using our services."
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "10.5 Do Not Track Signals",
+                                "content": [
+                                    {
+                                        "paragraph": "Some browsers send \"Do Not Track\" (DNT) signals. As there is currently no industry consensus on how to interpret these signals, we do not currently respond to DNT signals. However, you can use the methods described above to manage your cookie preferences."
+                                    }
+                                ]
+                            }
                         ]
-                      },
-                      {
+                    },
+                    {
                         "title": "11. SUPPLEMENTARY PRIVACY RIGHTS FOR SPECIFIC REGIONS",
                         "subsections": [
-                          {
-                            "title": "11.1 European Economic Area (EEA), United Kingdom, and Switzerland Users",
-                            "content": [
-                              {
-                                "paragraph": "If you are located in the European Economic Area, United Kingdom, or Switzerland, in addition to the rights described elsewhere in this policy, you also have:",
-                                "subItems": [
-                                  "The right to lodge a complaint with your country/region's data protection authority;",
-                                  "The right to seek compensation for material or non-material damage suffered due to our violation of the GDPR in certain circumstances;",
-                                  "The right to know the logic involved in automated decision-making and its potential impact on you."
+                            {
+                                "title": "11.1 European Economic Area (EEA), United Kingdom, and Switzerland Users",
+                                "content": [
+                                    {
+                                        "paragraph": "If you are located in the European Economic Area, United Kingdom, or Switzerland, in addition to the rights described elsewhere in this policy, you also have:",
+                                        "subItems": [
+                                            "The right to lodge a complaint with your country/region's data protection authority;",
+                                            "The right to seek compensation for material or non-material damage suffered due to our violation of the GDPR in certain circumstances;",
+                                            "The right to know the logic involved in automated decision-making and its potential impact on you."
+                                        ]
+                                    }
                                 ]
-                              }
-                            ]
-                          },
-                          {
-                            "title": "11.2 California Users",
-                            "content": [
-                              {
-                                "paragraph": "Under the California Consumer Privacy Act (CCPA) and California Privacy Rights Act (CPRA), California residents have additional rights, including:",
-                                "subItems": [
-                                  "The right to know what personal information we have collected, used, disclosed, or sold in the past 12 months;",
-                                  "The right to request deletion of certain personal information (subject to certain exceptions);",
-                                  "The right to opt out of the \"sale\" or \"sharing\" of personal information;",
-                                  "The right not to be discriminated against for exercising privacy rights."
+                            },
+                            {
+                                "title": "11.2 California Users",
+                                "content": [
+                                    {
+                                        "paragraph": "Under the California Consumer Privacy Act (CCPA) and California Privacy Rights Act (CPRA), California residents have additional rights, including:",
+                                        "subItems": [
+                                            "The right to know what personal information we have collected, used, disclosed, or sold in the past 12 months;",
+                                            "The right to request deletion of certain personal information (subject to certain exceptions);",
+                                            "The right to opt out of the \"sale\" or \"sharing\" of personal information;",
+                                            "The right not to be discriminated against for exercising privacy rights."
+                                        ]
+                                    },
+                                    {
+                                        "paragraph": "We do not \"sell\" your personal information but may \"share\" certain information with third parties for targeted advertising. You can opt out by clicking the \"Do Not Sell or Share My Personal Information\" link at the bottom of our website."
+                                    }
                                 ]
-                              },
-                              {
-                                "paragraph": "We do not \"sell\" your personal information but may \"share\" certain information with third parties for targeted advertising. You can opt out by clicking the \"Do Not Sell or Share My Personal Information\" link at the bottom of our website."
-                              }
-                            ]
-                          },
-                          {
-                            "title": "11.3 Users in Other Regions",
-                            "content": [
-                              {
-                                "paragraph": "We are committed to respecting the privacy rights of all users, regardless of their location. If the laws in your region grant you specific data protection rights, we will respect those rights. Please contact our Data Protection Officer to learn about specific rights in your region."
-                              }
-                            ]
-                          }
+                            },
+                            {
+                                "title": "11.3 Users in Other Regions",
+                                "content": [
+                                    {
+                                        "paragraph": "We are committed to respecting the privacy rights of all users, regardless of their location. If the laws in your region grant you specific data protection rights, we will respect those rights. Please contact our Data Protection Officer to learn about specific rights in your region."
+                                    }
+                                ]
+                            }
                         ]
-                      },
-                      {
+                    },
+                    {
                         "title": "12. DATA PROTECTION CONTACTS",
                         "subsections": [
-                          {
-                            "title": "12.1 Data Protection Officer",
-                            "content": [
-                              {
-                                "paragraph": "We have appointed a Data Protection Officer (DPO) to oversee our data protection strategies and compliance. You can contact our DPO through:",
-                                "subItems": [
-                                  "Email: support@newpay.org"
+                            {
+                                "title": "12.1 Data Protection Officer",
+                                "content": [
+                                    {
+                                        "paragraph": "We have appointed a Data Protection Officer (DPO) to oversee our data protection strategies and compliance. You can contact our DPO through:",
+                                        "subItems": [
+                                            "Email: support@newpay.org"
+                                        ]
+                                    }
                                 ]
-                              }
-                            ]
-                          },
-                          {
-                            "title": "12.2 Other Contact Methods",
-                            "content": [
-                              {
-                                "paragraph": "For general privacy inquiries or to exercise data rights:",
-                                "subItems": [
-                                  "Email: support@newpay.org"
+                            },
+                            {
+                                "title": "12.2 Other Contact Methods",
+                                "content": [
+                                    {
+                                        "paragraph": "For general privacy inquiries or to exercise data rights:",
+                                        "subItems": [
+                                            "Email: support@newpay.org"
+                                        ]
+                                    }
                                 ]
-                              }
-                            ]
-                          },
-                          {
-                            "title": "12.3 Response Commitment",
-                            "content": [
-                              {
-                                "paragraph": "We commit to:",
-                                "subItems": [
-                                  "Acknowledging receipt of your privacy-related inquiry within 2 business days;",
-                                  "Providing a substantive response within 15 business days;",
-                                  "Maintaining transparent communication and notifying you in advance if we need more time."
+                            },
+                            {
+                                "title": "12.3 Response Commitment",
+                                "content": [
+                                    {
+                                        "paragraph": "We commit to:",
+                                        "subItems": [
+                                            "Acknowledging receipt of your privacy-related inquiry within 2 business days;",
+                                            "Providing a substantive response within 15 business days;",
+                                            "Maintaining transparent communication and notifying you in advance if we need more time."
+                                        ]
+                                    }
                                 ]
-                              }
-                            ]
-                          }
+                            }
                         ]
-                      },
-                      {
+                    },
+                    {
                         "title": "13. POLICY UPDATES",
                         "subsections": [
-                          {
-                            "title": "13.1 Update Mechanism",
-                            "content": [
-                              {
-                                "paragraph": "We may update this Privacy Policy from time to time to reflect:",
-                                "subItems": [
-                                  "Changes in laws and regulations;",
-                                  "New business practices or service features;",
-                                  "User feedback and suggestions;",
-                                  "Evolution of security best practices."
+                            {
+                                "title": "13.1 Update Mechanism",
+                                "content": [
+                                    {
+                                        "paragraph": "We may update this Privacy Policy from time to time to reflect:",
+                                        "subItems": [
+                                            "Changes in laws and regulations;",
+                                            "New business practices or service features;",
+                                            "User feedback and suggestions;",
+                                            "Evolution of security best practices."
+                                        ]
+                                    }
                                 ]
-                              }
-                            ]
-                          },
-                          {
-                            "title": "13.2 Notification Methods",
-                            "content": [
-                              {
-                                "paragraph": "When we make significant changes to this policy, we will:",
-                                "subItems": [
-                                  "Notify you via email or in-app notification at least 30 days before implementing the changes;",
-                                  "Highlight the changes on our website and in our application;",
-                                  "Provide a summary of policy changes, highlighting important modifications;",
-                                  "Update the \"Last Updated\" date at the top of the policy."
+                            },
+                            {
+                                "title": "13.2 Notification Methods",
+                                "content": [
+                                    {
+                                        "paragraph": "When we make significant changes to this policy, we will:",
+                                        "subItems": [
+                                            "Notify you via email or in-app notification at least 30 days before implementing the changes;",
+                                            "Highlight the changes on our website and in our application;",
+                                            "Provide a summary of policy changes, highlighting important modifications;",
+                                            "Update the \"Last Updated\" date at the top of the policy."
+                                        ]
+                                    },
+                                    {
+                                        "paragraph": "For minor changes (such as clarifications or error corrections), we may not provide separate notification but will update the \"Last Updated\" date."
+                                    }
                                 ]
-                              },
-                              {
-                                "paragraph": "For minor changes (such as clarifications or error corrections), we may not provide separate notification but will update the \"Last Updated\" date."
-                              }
-                            ]
-                          },
-                          {
-                            "title": "13.3 Effect of Continued Use",
-                            "content": [
-                              {
-                                "paragraph": "Continuing to use our services after policy updates take effect indicates your acceptance of the revised policy. If you do not agree with the new Privacy Policy, you should stop using our services and close your account."
-                              }
-                            ]
-                          }
+                            },
+                            {
+                                "title": "13.3 Effect of Continued Use",
+                                "content": [
+                                    {
+                                        "paragraph": "Continuing to use our services after policy updates take effect indicates your acceptance of the revised policy. If you do not agree with the new Privacy Policy, you should stop using our services and close your account."
+                                    }
+                                ]
+                            }
                         ]
-                      },
-                      {
+                    },
+                    {
                         "title": "14. CONCLUSION",
                         "subsections": [
-                          {
-                            "content": [
-                              {
-                                "paragraph": "Protecting your privacy is our top priority. We are committed to handling your personal data in a transparent, responsible, and respectful manner. If you have any questions, comments, or suggestions regarding this Privacy Policy, please do not hesitate to contact us. We value your feedback and will continuously strive to improve our privacy practices."
-                              }
-                            ]
-                          }
+                            {
+                                "content": [
+                                    {
+                                        "paragraph": "Protecting your privacy is our top priority. We are committed to handling your personal data in a transparent, responsible, and respectful manner. If you have any questions, comments, or suggestions regarding this Privacy Policy, please do not hesitate to contact us. We value your feedback and will continuously strive to improve our privacy practices."
+                                    }
+                                ]
+                            }
                         ]
-                      }
-                      
+                    }
                 ]
             },
             "commission": {
@@ -2124,51 +2676,175 @@
                 "hasChildren": true,
                 "children": [
                     {
-                        "id": "custodian-account",
-                        "label": "A. Custodian Account",
-                        "level": 1
-                    },
-                    {
-                        "id": "newpay-card",
-                        "label": "B. NewPay Card",
+                        "id": "general-1",
+                        "label": "1. GENERAL PROVISIONS",
                         "level": 1,
                         "hasChildren": true,
                         "children": [
                             {
-                                "id": "singapore-cards-non-resident",
-                                "label": "Singapore cards: Non-Singapore Resident Cardholders",
+                                "id": "general-1-1",
+                                "label": "1.1 About Us",
                                 "level": 2
                             },
                             {
-                                "id": "hongkong-card",
-                                "label": "Hong Kong cards: General",
+                                "id": "general-1-2",
+                                "label": "1.2 Definitions",
                                 "level": 2
                             },
                             {
-                                "id": "singapore-card-resident",
-                                "label": "Singapore card: Singapore Resident Cardholders",
+                                "id": "general-1-3",
+                                "label": "1.3 Acceptance of Terms",
+                                "level": 2
+                            },
+                            {
+                                "id": "general-1-4",
+                                "label": "1.4 Amendments to Terms",
                                 "level": 2
                             }
                         ]
                     },
                     {
-                        "id": "swap",
-                        "label": "C. Swap Transactions",
+                        "id": "general-2",
+                        "label": "2. SERVICE DESCRIPTION",
+                        "level": 1,
+                        "hasChildren": true,
+                        "children": [
+                            {
+                                "id": "general-2-1",
+                                "label": "2.1 Platform Positioning",
+                                "level": 2
+                            },
+                            {
+                                "id": "general-2-2",
+                                "label": "2.2 Main Services",
+                                "level": 2
+                            },
+                            {
+                                "id": "general-2-3",
+                                "label": "2.3 Service Availability",
+                                "level": 2
+                            },
+                            {
+                                "id": "general-2-4",
+                                "label": "2.4 Service Restrictions",
+                                "level": 2
+                            }
+                        ]
+                    },
+                    {
+                        "id": "general-3",
+                        "label": "3. ACCOUNT REGISTRATION AND MANAGEMENT",
+                        "level": 1,
+                        "hasChildren": true,
+                        "children": [
+                            {
+                                "id": "general-3-1",
+                                "label": "3.1 Registration Eligibility",
+                                "level": 2
+                            },
+                            {
+                                "id": "general-3-2",
+                                "label": "3.2 Registration Process",
+                                "level": 2
+                            },
+                            {
+                                "id": "general-3-3",
+                                "label": "3.3 Identity Verification (KYC) Requirements",
+                                "level": 2
+                            },
+                            {
+                                "id": "general-3-4",
+                                "label": "3.4 Account Security",
+                                "level": 2
+                            },
+                            {
+                                "id": "general-3-5",
+                                "label": "3.5 Account Freezing and Termination",
+                                "level": 2
+                            }
+                        ]
+                    },
+                    {
+                        "id": "general-4",
+                        "label": "4. FUND MANAGEMENT AND TRANSACTIONS",
+                        "level": 1,
+                        "hasChildren": true,
+                        "children": [
+                            {
+                                "id": "general-4-1",
+                                "label": "4.1 Account Structure",
+                                "level": 2
+                            },
+                            {
+                                "id": "general-4-2",
+                                "label": "4.2 Deposits",
+                                "level": 2
+                            },
+                            {
+                                "id": "general-4-3",
+                                "label": "4.3 Card Funding",
+                                "level": 2
+                            },
+                            {
+                                "id": "general-4-4",
+                                "label": "4.4 Payments and Spending",
+                                "level": 2
+                            },
+                            {
+                                "id": "general-4-5",
+                                "label": "4.5 Withdrawals",
+                                "level": 2
+                            }
+                        ]
+                    },
+                    {
+                        "id": "general-5",
+                        "label": "5. FEES AND PRICING",
                         "level": 1
                     },
                     {
-                        "id": "custody",
-                        "label": "D. Custodian Wallet, Self-Custody Wallet and Smart Contract Vault, and Virtual Account",
+                        "id": "general-6",
+                        "label": "6. CARD USAGE RULES",
                         "level": 1
                     },
                     {
-                        "id": "other",
-                        "label": "E. Other Third-Party Services",
+                        "id": "general-7",
+                        "label": "7. REFUNDS AND DISPUTE RESOLUTION",
                         "level": 1
                     },
                     {
-                        "id": "virtual-assets",
-                        "label": "F. Virtual Assets Loan Services",
+                        "id": "general-8",
+                        "label": "8. COMPLIANCE AND RISK CONTROL",
+                        "level": 1
+                    },
+                    {
+                        "id": "general-9",
+                        "label": "9. USER REWARDS AND REFERRAL PROGRAM",
+                        "level": 1
+                    },
+                    {
+                        "id": "general-10",
+                        "label": "10. INTELLECTUAL PROPERTY AND BRAND USAGE",
+                        "level": 1
+                    },
+                    {
+                        "id": "general-11",
+                        "label": "11. LIMITATION OF LIABILITY AND DISCLAIMERS",
+                        "level": 1
+                    },
+                    {
+                        "id": "general-12",
+                        "label": "12. DISPUTE RESOLUTION",
+                        "level": 1
+                    },
+                    {
+                        "id": "general-13",
+                        "label": "13. GENERAL PROVISIONS",
+                        "level": 1
+                    },
+                    {
+                        "id": "general-14",
+                        "label": "14. CONTACT US",
                         "level": 1
                     }
                 ]
