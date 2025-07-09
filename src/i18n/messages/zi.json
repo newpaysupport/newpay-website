@@ -993,7 +993,8 @@
                                     "Posting a notice in a prominent location on the platform;",
                                     "Sending an email to your registered email address;",
                                     "Sending an in-app push notification."
-                                ]
+                                ],
+                                "paragraph2": "Your continued use of our services after the Terms have been modified indicates your acceptance of the modified Terms. If you do not agree with the modifications, you should immediately cease using our services."
                             }
                         ]
                     },
@@ -1011,29 +1012,56 @@
                                 "services": [
                                     {
                                         "name": "2.2.1 Virtual Cards",
-                                        "description": "Instantly issued digital payment cards that can be linked to Apple Pay, Google Pay, and other mobile payment tools; Support for online payments and authorized offline merchant transactions; Multiple card tiers with different limits and features."
+                                        "description": [
+                                            "Instantly issued digital payment cards that can be linked to Apple Pay, Google Pay, and other mobile payment tools;",
+                                            "Support for online payments and authorized offline merchant transactions;",
+                                            "Multiple card tiers with different limits and features."
+                                        ]
                                     },
                                     {
                                         "name": "2.2.2 Physical Cards",
-                                        "description": "Physical plastic cards usable at Visa/Mastercard-supported POS terminals and ATMs worldwide; Linked to your NewPay account, sharing the card balance; Equipped with chip and contactless payment functionality."
+                                        "description": [
+                                            "Physical plastic cards usable at Visa/Mastercard-supported POS terminals and ATMs worldwide;",
+                                            "Linked to your NewPay account, sharing the card balance;",
+                                            "Equipped with chip and contactless payment functionality."
+                                        ]
                                     },
                                     {
                                         "name": "2.2.3 Gift Cards",
-                                        "description": "Transferable prepaid cards that can be sent to other NewPay users; Single-use or rechargeable; Support for customized amounts and personalized designs."
+                                        "description": [
+                                            "Transferable prepaid cards that can be sent to other NewPay users;",
+                                            "Single-use or rechargeable;",
+                                            "Support for customized amounts and personalized designs."
+                                        ]
                                     },
                                     {
                                         "name": "2.2.4 Wallet Services",
-                                        "description": "Storage of supported digital assets including USDT, USDC, etc.; Deposit, withdrawal, and asset conversion functionality; Real-time balance and transaction history display."
+                                        "description": [
+                                            "Storage of supported digital assets including USDT, USDC, etc.;",
+                                            "Deposit, withdrawal, and asset conversion functionality; ",
+                                            "Real-time balance and transaction history display."
+                                        ]
                                     },
                                     {
                                         "name": "2.2.5 Other Services",
-                                        "description": "Transaction monitoring and security alerts; Spending analysis and reports; Customer support and dispute resolution; User referral and reward programs."
+                                        "description": [
+                                            "Transaction monitoring and security alerts;",
+                                            "Spending analysis and reports;",
+                                            "Customer support and dispute resolution; User referral and reward programs."
+                                        ]
                                     }
                                 ]
                             },
                             {
                                 "subsection": "2.3 Service Availability",
-                                "paragraph": "We strive to provide continuous, stable services but do not guarantee that services will be uninterrupted or error-free. Services may be affected by: System maintenance and upgrades; Network or device failures; Force majeure events; Blockchain network congestion or failures; Payment network or banking system issues."
+                                "paragraph": "We strive to provide continuous, stable services but do not guarantee that services will be uninterrupted or error-free. Services may be affected by:",
+                                "restrictions": [
+                                    "System maintenance and upgrades; Network or device failures;",
+                                    "Force majeure events;",
+                                    "Blockchain network congestion or failures;",
+                                    "Payment network or banking system issues."
+                                ],
+                                "paragraph2": "For planned system maintenance, we will notify you in advance. For unexpected interruptions, we will restore services as quickly as possible and promptly notify affected users."
                             },
                             {
                                 "subsection": "2.4 Service Restrictions",
@@ -1043,7 +1071,8 @@
                                     "United States;",
                                     "Countries/regions under international sanctions (such as North Korea, Iran, Syria, etc.);",
                                     "Other regions where providing such services is prohibited by laws and regulations."
-                                ]
+                                ],
+                                "paragraph2": "This restriction list may be updated at any time. It is your responsibility to ensure that you are legally using our services in your region."
                             }
                         ]
                     },
@@ -1079,18 +1108,20 @@
                                     "Completing facial recognition verification;",
                                     "Providing proof of address (applicable for certain service levels);",
                                     "Answering other identity-related questions."
-                                ]
+                                ],
+                                "paragraph2": "Accounts that have not completed KYC will have limited functionality and will not be able to apply for cards, withdraw funds, or make payments, although they may deposit funds in advance."
                             },
                             {
                                 "subsection": "3.4 Account Security",
                                 "paragraph": "You are responsible for maintaining the security of your account, including:",
-                                "responsibilities": [
+                                "requirements": [
                                     "Using strong passwords and changing them regularly;",
                                     "Enabling two-factor authentication (2FA);",
                                     "Protecting your login credentials and private keys;",
                                     "Ensuring the security of your devices and software;",
                                     "Promptly reporting suspicious activities."
-                                ]
+                                ],
+                                "paragraph2": "If you discover unauthorized account activity, please immediately contact our customer support team."
                             },
                             {
                                 "subsection": "3.5 Account Freezing and Termination",
@@ -1102,7 +1133,19 @@
                                     "Long-term inactivity (no transactions for over 12 months);",
                                     "At the request of regulatory authorities;",
                                     "Other reasonable causes."
-                                ]
+                                ],
+                                "paragraph2": "Accounts that have not completed KYC will have limited functionality and will not be able to apply for cards, withdraw funds, or make payments, although they may deposit funds in advance."
+                            },
+                            {
+                                "subsection": "3.6 Account Closure",
+                                "paragraph": "You may request to close your NewPay account at any time. Before closure, you need to:",
+                                "situations": [
+                                    "Transfer all card balances back to your wallet balance;",
+                                    "Withdraw or transfer out all wallet balances;",
+                                    "Resolve any pending transactions or disputes;",
+                                    "Complete identity verification (if not already done)."
+                                ],
+                                "paragraph2": "After account closure, we will retain certain information in accordance with applicable laws and our data retention policy. Please refer to our Privacy Policy for details."
                             }
                         ]
                     },
@@ -1116,7 +1159,8 @@
                                 "components": [
                                     "Wallet Balance: Stores your digital assets (USDT, USDC, etc.);",
                                     "Card Balance: Funds transferred from your wallet balance for use with payment cards."
-                                ]
+                                ],
+                                "paragraph2": "This dual-layer structure allows you to better control spending and enhance security."
                             },
                             {
                                 "subsection": "4.2 Deposits",
@@ -1128,12 +1172,33 @@
                                 ]
                             },
                             {
+                                "paragraph": "When making deposits, please ensure:",
+                                "methods": [
+                                    "You use the correct wallet address and network;",
+                                    "You comply with minimum and maximum deposit limits;",
+                                    "You consider potential confirmation delays due to network congestion."
+                                ]
+                            },
+                            {
                                 "subsection": "4.3 Card Funding",
-                                "paragraph": "To use payment cards, you need to transfer funds from your wallet balance to your card balance: Select the target card in the application; Enter the funding amount; Confirm the transfer."
+                                "paragraph": "To use payment cards, you need to transfer funds from your wallet balance to your card balance:",
+                                "steps": [
+                                    "Select the target card in the application;",
+                                    "Enter the funding amount;",
+                                    "Confirm the transfer."
+                                ],
+                                "paragraph2": "Card funding is typically instantaneous but may experience brief delays during system maintenance or peak periods."
                             },
                             {
                                 "subsection": "4.4 Payments and Spending",
-                                "paragraph": "When using NewPay cards for spending: Ensure sufficient card balance; Comply with daily/monthly transaction limits for the card; Understand usage restrictions for different merchant categories; Be aware of potential additional fees for cross-border transactions."
+                                "paragraph": "When using NewPay cards for spending:",
+                                "methods": [
+                                    "Ensure sufficient card balance;",
+                                    "Comply with daily/monthly transaction limits for the card;",
+                                    "Understand usage restrictions for different merchant categories;",
+                                    "Be aware of potential additional fees for cross-border transactions."
+                                ],
+                                "paragraph2": "Certain high-risk merchant categories may be restricted, including but not limited to gambling, adult content, cryptocurrency exchanges, etc"
                             },
                             {
                                 "subsection": "4.5 Withdrawals",
@@ -1143,6 +1208,36 @@
                                     "Cash withdrawals at ATMs using physical cards (if applicable);",
                                     "Conversion to other supported digital assets."
                                 ]
+                            },
+                            {
+                                "paragraph": "Withdrawals may be subject to:",
+                                "methods": [
+                                    "Daily/monthly withdrawal limits",
+                                    "Minimum withdrawal amount requirements;",
+                                    "Network fees;",
+                                    "Identity verification level restrictions."
+                                ]
+                            },
+                            {
+                                "subsection": "4.6 Transaction Confirmation and Irreversibility",
+                                "paragraph": "Please note:",
+                                "methods": [
+                                    "Blockchain transactions are typically irreversible once confirmed;",
+                                    "Card transactions may be subject to payment network rules;",
+                                    "Incorrect wallet addresses or network selections may result in permanent loss of funds."
+                                ],
+                                "paragraph2": "We strongly recommend carefully verifying all information before conducting any transaction."
+                            },
+                            {
+                                "subsection": "4.7 Transaction Monitoring",
+                                "paragraph": "To comply with regulatory requirements and protect platform security, we monitor transaction activities. Behaviors that may trigger review include:",
+                                "methods": [
+                                    "Large or frequent transactions within a short period;",
+                                    "Transactions related to high-risk regions or entities;",
+                                    "Unusual transaction patterns or usage behavior;",
+                                    "Activities potentially violating our policies."
+                                ],
+                                "paragraph2": "If a transaction is flagged as suspicious, we may suspend processing and request additional information from you."
                             }
                         ]
                     },
@@ -1220,7 +1315,13 @@
                             },
                             {
                                 "subsection": "5.2 Fee Changes",
-                                "paragraph": "We reserve the right to adjust fees. Fee changes will be notified through: Platform announcements; Email notifications; In-app pushes. Significant fee changes will be announced 3 days in advance."
+                                "paragraph": "We reserve the right to adjust fees. Fee changes will be notified through:",
+                                "fees": [
+                                    "Platform announcements;",
+                                    "Email notifications;",
+                                    "In-app pushes. Significant fee changes will be announced 3 days in advance."
+                                ],
+                                "paragraph2": "Significant fee changes will be announced 3 days in advance. Continued use of services indicates acceptance of the new fee standards."
                             },
                             {
                                 "subsection": "5.3 Third-Party Fees",
@@ -1231,11 +1332,18 @@
                                     "Currency exchange fees;",
                                     "Data fees from telecommunications operators;",
                                     "Fees charged by ATM operators."
-                                ]
+                                ],
+                                "paragraph2": "These fees are beyond our control and may change without notice."
                             },
                             {
                                 "subsection": "5.4 Tax Responsibilities",
-                                "paragraph": "You are responsible for determining and paying all applicable taxes related to using our services, including but not limited to: Capital gains tax that may arise from digital asset transactions; Value-added tax or sales tax; Income tax; Other applicable taxes."
+                                "paragraph": "You are responsible for determining and paying all applicable taxes related to using our services, including but not limited to:",
+                                "fees": [
+                                    "Capital gains tax that may arise from digital asset transactions;",
+                                    "Value-added tax or sales tax; Income tax;",
+                                    "Other applicable taxes."
+                                ],
+                                "paragraph2": "NewPay does not provide tax advice and recommends consulting professional tax advisors to understand your specific tax obligations."
                             }
                         ]
                     },
@@ -1245,7 +1353,12 @@
                         "content": [
                             {
                                 "subsection": "6.1 Card Activation and Validity",
-                                "paragraph": "Virtual cards are activated immediately upon successful application; Physical cards need to be activated through the application after receipt; Cards typically have a validity period of 2-4 years, with the specific date printed on the card or displayed in the application."
+                                "subItems": [
+                                    "Virtual cards are activated immediately upon successful application;",
+                                    "Physical cards need to be activated through the application after receipt;",
+                                    "Cards typically have a validity period of 2-4 years, with the specific date printed on the card or displayed in the application;",
+                                    "Before expiration, we will automatically renew your card (unless you instruct otherwise)."
+                                ]
                             },
                             {
                                 "subsection": "6.2 Card Usage Limitations",
@@ -1255,7 +1368,8 @@
                                     "Single transaction amount limits;",
                                     "Specific merchant category restrictions;",
                                     "Geographical restrictions (sanctioned countries/regions)."
-                                ]
+                                ],
+                                "paragraph2": "These limitations may be adjusted due to regulatory requirements, risk assessments, or your usage history."
                             },
                             {
                                 "subsection": "6.3 Prohibited Card Uses",
@@ -1268,7 +1382,8 @@
                                     "Purchasing illegal goods or services;",
                                     "Unauthorized commercial activities;",
                                     "Fraud or abuse of platform policies."
-                                ]
+                                ],
+                                "paragraph2": "Violating these provisions may result in account freezing, termination, and potential legal liability."
                             },
                             {
                                 "subsection": "6.4 Card Security",
@@ -1301,10 +1416,34 @@
                             {
                                 "subsection": "7.1 Refund Policy",
                                 "paragraph": "NewPay does not directly provide refund services. Refund processing depends on the transaction type:",
-                                "subItems": [
-                                    "7.1.1 Merchant Refunds : When a merchant initiates a refund: The refund amount will be returned to the original card balance; Processing time is typically 5-15 business days, depending on the merchant and payment network; Refunds may not include currency conversion fees or other fees from the original transaction.",
-                                    "7.1.2 Platform Fee Refunds : In special circumstances, we may refund fees charged by the platform: Technical errors resulting in duplicate charges; Other situations we deem reasonable.",
-                                    "7.1.3 Non-Refundable Situations : The following situations are typically non-refundable: User operational errors (such as entering incorrect addresses); Completed blockchain transactions; Gift card purchases; Account freezing or termination due to Terms violations."
+                                "refund": [
+                                    {
+                                        "type": "7.1.1 Merchant Refunds:",
+                                        "paragraph": "When a merchant initiates a refund:",
+                                        "description-refund": [
+                                            "The refund amount will be returned to the original card balance;",
+                                            "Processing time is typically 5-15 business days, depending on the merchant and payment network;",
+                                            "Refunds may not include currency conversion fees or other fees from the original transaction."
+                                        ]
+                                    },
+                                    {
+                                        "type": "7.1.2 Platform Fee Refunds:",
+                                        "paragraph": "In special circumstances, we may refund fees charged by the platform:",
+                                        "description-refund": [
+                                            "Technical errors resulting in duplicate charges;",
+                                            "Other situations we deem reasonable."
+                                        ]
+                                    },
+                                    {
+                                        "type": "7.1.3 Non-Refundable Situations:",
+                                        "paragraph": "The following situations are typically non-refundable:",
+                                        "description-refund": [
+                                            "User operational errors (such as entering incorrect addresses);",
+                                            "Completed blockchain transactions;",
+                                            "Gift card purchases;",
+                                            "Account freezing or termination due to Terms violations."
+                                        ]
+                                    }
                                 ]
                             },
                             {
@@ -1317,6 +1456,27 @@
                                     "Investigation Phase: Complex cases may require a 45-90 day investigation period;",
                                     "Mediation: When necessary, we will coordinate with payment networks, merchants, or other relevant parties;",
                                     "Final Decision: After the investigation is complete, we will notify you of the result and next steps."
+                                ]
+                            },
+                            {
+                                "subsection": "7.3 Fraudulent Transactions",
+                                "paragraph": "If you discover unauthorized transactions:",
+                                "subItems": [
+                                    "Immediately freeze the relevant card through the application;",
+                                    "Contact customer support within 12 hours of discovery;",
+                                    "Provide detailed transaction information and possible evidence of fraud;",
+                                    "Cooperate with our investigation, which may require submitting police reports or other documents."
+                                ],
+                                "paragraph2": "For confirmed fraudulent transactions, we will process refunds according to applicable laws and payment network rules."
+                            },
+                            {
+                                "subsection": "7.4 Liability Limitations",
+                                "paragraph": "In dispute and fraud cases, your liability may be affected by:",
+                                "subItems": [
+                                    "The timeliness of reporting unauthorized transactions;",
+                                    "Compliance with account and card security regulations;",
+                                    "Consumer protection provisions under applicable laws;",
+                                    "Dispute resolution rules of payment networks."
                                 ]
                             }
                         ]
@@ -1335,7 +1495,8 @@
                                     "Payment services and electronic money regulations;",
                                     "Consumer protection regulations;",
                                     "Applicable sanctions programs."
-                                ]
+                                ],
+                                "paragraph2": "We may adjust service content, availability, or usage conditions based on regulatory requirements."
                             },
                             {
                                 "subsection": "8.2 Risk Control Measures",
@@ -1347,7 +1508,8 @@
                                     "Geolocation verification;",
                                     "Transaction limit and threshold controls;",
                                     "Real-time fraud detection."
-                                ]
+                                ],
+                                "paragraph2": "These measures may result in some transactions being delayed or rejected, especially when flagged as high-risk by the system."
                             },
                             {
                                 "subsection": "8.3 Suspicious Activity Handling",
@@ -1358,6 +1520,28 @@
                                     "Freeze related funds until the investigation is complete;",
                                     "Refuse to process suspicious transactions;",
                                     "Report to regulatory authorities when legally required."
+                                ],
+                                "paragraph2": "We will notify you of these measures and their reasons to the extent reasonably feasible."
+                            },
+                            {
+                                "subsection": "8.4 Sanctions Compliance",
+                                "paragraph": "We do not provide services to individuals, entities, or regions subject to international sanctions. This includes but is not limited to:",
+                                "subItems": [
+                                    "Individuals or entities on the U.S. Department of the Treasury's Office of Foreign Assets Control (OFAC) sanctions lists;",
+                                    "Subjects sanctioned by the United Nations, European Union, or other international organizations;",
+                                    "Residents of comprehensively sanctioned countries/regions."
+                                ],
+                                "paragraph2": "We regularly screen users and transactions to ensure sanctions compliance."
+                            },
+                            {
+                                "subsection": "8.5 User Compliance Responsibilities",
+                                "paragraph": "As a user, you are responsible for:",
+                                "subItems": [
+                                    "Providing true and accurate identity information;",
+                                    "Using our services only for legal purposes;",
+                                    "Complying with laws and regulations in your region;",
+                                    "Promptly responding to our compliance investigation requests;",
+                                    "Not using our services to circumvent any legal restrictions or sanctions."
                                 ]
                             }
                         ]
@@ -1374,7 +1558,8 @@
                                     "Referral rewards;",
                                     "Loyalty points;",
                                     "Limited-time promotional activities."
-                                ]
+                                ],
+                                "paragraph2": "Specific reward program details will be published in-app and on the official website and may be updated periodically."
                             },
                             {
                                 "subsection": "9.2 Cashback Rules",
@@ -1396,6 +1581,21 @@
                                     "Referral rewards may include one-time bonuses and/or ongoing commissions;",
                                     "Referral rewards will be issued to your wallet after conditions are met."
                                 ]
+                            },
+                            {
+                                "subsection": "9.4 Reward Limitations",
+                                "paragraph": "Reward programs are subject to the following limitations:",
+                                "requirements": [
+                                    "We reserve the right to adjust or terminate any reward program with advance notice;",
+                                    "Abusive behavior (such as fake transactions, multiple accounts) will result in reward cancellation and potential account penalties;",
+                                    "Rewards may have caps (such as maximum monthly cashback amount);",
+                                    "Users in certain regions may not be eligible for specific reward programs;",
+                                    "Employees and affiliates may not be eligible for rewards."
+                                ]
+                            },
+                            {
+                                "subsection": "9.5 Tax Implications",
+                                "paragraph": "You are responsible for understanding and fulfilling tax obligations related to rewards. In some jurisdictions, rewards may be considered taxable income. NewPay does not provide tax advice and recommends consulting professional tax advisors."
                             }
                         ]
                     },
@@ -1413,7 +1613,8 @@
                                     "Trade secrets and know-how;",
                                     "Software code and user interfaces;",
                                     "Domain names and applications."
-                                ]
+                                ],
+                                "paragraph2": "You may not use, copy, modify, or distribute these materials without our express written permission."
                             },
                             {
                                 "subsection": "10.2 Limited License",
@@ -1425,6 +1626,29 @@
                                     "Removal of copyright or other proprietary notices;",
                                     "Use for any illegal or unauthorized purpose."
                                 ]
+                            },
+                            {
+                                "subsection": "10.3 User Content",
+                                "paragraph": "For content you submit or share through the platform (such as feedback, comments):",
+                                "restrictions": [
+                                    "You retain ownership of such content;",
+                                    "You grant us a worldwide, royalty-free, perpetual, irrevocable license to use, copy, modify, and distribute such content for providing and improving services;",
+                                    "Reverse engineering or decompilation;",
+                                    "You confirm that the content does not infringe on any third-party rights."
+                                ]
+                            },
+                            {
+                                "subsection": "10.4 Brand Usage Restrictions",
+                                "paragraph": "Without our prior written permission, you may not:",
+                                "restrictions": [
+                                    "Use NewPay's name, logo, or trademarks;",
+                                    "Imply a relationship with or endorsement by NewPay;",
+                                    "Use our brand elements in any advertising, promotional, or commercial materials."
+                                ]
+                            },
+                            {
+                                "subsection": "10.5 Third-Party Intellectual Property",
+                                "paragraph": "Our services may contain third-party intellectual property, such as Visa and Mastercard logos. This content is protected by the terms and rights of their respective owners. We do not grant you any rights to use these third-party intellectual properties."
                             }
                         ]
                     },
@@ -1439,25 +1663,64 @@
                             {
                                 "subsection": "11.2 Limitation of Liability",
                                 "paragraph": "To the maximum extent permitted by law, NEWPAY and its affiliates, directors, employees, and agents shall not be liable for any indirect, incidental, special, punitive, or consequential damages, including but not limited to:",
-                                "subItems": [
-                                    "Loss of profits;",
-                                    "Loss of revenue;",
-                                    "Loss of data;",
-                                    "Loss of goodwill;",
-                                    "Business interruption."
-                                ]
+                                "refund": [
+                                    {
+                                        "type": "11.2.1 Indirect Damages",
+                                        "paragraph": "We are not liable for any indirect, incidental, special, punitive, or consequential damages, including but not limited to:",
+                                        "description-refund": [
+                                            "Loss of profits;",
+                                            "Loss of revenue;",
+                                            "Loss of data;",
+                                            "Loss of goodwill;",
+                                            "Business interruption."
+                                        ]
+                                    }
+                                ],
+                                "paragraph2": "This applies regardless of whether these damages are based on contract, tort (including negligence), strict liability, or other legal theory, and regardless of whether we have been advised of the possibility of such damages."
                             },
                             {
                                 "subsection": "11.3 Specific Liability Disclaimers",
                                 "paragraph": "We specifically disclaim liability for:",
-                                "subItems": [
-                                    "Actions or omissions of merchants, payment processors, or other third parties;",
-                                    "Internet or communication failures;",
-                                    "Device or software failures;",
-                                    "Digital asset value fluctuations;",
-                                    "Regulatory environment changes;",
-                                    "Market liquidity issues."
+                                "refund": [
+                                    {
+                                        "type": "11.3.1 Third-Party Actions",
+                                        "description-refund": [
+                                            "Actions or omissions of merchants, payment processors, or other third parties;",
+                                            "Content or functionality of third-party websites or services;",
+                                            "Failures or delays in third-party payment networks or banking systems."
+                                        ]
+                                    },
+                                    {
+                                        "type": "11.3.2 Technical Risks",
+                                        "description-refund": [
+                                            "Internet or communication failures;",
+                                            "Device or software failures;",
+                                            "Viruses, malware, or other technological attacks;",
+                                            "Data loss or corruption;",
+                                            "Blockchain network issues (such as congestion, forks, consensus failures)."
+                                        ]
+                                    },
+                                    {
+                                        "type": "11.3.3 Market Risks",
+                                        "description-refund": [
+                                            "Digital asset value fluctuations;",
+                                            "Exchange rate changes;",
+                                            "Regulatory environment changes;",
+                                            "Market liquidity issues."
+                                        ]
+                                    }
                                 ]
+                            },
+                            {
+                                "subsection": "11.4 User Indemnification",
+                                "paragraph": "You agree to indemnify and hold harmless NEWPAY and its affiliates, directors, employees, and agents from any claims, damages, losses, liabilities, costs, and expenses (including reasonable attorney fees) arising from:",
+                                "subItems": [
+                                    "Your use of our services;",
+                                    "Your violation of these Terms;",
+                                    "Your infringement of any third-party rights;",
+                                    "Your violation of any applicable laws or regulations."
+                                ],
+                                "paragraph2": "We reserve the right to assume, at our own expense, the exclusive defense and control of any matter subject to indemnification by you."
                             }
                         ]
                     },
@@ -1472,10 +1735,19 @@
                             {
                                 "subsection": "12.2 Dispute Resolution Process",
                                 "paragraph": "We encourage resolving disputes through the following progressive process:",
-                                "subItems": [
-                                    "Amicable Negotiation: Any dispute should first be resolved through amicable negotiation. Please contact our customer support team at support@newpay.org.",
-                                    "Mediation: If negotiation fails to resolve the dispute, either party may request mediation under the mediation rules of the Hong Kong International Arbitration Centre (HKIAC).",
-                                    "Arbitration: If mediation fails to resolve the dispute, either party may submit the dispute to the Hong Kong International Arbitration Centre (HKIAC) for final arbitration."
+                                "refund": [
+                                    {
+                                        "type": "12.2.1 Amicable Negotiation",
+                                        "paragraph": "Any dispute should first be resolved through amicable negotiation. Please contact our customer support team at support@newpay.org, explaining the issue and providing relevant evidence. We will respond within 15 business days."
+                                    },
+                                    {
+                                        "type": "12.2.2 Mediation",
+                                        "paragraph": "If negotiation fails to resolve the dispute, either party may request mediation under the mediation rules of the Hong Kong International Arbitration Centre (HKIAC)."
+                                    },
+                                    {
+                                        "type": "12.2.3 Arbitration",
+                                        "paragraph": "If mediation fails to resolve the dispute, either party may submit the dispute to the Hong Kong International Arbitration Centre (HKIAC) for final arbitration under the HKIAC Administered Arbitration Rules in force when the Notice of Arbitration is submitted. The seat of arbitration shall be Hong Kong, and the arbitration language shall be English. The arbitral tribunal shall consist of one arbitrator."
+                                    }
                                 ]
                             }
                         ]
@@ -1493,12 +1765,40 @@
                                 "paragraph": "If any provision of these Terms is found to be invalid, illegal, or unenforceable, that provision shall be deemed severed from these Terms and shall not affect the validity and enforceability of the remaining provisions."
                             },
                             {
-                                "subsection": "13.3 Assignment",
+                                "subsection": "13.3 Waiver",
+                                "paragraph": "Our failure to enforce any right or provision of these Terms will not constitute a waiver of such right or provision. Any waiver must be in writing and signed by an authorized representative of NewPay."
+                            },
+                            {
+                                "subsection": "13.4 Assignment",
                                 "paragraph": "You may not assign or delegate any rights or obligations under these Terms without our prior written consent. We may freely assign these Terms without your consent."
                             },
                             {
-                                "subsection": "13.4 Force Majeure",
+                                "subsection": "13.5 Force Majeure",
                                 "paragraph": "Neither party shall be liable for any delay or failure to perform obligations due to events beyond reasonable control, including but not limited to natural disasters, war, terrorism, riots, embargoes, acts of civil or military authorities, fire, floods, accidents, strikes, epidemics, network failures, or supply shortages."
+                            },
+                            {
+                                "subsection": "13.6 Relationship",
+                                "paragraph": "These Terms do not create an agency, partnership, joint venture, or employment relationship. You have no authority to bind NewPay in any way."
+                            },
+                            {
+                                "subsection": "13.7 Notices",
+                                "paragraph": "We may send notices to you via:",
+                                "subItems": [
+                                    "Email (to your registered email address);",
+                                    "In-app messages or push notifications;",
+                                    "Platform announcements;",
+                                    "Mail to the address you provided."
+                                ]
+                            },
+                            {
+                                "paragraph": "You may send notices to us via:",
+                                "subItems": [
+                                    "Email to support@newpay.org;"
+                                ]
+                            },
+                            {
+                                "subsection": "13.8 Language Versions",
+                                "paragraph": "These Terms may be available in multiple languages. If there are discrepancies between different language versions, the English version shall prevail."
                             }
                         ]
                     },
@@ -1509,9 +1809,7 @@
                             {
                                 "subsection": "14.1 Contact Information",
                                 "paragraph": "If you have any questions or suggestions regarding these Terms, please contact us through:",
-                                "subItems": [
-                                    "Support: support@newpay.org"
-                                ]
+                                "paragraph2": "Support: support@newpay.org"
                             }
                         ]
                     }
@@ -1525,6 +1823,7 @@
                 },
                 "sections": [
                     {
+                        "id": "privacy-1",
                         "title": "1. GENERAL PROVISIONS",
                         "subsections": [
                             {
@@ -1567,6 +1866,7 @@
                         ]
                     },
                     {
+                        "id": "privacy-2",
                         "title": "2. DATA COLLECTION AND PROCESSING",
                         "subsections": [
                             {
@@ -1643,6 +1943,7 @@
                         ]
                     },
                     {
+                        "id": "privacy-3",
                         "title": "3. IDENTITY VERIFICATION AND KYC PROCESS",
                         "subsections": [
                             {
@@ -1688,6 +1989,7 @@
                         ]
                     },
                     {
+                        "id": "privacy-4",
                         "title": "4. PURPOSES AND LEGAL BASES FOR DATA PROCESSING",
                         "subsections": [
                             {
@@ -1780,6 +2082,7 @@
                         ]
                     },
                     {
+                        "id": "privacy-5",
                         "title": "5. WEB3 AND BLOCKCHAIN DATA PROCESSING",
                         "subsections": [
                             {
@@ -1841,6 +2144,7 @@
                         ]
                     },
                     {
+                        "id": "privacy-6",
                         "title": "6. DATA SHARING AND DISCLOSURE",
                         "subsections": [
                             {
@@ -1957,6 +2261,7 @@
                         ]
                     },
                     {
+                        "id": "privacy-7",
                         "title": "7. DATA SECURITY",
                         "subsections": [
                             {
@@ -2024,6 +2329,7 @@
                         ]
                     },
                     {
+                        "id": "privacy-8",
                         "title": "8. DATA RETENTION AND DELETION",
                         "subsections": [
                             {
@@ -2119,6 +2425,7 @@
                         ]
                     },
                     {
+                        "id": "privacy-9",
                         "title": "9. YOUR DATA RIGHTS",
                         "subsections": [
                             {
@@ -2242,6 +2549,7 @@
                         ]
                     },
                     {
+                        "id": "privacy-10",
                         "title": "10. COOKIES AND TRACKING TECHNOLOGIES",
                         "subsections": [
                             {
@@ -2339,6 +2647,7 @@
                         ]
                     },
                     {
+                        "id": "privacy-11",
                         "title": "11. SUPPLEMENTARY PRIVACY RIGHTS FOR SPECIFIC REGIONS",
                         "subsections": [
                             {
@@ -2382,6 +2691,7 @@
                         ]
                     },
                     {
+                        "id": "privacy-12",
                         "title": "12. DATA PROTECTION CONTACTS",
                         "subsections": [
                             {
@@ -2422,6 +2732,7 @@
                         ]
                     },
                     {
+                        "id": "privacy-13",
                         "title": "13. POLICY UPDATES",
                         "subsections": [
                             {
@@ -2466,6 +2777,7 @@
                         ]
                     },
                     {
+                        "id": "privacy-14",
                         "title": "14. CONCLUSION",
                         "subsections": [
                             {
@@ -2483,185 +2795,245 @@
                 "title": "Commission Policy Terms and Conditions",
                 "sections": [
                     {
+                        "id": "I",
                         "title": "I. General Provisions",
                         "content": [
                             {
                                 "paragraph": "1.1 This Commission Policy (hereinafter referred to as \"this Policy\") applies to individuals or organizations (hereinafter referred to as \"Promoters\") participating in NewPay's promotion programs, referral programs, agency programs, and any form of commission activities."
                             },
                             {
-                                "paragraph": "1.2 This Policy constitutes a supplementary part of the \"NewPay User Agreement\" and other platform terms. By participating, the Promoter agrees to all terms herein, and NewPay retains final interpretative rights."
+                                "paragraph": "1.2 This Policy constitutes a supplementary part of the \"NewPay User Agreement\" and other platform terms, with equal legal effect. By participating in any commission activity, the Promoter is deemed to have fully read, completely understood, and unconditionally agreed to accept all terms of this Policy, and agrees that NewPay has the final right of interpretation of this Policy."
                             },
                             {
-                                "paragraph": "1.3 NewPay reserves the right to modify or terminate this Policy at any time without prior notice. Continued participation constitutes acceptance of changes."
+                                "paragraph": "1.3 NewPay reserves the right to modify, update, or terminate this Policy and related commission programs at any time. The modified policy shall be deemed effective immediately upon publication on the platform, without further notice to Promoters. Promoters are responsible for regularly reviewing the latest policy content, and continued participation in commission activities shall be deemed as acceptance of the modified policy."
                             }
                         ]
                     },
                     {
+                        "id": "II",
                         "title": "II. Eligibility Requirements",
                         "content": [
                             {
-                                "paragraph": "2.1 Only users or organizations meeting the following requirements may become Promoters:"
+                                "paragraph": "2.1 Only users or organizations meeting all of the following conditions may participate in the NewPay promotion commission program and become qualified Promoters:"
                             },
                             {
-                                "subItems": [
-                                    "(i) Basic Identity Requirements: Minimum age 18, passed KYC, no restriction or violation history;",
-                                    "(ii) Compliance Requirements: No illegal activity, accurate information, no third-party actions or falsification;",
-                                    "(iii) Agency Application: Individuals and organizations may apply. Corporate agents require review and signed agreements;",
-                                    "(iv) Restrictions: NewPay may disqualify Promoters for arbitrage or manipulation. Promotion is not allowed in restricted regions."
+                                "requirements": [
+                                    {
+                                        "paragraph": "(i) Basic Identity Requirements",
+                                        "paragraph2": "a. Natural persons who are at least 18 years of age and have full civil capacity, or legal entities or other organizations legally established and validly existing; b. Have completed the NewPay registration process and passed the platform-designated identity verification (KYC); c. The promotion account is in normal status, not restricted, frozen, blacklisted, and has no record of serious historical violations;"
+                                    },
+                                    {
+                                        "paragraph": "(ii) Compliance Requirements",
+                                        "paragraph2": "d. Promotional activities must not violate any applicable laws and regulations, and must not involve fraud, misleading advertising, illegal fundraising, money laundering, gambling, pornography, or any purpose prohibited by the platform; e. All identity information, contact details, wallet addresses, payment information, etc. provided must be authentic, accurate, verifiable, and subject to random inspection by the platform; f. Promotional activities must be conducted independently by the individual or organization, and must not be conducted on behalf of others or involve falsified transaction records;"
+                                    },
+                                    {
+                                        "paragraph": "(iii) Agency Application Instructions",
+                                        "paragraph2": "g. NewPay supports individual users and corporate agents to apply for participation in the commission program. Corporate agents must pass the platform's strict review process; specific review criteria are determined at NewPay's sole discretion, based on comprehensive evaluation of factors such as enterprise scale, promotion methods, user activity, etc.; h. Corporate agents must accept the cooperation agreement or supplementary terms signed by the platform before enabling the agent commission structure and backend privileges;"
+                                    },
+                                    {
+                                        "paragraph": "(iv) Restrictions and Reserved Rights of Determination",
+                                        "paragraph2": "i. NewPay reserves the absolute right to conduct comprehensive reviews of the Promoter's identity, behavior, and promotional compliance; if the Promoter is found to be engaging in arbitrage, creating fictitious accounts, or manipulating the commission mechanism using multiple accounts, the platform has the right to immediately cancel their commission eligibility and freeze related accounts based on risk assessment results; j. The promotion commission program does not apply to countries and regions explicitly restricted by the platform in announcements, including but not limited to high-risk regulatory areas or sanctioned jurisdictions."
+                                    }
                                 ]
                             },
                             {
-                                "paragraph": "2.2 NewPay may update eligibility criteria or terminate privileges at its discretion without compensation."
+                                "paragraph": "2.2 The platform has the right to update participation eligibility criteria at any time, or suspend or terminate the commission privileges of certain users or agents based on risk assessment, without prior notice. Promoters expressly waive any right to object to this and may not make any form of claim or demand compensation from NewPay on this basis."
                             }
                         ]
                     },
                     {
+                        "id": "III",
                         "title": "III. Commission Mechanism",
                         "content": [
                             {
-                                "paragraph": "3.1 Promoters earn commissions by inviting users who complete valid actions through unique referral links or codes."
+                                "paragraph": "3.1 Promoters can earn commission income by inviting new users to register and complete \"valid actions\" as specified by the platform through their exclusive invitation codes or promotion links."
                             },
                             {
-                                "paragraph": "3.2 Valid Actions: Require successful KYC and activation. Definition may change based on platform notice."
+                                "paragraph": "3.2 Definition of Valid Actions: Invited users must complete identity verification (KYC) and successfully activate their accounts to be considered \"valid users,\" only then can the action trigger commission eligibility. NewPay reserves the right to adjust the definition of \"valid actions\" at any time, subject to the latest platform announcement."
                             },
                             {
-                                "paragraph": "3.3 Commission Structure:",
+                                "paragraph": "3.3 Commission Structure and Calculation Method: a. NewPay adopts a tiered commission structure, including two categories: user commission and agent commission:",
                                 "subItems": [
-                                    "User commissions for general users with fixed ratios;",
-                                    "Agent commissions for approved agents with tiered levels and multi-level structures (up to 3 levels);",
-                                    "Commission ratios set by NewPay and adjusted based on performance;"
+                                    "User commission applies to all registered users, issued according to fixed ratios or activity cycles;",
+                                    "Agent commission applies to approved cooperative agents, enabling multi-level structures and differentiated ratios, subject to written confirmation from the platform."
                                 ]
                             },
                             {
-                                "paragraph": "3.4 Settlement:",
-                                "subItems": [
-                                    "Issued 7–30 working days after valid action, subject to review;",
-                                    "Invalid actions (e.g., fraud) result in cancellation and possible ban;",
-                                    "User commissions shown in-app; agents use a separate backend."
-                                ]
+                                "paragraph": "b. The platform supports a maximum of three-level agent commission structure. The commission ratios for each level are unilaterally set by the platform according to cooperation levels, and NewPay reserves the right to adjust commission ratios at any time."
                             },
                             {
-                                "paragraph": "3.5 Other Provisions:",
-                                "subItems": [
-                                    "Minimum payout is 100 USDT;",
-                                    "NewPay may cap commissions and adjust values unilaterally;",
-                                    "Only NewPay’s backend records are valid for calculation."
-                                ]
+                                "paragraph": "c. Commission ratios will be dynamically adjusted based on the Promoter's actual performance, including but not limited to cumulative number of invitations, conversion rate, transaction amount, etc. The platform has the right to establish a \"level mechanism\" where meeting standards triggers ratio upgrades."
+                            },
+                            {
+                                "paragraph": "d. All commission calculations are based solely on NewPay system records, and Promoters may not raise objections to calculation results for any reason."
+                            },
+                            {
+                                "paragraph": "3.4 Commission Settlement Mechanism: a. All commissions will be issued within 7 to 30 working days after the completion of valid actions, with specific timing depending on the platform's settlement cycle and risk verification status, over which NewPay has complete discretion;"
+                            },
+                            {
+                                "paragraph": "b. If the action is subsequently found to involve fraud, illegal registration, false transactions, or other violations, the platform has the right to immediately cancel the commission eligibility and recover related earnings. Serious offenders will be permanently banned from participating in any commission activities;"
+                            },
+                            {
+                                "paragraph": "c. User commissions can be viewed directly in the NewPay App; agent commissions will be displayed and managed through an independent agent backend."
+                            },
+                            {
+                                "paragraph": "3.5 Other Provisions: a. Each commission must reach the minimum settlement amount (e.g., $100 USDT) before it can be issued; amounts below the threshold will continue to accumulate;"
+                            },
+                            {
+                                "paragraph": "b. The platform has the unilateral right to set commission limits, including but not limited to caps on individual or monthly commission totals, to prevent system abuse;"
+                            },
+                            {
+                                "paragraph": "c. All commission data will be based solely on the platform's backend records as the only accurate reference. Promoters should properly safeguard their payment information and login credentials. Any losses caused by negligence shall be borne entirely by the Promoters;"
+                            },
+                            {
+                                "paragraph": "d. NewPay has the final right of interpretation regarding commission rules and structures, and may revise related content at any time according to operational strategies. Revised content will be deemed effective upon announcement through official channels, without further notice to Promoters."
                             }
                         ]
                     },
                     {
+                        "id": "IV",
                         "title": "IV. Commission Issuance and Settlement Mechanism",
                         "content": [
                             {
-                                "paragraph": "4.1 Platform handles settlements automatically once thresholds are met."
+                                "paragraph": "4.1 All commission amounts will be settled uniformly by the platform. Promoters do not need to apply separately; the system will automatically trigger the commission issuance process when settlement conditions are met."
                             },
                             {
-                                "paragraph": "4.2 Payment Settings:",
-                                "subItems": [
-                                    "Default in USDT to bound wallet address;",
-                                    "Wallet must be accurate and secure;",
-                                    "Changes to wallet info trigger risk controls."
-                                ]
+                                "paragraph": "4.2 Commission Currency and Payment Settings a. Commissions are issued by default in USDT to the wallet address bound by the Promoter on the platform;"
                             },
                             {
-                                "paragraph": "4.3 Cycle:",
-                                "subItems": [
-                                    "No fixed schedule; once 100 USDT is reached, payout is triggered;",
-                                    "Pending reviews delay payouts;"
-                                ]
+                                "paragraph": "b. Promoters must ensure that their bound wallet addresses are authentic, valid, and controlled by themselves or their organizations. The platform assumes no responsibility for commission failures or losses due to incorrect information, lost addresses, or similar issues;"
                             },
                             {
-                                "paragraph": "4.4 Exceptions and Disputes:",
-                                "subItems": [
-                                    "Anomalies may lead to freezing, audit, or cancellation;",
-                                    "Appeals must be filed within 7 days;"
-                                ]
+                                "paragraph": "c. Promoters may manually change their wallet addresses, which will trigger risk control mechanisms, including but not limited to GA (two-factor authentication) requirements, 24-hour withdrawal suspension, etc.; NewPay has the right to extend the verification period or require additional identity verification based on risk assessment."
                             },
                             {
-                                "paragraph": "4.5 Final Interpretation: NewPay has full authority over settlement rules and may adjust them as needed."
+                                "paragraph": "4.3 Settlement Mechanism and Cycle a. The platform does not set fixed issuance cycles. Once the accumulated commission amount in a Promoter's account reaches 100 USDT, it enters the issuance schedule;"
+                            },
+                            {
+                                "paragraph": "b. If the commission amount in the Promoter's account has not reached the minimum threshold, the system will automatically accumulate it until the conditions are met;"
+                            },
+                            {
+                                "paragraph": "c. If the Promoter's account or the behavior of their referred users is under risk review, the platform has the right to indefinitely suspend commission settlement until the review is completed; Promoters have no right to object to this."
+                            },
+                            {
+                                "paragraph": "d. NewPay reserves the right to adjust the minimum settlement amount and settlement cycle according to business needs, without prior notice to Promoters."
+                            },
+                            {
+                                "paragraph": "4.4 Issuance Exceptions and Dispute Resolution a. If commission records are found to be abnormal, data has been tampered with, addresses have been abused, or there are associations with fraudulent accounts, NewPay has the right to freeze, withhold, and audit related commission records;"
+                            },
+                            {
+                                "paragraph": "b. If a Promoter is ultimately determined to have engaged in violations, the platform has the right to cancel their commission eligibility and recover commissions already issued. Whether to refund is at the platform's sole discretion based on the actual circumstances;"
+                            },
+                            {
+                                "paragraph": "c. All commission-related records are based solely on the platform's backend system data as the only valid reference. Promoters may not claim settlement requests based on screenshots, external records, etc.;"
+                            },
+                            {
+                                "paragraph": "d. Promoters must report any commission anomalies to the platform within 7 calendar days of discovery. Failure to do so will be deemed as acceptance of the platform's settlement results and waiver of any right to object."
+                            },
+                            {
+                                "paragraph": "4.5 Final Right of Interpretation NewPay has the final right of interpretation regarding commission issuance time, issuance order, settlement logic, and accounting processing, and reserves the absolute right to dynamically adjust commission system rules, risk control mechanisms, currency selection, etc., without further notice."
                             }
                         ]
                     },
                     {
+                        "id": "V",
                         "title": "V. Violations and Termination",
                         "content": [
                             {
-                                "paragraph": "5.1 Violation Categories:"
+                                "paragraph": "5.1 If a Promoter engages in any of the following behaviors, NewPay has the right to immediately cancel their commission eligibility, freeze their account balance, and reserves the right to legally recover commission funds and pursue legal liability:"
                             },
                             {
-                                "subItems": [
-                                    "(i) Fraud: Fake identities, VPN abuse, fake transactions;",
-                                    "(ii) Promotion Violations: Unauthorized branding, false ads, bypassing compliance;",
-                                    "(iii) Manipulation: Scripting, multi-account collaboration, data tampering;",
-                                    "(iv) Legal Issues: Money laundering, gambling, illegal content;",
-                                    "(v) Harmful Conduct: Incitement, promoting competitors, non-cooperation with audits."
+                                "requirements": [
+                                    {
+                                        "paragraph": "(i) Fraudulent Behaviors",
+                                        "paragraph2": "a. Falsifying identity, using fictitious or repeatedly registered accounts to participate in recommendations; b. Using VPNs, changing device fingerprints, or other methods to circumvent risk control, implementing \"self-recommendation\" or \"team internal commission cycling\"; c. Fabricating transaction behaviors, including but not limited to false deposits, orders without actual consumption, creating refund cycles, and other means;"
+                                    },
+                                    {
+                                        "paragraph": "(ii) Promotional Violations",
+                                        "paragraph2": "d. Using NewPay brand names, LOGO, pages, card images, etc. for external promotion without written authorization; e. Spreading false promotional content, including but not limited to fabricating platform returns, exaggerating commission ratios, or falsely claiming official identity; f. Publishing inducing or misleading advertising copy, or guiding users to bypass platform compliance processes (such as skipping KYC or transferring to private transactions);"
+                                    },
+                                    {
+                                        "paragraph": "(iii) Manipulative Behaviors",
+                                        "paragraph2": "g. Manipulating transaction or commission data, including multi-account collaboration, large-scale volume creation, or using automated scripts or bots; h. Conspiring with other users to defraud commissions, jointly creating false transactions or false invitation relationship chains; i. Using third-party technical tools (such as simulators, API call scripts) to control transaction systems or interfere with normal commission processes;"
+                                    },
+                                    {
+                                        "paragraph": "(iv) Legal Compliance Issues",
+                                        "paragraph2": "j. Promotion processes involving money laundering, fraud, scams, pornography, gambling, drugs, weapons, illegal virtual currency transactions, or other illegal content; k. Conducting commission activities in prohibited promotion regions (such as mainland China, UN-sanctioned countries, etc.); l. Unauthorized secondary distribution, subcontracting, selling commission accounts or invitation codes;"
+                                    },
+                                    {
+                                        "paragraph": "(v) Other Behaviors Harmful to Platform Interests",
+                                        "paragraph2": "m. Inducing users to complete transactions through unofficial channels or directing traffic to other competing platforms; n. Deliberately inciting users to complain about the platform to obtain rewards, refunds, or cancel risk control measures; o. Refusing to cooperate with the platform for identity verification, commission verification, or risk audits; p. Other behaviors reasonably determined by the platform to damage NewPay's legitimate rights and interests or user interests."
+                                    }
                                 ]
                             },
                             {
-                                "paragraph": "5.2 Penalties may include:",
+                                "paragraph": "5.2 In the event of any of the above violations, NewPay has the right to take one or more of the following measures:",
                                 "subItems": [
-                                    "Termination of Promoter status;",
-                                    "Account and fund freezing;",
-                                    "Recovery of commissions;",
-                                    "Legal action and reporting to authorities."
+                                    "Immediately terminate the Promoter's eligibility to participate in this program;",
+                                    "Freeze related accounts and commission funds;",
+                                    "Recover issued commissions;",
+                                    "Report to law enforcement agencies or cooperate with regulatory investigations;",
+                                    "Pursue civil compensation or criminal liability."
                                 ]
                             },
                             {
-                                "paragraph": "5.3 NewPay reserves full discretion to determine violations and is not obligated to disclose detection methods."
+                                "paragraph": "5.3 Promoters understand and expressly agree that: NewPay has final discretion in determining violations and is not required to disclose all risk control bases for individual cases. Promoters may not raise objections to platform decisions for any reason."
                             }
                         ]
                     },
                     {
+                        "id": "VI",
                         "title": "VI. Disclaimer",
                         "content": [
                             {
-                                "paragraph": "6.1 The commission program is not a guaranteed income scheme and is subject to multiple variable factors."
+                                "paragraph": "6.1 The commission program provided by NewPay serves only as one of the user recommendation incentive mechanisms and does not constitute any guarantee or commitment regarding commission income to Promoters. Commission amounts are influenced by multiple factors including user behavior, transaction conditions, system rules, risk assessment, etc., and may be subject to delay, adjustment, or cancellation. Promoters should fully understand the related risks and bear them independently."
                             },
                             {
-                                "paragraph": "6.2 NewPay may modify or suspend the program for legal, business, or security reasons without liability."
+                                "paragraph": "6.2 NewPay has the right to modify, suspend, or terminate the commission program's content, structure, settlement logic, and issuance rhythm based on legal regulations, regulatory requirements, business adjustments, system maintenance, or security risk needs, without prior notice to Promoters. Such actions do not constitute a breach of contract, and the platform assumes no compensation responsibility for any resulting losses or expected income."
                             },
                             {
-                                "paragraph": "6.3 Promoters are responsible for safeguarding accounts and devices. Losses from negligence are not NewPay's liability."
+                                "paragraph": "6.3 Promoters should properly safeguard their account information, bound wallets, verification devices, and other important materials. If commission funds are lost due to user negligence or network attacks, social engineering fraud, device loss, or other non-platform reasons, NewPay assumes no responsibility."
                             },
                             {
-                                "paragraph": "6.4 NewPay is not liable for issues beyond its control such as blockchain congestion, third-party failures, system updates, or force majeure."
+                                "paragraph": "6.4 NewPay assumes no compensation responsibility for commission delays, failures, erroneous issuances, or settlement disputes caused by the following factors beyond platform control: a. Blockchain network congestion, node failures, or stablecoin system anomalies; b. Third-party wallet or transaction tool failures; c. Platform system updates, brief interruptions, or impacts from hacker attacks; d. Force majeure factors, including but not limited to natural disasters, government actions, war, network interruptions, etc."
                             },
                             {
-                                "paragraph": "6.5 All records are based solely on backend system data. Appeals must be made within 30 days of issuance."
+                                "paragraph": "6.5 All commission amounts, commission records, and transaction details are based solely on NewPay's backend system records as the only valid reference. If Promoters have objections to commission data, they may file appeals through platform customer service channels within 30 days after commission issuance. The platform will process verifications based on system records; external screenshots, third-party platform data, etc. will not be used as determination bases."
                             },
                             {
-                                "paragraph": "6.6 Participation is voluntary and may be terminated by NewPay at any time without compensation."
+                                "paragraph": "6.6 Promoters explicitly acknowledge and agree that participation in the commission program constitutes a commercial cooperation behavior. NewPay has the right to adjust or terminate cooperation at any time based on market environment, business strategy, or compliance requirements. Promoters may not, for any reason, require the platform to continue executing the commission program or make any form of compensation request."
                             }
                         ]
                     },
                     {
+                        "id": "VII",
                         "title": "VII. Applicable Law and Dispute Resolution",
                         "content": [
                             {
-                                "paragraph": "7.1 This Policy is governed by the laws of the Hong Kong Special Administrative Region, excluding conflict of law rules."
+                                "paragraph": "7.1 This Policy and related matters, including but not limited to commission eligibility, commission issuance, account disputes, and violation handling, their establishment, interpretation, performance, and dispute resolution, shall all be governed by the laws of the Hong Kong Special Administrative Region of China, without application of any conflict of law provisions."
                             },
                             {
-                                "paragraph": "7.2 Disputes should first be resolved through NewPay's official support channels."
+                                "paragraph": "7.2 Any disputes arising from or related to this Policy shall first be resolved through friendly negotiation between the Promoter and the platform through NewPay's official customer service channels."
                             },
                             {
-                                "paragraph": "7.3 If unresolved, disputes may be settled through:",
+                                "paragraph": "7.3 If negotiation fails, the Promoter and NewPay may choose either of the following dispute resolution paths: a. Submit the dispute to the Hong Kong International Arbitration Centre (HKIAC), to be arbitrated according to its currently effective arbitration rules. The arbitration language shall be English, and the arbitration award shall be final and binding on both parties; or b. File a lawsuit with a court of competent jurisdiction in Hong Kong, China."
+                            },
+                            {
+                                "paragraph": "7.4 If the Promoter engages in any of the following behaviors during the dispute resolution period, NewPay has the right to suspend their commission settlement privileges and reserves the right to further pursue accountability, restrict account privileges, or freeze related funds:",
                                 "subItems": [
-                                    "a. Arbitration at HKIAC under its rules in English; or",
-                                    "b. Legal action in courts in Hong Kong, China."
+                                    "Maliciously abusing the appeal mechanism by repeatedly submitting invalid disputes;",
+                                    "Deliberately spreading unverified dispute information, guiding public opinion against the platform;",
+                                    "Conspiring with others to collectively create disputes, affecting platform operations or other users' interests."
                                 ]
                             },
                             {
-                                "paragraph": "7.4 Violations during dispute periods (e.g., abuse of appeal process, misinformation, collusion) may result in suspension and sanctions."
+                                "paragraph": "7.5 The Promoter understands and expressly agrees that: the commission program is part of the platform's operational strategy, and NewPay has the final right of interpretation and adjustment of this Policy. Any dispute resolution should proceed with respect for the platform's autonomous operational rights."
                             },
                             {
-                                "paragraph": "7.5 NewPay has the final interpretative authority of this Policy and all commission activities."
+                                "paragraph": "7.6 If any provision of this Policy is deemed invalid or unenforceable, it shall not affect the validity of the remaining provisions. The invalid or unenforceable provision shall be interpreted as the valid provision closest to the original intention of both parties."
                             },
                             {
-                                "paragraph": "7.6 Invalid provisions do not affect the remainder of the Policy."
-                            },
-                            {
-                                "paragraph": "7.7 NewPay’s total liability is limited to the disputed commission amount and excludes indirect or punitive damages."
+                                "paragraph": "7.7 The Promoter expressly agrees that, under any circumstances, NewPay's maximum liability for compensation to the Promoter shall not exceed the specific commission amount involved in the dispute, and NewPay shall not be liable for any indirect losses, expected profit losses, or punitive damages."
                             }
                         ]
                     }
@@ -2852,12 +3224,123 @@
             {
                 "id": "privacy",
                 "label": "Privacy Policy",
-                "isMain": true
+                "isMain": true,
+                "hasChildren": true,
+                "children": [
+                    {
+                        "id": "privacy-1",
+                        "label": "1. GENERAL PROVISIONS",
+                        "level": 1
+                    },
+                    {
+                        "id": "privacy-2",
+                        "label": "2. DATA COLLECTION AND PROCESSING",
+                        "level": 1
+                    },
+                    {
+                        "id": "privacy-3",
+                        "label": "3. IDENTITY VERIFICATION AND KYC PROCESS",
+                        "level": 1
+                    },
+                    {
+                        "id": "privacy-4",
+                        "label": "4. PURPOSES AND LEGAL BASES FOR DATA PROCESSING",
+                        "level": 1
+                    },
+                    {
+                        "id": "privacy-5",
+                        "label": "5. WEB3 AND BLOCKCHAIN DATA PROCESSING",
+                        "level": 1
+                    },
+                    {
+                        "id": "privacy-6",
+                        "label": "6. DATA SHARING AND DISCLOSURE",
+                        "level": 1
+                    },
+                    {
+                        "id": "privacy-7",
+                        "label": "7. DATA SECURITY",
+                        "level": 1
+                    },
+                    {
+                        "id": "privacy-8",
+                        "label": "8. DATA RETENTION AND DELETION",
+                        "level": 1
+                    },
+                    {
+                        "id": "privacy-9",
+                        "label": "9. YOUR DATA RIGHTS",
+                        "level": 1
+                    },
+                    {
+                        "id": "privacy-10",
+                        "label": "10. COOKIES AND TRACKING TECHNOLOGIES",
+                        "level": 1
+                    },
+                    {
+                        "id": "privacy-11",
+                        "label": "11. SUPPLEMENTARY PRIVACY RIGHTS FOR SPECIFIC REGIONS",
+                        "level": 1
+                    },
+                    {
+                        "id": "privacy-12",
+                        "label": "12. DATA PROTECTION CONTACTS",
+                        "level": 1
+                    },
+                    {
+                        "id": "privacy-13",
+                        "label": "13. POLICY UPDATES",
+                        "level": 1
+                    },
+                    {
+                        "id": "privacy-14",
+                        "label": "14. CONCLUSION",
+                        "level": 1
+                    }
+                ]
             },
             {
                 "id": "commission",
                 "label": "Commission Policy Terms and Conditions",
-                "isMain": true
+                "isMain": true,
+                "hasChildren": true,
+                "children": [
+                    {
+                        "id": "I",
+                        "label": "I. General Provisions",
+                        "level": 1
+                    },
+                    {
+                        "id": "II",
+                        "label": "II. Eligibility Requirements",
+                        "level": 1
+                    },
+                    {
+                        "id": "III",
+                        "label": "III. Commission Mechanism",
+                        "level": 1
+                    },
+                    {
+                        "id": "IV",
+                        "label": "IV. Commission Issuance and Settlement Mechanism",
+                        "level": 1
+                    },
+                    {
+                        "id": "V",
+                        "label": "V. Violations and Termination",
+                        "level": 1
+                    },
+                    {
+                        "id": "VI",
+                        "label": "VI. Disclaimer",
+                        "level": 1
+                    },
+                    {
+                        "id": "VII",
+                        "label": "VII. Applicable Law and Dispute Resolution",
+                        "level": 1
+                    }
+                ]
             }
         ]
     }
