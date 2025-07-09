@@ -6,7 +6,6 @@ const TermContent = ({ content, idPivacy, idCommission }: { content: any, idPiva
 
     // Xác định mảng ID dựa trên loại nội dung
     const idArray = content.title.toLowerCase().includes('privacy') ? idPivacy : idCommission;
-    let globalIdx = 0;
 
     return (
         <div className="lg:w-3/4">
