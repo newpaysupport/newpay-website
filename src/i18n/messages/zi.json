@@ -240,129 +240,6 @@
         "newPayBlog": "NewPay 博客",
         "furtherReading": "延伸阅读"
     },
-    "term": {
-        "header": {
-            "title": "条款和条件"
-        },
-        "mainContent": {
-            "title": "NEWPAY服务条款和条件",
-            "lastUpdated": "2024年4月29日",
-            "introSection": {
-                "title": "这是一份重要文件，请仔细阅读。",
-                "paragraphs": [
-                    "这些条款和条件（“条款”）包含与您在我们这里的账户以及我们为您提供的服务相关的交易的重要信息。您应仔细阅读这些条款。我们提供的特定服务可能适用额外的条款和条件。任何此类条款和条件均为本条款中规定的条款的补充。",
-                    "您必须始终遵守这些条款。如果您不遵守这些条款的任何一项，我们可能会采取各种措施，包括财务措施，您不得认为我们是以该身份行事。在进行任何交易之前，您应咨询独立的职业顾问，并且只有在完全了解交易的性质、涉及的合同关系以及交易相关风险的情况下才进行交易。"
-                ]
-            },
-            "generalTerms": {
-                "title": "一般条款和条件",
-                "sections": [
-                    {
-                        "id": "introduction",
-                        "title": "1. 引言",
-                        "content": [
-                            {
-                                "paragraph": "1.1 您的账户及相关服务由以下集团提供，包括但不限于科技有限公司（一家在香港注册成立的有限责任公司，注册号2484457）（“HTL”）。红点科技有限公司（一家在香港注册成立的有限责任公司，注册号2908456）（“RDTL”）。红点信托有限公司（“红点信托”）。曼谷金融科技有限公司（“曼谷金融”），以及我们不时确定的其他公司（“集团”或“我们”）。"
-                            }
-                        ]
-                    },
-                    {
-                        "id": "scope",
-                        "title": "2. 范围",
-                        "content": [
-                            {
-                                "paragraph": "2.1 这些条款适用于您的账户及您对服务的使用。在使用这些服务之前，请花时间阅读并理解这些条款，以便了解您的法律权利和义务。通过使用任何服务和/或完成注册流程，您同意与集团签订具有法律约束力的合同，并视为已接受这些单独的条款。"
-                            },
-                            {
-                                "paragraph": "2.2 这些条款包括：",
-                                "subItems": [
-                                    "(a) 这些一般条款和条件，适用于您的账户及服务的一般情况；",
-                                    "(b) 本条款的A部分，适用于客户账户；",
-                                    "(c) 本条款的B部分，适用于NewPay卡（包括卡保险服务）；",
-                                    "(d) 本条款的C部分，适用于交换交易；",
-                                    "(e) 本条款的D部分，适用于自托管钱包、智能合约保险库和虚拟账户；",
-                                    "(f) 本条款的E部分，适用于其他第三方服务；",
-                                    "(g) 本条款的F部分，适用于虚拟资产贷款服务；",
-                                    "(h) 我们的隐私政策；",
-                                    "(i) 任何规定可能适用于服务、交易和/或交换交易的费用和收费的文件；",
-                                    "(j) 我们不时指定为本条款一部分的任何其他规则、指示、指南、条款或协议；以及",
-                                    "(k) 集团发行的任何补充、变更、排除、参考纳入的表格和/或通知，包括任何佣金。"
-                                ]
-                            }
-                        ]
-                    }
-                ]
-            }
-        },
-        "sidebarItems": [
-            {
-                "id": "general",
-                "label": "一般条款和条件",
-                "isMain": true,
-                "hasChildren": true,
-                "children": [
-                    {
-                        "id": "custodian-account",
-                        "label": "A. 托管账户",
-                        "level": 1
-                    },
-                    {
-                        "id": "newpay-card",
-                        "label": "B. NewPay卡",
-                        "level": 1,
-                        "hasChildren": true,
-                        "children": [
-                            {
-                                "id": "singapore-cards-non-resident",
-                                "label": "新加坡卡：非新加坡居民持卡人",
-                                "level": 2
-                            },
-                            {
-                                "id": "hongkong-card",
-                                "label": "香港卡：一般",
-                                "level": 2
-                            },
-                            {
-                                "id": "singapore-card-resident",
-                                "label": "新加坡卡：新加坡居民持卡人",
-                                "level": 2
-                            }
-                        ]
-                    },
-                    {
-                        "id": "swap",
-                        "label": "C. 交换交易",
-                        "level": 1
-                    },
-                    {
-                        "id": "custody",
-                        "label": "D. 托管钱包、自托管钱包和智能合约保险库，以及虚拟账户",
-                        "level": 1
-                    },
-                    {
-                        "id": "other",
-                        "label": "E. 其他第三方服务",
-                        "level": 1
-                    },
-                    {
-                        "id": "virtual-assets",
-                        "label": "F. 虚拟资产贷款服务",
-                        "level": 1
-                    }
-                ]
-            },
-            {
-                "id": "privacy",
-                "label": "隐私政策",
-                "isMain": true
-            },
-            {
-                "id": "commission",
-                "label": "佣金政策条款和条件",
-                "isMain": true
-            }
-        ]
-    },
     "payment": {
         "heroSection": {
             "description": "人人可用、全球通行的加密钱包。\n通过 NewPay，一起迈入加密支付的未来！",
@@ -1056,5 +933,1256 @@
         "rightDesc": "与 NewPay 携手，共同探索支付的未来。\n要成为我们的合作伙伴？请简单介绍一下您自己，我们会尽快与您取得联系！",
         "rightSupport": "支持中心",
         "rightSupportEmail": "support@newpay.com"
+    },
+    "term": {
+        "header": {
+            "title": "Terms and Conditions"
+        },
+        "mainContent": {
+            "general": {
+                "header": {
+                    "title": "NEWPAY SERVICES TERMS & CONDITIONS",
+                    "lastUpdated": "29 April 2024",
+                    "introSection": {
+                        "title": "THIS IS AN IMPORTANT DOCUMENT. PLEASE READ IT CAREFULLY.",
+                        "paragraphs": [
+                            "These terms and conditions (\"Terms\") contain important information which applies to your dealings with us in relation to your Account with us and the Services which we provide to you accordingly. You should read these Terms carefully. Further additional terms and conditions may apply in relation to specific Services offered by us. Any such terms and conditions are additional to the terms set out in these Terms.",
+                            "You are required to comply with these Terms at all times. If you do not comply with any of these Terms, we may take various actions including financial actions and you must not regard us as acting in that capacity. You should consult your independent professional advisers before entering into any transaction and only enter into a transaction if you have fully understood its nature, the contractual relationships you which are dealt with and the risks associated with the transaction."
+                        ]
+                    }
+                },
+                "title": "GENERAL TERMS AND CONDITIONS",
+                "sections": [
+                    {
+                        "id": "introduction",
+                        "title": "1. INTRODUCTION",
+                        "content": [
+                            {
+                                "paragraph": "1.1 Your Account and the related Services are provided to you by the following groups, including but not limited to Technology Limited (a private company limited by shares incorporated in Hong Kong with company number 2484457) (\"HTL\"). Red Dot Technology Limited (a private company limited by shares incorporated in Hong Kong with company number 2908456) (\"RDTL\"). Red Dot Trust Limited (Red Dot Trust\"). Bangkok Fintech Limited (Bangkok Fintech\"), and such other companies as determined by us from time to time (\"Group\" or \"we\")."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "scope",
+                        "title": "2. SCOPE",
+                        "content": [
+                            {
+                                "paragraph": "2.1 These Terms govern your Account and your use of the Services. Please take the time to read and understand these Terms before using these Services so that you are aware of your legal rights and obligations. By using any of the Services and/or completing the registration process, you are agreeing to be legally binding contract with the Group and shall be deemed to have accepted these separate terms."
+                            },
+                            {
+                                "paragraph": "2.2 These Terms comprise:",
+                                "subItems": [
+                                    "(a) these general terms and conditions, which apply to your Account and the Services generally;",
+                                    "(b) Part A of these Terms, which applies to the Customers Accounts;",
+                                    "(c) Part B of these Terms, which applies to NewPay Card (including Card Insurance Services);",
+                                    "(d) Part C of these Terms, which applies to Swap Transactions;",
+                                    "(e) Part D of these Terms, which applies to Self-Custody Wallet and Smart Contract Vault, and Virtual Account;",
+                                    "(f) Part E of these Terms, which applies to Other Third-Party Services;",
+                                    "(g) Part F of these Terms, which applies to Virtual Assets Loan Services;",
+                                    "(h) our Privacy Policy;",
+                                    "(i) any document setting out the Fees and charges that may apply to a Service, transaction and/or Swap Transactions;",
+                                    "(j) any other rules, instructions, guidelines, terms or agreements designated by us from time to time as part of these Terms; and",
+                                    "(k) any supplements, variations, exclusions, forms incorporated by reference and/or notices issued by the Group, including any Commission."
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "privacy": {
+                "title": "NEWPAY PRIVACY POLICY",
+                "importantNotice": {
+                    "title": "IMPORTANT NOTICE",
+                    "content": "Before using the NEWPAY platform and its related services, please carefully read and fully understand this Privacy Policy. This policy details how we collect, use, store, share, and protect your personal information, as well as the rights you have regarding your data. By accessing or using the NEWPAY platform, you acknowledge that you have agreed to the data processing activities described in this policy. If you do not agree with any part of this policy, please immediately cease using our services."
+                },
+                "sections": [
+                    {
+                        "title": "1. GENERAL PROVISIONS",
+                        "subsections": [
+                            {
+                                "title": "1.1 About Us",
+                                "content": [
+                                    {
+                                        "paragraph": "NEWPAY (\"we,\" \"us,\" or \"our platform\") is a global financial technology platform focused on digital asset payment solutions. We are committed to providing users with secure, convenient digital asset consumption experiences while highly valuing user privacy protection."
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "1.2 Scope of Application",
+                                "content": [
+                                    {
+                                        "paragraph": "This policy applies to the NEWPAY website (www.newpay.org), mobile applications, API interfaces, and all products and services related to the NEWPAY brand. This policy does not apply to:",
+                                        "subItems": [
+                                            "Privacy practices of third-party websites, applications, or services, even if accessible through our services;",
+                                            "Services not operated by NEWPAY;",
+                                            "Privacy practices of merchants you may access through our services."
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "1.3 Definitions",
+                                "content": [
+                                    {
+                                        "paragraph": "In this policy:",
+                                        "subItems": [
+                                            "\"Personal data\" or \"personal information\" means any information that identifies or can be associated with a specific natural person;",
+                                            "\"You\" refers to any individual accessing or using NEWPAY services, including natural persons operating on behalf of business entities;",
+                                            "\"Services\" refers to all products and features provided by NEWPAY, including but not limited to virtual cards, physical cards, gift cards, deposits, withdrawals, etc.;",
+                                            "\"KYC\" means Know-Your-Customer, the identity verification process we conduct to meet regulatory requirements;",
+                                            "\"Data controller\" means the entity that determines the purposes and means of processing personal data, which in this policy is NEWPAY;",
+                                            "\"Data processor\" means an entity that processes personal data on behalf of the data controller, such as our identity verification service provider ZOLOZ."
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "2. DATA COLLECTION AND PROCESSING",
+                        "subsections": [
+                            {
+                                "title": "2.1 Data Collection Principles",
+                                "content": [
+                                    {
+                                        "paragraph": "We adhere to the following principles when collecting and processing your personal data:",
+                                        "subItems": [
+                                            "Lawfulness, fairness, and transparency: We process your data only on a legal basis, in a fair and transparent manner;",
+                                            "Purpose limitation: We collect data only for specific, explicit, and legitimate purposes and do not process it further in a manner incompatible with those purposes;",
+                                            "Data minimization: We collect only data that is necessary to achieve our purposes;",
+                                            "Accuracy: We take reasonable measures to ensure data is accurate and kept up to date;",
+                                            "Storage limitation: We retain data only for as long as necessary;",
+                                            "Integrity and confidentiality: We implement appropriate technical and organizational measures to ensure data security."
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "2.2 Categories of Data We Collect",
+                                "content": [
+                                    {
+                                        "paragraph": "2.2.1 Information You Provide Directly",
+                                        "subItems": [
+                                            "Account information: Email address, phone number, username, password (stored encrypted);",
+                                            "Personal identity information: Identity verification information collected through our partner, ZOLOZ including name, date of birth, nationality, country/region of residence, etc.;",
+                                            "Contact information: Address information for physical card delivery (if applicable);",
+                                            "Communication records: Content of communications between you and our customer support team."
+                                        ]
+                                    },
+                                    {
+                                        "paragraph": "2.2.2 Automatically Collected Information",
+                                        "subItems": [
+                                            "Device information: Device type, operating system, unique device identifiers, IP address, mobile network information;",
+                                            "Browsing data: Browser type, access time, pages visited, referring URL;",
+                                            "Location data: Approximate location information based on IP address (not precise to street level);",
+                                            "Usage data: Feature usage frequency, in-app behavior, transaction patterns, error reports."
+                                        ]
+                                    },
+                                    {
+                                        "paragraph": "2.2.3 Transaction-Related Information",
+                                        "subItems": [
+                                            "Wallet information: Wallet addresses, transaction hashes, balance information;",
+                                            "Transaction data: Transaction amounts, timestamps, transaction types, transaction status;",
+                                            "Card usage information: Card type, card status, spending records (without full card numbers)."
+                                        ]
+                                    },
+                                    {
+                                        "paragraph": "2.2.4 Information from Third-Party Sources",
+                                        "subItems": [
+                                            "Identity verification results: Identity verification status and risk scores from ZOLOZ;",
+                                            "Payment network data: Transaction processing information from Visa/Mastercard and other payment networks;",
+                                            "Blockchain data: Transaction information available on public blockchains."
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "2.3 Special Categories of Data",
+                                "content": [
+                                    {
+                                        "paragraph": "We do not intentionally collect or process data concerning your race or ethnicity, political opinions, religious or philosophical beliefs, trade union membership, genetic data, biometric data, health data, or data concerning your sex life or sexual orientation, unless required by law or with your explicit consent."
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "2.4 Children's Data",
+                                "content": [
+                                    {
+                                        "paragraph": "Our services are not directed to individuals under 18 years of age. We do not knowingly collect personal data from children under 18. If we discover that we have collected personal data from a child, we will promptly take steps to delete such information. If you believe we may have collected data from a child, please contact us at support@newpay.org."
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "3. IDENTITY VERIFICATION AND KYC PROCESS",
+                        "subsections": [
+                            {
+                                "title": "3.1 Identity Verification Process",
+                                "content": [
+                                    {
+                                        "paragraph": "To comply with global Anti-Money Laundering (AML) and Know-Your-Customer (KYC) regulations, we require users to complete an identity verification process. This process is performed by our partner ZOLOZ and includes the following steps:",
+                                        "subItems": [
+                                            "Submission of identity documents (such as passport, ID card);",
+                                            "Facial recognition verification;",
+                                            "Proof of address (applicable for certain service levels);",
+                                            "Other potential risk assessment steps."
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "3.2 Data Processing Responsibilities",
+                                "content": [
+                                    {
+                                        "paragraph": "In the identity verification process:",
+                                        "subItems": [
+                                            "ZOLOZ, as the data processor, is responsible for collecting, verifying, and storing your identity documents and biometric data;",
+                                            "NEWPAY, as the data controller, only receives verification results (such as \"Approved,\" \"More Information Needed,\" or \"Rejected\") and necessary identifying information."
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "3.3 Sensitive Data Protection",
+                                "content": [
+                                    {
+                                        "paragraph": "Your identity documents, facial recognition data, and other sensitive information are stored and processed by ZOLOZ using advanced encryption technology. NEWPAY does not directly access, store, or process these original files. ZOLOZ follows strict security standards, including:",
+                                        "subItems": [
+                                            "End-to-end encryption;",
+                                            "Data isolation storage;",
+                                            "Compliance with GDPR, PDPA, PCI-DSS Level 1 security standards;",
+                                            "Regular security audits and penetration testing."
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "4. PURPOSES AND LEGAL BASES FOR DATA PROCESSING",
+                        "subsections": [
+                            {
+                                "title": "4.1 Purposes of Data Use",
+                                "content": [
+                                    {
+                                        "paragraph": "We use the personal data we collect for the following purposes:",
+                                        "table": {
+                                            "headers": [
+                                                "Purpose",
+                                                "Data Categories",
+                                                "Legal Basis"
+                                            ],
+                                            "rows": [
+                                                [
+                                                    "Account creation and management",
+                                                    "Account information, identity verification results",
+                                                    "Contract performance, Legal obligation"
+                                                ],
+                                                [
+                                                    "Payment service provision",
+                                                    "Transaction data, card information",
+                                                    "Contract performance"
+                                                ],
+                                                [
+                                                    "Identity verification and fraud prevention",
+                                                    "Identity information, device information, transaction patterns",
+                                                    "Legal obligation, Legitimate interest"
+                                                ],
+                                                [
+                                                    "Customer support and issue resolution",
+                                                    "Contact information, communication records, account information",
+                                                    "Contract performance, Legitimate interest"
+                                                ],
+                                                [
+                                                    "Service improvement and product development",
+                                                    "Usage data, anonymized statistical information",
+                                                    "Legitimate interest"
+                                                ],
+                                                [
+                                                    "Compliance and regulatory reporting",
+                                                    "Identity information, transaction data",
+                                                    "Legal obligation"
+                                                ],
+                                                [
+                                                    "Marketing and communications",
+                                                    "Contact information, preference settings",
+                                                    "Consent (revocable)"
+                                                ]
+                                            ]
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "4.2 Legal Bases Explained",
+                                "content": [
+                                    {
+                                        "paragraph": "The legal bases for processing your personal data include:",
+                                        "subItems": [
+                                            "Contract performance: Processing is necessary for performing the service agreement between you and us;",
+                                            "Legal obligation: Processing is necessary for compliance with applicable laws and regulations, such as anti-money laundering regulations;",
+                                            "Legitimate interest: Processing is based on our legitimate interests, such as improving services or preventing fraud, and does not unduly impact your rights;",
+                                            "Consent: You have explicitly agreed to specific data processing, such as receiving marketing information."
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "4.3 Legitimate Interest Assessment",
+                                "content": [
+                                    {
+                                        "paragraph": "When we process data based on legitimate interest, we conduct a balancing test to ensure our interests are not overridden by your fundamental rights and freedoms. You have the right to object to processing based on legitimate interest."
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "4.4 Consent Management",
+                                "content": [
+                                    {
+                                        "paragraph": "For data processing based on consent:",
+                                        "subItems": [
+                                            "You can withdraw consent at any time, though this will not affect the lawfulness of processing before withdrawal;",
+                                            "Withdrawing consent is as simple as giving consent;",
+                                            "Refusing or withdrawing marketing consent will not affect your ability to use our core services."
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "5. WEB3 AND BLOCKCHAIN DATA PROCESSING",
+                        "subsections": [
+                            {
+                                "title": "5.1 Blockchain Transaction Characteristics",
+                                "content": [
+                                    {
+                                        "paragraph": "As a Web3 financial technology platform, we use blockchain technology to process digital asset transactions. You should understand the inherent characteristics of blockchains:",
+                                        "subItems": [
+                                            "Public nature: Transactions on blockchains are typically publicly visible;",
+                                            "Immutability: Once confirmed, transactions typically cannot be reversed or modified;",
+                                            "Decentralization: Transactions are processed on a distributed network, not controlled by a single entity."
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "5.2 On-Chain and Off-Chain Data",
+                                "content": [
+                                    {
+                                        "paragraph": "We distinguish between two types of data processing:",
+                                        "subItems": [
+                                            "On-chain data: Information recorded directly on the blockchain, such as transaction hashes, wallet addresses, transaction amounts, etc.;",
+                                            "Off-chain data: Information stored in our traditional databases, such as user profiles, preference settings, etc."
+                                        ]
+                                    },
+                                    {
+                                        "paragraph": "On-chain data is subject to the inherent limitations of blockchain technology and may not fully comply with certain data protection regulation requirements (such as the right to erasure). By using our services, you understand and accept these limitations."
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "5.3 Wallet Addresses and Personal Identity",
+                                "content": [
+                                    {
+                                        "paragraph": "Wallet addresses themselves are typically considered pseudonymous data, but when combined with other information, they may constitute personal data. We take measures to reduce the association between wallet addresses and your identity, but you should understand:",
+                                        "subItems": [
+                                            "Through blockchain analysis techniques, transaction patterns may be associated with identities;",
+                                            "We may need to maintain records of associations between wallet addresses and identities to comply with legal requirements."
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "5.4 Smart Contract Usage",
+                                "content": [
+                                    {
+                                        "paragraph": "We may use smart contracts to automatically execute certain functions. Regarding smart contracts:",
+                                        "subItems": [
+                                            "All smart contract code is audited by independent third parties;",
+                                            "Smart contract operations may not be under our direct control;",
+                                            "Smart contracts may have vulnerabilities or technical limitations."
+                                        ]
+                                    },
+                                    {
+                                        "paragraph": "We will provide relevant risk notifications and operational instructions before using smart contracts to process your data or assets."
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "6. DATA SHARING AND DISCLOSURE",
+                        "subsections": [
+                            {
+                                "title": "6.1 Data Sharing Principles",
+                                "content": [
+                                    {
+                                        "paragraph": "We do not sell, rent, or trade your personal data. We share your data with third parties only in the following circumstances:",
+                                        "subItems": [
+                                            "When necessary to provide services;",
+                                            "With your explicit consent;",
+                                            "When required or permitted by law."
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "6.2 Service Providers",
+                                "content": [
+                                    {
+                                        "paragraph": "We share necessary data with the following categories of service providers:",
+                                        "table": {
+                                            "headers": [
+                                                "Service Provider Category",
+                                                "Types of Data Shared",
+                                                "Purpose"
+                                            ],
+                                            "rows": [
+                                                [
+                                                    "Identity verification services",
+                                                    "Identity information",
+                                                    "Performing KYC verification"
+                                                ],
+                                                [
+                                                    "Payment processors",
+                                                    "Transaction data, card information",
+                                                    "Processing payment transactions"
+                                                ],
+                                                [
+                                                    "Card issuers",
+                                                    "Identity verification status, transaction data",
+                                                    "Issuing and managing payment cards"
+                                                ],
+                                                [
+                                                    "Cloud service providers",
+                                                    "Encrypted user data",
+                                                    "Securely storing and processing data"
+                                                ],
+                                                [
+                                                    "Customer support systems",
+                                                    "Contact information, communication records",
+                                                    "Providing customer support"
+                                                ]
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "paragraph": "All service providers are bound by Data Processing Agreements (DPAs) requiring them to:",
+                                        "subItems": [
+                                            "Process data only according to our instructions;",
+                                            "Implement appropriate security measures;",
+                                            "Assist us in fulfilling our data protection obligations;",
+                                            "Return or delete data after service termination."
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "6.3 Legal Disclosures",
+                                "content": [
+                                    {
+                                        "paragraph": "We may disclose your personal data in the following situations:",
+                                        "subItems": [
+                                            "In response to court orders, subpoenas, or other legal processes;",
+                                            "To comply with regulatory obligations such as anti-money laundering and counter-terrorist financing;",
+                                            "To protect NEWPAY's or users' rights, property, or safety;",
+                                            "To investigate suspicious transactions or violations of our terms of service."
+                                        ]
+                                    },
+                                    {
+                                        "paragraph": "We assess the legality of each disclosure request and disclose only information necessary to satisfy the request."
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "6.4 Business Transfers",
+                                "content": [
+                                    {
+                                        "paragraph": "If NEWPAY is involved in a merger, acquisition, or asset sale, your personal data may be transferred as part of the transferred assets. In such cases:",
+                                        "subItems": [
+                                            "We will notify you before the transfer;",
+                                            "The new data controller will continue to be bound by this policy or at least a policy providing an equivalent level of protection;",
+                                            "You will have the opportunity to choose whether to continue using the services."
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "6.5 International Data Transfers",
+                                "content": [
+                                    {
+                                        "paragraph": "As a global service, your data may be transferred, stored, and processed in locations outside your country/region of residence, including countries/regions that may not have equivalent data protection laws. We take the following measures to ensure the compliance of international data transfers:",
+                                        "subItems": [
+                                            "Implementing Standard Contractual Clauses (SCCs) approved by the European Commission;",
+                                            "Ensuring the recipient provides an adequate level of data protection;",
+                                            "Obtaining your explicit consent for specific transfers (where applicable);",
+                                            "Only transferring data when appropriate safeguards are in place."
+                                        ]
+                                    },
+                                    {
+                                        "paragraph": "You can contact our Data Protection Officer for more information about the safeguards for international data transfers."
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "7. DATA SECURITY",
+                        "subsections": [
+                            {
+                                "title": "7.1 Technical Security Measures",
+                                "content": [
+                                    {
+                                        "paragraph": "We implement the following technical measures to protect your data:",
+                                        "subItems": [
+                                            "Transmission encryption: All data transmissions use TLS 1.3 or higher encryption;",
+                                            "Storage encryption: Sensitive data is stored using AES-256 encryption;",
+                                            "Access control: Role-based access control and least privilege principle implementation;",
+                                            "Multi-factor authentication: Requiring staff to use multi-factor authentication to access systems;",
+                                            "Security monitoring: 24/7 real-time monitoring for system anomalies and intrusion attempts;",
+                                            "Vulnerability management: Regular vulnerability scanning and penetration testing;",
+                                            "Secure development: Following Secure Software Development Lifecycle (SSDLC) practices."
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "7.2 Organizational Security Measures",
+                                "content": [
+                                    {
+                                        "paragraph": "We also implement the following organizational measures:",
+                                        "subItems": [
+                                            "Employee training: Regular data protection and security awareness training for employees;",
+                                            "Access auditing: Recording and reviewing all data access activities;",
+                                            "Vendor assessment: Strict evaluation and monitoring of third-party service providers;",
+                                            "Incident response: Developing and testing data breach response plans;",
+                                            "Data Protection Impact Assessments: Conducting assessments for high-risk processing activities;",
+                                            "Security certifications: Following international security standards such as ISO 27001."
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "7.3 Data Breach Notification",
+                                "content": [
+                                    {
+                                        "paragraph": "In the event of a security incident that may affect your personal data:",
+                                        "subItems": [
+                                            "We will notify relevant data protection authorities within 72 hours of discovery (if required by applicable law);",
+                                            "If the incident is likely to pose a high risk to your rights and freedoms, we will notify you directly;",
+                                            "The notification will include the nature of the incident, potential consequences, measures we have taken, and steps you can take."
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "7.4 User Security Responsibilities",
+                                "content": [
+                                    {
+                                        "paragraph": "Protecting your data also requires your participation:",
+                                        "subItems": [
+                                            "Use strong passwords and change them regularly;",
+                                            "Enable two-factor authentication (2FA);",
+                                            "Keep your devices and software updated;",
+                                            "Be vigilant against phishing attacks and suspicious links;",
+                                            "Do not save login states on public devices;",
+                                            "Report suspicious activities promptly."
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "8. DATA RETENTION AND DELETION",
+                        "subsections": [
+                            {
+                                "title": "8.1 Data Retention Periods",
+                                "content": [
+                                    {
+                                        "paragraph": "We determine retention periods based on data type and purpose:",
+                                        "table": {
+                                            "headers": [
+                                                "Data Category",
+                                                "Retention Period",
+                                                "Retention Rationale"
+                                            ],
+                                            "rows": [
+                                                [
+                                                    "Account information",
+                                                    "Active account period + 5 years",
+                                                    "Legal obligations, potential dispute resolution"
+                                                ],
+                                                [
+                                                    "Identity verification data",
+                                                    "Active account period + 5 years",
+                                                    "Anti-money laundering regulatory requirements"
+                                                ],
+                                                [
+                                                    "Transaction records",
+                                                    "5-7 years after transaction completion",
+                                                    "Legal obligations, tax requirements"
+                                                ],
+                                                [
+                                                    "Communication records",
+                                                    "2 years after last contact",
+                                                    "Customer support, dispute resolution"
+                                                ],
+                                                [
+                                                    "Device information",
+                                                    "1 year after last activity",
+                                                    "Security and fraud prevention"
+                                                ],
+                                                [
+                                                    "Marketing preferences",
+                                                    "Until consent withdrawal or account closure",
+                                                    "Consent-based processing"
+                                                ]
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "paragraph": "In special circumstances, such as unresolved disputes, legal proceedings, or regulatory investigations, we may need to extend the retention period for specific data."
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "8.2 Data Minimization and Anonymization",
+                                "content": [
+                                    {
+                                        "paragraph": "To reduce the impact on your privacy:",
+                                        "subItems": [
+                                            "We regularly review stored data and delete information no longer needed;",
+                                            "Where possible, we anonymize rather than delete data, making it no longer capable of identifying individuals;",
+                                            "For statistical and analytical purposes, we prioritize using aggregated and anonymized data."
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "8.3 Data Deletion Process",
+                                "content": [
+                                    {
+                                        "paragraph": "When retention periods expire or upon your deletion request:",
+                                        "subItems": [
+                                            "We use secure deletion methods to remove data from active systems;",
+                                            "Backup data will be overwritten during normal backup cycles (maximum 30 days);",
+                                            "Third-party service providers will be instructed to delete relevant data;",
+                                            "We will provide deletion confirmation."
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "8.4 Special Considerations for Blockchain Data",
+                                "content": [
+                                    {
+                                        "paragraph": "Due to the technical characteristics of blockchains, on-chain data (such as transaction records) typically cannot be deleted. In such cases:",
+                                        "subItems": [
+                                            "We will delete information in off-chain systems that might associate this data with your identity;",
+                                            "We will take technical measures to make this data practically inaccessible;",
+                                            "We will clearly explain which data cannot be fully deleted due to technical limitations."
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "9. YOUR DATA RIGHTS",
+                        "subsections": [
+                            {
+                                "title": "9.1 Data Subject Rights Overview",
+                                "content": [
+                                    {
+                                        "paragraph": "Depending on applicable laws in your region, you may have the following rights:",
+                                        "table": {
+                                            "headers": [
+                                                "Right",
+                                                "Description",
+                                                "Limitations"
+                                            ],
+                                            "rows": [
+                                                [
+                                                    "Right of access",
+                                                    "Obtain a copy of your personal data that we process",
+                                                    "Should not affect others' rights"
+                                                ],
+                                                [
+                                                    "Right to rectification",
+                                                    "Correct inaccurate or incomplete personal data",
+                                                    "Requires proof of accurate information"
+                                                ],
+                                                [
+                                                    "Right to erasure",
+                                                    "Request deletion of your personal data in specific circumstances",
+                                                    "Subject to legal obligations and technical limitations"
+                                                ],
+                                                [
+                                                    "Right to restrict processing",
+                                                    "Limit our processing of your data in specific circumstances",
+                                                    "Does not affect data storage"
+                                                ],
+                                                [
+                                                    "Right to data portability",
+                                                    "Receive your data in a structured, commonly used format",
+                                                    "Only applies to data processed by automated means"
+                                                ],
+                                                [
+                                                    "Right to object",
+                                                    "Object to processing based on legitimate interest",
+                                                    "We may demonstrate compelling legitimate grounds"
+                                                ],
+                                                [
+                                                    "Right to withdraw consent",
+                                                    "Withdraw previously given consent at any time",
+                                                    "Does not affect lawfulness of processing before withdrawal"
+                                                ],
+                                                [
+                                                    "Right not to be subject to automated decision-making",
+                                                    "Not be subject solely to automated decision-making",
+                                                    "Certain exceptions apply"
+                                                ]
+                                            ]
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "9.2 How to Exercise Your Rights",
+                                "content": [
+                                    {
+                                        "paragraph": "You can exercise your data rights through the following methods:",
+                                        "subItems": [
+                                            "Via the \"Privacy Settings\" feature in the application;",
+                                            "By sending an email to support@newpay.org;",
+                                            "By mailing a written request to our registered address."
+                                        ]
+                                    },
+                                    {
+                                        "paragraph": "Please include in your request:",
+                                        "subItems": [
+                                            "Your full name and contact information;",
+                                            "The specific right you wish to exercise;",
+                                            "Any information that helps us locate your data."
+                                        ]
+                                    },
+                                    {
+                                        "paragraph": "We may need to verify your identity to protect your and others' data security."
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "9.3 Response Time and Fees",
+                                "content": [
+                                    {
+                                        "paragraph": "We will respond to your request within one month of receipt. If the request is complex or you submit multiple requests, we may need an additional two months, but we will notify you of the extension and reasons within one month. We generally do not charge fees for exercising data rights. However, if a request is manifestly unfounded, repetitive, or excessive, we may:",
+                                        "subItems": [
+                                            "Charge a reasonable administrative fee; or",
+                                            "Refuse to respond to the request."
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "9.4 Limitations on Rights",
+                                "content": [
+                                    {
+                                        "paragraph": "In some circumstances, we may not be able to fully satisfy your request, for example:",
+                                        "subItems": [
+                                            "When laws require us to retain certain data;",
+                                            "When data is related to ongoing transactions or legal claims;",
+                                            "When fulfilling the request would disclose personal data of others;",
+                                            "When technical limitations (such as blockchain data) make complete deletion impractical."
+                                        ]
+                                    },
+                                    {
+                                        "paragraph": "If we cannot fulfill your request, we will explain why and inform you of possible alternatives."
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "9.5 Right to Lodge a Complaint",
+                                "content": [
+                                    {
+                                        "paragraph": "If you believe our processing of your personal data violates data protection laws, you have the right to lodge a complaint with a data protection supervisory authority. We encourage you to contact us first so we have the opportunity to address your concerns."
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "10. COOKIES AND TRACKING TECHNOLOGIES",
+                        "subsections": [
+                          {
+                            "title": "10.1 Cookie Usage",
+                            "content": [
+                              {
+                                "paragraph": "We use cookies and similar technologies (such as web beacons, pixel tags, device identifiers) to provide, improve, and protect our services. Cookies are small text files stored on your device that help us identify your browser or device."
+                              }
+                            ]
+                          },
+                          {
+                            "title": "10.2 Types of Cookies",
+                            "content": [
+                              {
+                                "paragraph": "We use the following types of cookies:",
+                                "table": {
+                                  "headers": ["Cookie Type", "Purpose", "Retention Period", "Necessary"],
+                                  "rows": [
+                                    ["Necessary", "Enable core website functionality", "Session or persistent (up to 2 years)", "Yes"],
+                                    ["Functional cookies", "Remember your preferences and settings", "Persistent (up to 1 year)", "No"],
+                                    ["Analytical cookies", "Help us understand how users use our services", "Persistent (up to 2 years)", "No"],
+                                    ["Marketing cookies", "Used for advertising and content personalization", "Persistent (up to 1 year)", "No"]
+                                  ]
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "title": "10.3 Third-Party Cookies",
+                            "content": [
+                              {
+                                "paragraph": "Some cookies are set by third parties, including:"
+                              },
+                              {
+                                "subItems": [
+                                  "Analytics service providers (such as Google Analytics);",
+                                  "Social media platforms (such as Facebook, Twitter);",
+                                  "Advertising partners."
+                                ]
+                              },
+                              {
+                                "paragraph": "These third parties may use cookies to collect information about your activities on our website and other websites. We do not control these third parties' use of cookies. Please review the relevant third parties' privacy policies for more information."
+                              }
+                            ]
+                          },
+                          {
+                            "title": "10.4 Cookie Management",
+                            "content": [
+                              {
+                                "paragraph": "You can manage cookies through the following methods:",
+                                "subItems": [
+                                  "Browser settings: Most browsers allow you to view, manage, delete, and block cookies;",
+                                  "Cookie banner: When first visiting our website, you can choose to accept or reject non-necessary cookies;",
+                                  "Preference center: You can change your choices at any time through the \"Cookie Preferences\" page on our website."
+                                ]
+                              },
+                              {
+                                "paragraph": "Please note that blocking certain types of cookies may impact your experience and available features when using our services."
+                              }
+                            ]
+                          },
+                          {
+                            "title": "10.5 Do Not Track Signals",
+                            "content": [
+                              {
+                                "paragraph": "Some browsers send \"Do Not Track\" (DNT) signals. As there is currently no industry consensus on how to interpret these signals, we do not currently respond to DNT signals. However, you can use the methods described above to manage your cookie preferences."
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "title": "11. SUPPLEMENTARY PRIVACY RIGHTS FOR SPECIFIC REGIONS",
+                        "subsections": [
+                          {
+                            "title": "11.1 European Economic Area (EEA), United Kingdom, and Switzerland Users",
+                            "content": [
+                              {
+                                "paragraph": "If you are located in the European Economic Area, United Kingdom, or Switzerland, in addition to the rights described elsewhere in this policy, you also have:",
+                                "subItems": [
+                                  "The right to lodge a complaint with your country/region's data protection authority;",
+                                  "The right to seek compensation for material or non-material damage suffered due to our violation of the GDPR in certain circumstances;",
+                                  "The right to know the logic involved in automated decision-making and its potential impact on you."
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "title": "11.2 California Users",
+                            "content": [
+                              {
+                                "paragraph": "Under the California Consumer Privacy Act (CCPA) and California Privacy Rights Act (CPRA), California residents have additional rights, including:",
+                                "subItems": [
+                                  "The right to know what personal information we have collected, used, disclosed, or sold in the past 12 months;",
+                                  "The right to request deletion of certain personal information (subject to certain exceptions);",
+                                  "The right to opt out of the \"sale\" or \"sharing\" of personal information;",
+                                  "The right not to be discriminated against for exercising privacy rights."
+                                ]
+                              },
+                              {
+                                "paragraph": "We do not \"sell\" your personal information but may \"share\" certain information with third parties for targeted advertising. You can opt out by clicking the \"Do Not Sell or Share My Personal Information\" link at the bottom of our website."
+                              }
+                            ]
+                          },
+                          {
+                            "title": "11.3 Users in Other Regions",
+                            "content": [
+                              {
+                                "paragraph": "We are committed to respecting the privacy rights of all users, regardless of their location. If the laws in your region grant you specific data protection rights, we will respect those rights. Please contact our Data Protection Officer to learn about specific rights in your region."
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "title": "12. DATA PROTECTION CONTACTS",
+                        "subsections": [
+                          {
+                            "title": "12.1 Data Protection Officer",
+                            "content": [
+                              {
+                                "paragraph": "We have appointed a Data Protection Officer (DPO) to oversee our data protection strategies and compliance. You can contact our DPO through:",
+                                "subItems": [
+                                  "Email: support@newpay.org"
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "title": "12.2 Other Contact Methods",
+                            "content": [
+                              {
+                                "paragraph": "For general privacy inquiries or to exercise data rights:",
+                                "subItems": [
+                                  "Email: support@newpay.org"
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "title": "12.3 Response Commitment",
+                            "content": [
+                              {
+                                "paragraph": "We commit to:",
+                                "subItems": [
+                                  "Acknowledging receipt of your privacy-related inquiry within 2 business days;",
+                                  "Providing a substantive response within 15 business days;",
+                                  "Maintaining transparent communication and notifying you in advance if we need more time."
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "title": "13. POLICY UPDATES",
+                        "subsections": [
+                          {
+                            "title": "13.1 Update Mechanism",
+                            "content": [
+                              {
+                                "paragraph": "We may update this Privacy Policy from time to time to reflect:",
+                                "subItems": [
+                                  "Changes in laws and regulations;",
+                                  "New business practices or service features;",
+                                  "User feedback and suggestions;",
+                                  "Evolution of security best practices."
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "title": "13.2 Notification Methods",
+                            "content": [
+                              {
+                                "paragraph": "When we make significant changes to this policy, we will:",
+                                "subItems": [
+                                  "Notify you via email or in-app notification at least 30 days before implementing the changes;",
+                                  "Highlight the changes on our website and in our application;",
+                                  "Provide a summary of policy changes, highlighting important modifications;",
+                                  "Update the \"Last Updated\" date at the top of the policy."
+                                ]
+                              },
+                              {
+                                "paragraph": "For minor changes (such as clarifications or error corrections), we may not provide separate notification but will update the \"Last Updated\" date."
+                              }
+                            ]
+                          },
+                          {
+                            "title": "13.3 Effect of Continued Use",
+                            "content": [
+                              {
+                                "paragraph": "Continuing to use our services after policy updates take effect indicates your acceptance of the revised policy. If you do not agree with the new Privacy Policy, you should stop using our services and close your account."
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "title": "14. CONCLUSION",
+                        "subsections": [
+                          {
+                            "content": [
+                              {
+                                "paragraph": "Protecting your privacy is our top priority. We are committed to handling your personal data in a transparent, responsible, and respectful manner. If you have any questions, comments, or suggestions regarding this Privacy Policy, please do not hesitate to contact us. We value your feedback and will continuously strive to improve our privacy practices."
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                      
+                ]
+            },
+            "commission": {
+                "title": "Commission Policy Terms and Conditions",
+                "sections": [
+                    {
+                        "title": "I. General Provisions",
+                        "content": [
+                            {
+                                "paragraph": "1.1 This Commission Policy (hereinafter referred to as \"this Policy\") applies to individuals or organizations (hereinafter referred to as \"Promoters\") participating in NewPay's promotion programs, referral programs, agency programs, and any form of commission activities."
+                            },
+                            {
+                                "paragraph": "1.2 This Policy constitutes a supplementary part of the \"NewPay User Agreement\" and other platform terms. By participating, the Promoter agrees to all terms herein, and NewPay retains final interpretative rights."
+                            },
+                            {
+                                "paragraph": "1.3 NewPay reserves the right to modify or terminate this Policy at any time without prior notice. Continued participation constitutes acceptance of changes."
+                            }
+                        ]
+                    },
+                    {
+                        "title": "II. Eligibility Requirements",
+                        "content": [
+                            {
+                                "paragraph": "2.1 Only users or organizations meeting the following requirements may become Promoters:"
+                            },
+                            {
+                                "subItems": [
+                                    "(i) Basic Identity Requirements: Minimum age 18, passed KYC, no restriction or violation history;",
+                                    "(ii) Compliance Requirements: No illegal activity, accurate information, no third-party actions or falsification;",
+                                    "(iii) Agency Application: Individuals and organizations may apply. Corporate agents require review and signed agreements;",
+                                    "(iv) Restrictions: NewPay may disqualify Promoters for arbitrage or manipulation. Promotion is not allowed in restricted regions."
+                                ]
+                            },
+                            {
+                                "paragraph": "2.2 NewPay may update eligibility criteria or terminate privileges at its discretion without compensation."
+                            }
+                        ]
+                    },
+                    {
+                        "title": "III. Commission Mechanism",
+                        "content": [
+                            {
+                                "paragraph": "3.1 Promoters earn commissions by inviting users who complete valid actions through unique referral links or codes."
+                            },
+                            {
+                                "paragraph": "3.2 Valid Actions: Require successful KYC and activation. Definition may change based on platform notice."
+                            },
+                            {
+                                "paragraph": "3.3 Commission Structure:",
+                                "subItems": [
+                                    "User commissions for general users with fixed ratios;",
+                                    "Agent commissions for approved agents with tiered levels and multi-level structures (up to 3 levels);",
+                                    "Commission ratios set by NewPay and adjusted based on performance;"
+                                ]
+                            },
+                            {
+                                "paragraph": "3.4 Settlement:",
+                                "subItems": [
+                                    "Issued 7–30 working days after valid action, subject to review;",
+                                    "Invalid actions (e.g., fraud) result in cancellation and possible ban;",
+                                    "User commissions shown in-app; agents use a separate backend."
+                                ]
+                            },
+                            {
+                                "paragraph": "3.5 Other Provisions:",
+                                "subItems": [
+                                    "Minimum payout is 100 USDT;",
+                                    "NewPay may cap commissions and adjust values unilaterally;",
+                                    "Only NewPay’s backend records are valid for calculation."
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": "IV. Commission Issuance and Settlement Mechanism",
+                        "content": [
+                            {
+                                "paragraph": "4.1 Platform handles settlements automatically once thresholds are met."
+                            },
+                            {
+                                "paragraph": "4.2 Payment Settings:",
+                                "subItems": [
+                                    "Default in USDT to bound wallet address;",
+                                    "Wallet must be accurate and secure;",
+                                    "Changes to wallet info trigger risk controls."
+                                ]
+                            },
+                            {
+                                "paragraph": "4.3 Cycle:",
+                                "subItems": [
+                                    "No fixed schedule; once 100 USDT is reached, payout is triggered;",
+                                    "Pending reviews delay payouts;"
+                                ]
+                            },
+                            {
+                                "paragraph": "4.4 Exceptions and Disputes:",
+                                "subItems": [
+                                    "Anomalies may lead to freezing, audit, or cancellation;",
+                                    "Appeals must be filed within 7 days;"
+                                ]
+                            },
+                            {
+                                "paragraph": "4.5 Final Interpretation: NewPay has full authority over settlement rules and may adjust them as needed."
+                            }
+                        ]
+                    },
+                    {
+                        "title": "V. Violations and Termination",
+                        "content": [
+                            {
+                                "paragraph": "5.1 Violation Categories:"
+                            },
+                            {
+                                "subItems": [
+                                    "(i) Fraud: Fake identities, VPN abuse, fake transactions;",
+                                    "(ii) Promotion Violations: Unauthorized branding, false ads, bypassing compliance;",
+                                    "(iii) Manipulation: Scripting, multi-account collaboration, data tampering;",
+                                    "(iv) Legal Issues: Money laundering, gambling, illegal content;",
+                                    "(v) Harmful Conduct: Incitement, promoting competitors, non-cooperation with audits."
+                                ]
+                            },
+                            {
+                                "paragraph": "5.2 Penalties may include:",
+                                "subItems": [
+                                    "Termination of Promoter status;",
+                                    "Account and fund freezing;",
+                                    "Recovery of commissions;",
+                                    "Legal action and reporting to authorities."
+                                ]
+                            },
+                            {
+                                "paragraph": "5.3 NewPay reserves full discretion to determine violations and is not obligated to disclose detection methods."
+                            }
+                        ]
+                    },
+                    {
+                        "title": "VI. Disclaimer",
+                        "content": [
+                            {
+                                "paragraph": "6.1 The commission program is not a guaranteed income scheme and is subject to multiple variable factors."
+                            },
+                            {
+                                "paragraph": "6.2 NewPay may modify or suspend the program for legal, business, or security reasons without liability."
+                            },
+                            {
+                                "paragraph": "6.3 Promoters are responsible for safeguarding accounts and devices. Losses from negligence are not NewPay's liability."
+                            },
+                            {
+                                "paragraph": "6.4 NewPay is not liable for issues beyond its control such as blockchain congestion, third-party failures, system updates, or force majeure."
+                            },
+                            {
+                                "paragraph": "6.5 All records are based solely on backend system data. Appeals must be made within 30 days of issuance."
+                            },
+                            {
+                                "paragraph": "6.6 Participation is voluntary and may be terminated by NewPay at any time without compensation."
+                            }
+                        ]
+                    },
+                    {
+                        "title": "VII. Applicable Law and Dispute Resolution",
+                        "content": [
+                            {
+                                "paragraph": "7.1 This Policy is governed by the laws of the Hong Kong Special Administrative Region, excluding conflict of law rules."
+                            },
+                            {
+                                "paragraph": "7.2 Disputes should first be resolved through NewPay's official support channels."
+                            },
+                            {
+                                "paragraph": "7.3 If unresolved, disputes may be settled through:",
+                                "subItems": [
+                                    "a. Arbitration at HKIAC under its rules in English; or",
+                                    "b. Legal action in courts in Hong Kong, China."
+                                ]
+                            },
+                            {
+                                "paragraph": "7.4 Violations during dispute periods (e.g., abuse of appeal process, misinformation, collusion) may result in suspension and sanctions."
+                            },
+                            {
+                                "paragraph": "7.5 NewPay has the final interpretative authority of this Policy and all commission activities."
+                            },
+                            {
+                                "paragraph": "7.6 Invalid provisions do not affect the remainder of the Policy."
+                            },
+                            {
+                                "paragraph": "7.7 NewPay’s total liability is limited to the disputed commission amount and excludes indirect or punitive damages."
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "sidebarItems": [
+            {
+                "id": "general",
+                "label": "General Terms and Conditions",
+                "isMain": true,
+                "hasChildren": true,
+                "children": [
+                    {
+                        "id": "custodian-account",
+                        "label": "A. Custodian Account",
+                        "level": 1
+                    },
+                    {
+                        "id": "newpay-card",
+                        "label": "B. NewPay Card",
+                        "level": 1,
+                        "hasChildren": true,
+                        "children": [
+                            {
+                                "id": "singapore-cards-non-resident",
+                                "label": "Singapore cards: Non-Singapore Resident Cardholders",
+                                "level": 2
+                            },
+                            {
+                                "id": "hongkong-card",
+                                "label": "Hong Kong cards: General",
+                                "level": 2
+                            },
+                            {
+                                "id": "singapore-card-resident",
+                                "label": "Singapore card: Singapore Resident Cardholders",
+                                "level": 2
+                            }
+                        ]
+                    },
+                    {
+                        "id": "swap",
+                        "label": "C. Swap Transactions",
+                        "level": 1
+                    },
+                    {
+                        "id": "custody",
+                        "label": "D. Custodian Wallet, Self-Custody Wallet and Smart Contract Vault, and Virtual Account",
+                        "level": 1
+                    },
+                    {
+                        "id": "other",
+                        "label": "E. Other Third-Party Services",
+                        "level": 1
+                    },
+                    {
+                        "id": "virtual-assets",
+                        "label": "F. Virtual Assets Loan Services",
+                        "level": 1
+                    }
+                ]
+            },
+            {
+                "id": "privacy",
+                "label": "Privacy Policy",
+                "isMain": true
+            },
+            {
+                "id": "commission",
+                "label": "Commission Policy Terms and Conditions",
+                "isMain": true
+            }
+        ]
     }
 }
