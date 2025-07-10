@@ -183,8 +183,8 @@ export default function TermsAndConditions() {
       <div className="container lg:px-0 pt-8 mx-auto flex flex-col lg:flex-row gap-8 text-sm">
         {/* Sidebar */}
         <div className="lg:w-1/3 px-2 lg:px-0">
-          <div className="sticky top-5 max-h-[calc(100vh-20px)] overflow-y-auto rounded-lg custom-scroll">
-            <nav className="space-y-0 max-h-[calc(100vh-60px)]">
+          <div className="sticky top-18 max-h-[calc(100vh-72px)] overflow-y-auto rounded-lg custom-scroll">
+            <nav className="space-y-0 max-h-[calc(100vh-80px)]">
               {sidebarItems.map((item) => renderSidebarItem(item))}
             </nav>
           </div>
