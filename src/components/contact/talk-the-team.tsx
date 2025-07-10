@@ -4,6 +4,7 @@ import bgTalkTheTeam from '@/images/contact/talk-the-team.png';
 import world from '@/images/contact/world.svg';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const TalkTheTeam = () => {
 
@@ -22,10 +23,12 @@ const TalkTheTeam = () => {
                         <Image src={world} alt="world Image" />
                         <span className='text-white text-[11px] lg:text-sm leading-[16px] font-medium'>{t("rightSupport")}</span>
                     </p>
-                    <p className='bg-black/10 cursor-pointer py-2 px-4 h-[36px] rounded-md backdrop-blur-[20px] flex justify-center items-center gap-3'>
-                        <Image src={letter} alt="world Image" />
-                        <span className='text-white text-[11px] lg:text-sm leading-[16px] font-medium'>support@newpay.org</span>
-                    </p>
+                    <Link href='mailTo:support@newpay.org'>
+                        <p className='bg-black/10 cursor-pointer py-2 px-4 h-[36px] rounded-md backdrop-blur-[20px] flex justify-center items-center gap-3'>
+                            <Image src={letter} alt="world Image" />
+                            <span className='text-white text-[11px] lg:text-sm leading-[16px] font-medium'>support@newpay.org</span>
+                        </p>
+                    </Link>
                 </div>
             </div>
         </div>
