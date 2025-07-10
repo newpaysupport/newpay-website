@@ -41,7 +41,7 @@ export default function TermsAndConditions() {
 
   const handleSectionClick = (sectionId: string) => {
     setActiveSection(sectionId);
-    if (generalChildrenIds.includes(sectionId) || idSubitems.includes(sectionId)) {
+    if (generalChildrenIds.includes(sectionId)) {
       setDisplaySection('general');
     } else if (idPivacy.includes(sectionId)) {
       setDisplaySection('privacy');
