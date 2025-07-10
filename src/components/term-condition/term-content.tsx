@@ -15,9 +15,9 @@ const TermContent = ({ content, idPivacy, idCommission }: { content: any, idPiva
                         <div className="space-y-6">
                             {content.sections?.map((section: any, index: number) => (
                                 <div
-                                    className="text-sm"
+                                    className="text-sm scroll-mt-50"
                                     key={index}
-                                    id={idArray[index]}
+                                    id={idArray === idPivacy ? idArray[index - 1] : idArray[index]}
                                 >
                                     <h4 className="font-semibold text-[#FFF] mb-3">{section.title}</h4>
 
