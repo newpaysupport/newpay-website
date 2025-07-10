@@ -29,7 +29,7 @@ const TermGeneral = ({ currentSectionContent, ids, idSubitems }: { currentSectio
                 {/* Sections */}
                 <div className="space-y-8">
                     {currentSectionContent.sections.map((section: any, idx: number) => (
-                        <div key={idx} id={ids[idx + 1]} className="text-sm">
+                        <div key={idx} id={ids[idx + 1]} className="text-sm scroll-mt-50">
                             <h4 className="font-semibold text-[#FFF] mb-3">{section.title}</h4>
 
 
