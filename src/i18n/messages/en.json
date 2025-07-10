@@ -1815,7 +1815,9 @@
                     {
                         "title": "IMPORTANT NOTICE",
                         "content": [
-                            {"paragraph" : "Before using the NEWPAY platform and its related services, please carefully read and fully understand this Privacy Policy. This policy details how we collect, use, store, share, and protect your personal information, as well as the rights you have regarding your data. By accessing or using the NEWPAY platform, you acknowledge that you have agreed to the data processing activities described in this policy. If you do not agree with any part of this policy, please immediately cease using our services."}
+                            {
+                                "paragraph": "Before using the NEWPAY platform and its related services, please carefully read and fully understand this Privacy Policy. This policy details how we collect, use, store, share, and protect your personal information, as well as the rights you have regarding your data. By accessing or using the NEWPAY platform, you acknowledge that you have agreed to the data processing activities described in this policy. If you do not agree with any part of this policy, please immediately cease using our services."
+                            }
                         ]
                     },
                     {
@@ -3045,72 +3047,72 @@
                 "children": [
                     {
                         "id": "general-1",
-                        "label": "1. GENERAL PROVISIONS",
+                        "label": "1. General provisions",
                         "level": 1
                     },
                     {
                         "id": "general-2",
-                        "label": "2. SERVICE DESCRIPTION",
+                        "label": "2. Service description",
                         "level": 1
                     },
                     {
                         "id": "general-3",
-                        "label": "3. ACCOUNT REGISTRATION AND MANAGEMENT",
+                        "label": "3. Account registration and management",
                         "level": 1
                     },
                     {
                         "id": "general-4",
-                        "label": "4. FUND MANAGEMENT AND TRANSACTIONS",
+                        "label": "4. Fund management and transactions",
                         "level": 1
                     },
                     {
                         "id": "general-5",
-                        "label": "5. FEES AND PRICING",
+                        "label": "5. Fees and pricing",
                         "level": 1
                     },
                     {
                         "id": "general-6",
-                        "label": "6. CARD USAGE RULES",
+                        "label": "6. Card usage rules",
                         "level": 1
                     },
                     {
                         "id": "general-7",
-                        "label": "7. REFUNDS AND DISPUTE RESOLUTION",
+                        "label": "7. Refunds and dispute resolution",
                         "level": 1
                     },
                     {
                         "id": "general-8",
-                        "label": "8. COMPLIANCE AND RISK CONTROL",
+                        "label": "8. Compliance and risk control",
                         "level": 1
                     },
                     {
                         "id": "general-9",
-                        "label": "9. USER REWARDS AND REFERRAL PROGRAM",
+                        "label": "9. User rewards and referral program",
                         "level": 1
                     },
                     {
                         "id": "general-10",
-                        "label": "10. INTELLECTUAL PROPERTY AND BRAND USAGE",
+                        "label": "10. Intellectual property and brand usage",
                         "level": 1
                     },
                     {
                         "id": "general-11",
-                        "label": "11. LIMITATION OF LIABILITY AND DISCLAIMERS",
+                        "label": "11. Limitation of liability and disclaimers",
                         "level": 1
                     },
                     {
                         "id": "general-12",
-                        "label": "12. DISPUTE RESOLUTION",
+                        "label": "12. Dispute resolution",
                         "level": 1
                     },
                     {
                         "id": "general-13",
-                        "label": "13. GENERAL PROVISIONS",
+                        "label": "13. General provisions",
                         "level": 1
                     },
                     {
                         "id": "general-14",
-                        "label": "14. CONTACT US",
+                        "label": "14. Contact us",
                         "level": 1
                     }
                 ]
@@ -3123,72 +3125,72 @@
                 "children": [
                     {
                         "id": "privacy-1",
-                        "label": "1. GENERAL PROVISIONS",
+                        "label": "1. General provisions",
                         "level": 1
                     },
                     {
                         "id": "privacy-2",
-                        "label": "2. DATA COLLECTION AND PROCESSING",
+                        "label": "2. Data collection and processing",
                         "level": 1
                     },
                     {
                         "id": "privacy-3",
-                        "label": "3. IDENTITY VERIFICATION AND KYC PROCESS",
+                        "label": "3. Identity verification and KYC process",
                         "level": 1
                     },
                     {
                         "id": "privacy-4",
-                        "label": "4. PURPOSES AND LEGAL BASES FOR DATA PROCESSING",
+                        "label": "4. Purposes and legal bases for data processing",
                         "level": 1
                     },
                     {
                         "id": "privacy-5",
-                        "label": "5. WEB3 AND BLOCKCHAIN DATA PROCESSING",
+                        "label": "5. Web3 and blockchain data processing",
                         "level": 1
                     },
                     {
                         "id": "privacy-6",
-                        "label": "6. DATA SHARING AND DISCLOSURE",
+                        "label": "6. Data sharing and disclosure",
                         "level": 1
                     },
                     {
                         "id": "privacy-7",
-                        "label": "7. DATA SECURITY",
+                        "label": "7. Data security",
                         "level": 1
                     },
                     {
                         "id": "privacy-8",
-                        "label": "8. DATA RETENTION AND DELETION",
+                        "label": "8. Data retention and deletion",
                         "level": 1
                     },
                     {
                         "id": "privacy-9",
-                        "label": "9. YOUR DATA RIGHTS",
+                        "label": "9. Your data rights",
                         "level": 1
                     },
                     {
                         "id": "privacy-10",
-                        "label": "10. COOKIES AND TRACKING TECHNOLOGIES",
+                        "label": "10. Cookies and tracking technologies",
                         "level": 1
                     },
                     {
                         "id": "privacy-11",
-                        "label": "11. SUPPLEMENTARY PRIVACY RIGHTS FOR SPECIFIC REGIONS",
+                        "label": "11. Supplementary privacy rights for specific regions",
                         "level": 1
                     },
                     {
                         "id": "privacy-12",
-                        "label": "12. DATA PROTECTION CONTACTS",
+                        "label": "12. Data protection contacts",
                         "level": 1
                     },
                     {
                         "id": "privacy-13",
-                        "label": "13. POLICY UPDATES",
+                        "label": "13. Policy updates",
                         "level": 1
                     },
                     {
                         "id": "privacy-14",
-                        "label": "14. CONCLUSION",
+                        "label": "14. Conclusion",
                         "level": 1
                     }
                 ]
@@ -3201,27 +3203,27 @@
                 "children": [
                     {
                         "id": "I",
-                        "label": "I. General Provisions",
+                        "label": "I. General provisions",
                         "level": 1
                     },
                     {
                         "id": "II",
-                        "label": "II. Eligibility Requirements",
+                        "label": "II. Eligibility requirements",
                         "level": 1
                     },
                     {
                         "id": "III",
-                        "label": "III. Commission Mechanism",
+                        "label": "III. Commission mechanism",
                         "level": 1
                     },
                     {
                         "id": "IV",
-                        "label": "IV. Commission Issuance and Settlement Mechanism",
+                        "label": "IV. Commission issuance and settlement mechanism",
                         "level": 1
                     },
                     {
                         "id": "V",
-                        "label": "V. Violations and Termination",
+                        "label": "V. Violations and termination",
                         "level": 1
                     },
                     {
@@ -3231,7 +3233,7 @@
                     },
                     {
                         "id": "VII",
-                        "label": "VII. Applicable Law and Dispute Resolution",
+                        "label": "VII. Applicable law and dispute resolution",
                         "level": 1
                     }
                 ]

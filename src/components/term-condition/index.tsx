@@ -104,6 +104,39 @@ export default function TermsAndConditions() {
     };
   }, [])
 
+  // Wheel event handling for sidebar
+  useEffect(() => {
+    const sidebar = document.querySelector('.sidebar-container') as HTMLElement | null;
+    if (!sidebar) return;
+
+    const handleWheel = (event: WheelEvent) => {
+      event.preventDefault();
+      event.stopPropagation();
+      sidebar.scrollTop += event.deltaY * 1.5;
+    };
+
+    sidebar.addEventListener('wheel', handleWheel, { passive: false });
+
+    // no scroll body when on sidebar
+    const handleMouseEnter = () => {
+      document.body.style.overflow = 'hidden';
+    };
+
+    const handleMouseLeave = () => {
+      document.body.style.overflow = 'auto';
+    };
+
+    sidebar.addEventListener('mouseenter', handleMouseEnter);
+    sidebar.addEventListener('mouseleave', handleMouseLeave);
+
+    return () => {
+      sidebar.removeEventListener('wheel', handleWheel);
+      sidebar.removeEventListener('mouseenter', handleMouseEnter);
+      sidebar.removeEventListener('mouseleave', handleMouseLeave);
+      document.body.style.overflow = 'auto';
+    };
+  }, []);
+
   const renderSidebarItem = (item: any, depth = 0) => {
     const isActive = activeSection === item.id;
     const isExpanded = expandedSections[item.id];
@@ -180,10 +213,10 @@ export default function TermsAndConditions() {
         </div>
       </div>
 
-      <div className="container lg:px-0 pt-8 mx-auto flex flex-col lg:flex-row gap-8 text-sm">
+      <div className="container lg:px-20 pt-8 mx-auto flex flex-col lg:flex-row gap-8 text-sm">
         {/* Sidebar */}
         <div className="lg:w-1/3 px-2 lg:px-0">
-          <div className="sticky top-18 max-h-[calc(100vh-72px)] overflow-y-auto rounded-lg custom-scroll">
+          <div className="sticky top-18 max-h-[calc(100vh-72px)] overflow-y-auto rounded-lg custom-scroll scroll-smooth sidebar-container">
             <nav className="space-y-0 max-h-[calc(100vh-80px)]">
               {sidebarItems.map((item) => renderSidebarItem(item))}
             </nav>
