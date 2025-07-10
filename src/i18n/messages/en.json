@@ -1039,7 +1039,8 @@
                                         "description": [
                                             "Transaction monitoring and security alerts;",
                                             "Spending analysis and reports;",
-                                            "Customer support and dispute resolution; User referral and reward programs."
+                                            "Customer support and dispute resolution;",
+                                            "User referral and reward programs."
                                         ]
                                     }
                                 ]
@@ -1048,7 +1049,8 @@
                                 "subsection": "2.3 Service Availability",
                                 "paragraph": "We strive to provide continuous, stable services but do not guarantee that services will be uninterrupted or error-free. Services may be affected by:",
                                 "restrictions": [
-                                    "System maintenance and upgrades; Network or device failures;",
+                                    "System maintenance and upgrades;",
+                                    "Network or device failures;",
                                     "Force majeure events;",
                                     "Blockchain network congestion or failures;",
                                     "Payment network or banking system issues."
@@ -1126,7 +1128,7 @@
                                     "At the request of regulatory authorities;",
                                     "Other reasonable causes."
                                 ],
-                                "paragraph2": "Accounts that have not completed KYC will have limited functionality and will not be able to apply for cards, withdraw funds, or make payments, although they may deposit funds in advance."
+                                "paragraph2": "During account freezing, you may not be able to access account funds or use platform services. We will notify you of the reason for freezing and required measures when reasonably feasible."
                             },
                             {
                                 "subsection": "3.6 Account Closure",
@@ -1311,7 +1313,7 @@
                                 "fees": [
                                     "Platform announcements;",
                                     "Email notifications;",
-                                    "In-app pushes. Significant fee changes will be announced 3 days in advance."
+                                    "In-app pushes."
                                 ],
                                 "paragraph2": "Significant fee changes will be announced 3 days in advance. Continued use of services indicates acceptance of the new fee standards."
                             },
@@ -1332,7 +1334,8 @@
                                 "paragraph": "You are responsible for determining and paying all applicable taxes related to using our services, including but not limited to:",
                                 "fees": [
                                     "Capital gains tax that may arise from digital asset transactions;",
-                                    "Value-added tax or sales tax; Income tax;",
+                                    "Value-added tax or sales tax;",
+                                    "Income tax;",
                                     "Other applicable taxes."
                                 ],
                                 "paragraph2": "NewPay does not provide tax advice and recommends consulting professional tax advisors to understand your specific tax obligations."
@@ -1654,7 +1657,7 @@
                             },
                             {
                                 "subsection": "11.2 Limitation of Liability",
-                                "paragraph": "To the maximum extent permitted by law, NEWPAY and its affiliates, directors, employees, and agents shall not be liable for any indirect, incidental, special, punitive, or consequential damages, including but not limited to:",
+                                "paragraph": "To the maximum extent permitted by law, NEWPAY and its affiliates, directors, employees, and agents shall not be liable for:",
                                 "refund": [
                                     {
                                         "type": "11.2.1 Indirect Damages",
@@ -1799,7 +1802,6 @@
                         "title": "14. CONTACT US",
                         "content": [
                             {
-                                "subsection": "14.1 Contact Information",
                                 "paragraph": "If you have any questions or suggestions regarding these Terms, please contact us through:",
                                 "paragraph2": "Support: support@newpay.org"
                             }
@@ -1809,13 +1811,15 @@
             },
             "privacy": {
                 "title": "NEWPAY PRIVACY POLICY",
-                "importantNotice": {
-                    "title": "IMPORTANT NOTICE",
-                    "content": "Before using the NEWPAY platform and its related services, please carefully read and fully understand this Privacy Policy. This policy details how we collect, use, store, share, and protect your personal information, as well as the rights you have regarding your data. By accessing or using the NEWPAY platform, you acknowledge that you have agreed to the data processing activities described in this policy. If you do not agree with any part of this policy, please immediately cease using our services."
-                },
                 "sections": [
                     {
-                        "id" : "privacy-1",
+                        "title": "IMPORTANT NOTICE",
+                        "content": [
+                            {"paragraph" : "Before using the NEWPAY platform and its related services, please carefully read and fully understand this Privacy Policy. This policy details how we collect, use, store, share, and protect your personal information, as well as the rights you have regarding your data. By accessing or using the NEWPAY platform, you acknowledge that you have agreed to the data processing activities described in this policy. If you do not agree with any part of this policy, please immediately cease using our services."}
+                        ]
+                    },
+                    {
+                        "id": "privacy-1",
                         "title": "1. GENERAL PROVISIONS",
                         "subsections": [
                             {
@@ -1858,7 +1862,7 @@
                         ]
                     },
                     {
-                        "id" : "privacy-2",
+                        "id": "privacy-2",
                         "title": "2. DATA COLLECTION AND PROCESSING",
                         "subsections": [
                             {
@@ -1935,7 +1939,7 @@
                         ]
                     },
                     {
-                        "id" : "privacy-3",
+                        "id": "privacy-3",
                         "title": "3. IDENTITY VERIFICATION AND KYC PROCESS",
                         "subsections": [
                             {
@@ -1981,7 +1985,7 @@
                         ]
                     },
                     {
-                        "id" : "privacy-4",
+                        "id": "privacy-4",
                         "title": "4. PURPOSES AND LEGAL BASES FOR DATA PROCESSING",
                         "subsections": [
                             {
@@ -2074,7 +2078,7 @@
                         ]
                     },
                     {
-                        "id" : "privacy-5",
+                        "id": "privacy-5",
                         "title": "5. WEB3 AND BLOCKCHAIN DATA PROCESSING",
                         "subsections": [
                             {
@@ -2136,7 +2140,7 @@
                         ]
                     },
                     {
-                        "id" : "privacy-6",
+                        "id": "privacy-6",
                         "title": "6. DATA SHARING AND DISCLOSURE",
                         "subsections": [
                             {
@@ -2253,7 +2257,7 @@
                         ]
                     },
                     {
-                        "id" : "privacy-7",
+                        "id": "privacy-7",
                         "title": "7. DATA SECURITY",
                         "subsections": [
                             {
@@ -2321,7 +2325,7 @@
                         ]
                     },
                     {
-                        "id" : "privacy-8",
+                        "id": "privacy-8",
                         "title": "8. DATA RETENTION AND DELETION",
                         "subsections": [
                             {
@@ -2417,7 +2421,7 @@
                         ]
                     },
                     {
-                        "id" : "privacy-9",
+                        "id": "privacy-9",
                         "title": "9. YOUR DATA RIGHTS",
                         "subsections": [
                             {
@@ -2541,7 +2545,7 @@
                         ]
                     },
                     {
-                        "id" : "privacy-10",
+                        "id": "privacy-10",
                         "title": "10. COOKIES AND TRACKING TECHNOLOGIES",
                         "subsections": [
                             {
@@ -2639,7 +2643,7 @@
                         ]
                     },
                     {
-                        "id" : "privacy-11",
+                        "id": "privacy-11",
                         "title": "11. SUPPLEMENTARY PRIVACY RIGHTS FOR SPECIFIC REGIONS",
                         "subsections": [
                             {
@@ -2683,7 +2687,7 @@
                         ]
                     },
                     {
-                        "id" : "privacy-12",
+                        "id": "privacy-12",
                         "title": "12. DATA PROTECTION CONTACTS",
                         "subsections": [
                             {
@@ -2724,7 +2728,7 @@
                         ]
                     },
                     {
-                        "id" : "privacy-13",
+                        "id": "privacy-13",
                         "title": "13. POLICY UPDATES",
                         "subsections": [
                             {
@@ -2769,7 +2773,7 @@
                         ]
                     },
                     {
-                        "id" : "privacy-14",
+                        "id": "privacy-14",
                         "title": "14. CONCLUSION",
                         "subsections": [
                             {
@@ -2787,7 +2791,7 @@
                 "title": "Commission Policy Terms and Conditions",
                 "sections": [
                     {
-                        "id" : "I",
+                        "id": "I",
                         "title": "I. General Provisions",
                         "content": [
                             {
@@ -2802,7 +2806,7 @@
                         ]
                     },
                     {
-                        "id" : "II",
+                        "id": "II",
                         "title": "II. Eligibility Requirements",
                         "content": [
                             {
@@ -2834,7 +2838,7 @@
                         ]
                     },
                     {
-                        "id" : "III",
+                        "id": "III",
                         "title": "III. Commission Mechanism",
                         "content": [
                             {
@@ -2883,7 +2887,7 @@
                         ]
                     },
                     {
-                        "id" : "IV",
+                        "id": "IV",
                         "title": "IV. Commission Issuance and Settlement Mechanism",
                         "content": [
                             {
@@ -2928,7 +2932,7 @@
                         ]
                     },
                     {
-                        "id" : "V",
+                        "id": "V",
                         "title": "V. Violations and Termination",
                         "content": [
                             {
@@ -2974,7 +2978,7 @@
                         ]
                     },
                     {
-                        "id" : "VI",
+                        "id": "VI",
                         "title": "VI. Disclaimer",
                         "content": [
                             {
@@ -2998,7 +3002,7 @@
                         ]
                     },
                     {
-                        "id" : "VII",
+                        "id": "VII",
                         "title": "VII. Applicable Law and Dispute Resolution",
                         "content": [
                             {
@@ -3042,124 +3046,22 @@
                     {
                         "id": "general-1",
                         "label": "1. GENERAL PROVISIONS",
-                        "level": 1,
-                        "hasChildren": true,
-                        "children": [
-                            {
-                                "id": "general-1-1",
-                                "label": "1.1 About Us",
-                                "level": 2
-                            },
-                            {
-                                "id": "general-1-2",
-                                "label": "1.2 Definitions",
-                                "level": 2
-                            },
-                            {
-                                "id": "general-1-3",
-                                "label": "1.3 Acceptance of Terms",
-                                "level": 2
-                            },
-                            {
-                                "id": "general-1-4",
-                                "label": "1.4 Amendments to Terms",
-                                "level": 2
-                            }
-                        ]
+                        "level": 1
                     },
                     {
                         "id": "general-2",
                         "label": "2. SERVICE DESCRIPTION",
-                        "level": 1,
-                        "hasChildren": true,
-                        "children": [
-                            {
-                                "id": "general-2-1",
-                                "label": "2.1 Platform Positioning",
-                                "level": 2
-                            },
-                            {
-                                "id": "general-2-2",
-                                "label": "2.2 Main Services",
-                                "level": 2
-                            },
-                            {
-                                "id": "general-2-3",
-                                "label": "2.3 Service Availability",
-                                "level": 2
-                            },
-                            {
-                                "id": "general-2-4",
-                                "label": "2.4 Service Restrictions",
-                                "level": 2
-                            }
-                        ]
+                        "level": 1
                     },
                     {
                         "id": "general-3",
                         "label": "3. ACCOUNT REGISTRATION AND MANAGEMENT",
-                        "level": 1,
-                        "hasChildren": true,
-                        "children": [
-                            {
-                                "id": "general-3-1",
-                                "label": "3.1 Registration Eligibility",
-                                "level": 2
-                            },
-                            {
-                                "id": "general-3-2",
-                                "label": "3.2 Registration Process",
-                                "level": 2
-                            },
-                            {
-                                "id": "general-3-3",
-                                "label": "3.3 Identity Verification (KYC) Requirements",
-                                "level": 2
-                            },
-                            {
-                                "id": "general-3-4",
-                                "label": "3.4 Account Security",
-                                "level": 2
-                            },
-                            {
-                                "id": "general-3-5",
-                                "label": "3.5 Account Freezing and Termination",
-                                "level": 2
-                            }
-                        ]
+                        "level": 1
                     },
                     {
                         "id": "general-4",
                         "label": "4. FUND MANAGEMENT AND TRANSACTIONS",
-                        "level": 1,
-                        "hasChildren": true,
-                        "children": [
-                            {
-                                "id": "general-4-1",
-                                "label": "4.1 Account Structure",
-                                "level": 2
-                            },
-                            {
-                                "id": "general-4-2",
-                                "label": "4.2 Deposits",
-                                "level": 2
-                            },
-                            {
-                                "id": "general-4-3",
-                                "label": "4.3 Card Funding",
-                                "level": 2
-                            },
-                            {
-                                "id": "general-4-4",
-                                "label": "4.4 Payments and Spending",
-                                "level": 2
-                            },
-                            {
-                                "id": "general-4-5",
-                                "label": "4.5 Withdrawals",
-                                "level": 2
-                            }
-                        ]
+                        "level": 1
                     },
                     {
                         "id": "general-5",

@@ -28,10 +28,15 @@ export default function TermsAndConditions() {
   const [pendingScrollId, setPendingScrollId] = useState<string | null>(null);
 
   const toggleSection = (section: string) => {
-    setExpandedSections(prev => ({
-      ...prev,
-      [section]: !prev[section]
-    }));
+    setExpandedSections(prev => {
+      const isOpen = prev[section];
+      if (isOpen) {
+        return {}
+      }
+      return {
+        [section]: true
+      };
+    })
   };
 
   const handleSectionClick = (sectionId: string) => {
@@ -67,6 +72,37 @@ export default function TermsAndConditions() {
     };
     scroll();
   }, [pendingScrollId]);
+
+  //sidebar scroll handling
+  useEffect(() => {
+    const handleScroll = () => {
+      const allIds = [
+        ...generalChildrenIds,
+        ...idSubitems,
+        ...idPivacy,
+        ...idCommission,
+      ];
+
+      let foundId: string | null = null;
+      for (const id of allIds) {
+        const element = document.getElementById(id);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top >= 0 && rect.top < window.innerHeight * 0.4) {
+            foundId = id;
+            break;
+          }
+        }
+      }
+      if (foundId) {
+        setActiveSection(foundId);
+      }
+    }
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [])
 
   const renderSidebarItem = (item: any, depth = 0) => {
     const isActive = activeSection === item.id;
@@ -122,10 +158,9 @@ export default function TermsAndConditions() {
         style={{
           backgroundImage: `url(${bg_term.src})`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          height: '400px',
+          backgroundPosition: 'center'
         }}
-        className='relative'
+        className='relative lg:h-[400px] h-[300px]'
       >
         <div className="absolute inset-0 text-center flex justify-center items-center">
           <div className='m-auto'>
