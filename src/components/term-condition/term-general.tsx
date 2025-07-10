@@ -1,6 +1,6 @@
+import Link from "next/link"
 
 const TermGeneral = ({ currentSectionContent, ids, idSubitems }: { currentSectionContent: any, ids: string[], idSubitems: string[] }) => {
-    let globalIdx = 0;
     return (
         <div className="lg:w-3/4">
             <div className="bg-opacity-40 backdrop-blur-sm rounded-lg lg:p-8 px-4">
@@ -34,10 +34,8 @@ const TermGeneral = ({ currentSectionContent, ids, idSubitems }: { currentSectio
 
 
                             {section.content.map((contentItem: any, cIdx: number) => {
-                                const id = idSubitems[globalIdx] || undefined;
-                                globalIdx++;
                                 return (
-                                    <div key={cIdx} id={id} className="mb-6">
+                                    <div key={cIdx} className="mb-6">
                                         {contentItem.subsection && (
                                             <h5 className="font-semibold text-[#FFF] mb-2">{contentItem.subsection}</h5>
                                         )}
@@ -186,6 +184,13 @@ const TermGeneral = ({ currentSectionContent, ids, idSubitems }: { currentSectio
                                         {contentItem.paragraph2 && (
                                             <p className="text-[#AEAEAE] mb-2 leading-relaxed">{contentItem.paragraph2}</p>
                                         )}
+
+                                        {contentItem.paragraph3 && (
+                                            <Link href='mailTo:support@newpay.org'>
+                                                <p className="text-[#AEAEAE] mb-2 leading-relaxed ">Support: <span className="text-blue-400">{contentItem.paragraph3}</span></p>
+                                            </Link>
+
+                                        )}
                                     </div>
                                 )
                             })}
@@ -193,7 +198,7 @@ const TermGeneral = ({ currentSectionContent, ids, idSubitems }: { currentSectio
                     ))}
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 

@@ -18,9 +18,9 @@ export default function TermsAndConditions() {
   const idCommission = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII'];
 
   const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({
-    'general': true,
-    'privacy': true,
-    'commission': true
+    'general': false,
+    'privacy': false,
+    'commission': false
   });
 
   const [activeSection, setActiveSection] = useState<string>('general');
@@ -41,7 +41,7 @@ export default function TermsAndConditions() {
 
   const handleSectionClick = (sectionId: string) => {
     setActiveSection(sectionId);
-    if (generalChildrenIds.includes(sectionId) || idSubitems.includes(sectionId)) {
+    if (generalChildrenIds.includes(sectionId)) {
       setDisplaySection('general');
     } else if (idPivacy.includes(sectionId)) {
       setDisplaySection('privacy');
